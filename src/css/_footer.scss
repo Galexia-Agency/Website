@@ -1,0 +1,88 @@
+/* Footer Contact */
+.FooterContactContainer, .FooterBottom {
+    display: flex;
+    align-items: center;
+}
+
+.FooterContactContainer {
+    background: rgba(26, 35, 126, 0.9);
+    min-height: 505px;
+    text-align: center;
+}
+
+.FooterContact {
+    width: 480px;
+    margin: auto;
+}
+
+.FooterContactInfo {
+    padding: 24px 0;
+}
+
+#name, #email, #submit {
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.24), 0px 0px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 24px;
+    border: 0;
+    display: block;
+    padding: 0 14px;
+    line-height: 2em;
+}
+
+#name, #email {
+    background: #FFFFFF;   
+    width: calc(100% - 28px);    
+    margin: 24px 0;
+}
+
+#submit {
+    background: #5472D3;
+    color: #000;
+}
+
+footer h2, .FooterContactInfo {
+    color: #fff;
+}
+
+.FooterContainer {
+    background-image: url(../img/space.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Footer Bottom */
+
+.FooterBottom {
+    background: rgba(0, 0, 81, 0.9);
+    min-height: 330px;
+    padding: 0 140px;
+    color: #fff;
+    line-height: 2em;
+}
+
+.FooterSitemap {
+    text-align: left;
+    margin: 50px 0 74px 0;
+}
+
+.FooterSitemap h2 {
+    margin-bottom: 24px;
+}
+
+.FooterNavLink {
+    color: #fff;
+    display: block;
+}
+
+.FooterTestimonials {
+    width: 400px;
+    text-align: right;
+    margin-left: auto;
+}
+
+.FooterCopyright {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: -48px;
+    font-size: 18px;
+}
+
