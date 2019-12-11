@@ -12,9 +12,9 @@ function Services(props) {
                   <source
                     srcSet={`
                         /img/${props.name}.jpg 1x,
-                        /img/${props.name}_2x.jpg 2x,
+                        /img/${props.name}_x2.jpg 2x,
                         /img/${props.name}.webp 1x,
-                        /img/${props.name}_2x.webp 2x,
+                        /img/${props.name}_x2.webp 2x,
                     `}
                   />
                   <img
