@@ -4,3 +4,82 @@
     padding: (18 * $pixels) (16 * $pixels);
     background: $purple_translucent;
 }
+
+.PageHeader {
+    color: white;
+    background: linear-gradient(90deg, rgba(83, 75, 174, 0.8) 0%, rgba(0, 0, 81, 0.8) 100%);
+}
+.HeaderRight picture {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.HomeInfoContainer {
+    padding: 0 (18 * $pixels);
+    margin-bottom: -(6 * $pixels);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.FloatingInfoBox {
+    float: left;
+    background-color: white;
+    border-radius: 3 * $pixels;
+    width: 35vw;
+    padding: 6 * $pixels;
+    margin-right: -(20 * $pixels);
+    margin-top: 6 * $pixels;
+    box-shadow: $shadow;
+    z-index: 2;
+    position: relative;
+    margin-bottom: calc(100px + (3 * #{$pixels}));
+    grid-column: 1;
+}
+
+.InfoTitle {
+    font-family: 'Baloo', cursive;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2em;
+    background: -webkit-linear-gradient($light_purple_solid, $dark_purple_solid);
+    background: linear-gradient($light_purple_solid, $dark_purple_solid);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+    width: 75%;
+}
+
+.BlueTongue, .HomeInfoContainer .SpaceBackground {
+    border-radius: 0 0 (3 * $pixels) (3 * $pixels);
+}
+
+.HomeInfoContainer:before,
+.HomeInfoContainer:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.HomeInfoContainer:after {
+  clear: both;
+}
+
+.HomeInfoContainer .SpaceBackground {
+    height: 100%;
+    width: 50vw;
+    margin-left: auto;
+    position: relative;
+}
+
+.BlueTongue {
+    box-shadow: $shadow;
+    background: $light_blue_translucent;
+    color: white;
+    height: 100%;
+}
+
+.PortfolioContainer h2 {
+    margin: 0;
+}
