@@ -55,7 +55,7 @@ function App() {
               <div className="FooterContact">
                 <h2>Get in Touch</h2>
                 <p className="FooterContactInfo">We’d love to help you on your next big project. We understand what it means to dream big, and then achieve that dream.</p>
-                <form className="Contact" method="POST" data-netlify-recaptcha="true" data-netlify="true">
+                <form className="Contact" method="POST">
                   <label htmlFor="fname">Name:</label>
                   <input id="fname" name="FName" type="text" placeholder="Han"></input>
                   <label htmlFor="lname">Last Name:</label>
@@ -72,7 +72,7 @@ function App() {
                     <input id="submit" type="submit" className="Button ColorTwo"></input>
                     <div data-netlify-recaptcha="true"></div>
                   </div>
-                  
+                  <input type="hidden" name="form-name" value="contact" />
                 </form>
               </div>
             </div>
