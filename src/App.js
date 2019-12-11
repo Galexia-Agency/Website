@@ -9,12 +9,15 @@ import './css/app.scss';
 import Home from './pages/home/Home';
 import Photography from './pages/photography/Photography';
 import Web from './pages/web/Web';
-import 'normalize.css'
+import 'normalize.css';
+
+import ScrollToTop from "./ScrollToTop";
 
 function App() {
   return (
     <div className="GalexiaStudios">
       <Router>
+        <ScrollToTop />
         <div className="GlobalHeader">
           <div className="HeaderContainer">
             <div className="LogoContainer">
@@ -69,7 +72,7 @@ function App() {
                   <label htmlFor="message">Message:</label>
                   <textarea id="message" name="Message" placeholder="Chewie, the exhaust ports need cleaning"></textarea>
                   <div id="SubmitContainer">
-                    <input id="submit" type="submit" className="Button ColorTwo"></input>
+                    <input id="submit" type="submit" className="Button ColorTwo" value="submit"></input>
                     <div data-netlify-recaptcha="true"></div>
                   </div>
                   <input type="hidden" name="form-name" value="contact" />
