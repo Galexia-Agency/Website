@@ -1,0 +1,25 @@
+@import 'includes/variables';
+
+.Button, button {
+    border-radius: 3 * $pixels;
+    text-transform: uppercase;
+    font-family: 'Crimson Pro';
+    padding: ($pixels/2) (2.5 * $pixels);
+    box-shadow: $shadow;
+    display: block;
+    border: 0;
+    line-height: 1.5em;
+    color: white;
+}
+
+.ColorOne {
+    background: $purple_solid;
+}
+
+.ColorTwo {
+    background: $light_blue_solid;
+}
+
+.ColorOne:active, .ColorTwo:active {
+    opacity: 0.9;
+}

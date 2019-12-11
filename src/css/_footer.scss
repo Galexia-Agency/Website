@@ -1,3 +1,5 @@
+@import 'includes/variables';
+
 /* Footer Contact */
 .FooterContactContainer, .FooterBottom {
     display: flex;
@@ -5,84 +7,118 @@
 }
 
 .FooterContactContainer {
-    background: rgba(26, 35, 126, 0.9);
+    background: $purple_translucent;
     min-height: 505px;
     text-align: center;
 }
 
 .FooterContact {
-    width: 480px;
-    margin: auto;
+    width: 80 * $pixels;
+    margin: (6 * $pixels) auto;
 }
 
-.FooterContactInfo {
-    padding: 24px 0;
+.FooterContact h2 {
+    margin: 0;
 }
 
-#name, #email, #submit {
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.24), 0px 0px 2px rgba(0, 0, 0, 0.12);
-    border-radius: 24px;
-    border: 0;
-    display: block;
-    padding: 0 14px;
-    line-height: 2em;
+.Contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0 (3 * $pixels);
+
+    label {
+        font-size: 0.75em;
+        opacity: 0.75;
+        text-align: left;
+    }
+
+    label:nth-of-type(1n), input:nth-of-type(1n) {
+        grid-column: 1;
+    }
+
+    label:nth-of-type(2n), input:nth-of-type(2n) {
+        grid-column: 2;
+    }
+
+    label:nth-of-type(2) {
+        grid-row: 1;
+    }
+
+    label:nth-of-type(4) {
+        grid-row: 3;
+    }
+
+    input:not([type="submit"]), textarea {
+        box-shadow: $shadow;
+        border-radius: 3 * $pixels;
+        border: 0;
+        display: block;
+        padding: ($pixels/2) (2.5 * $pixels);
+        line-height: 1.5em;
+        background: white;   
+        width: calc(100% - (5 * #{$pixels}));    
+        margin: (1.5 * $pixels) 0;
+        resize: none;
+    }
+
+    #message, #submit, #subject, label:last-of-type {
+        grid-column: span 2;
+    }
+
+    #message {
+        min-height: 6 * 1em;
+    }
+
+    #submit {
+        color: black;
+        margin: (1.5 * $pixels) 0;
+    }
+
+    #SubmitContainer {
+        grid-column: span 2;
+    }
 }
 
-#name, #email {
-    background: #FFFFFF;   
-    width: calc(100% - 28px);    
-    margin: 24px 0;
-}
-
-#submit {
-    background: #5472D3;
-    color: #000;
-}
-
-footer h2, .FooterContactInfo {
-    color: #fff;
-}
-
-.FooterContainer {
-    background-image: url(../img/space.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+footer {
+    color: white;
 }
 
 /* Footer Bottom */
 
-.FooterBottom {
-    background: rgba(0, 0, 81, 0.9);
+.FooterBottomContainer {
+    background: $dark_purple_translucent;
     min-height: 330px;
-    padding: 0 140px;
-    color: #fff;
-    line-height: 2em;
+    padding: 0 (18 * $pixels);
+    color: white;
+    line-height: 1.5em;
 }
 
 .FooterSitemap {
     text-align: left;
-    margin: 50px 0 74px 0;
+    margin: (6 * $pixels) 0;
 }
 
 .FooterSitemap h2 {
-    margin-bottom: 24px;
+    margin-bottom: 3 * $pixels;
+    margin-top: 0;
 }
 
 .FooterNavLink {
-    color: #fff;
+    color: white;
     display: block;
 }
 
 .FooterTestimonials {
-    width: 400px;
+    width: 50 * $pixels;
     text-align: right;
     margin-left: auto;
 }
 
 .FooterCopyright {
-    position: absolute;
-    bottom: 0;
-    margin-bottom: -48px;
-    font-size: 18px;
+    font-size: 0.75em;
+    padding-bottom: 3 * $pixels;
 }
 
+.FooterCopyright p {
+    margin: 0;
+}

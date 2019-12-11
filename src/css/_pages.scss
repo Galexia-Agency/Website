@@ -1,0 +1,30 @@
+@import "~grid/grid";
+@import 'includes/variables';
+
+.PageHeader {
+    min-height: 545px;
+}
+
+.Purple {
+    background: rgba(83, 75, 174, 0.7);
+    box-shadow: 5px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 3 * $pixels;
+    color: white;
+    text-align: center;
+    padding: 2 * $pixels;
+}
+
+.Purple h2 {
+    line-height: 105px;
+    margin-top: -(2 * $pixels);
+}
+
+.Purple p:last-of-type {
+    padding-bottom: 2 * $pixels;
+}
+
+.SpaceBackground {
+    background-image: url(../img/space.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
