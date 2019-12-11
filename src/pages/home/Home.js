@@ -1,8 +1,6 @@
 import React from 'react';
-import {
-  Link
-} from "react-router-dom";
 import './css/home.scss';
+import Services from '../../components/services';
 
 function Home() {
   return (
@@ -38,99 +36,9 @@ function Home() {
       </header>
       <div className="SpaceBackground">
         <div className="GridContainer" id="HomePageServices">
-          <Link className="ServicesLink" to="/Photography">
-            <div className="Purple Services" id="PhotographyService">
-              <h2>
-                Photography
-              </h2>
-              <picture>
-                <noscript>
-                  <source
-                    media="(min-width: 780px)"
-                    srcset="
-                    homebackground.jpg 1x,
-                    homebackground.2x.jpg 2x,
-                    homebackground.webp 1x,
-                    homebackground.2x.webp 2x"
-                  />
-                  <img
-                    src="homebackground.jpg"
-                    loading="lazy"
-                    alt="Header Background of a Galaxy"
-                  />
-                </noscript>
-              </picture>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique.
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique.
-              </p>
-              <p className="ReadMore">Read More...</p>
-            </div>
-          </Link>
-          <Link className="ServicesLink" to="/Web">
-            <div className="Purple Services" id="WebService">
-              <h2>
-                Web
-              </h2>
-              <picture>
-                <noscript>
-                  <source
-                    media="(min-width: 780px)"
-                    srcset="
-                    homebackground.jpg 1x,
-                    homebackground.2x.jpg 2x,
-                    homebackground.webp 1x,
-                    homebackground.2x.webp 2x"
-                  />
-                  <img
-                    src="homebackground.jpg"
-                    loading="lazy"
-                    alt="Header Background of a Galaxy"
-                  />
-                </noscript>
-              </picture>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique.
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique.
-              </p>
-              <p className="ReadMore">Read More...</p>
-            </div>
-          </Link>
-          <Link className="ServicesLink" to="/Marketing">
-            <div className="Purple Services" id="MarketingService">
-              <h2>
-                Marketing
-              </h2>
-              <picture>
-                <noscript>
-                  <source
-                    media="(min-width: 780px)"
-                    srcset="
-                    homebackground.jpg 1x,
-                    homebackground.2x.jpg 2x,
-                    homebackground.webp 1x,
-                    homebackground.2x.webp 2x"
-                  />
-                  <img
-                    src="homebackground.jpg"
-                    loading="lazy"
-                    alt="Header Background of a Galaxy"
-                  />
-                </noscript>
-              </picture>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique.
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique.
-              </p>
-              <p className="ReadMore">Read More...</p>
-            </div>
-          </Link>
+          <Services name="Photography" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique." />
+          <Services name="Web" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique." />
+          <Services name="Marketing" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique." />
         </div>
       </div>
     </div>
