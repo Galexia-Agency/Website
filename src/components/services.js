@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import './css/services.scss';
 
 function Services(props) {
     return (
         <Link className="ServicesLink" to={{pathname: `/${props.name}`}}>
-            <div className="Purple Services" id="MarketingService">
+            <div className={`Services ${props.class}`} id="MarketingService">
               <h2>
                 {props.name}
               </h2>

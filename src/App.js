@@ -8,6 +8,7 @@ import './css/app.scss';
 import Home from './pages/home/Home';
 import Photography from './pages/photography/Photography';
 import Web from './pages/web/Web';
+import Marketing from './pages/marketing/Marketing';
 import 'normalize.css';
 import Nav from './components/nav';
 import Footer from './components/footer';
@@ -38,6 +39,9 @@ function App() {
             </Route>
             <Route path="/Web">
               <Web />
+            </Route>
+            <Route path="/Marketing">
+              <Marketing />
             </Route>
             <Route path="/">
               <Home />
