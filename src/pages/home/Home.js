@@ -51,7 +51,12 @@ function Home() {
             <p>
               Nullam ultricies imperdiet mauris, et facilisis mi dignissim non. Maecenas porta sem nunc, laoreet gravida ligula vulputate at. Mauris vulputate non leo et ultrices. Suspendisse aliquet sem magna, et facilisis orci consectetur non.
             </p>
-            <a className="Button ColorOne">Click</a>
+            <div className="SpaceBackground Button">
+              <a className="Button ColorOne">Click</a>
+            </div>
+            <div className="SpaceBackground Button">
+              <a className="Button ColorTwo">Click</a>
+            </div>
           </div>
         </div>
         <div className="SpaceBackground">
@@ -64,6 +69,108 @@ function Home() {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In aliquam egestas neque ut sagittis.
               </p>
               <div className="PortfolioImages">
+                <picture>
+                    <source
+                      srcSet={`
+                          /img/Marketing.jpg 1x,
+                          /img/Marketing_x2.jpg 2x,
+                          /img/Marketing.webp 1x,
+                          /img/Marketing_x2.webp 2x,
+                      `}
+                    />
+                    <img
+                      src={`/img/Marketing.jpg`}
+                      loading="lazy"
+                      alt="Marketing"
+                      width="240"
+                      height="130"
+                    />
+                </picture>
+                <picture>
+                    <source
+                      srcSet={`
+                          /img/Marketing.jpg 1x,
+                          /img/Marketing_x2.jpg 2x,
+                          /img/Marketing.webp 1x,
+                          /img/Marketing_x2.webp 2x,
+                      `}
+                    />
+                    <img
+                      src={`/img/Marketing.jpg`}
+                      loading="lazy"
+                      alt="Marketing"
+                      width="240"
+                      height="130"
+                    />
+                </picture>
+                <picture>
+                    <source
+                      srcSet={`
+                          /img/Marketing.jpg 1x,
+                          /img/Marketing_x2.jpg 2x,
+                          /img/Marketing.webp 1x,
+                          /img/Marketing_x2.webp 2x,
+                      `}
+                    />
+                    <img
+                      src={`/img/Marketing.jpg`}
+                      loading="lazy"
+                      alt="Marketing"
+                      width="240"
+                      height="130"
+                    />
+                </picture>
+                <picture>
+                    <source
+                      srcSet={`
+                          /img/Marketing.jpg 1x,
+                          /img/Marketing_x2.jpg 2x,
+                          /img/Marketing.webp 1x,
+                          /img/Marketing_x2.webp 2x,
+                      `}
+                    />
+                    <img
+                      src={`/img/Marketing.jpg`}
+                      loading="lazy"
+                      alt="Marketing"
+                      width="240"
+                      height="130"
+                    />
+                </picture>
+                <picture>
+                    <source
+                      srcSet={`
+                          /img/Marketing.jpg 1x,
+                          /img/Marketing_x2.jpg 2x,
+                          /img/Marketing.webp 1x,
+                          /img/Marketing_x2.webp 2x,
+                      `}
+                    />
+                    <img
+                      src={`/img/Marketing.jpg`}
+                      loading="lazy"
+                      alt="Marketing"
+                      width="240"
+                      height="130"
+                    />
+                </picture>
+                <picture>
+                    <source
+                      srcSet={`
+                          /img/Marketing.jpg 1x,
+                          /img/Marketing_x2.jpg 2x,
+                          /img/Marketing.webp 1x,
+                          /img/Marketing_x2.webp 2x,
+                      `}
+                    />
+                    <img
+                      src={`/img/Marketing.jpg`}
+                      loading="lazy"
+                      alt="Marketing"
+                      width="240"
+                      height="130"
+                    />
+                </picture>
               </div>
             </div>
           </div>
@@ -71,13 +178,20 @@ function Home() {
       </div>
       
       <div className="SpaceBackground">
-        <div className="GridContainer" id="HomePageServices">
-          <Services name="Photography" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique." />
-          <Services name="Web" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique." />
-          <Services name="Marketing" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique." />
+        <div className="GridContainer ServicesGrid" id="HomePageServices">
+          <Services class="Purple" name="Photography" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique." />
+          <Services class="Purple" name="Web" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique." />
+          <Services class="Purple" name="Marketing" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique." />
         </div>
       </div>
+
+      <div className="Blog">
+        <h2>Our Blog</h2>
+        {/*Do some stuff*/} 
+      </div>
+
     </div>
+    
   );
 }
 

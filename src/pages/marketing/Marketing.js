@@ -1,15 +1,16 @@
 import React from 'react';
-import './css/photography.scss';
+import './css/marketing.scss';
 import Services from '../../components/services';
 
-function Photography() {
+
+function Marketing() {
   return (
-    <div className="PageContent" id="Photography">
+    <div className="PageContent" id="Web">
       <div className="PageHeaderContainer">
         <header className="PageHeader">
           <div className="HeaderLeft">
             <p className="HeaderTitle">
-              Photography
+              Marketing
             </p>
             <p className="HeaderInfo">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. In aliquam egestas neque ut sagittis. Curabitur maximus ante ac dolor tristique, vel dictum augue efficitur. Sed at tortor enim.
@@ -37,13 +38,13 @@ function Photography() {
       </div>
       <div className="OtherServices">
         <h2>Read about our other services</h2>
-        <div className="GridContainer ServicesGrid" id="PhotographyPageServices">
+        <div className="GridContainer ServicesGrid" id="MarketingPageServices">
+          <div class="SpaceBackground"><Services class="Blue" name="Photography" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique." /></div>
           <div class="SpaceBackground"><Services class="Blue" name="Web" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique." /></div>
-          <div class="SpaceBackground"><Services class="Blue" name="Marketing" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique." /></div>
         </div>
       </div>
     </div>
   );
 }
 
-export default Photography;
+export default Marketing;

@@ -1,27 +1,32 @@
 @import 'includes/variables';
 
+.SpaceBackground.Button {
+    display: inline;
+    padding: $pixels 0;
+}
+
 .Button, button {
     border-radius: 3 * $pixels;
     text-transform: uppercase;
     font-family: 'Crimson Pro';
     padding: ($pixels/2) (2.5 * $pixels);
     box-shadow: $shadow;
-    display: block;
     border: 0;
     line-height: 1.5em;
-    color: white;
     cursor: pointer;
-    display: inline;
+    display: inline-block;
+    color: white;
+    transition: border-radius 0.5s;
 }
 
 .ColorOne {
-    background: $purple_solid;
+    background: linear-gradient($purple_translucent, $dark_purple_translucent);
 }
 
 .ColorTwo {
-    background: $light_blue_solid;
+    background: linear-gradient($light_blue_translucent, $blue_translucent)
 }
 
-.ColorOne:active, .ColorTwo:active {
-    opacity: 0.9;
+.ColorOne:hover, .ColorTwo:hover, .SpaceBackground.Button:hover {
+    border-radius: 6px;
 }

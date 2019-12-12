@@ -1,4 +1,4 @@
-@import 'includes/variables';
+@import '../../css/includes/variables';
 
 /* Footer Contact */
 .FooterContactContainer, .FooterBottom {
@@ -59,6 +59,11 @@
         width: calc(100% - (5 * #{$pixels}));    
         margin: (1.5 * $pixels) 0;
         resize: none;
+        transition: box-shadow 0.5s;
+    }
+    input:not([type="submit"]):focus, textarea:focus {
+        outline: none;
+        box-shadow: $pixels $pixels $pixels $light_blue_translucent;
     }
 
     #message, #submit, #subject, label:last-of-type {
@@ -71,7 +76,17 @@
 
     #submit {
         color: black;
+        background: $light_blue_solid!important;
         margin: (1.5 * $pixels) 0;
+    }
+
+    #submit:hover {
+        border-radius: 24px!important;
+    }
+    
+    #submit:focus {
+        outline: none;
+        box-shadow: $pixels $pixels $pixels $dark_purple_translucent;
     }
 
     #SubmitContainer {
@@ -105,7 +120,12 @@ footer {
 }
 
 .FooterNavLink {
-    color: white;
+    background-image: linear-gradient(
+    	to right,
+	    #2C75FF,
+	    #2C75FF 50%,
+        white 50%
+    );
     display: block;
 }
 

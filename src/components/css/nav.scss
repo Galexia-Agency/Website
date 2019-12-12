@@ -1,4 +1,4 @@
-@import 'includes/variables';
+@import '../../css/includes/variables';
 
 /* Header */
 
@@ -28,18 +28,26 @@
     font-style: normal;
     font-weight: normal;
     font-size: 1.5em;
-    background: -webkit-linear-gradient($light_purple_solid, $dark_purple_solid);
-    background: linear-gradient($light_purple_solid, $dark_purple_solid);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
     display: flex;
     float: left;
     height: 100px;
 }
 
+.Logo {
+    background: -webkit-linear-gradient($light_purple_solid, $dark_purple_solid);
+    background: linear-gradient($light_purple_solid, $dark_purple_solid);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 .LogoLink {
     align-self: center;
+}
+
+.LogoLink:hover {
+    transition: none;
+    background-position: auto;
 }
 
 /* Navigation */

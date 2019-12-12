@@ -1,24 +1,6 @@
 @import "~grid/grid";
 @import 'includes/variables';
 
-.Purple {
-    background: rgba(83, 75, 174, 0.7);
-    box-shadow: 5px 4px 10px rgba(0, 0, 0, 0.25);
-    border-radius: 3 * $pixels;
-    color: white;
-    text-align: center;
-    padding: 2 * $pixels;
-}
-
-.Purple h2 {
-    line-height: 105px;
-    margin-top: -(2 * $pixels);
-}
-
-.Purple p:last-of-type {
-    padding-bottom: 2 * $pixels;
-}
-
 .HeaderTitle {
     font-size: 72px;
     font-family: 'Baloo', cursive;
@@ -37,8 +19,21 @@
     padding: 100px (18 * $pixels);
     display: grid;
     grid-template-columns: 1fr 1fr;
+    color: white;
+}
+ 
+.HeaderRight picture {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
 }
 
 .HeaderInfo {
     width: 75%;
+}
+
+.PageHeaderContainer {
+    background-repeat: no-repeat;
+    background-size: cover;
 }
