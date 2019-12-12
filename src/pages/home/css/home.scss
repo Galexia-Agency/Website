@@ -5,10 +5,16 @@
     background: $purple_translucent;
 }
 
+.ReadMore {
+    font-size: 1.125em;
+    text-shadow: $shadow;
+}
+
 .PageHeader {
     color: white;
     background: linear-gradient(90deg, rgba(83, 75, 174, 0.8) 0%, rgba(0, 0, 81, 0.8) 100%);
 }
+
 .HeaderRight picture {
     position: absolute;
     right: 0;
@@ -80,6 +86,56 @@
     height: 100%;
 }
 
+.SpaceBackground.Button {
+    border-radius: 3* $pixels!important;
+}
+
+.SpaceBackground.Button:hover {
+    border-radius: 6px!important;
+}
+
+.PortfolioContainer {
+    position: absolute;
+    right: -6 * $pixels;
+    top: 30%;
+    width: 50%;
+}
+
+.PortfolioContainer p {
+    margin-top: 0;
+}
+
+.PortfolioContainer h2, .PortfolioContainer p {
+    width: 75%;
+}
+
+.PortfolioImages {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: black;
+}
+
+.PortfolioImages picture {
+    height:130px;
+}
+
+.PortfolioImages img {
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.PortfolioImages img:hover {
+    opacity: 0.75
+}
+
 .PortfolioContainer h2 {
     margin: 0;
+}
+
+.Blog h2 {
+    margin: (6 * $pixels) (18 * $pixels);
+    background: linear-gradient(#534BAE, #000051);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
