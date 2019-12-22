@@ -32,11 +32,11 @@
         text-align: left;
     }
 
-    label:nth-of-type(1n), input:nth-of-type(1n) {
+    label:nth-of-type(1n), input:nth-of-type(2n) {
         grid-column: 1;
     }
 
-    label:nth-of-type(2n), input:nth-of-type(2n) {
+    label:nth-of-type(2n), input:nth-of-type(3n) {
         grid-column: 2;
     }
 

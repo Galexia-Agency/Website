@@ -11,7 +11,7 @@ function Footer() {
               <div className="FooterContact">
                 <h2>Get in Touch</h2>
                 <p className="FooterContactInfo">We’d love to help you on your next big project. We understand what it means to dream big, and then achieve that dream.</p>
-                <form className="Contact" method="post" name="contact" id="contact" netlify>
+                <form className="Contact" method="post" name="contact" id="contact" netlify data-netlify-recaptcha="true" >
                   <input type="hidden" name="form-name" value="contact"/>
                   <label htmlFor="fname">Name:</label>
                   <input id="fname" name="FName" type="text" placeholder="Han" required></input>
@@ -26,7 +26,8 @@ function Footer() {
                   <label htmlFor="message">Message:</label>
                   <textarea id="message" name="Message" placeholder="Chewie, the exhaust ports need cleaning" required></textarea>
                   <div id="SubmitContainer">
-                    <input id="submit" type="submit" className="Button ColorTwo" value="submit"></input>
+                    <input id="submit" type="submit" name="submit" className="Button ColorTwo" value="submit"></input>
+                    <div data-netlify-recaptcha="true"></div>
                   </div>
                 </form>
               </div>
@@ -50,16 +51,18 @@ function Footer() {
               </div>
             </div>
           </div>
+          {
+            $("#contact").submit(function(e) {
+              e.preventDefault();
+              var $form = $(this);
+              $.post($form.attr("action"), $form.serialize()).then(function() {
+              alert("Thank you!");
+              $form[0].reset();
+              });
+            })
+          }
         </footer>
     )
 } 
-$("#contact").submit(function(e) {
-  e.preventDefault();
-  var $form = $(this);
-  $.post($form.attr("action"), $form.serialize()).then(function() {
-  alert("Thank you!");
-  $form[0].reset();
-  });
-});
 
 export default Footer;
