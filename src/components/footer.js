@@ -28,7 +28,7 @@ function Footer() {
                     <input id="submit" type="submit" className="Button ColorTwo" value="submit"></input>
                     <div data-netlify-recaptcha="true"></div>
                   </div>
-                  <input type="hidden" name="form-name" value="contact" />
+                  <input type="hidden" name="Contact" value="Contact" />
                 </form>
               </div>
             </div>
