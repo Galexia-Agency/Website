@@ -10,4 +10,4 @@ The Galexia site will need to be fully responsive as over 48% of website traffic
 
 ## Style Guide
 
-![Stye Guide](img/Frame.png)
+![Style Guide](docs/img/Frame.png)

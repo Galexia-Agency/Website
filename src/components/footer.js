@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import './css/footer.scss';
+import $ from 'jquery';
 
 function Footer() {
     return (
@@ -10,19 +11,19 @@ function Footer() {
               <div className="FooterContact">
                 <h2>Get in Touch</h2>
                 <p className="FooterContactInfo">We’d love to help you on your next big project. We understand what it means to dream big, and then achieve that dream.</p>
-                <form className="Contact" method="POST">
+                <form className="Contact" method="post">
                   <label htmlFor="fname">Name:</label>
-                  <input id="fname" name="FName" type="text" placeholder="Han"></input>
+                  <input id="fname" name="FName" type="text" placeholder="Han" required></input>
                   <label htmlFor="lname">Last Name:</label>
-                  <input id="lname" name="LName" type="text" placeholder="Solo"></input>
+                  <input id="lname" name="LName" type="text" placeholder="Solo" required></input>
                   <label htmlFor="email">Email:</label>
-                  <input id="email" name="Email" type="email" placeholder="millenium@falcon.net"></input>
+                  <input id="email" name="Email" type="email" placeholder="millenium@falcon.net" required></input>
                   <label htmlFor="telephone">Telephone:</label>
-                  <input id="telephone" name="Telephone" type="tel" placeholder="+447569836548"></input>
+                  <input id="telephone" name="Telephone" type="tel" placeholder="+447569836548" required></input>
                   <label htmlFor="subject">Subject:</label>
-                  <input id="subject" name="Subject" type="text" placeholder="Corellia"></input>
+                  <input id="subject" name="Subject" type="text" placeholder="Corellia" required></input>
                   <label htmlFor="message">Message:</label>
-                  <textarea id="message" name="Message" placeholder="Chewie, the exhaust ports need cleaning"></textarea>
+                  <textarea id="message" name="Message" placeholder="Chewie, the exhaust ports need cleaning" required></textarea>
                   <div id="SubmitContainer">
                     <input id="submit" type="submit" className="Button ColorTwo" value="submit"></input>
                     <div data-netlify-recaptcha="true"></div>
@@ -53,5 +54,13 @@ function Footer() {
         </footer>
     )
 } 
+$(".Contact").submit(function(e) {
+  e.preventDefault();
+  var $form = $(this);
+  $.post($form.attr("action"), $form.serialize()).then(function() {
+  alert("Thank you!");
+  $form.reset();
+  });
+});
 
 export default Footer;

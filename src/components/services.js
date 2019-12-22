@@ -2,6 +2,22 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import './css/services.scss';
 
+function description(name) {
+  if (name === "Photography") {
+    let desc = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique.";
+    return (desc)
+  }
+  if (name === "Web") {
+    let desc = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique.";
+    return (desc)
+  };
+  if (name === "Marketing") {
+    let desc = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique.";
+    return (desc)
+  };
+  
+}
+
 function Services(props) {
     return (
         <Link className="ServicesLink" to={{pathname: `/${props.name}`}}>
@@ -27,7 +43,7 @@ function Services(props) {
                   />
               </picture>
               <p>
-                {props.desc}
+                {description(props.name)}
               </p>
               <p className="ReadMore">Read More...</p>
             </div>
