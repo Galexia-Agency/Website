@@ -1,5 +1,7 @@
 # Galexia
 
+Hosted with **Netlify**
+
 Galexia is a digital design agency providing Web, Marketing, and Photography services to small businesses.
 
 Galexia will need a website to showcase its portfolio and in order for potential clients to get in touch.
@@ -8,4 +10,4 @@ The Galexia site will need to be fully responsive as over 48% of website traffic
 
 ## Style Guide
 
-![Stye Guide](docs/img/Frame.png)
+![Style Guide](docs/img/Frame.png)
