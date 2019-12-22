@@ -11,8 +11,8 @@ function Footer() {
               <div className="FooterContact">
                 <h2>Get in Touch</h2>
                 <p className="FooterContactInfo">We’d love to help you on your next big project. We understand what it means to dream big, and then achieve that dream.</p>
-                <form className="Contact" method="post" name="contact" id="contact" netlify data-netlify-recaptcha="true">
-                  <input type="hidden" name="form-name" value="contact" />
+                <form className="Contact" method="post" name="contact" id="contact" netlify data-netlify-recaptcha="true" >
+                  <input type="hidden" name="form-name" value="contact"/>
                   <label htmlFor="fname">Name:</label>
                   <input id="fname" name="FName" type="text" placeholder="Han" required></input>
                   <label htmlFor="lname">Last Name:</label>
