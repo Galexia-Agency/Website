@@ -11,7 +11,7 @@ function Footer() {
               <div className="FooterContact">
                 <h2>Get in Touch</h2>
                 <p className="FooterContactInfo">We’d love to help you on your next big project. We understand what it means to dream big, and then achieve that dream.</p>
-                <form className="Contact" method="post">
+                <form className="Contact" method="post" action="Contact" name="Contact">
                   <label htmlFor="fname">Name:</label>
                   <input id="fname" name="FName" type="text" placeholder="Han" required></input>
                   <label htmlFor="lname">Last Name:</label>
@@ -28,7 +28,7 @@ function Footer() {
                     <input id="submit" type="submit" className="Button ColorTwo" value="submit"></input>
                     <div data-netlify-recaptcha="true"></div>
                   </div>
-                  <input type="hidden" name="form-name" value="contact" />
+                  <input type="hidden" name="Contact" value="Contact" />
                 </form>
               </div>
             </div>
