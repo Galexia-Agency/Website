@@ -179,9 +179,9 @@ function Home() {
       
       <div className="SpaceBackground">
         <div className="GridContainer ServicesGrid" id="HomePageServices">
-          <Services class="Purple" name="Photography"/>
-          <Services class="Purple" name="Web"/>
-          <Services class="Purple" name="Marketing"/>
+          <Services servicesClass="Purple" name="Photography"/>
+          <Services servicesClass="Purple" name="Web"/>
+          <Services servicesClass="Purple" name="Marketing"/>
         </div>
       </div>
 

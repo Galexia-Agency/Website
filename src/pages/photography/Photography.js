@@ -38,8 +38,8 @@ function Photography() {
       <div className="OtherServices">
         <h2>Read about our other services</h2>
         <div className="GridContainer ServicesGrid" id="PhotographyPageServices">
-          <div className="SpaceBackground"><Services servicesClass="Blue" name="Web" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique." /></div>
-          <div className="SpaceBackground"><Services servicesClass="Blue" name="Marketing" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique." /></div>
+          <div className="SpaceBackground"><Services servicesClass="Blue" name="Web"/></div>
+          <div className="SpaceBackground"><Services servicesClass="Blue" name="Marketing"/></div>
         </div>
       </div>
     </div>

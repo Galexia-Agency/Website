@@ -38,8 +38,8 @@ function Web() {
       <div className="OtherServices">
         <h2>Read about our other services</h2>
         <div className="GridContainer ServicesGrid" id="WebPageServices">
-          <div className="SpaceBackground"><Services servicesClass="Blue" name="Photography" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique." /></div>
-          <div className="SpaceBackground"><Services servicesClass="Blue" name="Marketing" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique." /></div>
+          <div className="SpaceBackground"><Services servicesClass="Blue" name="Photography"/></div>
+          <div className="SpaceBackground"><Services servicesClass="Blue" name="Marketing"/></div>
         </div>
       </div>
     </div>
