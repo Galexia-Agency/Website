@@ -25,7 +25,7 @@
   </head>
   <body>
     <!-- A little help for the Netlify post-processing bots -->
-    <form name="contact" netlify data-netlify-recaptcha="true" hidden>
+    <form name="contact" netlify hidden>
       <input id="fname" name="FName" type="text" placeholder="Han"></input>
       <input id="lname" name="LName" type="text" placeholder="Solo"></input>
       <input id="email" name="Email" type="email" placeholder="millenium@falcon.net"></input>
@@ -33,8 +33,7 @@
       <input id="subject" name="Subject" type="text" placeholder="Corellia"></input>
       <textarea id="message" name="Message" placeholder="Chewie, the exhaust ports need cleaning"></textarea>
       <div id="SubmitContainer">
-        <input id="submit" type="submit" className="Button ColorTwo"></input>
-        <div data-netlify-recaptcha="true"></div>
+        <input id="submit" type="submit" name="Submit" className="Button ColorTwo"></input>
       </div>
     </form>
     <noscript>You need to enable JavaScript.</noscript>
