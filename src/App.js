@@ -4,14 +4,19 @@ import {
   Switch,
   Route
 } from "react-router-dom";
+
 import './css/app.scss';
+import 'normalize.css';
+
 import Home from './pages/home/Home';
 import Photography from './pages/photography/Photography';
 import Web from './pages/web/Web';
 import Marketing from './pages/marketing/Marketing';
-import 'normalize.css';
+
 import Nav from './components/nav';
 import Footer from './components/footer';
+
+import './js/cookies';
 
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";

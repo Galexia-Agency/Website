@@ -24,7 +24,11 @@ body {
     font-size: 3 * $pixels;
 }
 
-:link {
+:link, :active, :hover, :focus, :visited {
+    text-decoration: none;
+}
+
+:link:not(.Button) {
     text-decoration: none;
     -webkit-background-clip: text;
     background-clip: text;
@@ -37,13 +41,9 @@ body {
     );
 	background-size: 200% 100%;
     background-position: 100%;
-    
-    &:visited {
-        text-decoration: none;
-    }
+    transition: all 0.5s;
 
     &:active, &:hover, &:focus, &:visited:hover, &.active {
-        text-decoration: none;
         transition: all 0.5s cubic-bezier(0.000, 0.000, 0.230, 1);
         background-position: 0%;
     }
