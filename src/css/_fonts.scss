@@ -24,6 +24,16 @@ body {
     font-size: 3 * $pixels;
 }
 
+::selection {
+    background: #2C75FF;
+    color: white;
+}
+
+::-moz-selection {
+    background: #2C75FF;
+    color: white;
+}
+
 :link, :active, :hover, :focus, :visited {
     text-decoration: none;
 }
