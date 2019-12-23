@@ -38,11 +38,12 @@ body {
 	background-size: 200% 100%;
     background-position: 100%;
     
-    &:active, &:hover, &:focus, &:visited {
+    &:visited {
         text-decoration: none;
     }
 
-    &:active, &:hover, &:focus, :visited:hover {
+    &:active, &:hover, &:focus, &:visited:hover, &.active {
+        text-decoration: none;
         transition: all 0.5s cubic-bezier(0.000, 0.000, 0.230, 1);
         background-position: 0%;
     }

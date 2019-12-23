@@ -4,7 +4,7 @@ import Services from '../../components/services';
 
 function Home() {
   return (
-    <div className="PageContent" id="Home">
+    <div className="PageContent Home">
       <div className="PageHeaderContainer SpaceBackground">
         <header className="PageHeader">
           <div className="HeaderLeft">
@@ -52,10 +52,10 @@ function Home() {
               Nullam ultricies imperdiet mauris, et facilisis mi dignissim non. Maecenas porta sem nunc, laoreet gravida ligula vulputate at. Mauris vulputate non leo et ultrices. Suspendisse aliquet sem magna, et facilisis orci consectetur non.
             </p>
             <div className="SpaceBackground Button">
-              <a className="Button ColorOne">Click</a>
+              <a href="Photography" className="Button ColorOne">Click</a>
             </div>
             <div className="SpaceBackground Button">
-              <a className="Button ColorTwo">Click</a>
+              <a href="Photography" className="Button ColorTwo">Click</a>
             </div>
           </div>
         </div>
