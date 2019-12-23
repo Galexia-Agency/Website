@@ -22,7 +22,7 @@ class ContactForm extends React.Component {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", ...this.state })
     })
-      .then(() => alert("Success!"))
+      .then(() => alert("Message sent successfully! We'll be in touch within 2-3 working days"))
       .catch(error => alert(error));
 
     e.preventDefault();
