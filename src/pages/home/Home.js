@@ -37,7 +37,7 @@ function Home() {
       </div>
       <div className="HomeInfoContainer">
         <div className="FloatingInfoBox">
-          <p className="InfoTitle">
+          <p className="InfoTitle TextGradient">
             We believe in the freedom to explore
           </p>
           <div className="InfoDesc">
@@ -186,7 +186,7 @@ function Home() {
       </div>
 
       <div className="Blog">
-        <h2>Our Blog</h2>
+        <h2 className="TextGradient">Our Blog</h2>
         {/*Do some stuff*/} 
       </div>
 

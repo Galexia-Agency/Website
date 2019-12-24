@@ -21,7 +21,7 @@ function description(name) {
 function Services(props) {
     return (
         <Link className="ServicesLink" to={{pathname: `/${props.name}`}}>
-            <div className={`Services ${props.servicesClass}`} id="MarketingService">
+            <div className={`Services ${props.servicesClass}`}>
               <h2>
                 {props.name}
               </h2>

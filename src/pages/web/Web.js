@@ -1,5 +1,7 @@
 import React from 'react';
 import Services from '../../components/services';
+import Person from '../../components/people';
+import Info from '../../components/info';
 import './css/web.scss' ;
 
 function Web() {
@@ -35,8 +37,47 @@ function Web() {
           </div>
         </header>
       </div>
+      <div className="People">
+        <h2 className="PeopleTitle TextGradient">We're all about the people</h2>
+        <div className="GridContainer PeopleGrid" id="PhotographyPeople">
+          <Person name="John Sheppard" />
+          <Person name="Teyla Emmagan" />
+          <Person name="Elizabeth Weir" />
+        </div>
+      </div>
+      <div className="InfoContainer SpaceBackground">
+        <div className="Info">
+          <h2>
+            Need a checkup?
+          </h2>
+          <div className="GridContainer InfoGrid" id="MarketingInfo">
+            <Info name="Speed Boost" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique." />
+            <Info name="SEO Checkup" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique." />
+            <Info name="Monthly Health Care" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique." />
+          </div>
+        </div>
+      </div>
+
+      <div className="InfoContainer SpaceBackground">
+        <div className="Info">
+          <h2>
+            WordPress
+          </h2>
+          <div className="GridContainer InfoGrid" id="MarketingInfo">
+            <Info name="Basic" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique." />
+            <Info name="Intermediate" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique." />
+            <Info name="Advanced/E-Commerce" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique." />
+          </div>
+        </div>
+      </div>
       <div className="OtherServices">
-        <h2>Read about our other services</h2>
+        <h2 className="TextGradient">Read about our other services</h2>
         <div className="GridContainer ServicesGrid" id="WebPageServices">
           <div className="SpaceBackground"><Services servicesClass="Blue" name="Photography"/></div>
           <div className="SpaceBackground"><Services servicesClass="Blue" name="Marketing"/></div>

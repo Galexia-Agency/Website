@@ -1,0 +1,19 @@
+@import '../../css/includes/variables';
+
+.Info {
+    background: $purple_translucent;
+    padding: (6 * $pixels) (16 * $pixels);
+    color: white;
+}
+
+.Info h2 {
+    margin-top: 0;
+}
+
+.InfoItem {
+    text-align: center;
+    background-color: rgba(83, 75, 174, 0.75);
+    border-radius: 3 * $pixels;
+    padding: 2 * $pixels;
+    box-shadow: $shadow;
+}
