@@ -60,7 +60,72 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
           </div>
         </div>
       </div>
-
+      <div className="HostingInfoContainer SpaceBackground">
+        <div className="Blue">
+          <div className="HostingInfoInner">
+            <div className="HostingItemLeft">
+              <h2 className="HostingTitle">
+                Need Hosting?
+              </h2>
+              <p className="HostingDesc">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique.
+              </p>
+              <h2>
+                Hosting Package Transfer
+              </h2>
+              <div className="HostingTransferGrid">
+                <p>
+                  Lorem ipsum dolor sit amet,
+                  consectetur adipiscing elit, 
+                  sed do eiusmod tempor 
+                  incididunt ut labore et 
+                  dolore magna aliqua. 
+                  Praesent tristique.
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet,
+                  consectetur adipiscing elit, 
+                  sed do eiusmod tempor 
+                  incididunt ut labore et 
+                  dolore magna aliqua. 
+                  Praesent tristique.
+                </p>
+              </div>
+            </div>
+            <div className="Seperator"></div>
+            <div className="HostingItemRight">
+              <div className="HostingTransferGrid">
+              <p>
+                  Lorem ipsum dolor sit amet,
+                  consectetur adipiscing elit, 
+                  sed do eiusmod tempor 
+                  incididunt ut labore et 
+                  dolore magna aliqua. 
+                  Praesent tristique.
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet,
+                  consectetur adipiscing elit, 
+                  sed do eiusmod tempor 
+                  incididunt ut labore et 
+                  dolore magna aliqua. 
+                  Praesent tristique.
+                </p>
+              </div>
+              <div className="RightText">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique.
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique.
+                </p>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
       <div className="InfoContainer SpaceBackground">
         <div className="Info">
           <h2>
@@ -73,6 +138,45 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique." />
             <Info name="Advanced/E-Commerce" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique.
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique." />
+          </div>
+        </div>
+      </div>
+      <div className="SomethingElseContainer SpaceBackground">
+        <div className="Blue">
+          <h2>
+            Something else in mind...?
+          </h2>
+          <div className="SomethingElseGrid">
+            <div className="SomethingElseItemLeft">
+              <picture>
+                <source
+                  srcSet="
+                  /img/else.png 1x,
+                  /img/else_x2.png 2x,
+                  /img/else.webp 1x,
+                  /img/else_x2.webp 2x"
+                />
+                <img
+                  src="/img/else.png"
+                  loading="lazy"
+                  alt="Something else in mind...?"
+                  width="460"
+                  height="460"
+                />
+              </picture>
+            </div>
+            <div className="SomethingElseItemRight">
+              <h3>
+                Don’t worry. Our team have a wide skill set in a variety of applications and settings. Get in touch and we’ll see whether we can accomodate your needs. 
+              </h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique.
+              </p>
+              <p>  
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique.
+              </p>
+            </div>
+
           </div>
         </div>
       </div>
