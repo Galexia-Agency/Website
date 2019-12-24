@@ -40,9 +40,8 @@ body {
 
 :link:not(.Button) {
     text-decoration: none;
-    -webkit-background-clip: text;
     background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: rgba(0,0,0,0);
     background-image: linear-gradient(
     	to right,
 	    #2C75FF,

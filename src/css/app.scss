@@ -47,9 +47,7 @@
 }
 
 .TextGradient {
-    background: -webkit-linear-gradient($light_purple_solid, $dark_purple_solid);
     background: linear-gradient($light_purple_solid, $dark_purple_solid);
-    -webkit-background-clip: text;
     background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: rgba(0,0,0,0)
 }

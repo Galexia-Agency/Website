@@ -44,7 +44,6 @@
     line-height: 1.5em;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
     z-index: 9999
 }
@@ -56,14 +55,12 @@
 .cc-window.cc-floating {
     padding: 2em;
     max-width: 24em;
-    -ms-flex-direction: column;
     flex-direction: column
 }
 
 .cc-window.cc-banner {
     padding: 1em 1.8em;
     width: 100%;
-    -ms-flex-direction: row;
     flex-direction: row
 }
 
@@ -218,12 +215,10 @@
 }
 
 .cc-window.cc-floating .cc-compliance {
-    -ms-flex: 1;
     flex: 1
 }
 
 .cc-window.cc-banner {
-    -ms-flex-align: center;
     align-items: center
 }
 
@@ -243,21 +238,16 @@
 }
 
 .cc-banner .cc-message {
-    -ms-flex: 1;
     flex: 1
 }
 
 .cc-compliance {
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-align: center;
     align-items: center;
-    -ms-flex-line-pack: justify;
     align-content: space-between
 }
 
 .cc-compliance>.cc-btn {
-    -ms-flex: 1;
     flex: 1
 }
 
@@ -286,11 +276,9 @@ screen and (max-width:736px) and (orientation:landscape) {
         right: 0
     }
     .cc-window.cc-banner {
-        -ms-flex-direction: column;
         flex-direction: column
     }
     .cc-window.cc-banner .cc-compliance {
-        -ms-flex: 1;
         flex: 1
     }
     .cc-window.cc-floating {
@@ -300,7 +288,6 @@ screen and (max-width:736px) and (orientation:landscape) {
         margin-bottom: 1em
     }
     .cc-window.cc-banner {
-        -ms-flex-align: unset;
         align-items: unset
     }
 }
@@ -313,7 +300,6 @@ screen and (max-width:736px) and (orientation:landscape) {
 .cc-floating.cc-type-info.cc-theme-classic .cc-compliance {
     text-align: center;
     display: inline;
-    -ms-flex: none;
     flex: none
 }
 

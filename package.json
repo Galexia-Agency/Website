@@ -14,8 +14,8 @@
     "react-scripts": "3.3.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build"
+    "start": "cross-env AUTOPREFIXER_GRID=no-autoplace react-scripts start",
+  "build": "cross-env AUTOPREFIXER_GRID=no-autoplace react-scripts build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -31,5 +31,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.7.3",
+    "cross-env": "^6.0.3"
   }
 }
