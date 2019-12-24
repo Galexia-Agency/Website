@@ -1,10 +1,11 @@
 import React from 'react';
-import './css/photography.scss';
 import Services from '../../components/services';
+import Person from '../../components/people';
+import './css/photography.scss';
 
 function Photography() {
   return (
-    <div className="PageContent" id="Photography">
+    <div className="PageContent Photography">
       <div className="PageHeaderContainer">
         <header className="PageHeader">
           <div className="HeaderLeft">
@@ -28,18 +29,38 @@ function Photography() {
                   src="/img/photography_image.png"
                   loading="lazy"
                   alt="Portfolio of work"
-                  width="970"
-                  height="985"
+                  width="412"
+                  height="402"
                 />
             </picture>
           </div>
         </header>
       </div>
+      <div className="People">
+        <h2 className="PeopleTitle TextGradient">We're all about the people</h2>
+        <div className="GridContainer PeopleGrid" id="PhotographyPeople">
+          <Person name="John Sheppard" />
+          <Person name="Teyla Emmagan" />
+          <Person name="Elizabeth Weir" />
+        </div>
+      </div>
+      <div className="BlogPortfolio">
+        <h2 className="TextGradient">
+          Portraits
+        </h2>
+        <h2 className="TextGradient">
+          Weddings
+        </h2>
+        <h2 className="TextGradient">
+          Wildlife
+        </h2>
+      </div>
+      
       <div className="OtherServices">
-        <h2>Read about our other services</h2>
+        <h2 className="TextGradient">Read about our other services</h2>
         <div className="GridContainer ServicesGrid" id="PhotographyPageServices">
-          <div class="SpaceBackground"><Services class="Blue" name="Web" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique." /></div>
-          <div class="SpaceBackground"><Services class="Blue" name="Marketing" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique." /></div>
+          <div className="SpaceBackground"><Services servicesClass="Blue" name="Web"/></div>
+          <div className="SpaceBackground"><Services servicesClass="Blue" name="Marketing"/></div>
         </div>
       </div>
     </div>

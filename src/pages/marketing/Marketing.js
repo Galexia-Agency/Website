@@ -1,11 +1,12 @@
 import React from 'react';
-import './css/marketing.scss';
 import Services from '../../components/services';
-
+import Person from '../../components/people';
+import Info from '../../components/info';
+import './css/marketing.scss';
 
 function Marketing() {
   return (
-    <div className="PageContent" id="Web">
+    <div className="PageContent Marketing">
       <div className="PageHeaderContainer">
         <header className="PageHeader">
           <div className="HeaderLeft">
@@ -20,13 +21,13 @@ function Marketing() {
             <picture>
                 <source
                   srcSet="
-                  /img/photography_image.png 1x,
-                  /img/photography_image_x2.png 2x,
-                  /img/photography_image.webp 1x,
-                  /img/photography_image_x2.webp 2x"
+                  /img/marketing_image.png 1x,
+                  /img/marketing_image_x2.png 2x,
+                  /img/marketing_image.webp 1x,
+                  /img/marketing_image_x2.webp 2x"
                 />
                 <img
-                  src="/img/photography_image.png"
+                  src="/img/marketing_image.png"
                   loading="lazy"
                   alt="Portfolio of work"
                   width="970"
@@ -36,11 +37,34 @@ function Marketing() {
           </div>
         </header>
       </div>
+      <div className="People">
+        <h2 className="PeopleTitle TextGradient">We're all about the people</h2>
+        <div className="GridContainer PeopleGrid" id="PhotographyPeople">
+          <Person name="John Sheppard" />
+          <Person name="Teyla Emmagan" />
+          <Person name="Elizabeth Weir" />
+        </div>
+      </div>
+      <div className="InfoContainer SpaceBackground">
+        <div className="Info">
+          <h2>
+            How's your retention?
+          </h2>
+          <div className="GridContainer InfoGrid" id="MarketingInfo">
+            <Info name="Social Media" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique." />
+            <Info name="Email Marketing" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique." />
+            <Info name="SEO" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique." />
+          </div>
+        </div>
+      </div>
       <div className="OtherServices">
-        <h2>Read about our other services</h2>
+        <h2 className="TextGradient">Read about our other services</h2>
         <div className="GridContainer ServicesGrid" id="MarketingPageServices">
-          <div class="SpaceBackground"><Services class="Blue" name="Photography" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique." /></div>
-          <div class="SpaceBackground"><Services class="Blue" name="Web" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique." /></div>
+          <div className="SpaceBackground"><Services servicesClass="Blue" name="Photography"/></div>
+          <div className="SpaceBackground"><Services servicesClass="Blue" name="Web"/></div>
         </div>
       </div>
     </div>

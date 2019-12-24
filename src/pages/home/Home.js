@@ -4,7 +4,7 @@ import Services from '../../components/services';
 
 function Home() {
   return (
-    <div className="PageContent" id="Home">
+    <div className="PageContent Home">
       <div className="PageHeaderContainer SpaceBackground">
         <header className="PageHeader">
           <div className="HeaderLeft">
@@ -37,7 +37,7 @@ function Home() {
       </div>
       <div className="HomeInfoContainer">
         <div className="FloatingInfoBox">
-          <p className="InfoTitle">
+          <p className="InfoTitle TextGradient">
             We believe in the freedom to explore
           </p>
           <div className="InfoDesc">
@@ -52,10 +52,10 @@ function Home() {
               Nullam ultricies imperdiet mauris, et facilisis mi dignissim non. Maecenas porta sem nunc, laoreet gravida ligula vulputate at. Mauris vulputate non leo et ultrices. Suspendisse aliquet sem magna, et facilisis orci consectetur non.
             </p>
             <div className="SpaceBackground Button">
-              <a className="Button ColorOne">Click</a>
+              <a href="Photography" className="Button ColorOne">Click</a>
             </div>
             <div className="SpaceBackground Button">
-              <a className="Button ColorTwo">Click</a>
+              <a href="Photography" className="Button ColorTwo">Click</a>
             </div>
           </div>
         </div>
@@ -179,14 +179,14 @@ function Home() {
       
       <div className="SpaceBackground">
         <div className="GridContainer ServicesGrid" id="HomePageServices">
-          <Services class="Purple" name="Photography"/>
-          <Services class="Purple" name="Web"/>
-          <Services class="Purple" name="Marketing"/>
+          <Services servicesClass="Purple" name="Photography"/>
+          <Services servicesClass="Purple" name="Web"/>
+          <Services servicesClass="Purple" name="Marketing"/>
         </div>
       </div>
 
       <div className="Blog">
-        <h2>Our Blog</h2>
+        <h2 className="TextGradient">Our Blog</h2>
         {/*Do some stuff*/} 
       </div>
 

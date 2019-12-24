@@ -1,5 +1,20 @@
-#Photography {
+@import '../../../css/includes/variables';
+
+.Photography {
+    #Photography.NavLink {
+        transition: all 0.5s cubic-bezier(0.000, 0.000, 0.230, 1);
+        background-position: 0%;
+    }
     .PageHeaderContainer {
         background-image: url(../../../img/photography_background.jpg);
+    }
+    .BlogPortfolio {
+        padding: 0 (16 * $pixels) (6 * $pixels) (16 * $pixels);
+    }
+    .HeaderRight {
+        position: relative;
+    }
+    .HeaderRight picture {
+        top: auto;
     }
 }

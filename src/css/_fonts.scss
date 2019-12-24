@@ -24,11 +24,24 @@ body {
     font-size: 3 * $pixels;
 }
 
-:link {
+::selection {
+    background: #2C75FF;
+    color: white;
+}
+
+::-moz-selection {
+    background: #2C75FF;
+    color: white;
+}
+
+:link, :active, :hover, :focus, :visited {
     text-decoration: none;
-    -webkit-background-clip: text;
+}
+
+:link:not(.Button) {
+    text-decoration: none;
     background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: rgba(0,0,0,0);
     background-image: linear-gradient(
     	to right,
 	    #2C75FF,
@@ -37,12 +50,9 @@ body {
     );
 	background-size: 200% 100%;
     background-position: 100%;
-    
-    &:active, &:hover, &:focus, &:visited {
-        text-decoration: none;
-    }
+    transition: all 0.5s;
 
-    &:active, &:hover, &:focus, :visited:hover {
+    &:active, &:hover, &:focus, &:visited:hover, &.active {
         transition: all 0.5s cubic-bezier(0.000, 0.000, 0.230, 1);
         background-position: 0%;
     }

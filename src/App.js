@@ -4,14 +4,24 @@ import {
   Switch,
   Route
 } from "react-router-dom";
+
 import './css/app.scss';
+import 'normalize.css';
+
 import Home from './pages/home/Home';
 import Photography from './pages/photography/Photography';
 import Web from './pages/web/Web';
 import Marketing from './pages/marketing/Marketing';
-import 'normalize.css';
+
+import WorkWithUs from './pages/work_with_us/Work-With-Us';
+import Terms from './pages/small_prints_pages/Terms';
+import CookiePolicy from './pages/small_prints_pages/Cookie-Policy';
+import PrivacyPolicy from './pages/small_prints_pages/Privacy-Policy';
+
 import Nav from './components/nav';
 import Footer from './components/footer';
+
+import './js/cookies';
 
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
@@ -34,6 +44,18 @@ function App() {
         <Nav />
         <div id="content">
           <Switch>
+          <Route path="/Work-With-Us">
+              <WorkWithUs />
+            </Route>
+            <Route path="/Privacy-Policy">
+              <PrivacyPolicy />
+            </Route>
+            <Route path="/Cookie-Policy">
+              <CookiePolicy />
+            </Route>
+            <Route path="/Terms">
+              <Terms />
+            </Route>
             <Route path="/Photography">
               <Photography />
             </Route>

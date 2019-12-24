@@ -1,6 +1,10 @@
 @import '../../../css/includes/variables';
 
-#Home {    
+.Home {
+    #Home.NavLink {
+        transition: all 0.5s cubic-bezier(0.000, 0.000, 0.230, 1);
+        background-position: 0%;
+    }
     #HomePageServices {
         background: $purple_translucent;
         padding: (18 * $pixels) (16 * $pixels);
@@ -37,11 +41,6 @@
         font-style: normal;
         font-weight: normal;
         font-size: 2em;
-        background: -webkit-linear-gradient($light_purple_solid, $dark_purple_solid);
-        background: linear-gradient($light_purple_solid, $dark_purple_solid);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
         margin: 0;
         width: 75%;
     }
@@ -122,9 +121,5 @@
     
     .Blog h2 {
         margin: (6 * $pixels) (18 * $pixels);
-        background: linear-gradient(#534BAE, #000051);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
     }
 }

@@ -30,9 +30,9 @@
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 0px 2px rgba(0, 0, 0, 0.06);
 }
 
-.Services h2 {
+.OtherServices .Services h2 {
     line-height: 105px;
-    margin-top: -(2 * $pixels);
+    margin: 0;
 }
 
 .Services p:last-of-type {
@@ -49,10 +49,6 @@
 }
 
 .OtherServices h2 {
-    background: linear-gradient(#534BAE, #000051);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
     text-align: center;
     margin: (6 * $pixels) auto;
 }
