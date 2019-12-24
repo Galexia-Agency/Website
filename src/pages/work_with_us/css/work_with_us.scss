@@ -1,0 +1,63 @@
+@import '../../../css/includes/variables';
+
+.Web {
+    .PageHeaderContainer {
+        background-image: url(../../../img/web_background.jpg);
+    }
+
+    .HostingInfoContainer {
+        color: white;
+        text-align: center;
+    }
+
+    .Blue:not(.Services) {
+        background: $light_blue_translucent;
+        padding: (6 * $pixels) (16 * $pixels)
+    }
+
+    .HostingInfoInner {
+        background-color: rgba(83, 75, 174, 0.75);
+        display: grid;
+        grid-template-columns: 1fr 6px 1fr;
+        grid-gap: 3 * $pixels;
+        width: 75%;
+        margin: auto;
+        border-radius: 3 * $pixels;
+        padding: 6 * $pixels
+    }
+
+    .HostingTitle {
+        font-size: 72px;
+        margin: 0;
+    }
+
+    .HostingTransferGrid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 3 * $pixels
+    }
+
+    .Seperator {
+        border-left: 6px solid white;
+    }
+
+    .HostingItemRight {
+        display: grid;
+    }
+
+    .RightText {
+        align-self: end;
+    }
+
+    .SomethingElseContainer {
+        color: white;
+    }
+
+    .SomethingElseGrid {
+        display: grid;
+        grid-template-columns: 0.75fr 1fr;
+        width: 85%;
+        margin: auto;
+        align-items: center;
+    }
+}
