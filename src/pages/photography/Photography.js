@@ -20,10 +20,15 @@ function Photography() {
             <picture>
                 <source
                   srcSet="
-                  /img/photography_image.png 1x,
-                  /img/photography_image_x2.png 2x,
                   /img/photography_image.webp 1x,
                   /img/photography_image_x2.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  srcSet="
+                  /img/photography_image.png 1x,
+                  /img/photography_image_x2.png 2x"
+                  type="image/png"
                 />
                 <img
                   src="/img/photography_image.png"

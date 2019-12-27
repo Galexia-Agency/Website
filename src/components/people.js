@@ -28,20 +28,26 @@ function Person(props) {
       <div className="SpaceBackground">
         <div className="Person">
           <picture>
+          <source
+              srcSet={`
+                  /img/${description(props.name).img}.webp 1x,
+                  /img/${description(props.name).img}_x2.webp 2x,
+              `}
+              type="image/webp"
+            />
             <source
               srcSet={`
                   /img/${description(props.name).img}.jpg 1x,
                   /img/${description(props.name).img}_x2.jpg 2x,
-                  /img/${description(props.name).img}.webp 1x,
-                  /img/${description(props.name).img}_x2.webp 2x,
               `}
+              type="image/jpg"
             />
             <img
               src={`/img/${description(props.name).img}.jpg`}
               loading="lazy"
               alt={props.name}
-              width="360"
-              height="235"
+              width="100%"
+              height="auto"
             />
           </picture>
           <h3>

@@ -17,6 +17,7 @@
 .Person picture {
     position: absolute;
     left: 7.5 * $pixels;
+    right: 7.5 * $pixels;
     top: calc(-236px / 2);
 }
 
@@ -31,4 +32,19 @@
 
 .PersonDescription {
     margin-bottom: 0;
+}
+
+@media (max-width: 400px) {
+    .People {
+        padding: (6 * $pixels) (2 * $pixels)
+    }
+
+    .Person {
+        padding: 25% (2 * $pixels) (6 * $pixels)
+    }
+    
+    .Person picture {
+        left: 3 * $pixels;
+        right: 3 * $pixels;
+    }
 }

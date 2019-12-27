@@ -139,3 +139,41 @@ footer {
 .FooterCopyright p {
     margin: 0;
 }
+
+@media (max-width: 890px) {
+    .FooterBottomContainer {
+        padding: 0 (6 * $pixels);
+    }
+}
+
+@media (max-width: 700px) {
+    .FooterBottom {
+        flex-direction: column;
+    }
+
+    .FooterSitemap {
+        margin: 0;
+        padding: (6 * $pixels) 0 0;
+        width: 100%;
+    }
+
+    .FooterTestimonials {
+        width: auto;
+        text-align: left;
+    }
+}
+
+@media (max-width: 400px) {
+    .FooterBottomContainer, .FooterContact {
+        padding: 0 (2 * $pixels);
+    }
+
+    .Contact {
+        grid-template-columns: 1fr;
+
+        label, input {
+            grid-column: 1 / span 2!important;
+            grid-row: auto!important;
+        }
+    }
+}

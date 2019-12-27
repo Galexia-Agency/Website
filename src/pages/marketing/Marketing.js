@@ -21,10 +21,15 @@ function Marketing() {
             <picture>
                 <source
                   srcSet="
-                  /img/marketing_image.png 1x,
-                  /img/marketing_image_x2.png 2x,
                   /img/marketing_image.webp 1x,
                   /img/marketing_image_x2.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  srcSet="
+                  /img/marketing_image.png 1x,
+                  /img/marketing_image_x2.png 2x"
+                  type="image/png"
                 />
                 <img
                   src="/img/marketing_image.png"
