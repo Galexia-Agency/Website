@@ -140,8 +140,8 @@ footer {
     margin: 0;
 }
 
-@media (max-width: 890px) {
-    .FooterBottomContainer {
+@media(max-width: 1200px) {
+    .FooterBottomContainer, .FooterContact {
         padding: 0 (6 * $pixels);
     }
 }
@@ -161,12 +161,6 @@ footer {
         width: auto;
         text-align: left;
     }
-}
-
-@media (max-width: 400px) {
-    .FooterBottomContainer, .FooterContact {
-        padding: 0 (2 * $pixels);
-    }
 
     .Contact {
         grid-template-columns: 1fr;
@@ -175,5 +169,11 @@ footer {
             grid-column: 1 / span 2!important;
             grid-row: auto!important;
         }
+    }
+}
+
+@media (max-width: 400px) {
+    .FooterBottomContainer, .FooterContact {
+        padding: 0 (2 * $pixels);
     }
 }

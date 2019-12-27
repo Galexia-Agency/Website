@@ -12,8 +12,9 @@ import Home from './pages/home/Home';
 import Photography from './pages/photography/Photography';
 import Web from './pages/web/Web';
 import Marketing from './pages/marketing/Marketing';
-
+import Blog from './pages/blog/Blog';
 import WorkWithUs from './pages/work_with_us/Work-With-Us';
+
 import Terms from './pages/small_prints_pages/Terms';
 import CookiePolicy from './pages/small_prints_pages/Cookie-Policy';
 import PrivacyPolicy from './pages/small_prints_pages/Privacy-Policy';
@@ -45,7 +46,7 @@ function App() {
         <Nav />
         <div id="content">
           <Switch>
-          <Route path="/Work-With-Us">
+            <Route path="/Work-With-Us">
               <WorkWithUs />
             </Route>
             <Route path="/Privacy-Policy">
@@ -65,6 +66,9 @@ function App() {
             </Route>
             <Route path="/Marketing">
               <Marketing />
+            </Route>
+            <Route path="/Blog">
+              <Blog />
             </Route>
             <Route path="/">
               <Home />

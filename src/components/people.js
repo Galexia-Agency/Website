@@ -15,7 +15,7 @@ function description(name) {
     return {desc: desc, role: role, img: img}
   };
   if (name === "Elizabeth Weir") {
-    let role = "Atlantis Expedition Leader";
+    let role = "Atlantis Leader";
     let desc = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In aliquam egestas neque ut sagittis.";
     let img = name.toLowerCase().replace(/\s/g, '_');
     return {desc: desc, role: role, img: img}

@@ -1,14 +1,14 @@
 @import '../../../css/includes/variables';
 
+.no-webp .Web .PageHeaderContainer {
+    background-image: url(../../../img/web_background.jpg);
+}
+
+.webp .Web .PageHeaderContainer {
+    background-image: url(../../../img/web_background.webp);
+}
+
 .Web {
-    .no-webp .PageHeaderContainer {
-        background-image: url(../../../img/web_background.jpg);
-    }
-
-    .webp .PageHeaderContainer {
-        background-image: url(../../../img/web_background.webp);
-    }
-
     .HostingInfoContainer {
         color: white;
         text-align: center;
@@ -63,9 +63,34 @@
         width: 85%;
         margin: auto;
         align-items: center;
+        grid-gap: 0 (6 * $pixels);
     }
 
-    @media(max-width: 400px) {
+    @media (max-width: 1500px) {
+        .Blue:not(.Services) {
+            padding: (6 * $pixels)
+        }
+
+        .HostingInfoInner {
+            width: auto;
+        }
+    }
+
+    @media (max-width: 950px) {
+        .SomethingElseItemLeft {
+            max-width: 450px;
+            margin: auto;
+        }
+
+        .SomethingElseGrid {
+            grid-template-columns: 1fr;
+            width: auto;
+        }
+
+        .InfoItem:nth-of-type(3) {
+            grid-column: 1 / span 2;
+        }
+
         .Blue:not(.Services), .HostingInfoInner {
             padding: (6 * $pixels) (2 * $pixels);
         }
@@ -83,10 +108,11 @@
         .RightText {
             align-self: auto;
         }
+    }
 
-        .SomethingElseGrid {
-            grid-template-columns: 1fr;
-            grid-template-rows: 1fr auto;
+    @media (max-width: 700px) {
+        .InfoItem:nth-of-type(3) {
+            grid-column: 1;
         }
     }
 }
