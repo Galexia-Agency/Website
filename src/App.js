@@ -22,6 +22,7 @@ import Nav from './components/nav';
 import Footer from './components/footer';
 
 import './js/cookies';
+import './js/webp';
 
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";

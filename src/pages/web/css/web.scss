@@ -1,8 +1,12 @@
 @import '../../../css/includes/variables';
 
 .Web {
-    .PageHeaderContainer {
+    .no-webp .PageHeaderContainer {
         background-image: url(../../../img/web_background.jpg);
+    }
+
+    .webp .PageHeaderContainer {
+        background-image: url(../../../img/web_background.webp);
     }
 
     .HostingInfoContainer {

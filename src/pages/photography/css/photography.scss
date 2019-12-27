@@ -6,7 +6,11 @@
         background-position: 0%;
     }
 
-    .PageHeaderContainer {
+    .webp .PageHeaderContainer {
+        background-image: url(../../../img/photography_background.webp);
+    }
+
+    .no-webp .PageHeaderContainer {
         background-image: url(../../../img/photography_background.jpg);
     }
 

@@ -5,7 +5,12 @@
         transition: all 0.5s cubic-bezier(0.000, 0.000, 0.230, 1);
         background-position: 0%;
     }
-    .PageHeaderContainer {
+
+    .webp .PageHeaderContainer {
+        background-image: url(../../../img/marketing_background.webp);
+    }
+
+    .no-webp .PageHeaderContainer {
         background-image: url(../../../img/marketing_background.jpg);
     }
 }

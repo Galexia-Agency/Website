@@ -18,9 +18,16 @@
 }
 
 .SpaceBackground {
-    background-image: url(../img/space.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.no-webp .SpaceBackground {
+    background-image: url(../img/space.jpg);
+}
+
+.webp .SpaceBackground {
+    background-image: url(../img/space.webp);
 }
 
 .PageHeader {
