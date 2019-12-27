@@ -105,6 +105,7 @@
     .PortfolioImages img {
         transition: 0.5s;
         cursor: pointer;
+        display: block;
     }
     
     .PortfolioImages img:hover {
@@ -154,12 +155,13 @@
         .HomeInfoContainer {
             margin: 0;
             padding: 0;
+            margin-top: -(3 * $pixels);
 
             .SpaceBackground {
                 height: auto;
                 width: auto;
                 margin: 0;
-
+                margin-top: -(3 * $pixels);
                 .BlueTongue {
                     height: auto;
 
@@ -175,12 +177,16 @@
                     }
                 }
             }
+            
+            .FloatingInfoBox {
+                border-radius: 3 * $pixels;
+            }
 
             &:before, &:after {
                 content: none;
             }
         }
-
+        
         .FloatingInfoBox {
             float: none;
             margin: 0;
@@ -199,6 +205,13 @@
             right: 0;
         }
     }
+
+    @media (max-width: 950px) {
+        #HomePageServices {
+            grid-template-columns: 1fr;
+            grid-gap: 6 * $pixels;
+        }
+    }
     
     @media (max-width: 400px) {
         .Blog h2 {
@@ -207,18 +220,6 @@
 
         #HomePageServices, .FloatingInfoBox, .PortfolioContainer {
             padding: (6 * $pixels) (2 * $pixels);
-        }
-
-        .HomeInfoContainer {
-            margin-top: -(3 * $pixels);
-
-            .FloatingInfoBox {
-                border-radius: 3 * $pixels;
-            }
-
-            .SpaceBackground {
-                margin-top: -(3 * $pixels);
-            }
         }
     }
 }

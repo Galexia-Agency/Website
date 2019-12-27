@@ -81,6 +81,12 @@
     }
 }
 
+@media (max-width: 830px) {
+    #content {
+        margin-top: 8 * $pixels;
+    }
+}
+
 @media (max-width: 700px) {
     .HeaderRight {
         display: none
