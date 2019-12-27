@@ -14,7 +14,7 @@
     font-family: 'Baloo', cursive;
     font-style: normal;
     font-weight: normal;
-    margin: 0;
+    margin: 0
 }
 
 .SpaceBackground {
@@ -50,4 +50,24 @@
     background: linear-gradient($light_purple_solid, $dark_purple_solid);
     background-clip: text;
     color: rgba(0,0,0,0)
+}
+
+@media (max-width: 400px) {
+    .HeaderTitle {
+        font-size: 48px;
+    }
+
+    .HeaderInfo {
+        width: auto;
+    }
+
+    .HeaderRight {
+        display: none;
+    }
+
+    .PageHeader {
+        padding: (6 * $pixels) (2 * $pixels);
+        grid-template-columns: 1fr;
+    }
+        
 }

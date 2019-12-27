@@ -68,3 +68,15 @@
 .Blue:hover {
     background-color: $light_blue_solid;
 }
+
+@media (max-width: 700px) {
+    .ServicesGrid {
+        padding: 0 (6 * $pixels) (6 * $pixels) (6 * $pixels);
+    }
+}
+
+@media (max-width: 400px) {
+    .ServicesGrid {
+        padding: 0 (2 * $pixels) (6 * $pixels) (2 * $pixels);
+    }
+}

@@ -19,10 +19,15 @@ function Home() {
             <picture>
                 <source
                   srcSet="
-                  /img/home_image.png 1x,
-                  /img/home_image_x2.png 2x,
                   /img/home_image.webp 1x,
                   /img/home_image_x2.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  srcSet="
+                  /img/home_image.png 1x,
+                  /img/home_image_x2.png 2x"
+                  type="image/png"
                 />
                 <img
                   src="/img/home_image.png"
@@ -72,103 +77,139 @@ function Home() {
                 <picture>
                     <source
                       srcSet={`
-                          /img/Marketing.jpg 1x,
-                          /img/Marketing_x2.jpg 2x,
                           /img/Marketing.webp 1x,
                           /img/Marketing_x2.webp 2x,
                       `}
+                      type="image/webp"
+                    />
+                    <source
+                      srcSet={`
+                          /img/Marketing.jpg 1x,
+                          /img/Marketing_x2.jpg 2x
+                      `}
+                      type="image/jpg"
                     />
                     <img
                       src={`/img/Marketing.jpg`}
                       loading="lazy"
                       alt="Marketing"
-                      width="240"
-                      height="130"
+                      width="100%"
+                      height="auto"
                     />
                 </picture>
                 <picture>
                     <source
                       srcSet={`
-                          /img/Marketing.jpg 1x,
-                          /img/Marketing_x2.jpg 2x,
                           /img/Marketing.webp 1x,
                           /img/Marketing_x2.webp 2x,
                       `}
+                      type="image/webp"
+                    />
+                    <source
+                      srcSet={`
+                          /img/Marketing.jpg 1x,
+                          /img/Marketing_x2.jpg 2x
+                      `}
+                      type="image/jpg"
                     />
                     <img
                       src={`/img/Marketing.jpg`}
                       loading="lazy"
                       alt="Marketing"
-                      width="240"
-                      height="130"
+                      width="100%"
+                      height="auto"
                     />
                 </picture>
                 <picture>
                     <source
                       srcSet={`
-                          /img/Marketing.jpg 1x,
-                          /img/Marketing_x2.jpg 2x,
                           /img/Marketing.webp 1x,
                           /img/Marketing_x2.webp 2x,
                       `}
+                      type="image/webp"
+                    />
+                    <source
+                      srcSet={`
+                          /img/Marketing.jpg 1x,
+                          /img/Marketing_x2.jpg 2x
+                      `}
+                      type="image/jpg"
                     />
                     <img
                       src={`/img/Marketing.jpg`}
                       loading="lazy"
                       alt="Marketing"
-                      width="240"
-                      height="130"
+                      width="100%"
+                      height="auto"
                     />
                 </picture>
                 <picture>
                     <source
                       srcSet={`
-                          /img/Marketing.jpg 1x,
-                          /img/Marketing_x2.jpg 2x,
                           /img/Marketing.webp 1x,
                           /img/Marketing_x2.webp 2x,
                       `}
+                      type="image/webp"
+                    />
+                    <source
+                      srcSet={`
+                          /img/Marketing.jpg 1x,
+                          /img/Marketing_x2.jpg 2x
+                      `}
+                      type="image/jpg"
                     />
                     <img
                       src={`/img/Marketing.jpg`}
                       loading="lazy"
                       alt="Marketing"
-                      width="240"
-                      height="130"
+                      width="100%"
+                      height="auto"
                     />
                 </picture>
                 <picture>
                     <source
                       srcSet={`
-                          /img/Marketing.jpg 1x,
-                          /img/Marketing_x2.jpg 2x,
                           /img/Marketing.webp 1x,
                           /img/Marketing_x2.webp 2x,
                       `}
+                      type="image/webp"
+                    />
+                    <source
+                      srcSet={`
+                          /img/Marketing.jpg 1x,
+                          /img/Marketing_x2.jpg 2x
+                      `}
+                      type="image/jpg"
                     />
                     <img
                       src={`/img/Marketing.jpg`}
                       loading="lazy"
                       alt="Marketing"
-                      width="240"
-                      height="130"
+                      width="100%"
+                      height="auto"
                     />
                 </picture>
                 <picture>
                     <source
                       srcSet={`
-                          /img/Marketing.jpg 1x,
-                          /img/Marketing_x2.jpg 2x,
                           /img/Marketing.webp 1x,
                           /img/Marketing_x2.webp 2x,
                       `}
+                      type="image/webp"
+                    />
+                    <source
+                      srcSet={`
+                          /img/Marketing.jpg 1x,
+                          /img/Marketing_x2.jpg 2x
+                      `}
+                      type="image/jpg"
                     />
                     <img
                       src={`/img/Marketing.jpg`}
                       loading="lazy"
                       alt="Marketing"
-                      width="240"
-                      height="130"
+                      width="100%"
+                      height="auto"
                     />
                 </picture>
               </div>

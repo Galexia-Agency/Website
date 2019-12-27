@@ -26,21 +26,27 @@ function Services(props) {
                 {props.name}
               </h2>
               <picture>
-                  <source
-                    srcSet={`
-                        /img/${props.name}.jpg 1x,
-                        /img/${props.name}_x2.jpg 2x,
-                        /img/${props.name}.webp 1x,
-                        /img/${props.name}_x2.webp 2x,
-                    `}
-                  />
-                  <img
-                    src={`/img/${props.name}.jpg`}
-                    loading="lazy"
-                    alt={props.name}
-                    width="450"
-                    height="175"
-                  />
+                <source
+                  srcSet={`
+                      /img/${props.name}.webp 1x,
+                      /img/${props.name}_x2.webp 2x,
+                  `}
+                  type="image/webp"
+                />
+                <source
+                  srcSet={`
+                      /img/${props.name}.jpg 1x,
+                      /img/${props.name}_x2.jpg 2x,
+                  `}
+                  type="image/jpg"
+                />
+                <img
+                  src={`/img/${props.name}.jpg`}
+                  loading="lazy"
+                  alt={props.name}
+                  width="100%"
+                  height="auto"
+                />
               </picture>
               <p>
                 {description(props.name)}

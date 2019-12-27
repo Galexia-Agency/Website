@@ -2,7 +2,7 @@ import React from 'react';
 import Services from '../../components/services';
 import Person from '../../components/people';
 import Info from '../../components/info';
-import './css/web.scss' ;
+import './css/web.scss';
 
 function Web() {
   return (
@@ -19,20 +19,27 @@ function Web() {
           </div>
           <div className="HeaderRight">
             <picture>
-                <source
-                  srcSet="
-                  /img/web_image.png 1x,
-                  /img/web_image_x2.png 2x,
+              <source
+                srcSet="
                   /img/web_image.webp 1x,
-                  /img/web_image_x2.webp 2x"
-                />
-                <img
-                  src="/img/web_image.png"
-                  loading="lazy"
-                  alt="Portfolio of work"
-                  width="970"
-                  height="985"
-                />
+                  /img/web_image_x2.webp 2x
+                "
+                type="image/webp"
+              />
+              <source
+                srcSet="
+                  /img/web_image.png 1x,
+                  /img/web_image_x2.png 2x
+                "
+                type="image/png"
+              />
+              <img
+                src="/img/web_image.png"
+                loading="lazy"
+                alt="Portfolio of work"
+                width="970"
+                height="985"
+              />
             </picture>
           </div>
         </header>
@@ -149,19 +156,26 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
           <div className="SomethingElseGrid">
             <div className="SomethingElseItemLeft">
               <picture>
+                <source 
+                  srcSet="
+                    /img/else.webp 1x,
+                    /img/else_x2.webp 2x
+                  "
+                  type="image/webp"
+                />
                 <source
                   srcSet="
-                  /img/else.png 1x,
-                  /img/else_x2.png 2x,
-                  /img/else.webp 1x,
-                  /img/else_x2.webp 2x"
+                    /img/else.png 1x,
+                    /img/else_x2.png 2x
+                  "
+                  type="image/png"                
                 />
                 <img
                   src="/img/else.png"
                   loading="lazy"
                   alt="Something else in mind...?"
-                  width="460"
-                  height="460"
+                  width="100%"
+                  height="auto"
                 />
               </picture>
             </div>

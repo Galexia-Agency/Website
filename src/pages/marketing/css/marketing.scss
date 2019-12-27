@@ -1,3 +1,5 @@
+@import '../../../css/includes/variables';
+
 .Marketing {
     #Marketing.NavLink {
         transition: all 0.5s cubic-bezier(0.000, 0.000, 0.230, 1);
@@ -5,5 +7,11 @@
     }
     .PageHeaderContainer {
         background-image: url(../../../img/marketing_background.jpg);
+    }
+}
+
+@media(max-width:400px) {
+    .Info {
+        padding: (6 * $pixels) (2 * $pixels);
     }
 }
