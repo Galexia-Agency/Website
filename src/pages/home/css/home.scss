@@ -118,38 +118,47 @@
     .Blog h2 {
         margin: (6 * $pixels) (18 * $pixels);
     }
-    @media (max-width: 700px) {
+
+    @media (max-width: 1560px) {
+        .PortfolioContainer {
+            top: 12 * $pixels;
+        }
+    }
+
+    @media (max-width: 1200px) {
+        .HeaderRight picture {
+            z-index: 3;
+            top: 7.5%;
+        }
+
         #HomePageServices {
             padding: (10 * $pixels) (6 * $pixels);
+        }
+
+        .HomeInfoContainer {
+            padding: 0 (10 * $pixels) (6 * $pixels);
         }
 
         .Blog h2 {
             margin: (6 * $pixels) (6 * $pixels)
         }
-    }
-    
-    @media (max-width: 400px) {
-        .Blog h2 {
-            margin: (6 * $pixels) (2 * $pixels)
-        }
-
+        
         .HomeInfoContainer {
             grid-template-columns: 1fr;
         }
 
         #HomePageServices, .FloatingInfoBox, .PortfolioContainer {
-            padding: (6 * $pixels) (2 * $pixels);
+            padding: (6 * $pixels);
         }
 
         .HomeInfoContainer {
             margin: 0;
             padding: 0;
-            margin-top: -(3 * $pixels);
 
             .SpaceBackground {
                 height: auto;
                 width: auto;
-                margin-top: -(3 * $pixels);
+                margin: 0;
 
                 .BlueTongue {
                     height: auto;
@@ -176,6 +185,7 @@
             float: none;
             margin: 0;
             width: auto;
+            border-radius: 0;
         }
 
         .BlueTongue, .HomeInfoContainer .SpaceBackground {
@@ -187,6 +197,28 @@
             width: auto;
             top: 0;
             right: 0;
+        }
+    }
+    
+    @media (max-width: 400px) {
+        .Blog h2 {
+            margin: (6 * $pixels) (2 * $pixels)
+        }
+
+        #HomePageServices, .FloatingInfoBox, .PortfolioContainer {
+            padding: (6 * $pixels) (2 * $pixels);
+        }
+
+        .HomeInfoContainer {
+            margin-top: -(3 * $pixels);
+
+            .FloatingInfoBox {
+                border-radius: 3 * $pixels;
+            }
+
+            .SpaceBackground {
+                margin-top: -(3 * $pixels);
+            }
         }
     }
 }

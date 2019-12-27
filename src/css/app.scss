@@ -18,9 +18,16 @@
 }
 
 .SpaceBackground {
-    background-image: url(../img/space.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.no-webp .SpaceBackground {
+    background-image: url(../img/space.jpg);
+}
+
+.webp .SpaceBackground {
+    background-image: url(../img/space.webp);
 }
 
 .PageHeader {
@@ -35,6 +42,12 @@
     right: 0;
     top: 0;
     z-index: 1;
+    width: auto;
+}
+
+.HeaderRight picture img {
+    max-width: 50vw;
+    height: auto;
 }
 
 .HeaderInfo {
@@ -52,22 +65,40 @@
     color: rgba(0,0,0,0)
 }
 
-@media (max-width: 400px) {
+@media (max-width: 1560px) {
+    .HeaderRight picture {
+        top: 58px
+    }
+}
+
+@media (max-width: 1200px) {
     .HeaderTitle {
         font-size: 48px;
     }
 
-    .HeaderInfo {
-        width: auto;
+    .PageHeader {
+        padding: (10 * $pixels) (6 * $pixels)
     }
+}
 
+@media (max-width: 700px) {
     .HeaderRight {
-        display: none;
+        display: none
+    }
+    
+    .HeaderInfo {
+        width: auto
     }
 
     .PageHeader {
-        padding: (6 * $pixels) (2 * $pixels);
-        grid-template-columns: 1fr;
+        padding: (6 * $pixels);
+        grid-template-columns: 1fr
     }
-        
+}
+
+@media (max-width: 400px) {
+    .PageHeader {
+        padding: (6 * $pixels) (2 * $pixels);
+        grid-template-columns: 1fr
+    }        
 }

@@ -10,15 +10,16 @@
     text-align: center;
     padding: (5 * $pixels) (7.5 * $pixels);
     position: relative;
-    padding-top: calc(236px / 2);
+    padding-top: 120px;
     box-shadow: $shadow;
+    height: calc(100% - 40px - 120px);
 }
 
 .Person picture {
     position: absolute;
     left: 7.5 * $pixels;
     right: 7.5 * $pixels;
-    top: calc(-236px / 2);
+    top: -120px;
 }
 
 .People .SpaceBackground, .Person, .Person img {
@@ -27,11 +28,73 @@
 }
 
 .People .SpaceBackground {
-    margin-top: calc(236px / 2);
+    margin-top: 33.33%;
 }
 
 .PersonDescription {
     margin-bottom: 0;
+}
+
+@media (max-width: 1600px) {
+    .Person picture {
+        top: -60px;
+    }
+}
+
+@media (max-width: 1400px) {
+    .Person picture {
+        left: 3 * $pixels;
+        right: 3 * $pixels;
+    }
+
+    .Person {
+        padding: 120px (2 * $pixels) (6 * $pixels)
+    }
+}
+
+@media (max-width: 1200px) {
+    .People {
+        padding: (6 * $pixels)
+    }
+}
+
+@media (max-width: 950px) {
+    .Person picture {
+        top: -120px;
+    }
+
+    .PeopleGrid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 700px) {
+    .PeopleGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .People .SpaceBackground {
+        max-width: 550px;
+        justify-self: center;
+    }
+
+    .Person picture {
+        left: 7.5 * $pixels;
+        right: 7.5 * $pixels;
+        top: -168px;
+    }
+}
+
+@media (max-width: 550px) {
+    .Person picture {
+        top: -120px;
+    }
+}
+
+@media (max-width: 475px) {
+    .Person picture {
+        top: -80px;
+    }
 }
 
 @media (max-width: 400px) {
@@ -42,9 +105,14 @@
     .Person {
         padding: 25% (2 * $pixels) (6 * $pixels)
     }
+
+    .People .SpaceBackground {
+        margin-top: 50%;
+    }
     
     .Person picture {
         left: 3 * $pixels;
         right: 3 * $pixels;
+        top: -120px;
     }
 }

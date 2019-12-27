@@ -69,9 +69,25 @@
     background-color: $light_blue_solid;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 1200px) {
     .ServicesGrid {
         padding: 0 (6 * $pixels) (6 * $pixels) (6 * $pixels);
+    }
+}
+
+@media (max-width: 950px) {
+    .ServicesGrid {
+        grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 700px) {
+    .ServicesGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .ServicesGrid .SpaceBackground {
+        justify-self: center!important;
     }
 }
 

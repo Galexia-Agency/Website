@@ -1,17 +1,28 @@
 @import '../../../css/includes/variables';
 
+.webp .Marketing .PageHeaderContainer {
+    background-image: url(../../../img/marketing_background.webp);
+}
+
+.no-webp .Marketing .PageHeaderContainer {
+    background-image: url(../../../img/marketing_background.jpg);
+}
+
 .Marketing {
     #Marketing.NavLink {
         transition: all 0.5s cubic-bezier(0.000, 0.000, 0.230, 1);
         background-position: 0%;
     }
-    .PageHeaderContainer {
-        background-image: url(../../../img/marketing_background.jpg);
-    }
-}
 
-@media(max-width:400px) {
-    .Info {
-        padding: (6 * $pixels) (2 * $pixels);
+    @media (max-width: 950px) {
+        .InfoItem:nth-of-type(3) {
+            grid-column: 1 / span 2;
+        }
+    }
+
+    @media (max-width: 700px) {
+        .InfoItem:nth-of-type(3) {
+            grid-column: 1;
+        }
     }
 }
