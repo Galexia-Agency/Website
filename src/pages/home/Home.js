@@ -2,6 +2,8 @@ import React from 'react';
 import './css/home.scss';
 import Services from '../../components/services';
 import RSS from '../../components/rss';
+import 'featherlight';
+import '../../css/includes/_featherlight.scss';
 
 function Home() {
   return (
@@ -75,6 +77,32 @@ function Home() {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In aliquam egestas neque ut sagittis.
               </p>
               <div className="PortfolioImages">
+                <a href="/img/Marketing.jpg" data-featherlight="image">
+                  <picture>
+                      <source
+                        srcSet={`
+                            /img/Marketing.webp 1x,
+                            /img/Marketing_x2.webp 2x,
+                        `}
+                        type="image/webp"
+                      />
+                      <source
+                        srcSet={`
+                            /img/Marketing.jpg 1x,
+                            /img/Marketing_x2.jpg 2x
+                        `}
+                        type="image/jpg"
+                      />
+                      <img
+                        src={`/img/Marketing.jpg`}
+                        loading="lazy"
+                        alt="Marketing"
+                        width="100%"
+                        height="auto"
+                      />
+                  </picture>
+                </a>
+                <a href="/img/Marketing.jpg" data-featherlight="image">
                 <picture>
                     <source
                       srcSet={`
@@ -98,6 +126,8 @@ function Home() {
                       height="auto"
                     />
                 </picture>
+                </a>
+                <a href="/img/Marketing.jpg" data-featherlight="image">
                 <picture>
                     <source
                       srcSet={`
@@ -121,6 +151,8 @@ function Home() {
                       height="auto"
                     />
                 </picture>
+                </a>
+                <a href="/img/Marketing.jpg" data-featherlight="image">
                 <picture>
                     <source
                       srcSet={`
@@ -144,6 +176,8 @@ function Home() {
                       height="auto"
                     />
                 </picture>
+                </a>
+                <a href="/img/Marketing.jpg" data-featherlight="image">
                 <picture>
                     <source
                       srcSet={`
@@ -167,6 +201,8 @@ function Home() {
                       height="auto"
                     />
                 </picture>
+                </a>
+                <a href="/img/Marketing.jpg" data-featherlight="image">
                 <picture>
                     <source
                       srcSet={`
@@ -190,29 +226,7 @@ function Home() {
                       height="auto"
                     />
                 </picture>
-                <picture>
-                    <source
-                      srcSet={`
-                          /img/Marketing.webp 1x,
-                          /img/Marketing_x2.webp 2x,
-                      `}
-                      type="image/webp"
-                    />
-                    <source
-                      srcSet={`
-                          /img/Marketing.jpg 1x,
-                          /img/Marketing_x2.jpg 2x
-                      `}
-                      type="image/jpg"
-                    />
-                    <img
-                      src={`/img/Marketing.jpg`}
-                      loading="lazy"
-                      alt="Marketing"
-                      width="100%"
-                      height="auto"
-                    />
-                </picture>
+                </a>
               </div>
             </div>
           </div>

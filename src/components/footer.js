@@ -19,7 +19,6 @@ var testimonial = [
 class Testimonials extends React.Component {
   componentDidMount() {
     this.timer = setInterval(function() {
-        console.log(testimonial.length)
         if (i === testimonial.length - 1) {
           document.querySelector(".Testimonial").innerHTML = testimonial[i].content;
           document.querySelector(".TestimonialCompany").innerHTML = testimonial[i].company;
@@ -29,7 +28,7 @@ class Testimonials extends React.Component {
           document.querySelector(".TestimonialCompany").innerHTML = testimonial[i].company;
           i = i + 1;
         }
-    }, 5000 // in milliseconds, 3s for fast show
+    }, 5000
     )
   }
 
