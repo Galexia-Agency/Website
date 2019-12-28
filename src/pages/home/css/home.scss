@@ -115,10 +115,6 @@
     .PortfolioContainer h2 {
         margin: 0;
     }
-    
-    .Blog h2 {
-        margin: (6 * $pixels) (18 * $pixels);
-    }
 
     @media (max-width: 1560px) {
         .PortfolioContainer {
@@ -138,10 +134,6 @@
 
         .HomeInfoContainer {
             padding: 0 (10 * $pixels) (6 * $pixels);
-        }
-
-        .Blog h2 {
-            margin: (6 * $pixels) (6 * $pixels)
         }
         
         .HomeInfoContainer {
@@ -214,10 +206,6 @@
     }
     
     @media (max-width: 400px) {
-        .Blog h2 {
-            margin: (6 * $pixels) (2 * $pixels)
-        }
-
         #HomePageServices, .FloatingInfoBox, .PortfolioContainer {
             padding: (6 * $pixels) (2 * $pixels);
         }

@@ -1,6 +1,7 @@
 import React from 'react';
 import './css/home.scss';
 import Services from '../../components/services';
+import RSS from '../../components/rss';
 
 function Home() {
   return (
@@ -229,6 +230,8 @@ function Home() {
       <div className="Blog">
         <h2 className="TextGradient">Our Blog</h2>
         {/*Do some stuff*/} 
+
+        <RSS feed="https://www.joebaileyphotography.com/Blog/category/joe-bailey-photography/photography/feed/" maxitems="4" />
       </div>
 
     </div>
