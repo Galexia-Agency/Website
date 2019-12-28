@@ -4,6 +4,10 @@
 @import "~grid/grid";
 @import 'includes/variables';
 
+body {
+    user-select: auto!important
+}
+
 #content {
     margin-top: 100px;
 }
