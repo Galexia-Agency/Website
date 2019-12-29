@@ -1,26 +1,14 @@
 <h1 align="center">Welcome to the Galexia site repo</h1>
-<p>
+<p align="center">Galexia is a digital design agency providing Web, Marketing, and Photography services to small businesses.</p>
+<p align="center">
   <img alt="Version" src="https://img.shields.io/badge/version-1-blue.svg?cacheSeconds=2592000" />
   <a href="https://twitter.com/joebaileyphoto" target="_blank">
     <img alt="Twitter: joebaileyphoto" src="https://img.shields.io/twitter/follow/joebaileyphoto.svg?style=social" />
   </a>
+  <a href="https://app.netlify.com/sites/confident-mcclintock-f9c36a/deploys">
+    <img alt="Netlify Status" src="https://api.netlify.com/api/v1/badges/ad4a4bf0-3059-4dfa-b925-425598963742/deploy-status">
+  </a>
 </p>
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/ad4a4bf0-3059-4dfa-b925-425598963742/deploy-status)](https://app.netlify.com/sites/confident-mcclintock-f9c36a/deploys)
-
-Galexia is a digital design agency providing Web, Marketing, and Photography services to small businesses.
-
-Galexia will need a website to showcase its portfolio and in order for potential clients to get in touch.
-
-The Galexia site will need to be fully responsive as over 48% of website traffic is via mobile in 2019.
-
-## Visual Style Guide
-
-![Style Guide](docs/img/Frame.png)
-
-## Coding Style Guide
-
-
 
 ## Install
 
@@ -40,11 +28,100 @@ yarn start
 yarn build
 ```
 
+## Visual Style Guide
+
+![Style Guide](docs/img/Frame.png)
+
+## Coding Style Guide
+
+### HTML5 Doctype
+
+```sh
+<!DOCTYPE html>
+```
+
+### HTML Lang Attribute
+
+```sh
+<html lang=”en-gb”>
+```
+
+### Syntax
+
+HTML will be indented consistently by a tab character or 4 spaces.
+Nested elements will be indented once.
+Self closing elements don’t need a trailing slash such as the ```<img>``` element
+
+#### Attributes
+
+Attributes and elements should always be lowercase
+Double quotes should always be used, never single
+
+##### Attribute Order
+
+HTML attributes should come in this particular order for easier reading of code.
+```id```
+```class```
+```data-*```
+```for | type | href | src```
+
+### HTML Comments
+
+Comments are to be used every time a div is closed. They will be on the same line as the closing ```</div>``` tag. Example below:
+
+```sh
+<div id=”foo” class=”bar”>
+…
+</div> <!-- #foo .bar -->
+```
+
+### HTML5 Tags
+
+HTML5 tags such as ```<header>``` and ```<footer>``` are preferred over standard ```<div>``` tags.
+
+## Branching Strategy
+
+Master branch is for tested code and is deployed directly to Netlify. Do not push anything to master. Always create pull requests and test code.
+
+Dev branch is for development work on the site. Should always contain close to production ready code requiring minimal commits to get to production status.
+
+Branches should be created for big projects requiring more than one commit such as adding a new page. They should be titled the project name and then a pull request should be made with dev in order to test it.
+
+## Testing
+
+Use a local environment if possible otherwise use browserstack to manually test the site by navigating to all pages and performing all actions
+
+### List of browsers we support
+
+* Last 2 versions of Mozilla Firefox
+* Last 2 versions of Microsoft Edge
+* Last 2 versions of Google Chrome
+* Last 2 versions of Opera
+* Last 1 versions of Safari
+* Last 1 versions of iOS Safari
+* Last 2 versions of Chrome for Android
+* Last 2 versions of Firefox for Android
+* Last 1 versions of Samsung Internet
+
+## Screenshots
+
+Coming Soon...
+
+## Reflective Account
+
+Coming Soon...
+
+### Future Ideas
+
+This section can be found in the Projects tab on [GitHub](https://github.com/joebailey26/Galexia/projects/1)
+
+Last Updated 29th December 2019
+
 ## Author
 
 👤 **Joe Bailey**
 
-* Website: joebailey.xyz
+* Website: [joebailey.xyz](joebailey.xyz)
 * Twitter: [@joebaileyphoto](https://twitter.com/joebaileyphoto)
 * Github: [@joebailey26](https://github.com/joebailey26)
 * LinkedIn: [@joe-bailey-b68b17171](https://linkedin.com/in/joe-bailey-b68b17171)
