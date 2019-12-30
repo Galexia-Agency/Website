@@ -2,6 +2,7 @@ import React from 'react';
 import Services from '../../components/services';
 import Person from '../../components/people';
 import './css/photography.scss';
+import RSS from '../../components/rss';
 
 function Photography() {
   return (
@@ -49,16 +50,19 @@ function Photography() {
           <Person name="Elizabeth Weir" />
         </div>
       </div>
-      <div className="BlogPortfolio">
+      <div className="Blog">
         <h2 className="TextGradient">
           Portraits
         </h2>
+        <RSS feed="https://allesoverwaterstof.nl/nieuws/feed/" maxitems="4" name="Portraits"/>
         <h2 className="TextGradient">
           Weddings
         </h2>
+        <RSS feed="https://forestparkdental.com/category/uncategorized/feed" maxitems="4" name="Weddings"/>
         <h2 className="TextGradient">
           Wildlife
         </h2>
+        <RSS feed="https://www.joebaileyphotography.com/Blog/category/joe-bailey-photography/photography/feed/" maxitems="4" name="Wildlife"/>
       </div>
       
       <div className="OtherServices">

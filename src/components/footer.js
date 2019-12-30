@@ -8,6 +8,44 @@ const encode = (data) => {
       .join("&");
 }
 
+var i = 0;
+
+var testimonial = [
+  {content: '“Galexia helped my brand realize it’s potential. They gave me valuable content to share with my clients”', company: '- A Nice Company'},
+  {content: '“Foo Bar”', company: '- A Different Company'},
+  {content: '“Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet Yeet”', company: '- A Different Different Company'},
+]
+
+class Testimonials extends React.Component {
+  componentDidMount() {
+    this.timer = setInterval(function() {
+        if (i === testimonial.length - 1) {
+          document.querySelector(".Testimonial").innerHTML = testimonial[i].content;
+          document.querySelector(".TestimonialCompany").innerHTML = testimonial[i].company;
+          i = 0;
+        } else {
+          document.querySelector(".Testimonial").innerHTML = testimonial[i].content;
+          document.querySelector(".TestimonialCompany").innerHTML = testimonial[i].company;
+          i = i + 1;
+        }
+    }, 5000
+    )
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.timer)
+  }
+
+  render() {
+    return (
+      <div className="FooterTestimonials">
+        <p className="Testimonial">{testimonial[i].content}</p>
+        <p className="TestimonialCompany">{testimonial[i].company}</p>
+      </div>
+    )
+  }
+}
+
 class ContactForm extends React.Component {
   constructor(props) {
     super(props);
@@ -75,10 +113,7 @@ function Footer() {
                 <Link className="FooterNavLink" id="Cookie" to="/Cookie-Policy">Cookie Policy</Link>
                 <Link className="FooterNavLink" id="Terms" to="/Terms">Terms & Conditions</Link>
               </div>
-              <div className="FooterTestimonials">
-                <p className="Testimonial">“Galexia helped my brand realize it’s potential. They gave me valuable content to share with my clients”</p>
-                <p className="TestimonialCompany">- A Nice Company</p>
-              </div>
+              <Testimonials />
             </div>
             <div className="FooterCopyright">
               <p>© {new Date().getFullYear()} Galexia. Company No: 11824756.</p>

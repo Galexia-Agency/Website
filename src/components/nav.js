@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink, Link } from "react-router-dom";
 import './css/nav.scss';
-import * as Hammer from "hammerjs"; 
+import * as Hammer from "hammerjs";
 
 let app;
 let aclose;
@@ -88,8 +88,42 @@ class Nav extends React.Component {
 		var mc = new Hammer(myElement);
 		// listen to events...
 		mc.on("swipeleft", this.appclose);
-		mc.on("swiperight", this.appdrawer);
+        mc.on("swiperight", this.appdrawer);
+        
+        // Featherlight Fix
+        /*
+        * Scrollbar Width Test
+        * Adds `featherlight-fix` class to body if scrollbars use up screen real estate
+        */
+       function featherlightfix() {
+            var parent = document.createElement("div");
+            parent.setAttribute("style", "width:30px;height:30px;");
+            parent.classList.add('scrollbar-test');
+
+            var child = document.createElement("div");
+            child.setAttribute("style", "width:100%;height:40px");
+            parent.appendChild(child);
+            document.body.appendChild(parent);
+
+            // Measure the child element, if it is not
+            // 30px wide the scrollbars are obtrusive.
+            var scrollbarWidth = 30 - parent.firstChild.clientWidth;
+            if(scrollbarWidth) {
+                document.documentElement.classList.add("featherlight-fix");
+            } else {
+                document.documentElement.classList.remove("featherlight-fix");
+            }
+
+            document.body.removeChild(parent);
+        }
+        document.addEventListener('DOMContentLoaded', featherlightfix());
+        document.addEventListener('DOMContentLoaded', function() {
+            window.addEventListener('resize', function() {
+              featherlightfix()
+            })
+        })
     }
+
 }
 
 export default Nav;
