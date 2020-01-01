@@ -1,5 +1,6 @@
 <h1 align="center">Welcome to the Galexia site repo</h1>
 <p align="center">Galexia is a digital design agency providing Web, Marketing, and Photography services to small businesses.</p>
+<a align="center" href="https://galexia.agency">https://galexia.agency</a>
 <p align="center">
   <img alt="Version" src="https://img.shields.io/badge/version-1-blue.svg?cacheSeconds=2592000" />
   <a href="https://twitter.com/joebaileyphoto" target="_blank">
