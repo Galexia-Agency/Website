@@ -106,9 +106,15 @@ Use a local environment if possible otherwise use **Browserstack** to manually t
 
 ## Screenshots
 
+### Desktop
+
 ![Desktop](docs/img/Desktop.jpg)
 
+### Tablet
+
 ![Tablet](docs/img/Tablet.jpg)
+
+### Mobile
 
 ![Mobile](docs/img/Mobile.jpg)
 
