@@ -1,6 +1,6 @@
 <h1 align="center">Welcome to the Galexia site repo</h1>
 <p align="center">Galexia is a digital design agency providing Web, Marketing, and Photography services to small businesses.</p>
-<a align="center" href="https://galexia.agency">https://galexia.agency</a>
+<p align="center"><a href="https://galexia.agency">https://galexia.agency</a></p>
 <p align="center">
   <img alt="Version" src="https://img.shields.io/badge/version-1-blue.svg?cacheSeconds=2592000" />
   <a href="https://twitter.com/joebaileyphoto" target="_blank">
@@ -122,7 +122,7 @@ I have chosen to use React to build the Galexia website. **React** is a modern J
 
 As I have used a JAMStack approach to creating this website I have not needed to set up a server to host it. Instead, I have used Netlify, which automatically builds the website using Yarn, when I push changes to **GitHub**. JAMStack sites are fast and secure, delivered by pre-rendering files and serving them directly from a CDN, removing the requirement to manage or run web servers.
 
-I have used Node Package Manager to maintain the dependencies in this project. One advantage of using **NPM** is that a <pre><b>package.json</b></pre> file is created. This file instructs any development machine which dependencies are required by the Galexia site. This comes with many advantages, including, any machine with **Node** installed can be used to develop the Galexia site, and dependencies don't have to be stored in the repo for Galexia.
+I have used Node Package Manager to maintain the dependencies in this project. One advantage of using **NPM** is that a *package.json* file is created. This file instructs any development machine which dependencies are required by the Galexia site. This comes with many advantages, including, any machine with **Node** installed can be used to develop the Galexia site, and dependencies don't have to be stored in the repo for Galexia.
 
 Examples of packages used include:
 
@@ -133,7 +133,7 @@ Examples of packages used include:
 
 ### Problems faced
 
-I faced a problem implementing the contact form with **Netlify's** services. This is simple on static sites, but ones rendered with JavaScript, like this one, require a bit more work. I had to include a template of the form on the <pre><b>index.html</b></pre> page and include some **React** to render the form and correctly parse the data to **Netlify** for the form to be submitted.
+I faced a problem implementing the contact form with **Netlify's** services. This is simple on static sites, but ones rendered with JavaScript, like this one, require a bit more work. I had to include a template of the form on the *index.html* page and include some **React** to render the form and correctly parse the data to **Netlify** for the form to be submitted.
 
 Correctly implementing RSS Feeds on the site proved a difficult feat. External servers have different levels of responsiveness. Quick servers would respond with their RSS Feeds first meaning that they were displayed in the wrong order on the Galexia site. To get around this explicit class names were used on the RSS Feed containers ensuring the data was mapped to the correct location when the server responded.
 
