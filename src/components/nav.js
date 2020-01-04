@@ -116,11 +116,9 @@ class Nav extends React.Component {
 
             document.body.removeChild(parent);
         }
-        document.addEventListener('DOMContentLoaded', featherlightfix());
-        document.addEventListener('DOMContentLoaded', function() {
-            window.addEventListener('resize', function() {
-              featherlightfix()
-            })
+        featherlightfix()
+        window.addEventListener('resize', function() {
+            featherlightfix()
         })
     }
 

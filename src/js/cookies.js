@@ -616,14 +616,12 @@ function getCookie(name) {
 
 // If cookie accept button is pressed then apply JavaScript
 if (getCookie('cookieconsent_status') == null) {
-	document.addEventListener('DOMContentLoaded', function(event) {
-		setTimeout(
-			function() {
-				document.querySelector('.cc-btn.cc-dismiss').addEventListener("click", function(event) {
-				applyCookies();
-			})
-		}, 5000)
-	});
+    setTimeout(
+        function() {
+            document.querySelector('.cc-btn.cc-dismiss').addEventListener("click", function(event) {
+            applyCookies();
+        })
+    }, 1000)
 }
 
 // Create a script tag in the Header
