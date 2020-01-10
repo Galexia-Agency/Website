@@ -1,3 +1,5 @@
+/index.html / 200
+
 # These rules will change if you change your site’s custom domains or HTTPS settings
 
 # Redirect domain aliases to primary domain
@@ -8,5 +10,3 @@ https://www.galexia.studio/* https://galexia.agency/:splat 301!
 https://confident-mcclintock-f9c36a.netlify.com/* https://galexia.agency/:splat 301!
 
 /* / 200
-
-/index.html / 200
