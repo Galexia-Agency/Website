@@ -33,25 +33,28 @@ yarn build
 
 ![Style Guide](docs/img/Frame.png)
 
+
 ## Coding Style Guide
 
-### HTML5 Doctype
+### HTML
+
+#### HTML5 Doctype
 
 ```sh
 <!DOCTYPE html>
 ```
 
-### HTML Lang Attribute
+#### HTML Lang Attribute
 
 ```sh
-<html lang=”en-gb”>
+<html lang=”en-GB”>
 ```
 
-### Syntax
+#### Syntax
 
 HTML will be indented consistently by a tab character or 4 spaces.
 Nested elements will be indented once.
-Self closing elements don’t need a trailing slash such as the ```<img>``` element
+Self closing elements need a trailing slash such as the ```<img />``` element
 
 #### Attributes
 
@@ -66,19 +69,100 @@ HTML attributes should come in this particular order for easier reading of code.
 ```data-*```
 ```for | type | href | src```
 
-### HTML Comments
+#### HTML5 Tags
 
-Comments are to be used every time a div is closed. They will be on the same line as the closing ```</div>``` tag. Example below:
+HTML5 tags such as ```<header>```, ```<footer>```, ```<nav>```, and ```<time>``` are preferred over standard ```<div>``` tags.
+
+### SCSS
+
+CSS Files are not needed as Node Sass compiles the SCSS.
+
+SCSS should be included in a CSS folder in the same directory as the component/element
+
+Use one tab to indent each property
+
+Add one blank line between code blocks
+
+Multiple selectors can be on one line and must end with a curly brace
+
+Property-balue pairs should be on their own line with one tab of indentation and ending in a semicolon
+
+The closing brace should be flush left using the same amount of indentation as the opening selector
+
+Colors should use names where possible rather than hex values
 
 ```sh
-<div id=”foo” class=”bar”>
-…
-</div> <!-- #foo .bar -->
+.Foo, #Bar {
+  background: white;
+  color: black
+}
+
+#Bar {
+  width: 100%;
+  height: auto;
+}
 ```
 
-### HTML5 Tags
+## Git
 
-HTML5 tags such as ```<header>``` and ```<footer>``` are preferred over standard ```<div>``` tags.
+### Commit Messages
+
+1. Specify the type of commit:
+
+  * feat: The new feature you're adding to a particular application
+
+  * fix: A bug fix
+
+  * style: Feature and updates related to styling
+
+  * refactor: Refactoring a specific section of the codebase
+
+  * test: Everything related to testing
+
+  * docs: Everything related to documentation
+
+  * chore: Regular code maintenance.
+
+2. Separate the subject from the body with a blank line
+
+3. Your commit message should not contain any whitespace errors
+
+4. Remove unnecessary punctuation marks
+
+5. Do not end the subject line with a period
+
+6. Capitalize the subject line and each paragraph
+
+7. Use the body to explain what changes you have made and why you made them.
+
+8. Do not assume the reviewer understands what the original problem was, ensure you add it.
+
+9. Do not think your code is self-explanatory
+
+#### Command Line
+
+```sh
+git commit -m "Subject" -m "Description..."
+```
+
+#### Text Editor Template
+
+Capitalized, short (50 chars or less) summary
+
+More detailed explanatory text, if necessary.  Wrap it to about 72
+characters or so.  In some contexts, the first line is treated as the
+subject of an email and the rest of the text as the body.  The blank
+line separating the summary from the body is critical (unless you omit
+the body entirely).
+
+Write your commit message in the imperative: "Fix bug" and not "Fixed bug"
+or "Fixes bug."  This convention matches up with commit messages generated
+by commands like git merge and git revert.
+
+Further paragraphs come after blank lines.
+
+- Bullet points are okay, too, use a hyphen or asterisk for the bullet, followed by a
+  single space, with blank lines in between
 
 ## Branching Strategy
 
