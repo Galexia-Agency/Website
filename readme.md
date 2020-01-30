@@ -164,7 +164,7 @@ Further paragraphs come after blank lines.
 - Bullet points are okay, too, use a hyphen or asterisk for the bullet, followed by a
   single space, with blank lines in between
 
-## Branching Strategy
+### Branching Strategy
 
 Master branch is for tested code and is deployed directly to **Netlify**. Do not push anything to master. Always create pull requests and test code.
 
