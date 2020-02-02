@@ -3,6 +3,7 @@ import Services from '../../components/services';
 import Person from '../../components/people';
 import Info from '../../components/info';
 import './css/web.scss';
+import RSS from '../../components/rss';
 
 function Web() {
   return (
@@ -138,7 +139,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
           <h2>
             WordPress
           </h2>
-          <div className="GridContainer InfoGrid" id="MarketingInfo">
+          <div className="GridContainer InfoGrid" id="WebInfo">
             <Info name="Basic" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique.
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique." />
             <Info name="Intermediate" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique.
@@ -191,6 +192,16 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
               </p>
             </div>
 
+          </div>
+        </div>
+      </div>
+      <div className="InfoContainer SpaceBackground">
+        <div className="Info">
+          <h2>
+            Our past clients
+          </h2>
+          <div className="GridContainer InfoGrid">
+            <RSS feed="https://www.joebaileyphotography.com/Blog/category/joe-bailey-photography/photography/feed/" maxitems="4" name="Wildlife"/>
           </div>
         </div>
       </div>
