@@ -58,7 +58,7 @@
         background: white;   
         width: calc(100% - (5 * #{$pixels}));    
         margin: (1.5 * $pixels) 0;
-        resize: none;
+        resize: vertical;
         transition: 0.5s;
         &:focus, &:hover {
             outline: 0;
