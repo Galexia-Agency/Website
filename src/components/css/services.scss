@@ -23,11 +23,12 @@
     color: white;
     text-align: center;
     padding: 2 * $pixels;
-    transition: 1s;
-}
-
-.Services:hover {
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 0px 2px rgba(0, 0, 0, 0.06);
+    transition: 0.5s;
+    &:hover {
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 0px 2px rgba(0, 0, 0, 0.06);
+        transform: scale(1.04);
+        border-radius: 6px;
+    }
 }
 
 .OtherServices .Services h2 {
@@ -46,6 +47,12 @@
 .OtherServices .SpaceBackground {
     border-radius: 3 * $pixels;
     max-width: 480px;
+    transition: 0.5s;
+    &:hover {
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 0px 2px rgba(0, 0, 0, 0.06);
+        transform: scale(1.04);
+        border-radius: 6px;
+    }
 }
 
 .OtherServices h2 {
@@ -57,16 +64,11 @@
     background-color: rgba(83, 75, 174, 0.6);
 }
 
-.Purple:hover {
-    background-color: $light_purple_solid;
-}
-
 .Blue {
     background-color: rgba(84, 114, 211, 0.8);
-}
-
-.Blue:hover {
-    background-color: $light_blue_solid;
+    &:hover {
+        transform: scale(1);
+    }
 }
 
 @media (max-width: 1200px) {

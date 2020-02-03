@@ -3,6 +3,7 @@ import Services from '../../components/services';
 import Person from '../../components/people';
 import Info from '../../components/info';
 import './css/marketing.scss';
+import RSS from '../../components/rss';
 
 function Marketing() {
   return (
@@ -62,6 +63,16 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique." />
             <Info name="SEO" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique.
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique." />
+          </div>
+        </div>
+      </div>
+      <div className="InfoContainer SpaceBackground">
+        <div className="Blue Info" id="MarketingClients">
+          <h2>
+            Our past clients
+          </h2>
+          <div className="GridContainer InfoGrid">
+            <RSS feed="https://www.joebaileyphotography.com/Blog/category/joe-bailey-photography/photography/feed/" maxitems="4" name="Wildlife"/>
           </div>
         </div>
       </div>
