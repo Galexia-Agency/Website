@@ -83,7 +83,6 @@
     
     #submit:focus {
         outline: none;
-        box-shadow: $pixels $pixels $pixels $dark_purple_translucent;
     }
 
     #SubmitContainer {
@@ -94,6 +93,7 @@
 
 footer {
     color: white;
+    scroll-margin-block-start: 100px;
 }
 
 /* Footer Bottom */

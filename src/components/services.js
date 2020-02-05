@@ -8,7 +8,7 @@ function description(name) {
     return (desc)
   }
   if (name === "Web") {
-    let desc = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique.";
+    let desc = "We take care of everything from branding and design to development to user testing and marketing. We have a team of experienced professionals that all strive for perfection. This is reflected in all of the websites we build.";
     return (desc)
   };
   if (name === "Marketing") {
@@ -27,17 +27,11 @@ function Services(props) {
               </h2>
               <picture>
                 <source
-                  srcSet={`
-                      /img/${props.name}.webp 1x,
-                      /img/${props.name}_x2.webp 2x,
-                  `}
+                  srcSet={`/img/${props.name}.webp`}
                   type="image/webp"
                 />
                 <source
-                  srcSet={`
-                      /img/${props.name}.jpg 1x,
-                      /img/${props.name}_x2.jpg 2x,
-                  `}
+                  srcSet={`/img/${props.name}.jpg`}
                   type="image/jpg"
                 />
                 <img

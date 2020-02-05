@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './css/small_prints_pages.scss' ;
 
 function Terms() {
+  useEffect(() => {
+    document.title = 'Terms & Conditions | Galexia | The Best Creative Agency in the Galaxy';
+  })
   return (
     <div className="PageContent SmallPrints">
       <h2 className="TextGradient">

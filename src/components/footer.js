@@ -114,7 +114,7 @@ class ContactForm extends React.Component {
 
 function Footer() {
   return (
-      <footer className="GlobalFooter">
+      <footer className="GlobalFooter" id="Contact">
         <div className="FooterContainer SpaceBackground">
           <div className="FooterContactContainer">
             <div className="FooterContact">

@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Services from '../../components/services';
-import Person from '../../components/people';
+import People from '../../components/people';
 import Info from '../../components/info';
 import './css/marketing.scss';
 import RSS from '../../components/rss';
 
 function Marketing() {
+  useEffect(() => {
+    document.title = 'Marketing | Galexia | The Best Creative Agency in the Galaxy';
+  })
   return (
     <div className="PageContent Marketing">
       <div className="PageHeaderContainer">
@@ -18,39 +21,9 @@ function Marketing() {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. In aliquam egestas neque ut sagittis. Curabitur maximus ante ac dolor tristique, vel dictum augue efficitur. Sed at tortor enim.
             </p>
           </div>
-          <div className="HeaderRight">
-            <picture>
-                <source
-                  srcSet="
-                  /img/marketing_image.webp 1x,
-                  /img/marketing_image_x2.webp 2x"
-                  type="image/webp"
-                />
-                <source
-                  srcSet="
-                  /img/marketing_image.png 1x,
-                  /img/marketing_image_x2.png 2x"
-                  type="image/png"
-                />
-                <img
-                  src="/img/marketing_image.png"
-                  loading="lazy"
-                  alt="Portfolio of work"
-                  width="970"
-                  height="985"
-                />
-            </picture>
-          </div>
         </header>
       </div>
-      <div className="People">
-        <h2 className="PeopleTitle TextGradient">We're all about the people</h2>
-        <div className="GridContainer PeopleGrid" id="PhotographyPeople">
-          <Person name="John Sheppard" />
-          <Person name="Teyla Emmagan" />
-          <Person name="Elizabeth Weir" />
-        </div>
-      </div>
+      <People arr={[]} names={["Hannah Goodman", "Eleanor Morgan", ""]}></People>
       <div className="InfoContainer SpaceBackground">
         <div className="Info">
           <h2>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './css/home.scss';
 import Services from '../../components/services';
 import RSS from '../../components/rss';
@@ -6,6 +6,9 @@ import 'featherlight';
 import '../../css/includes/_featherlight.scss';
 
 function Home() {
+  useEffect(() => {
+    document.title = 'Galexia | The Best Creative Agency in the Galaxy';
+  })
   return (
     <div className="PageContent Home">
       <div className="PageHeaderContainer SpaceBackground">
@@ -60,10 +63,7 @@ function Home() {
               Nullam ultricies imperdiet mauris, et facilisis mi dignissim non. Maecenas porta sem nunc, laoreet gravida ligula vulputate at. Mauris vulputate non leo et ultrices. Suspendisse aliquet sem magna, et facilisis orci consectetur non.
             </p>
             <div className="SpaceBackground Button">
-              <a href="Photography" className="Button ColorOne">Click</a>
-            </div>
-            <div className="SpaceBackground Button">
-              <a href="Photography" className="Button ColorTwo">Click</a>
+              <a href="#Contact" className="Button ColorOne">Get in Touch</a>
             </div>
           </div>
         </div>

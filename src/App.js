@@ -32,6 +32,9 @@ function ScrollToTop() {
   const { pathname } = useLocation();
 
   useEffect(() => {
+    document.querySelector(".active").addEventListener("click", () => {
+      document.body.scrollIntoView()
+    })
     window.scrollTo(0, 0);
   }, [pathname]);
 
