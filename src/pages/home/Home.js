@@ -23,25 +23,25 @@ function Home() {
           </div>
           <div className="HeaderRight">
             <picture>
-                <source
-                  srcSet="
-                  /img/home_image.webp 1x,
-                  /img/home_image_x2.webp 2x"
-                  type="image/webp"
-                />
-                <source
-                  srcSet="
-                  /img/home_image.png 1x,
-                  /img/home_image_x2.png 2x"
-                  type="image/png"
-                />
-                <img
-                  src="/img/home_image.png"
-                  loading="lazy"
-                  alt="Portfolio of work"
-                  width="970"
-                  height="985"
-                />
+              <source
+                srcSet="
+                /img/home_image.webp 1x,
+                /img/home_image_x2.webp 2x"
+                type="image/webp"
+              />
+              <source
+                srcSet="
+                /img/home_image.png 1x,
+                /img/home_image_x2.png 2x"
+                type="image/png"
+              />
+              <img
+                src="/img/home_image.png"
+                loading="lazy"
+                alt="Portfolio of work"
+                width="970"
+                height="985"
+              />
             </picture>
           </div>
         </header>
