@@ -13,7 +13,7 @@ class Nav extends React.Component {
                 <div className="HeaderContainer">
                     <div className="LogoContainer">
                         <div title="Navigation" className="NavbarToggler" onClick={this.appdrawer}>
-                            <i className="fa fa-bars TextGradient"></i>
+                            <i className="fa fa-bars"></i>
                         </div>
                         <Link className="LogoLink" to="/">
                             <p className="Logo">
@@ -24,7 +24,7 @@ class Nav extends React.Component {
                     
                     <div className="NavigationContainer Navmob closed">
                         <nav className="Navigation">
-                            <NavLink className="NavLink" id="Home" to="/"  exact={true}>Home</NavLink>
+                            <NavLink className="NavLink" id="Home" to="/" exact={true}>Home</NavLink>
                             <NavLink className="NavLink" id="Photography" to="/Photography">Photography</NavLink>
                             <NavLink className="NavLink" id="Web" to="/Web">Web</NavLink>
                             <NavLink className="NavLink" id="Marketing" to="/Marketing">Marketing</NavLink>

@@ -178,3 +178,11 @@ footer {
         padding: 0 (2 * $pixels);
     }
 }
+
+.FooterTestimonials.enter {
+    opacity: 0.01;
+}
+.FooterTestimonials {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+}
