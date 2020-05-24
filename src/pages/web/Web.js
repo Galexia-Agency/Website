@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Services from '../../components/services';
-import Person from '../../components/people';
+import Person from '../../components/person';
 import Info from '../../components/info';
 import './css/web.scss';
 import RSS from '../../components/rss';
 
 function Web() {
+  useEffect(() => {
+    document.title = 'Web | Galexia | The Best Creative Agency in the Galaxy';
+  })
   return (
     <div className="PageContent Web">
       <div className="PageHeaderContainer">
@@ -15,23 +18,17 @@ function Web() {
               Web
             </p>
             <p className="HeaderInfo">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In aliquam egestas neque ut sagittis. Curabitur maximus ante ac dolor tristique, vel dictum augue efficitur. Sed at tortor enim.
+              We take care of everything from branding and design to development to user testing and marketing. We have a team of experienced professionals that all strive for perfection. This is reflected in all of the websites we build.
             </p>
           </div>
           <div className="HeaderRight">
             <picture>
               <source
-                srcSet="
-                  /img/web_image.webp 1x,
-                  /img/web_image_x2.webp 2x
-                "
+                srcSet="/img/web_image.webp"
                 type="image/webp"
               />
               <source
-                srcSet="
-                  /img/web_image.png 1x,
-                  /img/web_image_x2.png 2x
-                "
+                srcSet="/img/web_image.png"
                 type="image/png"
               />
               <img
@@ -48,9 +45,9 @@ function Web() {
       <div className="People">
         <h2 className="PeopleTitle TextGradient">We're all about the people</h2>
         <div className="GridContainer PeopleGrid" id="PhotographyPeople">
-          <Person name="John Sheppard" />
-          <Person name="Teyla Emmagan" />
-          <Person name="Elizabeth Weir" />
+          <Person name="Joe Bailey" />
+          <Person name="Eleanor Morgan" />
+          <Person name="Aurimas Karvelis" />
         </div>
       </div>
       <div className="InfoContainer SpaceBackground">
@@ -60,11 +57,11 @@ function Web() {
           </h2>
           <div className="GridContainer InfoGrid" id="MarketingInfo">
             <Info name="Speed Boost" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique.
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique." />
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique." />
             <Info name="SEO Checkup" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique.
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique." />
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique." />
             <Info name="Monthly Health Care" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique.
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique." />
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique." />
           </div>
         </div>
       </div>
@@ -158,17 +155,11 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
             <div className="SomethingElseItemLeft">
               <picture>
                 <source 
-                  srcSet="
-                    /img/else.webp 1x,
-                    /img/else_x2.webp 2x
-                  "
+                  srcSet="/img/else.webp"
                   type="image/webp"
                 />
                 <source
-                  srcSet="
-                    /img/else.png 1x,
-                    /img/else_x2.png 2x
-                  "
+                  srcSet="/img/else.png"
                   type="image/png"                
                 />
                 <img

@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link } from "react-router-dom";
-import './css/footer.scss';
+import React from 'react'
+import { Link } from "react-router-dom"
+import './css/footer.scss'
 
 const encode = (data) => {
   return Object.keys(data)
@@ -19,17 +19,20 @@ var testimonial = [
 class Testimonials extends React.Component {
   componentDidMount() {
     this.timer = setInterval(function() {
+      document.querySelector(".FooterTestimonials").classList.add("enter")
+      setTimeout(function() {
         if (i === testimonial.length - 1) {
-          document.querySelector(".Testimonial").innerHTML = testimonial[i].content;
-          document.querySelector(".TestimonialCompany").innerHTML = testimonial[i].company;
+          document.querySelector(".Testimonial").innerHTML = testimonial[i].content
+          document.querySelector(".TestimonialCompany").innerHTML = testimonial[i].company
           i = 0;
         } else {
-          document.querySelector(".Testimonial").innerHTML = testimonial[i].content;
-          document.querySelector(".TestimonialCompany").innerHTML = testimonial[i].company;
+          document.querySelector(".Testimonial").innerHTML = testimonial[i].content
+          document.querySelector(".TestimonialCompany").innerHTML = testimonial[i].company
           i = i + 1;
         }
-    }, 5000
-    )
+        document.querySelector(".FooterTestimonials").classList.remove("enter")
+      }, 1000)
+    }, 5000)
   }
 
   componentWillUnmount() {
@@ -67,6 +70,22 @@ class ContactForm extends React.Component {
   };
 
   handleChange = e => this.setState({ [e.target.name]: e.target.value });
+  
+  checkform() {
+    var f = document.forms["contact"].elements
+    var cansubmit = true
+
+    for (var i = 0; i < f.length - 2; i++) {
+      if (f[i].value.length === 0) cansubmit = false
+    }
+    if(document.querySelector("#message")) {
+      if(document.querySelector("#message").value === '') {
+        cansubmit = false
+      }
+    }
+
+    if(document.querySelector('#submit')) document.querySelector('#submit').disabled = !cansubmit
+  }
 
   render() {
     const { FName, LName, Email, Telephone, Subject, Message } = this.state;
@@ -74,19 +93,19 @@ class ContactForm extends React.Component {
       <form className="Contact" method="post" name="contact" id="contact" onSubmit={this.handleSubmit}>
         <input type="hidden" name="form-name" value="contact"/>
         <label htmlFor="FName">Name:</label>
-        <input id="fname" name="FName" type="text" placeholder="Han" required value={FName} onChange={this.handleChange}></input>
+        <input id="fname" name="FName" type="text" placeholder="Han" required value={FName} onChange={this.handleChange} onKeyUp={this.checkform()}></input>
         <label htmlFor="LName">Last Name:</label>
-        <input id="lname" name="LName" type="text" placeholder="Solo" required value={LName} onChange={this.handleChange}></input>
+        <input id="lname" name="LName" type="text" placeholder="Solo" required value={LName} onChange={this.handleChange} onKeyUp={this.checkform()}></input>
         <label htmlFor="Email">Email:</label>
-        <input id="mail" name="Email" type="email" placeholder="millenium@falcon.net" required value={Email} onChange={this.handleChange}></input>
+        <input id="mail" name="Email" type="email" placeholder="millenium@falcon.net" required value={Email} onChange={this.handleChange} onKeyUp={this.checkform()}></input>
         <label htmlFor="Telephone">Telephone:</label>
-        <input id="telephone" name="Telephone" type="tel" placeholder="+447569836548" required value={Telephone} onChange={this.handleChange}></input>
+        <input id="telephone" name="Telephone" type="tel" placeholder="+447569836548" required value={Telephone} onChange={this.handleChange} onKeyUp={this.checkform()}></input>
         <label htmlFor="Subject">Subject:</label>
-        <input id="subject" name="Subject" type="text" placeholder="Corellia" required value={Subject} onChange={this.handleChange}></input>
+        <input id="subject" name="Subject" type="text" placeholder="Corellia" required value={Subject} onChange={this.handleChange} onKeyUp={this.checkform()}></input>
         <label htmlFor="Message">Message:</label>
-        <textarea id="message" name="Message" placeholder="Chewie, the exhaust ports need cleaning" required value={Message} onChange={this.handleChange}></textarea>
+        <textarea id="message" name="Message" placeholder="Chewie, the exhaust ports need cleaning" required value={Message} onChange={this.handleChange} onKeyUp={this.checkform()}></textarea>
         <div id="SubmitContainer">
-          <input id="submit" type="submit" name="Submit" className="Button ColorTwo" value="submit"></input>
+          <input id="submit" type="submit" name="Submit" className="Button ColorTwo" value="submit" disabled></input>
         </div>
       </form>
     );
@@ -114,7 +133,7 @@ class ContactForm extends React.Component {
 
 function Footer() {
   return (
-      <footer className="GlobalFooter">
+      <footer className="GlobalFooter" id="Contact">
         <div className="FooterContainer SpaceBackground">
           <div className="FooterContactContainer">
             <div className="FooterContact">

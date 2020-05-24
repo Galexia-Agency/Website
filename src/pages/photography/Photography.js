@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Services from '../../components/services';
-import Person from '../../components/people';
+import Person from '../../components/person';
 import './css/photography.scss';
 import RSS from '../../components/rss';
 
 function Photography() {
+  useEffect(() => {
+    document.title = 'Photography | Galexia | The Best Creative Agency in the Galaxy';
+  })
   return (
     <div className="PageContent Photography">
       <div className="PageHeaderContainer">
@@ -14,40 +17,17 @@ function Photography() {
               Photography
             </p>
             <p className="HeaderInfo">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In aliquam egestas neque ut sagittis. Curabitur maximus ante ac dolor tristique, vel dictum augue efficitur. Sed at tortor enim.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In aliquam egestas neque ut sagittis. Curabitur maximus ante ac dolor tristique, vel dictum augue efficitur. Sed at tortor enim.
             </p>
-          </div>
-          <div className="HeaderRight">
-            <picture>
-                <source
-                  srcSet="
-                  /img/photography_image.webp 1x,
-                  /img/photography_image_x2.webp 2x"
-                  type="image/webp"
-                />
-                <source
-                  srcSet="
-                  /img/photography_image.png 1x,
-                  /img/photography_image_x2.png 2x"
-                  type="image/png"
-                />
-                <img
-                  src="/img/photography_image.png"
-                  loading="lazy"
-                  alt="Portfolio of work"
-                  width="412"
-                  height="402"
-                />
-            </picture>
           </div>
         </header>
       </div>
       <div className="People">
         <h2 className="PeopleTitle TextGradient">We're all about the people</h2>
         <div className="GridContainer PeopleGrid" id="PhotographyPeople">
-          <Person name="John Sheppard" />
-          <Person name="Teyla Emmagan" />
-          <Person name="Elizabeth Weir" />
+          <Person name="Joe Bailey" />
+          <Person name="Chelsea Gibson" />
+          <div></div>
         </div>
       </div>
       <div className="Blog">

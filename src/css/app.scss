@@ -4,14 +4,18 @@
 @import "~grid/grid";
 @import 'includes/variables';
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    user-select: auto!important
+    user-select: auto!important;
+    scroll-margin-block-start: 100px;
 }
 
 #content {
     margin-top: 100px;
 }
-
 
 .HeaderTitle {
     font-size: 72px;

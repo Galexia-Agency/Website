@@ -13,7 +13,7 @@ class Nav extends React.Component {
                 <div className="HeaderContainer">
                     <div className="LogoContainer">
                         <div title="Navigation" className="NavbarToggler" onClick={this.appdrawer}>
-                            <i className="fa fa-bars TextGradient"></i>
+                            <i className="fa fa-bars"></i>
                         </div>
                         <Link className="LogoLink" to="/">
                             <p className="Logo">
@@ -24,11 +24,12 @@ class Nav extends React.Component {
                     
                     <div className="NavigationContainer Navmob closed">
                         <nav className="Navigation">
-                            <NavLink className="NavLink" id="Home" to="/"  exact={true}>Home</NavLink>
+                            <NavLink className="NavLink" id="Home" to="/" exact={true}>Home</NavLink>
                             <NavLink className="NavLink" id="Photography" to="/Photography">Photography</NavLink>
                             <NavLink className="NavLink" id="Web" to="/Web">Web</NavLink>
                             <NavLink className="NavLink" id="Marketing" to="/Marketing">Marketing</NavLink>
                             <NavLink className="NavLink" id="Blog" to="/Blog">Blog</NavLink>
+                            <a className="NavLink" id="ContactLink" href="#Contact">Contact</a>
                             {/* eslint-disable-next-line*/}
                             <div title="CloseNavigation" id="Close" className="closed" onClick={this.appclose}></div>
                         </nav>
@@ -89,6 +90,13 @@ class Nav extends React.Component {
 		// listen to events...
 		mc.on("swipeleft", this.appclose);
         mc.on("swiperight", this.appdrawer);
+
+        //Close App Drawer on click
+        document.querySelectorAll(".NavLink").forEach((e) => {
+            e.addEventListener('click', () => {
+              this.appclose()
+            });
+        });       
         
         // Featherlight Fix
         /*

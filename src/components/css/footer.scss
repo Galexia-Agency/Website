@@ -83,7 +83,6 @@
     
     #submit:focus {
         outline: none;
-        box-shadow: $pixels $pixels $pixels $dark_purple_translucent;
     }
 
     #SubmitContainer {
@@ -94,6 +93,7 @@
 
 footer {
     color: white;
+    scroll-margin-block-start: 100px;
 }
 
 /* Footer Bottom */
@@ -177,4 +177,12 @@ footer {
     .FooterBottomContainer, .FooterContact {
         padding: 0 (2 * $pixels);
     }
+}
+
+.FooterTestimonials.enter {
+    opacity: 0.01;
+}
+.FooterTestimonials {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
 }
