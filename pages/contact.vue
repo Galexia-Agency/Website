@@ -73,6 +73,7 @@
           We’d love to help you on your next big project. We understand what it means to dream big, and then achieve that dream.
         </p>
         <div class="contact_container">
+          <client-only>
           <form method="post" name="Contact Form" netlify @submit.prevent="onSubmit">
             <label>
               First Name:
@@ -168,6 +169,7 @@
               </p>
             </transition>
           </form>
+          </client-only>
           <inline-svg :src="require('../assets/svg/contact.svg')" />
         </div>
       </div>
@@ -234,7 +236,7 @@ export default {
           '/',
           self.encode({
             'form-name': 'Contact Form',
-            ...JSON.stringify(self.form)
+            ...self.form
           }),
           { header: { 'Content-Type': 'application/x-www-form-urlencoded' } }
         )
