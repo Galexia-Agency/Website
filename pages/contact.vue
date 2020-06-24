@@ -207,16 +207,18 @@ export default {
         active: false
       }
     }
-    if (localStorage.getItem('form')) {
-      this.form = JSON.parse(localStorage.getItem('form'))
-    } else {
-      this.form = {
-        fname: '',
-        lname: '',
-        email: '',
-        telephone: '',
-        subject: '',
-        message: ''
+    if (process.client) {
+      if (localStorage.getItem('form')) {
+        this.form = JSON.parse(localStorage.getItem('form'))
+      } else {
+        this.form = {
+          fname: '',
+          lname: '',
+          email: '',
+          telephone: '',
+          subject: '',
+          message: ''
+        }
       }
     }
   },
