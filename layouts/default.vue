@@ -152,12 +152,6 @@
   .header--inner h1 i {
     border-bottom: .25rem solid white
   }
-  .header--inner_button_container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: fit-content;
-    margin: auto
-  }
 
   /* Nav */
   nav {
@@ -344,12 +338,6 @@
         <h2 v-if="page.subTitle" v-html="page.subTitle" />
         <!-- eslint-disable-next-line -->
         <p v-if="page.desc" v-html="page.desc" />
-        <div v-if="page.cta.active" class="header--inner_button_container">
-          <!-- eslint-disable-next-line -->
-          <nuxt-link :to="page.cta.link" class="button" v-html="page.cta.text" />
-          <!-- eslint-disable-next-line -->
-          <nuxt-link v-if="page.cta1.active" :to="page.cta1.link" class="button colorTwo" v-html="page.cta1.text" />
-        </div>
       </div>
     </header>
     <main>
@@ -404,17 +392,7 @@ export default {
         display: true,
         title: '',
         subTitle: '',
-        desc: '',
-        cta: {
-          active: false,
-          text: '',
-          link: ''
-        },
-        cta1: {
-          active: false,
-          text: '',
-          link: ''
-        }
+        desc: ''
       }
     }
   }
