@@ -1,0 +1,92 @@
+<template>
+  <div>
+    <section class="white">
+      <h2 class="maxWidth">
+        Our Process
+      </h2>
+      <div class="grid left maxWidth">
+        <div>
+          <h3>We start with a conversation</h3>
+          <p>Donec congue tempor metus id imperdiet. Etiam luctus ex ut ante cursus, id vulputate lorem sodales. Etiam faucibus nisi non eleifend scelerisque. Duis id erat bibendum, fermentum dolor in, scelerisque quam. Proin vel ornare augue. Ut porttitor tortor non diam maximus aliquet. Nulla eget tempor dui. In eget tellus scelerisque, interdum lectus eu, lobortis ligula. Nam consectetur vestibulum massa ut commodo. Praesent tempor mi at eros iaculis, id interdum turpis congue.</p>
+        </div>
+        <inline-svg :src="require('../assets/svg/discussion.svg')" />
+      </div>
+      <div class="grid right maxWidth">
+        <inline-svg :src="require('../assets/svg/project.svg')" />
+        <div>
+          <h3>You run your business. We run the project</h3>
+          <p>Donec congue tempor metus id imperdiet. Etiam luctus ex ut ante cursus, id vulputate lorem sodales. Etiam faucibus nisi non eleifend scelerisque. Duis id erat bibendum, fermentum dolor in, scelerisque quam. Proin vel ornare augue. Ut porttitor tortor non diam maximus aliquet. Nulla eget tempor dui. In eget tellus scelerisque, interdum lectus eu, lobortis ligula. Nam consectetur vestibulum massa ut commodo. Praesent tempor mi at eros iaculis, id interdum turpis congue.</p>
+        </div>
+      </div>
+      <div class="grid left maxWidth">
+        <div>
+          <h3>Launch day. More business for you, another happy customer for us</h3>
+          <p>Donec congue tempor metus id imperdiet. Etiam luctus ex ut ante cursus, id vulputate lorem sodales. Etiam faucibus nisi non eleifend scelerisque. Duis id erat bibendum, fermentum dolor in, scelerisque quam. Proin vel ornare augue. Ut porttitor tortor non diam maximus aliquet. Nulla eget tempor dui. In eget tellus scelerisque, interdum lectus eu, lobortis ligula. Nam consectetur vestibulum massa ut commodo. Praesent tempor mi at eros iaculis, id interdum turpis congue.</p>
+        </div>
+        <inline-svg :src="require('../assets/svg/launch.svg')" />
+      </div>
+    </section>
+    <section class="white">
+      <h2 class="maxWidth">
+        Our Portfolio
+      </h2>
+      <div class="grid column four maxWidth">
+        <a class="card" href="blog">
+          <img src="https://images.unsplash.com/photo-1590715517483-a21a8bacabcd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" width="100%" height="auto" loading="lazy">
+          <div class="card--inner">
+            <h3>DNS Over HTTPS</h3>
+            <div class="tags"><span>Marketing</span> <span>Photography</span> <span>Web Design</span></div>
+            <p>This is a short summary of the blog post</p>
+          </div>
+        </a>
+        <a class="card" href="blog">
+          <img src="https://images.unsplash.com/photo-1590715517483-a21a8bacabcd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" width="100%" height="auto" loading="lazy">
+          <div class="card--inner">
+            <h3>DNS Over HTTPS</h3>
+            <div class="tags"><span>Marketing</span> <span>Photography</span> <span>Web Design</span></div>
+            <p>This is a short summary of the blog post</p>
+          </div>
+        </a>
+        <a class="card" href="blog">
+          <img src="https://images.unsplash.com/photo-1590715517483-a21a8bacabcd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" width="100%" height="auto" loading="lazy">
+          <div class="card--inner">
+            <h3>DNS Over HTTPS</h3>
+            <div class="tags"><span>Marketing</span> <span>Photography</span> <span>Web Design</span></div>
+            <p>This is a short summary of the blog post</p>
+          </div>
+        </a>
+        <a class="card" href="blog">
+          <img src="https://images.unsplash.com/photo-1590715517483-a21a8bacabcd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" width="100%" height="auto" loading="lazy">
+          <div class="card--inner">
+            <h3>DNS Over HTTPS</h3>
+            <div class="tags"><span>Marketing</span> <span>Photography</span> <span>Web Design</span></div>
+            <p>This is a short summary of the blog post</p>
+          </div>
+        </a>
+      </div>
+    </section>
+  </div>
+</template>
+
+<script>
+export default {
+  mounted () {
+    this.$parent.$parent.page = {
+      display: true,
+      title: 'Let us focus on your content so you can focus on your <i>business</i>',
+      subTitle: '',
+      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dui neque, malesuada nec condimentum vel, luctus interdum enim. Vestibulum fermentum ante sit amet mollis finibus. Sed eget tellus a ipsum tempus hendrerit id a mi. Nulla in dolor maximus, ultricies purus sed, tempus justo. Maecenas felis ligula, condimentum eu eleifend at, ultrices in velit. Duis blandit sodales neque at iaculis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.',
+      cta: {
+        active: true,
+        text: 'Read more',
+        link: '/blog'
+      },
+      cta1: {
+        active: true,
+        text: 'Get in touch',
+        link: '/contact'
+      }
+    }
+  }
+}
+</script>
