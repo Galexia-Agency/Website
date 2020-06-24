@@ -75,7 +75,7 @@ export default {
       display: true,
       title: 'Let us focus on your content so you can focus on your <i>business</i>',
       subTitle: '',
-      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dui neque, malesuada nec condimentum vel, luctus interdum enim. Vestibulum fermentum ante sit amet mollis finibus. Sed eget tellus a ipsum tempus hendrerit id a mi. Nulla in dolor maximus, ultricies purus sed, tempus justo. Maecenas felis ligula, condimentum eu eleifend at, ultrices in velit. Duis blandit sodales neque at iaculis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.',
+      desc: 'We are a creative agency specialising in website design development and marketing. We’re a fairly new company built from the ground up to help you grow. We use the latest and greatest practises and technologies so that we can pass on these benefits to you. What’s more, you don’t have to worry about anything, we take care of the whole process so you can carry on running your business.',
       cta: {
         active: true,
         text: 'Read more',
