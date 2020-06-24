@@ -7,7 +7,7 @@
       <div class="grid left maxWidth">
         <div>
           <h3>We start with a conversation</h3>
-          <p>We find the best way to start a project is to have an informal, no-obligations chat about your requirements. Some of our clients come to us with a large project plan spanning many months, with a detailed idea about what they want. Some other clients only know the idea, and not the implementation. We’re happy with both. Contact us today.</p>
+          <p>We find the best way to start a project is to have an informal, no-obligations chat about your requirements. Some of our clients come to us with a large project plan spanning many months, with a detailed idea about what they want. Some other clients only know the idea, and not the implementation. We’re happy with both.</p>
         </div>
         <inline-svg :src="require('../assets/svg/discussion.svg')" />
       </div>
