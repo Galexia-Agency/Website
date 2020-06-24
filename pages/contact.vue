@@ -228,6 +228,14 @@ export default {
     },
     onSubmit () {
       localStorage.setItem('form', '')
+      this.form = {
+        fname: '',
+        lname: '',
+        email: '',
+        telephone: '',
+        subject: '',
+        message: ''
+      }
       document.querySelector('.rocket').classList.add('animate')
       this.submitted = true
       const self = this
@@ -235,7 +243,7 @@ export default {
         '/',
         self.encode({
           'form-name': 'Contact Form',
-          ...self.form
+          ...JSON.stringify(self.form)
         }),
         { header: { 'Content-Type': 'application/x-www-form-urlencoded' } }
       )
