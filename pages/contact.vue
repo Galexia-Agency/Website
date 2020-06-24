@@ -234,7 +234,7 @@ export default {
           '/',
           self.encode({
             'form-name': 'Contact Form',
-            ...self.form
+            ...JSON.stringify(self.form)
           }),
           { header: { 'Content-Type': 'application/x-www-form-urlencoded' } }
         )
