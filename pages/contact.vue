@@ -238,7 +238,7 @@ export default {
         axios.post(
           '/',
           self.encode({
-            'form-name': 'contact',
+            'form-name': 'contact_form',
             ...self.form
           }),
           { header: { 'Content-Type': 'application/x-www-form-urlencoded' } }
