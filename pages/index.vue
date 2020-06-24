@@ -7,7 +7,7 @@
       <div class="grid left maxWidth">
         <div>
           <h3>We start with a conversation</h3>
-          <p>Donec congue tempor metus id imperdiet. Etiam luctus ex ut ante cursus, id vulputate lorem sodales. Etiam faucibus nisi non eleifend scelerisque. Duis id erat bibendum, fermentum dolor in, scelerisque quam. Proin vel ornare augue. Ut porttitor tortor non diam maximus aliquet. Nulla eget tempor dui. In eget tellus scelerisque, interdum lectus eu, lobortis ligula. Nam consectetur vestibulum massa ut commodo. Praesent tempor mi at eros iaculis, id interdum turpis congue.</p>
+          <p>We find the best way to start a project is to have an informal, no-obligations chat about your requirements. Some of our clients come to us with a large project plan spanning many months, with a detailed idea about what they want. Some other clients only know the idea, and not the implementation. We’re happy with both. Contact us today.</p>
         </div>
         <inline-svg :src="require('../assets/svg/discussion.svg')" />
       </div>
@@ -15,7 +15,7 @@
         <inline-svg :src="require('../assets/svg/project.svg')" />
         <div>
           <h3>You run your business. We run the project</h3>
-          <p>Donec congue tempor metus id imperdiet. Etiam luctus ex ut ante cursus, id vulputate lorem sodales. Etiam faucibus nisi non eleifend scelerisque. Duis id erat bibendum, fermentum dolor in, scelerisque quam. Proin vel ornare augue. Ut porttitor tortor non diam maximus aliquet. Nulla eget tempor dui. In eget tellus scelerisque, interdum lectus eu, lobortis ligula. Nam consectetur vestibulum massa ut commodo. Praesent tempor mi at eros iaculis, id interdum turpis congue.</p>
+          <p>We understand life often feels like it’s moving in the fast lane, that’s why we’re versed in project management. We keep your project on track, working to strict deadlines, so you don’t have to worry. If you do prefer a more hands-on approach we have a proprietary project management system where you can log in and monitor our progress, send us any further details, or ask any questions.</p>
         </div>
       </div>
       <div class="grid left maxWidth">

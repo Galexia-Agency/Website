@@ -176,6 +176,8 @@
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
   data () {
     return {
@@ -217,10 +219,26 @@ export default {
     }
   },
   methods: {
+    encode (data) {
+      return Object.keys(data)
+        .map(
+          key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
+        )
+        .join('&')
+    },
     onSubmit () {
       localStorage.setItem('form', '')
       document.querySelector('.rocket').classList.add('animate')
       this.submitted = true
+      const self = this
+      axios.post(
+        '/',
+        self.encode({
+          'form-name': 'Contact Form',
+          ...self.form
+        }),
+        { header: { 'Content-Type': 'application/x-www-form-urlencoded' } }
+      )
     },
     checkform () {
       localStorage.setItem('form', JSON.stringify(this.form))
