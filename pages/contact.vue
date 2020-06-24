@@ -164,7 +164,7 @@
             </p>
             <transition name="fade">
               <p v-show="submitted" class="message">
-                Message sent successfully! We'll be in touch within 2-3 working days
+                {{ submitted }}
               </p>
             </transition>
           </form>
@@ -227,26 +227,30 @@ export default {
         .join('&')
     },
     onSubmit () {
-      localStorage.setItem('form', '')
-      this.form = {
-        fname: '',
-        lname: '',
-        email: '',
-        telephone: '',
-        subject: '',
-        message: ''
-      }
       document.querySelector('.rocket').classList.add('animate')
-      this.submitted = true
       const self = this
-      axios.post(
-        '/',
-        self.encode({
-          'form-name': 'Contact Form',
-          ...JSON.stringify(self.form)
-        }),
-        { header: { 'Content-Type': 'application/x-www-form-urlencoded' } }
-      )
+      try {
+        axios.post(
+          '/',
+          self.encode({
+            'form-name': 'Contact Form',
+            ...self.form
+          }),
+          { header: { 'Content-Type': 'application/x-www-form-urlencoded' } }
+        )
+        localStorage.setItem('form', '')
+        this.form = {
+          fname: '',
+          lname: '',
+          email: '',
+          telephone: '',
+          subject: '',
+          message: ''
+        }
+        this.submitted = 'Message sent successfully! We\'ll be in touch within 2-3 working days'
+      } catch (e) {
+        this.submitted = e.toString() + ' Please try again.'
+      }
     },
     checkform () {
       localStorage.setItem('form', JSON.stringify(this.form))
