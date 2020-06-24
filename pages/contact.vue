@@ -73,101 +73,103 @@
           We’d love to help you on your next big project. We understand what it means to dream big, and then achieve that dream.
         </p>
         <div class="contact_container">
-          <form method="post" name="contact" netlify @submit.prevent="onSubmit">
-            <label>
-              First Name:
-              <input
-                id="fname"
-                v-model="form.fname"
-                name="FName"
-                type="text"
-                placeholder="Han"
-                required
-                autocomplete="given-name"
-                @keyup="checkform"
-              >
-            </label>
-            <label>
-              Last Name:
-              <input
-                id="lname"
-                v-model="form.lname"
-                name="LName"
-                type="text"
-                placeholder="Solo"
-                required
-                autocomplete="family-name"
-                @keyup="checkform"
-              >
-            </label>
-            <label>
-              Email:
-              <input
-                id="mail"
-                v-model="form.email"
-                name="Email"
-                type="email"
-                placeholder="millenium@falcon.net"
-                required
-                autocomplete="email"
-                @keyup="checkform"
-              >
-            </label>
-            <label>
-              Telephone:
-              <input
-                id="telephone"
-                v-model="form.telephone"
-                name="Telephone"
-                type="tel"
-                placeholder="+447569836548"
-                required
-                autocomplete="tel"
-                inputmode="tel"
-                @keyup="checkform"
-              >
-            </label>
-            <label id="subject">
-              Subject:
-              <input
-                v-model="form.subject"
-                name="Subject"
-                type="text"
-                placeholder="Corellia"
-                required
-                @keyup="checkform"
-              >
-            </label>
-            <label id="message">
-              Message:
-              <textarea
-                v-model="form.message"
-                name="Message"
-                placeholder="Chewie, the exhaust ports need cleaning"
-                required
-                rows="3"
-                @keyup="checkform"
-              />
-            </label>
-            <div id="submitcontainer">
-              <input
-                id="submit"
-                type="submit"
-                name="Submit"
-                class="button colorTwo"
-                value="submit"
-                disabled
-              >
-            </div>
-            <p v-show="!submitted">
+          <client-only>
+            <form method="post" name="contact" netlify @submit.prevent="onSubmit">
+              <label>
+                First Name:
+                <input
+                  id="fname"
+                  v-model="form.fname"
+                  name="FName"
+                  type="text"
+                  placeholder="Han"
+                  required
+                  autocomplete="given-name"
+                  @keyup="checkform"
+                >
+              </label>
+              <label>
+                Last Name:
+                <input
+                  id="lname"
+                  v-model="form.lname"
+                  name="LName"
+                  type="text"
+                  placeholder="Solo"
+                  required
+                  autocomplete="family-name"
+                  @keyup="checkform"
+                >
+              </label>
+              <label>
+                Email:
+                <input
+                  id="mail"
+                  v-model="form.email"
+                  name="Email"
+                  type="email"
+                  placeholder="millenium@falcon.net"
+                  required
+                  autocomplete="email"
+                  @keyup="checkform"
+                >
+              </label>
+              <label>
+                Telephone:
+                <input
+                  id="telephone"
+                  v-model="form.telephone"
+                  name="Telephone"
+                  type="tel"
+                  placeholder="+447569836548"
+                  required
+                  autocomplete="tel"
+                  inputmode="tel"
+                  @keyup="checkform"
+                >
+              </label>
+              <label id="subject">
+                Subject:
+                <input
+                  v-model="form.subject"
+                  name="Subject"
+                  type="text"
+                  placeholder="Corellia"
+                  required
+                  @keyup="checkform"
+                >
+              </label>
+              <label id="message">
+                Message:
+                <textarea
+                  v-model="form.message"
+                  name="Message"
+                  placeholder="Chewie, the exhaust ports need cleaning"
+                  required
+                  rows="3"
+                  @keyup="checkform"
+                />
+              </label>
+              <div id="submitcontainer">
+                <input
+                  id="submit"
+                  type="submit"
+                  name="Submit"
+                  class="button colorTwo"
+                  value="submit"
+                  disabled
+                >
+              </div>
+              <p v-show="!submitted">
               &nbsp;
-            </p>
-            <transition name="fade">
-              <p v-show="submitted" class="message">
-                {{ submitted }}
               </p>
-            </transition>
-          </form>
+              <transition name="fade">
+                <p v-show="submitted" class="message">
+                  {{ submitted }}
+                </p>
+              </transition>
+            </form>
+          </client-only>
           <inline-svg :src="require('../assets/svg/contact.svg')" />
         </div>
       </div>
