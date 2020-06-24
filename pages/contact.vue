@@ -74,13 +74,13 @@
         </p>
         <div class="contact_container">
           <client-only>
-            <form method="post" name="contact" netlify @submit.prevent="onSubmit">
+            <form method="post" name="contact_form" netlify @submit.prevent="onSubmit">
               <label>
                 First Name:
                 <input
                   id="fname"
                   v-model="form.fname"
-                  name="FName"
+                  name="fname"
                   type="text"
                   placeholder="Han"
                   required
@@ -93,7 +93,7 @@
                 <input
                   id="lname"
                   v-model="form.lname"
-                  name="LName"
+                  name="lname"
                   type="text"
                   placeholder="Solo"
                   required
@@ -106,7 +106,7 @@
                 <input
                   id="mail"
                   v-model="form.email"
-                  name="Email"
+                  name="email"
                   type="email"
                   placeholder="millenium@falcon.net"
                   required
@@ -119,7 +119,7 @@
                 <input
                   id="telephone"
                   v-model="form.telephone"
-                  name="Telephone"
+                  name="telephone"
                   type="tel"
                   placeholder="+447569836548"
                   required
@@ -132,7 +132,7 @@
                 Subject:
                 <input
                   v-model="form.subject"
-                  name="Subject"
+                  name="subject"
                   type="text"
                   placeholder="Corellia"
                   required
@@ -143,7 +143,7 @@
                 Message:
                 <textarea
                   v-model="form.message"
-                  name="Message"
+                  name="message"
                   placeholder="Chewie, the exhaust ports need cleaning"
                   required
                   rows="3"
@@ -154,7 +154,7 @@
                 <input
                   id="submit"
                   type="submit"
-                  name="Submit"
+                  name="submit"
                   class="button colorTwo"
                   value="submit"
                   disabled
@@ -259,7 +259,7 @@ export default {
     },
     checkform () {
       localStorage.setItem('form', JSON.stringify(this.form))
-      const f = document.forms.contact.elements
+      const f = document.forms.contact_form.elements
       let cansubmit = true
 
       for (let i = 0; i < f.length - 2; i++) {
