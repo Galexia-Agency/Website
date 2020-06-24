@@ -259,7 +259,7 @@ export default {
     },
     checkform () {
       localStorage.setItem('form', JSON.stringify(this.form))
-      const f = document.forms['Contact Form'].elements
+      const f = document.forms['contact'].elements
       let cansubmit = true
 
       for (let i = 0; i < f.length - 2; i++) {
