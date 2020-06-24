@@ -338,11 +338,16 @@
         </div>
       </nav>
       <div v-if="page.display" class="header--inner maxWidth">
+        <!-- eslint-disable-next-line -->
         <h1 v-if="page.title" v-html="page.title" />
+        <!-- eslint-disable-next-line -->
         <h2 v-if="page.subTitle" v-html="page.subTitle" />
+        <!-- eslint-disable-next-line -->
         <p v-if="page.desc" v-html="page.desc" />
         <div v-if="page.cta.active" class="header--inner_button_container">
+          <!-- eslint-disable-next-line -->
           <nuxt-link :to="page.cta.link" class="button" v-html="page.cta.text" />
+          <!-- eslint-disable-next-line -->
           <nuxt-link v-if="page.cta1.active" :to="page.cta1.link" class="button colorTwo" v-html="page.cta1.text" />
         </div>
       </div>
