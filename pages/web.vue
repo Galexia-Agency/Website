@@ -24,7 +24,7 @@
         <inline-svg :src="require('../assets/svg/custom.svg')" />
       </div>
       <div class="grid right maxWidth">
-        <inline-svg :src="require('../assets/svg/hosting.svg')" />
+        <inline-svg :src="require('../assets/svg/old.svg')" />
         <div>
           <h3>Love our ethos but have an older site?</h3>
           <p>We’ve often had clients come to us who use a different platform than advertised on our site. That’s okay, we can update your site to use the Jamstack, or continue to use your current site, and create another layer on top, which is fast, secure, and scalable.</p>

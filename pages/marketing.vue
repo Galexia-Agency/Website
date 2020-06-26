@@ -62,7 +62,7 @@
         <div class="card">
           <h3>Copy-writing</h3>
           <inline-svg :src="require('../assets/svg/writing.svg')" />
-          <p>Some people learn visually, some by reading. It’s best to have a mixture of both. Not to mention that good quality blogs are by far one of the best ways to improve search presence. Whatever your business, you can rest assured we take the time to do in-depth research into the industry to provide you with some of the best content out there.</p>
+          <p>Some people learn visually, some by reading. It’s best to have a mixture of both. Not to mention that good quality blogs are by far one of the best ways to improve search presence.</p>
         </div>
       </div>
     </section>

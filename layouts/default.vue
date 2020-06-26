@@ -14,7 +14,7 @@
   }
   #__layout {
     background-image: url('../assets/img/SpaceBackgroundBlurred.jpg');
-    background-size: 110% auto;
+    background-size: cover;
     background-repeat: no-repeat
   }
   * {
