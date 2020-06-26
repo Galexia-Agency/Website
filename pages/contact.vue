@@ -20,9 +20,7 @@
   }
 </style>
 <style scoped>
-  .contact_container {
-    display: grid;
-    grid-template-columns: 1fr .75fr;
+  .grid {
     grid-gap: 2rem
   }
   p {
@@ -34,7 +32,8 @@
   form {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 1rem
+    grid-gap: 1rem;
+    width: 100%
   }
   label {
     text-align: left;
@@ -62,6 +61,14 @@
   .fade-enter, .fade-leave-to {
     opacity: 0
   }
+  @media (max-width: 500px) {
+    form {
+      grid-template-columns: 1fr
+    }
+    #submitcontainer, #message, #subject {
+      grid-column: 1
+    }
+  }
 </style>
 
 <template>
@@ -72,7 +79,7 @@
         <p>
           We’d love to help you on your next big project. We understand what it means to dream big, and then achieve that dream.
         </p>
-        <div class="contact_container">
+        <div class="grid left">
           <client-only>
             <form method="post" name="contact_form" netlify @submit.prevent="onSubmit">
               <label>

@@ -87,7 +87,8 @@
     font-family: Open Sans, sans-serif
   }
   input:not([type='submit']), textarea {
-    padding: .33rem
+    padding: .33rem;
+    width: 100%
   }
   textarea {
     resize: vertical
@@ -133,7 +134,7 @@
     background: linear-gradient(0deg, rgba(83, 75, 174, .5), rgba(0, 0, 81, .35))
   }
   .header--inner {
-    padding: 6rem 0 7.5rem 0;
+    padding: 6rem 2rem 7.5rem 2rem;
     max-width: 780px;
     margin: auto;
     text-align: center;
@@ -261,7 +262,8 @@
   h2 {
     text-align: center;
     font-size: 3rem;
-    margin: 2rem auto
+    margin: 0 auto;
+    padding: 2rem 0
   }
   h3 {
     font-size: 2rem
@@ -300,6 +302,81 @@
     padding: 2rem 1rem;
     display: grid;
     grid-gap: 1rem
+  }
+
+  @media (max-width: 1110px) {
+    .grid.column.four {
+      grid-template-columns: 1fr 1fr;
+      grid-auto-flow: row
+    }
+  }
+
+  @media (max-width: 768px) {
+    .grid.column.three, .grid.left, .grid.right {
+      grid-template-columns: 1fr;
+      grid-auto-flow: row;
+      place-items: center
+    }
+    .grid.left svg {
+      grid-row: 1
+    }
+    .grid svg {
+      max-width: 300px
+    }
+    .nav--container {
+      display: none
+    }
+    section {
+      padding: 1rem
+    }
+    .grid {
+      grid-gap: 4rem
+    }
+  }
+  @media (max-width: 500px) {
+    .grid.column.four {
+      grid-template-columns: 1fr
+    }
+    .grid svg {
+      max-width: 200px
+    }
+    .grid {
+      grid-gap: 2rem
+    }
+    .maxWidth {
+      padding: 1rem
+    }
+    main > div > section:first-of-type {
+      padding-top: 2rem
+    }
+    section {
+      padding: 0
+    }
+    .header--inner {
+      padding: 2rem 1rem 4rem 1rem
+    }
+    .header--inner h1 {
+      font-size: 1.75rem
+    }
+    .header--inner p {
+      font-size: 16px
+    }
+    h2 {
+      font-size: 2rem
+    }
+    h3 {
+      font-size: 1.5rem
+    }
+    .footer--bottom {
+      grid-auto-flow: row;
+      grid-gap: 1rem;
+      padding: 2rem;
+      text-align: center
+    }
+    .footer--bottom a {
+      display: block;
+      margin: auto
+    }
   }
 </style>
 

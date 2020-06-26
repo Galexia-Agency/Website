@@ -13,6 +13,14 @@
   .maxWidth {
     max-width: 780px
   }
+  @media (max-width: 768px) {
+    p {
+      font-size: 1.5rem
+    }
+    svg {
+      width: 75%
+    }
+  }
 </style>
 <template>
   <div id="careers">

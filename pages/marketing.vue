@@ -19,6 +19,15 @@
     margin-bottom: 1.5rem;
     text-align: center
   }
+
+  @media (max-width: 768px) {
+    .card {
+      grid-template-rows: auto auto auto
+    }
+    .card svg {
+      max-width: 300px
+    }
+  }
 </style>
 
 <template>
