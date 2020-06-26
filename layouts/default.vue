@@ -375,7 +375,11 @@
     }
     .footer--bottom a {
       display: block;
-      margin: auto
+      margin: auto;
+      font-size: 1rem
+    }
+    .footer--copyright {
+      padding: .5rem
     }
   }
 </style>
