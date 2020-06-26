@@ -21,7 +21,7 @@
       <div class="grid left maxWidth">
         <div>
           <h3>Launch day. More business for you, another happy customer for us</h3>
-          <p>Donec congue tempor metus id imperdiet. Etiam luctus ex ut ante cursus, id vulputate lorem sodales. Etiam faucibus nisi non eleifend scelerisque. Duis id erat bibendum, fermentum dolor in, scelerisque quam. Proin vel ornare augue. Ut porttitor tortor non diam maximus aliquet. Nulla eget tempor dui. In eget tellus scelerisque, interdum lectus eu, lobortis ligula. Nam consectetur vestibulum massa ut commodo. Praesent tempor mi at eros iaculis, id interdum turpis congue.</p>
+          <p>We love to keep in touch with our clients, even after the initial project has finished. We’re happy to offer continued maintenance plans on our websites or monitoring on marketing strategies. We even have a community where past clients can discuss and share their websites.</p>
         </div>
         <inline-svg :src="require('../assets/svg/launch.svg')" />
       </div>

@@ -52,17 +52,17 @@
         <div class="card">
           <h3>Photography</h3>
           <inline-svg :src="require('../assets/svg/photography.svg')" />
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dui neque, malesuada nec condimentum vel, luctus interdum enim. Vestibulum fermentum ante sit amet mollis finibus. Sed eget tellus a ipsum tempus hendrerit id a mi. Nulla in dolor maximus, ultricies purus sed, tempus justo. Maecenas felis ligula, condimentum eu eleifend at, ultrices in velit. Duis blandit sodales neque at iaculis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+          <p>Photos can make or break a brand. Having good photos are vital to all kinds of content marketing, including social media, and websites. We have a team of photographers versed in everything from events to products.</p>
         </div>
         <div class="card">
           <h3>Videography</h3>
           <inline-svg :src="require('../assets/svg/videography.svg')" />
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dui neque, malesuada nec condimentum vel, luctus interdum enim. Vestibulum fermentum ante sit amet mollis finibus. Sed eget tellus a ipsum tempus hendrerit id a mi. Nulla in dolor maximus, ultricies purus sed, tempus justo. Maecenas felis ligula, condimentum eu eleifend at, ultrices in velit. Duis blandit sodales neque at iaculis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+          <p>We love watching great content. It’s a great way to engage with customers in the modern age. We pride ourselves in creating short clips for Instagram, longer clips for YouTube and everything in-between.</p>
         </div>
         <div class="card">
           <h3>Copy-writing</h3>
           <inline-svg :src="require('../assets/svg/writing.svg')" />
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dui neque, malesuada nec condimentum vel, luctus interdum enim. Vestibulum fermentum ante sit amet mollis finibus. Sed eget tellus a ipsum tempus hendrerit id a mi. Nulla in dolor maximus, ultricies purus sed, tempus justo. Maecenas felis ligula, condimentum eu eleifend at, ultrices in velit. Duis blandit sodales neque at iaculis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+          <p>Some people learn visually, some by reading. It’s best to have a mixture of both. Not to mention that good quality blogs are by far one of the best ways to improve search presence. Whatever your business, you can rest assured we take the time to do in-depth research into the industry to provide you with some of the best content out there.</p>
         </div>
       </div>
     </section>
