@@ -1,6 +1,9 @@
 
 <style>
   /* Resets */
+  html {
+    background: white
+  }
   body {
     background-color: white;
     margin: 0;
@@ -10,12 +13,13 @@
     font-family: Open Sans, sans-serif;
     font-size: 16px;
     font-weight: 400;
-    scroll-behavior: smooth
-  }
-  #__layout {
+    scroll-behavior: smooth;
     background-image: url('../assets/img/SpaceBackgroundBlurred.jpg');
     background-size: cover;
     background-repeat: no-repeat
+  }
+  #__nuxt {
+    width: 100vw
   }
   * {
     box-sizing: border-box;
@@ -183,6 +187,9 @@
   .nav--link:hover, .nav--link.nuxt-link-exact-active {
     border-bottom: .15rem solid #534BAE
   }
+  .nav--icon {
+    display: none
+  }
 
   /* Footer */
   footer {
@@ -323,8 +330,40 @@
     .grid svg {
       max-width: 300px
     }
+    .nav--icon {
+      display: block;
+      fill: white;
+      height: 40px;
+      width: 40px;
+      justify-self: end;
+      align-self: center
+    }
     .nav--container {
+      position: absolute;
+      grid-auto-flow: row;
+      left: 100vw;
+      top: 0;
+      bottom: 0;
+      width: 200px;
+      background: linear-gradient(0deg, rgba(83, 75, 174, .75), rgba(0, 0, 81, .5));
+      padding: 2.5rem;
+      transition: left 1s
+    }
+    .nav_open .nav--container {
+      left: calc(100vw - 200px)
+    }
+    .nav_close .nav--container {
       display: none
+    }
+    html {
+      transition: 1s
+    }
+    html.nav_open {
+      margin-left: -200px;
+      overflow: hidden
+    }
+    .nav_opened .nav--container {
+      left: 100vw
     }
     section {
       padding: 1rem
@@ -391,6 +430,7 @@
         <nuxt-link class="logo" to="/">
           Galexia
         </nuxt-link>
+        <inline-svg :src="require('../assets/svg/menu.svg')" class="nav--icon" @click="nav" />
         <div class="nav--container">
           <nuxt-link to="/" class="nav--link">
             Home
@@ -474,6 +514,23 @@ export default {
         title: '',
         subTitle: '',
         desc: ''
+      }
+    }
+  },
+  methods: {
+    nav () {
+      if (document.documentElement.classList.contains('nav_open')) {
+        document.documentElement.classList.remove('nav_open')
+        setTimeout(function () {
+          document.documentElement.classList.add('nav_close')
+        }, 1000)
+      } else {
+        document.documentElement.classList.remove('nav_close')
+        document.documentElement.classList.add('nav_open')
+        document.documentElement.classList.add('nav_opened')
+        setTimeout(function () {
+          document.documentElement.classList.remove('nav_opened')
+        }, 1)
       }
     }
   }
