@@ -339,6 +339,8 @@
       align-self: center
     }
     .nav--container {
+      height: 100vh;
+      min-height: -webkit-fill-available;
       position: absolute;
       grid-auto-flow: row;
       left: 100vw;
