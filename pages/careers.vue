@@ -39,6 +39,8 @@ export default {
     this.$parent.$parent.page = {
       display: false
     }
+    this.$parent.$parent.metaHelper.title = 'Careers'
+    this.$parent.$parent.metaHelper.description = 'We\'re not currently hiring, however, if you think you\'d be a great fit for our team drop us a line at careers@galexia.agency.'
   }
 }
 </script>

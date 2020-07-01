@@ -214,6 +214,8 @@ export default {
         active: false
       }
     }
+    this.$parent.$parent.metaHelper.title = 'Contact'
+    this.$parent.$parent.metaHelper.description = 'We’d love to help you on your next big project. We understand what it means to dream big, and then achieve that dream.'
     // eslint-disable-next-line
     if (process.client) {
       if (localStorage.getItem('form')) {

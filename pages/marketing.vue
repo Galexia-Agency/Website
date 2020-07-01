@@ -93,6 +93,8 @@ export default {
         active: false
       }
     }
+    this.$parent.$parent.metaHelper.title = 'Marketing'
+    this.$parent.$parent.metaHelper.description = ''
   }
 }
 </script>

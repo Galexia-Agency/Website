@@ -63,6 +63,8 @@ export default {
         active: false
       }
     }
+    this.$parent.$parent.metaHelper.title = 'Web'
+    this.$parent.$parent.metaHelper.description = 'We’re in the business of building fast, secure, scalable sites. How do we do that you ask? We use the Jamstack. It stands for Javascript, APIs and Markup.'
   }
 }
 </script>
