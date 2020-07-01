@@ -18,9 +18,6 @@
     background-size: cover;
     background-repeat: no-repeat
   }
-  #__nuxt {
-    width: 100vw
-  }
   * {
     box-sizing: border-box;
     outline-color: #1A237E
@@ -319,6 +316,9 @@
   }
 
   @media (max-width: 768px) {
+    #__nuxt {
+      width: 100vw
+    }
     .grid.column.three, .grid.left, .grid.right {
       grid-template-columns: 1fr;
       grid-auto-flow: row;
@@ -411,6 +411,7 @@
     }
     .footer--bottom a {
       display: block;
+      width: 100%;
       margin: auto;
       font-size: 1rem
     }
@@ -481,7 +482,7 @@
           </div>
           <div class="footer--bottom_contact">
             <h4>Telephone</h4>
-            <a href="tel:01763221838">01763221838</a>
+            <a href="tel:+447477737535">07477737535</a>
             <h4>Email</h4>
             <a href="mailto:info@galexia.agency">info@galexia.agency</a>
           </div>
@@ -513,6 +514,9 @@ export default {
         desc: ''
       }
     }
+  },
+  mounted () {
+    document.documentElement.classList.add('nav_close')
   },
   methods: {
     nav () {
