@@ -362,9 +362,6 @@
       margin-left: -200px;
       overflow: hidden
     }
-    .nav_opened .nav--container {
-      left: 100vw
-    }
     section {
       padding: 1rem
     }
@@ -526,10 +523,8 @@ export default {
         }, 1000)
       } else {
         document.documentElement.classList.remove('nav_close')
-        document.documentElement.classList.add('nav_open')
-        document.documentElement.classList.add('nav_opened')
         setTimeout(function () {
-          document.documentElement.classList.remove('nav_opened')
+          document.documentElement.classList.add('nav_open')
         }, 1)
       }
     }
