@@ -1,9 +1,9 @@
 <style>
   .testimonials {
     justify-self: right;
-    width: 500px;
+    width: 100%;
     display: grid;
-    grid-auto-columns: 500px;
+    grid-auto-columns: 100%;
     grid-auto-flow: column;
     grid-column-gap: 10px;
     overflow-x: scroll;
@@ -28,6 +28,12 @@
     margin-top: .75rem;
     text-align: right
   }
+
+  @media (max-width: 768px) {
+    .testimonial .company {
+      text-align: center
+    }
+  }
 </style>
 
 <template>
@@ -40,7 +46,7 @@
         <!--eslint-disable-next-line-->
         <p v-html="testimonial.content" />
         <!--eslint-disable-next-line-->
-        <p v-html="'-' + testimonial.title" class="company"/>
+        <p v-html="'- ' + testimonial.title" class="company"/>
       </div>
     </client-only>
   </div>

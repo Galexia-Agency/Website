@@ -205,7 +205,9 @@
   }
   .footer--bottom {
     display: grid;
-    grid-auto-flow: column
+    grid-auto-flow: column;
+    grid-template-columns: .75fr .75fr 1fr;
+    grid-gap: 1rem
   }
   .footer--bottom h4 {
     margin: 0;
@@ -378,6 +380,22 @@
     .grid {
       grid-gap: 4rem
     }
+    .footer--bottom {
+      grid-auto-flow: row;
+      grid-template-columns: 1fr;
+      grid-gap: 1rem;
+      padding: 2rem;
+      text-align: center
+    }
+    .footer--bottom a {
+      display: block;
+      width: 100%;
+      margin: auto;
+      font-size: 1rem
+    }
+    .footer--copyright {
+      padding: .5rem
+    }
   }
   @media (max-width: 500px) {
     .grid.column.four {
@@ -412,21 +430,6 @@
     }
     h3 {
       font-size: 1.5rem
-    }
-    .footer--bottom {
-      grid-auto-flow: row;
-      grid-gap: 1rem;
-      padding: 2rem;
-      text-align: center
-    }
-    .footer--bottom a {
-      display: block;
-      width: 100%;
-      margin: auto;
-      font-size: 1rem
-    }
-    .footer--copyright {
-      padding: .5rem
     }
   }
 </style>
