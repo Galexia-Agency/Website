@@ -19,7 +19,7 @@
       <div class="grid left maxWidth">
         <div>
           <h3>Custom Solutions</h3>
-          <p>We’re versed in project management, user experience, and all the web frameworks and languages necessary to take your next big thing public. Give us a call on <a href="tel:01763221838">01763221838</a>.</p>
+          <p>We’re versed in project management, user experience, and all the web frameworks and languages necessary to take your next big thing public. Give us a call on <a href="tel:+447477737535">07477737535</a>.</p>
         </div>
         <inline-svg :src="require('../assets/svg/custom.svg')" />
       </div>

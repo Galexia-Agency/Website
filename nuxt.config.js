@@ -99,6 +99,22 @@ export default {
    */
   modules: [
     '@nuxtjs/apollo',
+    ['nuxt-cookie-control', {
+      colors: {
+        barTextColor: '#212121',
+        barBackground: '#FFF',
+        modalOverlay: '#212121',
+        modalButtonBackground: '#1a237e',
+        modalButtonHoverBackground: '#1C2AB1',
+        checkboxActiveBackground: '#1a237e',
+        checkboxInactiveBackground: '#1a237e50',
+        checkboxDisabledBackground: '#1a237e99',
+        checkboxActiveCircleBackground: '#FFFFFF',
+        controlButtonIconColor: '#1a237e',
+        controlButtonIconHoverColor: '#fff',
+        controlButtonHoverBackground: '#1a237e'
+      }
+    }],
     '@aceforth/nuxt-optimized-images',
     ['@nuxtjs/pwa', { meta: false }],
     '@nuxtjs/sitemap'
@@ -109,6 +125,33 @@ export default {
         httpEndpoint: 'https://blog.galexia.agency/graphql'
       }
     }
+  },
+  cookies: {
+    necessary: [
+      {
+        name: 'Default Cookies',
+        description: 'Used for cookie control (cannot be disabled).',
+        cookies: ['cookie_control_consent', 'cookie_control_enabled_cookies']
+      }
+    ],
+    optional: [
+      {
+        name: 'Google Analytics',
+        description: 'Google Analytics is a web analytics service offered by Google that tracks and reports website traffic.',
+        src: 'https://www.googletagmanager.com/gtag/js?id=UA-140457046-4',
+        async: true,
+        cookies: ['_ga', '_gat', '_gid'],
+        accepted: () => {
+          window.dataLayer = window.dataLayer || []
+          function gtag () {
+            dataLayer.push(arguments)
+          }
+          gtag('js', new Date())
+          gtag('config', 'UA-140457046-4')
+        },
+        declined: () => {}
+      }
+    ]
   },
   optimizedImages: {
     optimizeImages: true,

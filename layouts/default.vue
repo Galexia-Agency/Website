@@ -308,6 +308,11 @@
     grid-gap: 1rem
   }
 
+  /* Cookies */
+  .cookieControl__ModalContent {
+    overflow: auto
+  }
+
   @media (max-width: 1110px) {
     .grid.column.four {
       grid-template-columns: 1fr 1fr;
@@ -465,12 +470,17 @@
       <nuxt />
     </main>
     <footer>
+      <CookieControl>
+        <template v-slot:bar>
+          <p>We use cookies and other tracking technologies to improve your browsing experience on our site, analyze site traffic, and understand where our audience is coming from. To find out more, please read our <b>Cookies Policy</b>.</p>
+        </template>
+      </CookieControl>
       <div class="footer--bottom_container">
         <div class="footer--bottom maxWidth">
           <div class="footer--bottom_sitemap">
             <h4>Galexia</h4>
-            <a class="footer--bottom_navLink" href="https://client.galexia.agency">
-              Client Login
+            <a class="footer--bottom_navLink" href="#">
+              Client Login (Coming Soon)
             </a>
             <nuxt-link class="footer--bottom_navLink" to="/Privacy-Policy">
               Privacy Policy
