@@ -312,6 +312,9 @@
   .cookieControl__ModalContent {
     overflow: auto
   }
+  .cookieControl {
+    padding: 0
+  }
 
   @media (max-width: 1110px) {
     .grid.column.four {

@@ -19,7 +19,7 @@ export default {
 
       // Twitter Card data
       { name: 'twitter:card', content: 'summary_large_image' },
-      { name: 'tiwtter:site', content: '@' }, //////////////////////////////////
+      { name: 'tiwtter:site', content: '@' }, /// ///////////////////////////////
       { hid: 'twitter:title', name: 'twitter:title', template: chunk => `${chunk} | Galexia` },
       { hid: 'twitter:description', name: 'twitter:description' },
       { hid: 'twitter:image', name: 'twitter:image' },

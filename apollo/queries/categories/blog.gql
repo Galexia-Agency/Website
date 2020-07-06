@@ -1,0 +1,15 @@
+query Blog {
+  posts(where: {categoryName: "Blog"}) {
+    nodes {
+      title
+      uri
+      author {
+        name
+      }
+      excerpt
+      featuredImage {
+        mediaItemUrl
+      }
+    }
+  }
+}
