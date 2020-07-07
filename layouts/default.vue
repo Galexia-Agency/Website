@@ -30,6 +30,10 @@
     font-family: Montserrat, serif;
     font-weight: 700
   }
+  h1 {
+    font-size: 3rem;
+    color: #1A237E
+  }
   .button {
     border: 0;
     color: white;
@@ -149,7 +153,8 @@
     font-size: 18px
   }
   .header--inner h1 {
-    font-size: 2.5rem
+    font-size: 2.5rem;
+    color: white
   }
   .header--inner h1 i {
     border-bottom: .25rem solid white
@@ -495,7 +500,10 @@
               Cookie Policy
             </nuxt-link>
             <nuxt-link class="footer--bottom_navLink" to="/Terms">
-              Terms & Conditions
+              Terms of Service
+            </nuxt-link>
+            <nuxt-link class="footer--bottom_navLink" to="/GDPR">
+              GDPR Statement
             </nuxt-link>
           </div>
           <div class="footer--bottom_contact">
@@ -508,7 +516,7 @@
         </div>
         <div class="footer--copyright">
           <p class="maxWidth">
-            © {{ new Date().getFullYear() }} Galexia. Company No: 123456789.
+            © {{ new Date().getFullYear() }} Galexia Ltd<span style="display: none">. Company No: 123456789.</span>
           </p>
         </div>
       </div>

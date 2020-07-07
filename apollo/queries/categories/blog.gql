@@ -2,7 +2,6 @@ query Blog {
   posts(where: {categoryName: "Blog"}) {
     nodes {
       title
-      uri
       author {
         name
       }
@@ -10,6 +9,8 @@ query Blog {
       featuredImage {
         mediaItemUrl
       }
+      slug
+      date
     }
   }
 }

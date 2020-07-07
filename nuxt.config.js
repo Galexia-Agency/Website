@@ -4,7 +4,7 @@ export default {
    ** Headers of the page
    */
   head: {
-    titleTemplate: '%s | Galexia',
+    titleTemplate: '%s | Galexia - Creative Agency specialising in Web Development and Marketing',
     htmlAttrs: {
       lang: 'en-GB'
     },

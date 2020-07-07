@@ -1,0 +1,14 @@
+query Article {
+  post(id: "dns-over-https", idType: SLUG) {
+    title
+    content
+    date
+    excerpt
+    author {
+      name
+    }
+    featuredImage {
+      mediaItemUrl
+    }
+  }
+}
