@@ -459,7 +459,9 @@
         <nuxt-link class="logo" to="/">
           Galexia
         </nuxt-link>
-        <inline-svg :src="require('../assets/svg/menu.svg')" class="nav--icon" @click="nav" />
+        <div class="nav--icon">
+          <inline-svg :src="require('../assets/svg/menu.svg')" @click="nav" />
+        </div>
         <div class="nav--container">
           <nuxt-link to="/" class="nav--link">
             Home

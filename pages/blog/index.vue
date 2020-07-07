@@ -3,7 +3,8 @@
     display: grid;
     grid-template-columns: minmax(200px, 400px) 1fr;
     grid-gap: 2rem;
-    place-items: center
+    place-items: center;
+    padding: 2rem 0
   }
   img {
     width: 100%
@@ -15,6 +16,21 @@
     float: right;
     font-size: 1.25rem;
     font-weight: normal
+  }
+  .post--content {
+    min-width: 500px
+  }
+
+  @media (max-width: 800px) {
+    .post {
+      grid-template-columns: 1fr
+    }
+    img {
+      display: none
+    }
+    .post--content {
+      min-width: initial
+    }
   }
 </style>
 

@@ -14,7 +14,7 @@
     grid-column: 1;
     width: 100%;
     margin-bottom: 1rem;
-    font-size: 5rem
+    font-size: clamp(3rem, 10vw, 5rem)
   }
   .post--header {
     height: 400px;
@@ -33,7 +33,11 @@
   svg {
     grid-row: 1;
     grid-column: 1;
-    opacity: .85
+    opacity: .85;
+    min-width: 100%;
+    min-height: 100%;
+    height: auto;
+    width: auto
   }
   .post--meta {
     display: grid;
@@ -41,6 +45,18 @@
   }
   .post--meta p:last-of-type {
     justify-self: right
+  }
+
+  @media (max-width: 500px) {
+    .post--header {
+      height: 300px
+    }
+    .post--meta {
+      grid-auto-flow: row
+    }
+    .post--meta p:last-of-type {
+      justify-self: start
+    }
   }
 </style>
 <style>
@@ -52,6 +68,11 @@
     width: 75%;
     display: block;
     margin: auto
+  }
+  @media (max-width: 500px) {
+    figure img {
+      width: 100%
+    }
   }
 </style>
 

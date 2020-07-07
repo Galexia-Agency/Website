@@ -1,3 +1,11 @@
+<style scoped>
+  @media (max-width: 500px) {
+    .card:nth-of-type(3), .card:nth-of-type(4) {
+      display: none
+    }
+  }
+</style>
+
 <template>
   <div>
     <section class="white">
