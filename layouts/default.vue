@@ -18,6 +18,14 @@
     background-size: cover;
     background-repeat: no-repeat
   }
+  ::selection {
+    background: #1C2AB1;
+    color: white /* WebKit/Blink Browsers */
+  }
+  ::-moz-selection {
+    background: #1C2AB1;
+    color: white /* Gecko Browsers */
+  }
   * {
     box-sizing: border-box;
     outline-color: #1A237E
@@ -563,6 +571,14 @@ export default {
         description: 'We are a creative agency specialising in website design development and marketing. We’re a fairly new company built from the ground up to help you grow. We use the latest and greatest practises and technologies so that we can pass on these benefits to you.',
         image: 'https://galexia.agency/android-chrome-192x192.png'
       }
+    }
+  },
+  watch: {
+    $route () {
+      document.documentElement.classList.remove('nav_open')
+      setTimeout(function () {
+        document.documentElement.classList.add('nav_close')
+      }, 1000)
     }
   },
   mounted () {
