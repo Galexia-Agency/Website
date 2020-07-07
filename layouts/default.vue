@@ -34,6 +34,9 @@
     font-size: 3rem;
     color: #1A237E
   }
+  button {
+    font-family: Open Sans, sans-serif
+  }
   .button {
     border: 0;
     color: white;
@@ -322,6 +325,16 @@
   .cookieControl {
     padding: 0
   }
+  .cookieControl__Bar {
+    font-family: Open Sans, sans-serif
+  }
+  .cookieControl :any-link {
+    color: #1A237E;
+    font-weight: bold
+  }
+  .cookieControl :any-link:hover {
+    text-decoration: underline
+  }
 
   @media (max-width: 1110px) {
     .grid.column.four {
@@ -483,7 +496,11 @@
     <footer>
       <CookieControl>
         <template v-slot:bar>
-          <p>We use cookies and other tracking technologies to improve your browsing experience on our site, analyze site traffic, and understand where our audience is coming from. To find out more, please read our <b>Cookies Policy</b>.</p>
+          <p>
+            We use cookies and other tracking technologies to improve your browsing experience on our site, analyze site traffic, and understand where our audience is coming from. To find out more, please read our <nuxt-link to="/Cookie-Policy">
+              Cookie Policy
+            </nuxt-link>.
+          </p>
         </template>
       </CookieControl>
       <div class="footer--bottom_container">

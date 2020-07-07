@@ -103,6 +103,9 @@ export default {
       colors: {
         barTextColor: '#212121',
         barBackground: '#FFF',
+        barButtonColor: '#FFF',
+        barButtonHoverBackground: '#1C2AB1',
+        barButtonBackground: '#1a237e',
         modalOverlay: '#212121',
         modalButtonBackground: '#1a237e',
         modalButtonHoverBackground: '#1C2AB1',
