@@ -1,0 +1,17 @@
+query Portfolio($id: ID!)  {
+  post(id: $id, idType: ID) {
+    title
+    content
+    featuredImage {
+      mediaItemUrl
+    }
+    tags {
+      nodes {
+        name
+      }
+    }
+    ACFLink {
+      link
+    }
+  }
+}

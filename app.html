@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html {{ HTML_ATTRS }}>
+  <head {{ HEAD_ATTRS }}>
+    {{ HEAD }}
+  </head>
+  <body {{ BODY_ATTRS }}>
+    {{ APP }}
+    <form method="post" name="contact_form" netlify hidden>
+        <input
+          name="fname"
+        >
+        <input
+          name="lname"
+        >
+        <input
+          name="email"
+        >
+        <input
+          name="telephone"
+        >
+        <input
+          name="subject"
+        >
+        <textarea
+          name="message"
+        ></textarea>
+    </form>
+  </body>
+</html>
