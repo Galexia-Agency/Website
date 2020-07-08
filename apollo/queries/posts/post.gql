@@ -1,5 +1,5 @@
-query Article {
-  post(id: "dns-over-https", idType: SLUG) {
+query Article($id: ID!) {
+  post(id: $id, idType: SLUG) {
     title
     content
     date

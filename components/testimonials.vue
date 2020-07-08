@@ -53,7 +53,7 @@
 </template>
 
 <script>
-import testimonialsQuery from '~/apollo/queries/testimonials/testimonials.gql'
+import testimonialsQuery from '~/apollo/queries/categories/testimonial.gql'
 
 export default {
   data () {

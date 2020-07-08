@@ -36,48 +36,38 @@
     </section>
     <section class="white">
       <h2 class="maxWidth">
-        Our Portfolio
+        We let our work speak for itself
       </h2>
-      <div class="grid column four maxWidth">
-        <a class="card" href="blog">
-          <img src="https://images.unsplash.com/photo-1590715517483-a21a8bacabcd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" width="100%" height="auto" loading="lazy">
-          <div class="card--inner">
-            <h3>DNS Over HTTPS</h3>
-            <div class="tags"><span>Marketing</span> <span>Photography</span> <span>Web Design</span></div>
-            <p>This is a short summary of the blog post</p>
+      <div class="grid column three maxWidth">
+        <client-only>
+          <div v-for="(post, index) in posts.nodes" :key="index">
+            <Portfolio :portfolio_id="post.id" />
           </div>
-        </a>
-        <a class="card" href="blog">
-          <img src="https://images.unsplash.com/photo-1590715517483-a21a8bacabcd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" width="100%" height="auto" loading="lazy">
-          <div class="card--inner">
-            <h3>DNS Over HTTPS</h3>
-            <div class="tags"><span>Marketing</span> <span>Photography</span> <span>Web Design</span></div>
-            <p>This is a short summary of the blog post</p>
-          </div>
-        </a>
-        <a class="card" href="blog">
-          <img src="https://images.unsplash.com/photo-1590715517483-a21a8bacabcd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" width="100%" height="auto" loading="lazy">
-          <div class="card--inner">
-            <h3>DNS Over HTTPS</h3>
-            <div class="tags"><span>Marketing</span> <span>Photography</span> <span>Web Design</span></div>
-            <p>This is a short summary of the blog post</p>
-          </div>
-        </a>
-        <a class="card" href="blog">
-          <img src="https://images.unsplash.com/photo-1590715517483-a21a8bacabcd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" width="100%" height="auto" loading="lazy">
-          <div class="card--inner">
-            <h3>DNS Over HTTPS</h3>
-            <div class="tags"><span>Marketing</span> <span>Photography</span> <span>Web Design</span></div>
-            <p>This is a short summary of the blog post</p>
-          </div>
-        </a>
+        </client-only>
       </div>
     </section>
   </div>
 </template>
 
 <script>
+import Portfolio from '../components/portfolio'
+import portfolioQuery from '~/apollo/queries/categories/portfolio.gql'
+
 export default {
+  components: {
+    Portfolio
+  },
+  data () {
+    return {
+      posts: []
+    }
+  },
+  apollo: {
+    posts: {
+      prefetch: true,
+      query: portfolioQuery
+    }
+  },
   mounted () {
     this.$parent.$parent.page = {
       display: true,

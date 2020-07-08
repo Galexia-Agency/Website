@@ -305,7 +305,7 @@
   :any-link.card .tags span {
     display: inline-block;
     padding: .25rem;
-    margin: .25rem 0;
+    margin: 0 .25rem;
     border: 2px solid #1A237E;
     border-radius: .25rem
   }
@@ -320,10 +320,19 @@
   :any-link.card:hover .tags span {
     border: 2px solid white
   }
+  :any-link.card:hover .card--inner p {
+    color: white
+  }
   .card--inner {
     padding: 2rem 1rem;
     display: grid;
     grid-gap: 1rem
+  }
+  .card--inner p {
+    font-family: Open Sans, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: black
   }
 
   /* Cookies */
@@ -351,7 +360,7 @@
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     #__nuxt {
       width: 100vw
     }
@@ -363,7 +372,8 @@
     .grid.left svg {
       grid-row: 1
     }
-    .grid svg {
+    .grid svg, .card img {
+      justify-self: center;
       max-width: 300px
     }
     .nav--icon {
@@ -479,6 +489,9 @@
           </nuxt-link>
           <nuxt-link to="/marketing" class="nav--link">
             Marketing
+          </nuxt-link>
+          <nuxt-link to="/portfolio" class="nav--link" style="display: none">
+            Portfolio
           </nuxt-link>
           <nuxt-link to="/blog" class="nav--link">
             Blog

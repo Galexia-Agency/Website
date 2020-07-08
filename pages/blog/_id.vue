@@ -77,36 +77,38 @@
 </style>
 
 <template>
-  <div class="post">
-    <div class="post--header">
-      <div class="background_opacity" />
-      <h1 class="maxWidth">
-        {{ post.title }}
-      </h1>
-      <inline-svg :src="require('assets/svg/faux-code.svg')" />
-    </div>
-    <section class="white">
-      <div class="maxWidth">
-        <div class="post--meta">
-          <p>Author: <b>{{ post.author.name }}</b></p>
-          <p>
-            Published on:
-            <b>
-              <time>
-                {{ new Date(post.date).getDate() + " " + monthArr[new Date(post.date).getMonth()] + " '" + new Date(post.date).getFullYear().toString().substring(2) }}
-              </time>
-            </b>
-          </p>
-        </div>
-        <!--eslint-disable-next-line-->
-        <div v-html="post.content" class="post--content"/>
+  <client-only>
+    <div class="post">
+      <div class="post--header">
+        <div class="background_opacity" />
+        <h1 class="maxWidth">
+          {{ post.title }}
+        </h1>
+        <inline-svg :src="require('assets/svg/faux-code.svg')" />
       </div>
-    </section>
-  </div>
+      <section class="white">
+        <div class="maxWidth">
+          <div class="post--meta">
+            <p>Author: <b>{{ post.author.name }}</b></p>
+            <p>
+              Published on:
+              <b>
+                <time>
+                  {{ new Date(post.date).getDate() + " " + monthArr[new Date(post.date).getMonth()] + " '" + new Date(post.date).getFullYear().toString().substring(2) }}
+                </time>
+              </b>
+            </p>
+          </div>
+          <!--eslint-disable-next-line-->
+          <div v-html="post.content" class="post--content"/>
+        </div>
+      </section>
+    </div>
+  </client-only>
 </template>
 
 <script>
-import postQuery from '~/apollo/queries/posts/blog'
+import postQuery from '~/apollo/queries/posts/post.gql'
 
 export default {
   data () {
@@ -120,7 +122,7 @@ export default {
       prefetch: true,
       query: postQuery,
       variables () {
-        return { id: parseInt(this.$route.params.id) }
+        return { id: this.$route.params.id }
       }
     }
   },
