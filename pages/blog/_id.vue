@@ -77,7 +77,7 @@
 </style>
 
 <template>
-  <client-only>
+  <client-only v-if="post.title">
     <div class="post">
       <div class="post--header">
         <div class="background_opacity" />
@@ -130,6 +130,8 @@ export default {
     this.$parent.$parent.page = {
       display: false
     }
+  },
+  updated () {
     this.$parent.$parent.metaHelper.title = this.post.title
     this.$parent.$parent.metaHelper.description = this.post.excerpt
     this.$parent.$parent.metaHelper.image = this.post.featuredImage.mediaItemUrl
