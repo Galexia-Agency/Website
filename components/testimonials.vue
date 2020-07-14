@@ -12,6 +12,10 @@
     scroll-snap-type: x mandatory;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
+    cursor: grab
+  }
+  .testimonials:active {
+    cursor: grabbing
   }
   .testimonials::-webkit-scrollbar {
     display: none
@@ -38,17 +42,15 @@
 
 <template>
   <div class="testimonials">
-    <client-only>
-      <div v-for="(testimonial, index) in posts.nodes" :key="index" class="testimonial">
-        <div style="display: none">
-          {{ testimonial = JSON.parse(JSON.stringify(testimonial).replace(new RegExp('\\[', 'g'),"").replace(new RegExp('\\]', 'g'),"")) }}
-        </div>
-        <!--eslint-disable-next-line-->
-        <p v-html="testimonial.content" />
-        <!--eslint-disable-next-line-->
-        <p v-html="'- ' + testimonial.title" class="company"/>
+    <div v-for="(testimonial, index) in posts.nodes" :key="index" class="testimonial">
+      <div style="display: none">
+        {{ testimonial = JSON.parse(JSON.stringify(testimonial).replace(new RegExp('\\[', 'g'),"").replace(new RegExp('\\]', 'g'),"")) }}
       </div>
-    </client-only>
+      <!--eslint-disable-next-line-->
+      <div v-html="testimonial.content" />
+      <!--eslint-disable-next-line-->
+      <div v-html="'- ' + testimonial.title" class="company"/>
+    </div>
   </div>
 </template>
 

@@ -1,5 +1,5 @@
 query Blog {
-  posts(where: {categoryName: "Portfolio"}, first: 3, after: null) {
+  posts(where: {categoryName: "Portfolio"}) {
     nodes {
       id
     }

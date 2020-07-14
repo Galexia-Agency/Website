@@ -1,4 +1,53 @@
 <style scoped>
+  #portfolio {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    grid-auto-columns: 33%;
+    grid-template-columns: initial;
+    grid-column-gap: 10px;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    -ms-scroll-snap-type: x mandatory;
+    scroll-snap-type: x mandatory;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    cursor: grab
+  }
+  #portfolio:active {
+    cursor: grabbing
+  }
+  #portfolio::-webkit-scrollbar {
+    display: none
+  }
+  #portfolio a {
+    scroll-snap-align: center;
+    scroll-snap-stop: always
+  }
+  .icons {
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 5px;
+    width: auto;
+    margin: -60px auto auto;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    grid-column: 1;
+    grid-auto-columns: 30px;
+    grid-auto-rows: 30px
+  }
+  .icon {
+    width: 15px;
+    height: 15px;
+    border: 3px solid #1A237E;
+    border-radius: 7.5px;
+    cursor: pointer
+  }
+  .icon.current {
+    background-color: #1A237E
+  }
   @media (max-width: 500px) {
     .card:nth-of-type(3), .card:nth-of-type(4) {
       display: none
@@ -38,12 +87,13 @@
       <h2 class="maxWidth">
         We let our work speak for itself
       </h2>
-      <div class="grid column three maxWidth">
-        <client-only>
-          <div v-for="(post, index) in posts.nodes" :key="index">
-            <Portfolio :portfolio_id="post.id" />
-          </div>
-        </client-only>
+      <div id="portfolio" class="grid column three maxWidth">
+        <div v-for="(post, index) in posts.nodes" :key="index">
+          <Portfolio :portfolio_id="post.id" />
+        </div>
+      </div>
+      <div class="icons">
+        <div v-for="i in Math.ceil(posts.nodes.length / 3)" :key="i.id" class="icon" :class="{ current: i == 1}" @click="portfolioScroll($event, i)" />
       </div>
     </section>
   </div>
@@ -77,6 +127,20 @@ export default {
     }
     this.$parent.$parent.metaHelper.title = 'Home'
     this.$parent.$parent.metaHelper.description = 'We are a creative agency specialising in website design development and marketing. We’re a fairly new company built from the ground up to help you grow. We use the latest and greatest practises and technologies so that we can pass on these benefits to you.'
+  },
+  methods: {
+    portfolioScroll (event, i) {
+      document.querySelectorAll('.icon').forEach((e) => {
+        e.classList.remove('current')
+      })
+      event.target.classList.add('current')
+      const y = (i * 3) - 3
+      const width = document.querySelector('#portfolio a').offsetWidth
+      document.querySelector('#portfolio').scrollTo({
+        left: width * y,
+        behavior: 'smooth'
+      })
+    }
   }
 }
 </script>

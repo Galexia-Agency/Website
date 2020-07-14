@@ -10,7 +10,7 @@
         </span>
       </div>
       <!--eslint-disable-next-line-->
-      <p v-html="post.content" />
+      <div v-html="post.content" />
     </div>
   </a>
 </template>
