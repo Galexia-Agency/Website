@@ -46,6 +46,22 @@
   .post--meta p:last-of-type {
     justify-self: right
   }
+  .post--footer {
+    padding-top: 2rem;
+    display: grid;
+    grid-auto-flow: column
+  }
+  .post--footer a {
+    color: #1A237E;
+    cursor: pointer;
+    font-weight: bold
+  }
+  .post--footer a:hover {
+    text-decoration: underline
+  }
+  .post--footer a:focus {
+    opacity: .5
+  }
 
   @media (max-width: 500px) {
     .post--header {
@@ -77,34 +93,45 @@
 </style>
 
 <template>
-  <client-only v-if="post.title">
-    <div class="post">
-      <div class="post--header">
-        <div class="background_opacity" />
-        <h1 class="maxWidth">
-          {{ post.title }}
-        </h1>
-        <inline-svg :src="require('assets/svg/faux-code.svg')" />
-      </div>
-      <section class="white">
-        <div class="maxWidth">
-          <div class="post--meta">
-            <p>Author: <b>{{ post.author.name }}</b></p>
-            <p>
-              Published on:
-              <b>
-                <time>
-                  {{ new Date(post.date).getDate() + " " + monthArr[new Date(post.date).getMonth()] + " '" + new Date(post.date).getFullYear().toString().substring(2) }}
-                </time>
-              </b>
-            </p>
-          </div>
-          <!--eslint-disable-next-line-->
-          <div v-html="post.content" class="post--content"/>
-        </div>
-      </section>
+  <div v-if="post.title" class="post">
+    <div class="post--header">
+      <div class="background_opacity" />
+      <h1 class="maxWidth">
+        {{ post.title }}
+      </h1>
+      <inline-svg :src="require('assets/svg/faux-code.svg')" />
     </div>
-  </client-only>
+    <section class="white">
+      <div class="maxWidth">
+        <div class="post--meta">
+          <p>Author: <b>{{ post.author.name }}</b></p>
+          <p>
+            Published on:
+            <b>
+              <time>
+                {{ new Date(post.date).getDate() + " " + monthArr[new Date(post.date).getMonth()] + " '" + new Date(post.date).getFullYear().toString().substring(2) }}
+              </time>
+            </b>
+          </p>
+        </div>
+        <!--eslint-disable-next-line-->
+        <div v-html="post.content" class="post--content"/>
+        <div class="post--footer">
+          <ShareNetwork
+            v-for="social in socials"
+            :key="social"
+            :network="social"
+            :url="'https://galexia.agency' + $router.currentRoute.path"
+            :title="post.title + ' | Galexia - Creative Agency specialising in Web Development and Marketing'"
+            :description="post.excerpt"
+            :media="post.featuredImage.mediaItemUrl"
+          >
+            Share on {{ social }}
+          </ShareNetwork>
+        </div>
+      </div>
+    </section>
+  </div>
 </template>
 
 <script>
@@ -113,6 +140,7 @@ import postQuery from '~/apollo/queries/posts/post.gql'
 export default {
   data () {
     return {
+      socials: ['Facebook', 'LinkedIn', 'Twitter', 'WhatsApp'],
       post: {},
       monthArr: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
     }
