@@ -1,7 +1,7 @@
 <template>
   <a v-if="post.ACFLink" class="card" :href="post.ACFLink.link" target="_blank">
     <div class="card--inner">
-      <img :src="post.featuredImage.mediaItemUrl" width="100%" height="auto" loading="lazy">
+      <img :src="post.featuredImage.mediaItemUrl" width="100%" height="auto" loading="lazy" :alt="post.title">
       <!--eslint-disable-next-line-->
       <h3 v-html="post.title" />
       <div class="tags">
