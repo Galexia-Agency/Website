@@ -1,5 +1,5 @@
 <template>
-  <a v-if="post.ACFLink" class="card" :href="post.ACFLink.link" target="_blank">
+  <a v-if="post.ACFLink" class="card" :href="post.ACFLink.link" target="_blank" rel="noopener">
     <div class="card--inner">
       <img :src="post.featuredImage.mediaItemUrl" width="100%" height="auto" loading="lazy" :alt="post.title">
       <!--eslint-disable-next-line-->
