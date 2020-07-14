@@ -37,27 +37,31 @@
 <template>
   <section class="white">
     <div class="maxWidth">
-      <client-only>
-        <div v-for="(post, index) in posts.nodes" :key="index" class="post">
-          <div style="display: none">
-            {{ post = JSON.parse(JSON.stringify(post).replace(new RegExp('\\[', 'g'),"").replace(new RegExp('\\]', 'g'),"")) }}
-          </div>
-          <img :src="post.featuredImage.mediaItemUrl" :alt="post.title" loading="lazy" width="300px" height="auto">
-          <div class="post--content">
-            <h3>
-              <nuxt-link :to="'/blog/' + post.slug">
-                {{ post.title }}
-              </nuxt-link>
-              <time>
-                {{ new Date(post.date).getDate() + " " + monthArr[new Date(post.date).getMonth()] + " '" + new Date(post.date).getFullYear().toString().substring(2) }}
-              </time>
-            </h3>
-            <p>Author: <b>{{ post.author.name }}</b></p>
-            <!--eslint-disable-next-line-->
-            <p v-html="post.excerpt" />
-          </div>
+      <div v-for="(post, index) in posts.nodes" :key="index" class="post">
+        <div style="display: none">
+          {{ post = JSON.parse(JSON.stringify(post).replace(new RegExp('\\[', 'g'),"").replace(new RegExp('\\]', 'g'),"")) }}
         </div>
-      </client-only>
+        <img
+          :src="post.featuredImage.mediaItemUrl"
+          :alt="post.title"
+          loading="lazy"
+          width="300px"
+          height="auto"
+        >
+        <div class="post--content">
+          <h3>
+            <nuxt-link :to="'/blog/' + post.slug">
+              {{ post.title }}
+            </nuxt-link>
+            <time>
+              {{ new Date(post.date).getDate() + " " + monthArr[new Date(post.date).getMonth()] + " '" + new Date(post.date).getFullYear().toString().substring(2) }}
+            </time>
+          </h3>
+          <p>Author: <b>{{ post.author.name }}</b></p>
+          <!--eslint-disable-next-line-->
+          <div v-html="post.excerpt" />
+        </div>
+      </div>
     </div>
   </section>
 </template>

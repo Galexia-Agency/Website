@@ -77,34 +77,32 @@
 </style>
 
 <template>
-  <client-only v-if="post.title">
-    <div class="post">
-      <div class="post--header">
-        <div class="background_opacity" />
-        <h1 class="maxWidth">
-          {{ post.title }}
-        </h1>
-        <inline-svg :src="require('assets/svg/faux-code.svg')" />
-      </div>
-      <section class="white">
-        <div class="maxWidth">
-          <div class="post--meta">
-            <p>Author: <b>{{ post.author.name }}</b></p>
-            <p>
-              Published on:
-              <b>
-                <time>
-                  {{ new Date(post.date).getDate() + " " + monthArr[new Date(post.date).getMonth()] + " '" + new Date(post.date).getFullYear().toString().substring(2) }}
-                </time>
-              </b>
-            </p>
-          </div>
-          <!--eslint-disable-next-line-->
-          <div v-html="post.content" class="post--content"/>
-        </div>
-      </section>
+  <div v-if="post.title" class="post">
+    <div class="post--header">
+      <div class="background_opacity" />
+      <h1 class="maxWidth">
+        {{ post.title }}
+      </h1>
+      <inline-svg :src="require('assets/svg/faux-code.svg')" />
     </div>
-  </client-only>
+    <section class="white">
+      <div class="maxWidth">
+        <div class="post--meta">
+          <p>Author: <b>{{ post.author.name }}</b></p>
+          <p>
+            Published on:
+            <b>
+              <time>
+                {{ new Date(post.date).getDate() + " " + monthArr[new Date(post.date).getMonth()] + " '" + new Date(post.date).getFullYear().toString().substring(2) }}
+              </time>
+            </b>
+          </p>
+        </div>
+        <!--eslint-disable-next-line-->
+        <div v-html="post.content" class="post--content"/>
+      </div>
+    </section>
+  </div>
 </template>
 
 <script>

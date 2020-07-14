@@ -34,6 +34,9 @@
     text-decoration: none;
     color: inherit
   }
+  :any-link:focus {
+    opacity: .5
+  }
   h1, h2, h3, h4, h5, h6 {
     font-family: Montserrat, serif;
     font-weight: 700
@@ -474,9 +477,11 @@
   <div>
     <header>
       <nav class="maxWidth">
-        <nuxt-link class="logo" to="/">
-          Galexia
-        </nuxt-link>
+        <div>
+          <nuxt-link class="logo" to="/">
+            Galexia
+          </nuxt-link>
+        </div>
         <div class="nav--icon">
           <inline-svg :src="require('../assets/svg/menu.svg')" @click="nav" />
         </div>
