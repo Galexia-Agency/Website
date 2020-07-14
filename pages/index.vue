@@ -48,6 +48,15 @@
   .icon.current {
     background-color: #1A237E
   }
+
+  @media (max-width: 900px) {
+    #portfolio {
+      grid-auto-columns: 100%
+    }
+    .icons {
+      display: none
+    }
+  }
   @media (max-width: 500px) {
     .card:nth-of-type(3), .card:nth-of-type(4) {
       display: none
@@ -88,9 +97,7 @@
         We let our work speak for itself
       </h2>
       <div id="portfolio" class="grid column three maxWidth">
-        <div v-for="(post, index) in posts.nodes" :key="index">
-          <Portfolio :portfolio_id="post.id" />
-        </div>
+        <Portfolio v-for="(post, index) in posts.nodes" :key="index" :portfolio_id="post.id" />
       </div>
       <div class="icons">
         <div v-for="i in Math.ceil(posts.nodes.length / 3)" :key="i.id" class="icon" :class="{ current: i == 1}" @click="portfolioScroll($event, i)" />
