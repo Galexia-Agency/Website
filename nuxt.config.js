@@ -99,6 +99,7 @@ export default {
    ** Nuxt.js modules
    */
   modules: [
+    'vue-social-sharing/nuxt',
     '@nuxtjs/apollo',
     ['nuxt-cookie-control', {
       colors: {

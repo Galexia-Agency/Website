@@ -46,6 +46,22 @@
   .post--meta p:last-of-type {
     justify-self: right
   }
+  .post--footer {
+    padding-top: 2rem;
+    display: grid;
+    grid-auto-flow: column
+  }
+  .post--footer a {
+    color: #1A237E;
+    cursor: pointer;
+    font-weight: bold
+  }
+  .post--footer a:hover {
+    text-decoration: underline
+  }
+  .post--footer a:focus {
+    opacity: .5
+  }
 
   @media (max-width: 500px) {
     .post--header {
@@ -100,6 +116,19 @@
         </div>
         <!--eslint-disable-next-line-->
         <div v-html="post.content" class="post--content"/>
+        <div class="post--footer">
+          <ShareNetwork
+            v-for="social in socials"
+            :key="social"
+            :network="social"
+            :url="'https://galexia.agency' + $router.currentRoute.path"
+            :title="post.title + ' | Galexia - Creative Agency specialising in Web Development and Marketing'"
+            :description="post.excerpt"
+            :media="post.featuredImage.mediaItemUrl"
+          >
+            Share on {{ social }}
+          </ShareNetwork>
+        </div>
       </div>
     </section>
   </div>
@@ -111,6 +140,7 @@ import postQuery from '~/apollo/queries/posts/post.gql'
 export default {
   data () {
     return {
+      socials: ['Facebook', 'LinkedIn', 'Twitter', 'WhatsApp'],
       post: {},
       monthArr: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
     }
