@@ -120,7 +120,7 @@ export default {
       }
     }],
     '@aceforth/nuxt-optimized-images',
-    ['@nuxtjs/pwa', { meta: false }],
+    ['@nuxtjs/pwa', { meta: false, workbox: { offlineAnalytics: true } }],
     '@nuxtjs/sitemap'
   ],
   apollo: {

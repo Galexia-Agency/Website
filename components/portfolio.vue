@@ -20,7 +20,13 @@ import portfolioQuery from '~/apollo/queries/posts/portfolio.gql'
 
 export default {
   name: 'Portfolio',
-  props: ['portfolio_id'],
+  props: {
+    // eslint-disable-next-line
+    portfolio_id: {
+      type: String,
+      default: null
+    }
+  },
   data () {
     return {
       post: {}
