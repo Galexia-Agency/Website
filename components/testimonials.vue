@@ -11,11 +11,7 @@
     -ms-scroll-snap-type: x mandatory;
     scroll-snap-type: x mandatory;
     -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-    cursor: grab
-  }
-  .testimonials:active {
-    cursor: grabbing
+    scrollbar-width: none  /* Firefox */
   }
   .testimonials::-webkit-scrollbar {
     display: none
