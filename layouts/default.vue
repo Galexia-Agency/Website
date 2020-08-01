@@ -495,9 +495,6 @@
           <nuxt-link to="/marketing" class="nav--link">
             Marketing
           </nuxt-link>
-          <nuxt-link to="/portfolio" class="nav--link" style="display: none">
-            Portfolio
-          </nuxt-link>
           <nuxt-link to="/blog" class="nav--link">
             Blog
           </nuxt-link>
@@ -621,13 +618,13 @@ export default {
     return {
       title: this.metaHelper.title,
       meta: [
-        { hid: 'description', content: this.metaHelper.description },
-        { hid: 'og:title', content: this.metaHelper.title },
-        { hid: 'og:description', content: this.metaHelper.description },
-        { hid: 'og:image', content: this.metaHelper.img },
-        { hid: 'twitter:title', content: this.metaHelper.title },
-        { hid: 'twitter:description', content: this.metaHelper.description },
-        { hid: 'twitter:img', content: this.metaHelper.image }
+        { hid: 'description', name: 'description', content: this.metaHelper.description },
+        { hid: 'og:title', name: 'og:title', content: this.metaHelper.title },
+        { hid: 'og:description', name: 'og:description', content: this.metaHelper.description },
+        { hid: 'og:image', name: 'og:image', content: this.metaHelper.img },
+        { hid: 'twitter:title', name: 'twitter:title', content: this.metaHelper.title },
+        { hid: 'twitter:description', name: 'twitter:description', content: this.metaHelper.description },
+        { hid: 'twitter:img', name: 'twitter:img', content: this.metaHelper.image }
       ]
     }
   }
