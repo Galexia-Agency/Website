@@ -1,4 +1,5 @@
 export default {
+  target: 'static',
   mode: 'universal',
   /*
    ** Headers of the page
@@ -42,7 +43,8 @@ export default {
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Assistant&family=Merriweather:ital,wght@0,300;0,700;1,300;1,700&family=Montserrat:ital,wght@0,600;0,700;1,600;1,700&family=Open+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap' },
       { rel: 'preconnect', href: 'https://blog.galexia.agency' }
     ],
-    script: [
+    __dangerouslyDisableSanitizers: ['script'],
+    scriptHTML: [
       {
         inner: `{ 
           "@context": "http://schema.org",
@@ -50,16 +52,16 @@ export default {
           "name": "Galexia",
           "legalName" : "Galexia Ltd",
           "foundingDate": "2020",
-          "founders": [
-            {
+          "founder": {
             "@type": "Person",
             "name": "Joe Bailey"
-          }, ],
+          },
           "contactPoint": {
             "@type": "ContactPoint",
             "contactType": "Enquiries",
             "email": "info@galexia.agency"
           },
+          "logo": "https://traininblocks.com/android-chrome-512x512.png",
           "url": "https://galexia.agency",
           "sameAs": [
             "https://www.linkedin.com/company/64930698",
