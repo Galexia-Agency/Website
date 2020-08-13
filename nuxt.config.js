@@ -15,12 +15,12 @@ export default {
       { hid: 'description', name: 'description' },
       { name: 'apple-mobile-web-app-title', content: 'Galexia' },
       { name: 'application-name', content: 'Galexia' },
-      { name: 'msapplication-TileColor', content: '#ffffff' },
+      { name: 'msapplication-TileColor', content: '#1a237e' },
       { name: 'theme-color', content: '#ffffff' },
 
       // Twitter Card data
       { name: 'twitter:card', content: 'summary_large_image' },
-      { name: 'tiwtter:site', content: '@' }, /// ///////////////////////////////
+      { name: 'twitter:site', content: '@' }, /// ///////////////////////////////
       { hid: 'twitter:title', name: 'twitter:title', template: chunk => `${chunk} | Galexia` },
       { hid: 'twitter:description', name: 'twitter:description' },
       { hid: 'twitter:image', name: 'twitter:image' },
@@ -36,18 +36,16 @@ export default {
     link: [
       { rel: 'apple-touch-icon', sizes: '180x180', href: 'https://galexia.agency/apple-touch-icon.png' },
       { rel: 'icon', type: 'image/png', sizes: '32x32', href: 'https://galexia.agency/favicon-32x32.png' },
-      { rel: 'icon', type: 'image/png', sizes: '194x194', href: 'https://galexia.agency/favicon-194x194.png' },
-      { rel: 'icon', type: 'image/png', sizes: '192x192', href: 'https://galexia.agency/android-chrome-192x192.png' },
       { rel: 'icon', type: 'image/png', sizes: '16x16', href: 'https://galexia.agency/favicon-16x16.png' },
       { rel: 'mask-icon', href: 'https://galexia.agency/safari-pinned-tab.svg', color: '#282828' },
       { rel: 'preconnect', href: 'https://blog.galexia.agency' },
       { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: true },
-      { rel: 'preload', as: 'style', href: 'https://fonts.googleapis.com/css2?family=Assistant&family=Merriweather:ital,wght@0,300;0,700;1,300;1,700&family=Montserrat:ital,wght@0,600;0,700;1,600;1,700&family=Open+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap' },
-      { rel: 'stylesheet', media: 'print', onload: 'this.media="all"', href: 'https://fonts.googleapis.com/css2?family=Assistant&family=Merriweather:ital,wght@0,300;0,700;1,300;1,700&family=Montserrat:ital,wght@0,600;0,700;1,600;1,700&family=Open+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap' }
+      { rel: 'preload', as: 'style', href: 'https://fonts.googleapis.com/css2?family=Assistant:wght@300;400&family=Merriweather:ital,wght@0,300;0,700;1,300;1,700&family=Montserrat:ital,wght@0,600;0,700;1,600;1,700&family=Open+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap' },
+      { rel: 'stylesheet', media: 'print', onload: 'this.media="all"', href: 'https://fonts.googleapis.com/css2?family=Assistant:wght@300;400&family=Merriweather:ital,wght@0,300;0,700;1,300;1,700&family=Montserrat:ital,wght@0,600;0,700;1,600;1,700&family=Open+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap' }
     ],
     __dangerouslyDisableSanitizers: ['script', 'noscript'],
     noscript: [
-      { innerHTML: '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Assistant&family=Merriweather:ital,wght@0,300;0,700;1,300;1,700&family=Montserrat:ital,wght@0,600;0,700;1,600;1,700&family=Open+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap" />' }
+      { innerHTML: '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400&family=Merriweather:ital,wght@0,300;0,700;1,300;1,700&family=Montserrat:ital,wght@0,600;0,700;1,600;1,700&family=Open+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap" />' }
     ],
     script: [
       {
@@ -176,6 +174,9 @@ export default {
       orientation: 'portrait',
       theme_color: '#1a237e',
       lang: 'en-GB'
+    },
+    icon: {
+      iconSrc: 'assets/img/icon.png'
     }
   },
   sitemap: {

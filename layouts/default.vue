@@ -471,6 +471,13 @@
       font-size: 1.5rem
     }
   }
+  .logo svg {
+    fill: white;
+    width: 200px
+  }
+  .logo svg .cls-3 {
+    stroke: white
+  }
 </style>
 
 <template>
@@ -479,7 +486,7 @@
       <nav class="maxWidth">
         <div>
           <nuxt-link class="logo" to="/">
-            Galexia
+            <inline-svg :src="require('../assets/svg/logo.svg')" />
           </nuxt-link>
         </div>
         <div class="nav--icon">
