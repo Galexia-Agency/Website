@@ -64,11 +64,11 @@ export default {
             "contactType": "Enquiries",
             "email": "info@galexia.agency"
           },
-          "logo": "https://traininblocks.com/android-chrome-512x512.png",
+          "logo": "https://galexia.agency/icon.png",
           "url": "https://galexia.agency",
           "sameAs": [
-            "https://www.linkedin.com/company/64930698",
-            "https://www.twitter.com/",
+            "https://www.linkedin.com/company/galexia-agency",
+            "https://www.twitter.com/galexia_agency",
             "https://www.instagram.com/",
             "https://www.facebook.com/"
           ]
