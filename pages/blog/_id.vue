@@ -143,20 +143,22 @@ export default {
   components: {
     FauxCodeSVG
   },
+  async asyncData ({ app, route }) {
+    const response = await app.apolloProvider.defaultClient.query({
+      query: postQuery,
+      variables: {
+        id: route.params.id
+      }
+    })
+    return {
+      post: response.data.post
+    }
+  },
   data () {
     return {
       socials: ['Facebook', 'LinkedIn', 'Twitter', 'WhatsApp'],
       post: {},
       monthArr: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-    }
-  },
-  apollo: {
-    post: {
-      prefetch: true,
-      query: postQuery,
-      variables () {
-        return { id: this.$route.params.id }
-      }
     }
   },
   mounted () {

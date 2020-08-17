@@ -181,11 +181,11 @@
   }
   .logo--container {
     display: grid;
-    align-content: center
+    align-content: center;
+    justify-content: left
   }
   .logo {
-    font-size: 3rem;
-    display: inline-grid
+    font-size: 3rem
   }
   .logo svg {
     fill: white;
@@ -457,8 +457,7 @@
       text-align: center
     }
     .footer--bottom a {
-      display: block;
-      width: 100%;
+      display: inline;
       margin: auto;
       font-size: 1rem
     }
@@ -501,6 +500,43 @@
       font-size: 1.5rem
     }
   }
+
+  /* Testimonials */
+  .testimonials {
+    justify-self: right;
+    width: 100%;
+    display: grid;
+    grid-auto-columns: 100%;
+    grid-auto-flow: column;
+    grid-column-gap: 10px;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    -ms-scroll-snap-type: x mandatory;
+    scroll-snap-type: x mandatory;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none  /* Firefox */
+  }
+  .testimonials::-webkit-scrollbar {
+    display: none
+  }
+  .testimonial {
+    scroll-snap-align: center;
+    scroll-snap-stop: always
+  }
+  .testimonial p {
+    margin: 0
+  }
+  .testimonial .company {
+    font-size: 1.25rem;
+    margin-top: .75rem;
+    text-align: right
+  }
+
+  @media (max-width: 768px) {
+    .testimonial .company {
+      text-align: center
+    }
+  }
 </style>
 
 <template>
@@ -538,7 +574,7 @@
       </nav>
     </header>
     <main>
-      <nuxt />
+      <nuxt keep-alive />
     </main>
     <footer>
       <CookieControl>
@@ -576,7 +612,14 @@
             <h4>Email</h4>
             <a href="mailto:info@galexia.agency">info@galexia.agency</a>
           </div>
-          <Testimonials />
+          <div class="testimonials">
+            <div v-for="(testimonial, index) in posts" :key="index" class="testimonial">
+              <!--eslint-disable-next-line-->
+            <div v-html="testimonial.content" />
+              <!--eslint-disable-next-line-->
+            <div v-html="'- ' + testimonial.title" class="company"/>
+            </div>
+          </div>
         </div>
         <div class="footer--copyright">
           <p class="maxWidth">
@@ -589,7 +632,7 @@
 </template>
 
 <script>
-import Testimonials from '../components/testimonials'
+import testimonialsQuery from '~/apollo/queries/categories/testimonial.gql'
 
 // eslint-disable-next-line
 import LogoSVG from '-!vue-svg-loader!../assets/svg/logo.svg'
@@ -598,12 +641,12 @@ import MenuSVG from '-!vue-svg-loader!../assets/svg/menu.svg'
 
 export default {
   components: {
-    Testimonials,
     LogoSVG,
     MenuSVG
   },
   data () {
     return {
+      posts: [],
       metaHelper: {
         title: 'Home',
         description: 'We are a creative agency specialising in website design development and marketing. We’re a fairly new company built from the ground up to help you grow. We use the latest and greatest practises and technologies so that we can pass on these benefits to you.',
@@ -619,10 +662,35 @@ export default {
       }, 1000)
     }
   },
-  mounted () {
+  async mounted () {
     document.documentElement.classList.add('nav_close')
+    await this.fetchItem()
+    this.scrollTestimonial()
   },
   methods: {
+    async fetchItem () {
+      const response = await this.$apollo.query({
+        query: testimonialsQuery
+      })
+      this.posts = response.data.posts.nodes
+    },
+    scrollTestimonial () {
+      const container = document.querySelector('.testimonials')
+      const width = document.querySelector('.testimonial').offsetWidth
+      setInterval(function () {
+        if (container.scrollLeft > (width * (document.querySelectorAll('.testimonial').length - 1))) {
+          container.scrollTo({
+            left: 0,
+            behavior: 'smooth'
+          })
+        } else {
+          container.scrollBy({
+            left: width,
+            behavior: 'smooth'
+          })
+        }
+      }, 5000)
+    },
     nav () {
       if (document.documentElement.classList.contains('nav_open')) {
         document.documentElement.classList.remove('nav_open')

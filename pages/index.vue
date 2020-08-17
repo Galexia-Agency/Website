@@ -96,20 +96,32 @@
       <h2 class="maxWidth">
         We let our work speak for itself
       </h2>
-      <client-only>
-        <div id="portfolio" class="grid column three maxWidth">
-          <Portfolio v-for="(post, index) in portfolios" :key="index" :portfolio_id="post.id" />
+      <div id="portfolio" class="grid column three maxWidth">
+        <div v-for="(post, index) in posts" :key="index">
+          <a v-if="post.ACFLink" class="card" :href="post.ACFLink.link" target="_blank" rel="noopener">
+            <div class="card--inner">
+              <img :src="post.featuredImage.mediaItemUrl" width="100%" height="auto" loading="lazy" :alt="post.title">
+              <!--eslint-disable-next-line-->
+              <h3 v-html="post.title" />
+              <div class="tags">
+                <span v-for="(tag, i) in post.tags.nodes" :key="i">
+                  {{ tag.name }}
+                </span>
+              </div>
+              <!--eslint-disable-next-line-->
+              <div v-html="post.content" />
+            </div>
+          </a>
         </div>
-        <div class="icons">
-          <div v-for="i in icon" :key="i.id" class="icon" :class="{ current: i == 1}" @click="portfolioScroll($event, i)" />
-        </div>
-      </client-only>
+      </div>
+      <div class="icons">
+        <div v-for="i in Math.ceil(posts.length / 3)" :key="i.id" class="icon" :class="{ current: i == 1}" @click="portfolioScroll($event, i)" />
+      </div>
     </section>
   </div>
 </template>
 
 <script>
-import Portfolio from '../components/portfolio'
 import Header from '../components/header'
 
 // eslint-disable-next-line
@@ -121,35 +133,32 @@ import DiscussionSVG from '-!vue-svg-loader!../assets/svg/discussion.svg'
 
 import portfolioQuery from '~/apollo/queries/categories/portfolio.gql'
 
+// eslint-disable-next-line
+import portfolioPostQuery from '~/apollo/queries/posts/portfolio.gql'
+
 export default {
   components: {
-    Portfolio,
     Header,
     LaunchSVG,
     ProjectSVG,
     DiscussionSVG
   },
-  data () {
-    return {
-      posts: []
-    }
-  },
-  computed: {
-    icon () {
-      if (this.posts.nodes) {
-        return Math.ceil(this.posts.nodes.length / 3)
-      } else {
-        return 0
-      }
-    },
-    portfolios () {
-      return this.posts.nodes
-    }
-  },
-  apollo: {
-    posts: {
-      prefetch: true,
+  async asyncData ({ app }) {
+    const dataOne = await app.apolloProvider.defaultClient.query({
       query: portfolioQuery
+    })
+    const arr = []
+    for (const i in dataOne.data.posts.nodes) {
+      const response = await app.apolloProvider.defaultClient.query({
+        query: portfolioPostQuery,
+        variables: {
+          id: dataOne.data.posts.nodes[i].id
+        }
+      })
+      arr.push(response.data.post)
+    }
+    return {
+      posts: arr
     }
   },
   beforeCreate () {
@@ -158,18 +167,16 @@ export default {
   },
   methods: {
     portfolioScroll (event, i) {
-      if (this.posts.nodes) {
-        document.querySelectorAll('.icon').forEach((e) => {
-          e.classList.remove('current')
-        })
-        event.target.classList.add('current')
-        const y = (i * 3) - 3
-        const width = document.querySelector('#portfolio a').offsetWidth
-        document.querySelector('#portfolio').scrollTo({
-          left: width * y,
-          behavior: 'smooth'
-        })
-      }
+      document.querySelectorAll('.icon').forEach((e) => {
+        e.classList.remove('current')
+      })
+      event.target.classList.add('current')
+      const y = (i * 3) - 3
+      const width = document.querySelector('#portfolio a').offsetWidth
+      document.querySelector('#portfolio').scrollTo({
+        left: width * y,
+        behavior: 'smooth'
+      })
     }
   }
 }
