@@ -176,11 +176,12 @@ export default {
   },
   pwa: {
     manifest: {
+      scope: '../',
       name: 'Galexia | Creative Agency',
       shortName: 'Galexia',
       orientation: 'portrait',
       theme_color: '#ffffff',
-      background_color: '#ffffff',
+      background_color: '#1a237e',
       display: 'standalone',
       lang: 'en-GB',
       icons: [
