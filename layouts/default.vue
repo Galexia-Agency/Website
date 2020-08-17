@@ -194,6 +194,21 @@
   .logo svg .cls-3 {
     stroke: white
   }
+  .cls-1 {
+    font-size: 32px;
+    font-family: Assistant-Light, Assistant, sans-serif;
+    font-weight: 300;
+    letter-spacing: 1.6px
+  }
+  .cls-2 {
+    letter-spacing: 1.6px
+  }
+  .cls-3 {
+    fill: none;
+    stroke: black;
+    stroke-linecap: round;
+    stroke-linejoin: round
+  }
   .nav--container {
     justify-self: end;
     display: grid;
