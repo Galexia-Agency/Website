@@ -15,7 +15,8 @@ export default {
       { hid: 'description', name: 'description' },
       { name: 'apple-mobile-web-app-title', content: 'Galexia' },
       { name: 'application-name', content: 'Galexia' },
-      { name: 'msapplication-TileColor', content: '#1a237e' },
+      { name: 'msapplication-TileColor', content: '#7c72ef' },
+      { name: 'msapplication-TileImage', content: 'https://galexia.agency/mstile-144x144.png?v=dLXLEPEjpj' },
       { name: 'theme-color', content: '#ffffff' },
 
       // Twitter Card data
@@ -27,17 +28,23 @@ export default {
 
       // Open Graph data
       { property: 'og:type', content: 'website' },
-      { property: 'og:site_name', content: 'Galexia' },
+      { property: 'og:site_name', content: 'Galexia | Creative Agency' },
       { hid: 'og:description', property: 'og:description' },
       { hid: 'og:title', property: 'og:title', template: chunk => `${chunk} | Galexia` },
       { hid: 'og:image', property: 'og:image' },
       { property: 'og:url', content: 'https://galexia.agency' }
     ],
     link: [
-      { rel: 'apple-touch-icon', sizes: '180x180', href: 'https://galexia.agency/apple-touch-icon.png' },
-      { rel: 'icon', type: 'image/png', sizes: '32x32', href: 'https://galexia.agency/favicon-32x32.png' },
-      { rel: 'icon', type: 'image/png', sizes: '16x16', href: 'https://galexia.agency/favicon-16x16.png' },
-      { rel: 'mask-icon', href: 'https://galexia.agency/safari-pinned-tab.svg', color: '#282828' },
+      { rel: 'apple-touch-icon', sizes: '60x60', href: 'https://galexia.agency/apple-touch-icon-60x60.png?v=dLXLEPEjpj' },
+      { rel: 'apple-touch-icon', sizes: '76x76', href: 'https://galexia.agency/apple-touch-icon-76x76.png?v=dLXLEPEjpj' },
+      { rel: 'apple-touch-icon', sizes: '120x120', href: 'https://galexia.agency/apple-touch-icon-120x120.png?v=dLXLEPEjpj' },
+      { rel: 'apple-touch-icon', sizes: '152x152', href: 'https://galexia.agency/apple-touch-icon-152x152.png?v=dLXLEPEjpj' },
+      { rel: 'apple-touch-icon', sizes: '180x180', href: 'https://galexia.agency/apple-touch-icon-180x180.png?v=dLXLEPEjpj' },
+      { rel: 'icon', type: 'image/png', sizes: '192x192', href: 'https://galexia.agency/favicon-192x192.png?v=dLXLEPEjpj' },
+      { rel: 'icon', type: 'image/png', sizes: '32x32', href: 'https://galexia.agency/favicon-32x32.png?v=dLXLEPEjpj' },
+      { rel: 'icon', type: 'image/png', sizes: '16x16', href: 'https://galexia.agency/favicon-16x16.png?v=dLXLEPEjpj' },
+      { rel: 'shortcut icon', href: 'https://galexia.agency/favicon.ico?v=dLXLEPEjpj' },
+      { rel: 'mask-icon', href: 'https://galexia.agency/safari-pinned-tab.svg?v=dLXLEPEjpj', color: '#534bae' },
       { rel: 'preconnect', href: 'https://blog.galexia.agency' },
       { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: true },
       { rel: 'preload', as: 'style', href: 'https://fonts.googleapis.com/css2?family=Assistant:wght@300;400&family=Merriweather:ital,wght@0,300;0,700;1,300;1,700&family=Montserrat:ital,wght@0,600;0,700;1,600;1,700&family=Open+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap' },
@@ -165,19 +172,75 @@ export default {
   },
   optimizedImages: {
     optimizeImages: true,
-    optimizeImagesInDev: true
+    optimizeImagesInDev: false
   },
   pwa: {
     manifest: {
       name: 'Galexia | Creative Agency',
       shortName: 'Galexia',
       orientation: 'portrait',
-      theme_color: '#1a237e',
-      lang: 'en-GB'
+      theme_color: '#ffffff',
+      background_color: '#ffffff',
+      display: 'standalone',
+      lang: 'en-GB',
+      icons: [
+        {
+          src: '/android-chrome-36x36.png?v=dLXLEPEjpj',
+          sizes: '36x36',
+          type: 'image/png',
+          purpose: 'maskable'
+        },
+        {
+          src: '/android-chrome-48x48.png?v=dLXLEPEjpj',
+          sizes: '48x48',
+          type: 'image/png',
+          purpose: 'maskable'
+        },
+        {
+          src: '/android-chrome-72x72.png?v=dLXLEPEjpj',
+          sizes: '72x72',
+          type: 'image/png',
+          purpose: 'maskable'
+        },
+        {
+          src: '/android-chrome-96x96.png?v=dLXLEPEjpj',
+          sizes: '96x96',
+          type: 'image/png',
+          purpose: 'maskable'
+        },
+        {
+          src: '/android-chrome-144x144.png?v=dLXLEPEjpj',
+          sizes: '144x144',
+          type: 'image/png',
+          purpose: 'maskable'
+        },
+        {
+          src: '/android-chrome-192x192.png?v=dLXLEPEjpj',
+          sizes: '192x192',
+          type: 'image/png',
+          purpose: 'maskable'
+        },
+        {
+          src: '/android-chrome-256x256.png?v=dLXLEPEjpj',
+          sizes: '256x256',
+          type: 'image/png',
+          purpose: 'maskable'
+        },
+        {
+          src: '/android-chrome-384x384.png?v=dLXLEPEjpj',
+          sizes: '384x384',
+          type: 'image/png',
+          purpose: 'maskable'
+        },
+        {
+          src: '/android-chrome-512x512.png?v=dLXLEPEjpj',
+          sizes: '512x512',
+          type: 'image/png',
+          purpose: 'maskable'
+        }
+      ]
     },
-    icon: {
-      iconSrc: 'assets/img/icon.png'
-    }
+    icon: false
   },
   sitemap: {
     hostname: 'https://galexia.agency',

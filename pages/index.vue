@@ -92,12 +92,14 @@
       <h2 class="maxWidth">
         We let our work speak for itself
       </h2>
-      <div id="portfolio" class="grid column three maxWidth">
-        <Portfolio v-for="(post, index) in posts.nodes" :key="index" :portfolio_id="post.id" />
-      </div>
-      <div class="icons">
-        <div v-for="i in Math.ceil(posts.nodes.length / 3)" :key="i.id" class="icon" :class="{ current: i == 1}" @click="portfolioScroll($event, i)" />
-      </div>
+      <client-only>
+        <div id="portfolio" class="grid column three maxWidth">
+          <Portfolio v-for="(post, index) in portfolios" :key="index" :portfolio_id="post.id" />
+        </div>
+        <div class="icons">
+          <div v-for="i in icon" :key="i.id" class="icon" :class="{ current: i == 1}" @click="portfolioScroll($event, i)" />
+        </div>
+      </client-only>
     </section>
   </div>
 </template>
@@ -113,6 +115,18 @@ export default {
   data () {
     return {
       posts: []
+    }
+  },
+  computed: {
+    icon () {
+      if (this.posts.nodes) {
+        return Math.ceil(this.posts.nodes.length / 3)
+      } else {
+        return 0
+      }
+    },
+    portfolios () {
+      return this.posts.nodes
     }
   },
   apollo: {
@@ -133,16 +147,18 @@ export default {
   },
   methods: {
     portfolioScroll (event, i) {
-      document.querySelectorAll('.icon').forEach((e) => {
-        e.classList.remove('current')
-      })
-      event.target.classList.add('current')
-      const y = (i * 3) - 3
-      const width = document.querySelector('#portfolio a').offsetWidth
-      document.querySelector('#portfolio').scrollTo({
-        left: width * y,
-        behavior: 'smooth'
-      })
+      if (this.posts.nodes) {
+        document.querySelectorAll('.icon').forEach((e) => {
+          e.classList.remove('current')
+        })
+        event.target.classList.add('current')
+        const y = (i * 3) - 3
+        const width = document.querySelector('#portfolio a').offsetWidth
+        document.querySelector('#portfolio').scrollTo({
+          left: width * y,
+          behavior: 'smooth'
+        })
+      }
     }
   }
 }

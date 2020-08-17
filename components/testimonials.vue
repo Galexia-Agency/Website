@@ -37,17 +37,16 @@
 </style>
 
 <template>
-  <div class="testimonials">
-    <div v-for="(testimonial, index) in posts.nodes" :key="index" class="testimonial">
-      <div style="display: none">
-        {{ testimonial = JSON.parse(JSON.stringify(testimonial).replace(new RegExp('\\[', 'g'),"").replace(new RegExp('\\]', 'g'),"")) }}
-      </div>
-      <!--eslint-disable-next-line-->
+  <client-only>
+    <div class="testimonials">
+      <div v-for="(testimonial, index) in testimonials" :key="index" class="testimonial">
+        <!--eslint-disable-next-line-->
       <div v-html="testimonial.content" />
-      <!--eslint-disable-next-line-->
+        <!--eslint-disable-next-line-->
       <div v-html="'- ' + testimonial.title" class="company"/>
+      </div>
     </div>
-  </div>
+  </client-only>
 </template>
 
 <script>
@@ -57,6 +56,11 @@ export default {
   data () {
     return {
       posts: []
+    }
+  },
+  computed: {
+    testimonials () {
+      return this.posts.nodes
     }
   },
   apollo: {
@@ -70,21 +74,23 @@ export default {
   },
   methods: {
     scrollTestimonial () {
-      const container = document.querySelector('.testimonials')
-      const width = document.querySelector('.testimonial').offsetWidth
-      setInterval(function () {
-        if (container.scrollLeft > (width * (document.querySelectorAll('.testimonial').length - 1))) {
-          container.scrollTo({
-            left: 0,
-            behavior: 'smooth'
-          })
-        } else {
-          container.scrollBy({
-            left: width,
-            behavior: 'smooth'
-          })
-        }
-      }, 5000)
+      if (this.posts.nodes) {
+        const container = document.querySelector('.testimonials')
+        const width = document.querySelector('.testimonial').offsetWidth
+        setInterval(function () {
+          if (container.scrollLeft > (width * (document.querySelectorAll('.testimonial').length - 1))) {
+            container.scrollTo({
+              left: 0,
+              behavior: 'smooth'
+            })
+          } else {
+            container.scrollBy({
+              left: width,
+              behavior: 'smooth'
+            })
+          }
+        }, 5000)
+      }
     }
   }
 }
