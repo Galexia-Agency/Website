@@ -179,9 +179,8 @@ export default {
       scope: '../',
       name: 'Galexia | Creative Agency',
       shortName: 'Galexia',
-      orientation: 'portrait',
-      theme_color: '#ffffff',
-      background_color: '#1a237e',
+      theme_color: '#1a237e',
+      background_color: '#ffffff',
       display: 'standalone',
       lang: 'en-GB',
       icons: [
