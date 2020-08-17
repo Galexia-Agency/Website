@@ -99,7 +99,7 @@
       <h1 class="maxWidth">
         {{ post.title }}
       </h1>
-      <inline-svg :src="require('assets/svg/faux-code.svg')" />
+      <FauxCodeSVG />
     </div>
     <section class="white">
       <div class="maxWidth">
@@ -135,9 +135,14 @@
 </template>
 
 <script>
+// eslint-disable-next-line
+import FauxCodeSVG from '-!vue-svg-loader!../../assets/svg/faux-code.svg'
 import postQuery from '~/apollo/queries/posts/post.gql'
 
 export default {
+  components: {
+    FauxCodeSVG
+  },
   data () {
     return {
       socials: ['Facebook', 'LinkedIn', 'Twitter', 'WhatsApp'],

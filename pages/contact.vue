@@ -177,7 +177,7 @@
               </transition>
             </form>
           </client-only>
-          <inline-svg :src="require('../assets/svg/contact.svg')" />
+          <ContactSVG />
         </div>
       </div>
     </section>
@@ -186,8 +186,13 @@
 
 <script>
 import axios from 'axios'
+// eslint-disable-next-line
+import ContactSVG from '-!vue-svg-loader!../assets/svg/contact.svg'
 
 export default {
+  components: {
+    ContactSVG
+  },
   data () {
     return {
       submitted: false,
@@ -201,21 +206,11 @@ export default {
       }
     }
   },
-  mounted () {
-    this.$parent.$parent.page = {
-      display: false,
-      title: '',
-      subTitle: '',
-      desc: '',
-      cta1: {
-        active: false
-      },
-      cta: {
-        active: false
-      }
-    }
+  beforeCreate () {
     this.$parent.$parent.metaHelper.title = 'Contact'
     this.$parent.$parent.metaHelper.description = 'We’d love to help you on your next big project. We understand what it means to dream big, and then achieve that dream.'
+  },
+  mounted () {
     // eslint-disable-next-line
     if (process.client) {
       if (localStorage.getItem('form')) {

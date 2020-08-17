@@ -44,10 +44,7 @@
 
 <script>
 export default {
-  mounted () {
-    this.$parent.$parent.page = {
-      display: false
-    }
+  beforeCreate () {
     this.$parent.$parent.metaHelper.title = 'Cookie Policy'
     this.$parent.$parent.metaHelper.description = 'Galexia Ltd\'s Cookie Policy'
   }

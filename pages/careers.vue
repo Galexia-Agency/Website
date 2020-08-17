@@ -26,7 +26,7 @@
   <div id="careers">
     <section class="white">
       <div class="maxWidth">
-        <inline-svg :src="require('../assets/svg/careers.svg')" />
+        <CareersSVG />
         <p>We're not currently hiring, however, if you think you'd be a great fit for our team drop us a line at <a href="mailto:careers@galexia.agency">careers@galexia.agency</a>.</p>
       </div>
     </section>
@@ -34,11 +34,14 @@
 </template>
 
 <script>
+// eslint-disable-next-line
+import CareersSVG from '-!vue-svg-loader!../assets/svg/careers.svg'
+
 export default {
-  mounted () {
-    this.$parent.$parent.page = {
-      display: false
-    }
+  components: {
+    CareersSVG
+  },
+  beforeCreate () {
     this.$parent.$parent.metaHelper.title = 'Careers'
     this.$parent.$parent.metaHelper.description = 'We\'re not currently hiring, however, if you think you\'d be a great fit for our team drop us a line at careers@galexia.agency.'
   }

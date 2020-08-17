@@ -150,7 +150,7 @@
 
   /* Header */
   header {
-    background: linear-gradient(0deg, rgba(83, 75, 174, .5), rgba(0, 0, 81, .35))
+    background: rgba(53, 47, 114, .33)
   }
   .header--inner {
     padding: 6rem 2rem 7.5rem 2rem;
@@ -179,8 +179,20 @@
     display: grid;
     grid-auto-flow: column
   }
+  .logo--container {
+    display: grid;
+    align-content: center
+  }
   .logo {
-    font-size: 3rem
+    font-size: 3rem;
+    display: inline-grid
+  }
+  .logo svg {
+    fill: white;
+    width: 200px
+  }
+  .logo svg .cls-3 {
+    stroke: white
   }
   .nav--container {
     justify-self: end;
@@ -364,6 +376,9 @@
   }
 
   @media (max-width: 900px) {
+    .logo svg {
+      width: 150px
+    }
     #__nuxt {
       width: 100vw
     }
@@ -471,26 +486,19 @@
       font-size: 1.5rem
     }
   }
-  .logo svg {
-    fill: white;
-    width: 200px
-  }
-  .logo svg .cls-3 {
-    stroke: white
-  }
 </style>
 
 <template>
   <div>
     <header>
       <nav class="maxWidth">
-        <div>
+        <div class="logo--container">
           <nuxt-link class="logo" to="/">
-            <inline-svg :src="require('../assets/svg/logo.svg')" />
+            <LogoSVG />
           </nuxt-link>
         </div>
         <div class="nav--icon">
-          <inline-svg :src="require('../assets/svg/menu.svg')" @click="nav" />
+          <MenuSVG @click="nav" />
         </div>
         <div class="nav--container">
           <nuxt-link to="/" class="nav--link">
@@ -513,14 +521,6 @@
           </nuxt-link>
         </div>
       </nav>
-      <div v-if="page.display" class="header--inner maxWidth">
-        <!-- eslint-disable-next-line -->
-        <h1 v-if="page.title" v-html="page.title" />
-        <!-- eslint-disable-next-line -->
-        <h2 v-if="page.subTitle" v-html="page.subTitle" />
-        <!-- eslint-disable-next-line -->
-        <p v-if="page.desc" v-html="page.desc" />
-      </div>
     </header>
     <main>
       <nuxt />
@@ -576,18 +576,19 @@
 <script>
 import Testimonials from '../components/testimonials'
 
+// eslint-disable-next-line
+import LogoSVG from '-!vue-svg-loader!../assets/svg/logo.svg'
+// eslint-disable-next-line
+import MenuSVG from '-!vue-svg-loader!../assets/svg/menu.svg'
+
 export default {
   components: {
-    Testimonials
+    Testimonials,
+    LogoSVG,
+    MenuSVG
   },
   data () {
     return {
-      page: {
-        display: true,
-        title: '',
-        subTitle: '',
-        desc: ''
-      },
       metaHelper: {
         title: 'Home',
         description: 'We are a creative agency specialising in website design development and marketing. We’re a fairly new company built from the ground up to help you grow. We use the latest and greatest practises and technologies so that we can pass on these benefits to you.',

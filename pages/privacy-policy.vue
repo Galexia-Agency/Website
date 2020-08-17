@@ -18,10 +18,7 @@
 
 <script>
 export default {
-  mounted () {
-    this.$parent.$parent.page = {
-      display: false
-    }
+  beforeCreate () {
     this.$parent.$parent.metaHelper.title = 'Privacy Policy'
     this.$parent.$parent.metaHelper.description = 'Galexia Ltd\'s Privacy Policy'
   }

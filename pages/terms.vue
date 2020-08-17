@@ -40,10 +40,7 @@
 
 <script>
 export default {
-  mounted () {
-    this.$parent.$parent.page = {
-      display: false
-    }
+  beforeCreate () {
     this.$parent.$parent.metaHelper.title = 'Terms of Service'
     this.$parent.$parent.metaHelper.description = 'Galexia Ltd Terms of Service'
   }

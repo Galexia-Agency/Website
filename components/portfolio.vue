@@ -34,7 +34,6 @@ export default {
   },
   apollo: {
     post: {
-      prefetch: true,
       query: portfolioQuery,
       variables () {
         return { id: this.portfolio_id }

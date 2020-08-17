@@ -95,9 +95,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [
-    { src: '~/plugins/inlineSvg.js' }
-  ],
+  plugins: [],
   /*
    ** Nuxt.js dev-modules
    */
@@ -253,6 +251,14 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend (config, ctx) {}
+    extend: (config) => {
+      config.module.rules.push({
+        test: /\.svg$/,
+        use: [
+          'vue-svg-loader'
+        ]
+      })
+      return config
+    }
   }
 }
