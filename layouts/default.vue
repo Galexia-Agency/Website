@@ -414,6 +414,12 @@
     text-decoration: underline
   }
 
+  @media (max-width: 1435px) {
+    .footer--copyrightInner {
+      padding: 0 4rem
+    }
+  }
+
   @media (max-width: 1110px) {
     .grid.column.four {
       grid-template-columns: 1fr 1fr;
@@ -422,6 +428,9 @@
   }
 
   @media (max-width: 900px) {
+    .cookieControl__ControlButton {
+      bottom: 10px
+    }
     .logo svg {
       width: 150px
     }
@@ -519,6 +528,21 @@
       padding: .5rem
     }
   }
+  @media (max-width: 600px) {
+    .cookieControl__ControlButton {
+      bottom: 35px
+    }
+    .footer--copyrightInner {
+      padding: 0 1rem;
+      grid-template-columns: 1fr;
+      place-items: center;
+      grid-gap: 1rem
+    }
+    .socialLinks {
+      justify-self: center;
+      padding-bottom: 1rem
+    }
+  }
   @media (max-width: 500px) {
     .grid.column.four {
       grid-template-columns: 1fr
@@ -531,6 +555,9 @@
     }
     .maxWidth {
       padding: 1rem
+    }
+    .footer--copyrightInner {
+      padding: 0 1rem
     }
     main > div > section:first-of-type {
       padding-top: 2rem
