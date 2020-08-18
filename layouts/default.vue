@@ -545,6 +545,30 @@
       text-align: center
     }
   }
+
+  /* Hosting SVG */
+  .st0{opacity:0.7;}
+	.st1{fill:url(#SVGID_1_);}
+	.st2{fill:#E0E0E0;}
+	.st3{opacity:0.1;enable-background:new    ;}
+	.st4{fill:#6C63FF;}
+	.st5{fill:#FDB797;}
+	.st6{fill:#333333;}
+	.st7{fill:url(#SVGID_2_);}
+	.st8{fill:#3CACBB;}
+	.st9{fill:#23C3B7;}
+	.st10{fill:url(#SVGID_3_);}
+	.st11{fill:#252F3E;}
+	.st12{fill:#FF9900;}
+	.st13{fill:url(#SVGID_4_);}
+	.st14{fill:#CAC9C2;}
+	.st15{fill:#FFFFFF;}
+	.st16{fill:#5072AA;}
+	.st17{fill:#4D6796;}
+	.st18{fill:#CC4232;}
+	.st19{fill:#B23F33;}
+	.st20{fill:#ECB02A;}
+	.st21{fill:#C79732;}
 </style>
 
 <template>
