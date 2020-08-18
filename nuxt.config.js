@@ -181,7 +181,13 @@ export default {
       quality: 70
     }
   },
+  generate: {
+    fallback: true
+  },
   pwa: {
+    workbox: {
+      offlinePage: '/404.html'
+    },
     manifest: {
       scope: '../',
       name: 'Galexia | Creative Agency',
