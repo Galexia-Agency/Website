@@ -22,10 +22,15 @@
     overflow: hidden;
     display: grid;
     place-items: center;
-    background-image: url('../../assets/img/faux-code.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center
+  }
+  body.webp .post--header {
+    background-image: url('../../assets/img/faux-code.jpg?webp')
+  }
+  body.no-webp .post--header {
+    background-image: url('../../assets/img/faux-code.jpg')
   }
   .background_opacity {
     z-index: 1;

@@ -14,9 +14,14 @@
     font-size: 16px;
     font-weight: 400;
     scroll-behavior: smooth;
-    background-image: url('../assets/img/SpaceBackgroundBlurred.jpg');
     background-size: cover;
     background-repeat: no-repeat
+  }
+  body.webp {
+    background-image: url('../assets/img/SpaceBackgroundBlurred.jpg?webp')
+  }
+  body.no-webp {
+    background-image: url('../assets/img/SpaceBackgroundBlurred.jpg')
   }
   ::selection {
     background: #1C2AB1;
@@ -667,12 +672,34 @@ export default {
       }, 1000)
     }
   },
+  async beforeMount () {
+    if (await this.WebpIsSupported()) {
+      document.querySelector('body').classList.add('webp')
+    } else {
+      document.querySelector('body').classList.add('no-webp')
+    }
+  },
   async mounted () {
     document.documentElement.classList.add('nav_close')
     await this.fetchItem()
     this.scrollTestimonial()
   },
   methods: {
+    async WebpIsSupported () {
+      // If the browser doesn't has the method createImageBitmap, you can't display webp format
+      if (!self.createImageBitmap) {
+        return false
+      }
+
+      // Base64 representation of a white point image
+      const webpData = 'data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoCAAEAAQAcJaQAA3AA/v3AgAA='
+
+      // Retrieve the Image in Blob Format
+      const blob = await fetch(webpData).then(r => r.blob())
+
+      // If the createImageBitmap method succeeds, return true, otherwise false
+      return createImageBitmap(blob).then(() => true, () => false)
+    },
     async fetchItem () {
       const response = await this.$apollo.query({
         query: testimonialsQuery

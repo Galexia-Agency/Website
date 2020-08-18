@@ -170,7 +170,16 @@ export default {
   },
   optimizedImages: {
     optimizeImages: true,
-    optimizeImagesInDev: false
+    optimizeImagesInDev: true,
+    mozjpeg: {
+      quality: 70
+    },
+    pngquant: {
+      stripe: true
+    },
+    webp: {
+      quality: 70
+    }
   },
   pwa: {
     manifest: {
