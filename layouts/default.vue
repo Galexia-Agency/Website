@@ -15,9 +15,7 @@
     font-weight: 400;
     scroll-behavior: smooth;
     background-size: cover;
-    background-repeat: no-repeat
-  }
-  body.webp {
+    background-repeat: no-repeat;
     background-image: url('../assets/img/SpaceBackgroundBlurred.jpg?webp')
   }
   body.no-webp {
@@ -673,9 +671,7 @@ export default {
     }
   },
   async beforeMount () {
-    if (await this.WebpIsSupported()) {
-      document.querySelector('body').classList.add('webp')
-    } else {
+    if (await !this.WebpIsSupported()) {
       document.querySelector('body').classList.add('no-webp')
     }
   },

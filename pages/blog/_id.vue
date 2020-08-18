@@ -24,9 +24,7 @@
     place-items: center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center
-  }
-  body.webp .post--header {
+    background-position: center;
     background-image: url('../../assets/img/faux-code.jpg?webp')
   }
   body.no-webp .post--header {
