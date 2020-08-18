@@ -259,13 +259,19 @@
   }
   .footer--bottom {
     display: grid;
-    grid-auto-flow: column;
     grid-template-columns: .75fr .75fr 1fr;
     grid-gap: 1rem
   }
   .footer--bottom h4 {
     margin: 0;
     margin-bottom: 1rem
+  }
+  .footer--bottom .logo--container {
+    grid-column: span 3;
+    margin-bottom: 1rem
+  }
+  .footer--bottom .logo svg {
+    width: 150px
   }
   .footer--bottom_sitemap {
     display: grid;
@@ -282,13 +288,10 @@
     border-bottom: .15rem solid white
   }
   .footer--bottom_contact {
-    display: grid;
-    grid-auto-rows: max-content;
-    grid-gap: .5rem
+    display: grid
   }
-  .footer--bottom_contact * {
-    margin: 0;
-    height: fit-content
+  .footer--bottom_contact h4 {
+    margin-bottom: .5rem
   }
   .footer--bottom_contact h4:not(:first-of-type) {
     margin-top: 1rem
@@ -462,12 +465,35 @@
       grid-template-columns: 1fr;
       grid-gap: 1rem;
       padding: 2rem;
+      max-width: 600px;
+      width: 90%;
       text-align: center
     }
     .footer--bottom a {
       display: inline;
       margin: auto;
       font-size: 1rem
+    }
+    .footer--bottom .logo--container {
+      margin: 0 auto 1rem;
+      grid-column: 1
+    }
+    .footer--bottom_sitemap, .footer--bottom_contact {
+      grid-template-columns: 1fr 1fr;
+      max-width: 360px;
+      width: 100%;
+      margin: auto
+    }
+    .footer--bottom_contact {
+      grid-auto-flow: column;
+      grid-row-gap: 1rem;
+      grid-template-rows: 1fr 1fr
+    }
+    .footer--bottom_contact h4, .footer--bottom_contact h4:not(:first-of-type), .footer--bottom_contact a {
+      margin: 0 auto
+    }
+    .testimonials {
+      margin-top: 1rem
     }
     .footer--copyright {
       padding: .5rem
@@ -623,29 +649,34 @@
       </CookieControl>
       <div class="footer--bottom_container">
         <div class="footer--bottom maxWidth">
-          <div class="footer--bottom_sitemap">
-            <h4>Galexia</h4>
-            <a class="footer--bottom_navLink" href="#">
-              Client Login (Coming Soon)
-            </a>
-            <nuxt-link class="footer--bottom_navLink" to="/Privacy-Policy">
-              Privacy Policy
-            </nuxt-link>
-            <nuxt-link class="footer--bottom_navLink" to="/Cookie-Policy">
-              Cookie Policy
-            </nuxt-link>
-            <nuxt-link class="footer--bottom_navLink" to="/Terms">
-              Terms of Service
-            </nuxt-link>
-            <nuxt-link class="footer--bottom_navLink" to="/GDPR">
-              GDPR Statement
+          <div class="logo--container">
+            <nuxt-link class="logo" to="/">
+              <LogoSVG />
             </nuxt-link>
           </div>
-          <div class="footer--bottom_contact">
-            <h4>Telephone</h4>
-            <a href="tel:+447477737535">07477737535</a>
-            <h4>Email</h4>
-            <a href="mailto:info@galexia.agency">info@galexia.agency</a>
+          <div>
+            <div class="footer--bottom_sitemap">
+              <nuxt-link class="footer--bottom_navLink" to="/Privacy-Policy">
+                Privacy Policy
+              </nuxt-link>
+              <nuxt-link class="footer--bottom_navLink" to="/Cookie-Policy">
+                Cookie Policy
+              </nuxt-link>
+              <nuxt-link class="footer--bottom_navLink" to="/Terms">
+                Terms of Service
+              </nuxt-link>
+              <nuxt-link class="footer--bottom_navLink" to="/GDPR">
+                GDPR Statement
+              </nuxt-link>
+            </div>
+          </div>
+          <div>
+            <div class="footer--bottom_contact">
+              <h4>Telephone</h4>
+              <a href="tel:+447477737535">07477737535</a>
+              <h4>Email</h4>
+              <a href="mailto:info@galexia.agency">info@galexia.agency</a>
+            </div>
           </div>
           <div class="testimonials">
             <div v-for="(testimonial, index) in posts" :key="index" class="testimonial">
