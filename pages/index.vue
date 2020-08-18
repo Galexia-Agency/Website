@@ -175,7 +175,7 @@ export default {
       const width = document.querySelector('#portfolio a').offsetWidth
       document.querySelector('#portfolio').scrollTo({
         left: width * y,
-        behavior: 'smooth'
+        behavior: this.$parent.motion
       })
     }
   }

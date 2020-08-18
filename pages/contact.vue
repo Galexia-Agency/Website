@@ -12,7 +12,7 @@
       transform: translate(0, -4000px)
     }
   }
-  @media (prefers-reduced-motion) {
+  @media (prefers-reduced-motion: reduce) {
     .rocket.animate {
       -webkit-animation: none;
       animation: none

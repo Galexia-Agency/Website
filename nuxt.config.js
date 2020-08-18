@@ -114,10 +114,6 @@ export default {
       'nuxt-fontawesome', {
         imports: [
           {
-            set: '@fortawesome/free-solid-svg-icons',
-            icons: ['fas']
-          },
-          {
             set: '@fortawesome/free-brands-svg-icons',
             icons: ['fab']
           }
@@ -201,7 +197,10 @@ export default {
   },
   pwa: {
     workbox: {
-      offlinePage: '/404.html'
+      offlinePage: '/404.html',
+      cacheNames: {
+        CACHE: 'pwabuilder-precache'
+      }
     },
     manifest: {
       scope: '../',

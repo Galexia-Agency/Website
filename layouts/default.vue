@@ -779,6 +779,7 @@ export default {
   data () {
     return {
       posts: [],
+      motion: 'auto',
       metaHelper: {
         title: 'Home',
         description: 'We are a creative agency specialising in website design development and marketing. We’re a fairly new company built from the ground up to help you grow. We use the latest and greatest practises and technologies so that we can pass on these benefits to you.',
@@ -803,6 +804,7 @@ export default {
     document.documentElement.classList.add('nav_close')
     await this.fetchItem()
     this.scrollTestimonial()
+    this.motion = window.matchMedia('(prefers-reduced-motion: reduce)') ? 'smooth' : 'auto'
   },
   methods: {
     async WebpIsSupported () {
@@ -833,12 +835,12 @@ export default {
         if (container.scrollLeft > (width * (document.querySelectorAll('.testimonial').length - 1))) {
           container.scrollTo({
             left: 0,
-            behavior: 'smooth'
+            behavior: this.motion
           })
         } else {
           container.scrollBy({
             left: width,
-            behavior: 'smooth'
+            behavior: this.motion
           })
         }
       }, 5000)
