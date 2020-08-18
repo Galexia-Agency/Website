@@ -586,6 +586,7 @@
   .testimonials {
     justify-self: right;
     width: 100%;
+    max-width: 80vw;
     display: grid;
     grid-auto-columns: 100%;
     grid-auto-flow: column;
