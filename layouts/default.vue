@@ -671,7 +671,7 @@ export default {
     }
   },
   async beforeMount () {
-    if (await !this.WebpIsSupported()) {
+    if (await this.WebpIsSupported()) {} else {
       document.querySelector('body').classList.add('no-webp')
     }
   },
