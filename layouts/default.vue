@@ -166,6 +166,11 @@
   .header--inner p {
     font-size: 18px
   }
+  .header--inner :any-link {
+    color: white;
+    font-weight: normal;
+    text-decoration: underline
+  }
   .header--inner h1 {
     font-size: 2.5rem;
     color: white

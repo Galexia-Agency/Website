@@ -21,7 +21,11 @@
     position: relative;
     overflow: hidden;
     display: grid;
-    place-items: center
+    place-items: center;
+    background-image: url('../../assets/img/faux-code.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center
   }
   .background_opacity {
     z-index: 1;
@@ -29,15 +33,6 @@
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, .33)
-  }
-  svg {
-    grid-row: 1;
-    grid-column: 1;
-    opacity: .85;
-    min-width: 100%;
-    min-height: 100%;
-    height: auto;
-    width: auto
   }
   .post--meta {
     display: grid;
@@ -99,7 +94,6 @@
       <h1 class="maxWidth">
         {{ post.title }}
       </h1>
-      <FauxCodeSVG />
     </div>
     <section class="white">
       <div class="maxWidth">
@@ -135,14 +129,9 @@
 </template>
 
 <script>
-// eslint-disable-next-line
-import FauxCodeSVG from '-!vue-svg-loader!../../assets/svg/faux-code.svg'
 import postQuery from '~/apollo/queries/posts/post.gql'
 
 export default {
-  components: {
-    FauxCodeSVG
-  },
   async asyncData ({ app, route }) {
     const response = await app.apolloProvider.defaultClient.query({
       query: postQuery,
