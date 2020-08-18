@@ -29,6 +29,7 @@
         <h1>
           {{ error.statusCode }} - An error occurred
         </h1>
+        <p>{{ message }}</p>
       </div>
     </div>
   </div>

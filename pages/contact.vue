@@ -89,7 +89,7 @@
                   v-model="form.fname"
                   name="fname"
                   type="text"
-                  placeholder="Han"
+                  placeholder="Joe"
                   required
                   autocomplete="given-name"
                   @keyup="checkform"
@@ -102,7 +102,7 @@
                   v-model="form.lname"
                   name="lname"
                   type="text"
-                  placeholder="Solo"
+                  placeholder="Bloggs"
                   required
                   autocomplete="family-name"
                   @keyup="checkform"
@@ -115,7 +115,7 @@
                   v-model="form.email"
                   name="email"
                   type="email"
-                  placeholder="millenium@falcon.net"
+                  placeholder="joe@bloggs.com"
                   required
                   autocomplete="email"
                   @keyup="checkform"
@@ -141,7 +141,7 @@
                   v-model="form.subject"
                   name="subject"
                   type="text"
-                  placeholder="Corellia"
+                  placeholder="I need a site..."
                   required
                   @keyup="checkform"
                 >
@@ -151,7 +151,7 @@
                 <textarea
                   v-model="form.message"
                   name="message"
-                  placeholder="Chewie, the exhaust ports need cleaning"
+                  placeholder="I have a really outdated website and after reading about your past clients I'd like to request a quote"
                   required
                   rows="3"
                   @keyup="checkform"
