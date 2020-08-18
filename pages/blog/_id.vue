@@ -28,7 +28,7 @@
     background-image: url('../../assets/img/faux-code.jpg?webp')
   }
   body.no-webp .post--header {
-    background-image: url('../../assets/img/faux-code.jpg')
+    background-image: url('../../assets/img/faux-code.jpg?resize')
   }
   .background_opacity {
     z-index: 1;

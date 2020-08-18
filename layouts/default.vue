@@ -19,7 +19,7 @@
     background-image: url('../assets/img/SpaceBackgroundBlurred.jpg?webp')
   }
   body.no-webp {
-    background-image: url('../assets/img/SpaceBackgroundBlurred.jpg')
+    background-image: url('../assets/img/SpaceBackgroundBlurred.jpg?resize')
   }
   ::selection {
     background: #1C2AB1;
@@ -256,6 +256,26 @@
     padding: 1.5rem;
     line-height: .9rem;
     font-size: .9rem
+  }
+  .footer--copyrightInner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 2rem
+  }
+  .socialLinks {
+    justify-self: end;
+    font-size: 24px;
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 1rem;
+    align-content: center
+  }
+  .socialLinks a {
+    color: #FFFFFF99;
+    transition: .5s
+  }
+  .socialLinks a:hover {
+    color: white
   }
   .footer--bottom {
     display: grid;
@@ -688,9 +708,28 @@
           </div>
         </div>
         <div class="footer--copyright">
-          <p class="maxWidth">
-            © {{ new Date().getFullYear() }} Galexia Ltd<span style="display: none">. Company No: 123456789.</span>
-          </p>
+          <div class="footer--copyrightInner maxWidth">
+            <p>
+              © {{ new Date().getFullYear() }} Galexia Ltd<span style="display: none">. Company No: 123456789.</span>
+            </p>
+            <div class="socialLinks">
+              <a href="https://fb.me/GalexiaAgency" target="_blank" rel="noopener noreferrer">
+                <font-awesome-icon :icon="['fab', 'facebook']" />
+              </a>
+              <a href="https://www.instagram.com/galexia_agency" target="_blank" rel="noopener noreferrer">
+                <font-awesome-icon :icon="['fab', 'instagram']" />
+              </a>
+              <a href="https://www.twitter.com/galexia_agency" target="_blank" rel="noopener noreferrer">
+                <font-awesome-icon :icon="['fab', 'twitter']" />
+              </a>
+              <a href="https://www.linkedin.com/company/galexia-agency" target="_blank" rel="noopener noreferrer">
+                <font-awesome-icon :icon="['fab', 'linkedin']" />
+              </a>
+              <a href="https://github.com/orgs/Galexia-Agency/" target="_blank" rel="noopener noreferrer">
+                <font-awesome-icon :icon="['fab', 'github']" />
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </footer>

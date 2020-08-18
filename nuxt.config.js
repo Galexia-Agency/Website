@@ -21,7 +21,7 @@ export default {
 
       // Twitter Card data
       { name: 'twitter:card', content: 'summary_large_image' },
-      { name: 'twitter:site', content: '@' }, /// ///////////////////////////////
+      { name: 'twitter:site', content: '@galexia_agency' }, /// ///////////////////////////////
       { hid: 'twitter:title', name: 'twitter:title', template: chunk => `${chunk} | Galexia` },
       { hid: 'twitter:description', name: 'twitter:description' },
       { hid: 'twitter:image', name: 'twitter:image' },
@@ -76,8 +76,9 @@ export default {
           "sameAs": [
             "https://www.linkedin.com/company/galexia-agency",
             "https://www.twitter.com/galexia_agency",
-            "https://www.instagram.com/",
-            "https://www.facebook.com/"
+            "https://www.instagram.com/galexia_agency",
+            "https://fb.me/GalexiaAgency",
+            "https://github.com/orgs/Galexia-Agency/"
           ]
         }`,
         type: 'application/ld+json'
@@ -109,6 +110,20 @@ export default {
    ** Nuxt.js modules
    */
   modules: [
+    [
+      'nuxt-fontawesome', {
+        imports: [
+          {
+            set: '@fortawesome/free-solid-svg-icons',
+            icons: ['fas']
+          },
+          {
+            set: '@fortawesome/free-brands-svg-icons',
+            icons: ['fab']
+          }
+        ]
+      }
+    ],
     'vue-social-sharing/nuxt',
     '@nuxtjs/apollo',
     ['nuxt-cookie-control', {
@@ -170,7 +185,7 @@ export default {
   },
   optimizedImages: {
     optimizeImages: true,
-    optimizeImagesInDev: true,
+    optimizeImagesInDev: false,
     mozjpeg: {
       quality: 70
     },
