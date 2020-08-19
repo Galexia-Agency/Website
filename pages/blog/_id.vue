@@ -81,6 +81,7 @@
   }
   figure img {
     width: 75%;
+    height: auto;
     display: block;
     margin: auto
   }
