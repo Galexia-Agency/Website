@@ -37,13 +37,12 @@
     font-size: clamp(1.25rem, 1vw + 1.25rem, 2rem);
     margin: 0;
     padding: 1rem;
-    line-height: 1em;
-    height: calc(2em + 2rem);
+    height: 6.5ex;
     color: #1A237E
   }
   .card p {
     margin: 0;
-    height: 6em
+    height: 10ex
   }
   .card .button {
     align-self: end
@@ -100,11 +99,16 @@
     .card, .card:nth-of-type(4), .card:nth-of-type(5) {
       grid-column: span 1
     }
+  }
+  @media (max-width: 800px) {
+    .card {
+      max-width: 600px;
+      margin: auto;
+      width: 100%
+    }
     .card p, .card h2 {
       height: auto
     }
-  }
-  @media (max-width: 500px) {
     .card--container {
       grid-template-columns: 1fr;
       grid-row-gap: 2rem;

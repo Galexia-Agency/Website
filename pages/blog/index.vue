@@ -1,24 +1,36 @@
 <style scoped>
   .post {
     display: grid;
-    grid-template-columns: minmax(200px, 400px) 1fr;
+    grid-template-columns: minmax(150px, 400px) 1fr;
     grid-gap: 2rem;
     place-items: center;
     padding: 2rem 0
   }
+  .post:first-of-type {
+    padding-top: 0
+  }
+  .post:last-of-type {
+    padding-bottom: 0
+  }
   img {
-    width: 100%
+    min-width: 100%;
+    width: 100%;
+    height: 300px;
+    object-fit: cover
   }
   h3 {
-    margin: 0
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 5ch
   }
   time {
-    float: right;
+    justify-self: end;
     font-size: 1.25rem;
     font-weight: normal
   }
   .post--content {
-    min-width: 500px
+    min-width: 500px;
+    width: 100%
   }
 
   @media (max-width: 800px) {
@@ -26,7 +38,7 @@
       grid-template-columns: 1fr
     }
     img {
-      display: none
+      height: 200px
     }
     .post--content {
       min-width: initial
