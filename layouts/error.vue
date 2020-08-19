@@ -11,6 +11,7 @@
   }
   .error h1 {
     margin-top: 5rem;
+    font-size: 2.25rem;
     font-size: clamp(1.75rem, 1vw + 1rem, 3rem)
   }
 </style>

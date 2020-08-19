@@ -51,6 +51,13 @@
   button {
     font-family: Open Sans, sans-serif
   }
+  main .button:any-link {
+    color: white;
+    font-weight: normal
+  }
+  main .button:any-link:hover {
+    text-decoration: none
+  }
   .button {
     border: 0;
     color: white;
@@ -428,6 +435,9 @@
   }
 
   @media (max-width: 900px) {
+    .socialLinks a {
+      color: white
+    }
     .cookieControl__ControlButton {
       bottom: 10px
     }

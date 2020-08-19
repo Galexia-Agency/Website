@@ -14,6 +14,7 @@
     grid-column: 1;
     width: 100%;
     margin-bottom: 1rem;
+    font-size: 4rem;
     font-size: clamp(3rem, 10vw, 5rem)
   }
   .post--header {

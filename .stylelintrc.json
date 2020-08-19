@@ -14,7 +14,6 @@
       "declaration-no-important": true,
       "color-named": "always-where-possible",
       "number-max-precision": 4,
-      "unit-blacklist": "em",
       "declaration-block-no-redundant-longhand-properties": true,
       "font-family-name-quotes": "always-where-required",
       "color-hex-length": "long",
