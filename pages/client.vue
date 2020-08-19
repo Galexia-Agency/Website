@@ -3,15 +3,23 @@
     display: inline-block
   }
   h1 {
-    margin: 1.5rem 0 2.75rem;
+    margin: 1.75rem 0;
+    margin: clamp(1.5rem, 1vw + 1.5rem, 2rem) 0;
     font-size: 2.25rem;
     font-size: clamp(1.75rem, 1vw + 1.75rem, 2.5rem)
+  }
+  h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 1.75rem;
+    font-size: clamp(1.5rem, 1vw + 1.5rem, 2rem);
+    color: #1A237EAA
   }
   h3 {
     font-size: 1.33rem;
     font-size: clamp(1.25rem, 1vw + 1rem, 1.5rem);
-    margin-top: 0;
-    margin-bottom: 2.75rem
+    margin: 0 0 2.75rem;
+    color: #1A237EAA
   }
   .client {
     text-align: center;
@@ -30,7 +38,8 @@
     margin: 0;
     padding: 1rem;
     line-height: 1em;
-    height: calc(2em + 2rem)
+    height: calc(2em + 2rem);
+    color: #1A237E
   }
   .card p {
     margin: 0;
@@ -113,6 +122,7 @@
             <!--eslint-disable-next-line-->
             <img v-if="logo" v-bind:src="logo" :alt="title" width="150" height="150">
           </a>
+          <h2>Welcome to your own space.</h2>
           <h1>Thanks for being our client, {{ title }}</h1>
           <h3>We'd love it if you could mention us to businesses you work with and we'll do the same.<br>Let's keep this great relationship going!</h3>
           <div class="grid column card--container">
