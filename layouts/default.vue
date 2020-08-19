@@ -538,6 +538,10 @@
       place-items: center;
       grid-gap: 1rem
     }
+    .footer--copyrightInner p {
+      width: 100%;
+      text-align: center
+    }
     .socialLinks {
       justify-self: center;
       padding-bottom: 1rem
