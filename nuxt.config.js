@@ -96,7 +96,9 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: [
+    { src: '~/plugins/fontAwesome.js' }
+  ],
   /*
    ** Nuxt.js dev-modules
    */
@@ -110,16 +112,6 @@ export default {
    ** Nuxt.js modules
    */
   modules: [
-    [
-      'nuxt-fontawesome', {
-        imports: [
-          {
-            set: '@fortawesome/free-brands-svg-icons',
-            icons: ['fab']
-          }
-        ]
-      }
-    ],
     'vue-social-sharing/nuxt',
     '@nuxtjs/apollo',
     ['nuxt-cookie-control', {
@@ -279,7 +271,7 @@ export default {
   build: {
     /*
      ** You can extend webpack config here
-     */
+    */
     extend: (config) => {
       config.module.rules.push({
         test: /\.svg$/,

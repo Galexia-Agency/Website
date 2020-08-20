@@ -21,7 +21,6 @@
     "graphql": "^15.3.0",
     "nuxt": "^2.14.1",
     "nuxt-cookie-control": "^1.8.6",
-    "nuxt-fontawesome": "^0.4.0",
     "vue-social-sharing": "^3.0.0-beta.11"
   },
   "devDependencies": {
