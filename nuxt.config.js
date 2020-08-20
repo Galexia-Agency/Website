@@ -182,6 +182,13 @@ export default {
     },
     webp: {
       quality: 70
+    },
+    svgo: {
+      plugins: [
+        { reusePaths: true },
+        { removeOffCanvasPaths: true },
+        { removeScriptElement: true }
+      ]
     }
   },
   generate: {
@@ -272,14 +279,5 @@ export default {
     /*
      ** You can extend webpack config here
     */
-    extend: (config) => {
-      config.module.rules.push({
-        test: /\.svg$/,
-        use: [
-          'vue-svg-loader'
-        ]
-      })
-      return config
-    }
   }
 }

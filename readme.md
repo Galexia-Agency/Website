@@ -17,6 +17,9 @@ $ npm run start
 
 # generate static project
 $ npm run generate
+
+# Analyze Bundles
+$ npx nuxt build -a
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).

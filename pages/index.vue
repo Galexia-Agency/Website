@@ -75,10 +75,12 @@
           <h3>We start with a conversation</h3>
           <p>We find the best way to start a project is to have an informal, no-obligations chat about your requirements. Some of our clients come to us with a large project plan spanning many months, with a detailed idea about what they want. Some other clients only know the idea, and not the implementation. We’re happy with both.</p>
         </div>
-        <DiscussionSVG />
+        <!--eslint-disable-next-line-->
+        <div v-html="require('../assets/svg/discussion.svg?include')" />
       </div>
       <div class="grid right maxWidth">
-        <ProjectSVG />
+        <!--eslint-disable-next-line-->
+        <div v-html="require('../assets/svg/project.svg?include')" />
         <div>
           <h3>You run your business. We run the project</h3>
           <p>We understand life often feels like it’s moving in the fast lane, that’s why we’re versed in project management. We keep your project on track, working to strict deadlines, so you don’t have to worry. If you do prefer a more hands-on approach we have a proprietary project management system where you can log in and monitor our progress, send us any further details, or ask any questions.</p>
@@ -89,7 +91,8 @@
           <h3>Launch day. More business for you, another happy customer for us</h3>
           <p>We love to keep in touch with our clients, even after the initial project has finished. We’re happy to offer continued maintenance plans on our websites or monitoring on marketing strategies. We even have a community where past clients can discuss and share their websites.</p>
         </div>
-        <LaunchSVG />
+        <!--eslint-disable-next-line-->
+        <div v-html="require('../assets/svg/launch.svg?include')" />
       </div>
     </section>
     <section class="white">
@@ -124,24 +127,12 @@
 <script>
 import Header from '../components/header'
 
-// eslint-disable-next-line
-import LaunchSVG from '-!vue-svg-loader!../assets/svg/launch.svg'
-// eslint-disable-next-line
-import ProjectSVG from '-!vue-svg-loader!../assets/svg/project.svg'
-// eslint-disable-next-line
-import DiscussionSVG from '-!vue-svg-loader!../assets/svg/discussion.svg'
-
 import portfolioQuery from '~/apollo/queries/categories/portfolio.gql'
-
-// eslint-disable-next-line
 import portfolioPostQuery from '~/apollo/queries/posts/portfolio.gql'
 
 export default {
   components: {
-    Header,
-    LaunchSVG,
-    ProjectSVG,
-    DiscussionSVG
+    Header
   },
   async asyncData ({ app }) {
     const dataOne = await app.apolloProvider.defaultClient.query({

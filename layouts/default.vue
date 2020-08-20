@@ -668,11 +668,13 @@
       <nav class="maxWidth">
         <div class="logo--container">
           <nuxt-link class="logo" to="/">
-            <LogoSVG />
+            <!--eslint-disable-next-line-->
+            <div v-html="require('../assets/svg/logo.svg?include')" />
           </nuxt-link>
         </div>
         <div class="nav--icon">
-          <MenuSVG @click="nav" />
+          <!--eslint-disable-next-line-->
+          <div v-html="require('../assets/svg/menu.svg?include')" @click="nav" />
         </div>
         <div class="nav--container">
           <nuxt-link to="/" class="nav--link">
@@ -713,7 +715,8 @@
         <div class="footer--bottom maxWidth">
           <div class="logo--container">
             <nuxt-link class="logo" to="/">
-              <LogoSVG />
+              <!--eslint-disable-next-line-->
+              <div v-html="require('../assets/svg/logo.svg?include')" />
             </nuxt-link>
           </div>
           <div>
@@ -781,16 +784,7 @@
 <script>
 import testimonialsQuery from '~/apollo/queries/categories/testimonial.gql'
 
-// eslint-disable-next-line
-import LogoSVG from '-!vue-svg-loader!../assets/svg/logo.svg'
-// eslint-disable-next-line
-import MenuSVG from '-!vue-svg-loader!../assets/svg/menu.svg'
-
 export default {
-  components: {
-    LogoSVG,
-    MenuSVG
-  },
   data () {
     return {
       posts: [],

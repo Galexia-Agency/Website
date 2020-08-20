@@ -20,13 +20,15 @@
   <div class="section white grid">
     <div class="error maxWidth grid">
       <div v-if="error.statusCode === 404">
-        <NotFoundSVG />
+        <!--eslint-disable-next-line-->
+        <div v-html="require('../assets/svg/not-found.svg?include')" />
         <h1>
           404 - Page not found
         </h1>
       </div>
       <div v-else>
-        <ErrorSVG />
+        <!--eslint-disable-next-line-->
+        <div v-html="require('../assets/svg/error.svg?include')" />
         <h1>
           {{ error.statusCode }} - An error occurred
         </h1>
@@ -37,17 +39,8 @@
 </template>
 
 <script>
-// eslint-disable-next-line
-import NotFoundSVG from '-!vue-svg-loader!../assets/svg/not-found.svg'
-// eslint-disable-next-line
-import ErrorSVG from '-!vue-svg-loader!../assets/svg/error.svg'
-
 export default {
   name: 'NuxtError',
-  components: {
-    NotFoundSVG,
-    ErrorSVG
-  },
   props: {
     error: {
       type: Object,

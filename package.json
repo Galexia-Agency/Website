@@ -33,11 +33,11 @@
     "eslint-plugin-nuxt": ">=0.4.2",
     "imagemin-mozjpeg": "^9.0.0",
     "imagemin-pngquant": "^9.0.0",
+    "imagemin-svgo": "^8.0.0",
     "responsive-loader": "^1.2.0",
     "sharp": "^0.25.4",
     "stylelint": "^10.1.0",
     "stylelint-config-standard": "^20.0.0",
-    "vue-svg-loader": "^0.16.0",
     "vue-template-compiler": "^2.6.11",
     "webp-loader": "^0.6.0"
   }

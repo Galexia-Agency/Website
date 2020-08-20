@@ -177,7 +177,8 @@
               </transition>
             </form>
           </client-only>
-          <ContactSVG />
+          <!--eslint-disable-next-line-->
+          <div v-html="require('../assets/svg/contact.svg?include')" />
         </div>
       </div>
     </section>
@@ -186,13 +187,8 @@
 
 <script>
 import axios from 'axios'
-// eslint-disable-next-line
-import ContactSVG from '-!vue-svg-loader!../assets/svg/contact.svg'
 
 export default {
-  components: {
-    ContactSVG
-  },
   data () {
     return {
       submitted: false,
