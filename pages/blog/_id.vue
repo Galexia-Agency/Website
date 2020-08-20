@@ -46,22 +46,28 @@
     justify-self: right
   }
   .post--footer {
-    padding-top: 2rem;
     display: grid;
-    grid-auto-flow: column
+    grid-gap: .5rem;
+    justify-content: start;
+    grid-template-columns: repeat(auto-fit, 140px)
   }
   .post--footer a {
-    color: #1A237E;
-    cursor: pointer;
-    font-weight: bold
+    text-align: center;
+    width: 140px;
+    color: white;
+    font-size: 1rem;
+    margin: 0
   }
-  .post--footer a:hover {
-    text-decoration: underline
-  }
-  .post--footer a:focus {
-    opacity: .5
+  .post--footer h4 {
+    grid-column: 1/-1;
+    margin-bottom: 0
   }
 
+  @media (max-width: 690px) {
+    .post--footer {
+      justify-content: center
+    }
+  }
   @media (max-width: 500px) {
     .post--header {
       height: 300px
@@ -115,7 +121,8 @@
         </div>
         <!--eslint-disable-next-line-->
         <div v-html="post.content" class="post--content"/>
-        <div class="post--footer">
+        <div v-if="!share" class="post--footer">
+          <h4>Share:</h4>
           <ShareNetwork
             v-for="social in socials"
             :key="social"
@@ -124,9 +131,15 @@
             :title="post.title + ' | Galexia - Creative Agency specialising in Web Development and Marketing'"
             :description="post.excerpt"
             :media="post.featuredImage.mediaItemUrl"
+            class="button"
           >
-            Share on {{ social }}
+            <font-awesome-icon :icon="['fab', social.toLowerCase()]" /> {{ social }}
           </ShareNetwork>
+        </div>
+        <div v-else class="post--footer">
+          <h4 style="text-align: center" @click="nativeShare">
+            Share this blog post
+          </h4>
         </div>
       </div>
     </section>
@@ -155,6 +168,15 @@ export default {
       monthArr: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
     }
   },
+  computed: {
+    share () {
+      try {
+        return process.client ? navigator.canShare() : false
+      } catch {
+        return false
+      }
+    }
+  },
   mounted () {
     this.$parent.$parent.page = {
       display: false
@@ -164,6 +186,15 @@ export default {
     this.$parent.$parent.metaHelper.title = this.post.title
     this.$parent.$parent.metaHelper.description = this.post.excerpt
     this.$parent.$parent.metaHelper.image = this.post.featuredImage.mediaItemUrl
+  },
+  methods: {
+    nativeShare () {
+      navigator.share({
+        title: this.post.title + ' | Galexia - Creative Agency specialising in Web Development and Marketing',
+        text: this.post.excerpt,
+        url: 'https://galexia.agency' + this.$router.currentRoute.path
+      })
+    }
   }
 }
 </script>
