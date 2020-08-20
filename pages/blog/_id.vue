@@ -171,6 +171,8 @@ export default {
   computed: {
     share () {
       try {
+        console.log(process.client)
+        console.log(navigator.canShare())
         return process.client ? navigator.canShare() : false
       } catch {
         return false
