@@ -134,7 +134,7 @@ export default {
       }
     }],
     '@aceforth/nuxt-optimized-images',
-    ['@nuxtjs/pwa', { meta: false, workbox: { offlineAnalytics: true } }],
+    '@nuxtjs/pwa',
     '@nuxtjs/sitemap'
   ],
   apollo: {
@@ -195,11 +195,16 @@ export default {
     fallback: true
   },
   pwa: {
+    meta: false,
     workbox: {
+      offlineAnalytics: true,
       offlinePage: '/404.html',
-      cacheNames: {
-        CACHE: 'pwabuilder-precache'
-      }
+      runtimeCaching: [
+        {
+          urlPattern: 'https://blog.galexia.agency/',
+          handler: 'cacheFirst'
+        }
+      ]
     },
     manifest: {
       scope: '../',
