@@ -43,7 +43,8 @@
     grid-auto-flow: column
   }
   .post--meta p:last-of-type {
-    justify-self: right
+    justify-self: right;
+    width: 100%
   }
   .post--footer {
     display: grid;
@@ -60,7 +61,13 @@
   }
   .post--footer h4 {
     grid-column: 1/-1;
-    margin-bottom: 0
+    margin-bottom: 0;
+    width: fit-content
+  }
+  .post--footer.nativeShare h4 {
+    place-self: center;
+    text-align: center;
+    margin: 1.33em 0 1em
   }
 
   @media (max-width: 690px) {
@@ -136,9 +143,9 @@
             <font-awesome-icon :icon="['fab', social.toLowerCase()]" /> {{ social }}
           </ShareNetwork>
         </div>
-        <div v-else class="post--footer">
-          <h4 style="text-align: center" @click="nativeShare">
-            Share this blog post
+        <div v-else class="post--footer nativeShare">
+          <h4 class="button">
+            <font-awesome-icon :icon="['fas', 'share-alt']" /> <a href="javascript:void(0)" @click="nativeShare">Share this blog post</a>
           </h4>
         </div>
       </div>
@@ -171,8 +178,6 @@ export default {
   computed: {
     share () {
       try {
-        console.log(process.client)
-        console.log(navigator.share())
         return process.client ? navigator.share() : false
       } catch {
         return false

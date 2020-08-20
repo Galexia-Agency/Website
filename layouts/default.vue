@@ -55,7 +55,7 @@
     color: white;
     font-weight: normal
   }
-  main .button:any-link:hover {
+  main .button:any-link:hover, main .button :any-link:hover {
     text-decoration: none
   }
   .button {
