@@ -731,19 +731,19 @@
           <nuxt-link to="/" class="nav--link">
             Home
           </nuxt-link>
-          <nuxt-link to="/web" class="nav--link">
+          <nuxt-link to="/web/" class="nav--link">
             Web
           </nuxt-link>
-          <nuxt-link to="/marketing" class="nav--link">
+          <nuxt-link to="/marketing/" class="nav--link">
             Marketing
           </nuxt-link>
-          <nuxt-link to="/blog" class="nav--link">
+          <nuxt-link to="/blog/" class="nav--link">
             Blog
           </nuxt-link>
-          <nuxt-link to="/careers" class="nav--link">
+          <nuxt-link to="/careers/" class="nav--link">
             Careers
           </nuxt-link>
-          <nuxt-link to="/contact" class="nav--link">
+          <nuxt-link to="/contact/" class="nav--link">
             Contact
           </nuxt-link>
         </div>
@@ -772,22 +772,22 @@
           </div>
           <div>
             <div class="footer--bottom_sitemap">
-              <nuxt-link class="footer--bottom_navLink" to="/support">
+              <nuxt-link class="footer--bottom_navLink" to="/support/">
                 Website Support
               </nuxt-link>
-              <nuxt-link class="footer--bottom_navLink" to="/hosting">
+              <nuxt-link class="footer--bottom_navLink" to="/hosting/">
                 Hosting
               </nuxt-link>
-              <nuxt-link class="footer--bottom_navLink" to="/privacy-policy">
+              <nuxt-link class="footer--bottom_navLink" to="/privacy-policy/">
                 Privacy Policy
               </nuxt-link>
-              <nuxt-link class="footer--bottom_navLink" to="/cookie-policy">
+              <nuxt-link class="footer--bottom_navLink" to="/cookie-policy/">
                 Cookie Policy
               </nuxt-link>
-              <nuxt-link class="footer--bottom_navLink" to="/terms">
+              <nuxt-link class="footer--bottom_navLink" to="/terms/">
                 Terms of Service
               </nuxt-link>
-              <nuxt-link class="footer--bottom_navLink" to="/gdpr">
+              <nuxt-link class="footer--bottom_navLink" to="/gdpr/">
                 GDPR Statement
               </nuxt-link>
             </div>

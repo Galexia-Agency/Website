@@ -35,7 +35,7 @@
           <p>If you take one thing away from this page let it be have a regular backup schedule, and test to make sure you can restore from those backups. WordPress has such a large ecosystem that it's impossible for plugin and theme developers to thoroughly test their product with every combination of other plugins and themes out there. This means that when you update a plugin or theme there will always be the possibility that something goes wrong. This is why it is vital to have a backup that you can quickly restore from which prevents your site from being down for long periods of time.</p>
           <p>Because WordPress is so widely used, it comes with some security risks. If your site get's hacked, you'll want to delete everything off the server and restore from a backup of when the site was not hacked. This means you'll want to store the backup in a different location to the site.</p>
           <!--eslint-disable-next-line-->
-          <p>All of this sound too complicated? Don't worry, our <nuxt-link to="/hosting">hosting plans</nuxt-link> include built-in backups and security.</p>
+          <p>All of this sound too complicated? Don't worry, our <nuxt-link to="/hosting/">hosting plans</nuxt-link> include built-in backups and security.</p>
         </div>
       </div>
       <div class="grid left maxWidth">
