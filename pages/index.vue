@@ -1,5 +1,6 @@
 <style scoped>
   #portfolio {
+    grid-auto-flow: column;
     width: 100%;
     padding-left: 0;
     padding-right: 0;

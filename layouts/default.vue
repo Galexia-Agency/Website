@@ -204,8 +204,16 @@
   }
   .logo svg {
     fill: white;
-    width: 200px
+    width: 250px
   }
+  .logo svg text {
+    font-size: 32px;
+    font-family: Assistant-Light, Assistant, sans-serif;
+    font-weight: 300;
+    letter-spacing: 1.6px
+  }
+
+  /*
   .logo svg .cls-3 {
     stroke: white
   }
@@ -224,6 +232,7 @@
     stroke-linecap: round;
     stroke-linejoin: round
   }
+  */
   .nav--container {
     justify-self: end;
     display: grid;
@@ -311,7 +320,7 @@
     transition: .5s;
     width: fit-content
   }
-  .footer--bottom_navLink:hover, .footer--bottom_contact a:hover {
+  .footer--bottom_navLink:hover, .footer--bottom_contact a:hover, .footer--bottom_navLink.nuxt-link-exact-active {
     border-bottom: .15rem solid white
   }
   .footer--bottom_contact {
@@ -344,10 +353,15 @@
     padding-bottom: 4rem
   }
   .grid.column.three {
-    grid-template-columns: 1fr 1fr 1fr
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-flow: unset
   }
   .grid.column.four {
-    grid-template-columns: 1fr 1fr 1fr 1fr
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-flow: unset
+  }
+  .grid h3 {
+    margin-top: 0
   }
   h2 {
     text-align: center;
@@ -671,7 +685,7 @@
         <div class="logo--container">
           <nuxt-link class="logo" to="/">
             <!--eslint-disable-next-line-->
-            <div v-html="require('../assets/svg/logo.svg?include')" />
+            <div v-html="require('../assets/svg/logo_v2.svg?include')" />
           </nuxt-link>
         </div>
         <div class="nav--icon">
@@ -718,21 +732,27 @@
           <div class="logo--container">
             <nuxt-link class="logo" to="/">
               <!--eslint-disable-next-line-->
-              <div v-html="require('../assets/svg/logo.svg?include')" />
+              <div v-html="require('../assets/svg/logo_v2.svg?include')" />
             </nuxt-link>
           </div>
           <div>
             <div class="footer--bottom_sitemap">
-              <nuxt-link class="footer--bottom_navLink" to="/Privacy-Policy">
+              <nuxt-link class="footer--bottom_navLink" to="/support">
+                Website Support
+              </nuxt-link>
+              <nuxt-link class="footer--bottom_navLink" to="/hosting">
+                Hosting
+              </nuxt-link>
+              <nuxt-link class="footer--bottom_navLink" to="/privacy-policy">
                 Privacy Policy
               </nuxt-link>
-              <nuxt-link class="footer--bottom_navLink" to="/Cookie-Policy">
+              <nuxt-link class="footer--bottom_navLink" to="/cookie-policy">
                 Cookie Policy
               </nuxt-link>
-              <nuxt-link class="footer--bottom_navLink" to="/Terms">
+              <nuxt-link class="footer--bottom_navLink" to="/terms">
                 Terms of Service
               </nuxt-link>
-              <nuxt-link class="footer--bottom_navLink" to="/GDPR">
+              <nuxt-link class="footer--bottom_navLink" to="/gdpr">
                 GDPR Statement
               </nuxt-link>
             </div>
