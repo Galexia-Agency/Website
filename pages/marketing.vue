@@ -8,7 +8,7 @@
   }
   .card {
     display: grid;
-    grid-template-rows: max-content 300px 1fr
+    grid-template-rows: max-content 250px 1fr
   }
   .card svg {
     margin: auto;
@@ -64,7 +64,7 @@
     </section>
     <section class="white">
       <h2>Content Creation</h2>
-      <div class="grid column maxWidth three">
+      <div class="grid column maxWidth four">
         <div class="card">
           <h3>Photography</h3>
           <!--eslint-disable-next-line-->
@@ -82,6 +82,12 @@
           <!--eslint-disable-next-line-->
           <div v-html="require('../assets/svg/writing.svg?include')" />
           <p>Some people learn visually, some by reading. It’s best to have a mixture of both. Not to mention that good quality blogs are by far one of the best ways to improve search presence.</p>
+        </div>
+        <div class="card">
+          <h3>Graphic Design</h3>
+          <!--eslint-disable-next-line-->
+          <div v-html="require('../assets/svg/design.svg?include')" />
+          <p>Design is everywhere: social media, websites, business cards, pamphlets, adverts. Our expert team can help your business stand out with tailor made graphics.</p>
         </div>
       </div>
     </section>

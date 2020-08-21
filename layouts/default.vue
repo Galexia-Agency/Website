@@ -361,7 +361,8 @@
   svg {
     display: block;
     width: 100%;
-    height: auto
+    height: auto;
+    max-height: 100%
   }
   :any-link.card {
     display: block;
