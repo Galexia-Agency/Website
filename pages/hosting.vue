@@ -115,7 +115,9 @@
   }
   img {
     margin: 0 auto 1rem;
-    display: block
+    display: block;
+    max-width: 100%;
+    height: auto
   }
 
   @media (max-width: 900px) {
@@ -153,9 +155,11 @@
             Your website needs a home and we're happy to house it whether we built it or not. Below is an outline of our pricing for different plans. We're able to offer free Jamstack hosting thanks to <a href="https://netlify.com">Netlify</a>. If you want results like these then be sure to choose us for all your hosting and website needs.
           </p>
           <div class="toggle">
-            <h4>Monthly/Yearly</h4>
+            <h4 id="monthly">
+              Monthly/Yearly
+            </h4>
             <label class="switch">
-              <input v-model="yearly" type="checkbox">
+              <input v-model="yearly" type="checkbox" aria-labelledby="monthly">
               <span class="slider round" />
             </label>
           </div>

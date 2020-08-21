@@ -48,7 +48,8 @@
 
   @media (max-width: 900px) {
     #portfolio {
-      grid-auto-columns: 100%
+      grid-auto-columns: 100%;
+      grid-auto-flow: row
     }
     .icons {
       display: none

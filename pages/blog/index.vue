@@ -63,7 +63,7 @@
         >
         <div class="post--content">
           <h3>
-            <nuxt-link :to="'/blog/' + post.slug">
+            <nuxt-link :to="'/blog/' + post.slug + '/'">
               {{ post.title }}
             </nuxt-link>
             <time>
