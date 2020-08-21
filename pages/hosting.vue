@@ -113,6 +113,10 @@
   .fade-enter, .fade-leave-to {
     opacity: 0
   }
+  img {
+    margin: 0 auto 1rem;
+    display: block
+  }
 
   @media (max-width: 900px) {
     .card {
@@ -144,8 +148,9 @@
       <section>
         <div id="top" class="maxWidth">
           <h2>Ultra-fast Hosting</h2>
+          <img src="../assets/img/lighthouse.jpg" width="520" height="294" alt="Lighthouse Test">
           <p class="desc">
-            Your website needs a home and we're happy to house it whether we built it or not. Below is an outline of our pricing for different plans. We're able to offer free Jamstack hosting thanks to <a href="https://netlify.com">Netlify</a>.
+            Your website needs a home and we're happy to house it whether we built it or not. Below is an outline of our pricing for different plans. We're able to offer free Jamstack hosting thanks to <a href="https://netlify.com">Netlify</a>. If you want results like these then be sure to choose us for all your hosting and website needs.
           </p>
           <div class="toggle">
             <h4>Monthly/Yearly</h4>

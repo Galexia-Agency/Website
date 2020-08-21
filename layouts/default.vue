@@ -473,7 +473,7 @@
   @media (max-width: 900px) {
     :any-link.card:hover {
       text-decoration: none;
-      background-color: none;
+      background-color: white;
       color: #212121
     }
     :any-link.card:hover h3 {
