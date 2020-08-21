@@ -67,7 +67,8 @@
   .post--footer.nativeShare h4 {
     place-self: center;
     text-align: center;
-    margin: 1.33em 0 1em
+    margin: 1.33em 0 1em;
+    width: 100%
   }
 
   @media (max-width: 690px) {

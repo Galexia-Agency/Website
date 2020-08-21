@@ -21,12 +21,13 @@
   h3 {
     margin: 0;
     display: grid;
-    grid-template-columns: 1fr 5ch
+    grid-template-columns: 1fr 6ch
   }
   time {
     justify-self: end;
     font-size: 1.25rem;
-    font-weight: normal
+    font-weight: normal;
+    width: 100%
   }
   .post--content {
     min-width: 500px;
