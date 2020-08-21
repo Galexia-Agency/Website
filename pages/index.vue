@@ -83,7 +83,7 @@
         <div v-html="require('../assets/svg/project.svg?include')" />
         <div>
           <h3>You run your business. We run the project</h3>
-          <p>We understand life often feels like it’s moving in the fast lane, that’s why we’re versed in project management. We keep your project on track, working to strict deadlines, so you don’t have to worry. If you do prefer a more hands-on approach we have a proprietary project management system where you can log in and monitor our progress, send us any further details, or ask any questions.</p>
+          <p>We understand life often feels like it’s moving in the fast lane, that’s why we’re versed in project management. We keep your project on track, working to strict deadlines, so you don’t have to worry.</p>
         </div>
       </div>
       <div class="grid left maxWidth">
