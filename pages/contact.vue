@@ -47,10 +47,6 @@
     grid-column: span 2;
     text-align: left
   }
-  svg {
-    width: 100%;
-    overflow: visible
-  }
   p.message {
     text-align: left;
     grid-column: 1 / 3
@@ -178,7 +174,7 @@
             </form>
           </client-only>
           <!--eslint-disable-next-line-->
-          <div v-html="require('../assets/svg/contact.svg?include')" />
+          <div v-html="require('../assets/svg/contact.svg?include')" class="SVGContainer"/>
         </div>
       </div>
     </section>

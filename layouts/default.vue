@@ -352,6 +352,10 @@
     grid-gap: 2rem;
     padding-bottom: 4rem
   }
+  .grid.column.two {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-flow: unset
+  }
   .grid.column.three {
     grid-template-columns: 1fr 1fr 1fr;
     grid-auto-flow: unset
@@ -376,7 +380,21 @@
     display: block;
     width: 100%;
     height: auto;
-    max-height: 100%
+    max-height: 100%;
+    overflow: visible
+  }
+  .card.white {
+    box-shadow:
+      0 0 2.2px rgba(0, 0, 0, .02),
+      0 0 5.3px rgba(0, 0, 0, .028),
+      0 0 10px rgba(0, 0, 0, .035),
+      0 0 17.9px rgba(0, 0, 0, .042),
+      0 0 33.4px rgba(0, 0, 0, .05),
+      0 0 80px rgba(0, 0, 0, .07);
+    border-radius: .5rem
+  }
+  .card.white .card--inner h3 {
+    text-align: center
   }
   :any-link.card {
     display: block;
@@ -415,7 +433,10 @@
     font-family: Open Sans, sans-serif;
     font-size: 16px;
     font-weight: 400;
-    color: black
+    color: #212121
+  }
+  .card--inner * {
+    margin: 0
   }
 
   /* Cookies */
@@ -450,6 +471,20 @@
   }
 
   @media (max-width: 900px) {
+    :any-link.card:hover {
+      text-decoration: none;
+      background-color: none;
+      color: #212121
+    }
+    :any-link.card:hover h3 {
+      color: #1A237E
+    }
+    :any-link.card:hover .tags span {
+      border: 2px solid #1A237E
+    }
+    :any-link.card:hover .card--inner p {
+      color: #212121
+    }
     .socialLinks a {
       color: white
     }
@@ -462,7 +497,7 @@
     #__nuxt {
       width: 100vw
     }
-    .grid.column.three, .grid.left, .grid.right {
+    .grid.column.three, .grid.left, .grid.right, .grid.column.two {
       grid-template-columns: 1fr;
       grid-auto-flow: row;
       place-items: center

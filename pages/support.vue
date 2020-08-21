@@ -1,14 +1,10 @@
 <style scoped>
-  #commonIssues .card {
-    display: grid;
+  #commonIssues .card--inner {
     grid-template-rows: 8ch auto
-  }
-  #commonIssues .card h3 {
-    margin-bottom: 0
   }
 
   @media (max-width: 500px) {
-    #commonIssues .card {
+    #commonIssues .card--inner {
       grid-template-rows: auto auto
     }
   }
@@ -55,36 +51,52 @@
       <h2>Common issues</h2>
       <div id="commonIssues" class="grid column maxWidth four">
         <div class="card">
-          <h3>Error 404</h3>
-          <p>This means the resource could not be found, whether it be a page or an image. This could be caused by an incorrect link, or the file really is missing.</p>
+          <div class="card--inner">
+            <h3>Error 404</h3>
+            <p>This means the resource could not be found, whether it be a page or an image. This could be caused by an incorrect link, or the file really is missing.</p>
+          </div>
         </div>
         <div class="card">
-          <h3>Error 500</h3>
-          <p>This is a generic server error code. Inspecting the logs can help to diagnose this issue.</p>
+          <div class="card--inner">
+            <h3>Error 500</h3>
+            <p>This is a generic server error code. Inspecting the logs can help to diagnose this issue.</p>
+          </div>
         </div>
         <div class="card">
-          <h3>Javascript errors</h3>
-          <p>JavaScript errors can be caused for a whole bunch of reasons. Chrome DevTools can often help you find the offending bit of code.</p>
+          <div class="card--inner">
+            <h3>Javascript errors</h3>
+            <p>JavaScript errors can be caused for a whole bunch of reasons. Chrome DevTools can often help you find the offending bit of code.</p>
+          </div>
         </div>
         <div class="card">
-          <h3>WordPress issues</h3>
-          <p>Has a theme or plugin not installed properly? This may be due to mismatching WordPress or PHP versions.</p>
+          <div class="card--inner">
+            <h3>WordPress issues</h3>
+            <p>Has a theme or plugin not installed properly? This may be due to mismatching WordPress or PHP versions.</p>
+          </div>
         </div>
         <div class="card">
-          <h3>Database connection</h3>
-          <p>WordPress can have trouble connecting to the database if it is down or if credentials are incorrect.</p>
+          <div class="card--inner">
+            <h3>Database connection</h3>
+            <p>WordPress can have trouble connecting to the database if it is down or if credentials are incorrect.</p>
+          </div>
         </div>
         <div class="card">
-          <h3>SSL Error</h3>
-          <p>SSL Certificates secure and encrypt web traffic. They may not be configured correctly resulting in an error.</p>
+          <div class="card--inner">
+            <h3>SSL Error</h3>
+            <p>SSL Certificates secure and encrypt web traffic. They may not be configured correctly resulting in an error.</p>
+          </div>
         </div>
         <div class="card">
-          <h3>Slow website</h3>
-          <p>There are a number of reasons for a website to be performing badly. We know various tricks to speed up an old site.</p>
+          <div class="card--inner">
+            <h3>Slow website</h3>
+            <p>There are a number of reasons for a website to be performing badly. We know various tricks to speed up an old site.</p>
+          </div>
         </div>
         <div class="card">
-          <h3>Spam</h3>
-          <p>For all the good the web brings there are some bad actors on it. Are you getting overwhelmed by spam? Try using <a href="https://www.google.com/recaptcha/about/">Google's reCaptcha</a> on comment boxes.</p>
+          <div class="card--inner">
+            <h3>Spam</h3>
+            <p>For all the good the web brings there are some bad actors on it. Are you getting overwhelmed by spam? Try using <a href="https://www.google.com/recaptcha/about/">Google's reCaptcha</a> on comment boxes.</p>
+          </div>
         </div>
       </div>
     </section>
