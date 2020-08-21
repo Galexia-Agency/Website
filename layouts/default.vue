@@ -452,7 +452,7 @@
       grid-auto-flow: row;
       place-items: center
     }
-    .grid.left svg {
+    .grid.left div.svg {
       grid-row: 1
     }
     .grid svg, .card img {
@@ -562,7 +562,8 @@
       grid-template-columns: 1fr
     }
     .grid svg {
-      max-width: 200px
+      max-width: 200px;
+      margin: auto
     }
     .grid {
       grid-gap: 2rem

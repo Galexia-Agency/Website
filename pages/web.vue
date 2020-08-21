@@ -12,7 +12,7 @@
           <p>We’re a relatively new company, built from the ground up on the promise of delivering fast, secure, and scalable sites. We can build you a shiny new website or help update your current one. </p>
         </div>
         <!--eslint-disable-next-line-->
-        <div v-html="require('../assets/svg/why_us.svg?include')" />
+        <div v-html="require('../assets/svg/why_us.svg?include')" class="svg" />
       </div>
       <div class="grid right maxWidth">
         <!--eslint-disable-next-line-->
@@ -28,7 +28,7 @@
           <p>We’re versed in project management, user experience, and all the web frameworks and languages necessary to take your next big thing public. Give us a call on <a href="tel:+447477737535">07477737535</a>.</p>
         </div>
         <!--eslint-disable-next-line-->
-        <div v-html="require('../assets/svg/custom.svg?include')" />
+        <div v-html="require('../assets/svg/custom.svg?include')" class="svg" />
       </div>
       <div class="grid right maxWidth">
         <!--eslint-disable-next-line-->
@@ -44,7 +44,7 @@
           <p>Hosting and domains are a headache to many. GoDaddy or AWS? 1&1 or Google Cloud? We pride ourselves in having experience with all major hosting providers, and the smaller ones too. We can help you set up a new business, register your domains, and choose the best hosting provider, or show you options for transferring your existing plan over. We’ll let you in on a little secret though, we use <a href="https://netlify.com">Netlify</a> for nearly all of our builds, they’re fast, secure, and completely free!</p>
         </div>
         <!--eslint-disable-next-line-->
-        <div v-html="require('../assets/svg/hosting.svg?include')" />
+        <div v-html="require('../assets/svg/hosting.svg?include')" class="svg" />
       </div>
       <div class="grid right maxWidth">
         <!--eslint-disable-next-line-->

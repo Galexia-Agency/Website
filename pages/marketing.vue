@@ -43,7 +43,7 @@
           <p>Advertising can offer great return on investment. We are versed in many advertising platforms such as Google Ads and Facebook. Pay-per-click advertising can be a great way to jump-start a business, but we recommend investing in longer term solutions such as building a great social presence and optimising your site for search engines. As with our other services with consistently monitor the performance of the campaign in order to make it as cost-effective as possible for you.</p>
         </div>
         <!--eslint-disable-next-line-->
-        <div v-html="require('../assets/svg/advertising.svg?include')" />
+        <div v-html="require('../assets/svg/advertising.svg?include')" class="svg" />
       </div>
       <div class="grid right maxWidth">
         <!--eslint-disable-next-line-->
@@ -59,7 +59,7 @@
           <p>Creating an email list can be a great way to engage with potential customers. What do you do with all those emails? Why not have us deliver a tailored newsletter campaign to your email list encouraging them to engage with your brand and keeping them up-to-date on your current activities. If a customer trusts a brand, they’re more likely to use it in the future. We take great care in adhering to all local laws regarding emails including GDPR.</p>
         </div>
         <!--eslint-disable-next-line-->
-        <div v-html="require('../assets/svg/email.svg?include')" />
+        <div v-html="require('../assets/svg/email.svg?include')" class="svg" />
       </div>
     </section>
     <section class="white">
