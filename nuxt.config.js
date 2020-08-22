@@ -33,6 +33,7 @@ export default {
       { hid: 'og:title', property: 'og:title', template: chunk => `${chunk} | Galexia` },
       { hid: 'og:image', property: 'og:image' },
       { property: 'og:url', content: 'https://galexia.agency' }
+      { property: 'fb:app_id', content: '249903496015229' }
     ],
     link: [
       { rel: 'apple-touch-icon', sizes: '60x60', href: 'https://galexia.agency/apple-touch-icon-60x60.png?v=dLXLEPEjpj' },
