@@ -32,7 +32,7 @@ export default {
       { hid: 'og:description', property: 'og:description' },
       { hid: 'og:title', property: 'og:title', template: chunk => `${chunk} | Galexia` },
       { hid: 'og:image', property: 'og:image' },
-      { property: 'og:url', content: 'https://galexia.agency' }
+      { property: 'og:url', content: 'https://galexia.agency' },
       { property: 'fb:app_id', content: '249903496015229' }
     ],
     link: [
@@ -163,10 +163,11 @@ export default {
         accepted: () => {
           window.dataLayer = window.dataLayer || []
           function gtag () {
-            dataLayer.push(arguments)
+            window.dataLayer.push(arguments)
           }
+          gtag('set', 'anonymizeIp', true)
           gtag('js', new Date())
-          gtag('config', 'UA-140457046-4')
+          gtag('config', 'UA-140457046-4', { anonymize_ip: true })
         },
         declined: () => {}
       }
