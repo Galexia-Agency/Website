@@ -180,7 +180,7 @@
                 <li>Free SSL Certificate</li>
                 <li>99.9% Uptime SLA with performance monitoring</li>
                 <li>Site caching and optimization</li>
-                <li>CDN (Content Delivery Network) powered by CloudFlare</li>
+                <li>Content Delivery Network (<abbr>CDN</abbr>) powered by CloudFlare</li>
                 <li>Google Search Console and SEO monitoring</li>
               </ul>
               <p class="terms">
@@ -267,7 +267,7 @@
               <ul>
                 <li>24/7 WordPress Security</li>
                 <li>Site caching and optimization</li>
-                <li>CDN (Content Delivery Network) powered by CloudFlare</li>
+                <li>Content Delivery Network (<abbr>CDN</abbr>) powered by CloudFlare</li>
                 <li>WordPress Core, Plugin, and theme updates</li>
                 <li>Google Search Console and SEO monitoring</li>
               </ul>
