@@ -846,7 +846,7 @@
         <div class="footer--copyright">
           <div class="footer--copyrightInner maxWidth">
             <p>
-              © {{ new Date().getFullYear() }} Galexia Creative Agency Ltd. Registered in England and Wales. Company No. 12853224.
+              © {{ new Date().getFullYear() }} Galexia Creative Agency Ltd. A company registered in England and Wales. Company No. 12853224.
             </p>
             <div class="socialLinks">
               <a href="https://fb.me/GalexiaAgency" target="_blank" rel="noopener noreferrer" title="Facebook">
