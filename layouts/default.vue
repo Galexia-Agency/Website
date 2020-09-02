@@ -270,12 +270,13 @@
   .footer--copyright {
     border-top: 1px solid white;
     padding: 1.5rem;
-    line-height: .9rem;
+    line-height: 1.5rem;
     font-size: .9rem
   }
   .footer--copyrightInner {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr min-content;
+    grid-gap: 2rem;
     padding: 0 2rem
   }
   .socialLinks {
@@ -845,7 +846,7 @@
         <div class="footer--copyright">
           <div class="footer--copyrightInner maxWidth">
             <p>
-              © {{ new Date().getFullYear() }} Galexia Ltd<span style="display: none">. Company No: 123456789.</span>
+              © {{ new Date().getFullYear() }} Galexia Creative Agency Ltd. Registered in England and Wales. Company No. 12853224.
             </p>
             <div class="socialLinks">
               <a href="https://fb.me/GalexiaAgency" target="_blank" rel="noopener noreferrer" title="Facebook">
