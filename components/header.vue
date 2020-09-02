@@ -1,3 +1,4 @@
+
 <template>
   <header>
     <div class="header--inner maxWidth">
@@ -8,6 +9,7 @@
     </div>
   </header>
 </template>
+
 <script>
 export default {
   name: 'Header',

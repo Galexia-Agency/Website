@@ -109,6 +109,16 @@ export default {
   beforeCreate () {
     this.$parent.$parent.metaHelper.title = 'Marketing'
     this.$parent.$parent.metaHelper.description = 'However you wish to pursue your business marketing is vital in finding and retaining customers. We mould a marketing strategy around your business. Our team of professionals will recommend the solution that gives you the most return on investment. We try and understand your target audience and adapt the marketing strategy, putting your clients first. If you’re a clothing brand targeting teens then social media marketing will be best for you. Similarly, if you’re a home-improvements business PPC advertising might be more suitable.'
+  },
+  mounted () {
+    // eslint-disable-next-line
+    const ztxt = new Ztextify('.header--inner h1 i', {
+      depth: '10px',
+      layers: 2,
+      direction: 'forwards',
+      event: 'pointer',
+      eventRotation: '35deg'
+    })
   }
 }
 </script>

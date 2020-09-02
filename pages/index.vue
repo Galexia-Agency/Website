@@ -158,6 +158,16 @@ export default {
     this.$parent.$parent.metaHelper.title = 'Home'
     this.$parent.$parent.metaHelper.description = 'We are a creative agency specialising in website design development and marketing. We’re a fairly new company built from the ground up to help you grow. We use the latest and greatest practises and technologies so that we can pass on these benefits to you.'
   },
+  mounted () {
+    // eslint-disable-next-line
+    const ztxt = new Ztextify('.header--inner h1 i', {
+      depth: '10px',
+      layers: 2,
+      direction: 'forwards',
+      event: 'pointer',
+      eventRotation: '35deg'
+    })
+  },
   methods: {
     portfolioScroll (event, i) {
       document.querySelectorAll('.icon').forEach((e) => {
