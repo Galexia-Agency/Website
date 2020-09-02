@@ -1,0 +1,13 @@
+.page-enter-active, .page-leave-active {
+  transition: .5s;
+  transform: scale3d(1, 1, 1)
+}
+.page-enter, .page-leave-to {
+  transform: scale3d(0, 0, 0);
+  opacity: .1
+}
+@media (prefers-reduced-motion: reduce) {
+  .page-enter-active, .page-leave-active {
+    transition: none
+  }
+}

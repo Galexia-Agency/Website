@@ -10,7 +10,7 @@
     display: grid;
     grid-template-rows: max-content 250px 1fr
   }
-  .card svg {
+  .card .svg {
     margin: auto;
     height: auto;
     width: 75%
@@ -24,8 +24,13 @@
     .card {
       grid-template-rows: auto auto auto
     }
-    .card svg {
+    .card .svg {
       max-width: 300px
+    }
+  }
+  @media (max-width: 580px) {
+    .grid.column.maxWidth.four {
+      grid-template-columns: auto
     }
   }
 </style>
@@ -47,7 +52,7 @@
       </div>
       <div class="grid right maxWidth">
         <!--eslint-disable-next-line-->
-        <div v-html="require('../assets/svg/social.svg?include')" />
+        <div v-html="require('../assets/svg/social.svg?include')" class="svg" />
         <div>
           <h3>Social Media</h3>
           <p>Utilizing social media marketing correctly can be a great tool for increasing the reach of your business thus attracting more leads. These leads can turn into customers and generate more profit for you, helping you reinvest in marketing strategies in turn getting more clients and expanding your business. We deliver engaging content to your users and monitor you social media performance, constantly tailoring our approach in order to achieve the best retention.</p>
@@ -68,25 +73,25 @@
         <div class="card">
           <h3>Photography</h3>
           <!--eslint-disable-next-line-->
-          <div v-html="require('../assets/svg/photography.svg?include')" />
+          <div v-html="require('../assets/svg/photography.svg?include')" class="svg" />
           <p>Photos can make or break a brand. Having good photos are vital to all kinds of content marketing, including social media, and websites. We have a team of photographers versed in everything from events to products.</p>
         </div>
         <div class="card">
           <h3>Videography</h3>
           <!--eslint-disable-next-line-->
-          <div v-html="require('../assets/svg/videography.svg?include')" />
+          <div v-html="require('../assets/svg/videography.svg?include')" class="svg" />
           <p>We love watching great content. It’s a great way to engage with customers in the modern age. We pride ourselves in creating short clips for Instagram, longer clips for YouTube and everything in-between.</p>
         </div>
         <div class="card">
           <h3>Copy-writing</h3>
           <!--eslint-disable-next-line-->
-          <div v-html="require('../assets/svg/writing.svg?include')" />
+          <div v-html="require('../assets/svg/writing.svg?include')" class="svg" />
           <p>Some people learn visually, some by reading. It’s best to have a mixture of both. Not to mention that good quality blogs are by far one of the best ways to improve search presence.</p>
         </div>
         <div class="card">
           <h3>Graphic Design</h3>
           <!--eslint-disable-next-line-->
-          <div v-html="require('../assets/svg/design.svg?include')" />
+          <div v-html="require('../assets/svg/design.svg?include')" class="svg" />
           <p>Design is everywhere: social media, websites, business cards, pamphlets, adverts. Our expert team can help your business stand out with tailor made graphics.</p>
         </div>
       </div>

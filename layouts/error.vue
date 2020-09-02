@@ -4,7 +4,7 @@
     min-height: 600px;
     align-content: center
   }
-  .error svg {
+  .error .svg {
     max-width: 350px;
     width: 85%;
     margin: auto
@@ -21,14 +21,14 @@
     <div class="error maxWidth grid">
       <div v-if="error.statusCode === 404">
         <!--eslint-disable-next-line-->
-        <div v-html="require('../assets/svg/not-found.svg?include')" />
+        <div v-html="require('../assets/svg/not-found.svg?include')" class="svg" />
         <h1>
           404 - Page not found
         </h1>
       </div>
       <div v-else>
         <!--eslint-disable-next-line-->
-        <div v-html="require('../assets/svg/error.svg?include')" />
+        <div v-html="require('../assets/svg/error.svg?include')" class="svg" />
         <h1>
           {{ error.statusCode }} - An error occurred
         </h1>

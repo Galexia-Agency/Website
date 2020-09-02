@@ -2,7 +2,7 @@
   #careers {
     text-align: center
   }
-  svg {
+  .svg {
     width: 400px;
     height: auto;
     margin: 2rem auto
@@ -17,7 +17,7 @@
     p {
       font-size: 1.5rem
     }
-    svg {
+    .svg {
       width: 75%
     }
   }
@@ -27,7 +27,7 @@
     <section class="white">
       <div class="maxWidth">
         <!--eslint-disable-next-line-->
-        <div v-html="require('../assets/svg/careers.svg?include')" />
+        <div v-html="require('../assets/svg/careers.svg?include')" class="svg" />
         <p>We're not currently hiring, however, if you think you'd be a great fit for our team drop us a line at <a href="mailto:careers@galexia.agency">careers@galexia.agency</a>.</p>
       </div>
     </section>

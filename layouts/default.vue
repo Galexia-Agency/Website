@@ -13,8 +13,8 @@
     font-family: Open Sans, sans-serif;
     font-size: 16px;
     font-weight: 400;
-    scroll-behavior: smooth;
-    background-size: cover;
+    scroll-behavior: var(--motion);
+    background-size: 125vw auto;
     background-repeat: no-repeat;
     background-image: url('../assets/img/SpaceBackgroundBlurred.jpg?webp')
   }
@@ -127,6 +127,9 @@
   }
 
   /* Layout */
+  #__nuxt {
+    background: rgba(53, 47, 114, .33)
+  }
   #__layout > div {
     min-height: 100vh;
     display: grid;
@@ -159,9 +162,6 @@
   }
 
   /* Header */
-  header {
-    background: rgba(53, 47, 114, .33)
-  }
   .header--inner {
     padding: 6rem 2rem 7.5rem 2rem;
     max-width: 780px;
@@ -714,7 +714,7 @@
 </style>
 
 <template>
-  <div>
+  <div :style="'--motion: ' + motion">
     <header>
       <nav class="maxWidth">
         <div class="logo--container">
@@ -869,10 +869,21 @@ export default {
   async mounted () {
     document.documentElement.classList.add('nav_close')
     await this.fetchItem()
+    this.motion = await window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'
     this.scrollTestimonial()
-    this.motion = window.matchMedia('(prefers-reduced-motion: reduce)') ? 'smooth' : 'auto'
+    this.background()
+    const self = this
+    window.addEventListener('resize', function () {
+      self.background()
+    })
   },
   methods: {
+    background () {
+      const body = document.body
+      const html = document.documentElement
+      const height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight)
+      document.body.style.backgroundSize = height > ((window.innerWidth * 1.6875) * 1.25) ? (0.6 * height) + 'px' : '125vw'
+    },
     async WebpIsSupported () {
       // If the browser doesn't has the method createImageBitmap, you can't display webp format
       if (!self.createImageBitmap) {
@@ -897,16 +908,17 @@ export default {
     scrollTestimonial () {
       const container = document.querySelector('.testimonials')
       const width = document.querySelector('.testimonial').offsetWidth
+      const self = this
       setInterval(function () {
         if (container.scrollLeft > (width * (document.querySelectorAll('.testimonial').length - 1))) {
           container.scrollTo({
             left: 0,
-            behavior: this.motion
+            behavior: self.motion
           })
         } else {
           container.scrollBy({
             left: width,
-            behavior: this.motion
+            behavior: self.motion
           })
         }
       }, 5000)

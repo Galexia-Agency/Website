@@ -82,7 +82,7 @@
       </div>
       <div class="grid right maxWidth">
         <!--eslint-disable-next-line-->
-        <div v-html="require('../assets/svg/project.svg?include')" />
+        <div v-html="require('../assets/svg/project.svg?include')" class="svg" />
         <div>
           <h3>You run your business. We run the project</h3>
           <p>We understand life often feels like it’s moving in the fast lane, that’s why we’re versed in project management. We keep your project on track, working to strict deadlines, so you don’t have to worry.</p>
@@ -168,7 +168,7 @@ export default {
       const width = document.querySelector('#portfolio a').offsetWidth
       document.querySelector('#portfolio').scrollTo({
         left: width * y,
-        behavior: this.$parent.motion
+        behavior: this.$parent.$parent.motion
       })
     }
   }
