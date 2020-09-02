@@ -648,6 +648,9 @@
   }
 
   /* Testimonials */
+  .testimonials--container {
+    display: grid
+  }
   .testimonials {
     justify-self: right;
     width: 100%;
@@ -677,6 +680,25 @@
     font-size: 1.25rem;
     margin-top: .75rem;
     text-align: right
+  }
+  .testimonials--controls {
+    justify-self: end;
+    margin-top: 1rem
+  }
+  .testimonials--controls * {
+    display: inline
+  }
+  .testimonials--controls button {
+    margin: 1rem;
+    background: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem
+  }
+  .testimonials--controls button:disabled {
+    cursor: not-allowed;
+    opacity: .5
   }
 
   @media (max-width: 768px) {
@@ -800,12 +822,23 @@
               <a href="mailto:info@galexia.agency">info@galexia.agency</a>
             </div>
           </div>
-          <div class="testimonials">
-            <div v-for="(testimonial, index) in posts" :key="index" class="testimonial">
-              <!--eslint-disable-next-line-->
-            <div v-html="testimonial.content" />
-              <!--eslint-disable-next-line-->
-            <div v-html="'- ' + testimonial.title" class="company"/>
+          <div class="testimonials--container">
+            <div class="testimonials">
+              <div v-for="(testimonial, index) in posts" :key="index" class="testimonial">
+                <!--eslint-disable-next-line-->
+              <div v-html="testimonial.content" />
+                <!--eslint-disable-next-line-->
+              <div v-html="'- ' + testimonial.title" class="company" />
+              </div>
+            </div>
+            <div class="testimonials--controls">
+              <button :disabled="count === 1" @click="left">
+                <font-awesome-icon :icon="['fas', 'chevron-left']" />
+              </button>
+              <p><span>{{ count }}</span> / <span>{{ posts.length }}</span></p>
+              <button :disabled="count === posts.length" @click="right">
+                <font-awesome-icon :icon="['fas', 'chevron-right']" />
+              </button>
             </div>
           </div>
         </div>
@@ -844,6 +877,7 @@ import testimonialsQuery from '~/apollo/queries/categories/testimonial.gql'
 export default {
   data () {
     return {
+      count: 1,
       posts: [],
       motion: 'auto',
       metaHelper: {
@@ -915,13 +949,37 @@ export default {
             left: 0,
             behavior: self.motion
           })
+          self.count = 1
         } else {
           container.scrollBy({
             left: width,
             behavior: self.motion
           })
+          self.count = 1 + self.count
         }
-      }, 5000)
+      }, 7500)
+    },
+    left () {
+      if (this.count !== 1) {
+        const container = document.querySelector('.testimonials')
+        const width = document.querySelector('.testimonial').offsetWidth
+        container.scrollBy({
+          left: -width,
+          behavior: this.motion
+        })
+        this.count = this.count - 1
+      }
+    },
+    right () {
+      if (this.count !== this.posts.length) {
+        const container = document.querySelector('.testimonials')
+        const width = document.querySelector('.testimonial').offsetWidth
+        container.scrollBy({
+          left: width,
+          behavior: this.motion
+        })
+        this.count = 1 + this.count
+      }
     },
     nav () {
       if (document.documentElement.classList.contains('nav_open')) {
