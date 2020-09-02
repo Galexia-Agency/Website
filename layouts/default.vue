@@ -14,7 +14,7 @@
     font-size: 16px;
     font-weight: 400;
     scroll-behavior: var(--motion);
-    background-size: 125vw auto;
+    background-size: cover;
     background-repeat: no-repeat;
     background-image: url('../assets/img/SpaceBackgroundBlurred.jpg?webp')
   }
