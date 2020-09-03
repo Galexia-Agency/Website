@@ -21,6 +21,12 @@
   body.no-webp {
     background-image: url('../assets/img/SpaceBackgroundBlurred.jpg?resize')
   }
+
+  @media (min-width: 1700px) {
+    body {
+      background-size: 125vw
+    }
+  }
   ::selection {
     background: #1C2AB1;
     color: white /* WebKit/Blink Browsers */
@@ -900,17 +906,17 @@ export default {
     if (await this.WebpIsSupported()) {} else {
       document.querySelector('body').classList.add('no-webp')
     }
+    this.background()
+    const self = this
+    window.addEventListener('resize', function () {
+      self.background()
+    })
   },
   async mounted () {
     document.documentElement.classList.add('nav_close')
     await this.fetchItem()
     this.motion = await window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'
     this.scrollTestimonial()
-    this.background()
-    const self = this
-    window.addEventListener('resize', function () {
-      self.background()
-    })
   },
   methods: {
     background () {
@@ -920,7 +926,7 @@ export default {
       document.body.style.backgroundSize = height > ((window.innerWidth * 1.6875) * 1.25) ? (0.6 * height) + 'px' : '125vw'
     },
     async WebpIsSupported () {
-      // If the browser doesn't has the method createImageBitmap, you can't display webp format
+      // If the browser doesn't have the method createImageBitmap, you can't display webp format
       if (!self.createImageBitmap) {
         return false
       }
