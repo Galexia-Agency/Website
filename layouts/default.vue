@@ -842,7 +842,7 @@
               <button :disabled="count === 1" @click="left">
                 <font-awesome-icon :icon="['fas', 'chevron-left']" />
               </button>
-              <p><span>{{ count }}</span> / <span>{{ posts.length }}</span></p>
+              <p><span>{{ this.count }}</span> / <span>{{ posts.length }}</span></p>
               <button :disabled="count === posts.length" @click="right">
                 <font-awesome-icon :icon="['fas', 'chevron-right']" />
               </button>
@@ -916,7 +916,6 @@ export default {
     document.documentElement.classList.add('nav_close')
     await this.fetchItem()
     this.motion = await window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'
-    this.scrollTestimonial()
   },
   methods: {
     background () {
@@ -946,26 +945,6 @@ export default {
       })
       this.posts = response.data.posts.nodes
     },
-    scrollTestimonial () {
-      const container = document.querySelector('.testimonials')
-      const width = document.querySelector('.testimonial').offsetWidth
-      const self = this
-      setInterval(function () {
-        if (container.scrollLeft > (width * (document.querySelectorAll('.testimonial').length - 1))) {
-          container.scrollTo({
-            left: 0,
-            behavior: self.motion
-          })
-          self.count = 1
-        } else {
-          container.scrollBy({
-            left: width,
-            behavior: self.motion
-          })
-          self.count = 1 + self.count
-        }
-      }, 7500)
-    },
     left () {
       if (this.count !== 1) {
         const container = document.querySelector('.testimonials')
@@ -974,7 +953,10 @@ export default {
           left: -width,
           behavior: this.motion
         })
-        this.count = this.count - 1
+        const self = this
+        setTimeout(function () {
+          self.count = Math.round((container.scrollLeft / width) + 1)
+        }, 300)
       }
     },
     right () {
@@ -985,7 +967,10 @@ export default {
           left: width,
           behavior: this.motion
         })
-        this.count = 1 + this.count
+        const self = this
+        setTimeout(function () {
+          self.count = Math.round((container.scrollLeft / width) + 1)
+        }, 300)
       }
     },
     nav () {
