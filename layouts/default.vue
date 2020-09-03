@@ -842,7 +842,7 @@
               <button :disabled="count === 1" @click="left">
                 <font-awesome-icon :icon="['fas', 'chevron-left']" />
               </button>
-              <p><span>{{ this.count }}</span> / <span>{{ posts.length }}</span></p>
+              <p><span>{{ count }}</span> / <span>{{ posts.length }}</span></p>
               <button :disabled="count === posts.length" @click="right">
                 <font-awesome-icon :icon="['fas', 'chevron-right']" />
               </button>
