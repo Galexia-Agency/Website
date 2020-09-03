@@ -38,7 +38,7 @@
 export default {
   beforeCreate () {
     this.$parent.$parent.metaHelper.title = 'GDPR Statement'
-    this.$parent.$parent.metaHelper.description = 'Galexia Ltd GDPR Statement'
+    this.$parent.$parent.metaHelper.description = 'Galexia Creative Agency Ltd\'s GDPR Statement'
   }
 }
 </script>
