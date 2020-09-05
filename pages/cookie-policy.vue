@@ -47,7 +47,7 @@ export default {
   beforeCreate () {
     this.$parent.$parent.metaHelper.title = 'Cookie Policy'
     this.$parent.$parent.metaHelper.description = 'Galexia Creative Agency Ltd\'s Cookie Policy'
-    this.$parent.$parent.metaHelper.url = 'cookie-policy/'
+    this.$parent.$parent.metaHelper.url = 'https://galexia.agency/cookie-policy/'
   }
 }
 </script>

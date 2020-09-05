@@ -201,7 +201,7 @@ export default {
   beforeCreate () {
     this.$parent.$parent.metaHelper.title = 'Contact'
     this.$parent.$parent.metaHelper.description = 'We’d love to help you on your next big project. We understand what it means to dream big, and then achieve that dream.'
-    this.$parent.$parent.metaHelper.url = 'contact/'
+    this.$parent.$parent.metaHelper.url = 'https://galexia.agency/contact/'
   },
   mounted () {
     // eslint-disable-next-line

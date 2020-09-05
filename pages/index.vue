@@ -157,6 +157,7 @@ export default {
   beforeCreate () {
     this.$parent.$parent.metaHelper.title = 'Home | Galexia Creative Agency Ltd specialising in Web Development and Marketing'
     this.$parent.$parent.metaHelper.description = 'We are a creative agency specialising in website design development and marketing. We’re a fairly new company built from the ground up to help you grow.'
+    this.$parent.$parent.metaHelper.url = 'https://galexia.agency/'
   },
   mounted () {
     if ('ontouchstart' in document.documentElement) {} else {

@@ -186,18 +186,18 @@ export default {
     }
   },
   mounted () {
-    this.$parent.$parent.metaHelper.title = this.post.title
-    this.$parent.$parent.metaHelper.description = this.post.excerpt
-    this.$parent.$parent.metaHelper.image = this.post.featuredImage.mediaItemUrl
-    this.$parent.$parent.metaHelper.url = 'blog/' + this.post.slug + '/'
+    this.meta()
   },
   updated () {
-    this.$parent.$parent.metaHelper.title = this.post.title
-    this.$parent.$parent.metaHelper.description = this.post.excerpt
-    this.$parent.$parent.metaHelper.image = this.post.featuredImage.mediaItemUrl
-    this.$parent.$parent.metaHelper.url = 'blog/' + this.post.slug + '/'
+    this.meta()
   },
   methods: {
+    meta () {
+      this.$parent.$parent.metaHelper.title = this.post.title
+      this.$parent.$parent.metaHelper.description = this.post.excerpt
+      this.$parent.$parent.metaHelper.image = this.post.featuredImage.mediaItemUrl
+      this.$parent.$parent.metaHelper.url = 'https://galexia.agency/blog/' + this.post.slug + '/'
+    },
     nativeShare () {
       navigator.share({
         title: this.post.title + ' | Galexia Creative Agency Ltd specialising in Web Development and Marketing',

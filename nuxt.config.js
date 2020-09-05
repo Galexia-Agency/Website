@@ -36,7 +36,7 @@ export default {
       { property: 'fb:app_id', content: '249903496015229' }
     ],
     link: [
-      { hid: 'canonical', rel: 'canonical' },
+      { hid: 'canonical', rel: 'canonical', href: 'https://galexia.agency/' },
       { rel: 'apple-touch-icon', sizes: '60x60', href: 'https://galexia.agency/apple-touch-icon-60x60.png?v=dLXLEPEjpj' },
       { rel: 'apple-touch-icon', sizes: '76x76', href: 'https://galexia.agency/apple-touch-icon-76x76.png?v=dLXLEPEjpj' },
       { rel: 'apple-touch-icon', sizes: '120x120', href: 'https://galexia.agency/apple-touch-icon-120x120.png?v=dLXLEPEjpj' },

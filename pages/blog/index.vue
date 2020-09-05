@@ -100,7 +100,7 @@ export default {
   beforeCreate () {
     this.$parent.$parent.metaHelper.title = 'Blog'
     this.$parent.$parent.metaHelper.description = 'Read our latest blog posts and learn about current trends in web development and marketing.'
-    this.$parent.$parent.metaHelper.url = 'blog/'
+    this.$parent.$parent.metaHelper.url = 'https://galexia.agency/blog/'
   }
 }
 </script>

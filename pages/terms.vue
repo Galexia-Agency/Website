@@ -43,7 +43,7 @@ export default {
   beforeCreate () {
     this.$parent.$parent.metaHelper.title = 'Terms of Service'
     this.$parent.$parent.metaHelper.description = 'Galexia Creative Agency Ltd\'s Terms of Service'
-    this.$parent.$parent.metaHelper.url = 'terms/'
+    this.$parent.$parent.metaHelper.url = 'https://galexia.agency/terms/'
   }
 }
 </script>

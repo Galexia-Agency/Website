@@ -890,7 +890,8 @@ export default {
       metaHelper: {
         title: 'Home',
         description: 'We are a creative agency specialising in website design development and marketing. We’re a fairly new company built from the ground up to help you grow. We use the latest and greatest practises and technologies so that we can pass on these benefits to you.',
-        image: 'https://galexia.agency/android-chrome-512x512.png'
+        image: 'https://galexia.agency/android-chrome-512x512.png',
+        url: 'https://galexia.agency/'
       }
     }
   },
@@ -997,8 +998,10 @@ export default {
         { hid: 'og:image', property: 'og:image', content: this.metaHelper.image },
         { hid: 'twitter:title', name: 'twitter:title', content: this.metaHelper.title },
         { hid: 'twitter:description', name: 'twitter:description', content: this.metaHelper.description },
-        { hid: 'twitter:img', name: 'twitter:img', content: this.metaHelper.image },
-        { hid: 'canonical', name: 'canonical', href: 'https://galexia.agency/' + this.metaHelper.url }
+        { hid: 'twitter:img', name: 'twitter:img', content: this.metaHelper.image }
+      ],
+      link: [
+        { hid: 'canonical', rel: 'canonical', href: this.metaHelper.url }
       ]
     }
   }

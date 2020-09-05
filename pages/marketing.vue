@@ -39,7 +39,7 @@
   <div id="web">
     <Header
       title="Marketing solutions to help your business go from zero to <i>hero</i>"
-      desc="However you wish to pursue your business marketing is vital in finding and retaining customers. We mould a marketing strategy around your business. Our team of professionals will recommend the solution that gives you the most return on investment. We try and understand your target audience and adapt the marketing strategy, putting your clients first. If you’re a clothing brand targeting teens then social media marketing will be best for you. Similarly, if you’re a home-improvements business PPC advertising might be more suitable."
+      desc="However you wish to pursue your business marketing is vital in finding and retaining customers. We mould a marketing strategy around your business. Our team of professionals will recommend the solution that gives you the most return on investment. We try and understand your target audience and adapt the marketing strategy, putting your clients first. If you’re a clothing brand targeting teens then social media marketing will be best for you. Similarly, if you’re a home-improvements business, PPC advertising might be more suitable."
     />
     <section class="white">
       <div class="grid left maxWidth">
@@ -109,7 +109,7 @@ export default {
   beforeCreate () {
     this.$parent.$parent.metaHelper.title = 'Marketing'
     this.$parent.$parent.metaHelper.description = 'However you wish to pursue your business marketing is vital in finding and retaining customers.'
-    this.$parent.$parent.metaHelper.url = 'marketing/'
+    this.$parent.$parent.metaHelper.url = 'https://galexia.agency/marketing/'
   },
   mounted () {
     // eslint-disable-next-line
