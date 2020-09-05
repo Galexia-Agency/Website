@@ -97,12 +97,10 @@ export default {
       monthArr: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
     }
   },
-  mounted () {
-    this.$parent.$parent.page = {
-      display: false
-    }
+  beforeCreate () {
     this.$parent.$parent.metaHelper.title = 'Blog'
     this.$parent.$parent.metaHelper.description = 'Read our latest blog posts and learn about current trends in web development and marketing.'
+    this.$parent.$parent.metaHelper.url = 'blog/'
   }
 }
 </script>

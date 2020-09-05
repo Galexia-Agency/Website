@@ -21,6 +21,7 @@ export default {
   beforeCreate () {
     this.$parent.$parent.metaHelper.title = 'Privacy Policy'
     this.$parent.$parent.metaHelper.description = 'Galexia Ltd\'s Privacy Policy'
+    this.$parent.$parent.metaHelper.url = 'privacy-policy/'
   }
 }
 </script>

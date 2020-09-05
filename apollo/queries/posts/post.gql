@@ -4,6 +4,7 @@ query Article($id: ID!) {
     content
     date
     excerpt
+    slug
     author {
       name
     }

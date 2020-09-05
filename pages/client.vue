@@ -197,7 +197,7 @@ export default {
       return this.$route.query.logo
     }
   },
-  mounted () {
+  beforeCreate () {
     this.$parent.$parent.metaHelper.title = this.title
   },
   head () {

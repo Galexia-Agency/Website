@@ -5,7 +5,7 @@ export default {
    ** Headers of the page
    */
   head: {
-    titleTemplate: '%s | Galexia - Creative Agency specialising in Web Development and Marketing',
+    titleTemplate: '%s | Galexia Creative Agency Ltd specialising in Web Development and Marketing',
     htmlAttrs: {
       lang: 'en-GB'
     },
@@ -21,7 +21,7 @@ export default {
 
       // Twitter Card data
       { name: 'twitter:card', content: 'summary_large_image' },
-      { name: 'twitter:site', content: '@galexia_agency' }, /// ///////////////////////////////
+      { name: 'twitter:site', content: '@galexia_agency' },
       { hid: 'twitter:title', name: 'twitter:title', template: chunk => `${chunk} | Galexia` },
       { hid: 'twitter:description', name: 'twitter:description' },
       { hid: 'twitter:image', name: 'twitter:image' },
@@ -36,6 +36,7 @@ export default {
       { property: 'fb:app_id', content: '249903496015229' }
     ],
     link: [
+      { hid: 'canonical', rel: 'canonical' },
       { rel: 'apple-touch-icon', sizes: '60x60', href: 'https://galexia.agency/apple-touch-icon-60x60.png?v=dLXLEPEjpj' },
       { rel: 'apple-touch-icon', sizes: '76x76', href: 'https://galexia.agency/apple-touch-icon-76x76.png?v=dLXLEPEjpj' },
       { rel: 'apple-touch-icon', sizes: '120x120', href: 'https://galexia.agency/apple-touch-icon-120x120.png?v=dLXLEPEjpj' },

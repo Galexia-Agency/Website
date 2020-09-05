@@ -136,7 +136,7 @@
             :key="social"
             :network="social"
             :url="'https://galexia.agency' + $router.currentRoute.path"
-            :title="post.title + ' | Galexia - Creative Agency specialising in Web Development and Marketing'"
+            :title="post.title + ' | Galexia Creative Agency Ltd specialising in Web Development and Marketing'"
             :description="post.excerpt"
             :media="post.featuredImage.mediaItemUrl"
             class="button"
@@ -186,19 +186,21 @@ export default {
     }
   },
   mounted () {
-    this.$parent.$parent.page = {
-      display: false
-    }
+    this.$parent.$parent.metaHelper.title = this.post.title
+    this.$parent.$parent.metaHelper.description = this.post.excerpt
+    this.$parent.$parent.metaHelper.image = this.post.featuredImage.mediaItemUrl
+    this.$parent.$parent.metaHelper.url = 'blog/' + this.post.slug + '/'
   },
   updated () {
     this.$parent.$parent.metaHelper.title = this.post.title
     this.$parent.$parent.metaHelper.description = this.post.excerpt
     this.$parent.$parent.metaHelper.image = this.post.featuredImage.mediaItemUrl
+    this.$parent.$parent.metaHelper.url = 'blog/' + this.post.slug + '/'
   },
   methods: {
     nativeShare () {
       navigator.share({
-        title: this.post.title + ' | Galexia - Creative Agency specialising in Web Development and Marketing',
+        title: this.post.title + ' | Galexia Creative Agency Ltd specialising in Web Development and Marketing',
         text: this.post.excerpt,
         url: 'https://galexia.agency' + this.$router.currentRoute.path
       })

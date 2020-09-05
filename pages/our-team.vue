@@ -66,6 +66,7 @@ export default {
   },
   beforeCreate () {
     this.$parent.$parent.metaHelper.title = 'Our Team'
+    this.$parent.$parent.metaHelper.url = 'our-team/'
   },
   head () {
     return {

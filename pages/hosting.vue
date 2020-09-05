@@ -355,6 +355,7 @@ export default {
   beforeCreate () {
     this.$parent.$parent.metaHelper.title = 'Hosting'
     this.$parent.$parent.metaHelper.description = 'Your website needs a home and we\'re happy to house it whether we built it or not.'
+    this.$parent.$parent.metaHelper.url = 'hosting/'
   }
 }
 </script>

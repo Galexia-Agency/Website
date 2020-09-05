@@ -997,7 +997,8 @@ export default {
         { hid: 'og:image', property: 'og:image', content: this.metaHelper.image },
         { hid: 'twitter:title', name: 'twitter:title', content: this.metaHelper.title },
         { hid: 'twitter:description', name: 'twitter:description', content: this.metaHelper.description },
-        { hid: 'twitter:img', name: 'twitter:img', content: this.metaHelper.image }
+        { hid: 'twitter:img', name: 'twitter:img', content: this.metaHelper.image },
+        { hid: 'canonical', name: 'canonical', href: 'https://galexia.agency/' + this.metaHelper.url }
       ]
     }
   }

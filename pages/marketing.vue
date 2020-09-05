@@ -107,8 +107,9 @@ export default {
     Header
   },
   beforeCreate () {
-    this.$parent.$parent.metaHelper.title = 'Marketing' + ' | Galexia - Creative Agency specialising in Web Development and Marketing'
+    this.$parent.$parent.metaHelper.title = 'Marketing'
     this.$parent.$parent.metaHelper.description = 'However you wish to pursue your business marketing is vital in finding and retaining customers.'
+    this.$parent.$parent.metaHelper.url = 'marketing/'
   },
   mounted () {
     // eslint-disable-next-line
