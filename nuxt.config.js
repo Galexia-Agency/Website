@@ -280,7 +280,12 @@ export default {
   },
   sitemap: {
     hostname: 'https://galexia.agency',
-    gzip: true
+    gzip: true,
+    trailingSlash: true,
+    exclude: [
+      '/our-team',
+      '/client'
+    ]
   },
   /*
    ** Build configuration
