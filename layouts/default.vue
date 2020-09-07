@@ -51,8 +51,33 @@
     font-weight: 700
   }
   h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
+    line-height: 1;
     color: #1A237E
+  }
+  h2 {
+    font-size: 3rem;
+    line-height: 1
+  }
+  h3 {
+    font-size: 2rem;
+    line-height: 1.125
+  }
+  h4 {
+    font-size: 1.75rem;
+    line-height: 1.125
+  }
+  h5 {
+    font-size: 1.5rem;
+    line-height: 1.125
+  }
+  h6 {
+    font-size: 1.25rem;
+    line-height: 1.225
+  }
+  .text--normal {
+    opacity: .9;
+    line-height: 1.6
   }
   button {
     font-family: Open Sans, sans-serif
@@ -85,14 +110,18 @@
       0 27.2px 10px rgba(0, 0, 0, .015),
       0 65px 24px rgba(0, 0, 0, .02)
   }
-  .button:hover {
-    background-color: #1C2AB1
-  }
   .button.colorTwo {
     background-color: #534BAE
   }
-  .button.colorTwo:hover {
-    background-color: #7C72EF
+  .button:hover {
+    opacity: .75
+  }
+  .button:disabled {
+    background: linear-gradient(180deg, rgba(83, 75, 174, .15) 0%, rgba(26, 35, 126, .15) 100%);
+    color: #777777
+  }
+  .button:disabled:hover {
+    opacity: 1
   }
   .button:disabled, .button:disabled:hover {
     cursor: not-allowed
@@ -152,6 +181,11 @@
     color: #1A237E;
     font-weight: bold
   }
+  main h2 {
+    text-align: center;
+    margin: 0 auto;
+    padding: 2rem 0
+  }
   main :any-link:hover {
     text-decoration: underline
   }
@@ -165,34 +199,6 @@
   .white {
     background: white;
     color: #212121
-  }
-
-  /* Header */
-  .header--inner {
-    padding: 6rem 2rem 7.5rem 2rem;
-    max-width: 780px;
-    margin: auto;
-    text-align: center;
-    display: grid;
-    grid-gap: 2rem
-  }
-  .header--inner * {
-    margin: 0
-  }
-  .header--inner p {
-    font-size: 18px
-  }
-  .header--inner :any-link {
-    color: white;
-    font-weight: normal;
-    text-decoration: underline
-  }
-  .header--inner h1 {
-    font-size: 2.5rem;
-    color: white
-  }
-  .header--inner h1 i {
-    border-bottom: .25rem solid white
   }
 
   /* Nav */
@@ -374,15 +380,6 @@
   .grid h3 {
     margin-top: 0
   }
-  h2 {
-    text-align: center;
-    font-size: 3rem;
-    margin: 0 auto;
-    padding: 2rem 0
-  }
-  h3 {
-    font-size: 2rem
-  }
   svg {
     display: block;
     width: 100%;
@@ -390,6 +387,8 @@
     max-height: 100%;
     overflow: visible
   }
+
+  /* Cards */
   .card.white {
     box-shadow:
       0 0 2.2px rgba(0, 0, 0, .02),
@@ -478,6 +477,9 @@
   }
 
   @media (max-width: 900px) {
+    .text--normal {
+      opacity: .95
+    }
     :any-link.card:hover {
       text-decoration: none;
       background-color: white;

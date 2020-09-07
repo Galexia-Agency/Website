@@ -86,7 +86,10 @@
     font-size: 1.25rem
   }
   .desc {
-    max-width: 600px;
+    font-size: 1.2rem;
+    line-height: 1.33;
+    opacity: .9;
+    max-width: 780px;
     text-align: center;
     margin: auto
   }
@@ -140,6 +143,9 @@
       place-self: center;
       right: 0;
       top: 0
+    }
+    .desc {
+      opacity: .95
     }
   }
 </style>

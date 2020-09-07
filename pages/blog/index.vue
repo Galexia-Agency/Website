@@ -27,7 +27,8 @@
     justify-self: end;
     font-size: 1.25rem;
     font-weight: normal;
-    width: 100%
+    width: 100%;
+    text-align: right
   }
   .post--content {
     min-width: 500px;
@@ -72,7 +73,7 @@
           </h3>
           <p>Author: <b>{{ post.author.name }}</b></p>
           <!--eslint-disable-next-line-->
-          <div v-html="post.excerpt" />
+          <div v-html="post.excerpt" class="text--normal"/>
         </div>
       </div>
     </div>
