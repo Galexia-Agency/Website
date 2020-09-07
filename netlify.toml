@@ -34,6 +34,7 @@
       # './build-dir/path-to/file.html',
       # By Glob pattern
       # '**/**/child-one.html'
-      '/our-team',
-      '/client'
+      '/our-team/index.html',
+      '/client/index.html',
+      '/404.html'
     ]
