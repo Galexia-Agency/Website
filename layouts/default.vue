@@ -923,7 +923,7 @@ export default {
       const body = document.body
       const html = document.documentElement
       const height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight)
-      document.body.style.backgroundSize = height > ((window.innerWidth * 1.6875) * 1.25) ? (0.6 * height) + 'px' : '125vw'
+      document.body.style.backgroundSize = height > ((window.innerWidth * 1.6875) * 1.25) ? (0.75 * height) + 'px' : '125vw'
     },
     async WebpIsSupported () {
       // If the browser doesn't have the method createImageBitmap, you can't display webp format

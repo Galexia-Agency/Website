@@ -112,14 +112,16 @@ export default {
     this.$parent.$parent.metaHelper.url = 'https://galexia.agency/marketing/'
   },
   mounted () {
-    // eslint-disable-next-line
-    const ztxt = new Ztextify('.header--inner h1 i', {
-      depth: '10px',
-      layers: 2,
-      direction: 'forwards',
-      event: 'pointer',
-      eventRotation: '35deg'
-    })
+    if ('ontouchstart' in document.documentElement) {} else {
+      // eslint-disable-next-line
+      const ztxt = new Ztextify('.header--inner h1 i', {
+        depth: '10px',
+        layers: 2,
+        direction: 'forwards',
+        event: 'pointer',
+        eventRotation: '35deg'
+      })
+    }
   }
 }
 </script>
