@@ -22,3 +22,18 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Content-Security-Policy = "upgrade-insecure-requests"
+
+
+[[plugins]]
+  package = "@netlify/plugin-sitemap"
+  [plugins.inputs]
+    buildDir = "public"
+    prettyURLs = true
+    exclude = [
+      # By file Path
+      # './build-dir/path-to/file.html',
+      # By Glob pattern
+      # '**/**/child-one.html'
+      '/our-team',
+      '/client'
+    ]

@@ -16,7 +16,6 @@
     "@fortawesome/vue-fontawesome": "^0.1.10",
     "@nuxtjs/apollo": "^4.0.1-rc.3",
     "@nuxtjs/pwa": "^3.0.0-0",
-    "@nuxtjs/sitemap": "^2.4.0",
     "axios": "^0.19.2",
     "graphql": "^15.3.0",
     "nuxt": "^2.14.1",

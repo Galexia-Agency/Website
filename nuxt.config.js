@@ -138,8 +138,7 @@ export default {
       }
     }],
     '@aceforth/nuxt-optimized-images',
-    '@nuxtjs/pwa',
-    '@nuxtjs/sitemap'
+    '@nuxtjs/pwa'
   ],
   apollo: {
     clientConfigs: {
@@ -277,15 +276,6 @@ export default {
       ]
     },
     icon: false
-  },
-  sitemap: {
-    hostname: 'https://galexia.agency',
-    gzip: true,
-    trailingSlash: true,
-    exclude: [
-      '/our-team',
-      '/client'
-    ]
   },
   /*
    ** Build configuration
