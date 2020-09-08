@@ -639,20 +639,13 @@
     section {
       padding: 0
     }
-    .header--inner {
-      padding: 2rem 1rem 4rem 1rem
-    }
-    .header--inner h1 {
-      font-size: 1.75rem
-    }
-    .header--inner p {
-      font-size: 16px
-    }
     h2 {
-      font-size: 2rem
+      font-size: 2rem;
+      line-height: 1.125
     }
     h3 {
-      font-size: 1.5rem
+      font-size: 1.5rem;
+      line-height: 1.225
     }
   }
 
@@ -683,10 +676,13 @@
     scroll-snap-stop: always
   }
   .testimonial p {
-    margin: 0
+    margin: 0;
+    font-weight: 300;
+    line-height: 1.5;
+    opacity: .85
   }
   .testimonial .company {
-    font-size: 1.25rem;
+    font-size: 1.33rem;
     margin-top: .75rem;
     text-align: right
   }

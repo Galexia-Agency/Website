@@ -1,3 +1,8 @@
+<style>
+  .header--inner h1 i {
+    border-bottom: .25rem solid white
+  }
+</style>
 <style scoped>
   /* Header */
   .header--inner {
@@ -16,9 +21,6 @@
     line-height: 1.225;
     color: white
   }
-  .header--inner h1 i {
-    border-bottom: .25rem solid white
-  }
   .header--inner p {
     font-size: 18px;
     line-height: 1.4;
@@ -32,6 +34,19 @@
   @media (max-width: 900px) {
     .header--inner p {
       opacity: .95
+    }
+  }
+  @media (max-width: 500px) {
+    .header--inner {
+      padding: 2rem 1rem 4rem 1rem
+    }
+    .header--inner h1 {
+      font-size: 1.75rem;
+      line-height: 1.225
+    }
+    .header--inner p {
+      font-size: 16px;
+      line-height: 1.5
     }
   }
 </style>
