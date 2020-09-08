@@ -1,5 +1,5 @@
 <style>
-  .header--inner h1 i {
+  .header--inner h1 i, .header--inner h2 i {
     border-bottom: .25rem solid white
   }
 </style>
@@ -19,6 +19,13 @@
   .header--inner h1 {
     font-size: 2.5rem;
     line-height: 1.225;
+    color: white
+  }
+  .header--inner h2 {
+    font-size: 2rem;
+    line-height: 1.225;
+    opacity: .9;
+    padding: 0;
     color: white
   }
   .header--inner p {
@@ -44,6 +51,10 @@
       font-size: 1.75rem;
       line-height: 1.225
     }
+    .header--inner h2 {
+      font-size: 1.5rem;
+      line-height: 1.125
+    }
     .header--inner p {
       font-size: 16px;
       line-height: 1.5
@@ -55,6 +66,8 @@
     <div class="header--inner maxWidth">
       <!-- eslint-disable-next-line -->
       <h1 v-html="title" />
+      <!-- eslint-disable-next-line -->
+      <h2 v-if="subtitle" v-html="subtitle" />
       <!-- eslint-disable-next-line -->
       <p v-html="desc" />
     </div>
@@ -68,6 +81,10 @@ export default {
     title: {
       type: String,
       default: ''
+    },
+    subtitle: {
+      type: String,
+      default: null
     },
     desc: {
       type: String,

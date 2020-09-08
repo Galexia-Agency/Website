@@ -70,7 +70,7 @@
     />
     <section class="white">
       <h2 class="maxWidth">
-        Our Process
+        Our three step process to increasing your revenue
       </h2>
       <div class="grid left maxWidth">
         <div>

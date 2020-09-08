@@ -36,5 +36,6 @@
       # '**/**/child-one.html'
       './dist/our-team/index.html',
       './dist/client/index.html',
-      './dist/404.html'
+      './dist/404.html',
+      './dist/locations/index.html'
     ]
