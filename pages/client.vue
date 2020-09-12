@@ -164,7 +164,7 @@
           <form method="GET" action="/client" class="grid">
             <label>
               <p>Title</p>
-              <input name="title" type="text" required>
+              <input name="title" type="text" required autofocus>
             </label>
             <label>
               <p>Site URL</p>

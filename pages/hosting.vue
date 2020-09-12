@@ -250,11 +250,11 @@
         </div>
       </section>
       <section>
-        <h2>WordPress Maintenance and Backups</h2>
+        <h2>WordPress Help</h2>
         <p class="desc">
           WordPress is a complex program and needs constant management to function properly. Let us take care of the hassle by backing up, securing, and optimising your WordPress install.
         </p>
-        <div class="grid column maxWidth two">
+        <div class="grid column maxWidth three">
           <div class="card white">
             <div class="card--inner">
               <h4 class="title">
@@ -298,6 +298,23 @@
                 <li>Weekly backups</li>
                 <li>Backups located on external server for optimum security</li>
                 <li>Free restore service</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card white">
+            <div class="card--inner">
+              <h4 class="title">
+                Hosting Transfer
+              </h4>
+              <div class="price">
+                <h3>
+                  £150
+                </h3>
+              </div>
+              <ul>
+                <li>Transfer of WordPress site to new hosting</li>
+                <li>Minimal downtime</li>
+                <li>Completed within 48 hours</li>
               </ul>
             </div>
           </div>

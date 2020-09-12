@@ -212,7 +212,7 @@ export default {
     },
     manifest: {
       scope: '../',
-      name: 'Galexia | Creative Agency',
+      name: 'Galexia Creative Agency Ltd',
       shortName: 'Galexia',
       theme_color: '#1a237e',
       background_color: '#ffffff',
