@@ -46,6 +46,9 @@
     justify-self: right;
     width: 100%
   }
+  .post--content {
+    line-height: 1.5
+  }
   .post--footer {
     display: grid;
     grid-gap: .5rem;
