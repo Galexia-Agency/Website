@@ -184,7 +184,7 @@
                 <li><b>Near limitless network transfer</b></li>
                 <li><b>No monthly visitor cap</b></li>
                 <li>Free SSL Certificate</li>
-                <li>99.9% Uptime SLA with performance monitoring</li>
+                <li>98% Uptime SLA with performance monitoring</li>
                 <li>Site caching and optimization</li>
                 <li>Content Delivery Network (<abbr>CDN</abbr>) powered by CloudFlare</li>
                 <li>Google Search Console and SEO monitoring</li>
@@ -215,7 +215,7 @@
                 <li><b>5k monthly visitor cap</b></li>
                 <li>1 WordPress install</li>
                 <li>Free SSL Certificate</li>
-                <li>99.9% Uptime SLA with performance monitoring</li>
+                <li>98% Uptime SLA with performance monitoring</li>
                 <li>Maintenance Package</li>
               </ul>
             </div>
@@ -241,7 +241,7 @@
                 <li><b>No monthly visitor cap</b></li>
                 <li>1 WordPress install</li>
                 <li>Free SSL Certificate</li>
-                <li>99.9% Uptime SLA with performance monitoring</li>
+                <li>98% Uptime SLA with performance monitoring</li>
                 <li>Maintenance Package</li>
                 <li><b>Backup Package</b></li>
               </ul>
