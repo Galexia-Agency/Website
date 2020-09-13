@@ -51,12 +51,6 @@
   }
 
   /* Page */
-  .hosting--background {
-    background-image: url('../assets/svg/hosting_background.svg');
-    background-size: 50%;
-    background-repeat: no-repeat;
-    background-position: bottom right
-  }
   .grid.maxWidth {
     padding-bottom: 0
   }
@@ -78,6 +72,9 @@
   }
   .card--inner {
     grid-gap: 2rem
+  }
+  li {
+    line-height: 1.5
   }
   li b {
     color: #1A237E
@@ -152,219 +149,234 @@
 
 <template>
   <div class="hosting white">
-    <div class="hosting--background">
-      <section>
-        <div id="top" class="maxWidth">
-          <h2>Ultra-fast Hosting</h2>
-          <img src="../assets/img/lighthouse.jpg" width="520" height="294" alt="Lighthouse Test">
-          <p class="desc">
-            Your website needs a home and we're happy to house it whether we built it or not. Below is an outline of our pricing for different plans. We're able to offer free Jamstack hosting thanks to <a href="https://netlify.com">Netlify</a>. If you want results like these then be sure to choose us for all your hosting and website needs.
-          </p>
-          <div class="toggle">
-            <h4 id="monthly">
-              Monthly/Yearly
+    <section>
+      <div id="top" class="maxWidth">
+        <h2>Ultra-fast Hosting</h2>
+        <img src="../assets/img/lighthouse.jpg" width="520" height="294" alt="Lighthouse Test">
+        <p class="desc">
+          Your website needs a home and we're happy to house it whether we built it or not. Below is an outline of our pricing for different plans. We're able to offer free Jamstack hosting thanks to <a href="https://netlify.com">Netlify</a>. If you want results like these then be sure to choose us for all your hosting and website needs.
+        </p>
+        <div class="toggle">
+          <h4 id="monthly">
+            Monthly/Yearly
+          </h4>
+          <label class="switch">
+            <input v-model="yearly" type="checkbox" aria-labelledby="monthly">
+            <span class="slider round" />
+          </label>
+        </div>
+      </div>
+      <div class="grid column maxWidth three">
+        <div class="card white">
+          <div class="card--inner">
+            <h4 class="title">
+              Jamstack Hosting
             </h4>
-            <label class="switch">
-              <input v-model="yearly" type="checkbox" aria-labelledby="monthly">
-              <span class="slider round" />
-            </label>
+            <h3>
+              FREE*
+            </h3>
+            <ul>
+              <li><b>Near limitless storage</b></li>
+              <li><b>Near limitless network transfer</b></li>
+              <li><b>No monthly visitor cap</b></li>
+              <li>99.9% Uptime SLA with performance monitoring</li>
+              <li>HTTP/2</li>
+              <li>Brotli Compression</li>
+              <li>Site caching and optimization</li>
+              <li>Content Delivery Network (<abbr>CDN</abbr>)</li>
+              <li>Google Search Console and SEO monitoring</li>
+            </ul>
+            <p class="terms">
+              <b>* Free with any WordPress hosting plan otherwise £5/month</b>
+            </p>
           </div>
         </div>
-        <div class="grid column maxWidth three">
-          <div class="card white">
-            <div class="card--inner">
-              <h4 class="title">
-                Jamstack Hosting
-              </h4>
+        <div class="card white">
+          <div class="card--inner">
+            <h4 class="title">
+              Starter WordPress Hosting
+            </h4>
+            <div class="price">
+              <transition name="fade" appear mode="out-in">
+                <h3 v-if="yearly" key="one">
+                  £150/year <span>(SAVE £30)</span>
+                </h3>
+                <h3 v-else key="two">
+                  £15/month
+                </h3>
+              </transition>
+            </div>
+            <ul>
+              <li><b>5GB SSD storage</b></li>
+              <li><b>5GB transfer</b></li>
+              <li><b>5k monthly visitor cap</b></li>
+              <li>1 WordPress install</li>
+              <li>98% Uptime SLA with performance monitoring</li>
+              <li>PHP 7.4</li>
+              <li>HTTP/3</li>
+              <li>Brotli Compression</li>
+              <li><b>WordPress Maintenance (See below)</b></li>
+            </ul>
+          </div>
+        </div>
+        <div class="card white">
+          <div class="card--inner">
+            <h4 class="title">
+              Advanced WordPress Hosting
+            </h4>
+            <div class="price">
+              <transition name="fade" appear mode="out-in">
+                <h3 v-if="yearly" key="three">
+                  £200/year <span>(SAVE £90)</span>
+                </h3>
+                <h3 v-else key="four">
+                  £20/month <span>(SAVE £5)</span>
+                </h3>
+              </transition>
+            </div>
+            <ul>
+              <li><b>Near limitless SSD storage</b></li>
+              <li><b>Near limitless network transfer</b></li>
+              <li><b>No monthly visitor cap</b></li>
+              <li>1 WordPress install</li>
+              <li>98% Uptime SLA with performance monitoring</li>
+              <li>PHP 7.4</li>
+              <li>HTTP/3</li>
+              <li>Brotli Compression</li>
+              <li><b>WordPress Maintenance (See below)</b></li>
+              <li><b>WordPress Backups (See below)</b></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h2>WordPress Help</h2>
+      <p class="desc">
+        WordPress is a complex program and needs constant management to function properly. Let us take care of the hassle by backing up, securing, and optimising your WordPress install.
+      </p>
+      <div class="grid column maxWidth three">
+        <div class="card white">
+          <div class="card--inner">
+            <h4 class="title">
+              Maintenance
+            </h4>
+            <div class="price">
+              <transition name="fade" appear mode="out-in">
+                <h3 v-if="yearly" key="five">
+                  £50/year <span>(SAVE £10)</span>
+                </h3>
+                <h3 v-else key="six">
+                  £5/month
+                </h3>
+              </transition>
+            </div>
+            <ul>
+              <li>
+                24/7 WordPress Security
+                <ul>
+                  <li>DDos Protection</li>
+                  <li>Brute Force Protection</li>
+                  <li>Automatic Malware Scans</li>
+                  <li>Web Application Firewall</li>
+                </ul>
+              </li>
+              <li>Site caching and optimization</li>
+              <li>Content Delivery Network (<abbr>CDN</abbr>) powered by CloudFlare</li>
+              <li>WordPress Core, Plugin, and theme updates</li>
+              <li>Google Search Console and SEO monitoring</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card white">
+          <div class="card--inner">
+            <h4 class="title">
+              Backups
+            </h4>
+            <div class="price">
+              <transition name="fade" appear mode="out-in">
+                <h3 v-if="yearly" key="seven">
+                  £50/year <span>(SAVE £10)</span>
+                </h3>
+                <h3 v-else>
+                  £5/month
+                </h3>
+              </transition>
+            </div>
+            <ul>
+              <li>Weekly automatic backups</li>
+              <li>Stored on external server for optimum security</li>
+              <li>Encrypted for security</li>
+              <li>Free restore service</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card white">
+          <div class="card--inner">
+            <h4 class="title">
+              Hosting Transfer
+            </h4>
+            <div class="price">
               <h3>
-                FREE*
+                £150
               </h3>
-              <ul>
-                <li><b>Near limitless storage</b></li>
-                <li><b>Near limitless network transfer</b></li>
-                <li><b>No monthly visitor cap</b></li>
-                <li>Free SSL Certificate</li>
-                <li>98% Uptime SLA with performance monitoring</li>
-                <li>Site caching and optimization</li>
-                <li>Content Delivery Network (<abbr>CDN</abbr>) powered by CloudFlare</li>
-                <li>Google Search Console and SEO monitoring</li>
-              </ul>
-              <p class="terms">
-                <b>* Free with any WordPress hosting plan</b>
-              </p>
             </div>
+            <ul>
+              <li>Transfer of WordPress site to new hosting</li>
+              <li>Minimal downtime</li>
+              <li>Completed within 48 hours</li>
+            </ul>
           </div>
-          <div class="card white">
-            <div class="card--inner">
-              <h4 class="title">
-                Starter WordPress Hosting
-              </h4>
-              <div class="price">
-                <transition name="fade" appear mode="out-in">
-                  <h3 v-if="yearly" key="one">
-                    £100/year <span>(SAVE £20)</span>
-                  </h3>
-                  <h3 v-else key="two">
-                    £10/month
-                  </h3>
-                </transition>
-              </div>
-              <ul>
-                <li><b>5GB storage</b></li>
-                <li><b>5GB transfer</b></li>
-                <li><b>5k monthly visitor cap</b></li>
-                <li>1 WordPress install</li>
-                <li>Free SSL Certificate</li>
-                <li>98% Uptime SLA with performance monitoring</li>
-                <li>Maintenance Package</li>
-              </ul>
-            </div>
-          </div>
-          <div class="card white">
-            <div class="card--inner">
-              <h4 class="title">
-                Advanced WordPress Hosting
-              </h4>
-              <div class="price">
-                <transition name="fade" appear mode="out-in">
-                  <h3 v-if="yearly" key="three">
-                    £150/year <span>(SAVE £30)</span>
-                  </h3>
-                  <h3 v-else key="four">
-                    £15/month
-                  </h3>
-                </transition>
-              </div>
-              <ul>
-                <li><b>Near limitless storage</b></li>
-                <li><b>Near limitless network transfer</b></li>
-                <li><b>No monthly visitor cap</b></li>
-                <li>1 WordPress install</li>
-                <li>Free SSL Certificate</li>
-                <li>98% Uptime SLA with performance monitoring</li>
-                <li>Maintenance Package</li>
-                <li><b>Backup Package</b></li>
-              </ul>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h2>Domains</h2>
+      <p class="desc" style="margin-bottom: 1rem">
+        <b>1 Free Wildcard SSL Certificate included</b>
+      </p>
+      <p class="desc">
+        We continually monitor the market to find the best deals so that we can pass on these savings to you. This will be updated in your yearly domain invoice.
+      </p>
+      <div class="grid column maxWidth three">
+        <div class="card white">
+          <div class="card--inner">
+            <h4 class="title">
+              .com
+            </h4>
+            <div class="price">
+              <h3>
+                £7.50/year
+              </h3>
             </div>
           </div>
         </div>
-      </section>
-      <section>
-        <h2>WordPress Help</h2>
-        <p class="desc">
-          WordPress is a complex program and needs constant management to function properly. Let us take care of the hassle by backing up, securing, and optimising your WordPress install.
-        </p>
-        <div class="grid column maxWidth three">
-          <div class="card white">
-            <div class="card--inner">
-              <h4 class="title">
-                Maintenance
-              </h4>
-              <div class="price">
-                <transition name="fade" appear mode="out-in">
-                  <h3 v-if="yearly" key="five">
-                    £50/year <span>(SAVE £10)</span>
-                  </h3>
-                  <h3 v-else key="six">
-                    £5/month
-                  </h3>
-                </transition>
-              </div>
-              <ul>
-                <li>24/7 WordPress Security</li>
-                <li>Site caching and optimization</li>
-                <li>Content Delivery Network (<abbr>CDN</abbr>) powered by CloudFlare</li>
-                <li>WordPress Core, Plugin, and theme updates</li>
-                <li>Google Search Console and SEO monitoring</li>
-              </ul>
-            </div>
-          </div>
-          <div class="card white">
-            <div class="card--inner">
-              <h4 class="title">
-                Backups
-              </h4>
-              <div class="price">
-                <transition name="fade" appear mode="out-in">
-                  <h3 v-if="yearly" key="seven">
-                    £50/year <span>(SAVE £10)</span>
-                  </h3>
-                  <h3 v-else>
-                    £5/month
-                  </h3>
-                </transition>
-              </div>
-              <ul>
-                <li>Weekly backups</li>
-                <li>Backups located on external server for optimum security</li>
-                <li>Free restore service</li>
-              </ul>
-            </div>
-          </div>
-          <div class="card white">
-            <div class="card--inner">
-              <h4 class="title">
-                Hosting Transfer
-              </h4>
-              <div class="price">
-                <h3>
-                  £150
-                </h3>
-              </div>
-              <ul>
-                <li>Transfer of WordPress site to new hosting</li>
-                <li>Minimal downtime</li>
-                <li>Completed within 48 hours</li>
-              </ul>
+        <div class="card white">
+          <div class="card--inner">
+            <h4 class="title">
+              .co.uk
+            </h4>
+            <div class="price">
+              <h3>
+                £7.50/year
+              </h3>
             </div>
           </div>
         </div>
-      </section>
-      <section>
-        <h2>Domains</h2>
-        <p class="desc">
-          We continually monitor the market to find the best deals so that we can pass on these savings to you. This will be updated in your yearly domain invoice.
-        </p>
-        <div class="grid column maxWidth three">
-          <div class="card white">
-            <div class="card--inner">
-              <h4 class="title">
-                .com
-              </h4>
-              <div class="price">
-                <h3>
-                  £7.50/year
-                </h3>
-              </div>
-            </div>
-          </div>
-          <div class="card white">
-            <div class="card--inner">
-              <h4 class="title">
-                .co.uk
-              </h4>
-              <div class="price">
-                <h3>
-                  £7.50/year
-                </h3>
-              </div>
-            </div>
-          </div>
-          <div class="card white">
-            <div class="card--inner">
-              <h4 class="title">
-                All other domains
-              </h4>
-              <div class="price">
-                <h3>
-                  £POA
-                </h3>
-              </div>
+        <div class="card white">
+          <div class="card--inner">
+            <h4 class="title">
+              All other domains
+            </h4>
+            <div class="price">
+              <h3>
+                £POA
+              </h3>
             </div>
           </div>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   </div>
 </template>
 
