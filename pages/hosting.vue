@@ -199,10 +199,10 @@
             <div class="price">
               <transition name="fade" appear mode="out-in">
                 <h3 v-if="yearly" key="one">
-                  £150/year <span>(SAVE £30)</span>
+                  £100/year <span>(SAVE £20)</span>
                 </h3>
                 <h3 v-else key="two">
-                  £15/month
+                  £10/month
                 </h3>
               </transition>
             </div>
@@ -227,10 +227,10 @@
             <div class="price">
               <transition name="fade" appear mode="out-in">
                 <h3 v-if="yearly" key="three">
-                  £200/year <span>(SAVE £90)</span>
+                  £150/year <span>(SAVE £60)</span>
                 </h3>
                 <h3 v-else key="four">
-                  £20/month <span>(SAVE £5)</span>
+                  £15/month
                 </h3>
               </transition>
             </div>
