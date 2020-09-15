@@ -95,13 +95,15 @@ export default {
    ** Global CSS
    */
   css: [
+    '~/assets/css/tooltips.css',
     '~/assets/css/transition.css'
   ],
   /*
    ** Plugins to load before mounting the App
    */
   plugins: [
-    { src: '~/plugins/fontAwesome.js' }
+    { src: '~/plugins/fontAwesome.js' },
+    { src: '~/plugins/tooltip.js' }
   ],
   /*
    ** Nuxt.js dev-modules

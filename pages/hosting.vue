@@ -176,15 +176,33 @@
               FREE*
             </h3>
             <ul>
-              <li><b>Near limitless storage</b></li>
-              <li><b>Near limitless network transfer</b></li>
-              <li><b>No monthly visitor cap</b></li>
-              <li>99.9% Uptime SLA with performance monitoring</li>
-              <li>HTTP/2</li>
-              <li>Brotli Compression</li>
-              <li>Site caching and optimization</li>
-              <li>Content Delivery Network (<abbr>CDN</abbr>)</li>
-              <li>Google Search Console and SEO monitoring</li>
+              <li v-tooltip="'Includes all of the code used to run your site as well as content such as photos and videos'">
+                <b>Near limitless storage</b>
+              </li>
+              <li v-tooltip="'How much data is transferred to your users when they visit your site'">
+                <b>Near limitless network transfer</b>
+              </li>
+              <li v-tooltip="'How many users visit your site in a month'">
+                <b>No monthly visitor cap</b>
+              </li>
+              <li v-tooltip="'Your website will be available for viewers almost all of the time. There may be very minor outages'">
+                99.9% Uptime SLA with performance monitoring
+              </li>
+              <li v-tooltip="'Numerous benefits over HTTP/1.1 including the ability to download multiple files at the same time'">
+                HTTP/2
+              </li>
+              <li v-tooltip="'Latest compression algorithm reducing the size of the website, improving load time'">
+                Brotli Compression
+              </li>
+              <li v-tooltip="'Improves load time which means happier users and better SEO'">
+                Site caching and optimization
+              </li>
+              <li v-tooltip="'Caches your website around the globe to improve load time'">
+                Content Delivery Network (<abbr>CDN</abbr>)
+              </li>
+              <li v-tooltip="'Google Search Console improves your control over how Google indexes your site. It also alerts you to any issues that may be affecting your website in search results'">
+                Google Search Console and SEO monitoring
+              </li>
             </ul>
             <p class="terms">
               <b>* Free with any WordPress hosting plan otherwise £5/month</b>
@@ -207,14 +225,33 @@
               </transition>
             </div>
             <ul>
-              <li><b>5GB SSD storage</b></li>
-              <li><b>5GB transfer</b></li>
-              <li><b>5k monthly visitor cap</b></li>
-              <li>1 WordPress install</li>
-              <li>98% Uptime SLA with performance monitoring</li>
-              <li>PHP 7.4</li>
-              <li>HTTP/3</li>
-              <li>Brotli Compression</li>
+              <li v-tooltip="'Includes all of the code used to run your site as well as content such as photos and videos'">
+                <b>5GB SSD storage</b>
+              </li>
+              <li v-tooltip="'How much data is transferred to your users when they visit your site'">
+                <b>5GB transfer</b>
+              </li>
+              <li v-tooltip="'How many users visit your site in a month'">
+                <b>5k monthly visitor cap</b>
+              </li>
+              <li v-tooltip="'You will need to purchase seperate hosting plans for each site you own'">
+                1 WordPress install
+              </li>
+              <li v-tooltip="'Your website will be available for viewers almost all of the time. There may be very minor outages'">
+                98% Uptime SLA with performance monitoring
+              </li>
+              <li v-tooltip="'Latest version of PHP, the language WordPress uses'">
+                PHP 7.4
+              </li>
+              <li v-tooltip="'Cutting edge version of HTTP which uses QUIC as it\'s engine'">
+                HTTP/3
+              </li>
+              <li v-tooltip="'Latest compression algorithm reducing the size of the website, improving load time'">
+                Brotli Compression
+              </li>
+              <li v-tooltip="'Caches your website around the globe to improve load time'">
+                Content Delivery Network (<abbr>CDN</abbr>) powered by CloudFlare
+              </li>
               <li><b>WordPress Maintenance (See below)</b></li>
             </ul>
           </div>
@@ -235,14 +272,33 @@
               </transition>
             </div>
             <ul>
-              <li><b>Near limitless SSD storage</b></li>
-              <li><b>Near limitless network transfer</b></li>
-              <li><b>No monthly visitor cap</b></li>
-              <li>1 WordPress install</li>
-              <li>98% Uptime SLA with performance monitoring</li>
-              <li>PHP 7.4</li>
-              <li>HTTP/3</li>
-              <li>Brotli Compression</li>
+              <li v-tooltip="'Includes all of the code used to run your site as well as content such as photos and videos'">
+                <b>Near limitless SSD storage</b>
+              </li>
+              <li v-tooltip="'How much data is transferred to your users when they visit your site'">
+                <b>Near limitless network transfer</b>
+              </li>
+              <li v-tooltip="'How many users visit your site in a month'">
+                <b>No monthly visitor cap</b>
+              </li>
+              <li v-tooltip="'You will need to purchase seperate hosting plans for each site you own'">
+                1 WordPress install
+              </li>
+              <li v-tooltip="'Your website will be available for viewers almost all of the time. There may be very minor outages'">
+                98% Uptime SLA with performance monitoring
+              </li>
+              <li v-tooltip="'Latest version of PHP, the language WordPress uses'">
+                PHP 7.4
+              </li>
+              <li v-tooltip="'Cutting edge version of HTTP which uses QUIC as it\'s engine'">
+                HTTP/3
+              </li>
+              <li v-tooltip="'Latest compression algorithm reducing the size of the website, improving load time'">
+                Brotli Compression
+              </li>
+              <li v-tooltip="'Caches your website around the globe to improve load time'">
+                Content Delivery Network (<abbr>CDN</abbr>) powered by CloudFlare
+              </li>
               <li><b>WordPress Maintenance (See below)</b></li>
               <li><b>WordPress Backups (See below)</b></li>
             </ul>
@@ -275,16 +331,29 @@
               <li>
                 24/7 WordPress Security
                 <ul>
-                  <li>DDos Protection</li>
-                  <li>Brute Force Protection</li>
-                  <li>Automatic Malware Scans</li>
-                  <li>Web Application Firewall</li>
+                  <li v-tooltip="'Type of attack designed to overwhelm a server and cause it to shut down, making your website unavailable'">
+                    Distributed Denial of Service (<abbr>DDoS</abbr>) attack Protection
+                  </li>
+                  <li v-tooltip="'A type of attack designed to gain your login credentials by guessing all variations'">
+                    Brute Force Protection
+                  </li>
+                  <li v-tooltip="'WordPress can be vulnerable to Malware. We put preventative measures in place but also have scans to tell us if a site has been infected'">
+                    Automatic Malware Scans
+                  </li>
+                  <li v-tooltip="'A firewall stops malicious users from accessing a site'">
+                    Web Application Firewall
+                  </li>
                 </ul>
               </li>
-              <li>Site caching and optimization</li>
-              <li>Content Delivery Network (<abbr>CDN</abbr>) powered by CloudFlare</li>
-              <li>WordPress Core, Plugin, and theme updates</li>
-              <li>Google Search Console and SEO monitoring</li>
+              <li v-tooltip="'Improves load time which means happier users and better SEO'">
+                Site caching and optimization
+              </li>
+              <li v-tooltip="'Keeping everything up-to-date ensures security issues are fixed and your site is running as fast as possible'">
+                WordPress Core, Plugin, and Theme updates
+              </li>
+              <li v-tooltip="'Google Search Console improves your control over how Google indexes your site. It also alerts you to any issues that may be affecting your website in search results'">
+                Google Search Console and SEO monitoring
+              </li>
             </ul>
           </div>
         </div>
