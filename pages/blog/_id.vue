@@ -43,7 +43,8 @@
     grid-auto-flow: column
   }
   .post--meta p:last-of-type {
-    justify-self: right;
+    justify-self: end;
+    text-align: right;
     width: 100%
   }
   .post--content {
@@ -87,7 +88,8 @@
       grid-auto-flow: row
     }
     .post--meta p:last-of-type {
-      justify-self: start
+      justify-self: start;
+      text-align: left
     }
   }
 </style>
