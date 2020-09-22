@@ -1,6 +1,7 @@
 <style scoped>
   .logo {
-    display: inline-block
+    display: inline-block;
+    margin-bottom: 2rem
   }
   h1 {
     margin: 1.75rem 0;
@@ -116,7 +117,7 @@
         <div v-if="url && title">
           <a :href="url" target="_blank" rel="noopener noreferrer" class="logo">
             <!--eslint-disable-next-line-->
-            <img v-if="logo" v-bind:src="logo" :alt="title" width="150" height="150">
+            <img v-if="logo" v-bind:src="logo" :alt="title" width="auto" height="75">
           </a>
           <h2>Welcome to your own space.</h2>
           <h1>Thanks for being our client, {{ title }}</h1>
@@ -197,7 +198,7 @@ export default {
       return this.$route.query.logo
     }
   },
-  beforeCreate () {
+  mounted () {
     this.$parent.$parent.metaHelper.title = this.title
   },
   head () {
