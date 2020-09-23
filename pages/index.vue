@@ -126,7 +126,7 @@
         </div>
       </div>
       <div class="icons">
-        <div v-for="i in Math.ceil(posts.length / 3)" :key="i.id" class="icon" :class="{ current: i == 1}" @click="portfolioScroll($event, i)" />
+        <div v-for="i in Math.ceil(posts.length - 2)" :key="i.id" class="icon" :class="{ current: i == 1}" @click="portfolioScroll($event, i)" />
       </div>
     </section>
   </div>
@@ -183,10 +183,9 @@ export default {
         e.classList.remove('current')
       })
       event.target.classList.add('current')
-      const y = (i * 3) - 3
       const width = document.querySelector('#portfolio a').offsetWidth
       document.querySelector('#portfolio').scrollTo({
-        left: width * y,
+        left: width * (i - 1),
         behavior: this.$parent.$parent.motion
       })
     }
