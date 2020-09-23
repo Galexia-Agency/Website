@@ -119,6 +119,23 @@
     max-width: 100%;
     height: auto
   }
+  .v-popover {
+    display: inline;
+    font-size: .75rem;
+    vertical-align: middle;
+    color: #1A237E;
+    cursor: pointer
+  }
+  .v-popover svg {
+    height: 1rem;
+    width: 1rem;
+    border: 1.5px solid #1A237E;
+    border-radius: 50%;
+    padding: .05rem
+  }
+  .overflow {
+    max-width: 90%
+  }
 
   @media (max-width: 900px) {
     .card {
@@ -154,7 +171,7 @@
         <h2>Ultra-fast Hosting</h2>
         <img src="../assets/img/lighthouse.jpg" width="520" height="294" alt="Lighthouse Test">
         <p class="desc">
-          Your website needs a home and we're happy to house it whether we built it or not. Below is an outline of our pricing for different plans. We're able to offer free Jamstack hosting thanks to <a href="https://netlify.com">Netlify</a>. If you want results like these then be sure to choose us for all your hosting and website needs.
+          Your website needs a home and we're happy to house it regardless of who built it. Below is an outline of our pricing for different plans. We're able to offer free Jamstack hosting thanks to <a href="https://netlify.com">Netlify</a>. If you want results like these then be sure to choose us for all your hosting and website needs.
         </p>
         <div class="toggle">
           <h4 id="monthly">
@@ -176,32 +193,86 @@
               FREE*
             </h3>
             <ul>
-              <li v-tooltip="'Includes all of the code used to run your site as well as content such as photos and videos'">
+              <li>
                 <b>Near limitless storage</b>
+                <v-popover placement="top">
+                  <font-awesome-icon icon="question" />
+                  <template slot="popover">
+                    <span>Includes all of the code used to run your site as well as content such as photos and videos</span>
+                  </template>
+                </v-popover>
               </li>
-              <li v-tooltip="'How much data is transferred to your users when they visit your site'">
+              <li>
                 <b>Near limitless network transfer</b>
+                <v-popover placement="top">
+                  <font-awesome-icon icon="question" />
+                  <template slot="popover">
+                    <span>How much data is transferred to your users when they visit your site</span>
+                  </template>
+                </v-popover>
               </li>
-              <li v-tooltip="'How many users visit your site in a month'">
+              <li>
                 <b>No monthly visitor cap</b>
+                <v-popover placement="top">
+                  <font-awesome-icon icon="question" />
+                  <template slot="popover">
+                    <span>How many users visit your site in a month</span>
+                  </template>
+                </v-popover>
               </li>
-              <li v-tooltip="'Your website will be available for viewers almost all of the time. There may be very minor outages'">
+              <li>
                 99.9% Uptime SLA with performance monitoring
+                <v-popover placement="top">
+                  <font-awesome-icon icon="question" />
+                  <template slot="popover">
+                    <span>Your website will be available for viewers almost all of the time. There may be very minor outages</span>
+                  </template>
+                </v-popover>
               </li>
-              <li v-tooltip="'Numerous benefits over HTTP/1.1 including the ability to download multiple files at the same time'">
+              <li>
                 HTTP/2
+                <v-popover placement="top">
+                  <font-awesome-icon icon="question" />
+                  <template slot="popover">
+                    <span>Numerous benefits over HTTP/1.1 including the ability to download multiple files at the same time</span>
+                  </template>
+                </v-popover>
               </li>
-              <li v-tooltip="'Latest compression algorithm reducing the size of the website, improving load time'">
+              <li>
                 Brotli Compression
+                <v-popover placement="top">
+                  <font-awesome-icon icon="question" />
+                  <template slot="popover">
+                    <span>Latest compression algorithm reducing the size of the website, improving load time</span>
+                  </template>
+                </v-popover>
               </li>
-              <li v-tooltip="'Improves load time which means happier users and better SEO'">
+              <li>
                 Site caching and optimization
+                <v-popover placement="top">
+                  <font-awesome-icon icon="question" />
+                  <template slot="popover">
+                    <span>Improves load time which means happier users and better SEO</span>
+                  </template>
+                </v-popover>
               </li>
-              <li v-tooltip="'Caches your website around the globe to improve load time'">
+              <li>
                 Content Delivery Network (<abbr>CDN</abbr>)
+                <v-popover placement="top">
+                  <font-awesome-icon icon="question" />
+                  <template slot="popover">
+                    <span>Caches your website around the globe to improve load time</span>
+                  </template>
+                </v-popover>
               </li>
-              <li v-tooltip="'Google Search Console improves your control over how Google indexes your site. It also alerts you to any issues that may be affecting your website in search results'">
+              <li class="overflow">
                 Google Search Console and SEO monitoring
+                <v-popover placement="top">
+                  <font-awesome-icon icon="question" />
+                  <template slot="popover">
+                    <span>Google Search Console improves your control over how Google indexes your site. It also alerts you to any issues that may be affecting your website in search results</span>
+                  </template>
+                </v-popover>
               </li>
             </ul>
             <p class="terms">
@@ -225,32 +296,86 @@
               </transition>
             </div>
             <ul>
-              <li v-tooltip="'Includes all of the code used to run your site as well as content such as photos and videos'">
+              <li>
                 <b>5GB SSD storage</b>
+                <v-popover placement="top">
+                  <font-awesome-icon icon="question" />
+                  <template slot="popover">
+                    <span>Includes all of the code used to run your site as well as content such as photos and videos</span>
+                  </template>
+                </v-popover>
               </li>
-              <li v-tooltip="'How much data is transferred to your users when they visit your site'">
-                <b>5GB transfer</b>
+              <li>
+                <b>5GB network transfer</b>
+                <v-popover placement="top">
+                  <font-awesome-icon icon="question" />
+                  <template slot="popover">
+                    <span>How much data is transferred to your users when they visit your site</span>
+                  </template>
+                </v-popover>
               </li>
-              <li v-tooltip="'How many users visit your site in a month'">
+              <li>
                 <b>5k monthly visitor cap</b>
+                <v-popover placement="top">
+                  <font-awesome-icon icon="question" />
+                  <template slot="popover">
+                    <span>How many users visit your site in a month</span>
+                  </template>
+                </v-popover>
               </li>
-              <li v-tooltip="'You will need to purchase seperate hosting plans for each site you own'">
+              <li>
                 1 WordPress install
+                <v-popover placement="top">
+                  <font-awesome-icon icon="question" />
+                  <template slot="popover">
+                    <span>You will need to purchase seperate hosting plans for each site you own</span>
+                  </template>
+                </v-popover>
               </li>
-              <li v-tooltip="'Your website will be available for viewers almost all of the time. There may be very minor outages'">
+              <li>
                 98% Uptime SLA with performance monitoring
+                <v-popover placement="top">
+                  <font-awesome-icon icon="question" />
+                  <template slot="popover">
+                    <span>Your website will be available for viewers almost all of the time. There may be very minor outages</span>
+                  </template>
+                </v-popover>
               </li>
-              <li v-tooltip="'Latest version of PHP, the language WordPress uses'">
+              <li>
                 PHP 7.4
+                <v-popover placement="top">
+                  <font-awesome-icon icon="question" />
+                  <template slot="popover">
+                    <span>Latest version of PHP, the language WordPress uses</span>
+                  </template>
+                </v-popover>
               </li>
-              <li v-tooltip="'Cutting edge version of HTTP which uses QUIC as it\'s engine'">
+              <li>
                 HTTP/3
+                <v-popover placement="top">
+                  <font-awesome-icon icon="question" />
+                  <template slot="popover">
+                    <span>Cutting edge version of HTTP which uses QUIC as it\'s engine</span>
+                  </template>
+                </v-popover>
               </li>
-              <li v-tooltip="'Latest compression algorithm reducing the size of the website, improving load time'">
+              <li>
                 Brotli Compression
+                <v-popover placement="top">
+                  <font-awesome-icon icon="question" />
+                  <template slot="popover">
+                    <span>Latest compression algorithm reducing the size of the website, improving load time</span>
+                  </template>
+                </v-popover>
               </li>
-              <li v-tooltip="'Caches your website around the globe to improve load time'">
+              <li>
                 Content Delivery Network (<abbr>CDN</abbr>) powered by CloudFlare
+                <v-popover placement="top">
+                  <font-awesome-icon icon="question" />
+                  <template slot="popover">
+                    <span>Caches your website around the globe to improve load time</span>
+                  </template>
+                </v-popover>
               </li>
               <li><b>WordPress Maintenance (See below)</b></li>
             </ul>
@@ -272,32 +397,86 @@
               </transition>
             </div>
             <ul>
-              <li v-tooltip="'Includes all of the code used to run your site as well as content such as photos and videos'">
+              <li>
                 <b>Near limitless SSD storage</b>
+                <v-popover placement="top">
+                  <font-awesome-icon icon="question" />
+                  <template slot="popover">
+                    <span>Includes all of the code used to run your site as well as content such as photos and videos</span>
+                  </template>
+                </v-popover>
               </li>
-              <li v-tooltip="'How much data is transferred to your users when they visit your site'">
+              <li>
                 <b>Near limitless network transfer</b>
+                <v-popover placement="top">
+                  <font-awesome-icon icon="question" />
+                  <template slot="popover">
+                    <span>How much data is transferred to your users when they visit your site</span>
+                  </template>
+                </v-popover>
               </li>
-              <li v-tooltip="'How many users visit your site in a month'">
+              <li>
                 <b>No monthly visitor cap</b>
+                <v-popover placement="top">
+                  <font-awesome-icon icon="question" />
+                  <template slot="popover">
+                    <span>How many users visit your site in a month</span>
+                  </template>
+                </v-popover>
               </li>
-              <li v-tooltip="'You will need to purchase seperate hosting plans for each site you own'">
+              <li>
                 1 WordPress install
+                <v-popover placement="top">
+                  <font-awesome-icon icon="question" />
+                  <template slot="popover">
+                    <span>You will need to purchase seperate hosting plans for each site you own</span>
+                  </template>
+                </v-popover>
               </li>
-              <li v-tooltip="'Your website will be available for viewers almost all of the time. There may be very minor outages'">
+              <li>
                 98% Uptime SLA with performance monitoring
+                <v-popover placement="top">
+                  <font-awesome-icon icon="question" />
+                  <template slot="popover">
+                    <span>Your website will be available for viewers almost all of the time. There may be very minor outages</span>
+                  </template>
+                </v-popover>
               </li>
-              <li v-tooltip="'Latest version of PHP, the language WordPress uses'">
+              <li>
                 PHP 7.4
+                <v-popover placement="top">
+                  <font-awesome-icon icon="question" />
+                  <template slot="popover">
+                    <span>Latest version of PHP, the language WordPress uses</span>
+                  </template>
+                </v-popover>
               </li>
-              <li v-tooltip="'Cutting edge version of HTTP which uses QUIC as it\'s engine'">
+              <li>
                 HTTP/3
+                <v-popover placement="top">
+                  <font-awesome-icon icon="question" />
+                  <template slot="popover">
+                    <span>Cutting edge version of HTTP which uses QUIC as it\'s engine</span>
+                  </template>
+                </v-popover>
               </li>
-              <li v-tooltip="'Latest compression algorithm reducing the size of the website, improving load time'">
+              <li>
                 Brotli Compression
+                <v-popover placement="top">
+                  <font-awesome-icon icon="question" />
+                  <template slot="popover">
+                    <span>Latest compression algorithm reducing the size of the website, improving load time</span>
+                  </template>
+                </v-popover>
               </li>
-              <li v-tooltip="'Caches your website around the globe to improve load time'">
+              <li>
                 Content Delivery Network (<abbr>CDN</abbr>) powered by CloudFlare
+                <v-popover placement="top">
+                  <font-awesome-icon icon="question" />
+                  <template slot="popover">
+                    <span>Caches your website around the globe to improve load time</span>
+                  </template>
+                </v-popover>
               </li>
               <li><b>WordPress Maintenance (See below)</b></li>
               <li><b>WordPress Backups (See below)</b></li>
@@ -331,28 +510,70 @@
               <li>
                 24/7 WordPress Security
                 <ul>
-                  <li v-tooltip="'Type of attack designed to overwhelm a server and cause it to shut down, making your website unavailable'">
+                  <li>
                     Distributed Denial of Service (<abbr>DDoS</abbr>) attack Protection
+                    <v-popover placement="top">
+                      <font-awesome-icon icon="question" />
+                      <template slot="popover">
+                        <span>Type of attack designed to overwhelm a server and cause it to shut down, making your website unavailable</span>
+                      </template>
+                    </v-popover>
                   </li>
-                  <li v-tooltip="'A type of attack designed to gain your login credentials by guessing all variations'">
+                  <li>
                     Brute Force Protection
+                    <v-popover placement="top">
+                      <font-awesome-icon icon="question" />
+                      <template slot="popover">
+                        <span>A type of attack designed to gain your login credentials by guessing all variations</span>
+                      </template>
+                    </v-popover>
                   </li>
-                  <li v-tooltip="'WordPress can be vulnerable to Malware. We put preventative measures in place but also have scans to tell us if a site has been infected'">
+                  <li>
                     Automatic Malware Scans
+                    <v-popover placement="top">
+                      <font-awesome-icon icon="question" />
+                      <template slot="popover">
+                        <span>WordPress can be vulnerable to Malware. We put preventative measures in place but also have scans to tell us if a site has been infected</span>
+                      </template>
+                    </v-popover>
                   </li>
-                  <li v-tooltip="'A firewall stops malicious users from accessing a site'">
+                  <li>
                     Web Application Firewall
+                    <v-popover placement="top">
+                      <font-awesome-icon icon="question" />
+                      <template slot="popover">
+                        <span>A firewall stops malicious users from accessing a site</span>
+                      </template>
+                    </v-popover>
                   </li>
                 </ul>
               </li>
-              <li v-tooltip="'Improves load time which means happier users and better SEO'">
+              <li>
                 Site caching and optimization
+                <v-popover placement="top">
+                  <font-awesome-icon icon="question" />
+                  <template slot="popover">
+                    <span>Improves load time which means happier users and better SEO</span>
+                  </template>
+                </v-popover>
               </li>
-              <li v-tooltip="'Keeping everything up-to-date ensures security issues are fixed and your site is running as fast as possible'">
+              <li class="overflow">
                 WordPress Core, Plugin, and Theme updates
+                <v-popover placement="top">
+                  <font-awesome-icon icon="question" />
+                  <template slot="popover">
+                    <span>Keeping everything up-to-date ensures security issues are fixed and your site is running as fast as possible</span>
+                  </template>
+                </v-popover>
               </li>
-              <li v-tooltip="'Google Search Console improves your control over how Google indexes your site. It also alerts you to any issues that may be affecting your website in search results'">
+              <li class="overflow">
                 Google Search Console and SEO monitoring
+                <v-popover placement="top">
+                  <font-awesome-icon icon="question" />
+                  <template slot="popover">
+                    <span>Google Search Console improves your control over how Google indexes your site. It also alerts you to any issues that may be affecting your website in search results</span>
+                  </template>
+                </v-popover>
               </li>
             </ul>
           </div>
@@ -415,7 +636,7 @@
             </h4>
             <div class="price">
               <h3>
-                £7.50/year
+                £10/year
               </h3>
             </div>
           </div>
@@ -468,42 +689,18 @@
               </transition>
             </div>
             <ul>
-              <li>
-                Gmail
-              </li>
-              <li>
-                Meet
-              </li>
-              <li>
-                Chat
-              </li>
-              <li>
-                Calendar
-              </li>
-              <li>
-                Drive <b>30 GB</b> cloud storage
-              </li>
-              <li>
-                Docs
-              </li>
-              <li>
-                Sheets
-              </li>
-              <li>
-                Slides
-              </li>
-              <li>
-                Forms
-              </li>
-              <li>
-                Sites
-              </li>
-              <li>
-                Keep
-              </li>
-              <li>
-                Currents
-              </li>
+              <li>Gmail</li>
+              <li>Meet</li>
+              <li>Chat</li>
+              <li>Calendar</li>
+              <li>Drive <b>30 GB</b> cloud storage</li>
+              <li>Docs</li>
+              <li>Sheets</li>
+              <li>Slides</li>
+              <li>Forms</li>
+              <li>Sites</li>
+              <li>Keep</li>
+              <li>Currents</li>
             </ul>
           </div>
         </div>
@@ -528,7 +725,7 @@
               <li>Excel Online</li>
               <li>PowerPoint Online</li>
               <li>Exchange</li>
-              <li>OneDrive <b>1 TB</b> Cloud Storage</li>
+              <li>OneDrive <b>1TB</b> Cloud Storage</li>
               <li>SharePoint</li>
               <li>Teams</li>
             </ul>
@@ -557,7 +754,7 @@
               <li>Publisher</li>
               <li>Access</li>
               <li>Exchange</li>
-              <li>OneDrive <b>1 TB</b> Cloud Storage</li>
+              <li>OneDrive <b>1TB</b> Cloud Storage</li>
               <li>SharePoint</li>
               <li>Teams</li>
             </ul>
