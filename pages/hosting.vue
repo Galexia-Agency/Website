@@ -667,7 +667,7 @@
         </div>
       </div>
     </section>
-    <section>
+    <section style="display: none">
       <h2>Emails</h2>
       <p class="desc">
         We offer a range of email services provided by both G-Suite and Microsoft 365.
