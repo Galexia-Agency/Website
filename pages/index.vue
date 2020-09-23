@@ -51,7 +51,7 @@
       grid-auto-columns: 100%;
       grid-auto-flow: row
     }
-    .icons {
+    #portfolio div:nth-of-type(n+4), .icons {
       display: none
     }
   }
