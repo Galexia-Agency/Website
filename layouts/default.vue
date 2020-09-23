@@ -41,7 +41,8 @@
   }
   :any-link {
     text-decoration: none;
-    color: inherit
+    color: inherit;
+    transition: opacity .25s
   }
   :any-link:focus {
     opacity: .5
@@ -101,7 +102,7 @@
     background-color: #1A237E;
     border-radius: .25rem;
     display: inline-block;
-    transition: .5s;
+    transition: opacity .5s;
     box-shadow:
       0 1.8px .7px rgba(0, 0, 0, .011),
       0 4.3px 1.6px rgba(0, 0, 0, .013),
@@ -234,7 +235,7 @@
   .nav--link {
     font-size: 1.25rem;
     padding: .5rem;
-    transition: .5s;
+    transition: color .5s, border .5s;
     border-bottom: .15rem solid transparent;
     font-family: Assistant, sans-serif;
     letter-spacing: .05rem
@@ -280,7 +281,7 @@
   }
   .socialLinks a {
     color: #FFFFFF99;
-    transition: .5s
+    transition: color .5s
   }
   .socialLinks a:hover {
     color: white
@@ -309,7 +310,7 @@
     font-family: Assistant, sans-serif;
     font-size: 1.25rem;
     border-bottom: .15rem solid transparent;
-    transition: .5s;
+    transition: border .5s, opacity .25s;
     width: fit-content
   }
   .footer--bottom_navLink:hover, .footer--bottom_contact a:hover, .footer--bottom_navLink.nuxt-link-exact-active {
@@ -493,7 +494,7 @@
       display: none
     }
     html {
-      transition: 1s
+      transition: margin 1s
     }
     html.nav_open {
       margin-left: -200px;

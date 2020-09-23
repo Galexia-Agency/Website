@@ -19,7 +19,6 @@
     right: 0;
     bottom: 0;
     background-color: #CCCCCC;
-    -webkit-transition: .4s;
     transition: .4s
   }
   .slider:before {
@@ -89,9 +88,6 @@
     max-width: 780px;
     text-align: center;
     margin: auto
-  }
-  .price {
-    transition: .4s
   }
   .terms {
     font-size: .9rem;
