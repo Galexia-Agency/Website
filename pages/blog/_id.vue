@@ -25,18 +25,14 @@
     place-items: center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
-    background-image: url('../../assets/img/faux-code.jpg?webp')
-  }
-  body.no-webp .post--header {
-    background-image: url('../../assets/img/faux-code.jpg?resize')
+    background-position: center
   }
   .background_opacity {
     z-index: 1;
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, .33)
+    background: rgba(0, 0, 0, .4)
   }
   .post--meta {
     display: grid;
@@ -113,7 +109,7 @@
 
 <template>
   <div v-if="post.title" class="post">
-    <div class="post--header">
+    <div class="post--header" :style="'background-image:url(' + post.featuredImage.mediaItemUrl + ')'">
       <div class="background_opacity" />
       <h1 class="maxWidth">
         {{ post.title }}
