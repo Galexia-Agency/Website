@@ -402,33 +402,15 @@
   .card.white .card--inner h3 {
     text-align: center
   }
-  :any-link.card {
-    display: block;
-    transition: .5s
-  }
-  :any-link.card * {
-    margin: 0
-  }
-  :any-link.card .tags span {
+  .card .tags span {
     display: inline-block;
     padding: .25rem;
     margin: 0 .25rem;
     border: 2px solid #1A237E;
     border-radius: .25rem
   }
-  :any-link.card:hover {
-    text-decoration: none;
-    background-color: #1A237E;
-    color: white
-  }
-  :any-link.card:hover h3 {
-    color: white
-  }
-  :any-link.card:hover .tags span {
-    border: 2px solid white
-  }
-  :any-link.card:hover .card--inner p {
-    color: white
+  .card .tags span:first-of-type {
+    margin-left: 0
   }
   .card--inner {
     padding: 2rem 1rem;
@@ -479,20 +461,6 @@
   @media (max-width: 900px) {
     .text--normal {
       opacity: .95
-    }
-    :any-link.card:hover {
-      text-decoration: none;
-      background-color: white;
-      color: #212121
-    }
-    :any-link.card:hover h3 {
-      color: #1A237E
-    }
-    :any-link.card:hover .tags span {
-      border: 2px solid #1A237E
-    }
-    :any-link.card:hover .card--inner p {
-      color: #212121
     }
     .socialLinks a {
       color: white

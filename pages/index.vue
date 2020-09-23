@@ -21,6 +21,15 @@
     scroll-snap-align: center;
     scroll-snap-stop: always
   }
+  .card {
+    display: grid
+  }
+  .card--inner {
+    grid-template-rows: auto auto auto 1fr auto
+  }
+  .website_link {
+    font-size: 1.25rem
+  }
   .icons {
     display: grid;
     grid-auto-flow: column;
@@ -108,21 +117,26 @@
         We let our work speak for itself
       </h2>
       <div id="portfolio" class="grid column three maxWidth">
-        <div v-for="(post, index) in posts" :key="index">
-          <a v-if="post.ACFLink" class="card" :href="post.ACFLink.link" target="_blank" rel="noopener">
-            <div class="card--inner">
-              <img :src="post.featuredImage.mediaItemUrl" width="100%" height="auto" loading="lazy" :alt="post.title">
+        <div v-for="(post, index) in posts" :key="index" class="card">
+          <div class="card--inner">
+            <img :src="post.featuredImage.mediaItemUrl" width="100%" height="auto" loading="lazy" :alt="post.title">
+            <a v-if="post.ACFLink" :href="post.ACFLink.link" target="_blank" rel="noopener">
               <!--eslint-disable-next-line-->
               <h3 v-html="post.title" />
-              <div class="tags">
-                <span v-for="(tag, i) in post.tags.nodes" :key="i">
-                  {{ tag.name }}
-                </span>
-              </div>
-              <!--eslint-disable-next-line-->
-              <div v-html="post.content" />
+            </a>
+            <div class="tags">
+              <span v-for="(tag, i) in post.tags.nodes" :key="i">
+                {{ tag.name }}
+              </span>
             </div>
-          </a>
+            <!--eslint-disable-next-line-->
+            <div v-html="post.content" />
+            <div>
+              <a v-if="post.ACFLink" :href="post.ACFLink.link" target="_blank" rel="noopener" class="website_link">
+                View the website
+              </a>
+            </div>
+          </div>
         </div>
       </div>
       <div class="icons">
