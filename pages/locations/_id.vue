@@ -122,7 +122,7 @@ export default {
   mounted () {
     this.$parent.$parent.metaHelper.title = 'Creative Agency in ' + this.capitalize(this.$route.params.id) + ' | Galexia Creative Agency Ltd specialising in Web Development and Marketing'
     this.$parent.$parent.metaHelper.description = 'We are a creative agency based in Royston but with ties to ' + this.capitalize(this.$route.params.id) + ' specialising in website design development and marketing. We’re a fairly new company built from the ground up to help you grow. We work in ' + this.$route.params.id + ' and surrounding areas.'
-    this.$parent.$parent.metaHelper.url = 'https://galexia.agency/locations' + this.$route.params.id
+    this.$parent.$parent.metaHelper.url = 'https://galexia.agency/locations/' + this.$route.params.id
   },
   methods: {
     capitalize (string) {
