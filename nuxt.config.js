@@ -120,6 +120,18 @@ export default {
   modules: [
     'vue-social-sharing/nuxt',
     '@nuxtjs/apollo',
+    ['nuxt-netlify-http2-server-push',
+      {
+        // Specify relative path to the dist directory and its content type
+        resources: [
+          { path: '**/*.js', as: 'script' },
+          { path: '_nuxt/*.jpg', as: 'image' },
+          { path: '_nuxt/*.webp', as: 'image' },
+          { path: '_nuxt/*.png', as: 'image' },
+          { path: '404.html', as: 'document' }
+        ]
+      }
+    ],
     ['nuxt-cookie-control', {
       colors: {
         barTextColor: '#212121',

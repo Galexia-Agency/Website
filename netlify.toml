@@ -23,7 +23,6 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     Content-Security-Policy = "upgrade-insecure-requests"
 
-
 [[plugins]]
   package = "@netlify/plugin-sitemap"
   [plugins.inputs]
@@ -39,3 +38,6 @@
       './dist/404.html',
       './dist/locations/index.html'
     ]
+
+[[plugins]]
+  package = "netlify-plugin-cache-nuxt"
