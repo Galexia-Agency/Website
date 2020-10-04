@@ -1,5 +1,5 @@
 [build]
-  command = "npm run generate"
+  command = "npm run generate --no-optional"
   publish = "dist"
 
 [[redirects]]
@@ -33,6 +33,8 @@
   [plugins.inputs]
     buildDir = "dist"
     prettyURLs = true
+    # Append missing trailing slash to pretty URL
+    trailingSlash = true
     exclude = [
       # By file Path
       # './build-dir/path-to/file.html',
@@ -46,3 +48,6 @@
 
 [[plugins]]
   package = "netlify-plugin-cache-nuxt"
+
+[[plugins]]
+  package = "netlify-plugin-submit-sitemap"
