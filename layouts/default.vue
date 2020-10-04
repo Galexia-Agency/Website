@@ -770,7 +770,7 @@
           <div>
             <div class="footer--bottom_contact">
               <h4>Telephone</h4>
-              <a href="tel:+447477737535">07477737535</a>
+              <a href="tel:+07521 491222">07521 491222</a>
               <h4>Email</h4>
               <a href="mailto:info@galexia.agency">info@galexia.agency</a>
             </div>
