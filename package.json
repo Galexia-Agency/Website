@@ -18,6 +18,7 @@
     "@nuxtjs/pwa": "^3.0.2",
     "axios": "^0.19.2",
     "graphql": "^15.3.0",
+    "netlify-plugin-cache-nuxt": "0.0.1",
     "nuxt": "^2.14.6",
     "nuxt-cookie-control": "^1.9.5",
     "nuxt-netlify-http2-server-push": "^0.1.3",
