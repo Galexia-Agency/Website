@@ -119,7 +119,7 @@
       <div id="portfolio" class="grid column three maxWidth">
         <div v-for="(post, index) in posts" :key="index" class="card">
           <div class="card--inner">
-            <img :src="post.featuredImage.mediaItemUrl" width="100%" height="auto" loading="lazy" :alt="post.title">
+            <img :src="post.featuredImage.mediaItemUrl" width="100%" height="auto" :alt="post.title">
             <a v-if="post.ACFLink" :href="post.ACFLink.link" target="_blank" rel="noopener">
               <!--eslint-disable-next-line-->
               <h3 v-html="post.title" />
