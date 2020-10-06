@@ -111,9 +111,8 @@
   <div v-if="post.title" class="post">
     <div class="post--header" :style="'background-image:url(' + post.featuredImage.mediaItemUrl + ')'">
       <div class="background_opacity" />
-      <h1 class="maxWidth">
-        {{ post.title }}
-      </h1>
+      <!--eslint-disable-next-line-->
+      <h1 class="maxWidth" v-html="post.title" />
     </div>
     <section class="white">
       <div class="maxWidth">
@@ -197,13 +196,13 @@ export default {
   },
   head () {
     return {
-      title: this.post.title + ' | Blog',
+      title: this.post.title.replace('&#8217;', '\'') + ' | Blog',
       meta: [
         { hid: 'description', name: 'description', content: this.post.seo.metaDesc || this.post.excerpt },
-        { hid: 'og:title', property: 'og:title', content: this.post.title + ' | Blog' },
+        { hid: 'og:title', property: 'og:title', content: this.post.title.replace('&#8217;', '\'') + ' | Blog' },
         { hid: 'og:description', property: 'og:description', content: this.post.seo.metaDesc || this.post.excerpt },
         { hid: 'og:image', property: 'og:image', content: this.post.featuredImage.mediaItemUrl },
-        { hid: 'twitter:title', name: 'twitter:title', content: this.post.title + ' | Blog' },
+        { hid: 'twitter:title', name: 'twitter:title', content: this.post.title.replace('&#8217;', '\'') + ' | Blog' },
         { hid: 'twitter:description', name: 'twitter:description', content: this.post.seo.metaDesc || this.post.excerpt },
         { hid: 'twitter:img', name: 'twitter:img', content: this.post.featuredImage.mediaItemUrl }
       ],

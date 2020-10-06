@@ -64,9 +64,8 @@
         >
         <div class="post--content">
           <h3>
-            <nuxt-link :to="'/blog/' + post.slug + '/'">
-              {{ post.title }}
-            </nuxt-link>
+            <!--eslint-disable-next-line-->
+            <nuxt-link :to="'/blog/' + post.slug + '/'" v-html="post.title" />
             <time>
               {{ new Date(post.date).getDate() + " " + monthArr[new Date(post.date).getMonth()] + " '" + new Date(post.date).getFullYear().toString().substring(2) }}
             </time>
