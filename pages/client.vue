@@ -198,11 +198,9 @@ export default {
       return this.$route.query.logo
     }
   },
-  mounted () {
-    this.$parent.$parent.metaHelper.title = this.title
-  },
   head () {
     return {
+      title: this.title,
       meta: [
         { hid: 'robots', name: 'robots', content: 'noindex' }
       ]

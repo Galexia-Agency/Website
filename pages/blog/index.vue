@@ -98,10 +98,22 @@ export default {
       monthArr: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
     }
   },
-  beforeCreate () {
-    this.$parent.$parent.metaHelper.title = 'Blog'
-    this.$parent.$parent.metaHelper.description = 'Read our latest blog posts and learn about current trends in web development and marketing.'
-    this.$parent.$parent.metaHelper.url = 'https://galexia.agency/blog/'
+  head () {
+    return {
+      title: 'Blog',
+      meta: [
+        { hid: 'description', name: 'description', content: 'Read our latest blog posts and learn about current trends in web development and marketing.' },
+        { hid: 'og:title', property: 'og:title', content: 'Blog' },
+        { hid: 'og:description', property: 'og:description', content: 'Read our latest blog posts and learn about current trends in web development and marketing.' },
+        { hid: 'og:image', property: 'og:image', content: 'https://galexia.agency/android-chrome-512x512.png' },
+        { hid: 'twitter:title', name: 'twitter:title', content: 'Blog' },
+        { hid: 'twitter:description', name: 'twitter:description', content: 'Read our latest blog posts and learn about current trends in web development and marketing.' },
+        { hid: 'twitter:img', name: 'twitter:img', content: 'https://galexia.agency/android-chrome-512x512.png' }
+      ],
+      link: [
+        { hid: 'canonical', rel: 'canonical', href: 'https://galexia.agency/blog/' }
+      ]
+    }
   }
 }
 </script>

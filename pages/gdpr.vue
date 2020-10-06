@@ -36,10 +36,22 @@
 
 <script>
 export default {
-  beforeCreate () {
-    this.$parent.$parent.metaHelper.title = 'GDPR Statement'
-    this.$parent.$parent.metaHelper.description = 'Galexia Creative Agency Ltd\'s GDPR Statement'
-    this.$parent.$parent.metaHelper.url = 'https://galexia.agency/gdpr/'
+  head () {
+    return {
+      title: 'GDPR Statement',
+      meta: [
+        { hid: 'description', name: 'description', content: 'Galexia Creative Agency Ltd\'s GDPR Statement' },
+        { hid: 'og:title', property: 'og:title', content: 'GDPR Statement' },
+        { hid: 'og:description', property: 'og:description', content: 'Galexia Creative Agency Ltd\'s GDPR Statement' },
+        { hid: 'og:image', property: 'og:image', content: 'https://galexia.agency/android-chrome-512x512.png' },
+        { hid: 'twitter:title', name: 'twitter:title', content: 'GDPR Statement' },
+        { hid: 'twitter:description', name: 'twitter:description', content: 'Galexia Creative Agency Ltd\'s GDPR Statement' },
+        { hid: 'twitter:img', name: 'twitter:img', content: 'https://galexia.agency/android-chrome-512x512.png' }
+      ],
+      link: [
+        { hid: 'canonical', rel: 'canonical', href: 'https://galexia.agency/gdpr/' }
+      ]
+    }
   }
 }
 </script>

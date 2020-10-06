@@ -137,7 +137,7 @@
             :key="social"
             :network="social"
             :url="'https://galexia.agency' + $router.currentRoute.path"
-            :title="post.title + ' | Galexia Creative Agency Ltd specialising in Web Development and Marketing'"
+            :title="post.title + ' | Galexia Creative Agency Ltd Web Development, Marketing'"
             :description="post.excerpt"
             :media="post.featuredImage.mediaItemUrl"
             class="button"
@@ -186,25 +186,30 @@ export default {
       }
     }
   },
-  mounted () {
-    this.meta()
-  },
-  updated () {
-    this.meta()
-  },
   methods: {
-    meta () {
-      this.$parent.$parent.metaHelper.title = this.post.title
-      this.$parent.$parent.metaHelper.description = this.post.excerpt
-      this.$parent.$parent.metaHelper.image = this.post.featuredImage.mediaItemUrl
-      this.$parent.$parent.metaHelper.url = 'https://galexia.agency/blog/' + this.post.slug + '/'
-    },
     nativeShare () {
       navigator.share({
-        title: this.post.title + ' | Galexia Creative Agency Ltd specialising in Web Development and Marketing',
+        title: this.post.title + ' | Blog',
         text: this.post.excerpt,
         url: 'https://galexia.agency' + this.$router.currentRoute.path
       })
+    }
+  },
+  head () {
+    return {
+      title: this.post.title + ' | Blog',
+      meta: [
+        { hid: 'description', name: 'description', content: this.post.seo.metaDesc || this.post.excerpt },
+        { hid: 'og:title', property: 'og:title', content: this.post.title + ' | Blog' },
+        { hid: 'og:description', property: 'og:description', content: this.post.seo.metaDesc || this.post.excerpt },
+        { hid: 'og:image', property: 'og:image', content: this.post.featuredImage.mediaItemUrl },
+        { hid: 'twitter:title', name: 'twitter:title', content: this.post.title + ' | Blog' },
+        { hid: 'twitter:description', name: 'twitter:description', content: this.post.seo.metaDesc || this.post.excerpt },
+        { hid: 'twitter:img', name: 'twitter:img', content: this.post.featuredImage.mediaItemUrl }
+      ],
+      link: [
+        { hid: 'canonical', rel: 'canonical', href: 'https://galexia.agency/blog/' + this.post.slug + '/' }
+      ]
     }
   }
 }

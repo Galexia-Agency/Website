@@ -174,11 +174,6 @@ export default {
       posts: arr
     }
   },
-  beforeCreate () {
-    this.$parent.$parent.metaHelper.title = 'Home | Galexia Creative Agency Ltd specialising in Web Development and Marketing'
-    this.$parent.$parent.metaHelper.description = 'We are a creative agency specialising in website design development and marketing. We’re a fairly new company built from the ground up to help you grow.'
-    this.$parent.$parent.metaHelper.url = 'https://galexia.agency/'
-  },
   mounted () {
     if ('ontouchstart' in document.documentElement) {} else {
       // eslint-disable-next-line
@@ -202,6 +197,23 @@ export default {
         left: width * (i - 1),
         behavior: this.$parent.$parent.motion
       })
+    }
+  },
+  head () {
+    return {
+      title: 'Home',
+      meta: [
+        { hid: 'description', name: 'description', content: 'We are a creative agency specialising in website design development and marketing. We’re a fairly new company built from the ground up to help you grow.' },
+        { hid: 'og:title', property: 'og:title', content: 'Home' },
+        { hid: 'og:description', property: 'og:description', content: 'We are a creative agency specialising in website design development and marketing. We’re a fairly new company built from the ground up to help you grow.' },
+        { hid: 'og:image', property: 'og:image', content: 'https://galexia.agency/android-chrome-512x512.png' },
+        { hid: 'twitter:title', name: 'twitter:title', content: 'Home' },
+        { hid: 'twitter:description', name: 'twitter:description', content: 'We are a creative agency specialising in website design development and marketing. We’re a fairly new company built from the ground up to help you grow.' },
+        { hid: 'twitter:img', name: 'twitter:img', content: 'https://galexia.agency/android-chrome-512x512.png' }
+      ],
+      link: [
+        { hid: 'canonical', rel: 'canonical', href: 'https://galexia.agency/' }
+      ]
     }
   }
 }

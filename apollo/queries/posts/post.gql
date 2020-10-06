@@ -11,5 +11,8 @@ query Article($id: ID!) {
     featuredImage {
       mediaItemUrl
     }
+    seo {
+      metaDesc
+    }
   }
 }

@@ -44,10 +44,22 @@
 
 <script>
 export default {
-  beforeCreate () {
-    this.$parent.$parent.metaHelper.title = 'Cookie Policy'
-    this.$parent.$parent.metaHelper.description = 'Galexia Creative Agency Ltd\'s Cookie Policy'
-    this.$parent.$parent.metaHelper.url = 'https://galexia.agency/cookie-policy/'
+  head () {
+    return {
+      title: 'Cookie Policy',
+      meta: [
+        { hid: 'description', name: 'description', content: 'Galexia Creative Agency Ltd\'s Cookie Policy' },
+        { hid: 'og:title', property: 'og:title', content: 'Cookie Policy' },
+        { hid: 'og:description', property: 'og:description', content: 'Galexia Creative Agency Ltd\'s Cookie Policy' },
+        { hid: 'og:image', property: 'og:image', content: 'https://galexia.agency/android-chrome-512x512.png' },
+        { hid: 'twitter:title', name: 'twitter:title', content: 'Cookie Policy' },
+        { hid: 'twitter:description', name: 'twitter:description', content: 'Galexia Creative Agency Ltd\'s Cookie Policy' },
+        { hid: 'twitter:img', name: 'twitter:img', content: 'https://galexia.agency/android-chrome-512x512.png' }
+      ],
+      link: [
+        { hid: 'canonical', rel: 'canonical', href: 'https://galexia.agency/cookie-policy/' }
+      ]
+    }
   }
 }
 </script>
