@@ -38,7 +38,22 @@
       'dist/our-team/index.html',
       'dist/client/index.html',
       'dist/404.html',
-      'dist/locations/index.html'
+      'dist/locations/',
+
+      'dist/our-team/',
+      'dist/client/',
+      'dist/404/',
+      'dist/locations/',
+
+      './dist/our-team/index.html',
+      './dist/client/index.html',
+      './dist/404.html',
+      './dist/locations/',
+
+      './dist/our-team/',
+      './dist/client/',
+      './dist/404/',
+      './dist/locations/'
     ]
 
 [[plugins]]
