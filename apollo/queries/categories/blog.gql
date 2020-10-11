@@ -1,5 +1,5 @@
 query Blog {
-  posts(where: {categoryName: "Blog"}) {
+  posts(where: {categoryName: "Blog", status: PUBLISH}) {
     nodes {
       title
       author {

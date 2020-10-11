@@ -33,13 +33,12 @@
   [plugins.inputs]
     buildDir = "dist"
     prettyURLs = true
-    # Append missing trailing slash to pretty URL
     trailingSlash = true
     exclude = [
-      './dist/our-team/',
-      './dist/client/',
-      './dist/404/',
-      './dist/locations/'
+      './dist/our-team/index.html',
+      './dist/client/index.html',
+      './dist/404.html',
+      './dist/locations/index.html'
     ]
 
 [[plugins]]
