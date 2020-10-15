@@ -425,6 +425,20 @@
     text-decoration: underline
   }
 
+  /* Legal */
+  .legal h1 {
+    font-size: 2rem
+  }
+  .legal h2 {
+    font-size: 1.5rem;
+    text-align: left;
+    padding: 0;
+    margin: .83em auto
+  }
+  .legal h3 {
+    font-size: 1.33rem
+  }
+
   @media (max-width: 1435px) {
     .footer--copyrightInner {
       padding: 0 4rem
@@ -709,9 +723,6 @@
           <nuxt-link to="/web/" class="nav--link">
             Web
           </nuxt-link>
-          <nuxt-link to="/marketing/" class="nav--link">
-            Marketing
-          </nuxt-link>
           <nuxt-link to="/blog/" class="nav--link">
             Blog
           </nuxt-link>
@@ -731,7 +742,7 @@
       <CookieControl>
         <template v-slot:bar>
           <p>
-            We use cookies and other tracking technologies to improve your browsing experience on our site, analyze site traffic, and understand where our audience is coming from. To find out more, please read our <nuxt-link to="/Cookie-Policy">
+            We use cookies and other tracking technologies to improve your browsing experience on our site, analyze site traffic, and understand where our audience is coming from. To find out more, please read our <nuxt-link to="/legal/cookie-policy/">
               Cookie Policy
             </nuxt-link>.
           </p>
@@ -753,17 +764,8 @@
               <nuxt-link class="footer--bottom_navLink" to="/hosting/">
                 Hosting
               </nuxt-link>
-              <nuxt-link class="footer--bottom_navLink" to="/privacy-policy/">
-                Privacy Policy
-              </nuxt-link>
-              <nuxt-link class="footer--bottom_navLink" to="/cookie-policy/">
-                Cookie Policy
-              </nuxt-link>
-              <nuxt-link class="footer--bottom_navLink" to="/terms/">
-                Terms of Service
-              </nuxt-link>
-              <nuxt-link class="footer--bottom_navLink" to="/gdpr/">
-                GDPR Statement
+              <nuxt-link class="footer--bottom_navLink" to="/legal/">
+                Legal
               </nuxt-link>
             </div>
           </div>

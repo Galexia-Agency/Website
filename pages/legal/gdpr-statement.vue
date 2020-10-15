@@ -1,11 +1,14 @@
 <template>
-  <section class="white">
+  <section class="white legal">
     <div class="maxWidth">
       <h1>GDPR Statement</h1>
-      <p>Last updated: <b>7 July 2020</b>.</p>
-      <p>We are a Data Controller of your information.</p>
+      <p>Last updated: <strong>15 October 2020</strong>.</p>
+      <h2>Overview</h2>
+      <p>The General Data Protection Regulation (GDPR) is the most significant legislative change in European data protection laws since the EU Data Protection Directive (Directive 95/46/EC), introduced in 1995. The GDPR became enforceable on May 25, 2018, strengthens the security and protection of personal data in the EU and serves as a single piece of legislation for all of the EU. It replaced the EU Data Protection Directive and all the local laws relating to it.</p>
+      <p>Galexia Creative Agency Ltd supports the GDPR and all Galexia Creative Agency Ltd services comply with its provisions. Not only is the GDPR an important step in protecting the fundamental right of privacy for European citizens, it has raised the bar for data protection, security and compliance in the industry.</p>
+      <h2>Statement</h2>
       <p>
-        Galexia Creative Agency Ltd legal basis for collecting and using the personal information described in the <nuxt-link to="/privacy-policy/">
+        Galexia Creative Agency Ltd's legal basis for collecting and using the personal information described in the <nuxt-link to="/legal/privacy-policy/">
           Privacy Policy
         </nuxt-link> depends on the Personal Information we collect and the specific context in which we collect the information:
       </p>
@@ -15,7 +18,7 @@
         <li>Processing your personal information is in Galexia Creative Agency Ltd legitimate interests</li>
         <li>Galexia Creative Agency Ltd needs to comply with the law</li>
         <li>
-          Galexia Creative Agency Ltd will retain your personal information only for as long as is necessary for the purposes set out in the <nuxt-link to="/privacy-policy/">
+          Galexia Creative Agency Ltd will retain your personal information only for as long as is necessary for the purposes set out in the <nuxt-link to="/legal/privacy-policy/">
             Privacy Policy
           </nuxt-link>. We will retain and use your information to the extent necessary to comply with our legal obligations, resolve disputes, and enforce our policies.
         </li>
@@ -30,6 +33,7 @@
         <li>The right to data portability</li>
         <li>The right to withdraw consent</li>
       </ul>
+      <p>This statement is effective as of <strong>2 September 2020</strong>.</p>
     </div>
   </section>
 </template>
@@ -38,18 +42,18 @@
 export default {
   head () {
     return {
-      title: 'GDPR Statement',
+      title: 'GDPR Statement | Legal',
       meta: [
         { hid: 'description', name: 'description', content: 'Galexia Creative Agency Ltd\'s GDPR Statement' },
-        { hid: 'og:title', property: 'og:title', content: 'GDPR Statement' },
+        { hid: 'og:title', property: 'og:title', content: 'GDPR Statement | Legal' },
         { hid: 'og:description', property: 'og:description', content: 'Galexia Creative Agency Ltd\'s GDPR Statement' },
         { hid: 'og:image', property: 'og:image', content: 'https://galexia.agency/android-chrome-512x512.png' },
-        { hid: 'twitter:title', name: 'twitter:title', content: 'GDPR Statement' },
+        { hid: 'twitter:title', name: 'twitter:title', content: 'GDPR Statement | Legal' },
         { hid: 'twitter:description', name: 'twitter:description', content: 'Galexia Creative Agency Ltd\'s GDPR Statement' },
         { hid: 'twitter:img', name: 'twitter:img', content: 'https://galexia.agency/android-chrome-512x512.png' }
       ],
       link: [
-        { hid: 'canonical', rel: 'canonical', href: 'https://galexia.agency/gdpr/' }
+        { hid: 'canonical', rel: 'canonical', href: 'https://galexia.agency/legal/gdpr-statement/' }
       ]
     }
   }

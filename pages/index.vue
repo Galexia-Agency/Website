@@ -75,7 +75,7 @@
   <div>
     <Header
       title="Let us focus on your content so you can focus on your <i>business</i>"
-      desc="We are a creative agency specialising in website design, development and marketing. We’re a fairly new company built from the ground up to help you grow. We use the latest and greatest practices and technologies so that we can pass on these benefits to you. What’s more, you don’t have to worry about anything, we take care of the whole process so you can carry on running your business."
+      desc="We are a creative agency specialising in website design and development. We’re a fairly new company built from the ground up to help you grow. We use the latest and greatest practices and technologies so that we can pass on these benefits to you. What’s more, you don’t have to worry about anything, we take care of the whole process so you can carry on running your business."
     />
     <section class="white">
       <h2 class="maxWidth">
@@ -105,7 +105,7 @@
         <div>
           <h3>Launch day. More business for you, another happy customer for us</h3>
           <p class="text--normal">
-            We love to keep in touch with our clients, even after the initial project has finished. We’re happy to offer continued maintenance plans on our websites or monitoring on marketing strategies. We even have a community where past clients can discuss and share their websites.
+            We love to keep in touch with our clients, even after the initial project has finished. We’re happy to offer continued maintenance plans on our websites. We even have a community where past clients can discuss and share their websites.
           </p>
         </div>
         <!--eslint-disable-next-line-->
@@ -203,12 +203,12 @@ export default {
     return {
       title: 'Home',
       meta: [
-        { hid: 'description', name: 'description', content: 'We are a creative agency specialising in website design development and marketing. We’re a fairly new company built from the ground up to help you grow.' },
+        { hid: 'description', name: 'description', content: 'We are a creative agency specialising in website design and development. We’re a fairly new company built from the ground up to help you grow.' },
         { hid: 'og:title', property: 'og:title', content: 'Home' },
-        { hid: 'og:description', property: 'og:description', content: 'We are a creative agency specialising in website design development and marketing. We’re a fairly new company built from the ground up to help you grow.' },
+        { hid: 'og:description', property: 'og:description', content: 'We are a creative agency specialising in website design and development. We’re a fairly new company built from the ground up to help you grow.' },
         { hid: 'og:image', property: 'og:image', content: 'https://galexia.agency/android-chrome-512x512.png' },
         { hid: 'twitter:title', name: 'twitter:title', content: 'Home' },
-        { hid: 'twitter:description', name: 'twitter:description', content: 'We are a creative agency specialising in website design development and marketing. We’re a fairly new company built from the ground up to help you grow.' },
+        { hid: 'twitter:description', name: 'twitter:description', content: 'We are a creative agency specialising in website design and development. We’re a fairly new company built from the ground up to help you grow.' },
         { hid: 'twitter:img', name: 'twitter:img', content: 'https://galexia.agency/android-chrome-512x512.png' }
       ],
       link: [

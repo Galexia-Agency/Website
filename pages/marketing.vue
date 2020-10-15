@@ -142,7 +142,8 @@ export default {
         { hid: 'og:image', property: 'og:image', content: 'https://galexia.agency/android-chrome-512x512.png' },
         { hid: 'twitter:title', name: 'twitter:title', content: 'Marketing' },
         { hid: 'twitter:description', name: 'twitter:description', content: 'However you wish to pursue your business marketing is vital in finding and retaining customers.' },
-        { hid: 'twitter:img', name: 'twitter:img', content: 'https://galexia.agency/android-chrome-512x512.png' }
+        { hid: 'twitter:img', name: 'twitter:img', content: 'https://galexia.agency/android-chrome-512x512.png' },
+        { hid: 'robots', name: 'robots', content: 'noindex' }
       ],
       link: [
         { hid: 'canonical', rel: 'canonical', href: 'https://galexia.agency/marketing/' }

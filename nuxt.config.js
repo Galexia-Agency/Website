@@ -4,7 +4,7 @@ export default {
    ** Headers of the page
    */
   head: {
-    titleTemplate: '%s | Galexia Creative Agency Ltd Web Development, Marketing',
+    titleTemplate: '%s | Galexia Creative Agency Ltd | Web Design and Development',
     htmlAttrs: {
       lang: 'en-GB'
     },
@@ -21,7 +21,7 @@ export default {
       // Twitter Card data
       { name: 'twitter:card', content: 'summary_large_image' },
       { name: 'twitter:site', content: '@galexia_agency' },
-      { hid: 'twitter:title', name: 'twitter:title', template: chunk => `${chunk} | Galexia Creative Agency Ltd, Web Development, Marketing` },
+      { hid: 'twitter:title', name: 'twitter:title', template: chunk => `${chunk} | Galexia Creative Agency Ltd | Web Design and Development` },
       { hid: 'twitter:description', name: 'twitter:description' },
       { hid: 'twitter:image', name: 'twitter:image' },
 
@@ -29,7 +29,7 @@ export default {
       { property: 'og:type', content: 'website' },
       { property: 'og:site_name', content: 'Galexia | Creative Agency' },
       { hid: 'og:description', property: 'og:description' },
-      { hid: 'og:title', property: 'og:title', template: chunk => `${chunk} | Galexia Creative Agency Ltd, Web Development, Marketing` },
+      { hid: 'og:title', property: 'og:title', template: chunk => `${chunk} | Galexia Creative Agency Ltd | Web Design and Development` },
       { hid: 'og:image', property: 'og:image' },
       { property: 'og:url', content: 'https://galexia.agency' },
       { property: 'fb:app_id', content: '249903496015229' }

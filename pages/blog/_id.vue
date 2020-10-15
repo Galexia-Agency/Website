@@ -117,14 +117,14 @@
     <section class="white">
       <div class="maxWidth">
         <div class="post--meta">
-          <p>Author: <b>{{ post.author.name }}</b></p>
+          <p>Author: <strong>{{ post.author.name }}</strong></p>
           <p>
             Published on:
-            <b>
+            <strong>
               <time>
                 {{ new Date(post.date).getDate() + " " + monthArr[new Date(post.date).getMonth()] + " '" + new Date(post.date).getFullYear().toString().substring(2) }}
               </time>
-            </b>
+            </strong>
           </p>
         </div>
         <!--eslint-disable-next-line-->
@@ -136,7 +136,7 @@
             :key="social"
             :network="social"
             :url="'https://galexia.agency' + $router.currentRoute.path"
-            :title="post.title + ' | Galexia Creative Agency Ltd Web Development, Marketing'"
+            :title="post.title + ' | Galexia Creative Agency Ltd | Web Design and Development'"
             :description="post.excerpt"
             :media="post.featuredImage.mediaItemUrl"
             class="button"

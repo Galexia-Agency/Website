@@ -70,7 +70,7 @@
               {{ new Date(post.date).getDate() + " " + monthArr[new Date(post.date).getMonth()] + " '" + new Date(post.date).getFullYear().toString().substring(2) }}
             </time>
           </h3>
-          <p>Author: <b>{{ post.author.name }}</b></p>
+          <p>Author: <strong>{{ post.author.name }}</strong></p>
           <!--eslint-disable-next-line-->
           <div v-html="post.excerpt" class="text--normal"/>
         </div>
@@ -101,12 +101,12 @@ export default {
     return {
       title: 'Blog',
       meta: [
-        { hid: 'description', name: 'description', content: 'Read our latest blog posts and learn about current trends in web development and marketing.' },
+        { hid: 'description', name: 'description', content: 'Read our latest blog posts and learn about current trends in web design and development.' },
         { hid: 'og:title', property: 'og:title', content: 'Blog' },
-        { hid: 'og:description', property: 'og:description', content: 'Read our latest blog posts and learn about current trends in web development and marketing.' },
+        { hid: 'og:description', property: 'og:description', content: 'Read our latest blog posts and learn about current trends in web design and development.' },
         { hid: 'og:image', property: 'og:image', content: 'https://galexia.agency/android-chrome-512x512.png' },
         { hid: 'twitter:title', name: 'twitter:title', content: 'Blog' },
-        { hid: 'twitter:description', name: 'twitter:description', content: 'Read our latest blog posts and learn about current trends in web development and marketing.' },
+        { hid: 'twitter:description', name: 'twitter:description', content: 'Read our latest blog posts and learn about current trends in web design and development.' },
         { hid: 'twitter:img', name: 'twitter:img', content: 'https://galexia.agency/android-chrome-512x512.png' }
       ],
       link: [

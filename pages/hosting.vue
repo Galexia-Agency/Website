@@ -190,7 +190,7 @@
             </h3>
             <ul>
               <li>
-                <b>Near limitless storage</b>
+                <strong>Near limitless storage</strong>
                 <v-popover placement="top">
                   <font-awesome-icon icon="question" />
                   <template slot="popover">
@@ -199,7 +199,7 @@
                 </v-popover>
               </li>
               <li>
-                <b>Near limitless network transfer</b>
+                <strong>Near limitless network transfer</strong>
                 <v-popover placement="top">
                   <font-awesome-icon icon="question" />
                   <template slot="popover">
@@ -208,20 +208,11 @@
                 </v-popover>
               </li>
               <li>
-                <b>No monthly visitor cap</b>
+                <strong>No monthly visitor cap</strong>
                 <v-popover placement="top">
                   <font-awesome-icon icon="question" />
                   <template slot="popover">
                     <span>How many users visit your site in a month</span>
-                  </template>
-                </v-popover>
-              </li>
-              <li>
-                99.9% Uptime SLA with performance monitoring
-                <v-popover placement="top">
-                  <font-awesome-icon icon="question" />
-                  <template slot="popover">
-                    <span>Your website will be available for viewers almost all of the time. There may be very minor outages</span>
                   </template>
                 </v-popover>
               </li>
@@ -272,7 +263,7 @@
               </li>
             </ul>
             <p class="terms">
-              <b>* Free with any WordPress hosting plan otherwise £5/month</b>
+              <strong>* Free with any WordPress hosting plan otherwise £5/month</strong>
             </p>
           </div>
         </div>
@@ -293,7 +284,7 @@
             </div>
             <ul>
               <li>
-                <b>5GB SSD storage</b>
+                <strong>5GB SSD storage</strong>
                 <v-popover placement="top">
                   <font-awesome-icon icon="question" />
                   <template slot="popover">
@@ -302,7 +293,7 @@
                 </v-popover>
               </li>
               <li>
-                <b>5GB network transfer</b>
+                <strong>5GB network transfer</strong>
                 <v-popover placement="top">
                   <font-awesome-icon icon="question" />
                   <template slot="popover">
@@ -311,7 +302,7 @@
                 </v-popover>
               </li>
               <li>
-                <b>5k monthly visitor cap</b>
+                <strong>5k monthly visitor cap</strong>
                 <v-popover placement="top">
                   <font-awesome-icon icon="question" />
                   <template slot="popover">
@@ -329,7 +320,8 @@
                 </v-popover>
               </li>
               <li>
-                98% Uptime SLA with performance monitoring
+                <!--eslint-disable-next-line-->
+                98% Uptime <nuxt-link to="/legal/wordpress-service-level-agreement">SLA</nuxt-link> with performance monitoring
                 <v-popover placement="top">
                   <font-awesome-icon icon="question" />
                   <template slot="popover">
@@ -351,7 +343,7 @@
                 <v-popover placement="top">
                   <font-awesome-icon icon="question" />
                   <template slot="popover">
-                    <span>Cutting edge version of HTTP which uses QUIC as it\'s engine</span>
+                    <span>Cutting edge version of HTTP which uses QUIC as it's engine</span>
                   </template>
                 </v-popover>
               </li>
@@ -373,7 +365,7 @@
                   </template>
                 </v-popover>
               </li>
-              <li><b>WordPress Maintenance (See below)</b></li>
+              <li><strong>WordPress Maintenance (See below)</strong></li>
             </ul>
           </div>
         </div>
@@ -394,7 +386,7 @@
             </div>
             <ul>
               <li>
-                <b>Near limitless SSD storage</b>
+                <strong>Near limitless SSD storage</strong>
                 <v-popover placement="top">
                   <font-awesome-icon icon="question" />
                   <template slot="popover">
@@ -403,7 +395,7 @@
                 </v-popover>
               </li>
               <li>
-                <b>Near limitless network transfer</b>
+                <strong>Near limitless network transfer</strong>
                 <v-popover placement="top">
                   <font-awesome-icon icon="question" />
                   <template slot="popover">
@@ -412,7 +404,7 @@
                 </v-popover>
               </li>
               <li>
-                <b>No monthly visitor cap</b>
+                <strong>No monthly visitor cap</strong>
                 <v-popover placement="top">
                   <font-awesome-icon icon="question" />
                   <template slot="popover">
@@ -430,7 +422,8 @@
                 </v-popover>
               </li>
               <li>
-                98% Uptime SLA with performance monitoring
+                <!--eslint-disable-next-line-->
+                98% Uptime <nuxt-link to="/legal/wordpress-service-level-agreement">SLA</nuxt-link> with performance monitoring
                 <v-popover placement="top">
                   <font-awesome-icon icon="question" />
                   <template slot="popover">
@@ -452,7 +445,7 @@
                 <v-popover placement="top">
                   <font-awesome-icon icon="question" />
                   <template slot="popover">
-                    <span>Cutting edge version of HTTP which uses QUIC as it\'s engine</span>
+                    <span>Cutting edge version of HTTP which uses QUIC as it's engine</span>
                   </template>
                 </v-popover>
               </li>
@@ -474,8 +467,8 @@
                   </template>
                 </v-popover>
               </li>
-              <li><b>WordPress Maintenance (See below)</b></li>
-              <li><b>WordPress Backups (See below)</b></li>
+              <li><strong>WordPress Maintenance (See below)</strong></li>
+              <li><strong>WordPress Backups (See below)</strong></li>
             </ul>
           </div>
         </div>
@@ -619,7 +612,7 @@
     <section>
       <h2>Domains</h2>
       <p class="desc" style="margin-bottom: 1rem">
-        <b>1 Free Wildcard SSL Certificate included</b>
+        <strong>1 Free Wildcard SSL Certificate included</strong>
       </p>
       <p class="desc">
         We continually monitor the market to find the best deals so that we can pass on these savings to you. This will be updated in your yearly domain invoice.
@@ -663,7 +656,8 @@
         </div>
       </div>
     </section>
-    <section style="display: none">
+    <!--
+    <section>
       <h2>Emails</h2>
       <p class="desc">
         We offer a range of email services provided by both G-Suite and Microsoft 365.
@@ -689,7 +683,7 @@
               <li>Meet</li>
               <li>Chat</li>
               <li>Calendar</li>
-              <li>Drive <b>30 GB</b> cloud storage</li>
+              <li>Drive <strong>30 GB</strong> cloud storage</li>
               <li>Docs</li>
               <li>Sheets</li>
               <li>Slides</li>
@@ -721,7 +715,7 @@
               <li>Excel Online</li>
               <li>PowerPoint Online</li>
               <li>Exchange</li>
-              <li>OneDrive <b>1TB</b> Cloud Storage</li>
+              <li>OneDrive <strong>1TB</strong> Cloud Storage</li>
               <li>SharePoint</li>
               <li>Teams</li>
             </ul>
@@ -750,7 +744,7 @@
               <li>Publisher</li>
               <li>Access</li>
               <li>Exchange</li>
-              <li>OneDrive <b>1TB</b> Cloud Storage</li>
+              <li>OneDrive <strong>1TB</strong> Cloud Storage</li>
               <li>SharePoint</li>
               <li>Teams</li>
             </ul>
@@ -758,6 +752,7 @@
         </div>
       </div>
     </section>
+    -->
   </div>
 </template>
 
