@@ -5,17 +5,17 @@
       <p>Last updated: <b>7 July 2020</b>.</p>
       <p>We are a Data Controller of your information.</p>
       <p>
-        Galexia Ltd legal basis for collecting and using the personal information described in the <nuxt-link to="/privacy-policy/">
+        Galexia Creative Agency Ltd legal basis for collecting and using the personal information described in the <nuxt-link to="/privacy-policy/">
           Privacy Policy
         </nuxt-link> depends on the Personal Information we collect and the specific context in which we collect the information:
       </p>
       <ul>
-        <li>Galexia Ltd needs to perform a contract with you</li>
-        <li>You have given Galexia Ltd permission to do so</li>
-        <li>Processing your personal information is in Galexia Ltd legitimate interests</li>
-        <li>Galexia Ltd needs to comply with the law</li>
+        <li>Galexia Creative Agency Ltd needs to perform a contract with you</li>
+        <li>You have given Galexia Creative Agency Ltd permission to do so</li>
+        <li>Processing your personal information is in Galexia Creative Agency Ltd legitimate interests</li>
+        <li>Galexia Creative Agency Ltd needs to comply with the law</li>
         <li>
-          Galexia Ltd will retain your personal information only for as long as is necessary for the purposes set out in the <nuxt-link to="/privacy-policy/">
+          Galexia Creative Agency Ltd will retain your personal information only for as long as is necessary for the purposes set out in the <nuxt-link to="/privacy-policy/">
             Privacy Policy
           </nuxt-link>. We will retain and use your information to the extent necessary to comply with our legal obligations, resolve disputes, and enforce our policies.
         </li>

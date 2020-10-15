@@ -61,7 +61,7 @@ export default {
           "@context": "http://schema.org",
           "@type": "Organization",
           "name": "Galexia",
-          "legalName" : "Galexia Ltd",
+          "legalName" : "Galexia Creative Agency Ltd",
           "foundingDate": "2020",
           "founder": {
             "@type": "Person",
