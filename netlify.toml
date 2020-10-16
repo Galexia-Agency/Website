@@ -39,7 +39,7 @@
       './dist/client/index.html',
       './dist/marketing/index.html',
       './dist/404.html',
-      './dist/locations/'
+      './dist/locations/index.html'
     ]
 
 [[plugins]]
