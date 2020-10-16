@@ -321,7 +321,7 @@
               </li>
               <li>
                 <!--eslint-disable-next-line-->
-                98% Uptime <nuxt-link to="/legal/wordpress-service-level-agreement">SLA</nuxt-link> with performance monitoring
+                98% Uptime <nuxt-link to="/legal/service-level-agreement">SLA</nuxt-link> with performance monitoring
                 <v-popover placement="top">
                   <font-awesome-icon icon="question" />
                   <template slot="popover">
@@ -423,7 +423,7 @@
               </li>
               <li>
                 <!--eslint-disable-next-line-->
-                98% Uptime <nuxt-link to="/legal/wordpress-service-level-agreement">SLA</nuxt-link> with performance monitoring
+                98% Uptime <nuxt-link to="/legal/service-level-agreement">SLA</nuxt-link> with performance monitoring
                 <v-popover placement="top">
                   <font-awesome-icon icon="question" />
                   <template slot="popover">
