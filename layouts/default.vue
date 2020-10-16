@@ -438,6 +438,14 @@
   .legal h3 {
     font-size: 1.33rem
   }
+  @media print {
+    .cookieControl, nav, .footer--bottom, .socialLinks {
+      display: none
+    }
+    .footer--copyrightInner {
+      color: #212121
+    }
+  }
 
   @media (max-width: 1435px) {
     .footer--copyrightInner {
