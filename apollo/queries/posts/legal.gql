@@ -1,0 +1,8 @@
+query Article($id: ID!) {
+  post(id: $id, idType: SLUG) {
+    title
+    content
+    slug
+    modified
+  }
+}

@@ -11,40 +11,12 @@
     <div class="maxWidth">
       <h1>Legal</h1>
       <ul>
-        <li>
-          <nuxt-link to="/legal/cookie-policy/">
-            Cookie Policy
-          </nuxt-link>
-        </li>
-        <li>
-          <nuxt-link to="/legal/privacy-policy/">
-            Privacy Policy
-          </nuxt-link>
-        </li>
-        <li>
-          <nuxt-link to="/legal/gdpr-statement/">
-            GDPR Statement
-          </nuxt-link>
-        </li>
-        <li>
-          <nuxt-link to="/legal/data-processing-agreement/">
-            Data Processing Agreement
-          </nuxt-link>
-        </li>
-        <li>
-          <nuxt-link to="/legal/terms-of-service/">
-            Terms of Service
-          </nuxt-link>
-        </li>
-        <li>
-          <nuxt-link to="/legal/service-level-agreement/">
-            Service Level Agreement
-          </nuxt-link>
-        </li>
-        <li>
-          <nuxt-link to="/legal/acceptable-use-policy/">
-            Acceptable Use Policy
-          </nuxt-link>
+        <li v-for="(post, index) in posts" :key="index" class="post">
+          <div style="display: none">
+            {{ post = JSON.parse(JSON.stringify(post).replace(new RegExp('\\[', 'g'),"").replace(new RegExp('\\]', 'g'),"")) }}
+          </div>
+          <!--eslint-disable-next-line-->
+          <nuxt-link :to="'/legal/' + post.slug + '/'" v-html="post.title" />
         </li>
       </ul>
     </div>
@@ -52,7 +24,17 @@
 </template>
 
 <script>
+import query from '~/apollo/queries/categories/legal.gql'
+
 export default {
+  async asyncData ({ app }) {
+    const response = await app.apolloProvider.defaultClient.query({
+      query
+    })
+    return {
+      posts: response.data.posts.nodes
+    }
+  },
   head () {
     return {
       title: 'Legal',

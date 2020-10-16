@@ -155,7 +155,7 @@
 </template>
 
 <script>
-import postQuery from '~/apollo/queries/posts/post.gql'
+import postQuery from '~/apollo/queries/posts/blog.gql'
 
 export default {
   async asyncData ({ app, route }) {
