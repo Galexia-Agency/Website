@@ -436,7 +436,9 @@
     margin: .83em auto
   }
   .legal h3 {
-    font-size: 1.33rem
+    font-size: 1.33rem;
+    opacity: .75;
+    font-weight: normal
   }
   @media print {
     .cookieControl, nav, .footer--bottom, .socialLinks {
