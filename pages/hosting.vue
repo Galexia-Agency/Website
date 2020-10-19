@@ -656,103 +656,12 @@
         </div>
       </div>
     </section>
-    <!--
     <section>
       <h2>Emails</h2>
       <p class="desc">
-        We offer a range of email services provided by both G-Suite and Microsoft 365.
+        We are able to offer up to 10 forwarding addresses for free with the purchase of any hosting plan. If you require separate mailboxes, you will have to find an external provider. If we manage your domain we are happy to update DNS records as required.
       </p>
-      <div class="grid column maxWidth three">
-        <div class="card white">
-          <div class="card--inner">
-            <h4 class="title">
-              G-Suite
-            </h4>
-            <div class="price">
-              <transition name="fade" appear mode="out-in">
-                <h3 v-if="yearly" key="eight">
-                  £72/year
-                </h3>
-                <h3 v-else>
-                  £6/month
-                </h3>
-              </transition>
-            </div>
-            <ul>
-              <li>Gmail</li>
-              <li>Meet</li>
-              <li>Chat</li>
-              <li>Calendar</li>
-              <li>Drive <strong>30 GB</strong> cloud storage</li>
-              <li>Docs</li>
-              <li>Sheets</li>
-              <li>Slides</li>
-              <li>Forms</li>
-              <li>Sites</li>
-              <li>Keep</li>
-              <li>Currents</li>
-            </ul>
-          </div>
-        </div>
-        <div class="card white">
-          <div class="card--inner">
-            <h4 class="title">
-              Microsoft 365 Basic
-            </h4>
-            <div class="price">
-              <transition name="fade" appear mode="out-in">
-                <h3 v-if="yearly" key="eleven">
-                  £72/year <span>(SAVE £12)</span>
-                </h3>
-                <h3 v-else>
-                  £7/month
-                </h3>
-              </transition>
-            </div>
-            <ul>
-              <li>Outlook Online</li>
-              <li>Word Online</li>
-              <li>Excel Online</li>
-              <li>PowerPoint Online</li>
-              <li>Exchange</li>
-              <li>OneDrive <strong>1TB</strong> Cloud Storage</li>
-              <li>SharePoint</li>
-              <li>Teams</li>
-            </ul>
-          </div>
-        </div>
-        <div class="card white">
-          <div class="card--inner">
-            <h4 class="title">
-              Microsoft 365 Standard
-            </h4>
-            <div class="price">
-              <transition name="fade" appear mode="out-in">
-                <h3 v-if="yearly" key="twelve">
-                  £168/year <span>(SAVE £24)</span>
-                </h3>
-                <h3 v-else>
-                  £16/month
-                </h3>
-              </transition>
-            </div>
-            <ul>
-              <li>Outlook</li>
-              <li>Word</li>
-              <li>Excel</li>
-              <li>PowerPoint</li>
-              <li>Publisher</li>
-              <li>Access</li>
-              <li>Exchange</li>
-              <li>OneDrive <strong>1TB</strong> Cloud Storage</li>
-              <li>SharePoint</li>
-              <li>Teams</li>
-            </ul>
-          </div>
-        </div>
-      </div>
     </section>
-    -->
   </div>
 </template>
 
