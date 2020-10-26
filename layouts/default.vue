@@ -869,6 +869,7 @@ export default {
     document.documentElement.classList.add('nav_close')
     await this.fetchItem()
     this.motion = await window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'
+    this.background()
   },
   methods: {
     background () {
