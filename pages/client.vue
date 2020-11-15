@@ -57,12 +57,6 @@
   .card {
     grid-column: span 2
   }
-  .card:nth-of-type(4) {
-    grid-column: 2 / 4
-  }
-  .card:nth-of-type(5) {
-    grid-column: 4 / 6
-  }
   form {
     grid-gap: 2rem;
     place-items: start;
@@ -88,9 +82,6 @@
     .card--container {
       grid-template-columns: 1fr 1fr;
       grid-template-rows: auto
-    }
-    .card, .card:nth-of-type(4), .card:nth-of-type(5) {
-      grid-column: span 1
     }
   }
   @media (max-width: 800px) {
@@ -132,9 +123,9 @@
             </div>
             <div class="card white">
               <div class="card--inner">
-                <h2>Join our mailing list</h2>
-                <p>You'll receive all our latest blog posts about how best to optimize your site straight to your inbox. You can unsubscribe at any time.</p>
-                <a href="http://eepurl.com/hbgVZL" target="_blank" rel="noopener noreferrer" class="button">Signup</a>
+                <h2>Book a call</h2>
+                <p>Book a time to have a chat about your website.</p>
+                <a href="https://calendly.com/galexia/phone-call" target="_blank" rel="noopener noreferrer" class="button">Book Now</a>
               </div>
             </div>
             <div class="card white">
@@ -142,6 +133,13 @@
                 <h2>Transfer us some files</h2>
                 <p>Need to send us something? We have that covered.</p>
                 <a href="https://wetransfer.com/?to=info@galexia.agency&msg=Hey%20Galexia,%20Here%27s%20those%20files%20you%20requested!" target="_blank" rel="noopener noreferrer" class="button">Transfer</a>
+              </div>
+            </div>
+            <div class="card white">
+              <div class="card--inner">
+                <h2>Join our mailing list</h2>
+                <p>You'll receive all our latest blog posts about how best to optimize your site straight to your inbox. You can unsubscribe at any time.</p>
+                <a href="http://eepurl.com/hbgVZL" target="_blank" rel="noopener noreferrer" class="button">Signup</a>
               </div>
             </div>
             <div class="card white">
