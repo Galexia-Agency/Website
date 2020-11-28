@@ -661,8 +661,102 @@
     <section>
       <h2>Emails</h2>
       <p class="desc">
-        We are able to offer up to 10 forwarding addresses for free with the purchase of any hosting plan. If you require separate mailboxes, you will have to find an external provider. If we manage your domain we are happy to update DNS records as required.
+        We are able to offer up to 10 forwarding addresses for free with the purchase of any hosting plan.
       </p>
+      <div class="grid column maxWidth three">
+        <div class="card white">
+          <div class="card--inner">
+            <h4 class="title">
+              1 G-Suite User
+            </h4>
+            <div class="price">
+              <transition name="fade" appear mode="out-in">
+                <h3 v-if="yearly" key="eight">
+                  £80/year <span>(SAVE £10)</span>
+                </h3>
+                <h3 v-else>
+                  £7.50/month
+                </h3>
+              </transition>
+            </div>
+            <ul>
+              <li class="overflow">
+                What is a user?
+                <v-popover placement="top">
+                  <font-awesome-icon icon="question" />
+                  <template slot="popover">
+                    <span>A user is defined as one personalised email address (you@yourcompany). Group email aliases such as sales@yourcompany and support@yourcompany are included in pricing and don't count as additional users.</span>
+                  </template>
+                </v-popover>
+              </li>
+              <li>
+                Gmail Business Email
+              </li>
+              <li>
+                Meet Video and voice conferencing
+              </li>
+              <li>
+                Chat Team messaging
+              </li>
+              <li>
+                Calendar Shared calendars
+              </li>
+              <li>
+                Drive <b>30 GB</b> cloud storage
+              </li>
+              <li>
+                Docs, Sheets, Slides, Forms, Sites, Keep
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="card white">
+          <div class="card--inner">
+            <h4 class="title">
+              1 G-Suite Advanced User
+            </h4>
+            <div class="price">
+              <transition name="fade" appear mode="out-in">
+                <h3 v-if="yearly" key="eight">
+                  £150/year <span>(SAVE £30)</span>
+                </h3>
+                <h3 v-else>
+                  £15/month
+                </h3>
+              </transition>
+            </div>
+            <ul>
+              <li class="overflow">
+                What is a user?
+                <v-popover placement="top">
+                  <font-awesome-icon icon="question" />
+                  <template slot="popover">
+                    <span>A user is defined as one personalised email address (you@yourcompany). Group email aliases such as sales@yourcompany and support@yourcompany are included in pricing and don't count as additional users.</span>
+                  </template>
+                </v-popover>
+              </li>
+              <li>
+                Gmail Business Email
+              </li>
+              <li>
+                Meet Video and voice conferencing
+              </li>
+              <li>
+                Chat Team messaging
+              </li>
+              <li>
+                Calendar Shared calendars
+              </li>
+              <li>
+                Drive <b>1 TB</b> cloud storage
+              </li>
+              <li>
+                Docs, Sheets, Slides, Forms, Sites, Keep
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
   </div>
 </template>
