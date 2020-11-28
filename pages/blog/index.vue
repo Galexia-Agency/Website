@@ -57,7 +57,7 @@
           {{ post = JSON.parse(JSON.stringify(post).replace(new RegExp('\\[', 'g'),"").replace(new RegExp('\\]', 'g'),"")) }}
         </div>
         <img
-          :src="post.featuredImage.mediaItemUrl"
+          :src="post.featuredImage.node.mediaItemUrl"
           :alt="post.title"
           loading="lazy"
           width="300px"
@@ -70,7 +70,7 @@
               {{ new Date(post.date).getDate() + " " + monthArr[new Date(post.date).getMonth()] + " '" + new Date(post.date).getFullYear().toString().substring(2) }}
             </time>
           </h3>
-          <p>Author: <strong>{{ post.author.name }}</strong></p>
+          <p>Author: <strong>{{ post.author.node.name }}</strong></p>
 
           <div class="text--normal" v-html="post.excerpt" />
         </div>

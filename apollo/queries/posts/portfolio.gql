@@ -3,7 +3,9 @@ query Portfolio($id: ID!)  {
     title
     content
     featuredImage {
-      mediaItemUrl
+      node {
+        mediaItemUrl
+      }
     }
     tags {
       nodes {

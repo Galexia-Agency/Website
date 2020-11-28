@@ -109,7 +109,7 @@
 
 <template>
   <div v-if="post.title" class="post">
-    <div class="post--header" :style="'background-image:url(' + post.featuredImage.mediaItemUrl + ')'">
+    <div class="post--header" :style="'background-image:url(' + post.featuredImage.node.mediaItemUrl + ')'">
       <div class="background_opacity" />
 
       <h1 class="maxWidth" v-html="post.title" />
@@ -117,7 +117,7 @@
     <section class="white">
       <div class="maxWidth">
         <div class="post--meta">
-          <p>Author: <strong>{{ post.author.name }}</strong></p>
+          <p>Author: <strong>{{ post.author.node.name }}</strong></p>
           <p>
             Published on:
             <strong>

@@ -6,10 +6,14 @@ query Article($id: ID!) {
     excerpt
     slug
     author {
-      name
+      node {
+        name
+      }
     }
     featuredImage {
-      mediaItemUrl
+      node {
+        mediaItemUrl
+      }
     }
     seo {
       metaDesc

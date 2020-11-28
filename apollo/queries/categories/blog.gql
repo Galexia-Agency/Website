@@ -3,11 +3,15 @@ query Blog {
     nodes {
       title
       author {
-        name
+        node {
+          name
+        }
       }
       excerpt
       featuredImage {
-        mediaItemUrl
+        node{
+          mediaItemUrl
+        }
       }
       slug
       date
