@@ -111,7 +111,7 @@
   <div v-if="post.title" class="post">
     <div class="post--header" :style="'background-image:url(' + post.featuredImage.mediaItemUrl + ')'">
       <div class="background_opacity" />
-      <!--eslint-disable-next-line-->
+
       <h1 class="maxWidth" v-html="post.title" />
     </div>
     <section class="white">
@@ -127,8 +127,8 @@
             </strong>
           </p>
         </div>
-        <!--eslint-disable-next-line-->
-        <div v-html="post.content" class="post--content"/>
+
+        <div class="post--content" v-html="post.content" />
         <div v-if="!share" class="post--footer">
           <h4>Share:</h4>
           <ShareNetwork

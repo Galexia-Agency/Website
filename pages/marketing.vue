@@ -49,12 +49,11 @@
             Advertising can offer great return on investment. We are versed in many advertising platforms such as Google Ads and Facebook. Pay-per-click advertising can be a great way to jump-start a business, but we recommend investing in longer term solutions such as building a great social presence and optimising your site for search engines. As with our other services with consistently monitor the performance of the campaign in order to make it as cost-effective as possible for you.
           </p>
         </div>
-        <!--eslint-disable-next-line-->
-        <div v-html="require('../assets/svg/advertising.svg?include')" class="svg" />
+
+        <div class="svg" v-html="require('../assets/svg/advertising.svg?include')" />
       </div>
       <div class="grid right maxWidth">
-        <!--eslint-disable-next-line-->
-        <div v-html="require('../assets/svg/social.svg?include')" class="svg" />
+        <div class="svg" v-html="require('../assets/svg/social.svg?include')" />
         <div>
           <h3>Social Media</h3>
           <p class="text--normal">
@@ -69,8 +68,8 @@
             Creating an email list can be a great way to engage with potential customers. What do you do with all those emails? Why not have us deliver a tailored newsletter campaign to your email list encouraging them to engage with your brand and keeping them up-to-date on your current activities. If a customer trusts a brand, they’re more likely to use it in the future. We take great care in adhering to all local laws regarding emails including GDPR.
           </p>
         </div>
-        <!--eslint-disable-next-line-->
-        <div v-html="require('../assets/svg/email.svg?include')" class="svg" />
+
+        <div class="svg" v-html="require('../assets/svg/email.svg?include')" />
       </div>
     </section>
     <section class="white">
@@ -78,32 +77,32 @@
       <div class="grid column maxWidth four">
         <div class="card">
           <h3>Photography</h3>
-          <!--eslint-disable-next-line-->
-          <div v-html="require('../assets/svg/photography.svg?include')" class="svg" />
+
+          <div class="svg" v-html="require('../assets/svg/photography.svg?include')" />
           <p class="text--normal">
             Photos can make or break a brand. Having good photos are vital to all kinds of content marketing, including social media, and websites. We have a team of photographers versed in everything from events to products.
           </p>
         </div>
         <div class="card">
           <h3>Videography</h3>
-          <!--eslint-disable-next-line-->
-          <div v-html="require('../assets/svg/videography.svg?include')" class="svg" />
+
+          <div class="svg" v-html="require('../assets/svg/videography.svg?include')" />
           <p class="text--normal">
             We love watching great content. It’s a great way to engage with customers in the modern age. We pride ourselves in creating short clips for Instagram, longer clips for YouTube and everything in-between.
           </p>
         </div>
         <div class="card">
           <h3>Copy-writing</h3>
-          <!--eslint-disable-next-line-->
-          <div v-html="require('../assets/svg/writing.svg?include')" class="svg" />
+
+          <div class="svg" v-html="require('../assets/svg/writing.svg?include')" />
           <p class="text--normal">
             Some people learn visually, some by reading. It’s best to have a mixture of both. Not to mention that good quality blogs are by far one of the best ways to improve search presence.
           </p>
         </div>
         <div class="card">
           <h3>Graphic Design</h3>
-          <!--eslint-disable-next-line-->
-          <div v-html="require('../assets/svg/design.svg?include')" class="svg" />
+
+          <div class="svg" v-html="require('../assets/svg/design.svg?include')" />
           <p class="text--normal">
             Design is everywhere: social media, websites, business cards, pamphlets, adverts. Our expert team can help your business stand out with tailor made graphics.
           </p>

@@ -30,12 +30,11 @@
             Traditional servers also come with some security issues. A Distributed Denial-of-Service (<abbr>DDOS</abbr>) Attack is where one or many computers send repeated requests to your website in order to overload the system or to repeatedly guess a password until they gain access. There are many other types of attacks too. By installing <a href="https://www.cloudflare.com/">Cloudflare</a> we mitigate a lot of these issues. As an added bonus Cloudflare also has built-in caching support.
           </p>
         </div>
-        <!--eslint-disable-next-line-->
-        <div v-html="require('../assets/svg/server.svg?include')" class="svg" />
+
+        <div class="svg" v-html="require('../assets/svg/server.svg?include')" />
       </div>
       <div class="grid right maxWidth">
-        <!--eslint-disable-next-line-->
-        <div v-html="require('../assets/svg/wordpress.svg?include')" class="svg" />
+        <div class="svg" v-html="require('../assets/svg/wordpress.svg?include')" />
         <div>
           <h3>WordPress issues</h3>
           <p class="text--normal">
@@ -45,8 +44,9 @@
             Because WordPress is so widely used, it comes with some security risks. If your site get's hacked, you'll want to delete everything off the server and restore from a backup of when the site was not hacked. This means you'll want to store the backup in a different location to the site.
           </p>
           <p class="text--normal">
-            <!--eslint-disable-next-line-->
-            All of this sound too complicated? Don't worry, our <nuxt-link to="/hosting/">hosting plans</nuxt-link> include built-in backups and security.
+            All of this sound too complicated? Don't worry, our <nuxt-link to="/hosting/">
+              hosting plans
+            </nuxt-link> include built-in backups and security.
           </p>
         </div>
       </div>
@@ -57,8 +57,8 @@
             If you've worked with us before  then you'll already have access to our great Facebook community. It's a place where all the small businesses we've worked with can interact, share their great sites, and get support for common website issues including WordPress themes and plugins, as well as styling issues. If your query isn't urgent we recommend posting a topic here first before coming to us. Best of all, it's free!
           </p>
         </div>
-        <!--eslint-disable-next-line-->
-        <div v-html="require('../assets/svg/community.svg?include')" class="svg" />
+
+        <div class="svg" v-html="require('../assets/svg/community.svg?include')" />
       </div>
     </section>
     <section class="white">

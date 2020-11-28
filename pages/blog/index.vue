@@ -1,5 +1,6 @@
 <style scoped>
   .post {
+    content-visibility: auto;
     display: grid;
     grid-template-columns: minmax(150px, 400px) 1fr;
     grid-gap: 2rem;
@@ -64,15 +65,14 @@
         >
         <div class="post--content">
           <h3>
-            <!--eslint-disable-next-line-->
             <nuxt-link :to="'/blog/' + post.slug + '/'" v-html="post.title" />
             <time>
               {{ new Date(post.date).getDate() + " " + monthArr[new Date(post.date).getMonth()] + " '" + new Date(post.date).getFullYear().toString().substring(2) }}
             </time>
           </h3>
           <p>Author: <strong>{{ post.author.name }}</strong></p>
-          <!--eslint-disable-next-line-->
-          <div v-html="post.excerpt" class="text--normal"/>
+
+          <div class="text--normal" v-html="post.excerpt" />
         </div>
       </div>
     </div>

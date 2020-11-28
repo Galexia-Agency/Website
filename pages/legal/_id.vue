@@ -7,12 +7,11 @@
 <template>
   <section class="white legal">
     <div v-if="post.title" class="maxWidth">
-      <!--eslint-disable-next-line-->
       <h1 v-html="post.title" />
       <p>
         Last updated: <time>{{ new Date(post.modified).getDate() + " " + monthArr[new Date(post.modified).getMonth()] + " " + new Date(post.modified).getFullYear().toString() }}</time>.
       </p>
-      <!--eslint-disable-next-line-->
+
       <div v-html="post.content" />
     </div>
   </section>

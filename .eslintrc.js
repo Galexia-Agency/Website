@@ -13,5 +13,7 @@ module.exports = {
   ],
   // add your custom rules here
   rules: {
+    "vue/comment-directive": 0,
+    "vue/no-v-html": 0
   }
 }

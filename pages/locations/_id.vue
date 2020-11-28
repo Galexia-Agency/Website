@@ -60,12 +60,11 @@
             We find the best way to start a project is to have an informal, no-obligations chat about your requirements. We're local to <span class="location">{{ $route.params.id }}</span> so can arrange a face-to-face meeting, or we can conduct it online. Some of our clients come to us with a large project plan spanning many months, with a detailed idea about what they want. Some other clients only know the idea, and not the implementation. We’re happy with both.
           </p>
         </div>
-        <!--eslint-disable-next-line-->
-        <div v-html="require('../../assets/svg/discussion.svg?include')" class="svg" />
+
+        <div class="svg" v-html="require('../../assets/svg/discussion.svg?include')" />
       </div>
       <div class="grid right maxWidth">
-        <!--eslint-disable-next-line-->
-        <div v-html="require('../../assets/svg/project.svg?include')" class="svg" />
+        <div class="svg" v-html="require('../../assets/svg/project.svg?include')" />
         <div>
           <h3>You run your business. We run the project</h3>
           <p class="text--normal">
@@ -80,8 +79,8 @@
             We love to keep in touch with our clients, even after the initial project has finished. We’re happy to offer continued maintenance plans on our websites. We even have a community where past clients based in <span class="location">{{ $route.params.id }}</span> can discuss and share their websites.
           </p>
         </div>
-        <!--eslint-disable-next-line-->
-        <div v-html="require('../../assets/svg/launch.svg?include')" class="svg" />
+
+        <div class="svg" v-html="require('../../assets/svg/launch.svg?include')" />
       </div>
     </section>
     <!--

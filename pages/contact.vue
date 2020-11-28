@@ -173,8 +173,8 @@
               </transition>
             </form>
           </client-only>
-          <!--eslint-disable-next-line-->
-          <div v-html="require('../assets/svg/contact.svg?include')" class="SVGContainer"/>
+
+          <div class="SVGContainer" v-html="require('../assets/svg/contact.svg?include')" />
         </div>
       </div>
     </section>

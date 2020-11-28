@@ -107,8 +107,8 @@
       <client-only>
         <div v-if="url && title">
           <a :href="url" target="_blank" rel="noopener noreferrer" class="logo">
-            <!--eslint-disable-next-line-->
-            <img v-if="logo" v-bind:src="logo" :alt="title" width="auto" height="75">
+
+            <img v-if="logo" :src="logo" :alt="title" width="auto" height="75">
           </a>
           <h2>Welcome to your own space.</h2>
           <h1>Thanks for being our client, {{ title }}</h1>

@@ -15,7 +15,7 @@
           <div style="display: none">
             {{ post = JSON.parse(JSON.stringify(post).replace(new RegExp('\\[', 'g'),"").replace(new RegExp('\\]', 'g'),"")) }}
           </div>
-          <!--eslint-disable-next-line-->
+
           <nuxt-link :to="'/legal/' + post.slug + '/'" v-html="post.title" />
         </li>
       </ul>

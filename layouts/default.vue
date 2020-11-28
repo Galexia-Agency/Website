@@ -718,13 +718,11 @@
       <nav class="maxWidth">
         <div class="logo--container">
           <nuxt-link class="logo" to="/">
-            <!--eslint-disable-next-line-->
             <div v-html="require('../assets/svg/logo_v2.svg?include')" />
           </nuxt-link>
         </div>
         <div class="nav--icon">
-          <!--eslint-disable-next-line-->
-          <div v-html="require('../assets/svg/menu.svg?include')" @click="nav" />
+          <div @click="nav" v-html="require('../assets/svg/menu.svg?include')" />
         </div>
         <div class="nav--container">
           <nuxt-link to="/" class="nav--link">
@@ -762,7 +760,6 @@
         <div class="footer--bottom maxWidth">
           <div class="logo--container">
             <nuxt-link class="logo" to="/">
-              <!--eslint-disable-next-line-->
               <div v-html="require('../assets/svg/logo_v2.svg?include')" />
             </nuxt-link>
           </div>
@@ -790,10 +787,9 @@
           <div class="testimonials--container">
             <div class="testimonials">
               <div v-for="(testimonial, index) in posts" :key="index" class="testimonial">
-                <!--eslint-disable-next-line-->
-              <div v-html="testimonial.content" />
-                <!--eslint-disable-next-line-->
-              <div v-html="'- ' + testimonial.title" class="company" />
+                <div v-html="testimonial.content" />
+
+                <div class="company" v-html="'- ' + testimonial.title" />
               </div>
             </div>
             <div class="testimonials--controls">
