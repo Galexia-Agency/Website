@@ -198,7 +198,7 @@ export default {
   },
   head () {
     return {
-      title: this.title,
+      title: 'Client',
       meta: [
         { hid: 'robots', name: 'robots', content: 'noindex' }
       ]
