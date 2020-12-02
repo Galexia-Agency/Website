@@ -102,8 +102,7 @@ export default {
    */
   plugins: [
     { src: '~/plugins/fontAwesome.js' },
-    { src: '~/plugins/tooltip.js' },
-    { src: '~/plugins/preview.client.js' }
+    { src: '~/plugins/tooltip.js' }
   ],
   /*
    ** Nuxt.js dev-modules

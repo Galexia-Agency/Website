@@ -833,8 +833,6 @@
 </template>
 
 <script>
-import testimonialsQuery from '~/apollo/queries/categories/testimonial.gql'
-
 export default {
   data () {
     return {
@@ -856,6 +854,7 @@ export default {
       document.querySelector('body').classList.add('no-webp')
     }
     this.background()
+    this.posts = this.$store.state.testimonials
     const self = this
     window.addEventListener('resize', function () {
       self.background()
@@ -863,7 +862,6 @@ export default {
   },
   async mounted () {
     document.documentElement.classList.add('nav_close')
-    await this.fetchItem()
     this.motion = await window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'
     this.background()
   },
@@ -888,12 +886,6 @@ export default {
 
       // If the createImageBitmap method succeeds, return true, otherwise false
       return createImageBitmap(blob).then(() => true, () => false)
-    },
-    async fetchItem () {
-      const response = await this.$apollo.query({
-        query: testimonialsQuery
-      })
-      this.posts = response.data.posts.nodes
     },
     left () {
       if (this.count !== 1) {
