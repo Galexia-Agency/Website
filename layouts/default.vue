@@ -793,11 +793,11 @@
               </div>
             </div>
             <div class="testimonials--controls">
-              <button :disabled="count === 1" @click="left">
+              <button aria-label="previous" :disabled="count === 1" @click="left">
                 <font-awesome-icon :icon="['fas', 'chevron-left']" />
               </button>
               <p><span>{{ count }}</span> / <span>{{ posts.length }}</span></p>
-              <button :disabled="count === posts.length" @click="right">
+              <button aria-label="next" :disabled="count === posts.length" @click="right">
                 <font-awesome-icon :icon="['fas', 'chevron-right']" />
               </button>
             </div>
