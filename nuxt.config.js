@@ -9,8 +9,6 @@ export default {
       lang: 'en-GB'
     },
     meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description' },
       { name: 'apple-mobile-web-app-title', content: 'Galexia' },
       { name: 'application-name', content: 'Galexia' },
@@ -200,7 +198,6 @@ export default {
     fallback: true
   },
   pwa: {
-    meta: false,
     workbox: {
       offlineAnalytics: true,
       offlinePage: '/404.html',
@@ -212,7 +209,6 @@ export default {
       ]
     },
     manifest: {
-      scope: '../',
       name: 'Galexia Creative Agency Ltd',
       shortName: 'Galexia',
       theme_color: '#1a237e',
