@@ -16,7 +16,7 @@
     "@fortawesome/vue-fontawesome": "^0.1.10",
     "@netlify/plugin-sitemap": "^0.5.1",
     "@nuxtjs/apollo": "^4.0.1-rc.3",
-    "@nuxtjs/pwa": "^3.0.0-0",
+    "@nuxtjs/pwa": "^3.2.2",
     "axios": "^0.19.2",
     "graphql": "^15.3.0",
     "netlify-plugin-cache-nuxt": "0.0.1",
@@ -25,23 +25,23 @@
     "nuxt-cookie-control": "^1.8.6",
     "v-tooltip": "^2.0.3",
     "vue-social-sharing": "^3.0.0-beta.11",
-    "vue-template-compiler": "^2.6.11"
+    "vue-template-compiler": "^2.6.11",
+    "@aceforth/nuxt-optimized-images": "^1.1.0",
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-pngquant": "^9.0.0",
+    "imagemin-svgo": "^8.0.0",
+    "jimp": "^0.16.1",
+    "responsive-loader": "^1.2.0",
+    "webp-loader": "^0.6.0"
   },
   "devDependencies": {
-    "@aceforth/nuxt-optimized-images": "^1.1.0",
     "@nuxtjs/eslint-config": "^2.0.0",
     "@nuxtjs/eslint-module": "^1.0.0",
     "@nuxtjs/stylelint-module": "^3.1.0",
     "babel-eslint": "^10.0.1",
     "eslint": "^6.1.0",
     "eslint-plugin-nuxt": ">=0.4.2",
-    "imagemin-mozjpeg": "^9.0.0",
-    "imagemin-pngquant": "^9.0.0",
-    "imagemin-svgo": "^8.0.0",
-    "jimp": "^0.16.1",
-    "responsive-loader": "^1.2.0",
     "stylelint": "^13.8.0",
-    "stylelint-config-standard": "^20.0.0",
-    "webp-loader": "^0.6.0"
+    "stylelint-config-standard": "^20.0.0"
   }
 }
