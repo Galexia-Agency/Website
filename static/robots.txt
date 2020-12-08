@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://traininblocks.com/sitemap.xml.gz
+Sitemap: https://galexia.agency/sitemap.xml.gz
