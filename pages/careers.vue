@@ -42,10 +42,10 @@ export default {
         { hid: 'description', name: 'description', content: 'We\'re not currently hiring, however, if you think you\'d be a great fit for our team drop us a line at careers@galexia.agency.' },
         { hid: 'og:title', property: 'og:title', content: 'Careers' },
         { hid: 'og:description', property: 'og:description', content: 'We\'re not currently hiring, however, if you think you\'d be a great fit for our team drop us a line at careers@galexia.agency.' },
-        { hid: 'og:image', property: 'og:image', content: 'https://galexia.agency/android-chrome-512x512.png' },
+        { hid: 'og:image', property: 'og:image', content: 'https://galexia.agency/icon.png' },
         { hid: 'twitter:title', name: 'twitter:title', content: 'Careers' },
         { hid: 'twitter:description', name: 'twitter:description', content: 'We\'re not currently hiring, however, if you think you\'d be a great fit for our team drop us a line at careers@galexia.agency.' },
-        { hid: 'twitter:img', name: 'twitter:img', content: 'https://galexia.agency/android-chrome-512x512.png' }
+        { hid: 'twitter:img', name: 'twitter:img', content: 'https://galexia.agency/icon.png' }
       ],
       link: [
         { hid: 'canonical', rel: 'canonical', href: 'https://galexia.agency/careers/' }

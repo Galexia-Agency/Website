@@ -129,10 +129,10 @@ export default {
         { hid: 'description', name: 'description', content: 'We are a creative agency based in Royston but with ties to ' + this.capitalize(this.$route.params.id) + ' specialising in website design and development. We’re a fairly new company built from the ground up to help you grow. We work in ' + this.$route.params.id + ' and surrounding areas.' },
         { hid: 'og:title', property: 'og:title', content: 'Creative Agency in ' + this.capitalize(this.$route.params.id) },
         { hid: 'og:description', property: 'og:description', content: 'We are a creative agency based in Royston but with ties to ' + this.capitalize(this.$route.params.id) + ' specialising in website design and development. We’re a fairly new company built from the ground up to help you grow. We work in ' + this.$route.params.id + ' and surrounding areas.' },
-        { hid: 'og:image', property: 'og:image', content: 'https://galexia.agency/android-chrome-512x512.png' },
+        { hid: 'og:image', property: 'og:image', content: 'https://galexia.agency/icon.png' },
         { hid: 'twitter:title', name: 'twitter:title', content: 'Creative Agency in ' + this.capitalize(this.$route.params.id) },
         { hid: 'twitter:description', name: 'twitter:description', content: 'We are a creative agency based in Royston but with ties to ' + this.capitalize(this.$route.params.id) + ' specialising in website design and development. We’re a fairly new company built from the ground up to help you grow. We work in ' + this.$route.params.id + ' and surrounding areas.' },
-        { hid: 'twitter:img', name: 'twitter:img', content: 'https://galexia.agency/android-chrome-512x512.png' }
+        { hid: 'twitter:img', name: 'twitter:img', content: 'https://galexia.agency/icon.png' }
       ],
       link: [
         { hid: 'canonical', rel: 'canonical', href: 'https://galexia.agency/locations/' + this.$route.params.id + '/' }

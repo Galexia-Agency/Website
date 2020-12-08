@@ -205,10 +205,10 @@ export default {
         { hid: 'description', name: 'description', content: 'We are a creative agency specialising in website design and development. We’re a fairly new company built from the ground up to help you grow.' },
         { hid: 'og:title', property: 'og:title', content: 'Home' },
         { hid: 'og:description', property: 'og:description', content: 'We are a creative agency specialising in website design and development. We’re a fairly new company built from the ground up to help you grow.' },
-        { hid: 'og:image', property: 'og:image', content: 'https://galexia.agency/android-chrome-512x512.png' },
+        { hid: 'og:image', property: 'og:image', content: 'https://galexia.agency/icon.png' },
         { hid: 'twitter:title', name: 'twitter:title', content: 'Home' },
         { hid: 'twitter:description', name: 'twitter:description', content: 'We are a creative agency specialising in website design and development. We’re a fairly new company built from the ground up to help you grow.' },
-        { hid: 'twitter:img', name: 'twitter:img', content: 'https://galexia.agency/android-chrome-512x512.png' }
+        { hid: 'twitter:img', name: 'twitter:img', content: 'https://galexia.agency/icon.png' }
       ],
       link: [
         { hid: 'canonical', rel: 'canonical', href: 'https://galexia.agency/' }

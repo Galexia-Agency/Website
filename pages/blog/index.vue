@@ -104,10 +104,10 @@ export default {
         { hid: 'description', name: 'description', content: 'Read our latest blog posts and learn about current trends in web design and development.' },
         { hid: 'og:title', property: 'og:title', content: 'Blog' },
         { hid: 'og:description', property: 'og:description', content: 'Read our latest blog posts and learn about current trends in web design and development.' },
-        { hid: 'og:image', property: 'og:image', content: 'https://galexia.agency/android-chrome-512x512.png' },
+        { hid: 'og:image', property: 'og:image', content: 'https://galexia.agency/icon.png' },
         { hid: 'twitter:title', name: 'twitter:title', content: 'Blog' },
         { hid: 'twitter:description', name: 'twitter:description', content: 'Read our latest blog posts and learn about current trends in web design and development.' },
-        { hid: 'twitter:img', name: 'twitter:img', content: 'https://galexia.agency/android-chrome-512x512.png' }
+        { hid: 'twitter:img', name: 'twitter:img', content: 'https://galexia.agency/icon.png' }
       ],
       link: [
         { hid: 'canonical', rel: 'canonical', href: 'https://galexia.agency/blog/' }

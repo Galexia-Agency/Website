@@ -775,10 +775,10 @@ export default {
         { hid: 'description', name: 'description', content: 'Your website needs a home and we\'re happy to house it whether we built it or not.' },
         { hid: 'og:title', property: 'og:title', content: 'Hosting' },
         { hid: 'og:description', property: 'og:description', content: 'Your website needs a home and we\'re happy to house it whether we built it or not.' },
-        { hid: 'og:image', property: 'og:image', content: 'https://galexia.agency/android-chrome-512x512.png' },
+        { hid: 'og:image', property: 'og:image', content: 'https://galexia.agency/icon.png' },
         { hid: 'twitter:title', name: 'twitter:title', content: 'Hosting' },
         { hid: 'twitter:description', name: 'twitter:description', content: 'Your website needs a home and we\'re happy to house it whether we built it or not.' },
-        { hid: 'twitter:img', name: 'twitter:img', content: 'https://galexia.agency/android-chrome-512x512.png' }
+        { hid: 'twitter:img', name: 'twitter:img', content: 'https://galexia.agency/icon.png' }
       ],
       link: [
         { hid: 'canonical', rel: 'canonical', href: 'https://galexia.agency/hosting/' }

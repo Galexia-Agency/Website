@@ -138,10 +138,10 @@ export default {
         { hid: 'description', name: 'description', content: 'However you wish to pursue your business marketing is vital in finding and retaining customers.' },
         { hid: 'og:title', property: 'og:title', content: 'Marketing' },
         { hid: 'og:description', property: 'og:description', content: 'However you wish to pursue your business marketing is vital in finding and retaining customers.' },
-        { hid: 'og:image', property: 'og:image', content: 'https://galexia.agency/android-chrome-512x512.png' },
+        { hid: 'og:image', property: 'og:image', content: 'https://galexia.agency/icon.png' },
         { hid: 'twitter:title', name: 'twitter:title', content: 'Marketing' },
         { hid: 'twitter:description', name: 'twitter:description', content: 'However you wish to pursue your business marketing is vital in finding and retaining customers.' },
-        { hid: 'twitter:img', name: 'twitter:img', content: 'https://galexia.agency/android-chrome-512x512.png' },
+        { hid: 'twitter:img', name: 'twitter:img', content: 'https://galexia.agency/icon.png' },
         { hid: 'robots', name: 'robots', content: 'noindex' }
       ],
       link: [

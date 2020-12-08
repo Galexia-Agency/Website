@@ -67,10 +67,10 @@ export default {
         { hid: 'description', name: 'description', content: '' },
         { hid: 'og:title', property: 'og:title', content: 'Our Team' },
         { hid: 'og:description', property: 'og:description', content: '' },
-        { hid: 'og:image', property: 'og:image', content: 'https://galexia.agency/android-chrome-512x512.png' },
+        { hid: 'og:image', property: 'og:image', content: 'https://galexia.agency/icon.png' },
         { hid: 'twitter:title', name: 'twitter:title', content: 'Our Team' },
         { hid: 'twitter:description', name: 'twitter:description', content: '' },
-        { hid: 'twitter:img', name: 'twitter:img', content: 'https://galexia.agency/android-chrome-512x512.png' },
+        { hid: 'twitter:img', name: 'twitter:img', content: 'https://galexia.agency/icon.png' },
         { hid: 'robots', name: 'robots', content: 'noindex' }
       ],
       link: [

@@ -147,10 +147,10 @@ export default {
         { hid: 'description', name: 'description', content: 'Is your website down? Are you running into random errors? Are you struggling dealing with your hosting company? We can help. We provide affordable support to help you get your website back on track. We put your business first. We know that a website is often the first port of call for customers and if your website\'s down or not perfomring properly this can leave many customers unhappy. We\'ll drop everything and help you resolve any issues as quickly as possible.' },
         { hid: 'og:title', property: 'og:title', content: 'Website Support' },
         { hid: 'og:description', property: 'og:description', content: 'Is your website down? Are you running into random errors? Are you struggling dealing with your hosting company? We can help. We provide affordable support to help you get your website back on track. We put your business first. We know that a website is often the first port of call for customers and if your website\'s down or not perfomring properly this can leave many customers unhappy. We\'ll drop everything and help you resolve any issues as quickly as possible.' },
-        { hid: 'og:image', property: 'og:image', content: 'https://galexia.agency/android-chrome-512x512.png' },
+        { hid: 'og:image', property: 'og:image', content: 'https://galexia.agency/icon.png' },
         { hid: 'twitter:title', name: 'twitter:title', content: 'Website Support' },
         { hid: 'twitter:description', name: 'twitter:description', content: 'Is your website down? Are you running into random errors? Are you struggling dealing with your hosting company? We can help. We provide affordable support to help you get your website back on track. We put your business first. We know that a website is often the first port of call for customers and if your website\'s down or not perfomring properly this can leave many customers unhappy. We\'ll drop everything and help you resolve any issues as quickly as possible.' },
-        { hid: 'twitter:img', name: 'twitter:img', content: 'https://galexia.agency/android-chrome-512x512.png' }
+        { hid: 'twitter:img', name: 'twitter:img', content: 'https://galexia.agency/icon.png' }
       ],
       link: [
         { hid: 'canonical', rel: 'canonical', href: 'https://galexia.agency/support/' }
