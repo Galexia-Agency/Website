@@ -5,31 +5,20 @@ export default {
    */
   head: {
     titleTemplate: '%s | Galexia Creative Agency Ltd | Web Design and Development',
-    htmlAttrs: {
-      lang: 'en-GB'
-    },
     meta: [
-      { hid: 'description', name: 'description' },
-      { name: 'apple-mobile-web-app-title', content: 'Galexia' },
       { name: 'application-name', content: 'Galexia' },
       { name: 'msapplication-TileColor', content: '#7c72ef' },
       { name: 'msapplication-TileImage', content: 'https://galexia.agency/mstile-144x144.png?v=dLXLEPEjpj' },
-      { name: 'theme-color', content: '#ffffff' },
 
       // Twitter Card data
-      { name: 'twitter:card', content: 'summary_large_image' },
-      { name: 'twitter:site', content: '@galexia_agency' },
       { hid: 'twitter:title', name: 'twitter:title', template: chunk => `${chunk} | Galexia Creative Agency Ltd | Web Design and Development` },
       { hid: 'twitter:description', name: 'twitter:description' },
       { hid: 'twitter:image', name: 'twitter:image' },
 
       // Open Graph data
-      { property: 'og:type', content: 'website' },
-      { property: 'og:site_name', content: 'Galexia | Creative Agency' },
       { hid: 'og:description', property: 'og:description' },
       { hid: 'og:title', property: 'og:title', template: chunk => `${chunk} | Galexia Creative Agency Ltd | Web Design and Development` },
       { hid: 'og:image', property: 'og:image' },
-      { property: 'og:url', content: 'https://galexia.agency' },
       { property: 'fb:app_id', content: '249903496015229' }
     ],
     link: [
@@ -42,7 +31,6 @@ export default {
       { rel: 'icon', type: 'image/png', sizes: '192x192', href: 'https://galexia.agency/favicon-192x192.png?v=dLXLEPEjpj' },
       { rel: 'icon', type: 'image/png', sizes: '32x32', href: 'https://galexia.agency/favicon-32x32.png?v=dLXLEPEjpj' },
       { rel: 'icon', type: 'image/png', sizes: '16x16', href: 'https://galexia.agency/favicon-16x16.png?v=dLXLEPEjpj' },
-      { rel: 'shortcut icon', href: 'https://galexia.agency/favicon.ico?v=dLXLEPEjpj' },
       { rel: 'mask-icon', href: 'https://galexia.agency/safari-pinned-tab.svg?v=dLXLEPEjpj', color: '#534bae' },
       { rel: 'preconnect', href: 'https://blog.galexia.agency' },
       { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: true },
@@ -209,70 +197,19 @@ export default {
       ]
     },
     manifest: {
-      name: 'Galexia Creative Agency Ltd',
       shortName: 'Galexia',
-      theme_color: '#1a237e',
       background_color: '#ffffff',
       display: 'standalone',
-      lang: 'en-GB',
-      icons: [
-        {
-          src: '/android-chrome-36x36.png?v=dLXLEPEjpj',
-          sizes: '36x36',
-          type: 'image/png',
-          purpose: 'any maskable'
-        },
-        {
-          src: '/android-chrome-48x48.png?v=dLXLEPEjpj',
-          sizes: '48x48',
-          type: 'image/png',
-          purpose: 'any maskable'
-        },
-        {
-          src: '/android-chrome-72x72.png?v=dLXLEPEjpj',
-          sizes: '72x72',
-          type: 'image/png',
-          purpose: 'any maskable'
-        },
-        {
-          src: '/android-chrome-96x96.png?v=dLXLEPEjpj',
-          sizes: '96x96',
-          type: 'image/png',
-          purpose: 'any maskable'
-        },
-        {
-          src: '/android-chrome-144x144.png?v=dLXLEPEjpj',
-          sizes: '144x144',
-          type: 'image/png',
-          purpose: 'any maskable'
-        },
-        {
-          src: '/android-chrome-192x192.png?v=dLXLEPEjpj',
-          sizes: '192x192',
-          type: 'image/png',
-          purpose: 'any maskable'
-        },
-        {
-          src: '/android-chrome-256x256.png?v=dLXLEPEjpj',
-          sizes: '256x256',
-          type: 'image/png',
-          purpose: 'any maskable'
-        },
-        {
-          src: '/android-chrome-384x384.png?v=dLXLEPEjpj',
-          sizes: '384x384',
-          type: 'image/png',
-          purpose: 'any maskable'
-        },
-        {
-          src: '/android-chrome-512x512.png?v=dLXLEPEjpj',
-          sizes: '512x512',
-          type: 'image/png',
-          purpose: 'any maskable'
-        }
-      ]
+      lang: 'en-GB'
     },
-    icon: false
+    meta: {
+      mobileAppIOS: true,
+      theme_color: '#1a237e',
+      lang: 'en-GB',
+      ogHost: 'https://galexia.agency',
+      twitterCard: 'summary_large_image',
+      twitterSite: '@galexia_agency'
+    }
   },
   /*
    ** Build configuration

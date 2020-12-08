@@ -1,8 +1,8 @@
 {
-  "name": "Galexia",
+  "name": "Galexia Creative Agency Ltd",
   "version": "1.0.0",
   "description": "We are a creative agency specialising in website design and development. We’re a fairly new company built from the ground up to help you grow. We use the latest and greatest practises and technologies so that we can pass on these benefits to you.",
-  "author": "Joe",
+  "author": "Galexia Creative Agency Ltd",
   "private": true,
   "scripts": {
     "start": "nuxt",
