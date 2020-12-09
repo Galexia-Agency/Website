@@ -116,8 +116,7 @@ export default {
   },
   mounted () {
     if ('ontouchstart' in document.documentElement) {} else {
-      // eslint-disable-next-line
-      const ztxt = new this.$Ztextify('.header--inner h1 i', {
+      this.$Ztextify('.header--inner h1 i', {
         depth: '10px',
         layers: 2,
         direction: 'forwards',
