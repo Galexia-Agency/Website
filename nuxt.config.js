@@ -89,7 +89,8 @@ export default {
   plugins: [
     { src: '~/plugins/animation.js' },
     { src: '~/plugins/fontAwesome.js' },
-    { src: '~/plugins/tooltip.js' }
+    { src: '~/plugins/tooltip.js' },
+    { src: '~/plugins/ztext.client.js' }
   ],
   /*
    ** Nuxt.js dev-modules
