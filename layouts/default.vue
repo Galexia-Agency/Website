@@ -721,7 +721,7 @@
   .hidden {
     opacity: 0
   }
-  @media (min-width: 900px) {
+  @media (min-width: 900px) and (prefers-reduced-motion: no-preference) {
     .hidden-right {
       transform: translate(50px, 0)
     }
