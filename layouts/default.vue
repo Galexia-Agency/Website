@@ -721,11 +721,13 @@
   .hidden {
     opacity: 0
   }
-  .hidden-right {
-    transform: translate(50px, 0)
-  }
-  .hidden-left {
-    transform: translate(-50px, 0)
+  @media (min-width: 900px) {
+    .hidden-right {
+      transform: translate(50px, 0)
+    }
+    .hidden-left {
+      transform: translate(-50px, 0)
+    }
   }
   .showElement {
     opacity: 1;
@@ -893,7 +895,7 @@ export default {
       const body = document.body
       const html = document.documentElement
       const height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight)
-      document.body.style.backgroundSize = height > ((window.innerWidth * 1.6875) * 1.25) ? (0.75 * height) + 'px' : '125vw'
+      document.body.style.backgroundSize = height > ((window.innerWidth * 1.6875) * 1.25) ? (1 * height) + 'px' : '125vw'
     },
     async WebpIsSupported () {
       // If the browser doesn't have the method createImageBitmap, you can't display webp format

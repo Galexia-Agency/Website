@@ -155,15 +155,16 @@
       top: 0
     }
     .desc {
-      opacity: .95
+      opacity: .95;
+      margin-bottom: 2em
     }
   }
 </style>
 
 <template>
   <div class="hosting white">
-    <section>
-      <div id="top" class="maxWidth">
+    <section class="maxWidth">
+      <div id="top">
         <h2>Ultra-fast Hosting</h2>
         <img src="../assets/img/lighthouse.jpg" width="520" height="294" alt="Lighthouse Test">
         <p class="desc">
@@ -179,7 +180,7 @@
           </label>
         </div>
       </div>
-      <div class="grid column maxWidth three">
+      <div class="grid column three">
         <div v-infocus="'showElement'" class="card white hidden">
           <div class="card--inner">
             <h4 class="title">
@@ -476,12 +477,12 @@
         </div>
       </div>
     </section>
-    <section>
+    <section class="maxWidth">
       <h2>WordPress Help</h2>
       <p class="desc">
         WordPress is a complex program and needs constant management to function properly. Let us take care of the hassle by backing up, securing, and optimising your WordPress install.
       </p>
-      <div class="grid column maxWidth three">
+      <div class="grid column three">
         <div v-infocus="'showElement'" class="card white hidden">
           <div class="card--inner">
             <h4 class="title">
@@ -611,7 +612,7 @@
         </div>
       </div>
     </section>
-    <section>
+    <section class="maxWidth">
       <h2>Domains</h2>
       <p class="desc" style="margin-bottom: 1rem">
         <strong>1 Free Wildcard SSL Certificate included</strong>
@@ -619,7 +620,7 @@
       <p class="desc">
         We continually monitor the market to find the best deals so that we can pass on these savings to you. This will be updated in your yearly domain invoice.
       </p>
-      <div class="grid column maxWidth three">
+      <div class="grid column three">
         <div v-infocus="'showElement'" class="card white hidden">
           <div class="card--inner">
             <h4 class="title">
@@ -658,12 +659,12 @@
         </div>
       </div>
     </section>
-    <section>
+    <section class="maxWidth">
       <h2>Emails</h2>
       <p class="desc">
         We are able to offer up to 10 forwarding addresses for free with the purchase of any hosting plan.
       </p>
-      <div class="grid column maxWidth three">
+      <div class="grid column three">
         <div v-infocus="'showElement'" class="card white hidden">
           <div class="card--inner">
             <h4 class="title">
