@@ -82,18 +82,17 @@
         Our three step process to increasing your revenue
       </h2>
       <div class="grid left maxWidth">
-        <div>
+        <div v-infocus="'showElement'" class="hidden hidden-left">
           <h3>We start with a conversation</h3>
           <p class="text--normal">
             We find the best way to start a project is to have an informal, no-obligations chat about your requirements. Some of our clients come to us with a large project plan spanning many months, with a detailed idea about what they want. Some other clients only know the idea, and not the implementation. We’re happy with both.
           </p>
         </div>
-
-        <div class="svg" v-html="require('../assets/svg/discussion.svg?include')" />
+        <div v-infocus="'showElement'" class="hidden hidden-right svg" v-html="require('../assets/svg/discussion.svg?include')" />
       </div>
       <div class="grid right maxWidth">
-        <div class="svg" v-html="require('../assets/svg/project.svg?include')" />
-        <div>
+        <div v-infocus="'showElement'" class="hidden hidden-left svg" v-html="require('../assets/svg/project.svg?include')" />
+        <div v-infocus="'showElement'" class="hidden hidden-right">
           <h3>You run your business. We run the project</h3>
           <p class="text--normal">
             We understand life often feels like it’s moving in the fast lane, that’s why we’re versed in project management. We keep your project on track, working to strict deadlines, so you don’t have to worry.
@@ -101,14 +100,13 @@
         </div>
       </div>
       <div class="grid left maxWidth">
-        <div>
+        <div v-infocus="'showElement'" class="hidden hidden-left">
           <h3>Launch day. More business for you, another happy customer for us</h3>
           <p class="text--normal">
             We love to keep in touch with our clients, even after the initial project has finished. We’re happy to offer continued maintenance plans on our websites. We even have a community where past clients can discuss and share their websites.
           </p>
         </div>
-
-        <div class="svg" v-html="require('../assets/svg/launch.svg?include')" />
+        <div v-infocus="'showElement'" class="hidden hidden-right svg" v-html="require('../assets/svg/launch.svg?include')" />
       </div>
     </section>
     <section class="white">

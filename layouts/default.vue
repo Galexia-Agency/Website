@@ -2,6 +2,8 @@
 <style>
   /* Resets */
   html {
+    --delay: 0;
+
     background: white
   }
   body {
@@ -568,6 +570,10 @@
     .footer--copyright {
       padding: .5rem
     }
+    .showElement {
+      /* stylelint-disable-next-line */
+      --delay: 0s!important
+    }
   }
   @media (max-width: 600px) {
     .cookieControl__ControlButton {
@@ -710,6 +716,23 @@
   .st19 { fill: #B23F33 }
   .st20 { fill: #ECB02A }
   .st21 { fill: #C79732 }
+
+  /* Animation */
+  .hidden {
+    opacity: 0
+  }
+  .hidden-right {
+    transform: translate(50px, 0)
+  }
+  .hidden-left {
+    transform: translate(-50px, 0)
+  }
+  .showElement {
+    opacity: 1;
+    transform: translate(0, 0);
+    transition: all .75s ease-out;
+    transition-delay: var(--delay)
+  }
 </style>
 
 <template>

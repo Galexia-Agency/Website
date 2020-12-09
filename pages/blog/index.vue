@@ -52,7 +52,7 @@
 <template>
   <section class="white">
     <div class="maxWidth">
-      <div v-for="(post, index) in posts" :key="index" class="post">
+      <div v-for="(post, index) in posts" :key="index" v-infocus="'showElement'" class="hidden post">
         <div style="display: none">
           {{ post = JSON.parse(JSON.stringify(post).replace(new RegExp('\\[', 'g'),"").replace(new RegExp('\\]', 'g'),"")) }}
         </div>

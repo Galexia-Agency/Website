@@ -43,18 +43,17 @@
     />
     <section class="white">
       <div class="grid left maxWidth">
-        <div>
+        <div v-infocus="'showElement'" class="hidden hidden-left">
           <h3>Advertising</h3>
           <p class="text--normal">
             Advertising can offer great return on investment. We are versed in many advertising platforms such as Google Ads and Facebook. Pay-per-click advertising can be a great way to jump-start a business, but we recommend investing in longer term solutions such as building a great social presence and optimising your site for search engines. As with our other services with consistently monitor the performance of the campaign in order to make it as cost-effective as possible for you.
           </p>
         </div>
-
-        <div class="svg" v-html="require('../assets/svg/advertising.svg?include')" />
+        <div v-infocus="'showElement'" class="hidden hidden-right svg" v-html="require('../assets/svg/advertising.svg?include')" />
       </div>
       <div class="grid right maxWidth">
-        <div class="svg" v-html="require('../assets/svg/social.svg?include')" />
-        <div>
+        <div v-infocus="'showElement'" class="hidden hidden-left svg" v-html="require('../assets/svg/social.svg?include')" />
+        <div v-infocus="'showElement'" class="hidden hidden-right">
           <h3>Social Media</h3>
           <p class="text--normal">
             Utilizing social media marketing correctly can be a great tool for increasing the reach of your business thus attracting more leads. These leads can turn into customers and generate more profit for you, helping you reinvest in marketing strategies in turn getting more clients and expanding your business. We deliver engaging content to your users and monitor you social media performance, constantly tailoring our approach in order to achieve the best retention.
@@ -62,44 +61,40 @@
         </div>
       </div>
       <div class="grid left maxWidth">
-        <div>
+        <div v-infocus="'showElement'" class="hidden hidden-left">
           <h3>Emails / Newsletters</h3>
           <p class="text--normal">
             Creating an email list can be a great way to engage with potential customers. What do you do with all those emails? Why not have us deliver a tailored newsletter campaign to your email list encouraging them to engage with your brand and keeping them up-to-date on your current activities. If a customer trusts a brand, they’re more likely to use it in the future. We take great care in adhering to all local laws regarding emails including GDPR.
           </p>
         </div>
-
-        <div class="svg" v-html="require('../assets/svg/email.svg?include')" />
+        <div v-infocus="'showElement'" class="hidden hidden-right svg" v-html="require('../assets/svg/email.svg?include')" />
       </div>
     </section>
     <section class="white">
       <h2>Content Creation</h2>
       <div class="grid column maxWidth four">
-        <div class="card">
+        <div v-infocus="'showElement'" class="card hidden">
           <h3>Photography</h3>
-
           <div class="svg" v-html="require('../assets/svg/photography.svg?include')" />
           <p class="text--normal">
             Photos can make or break a brand. Having good photos are vital to all kinds of content marketing, including social media, and websites. We have a team of photographers versed in everything from events to products.
           </p>
         </div>
-        <div class="card">
+        <div v-infocus="'showElement'" class="card hidden" style="--delay: .25s">
           <h3>Videography</h3>
-
           <div class="svg" v-html="require('../assets/svg/videography.svg?include')" />
           <p class="text--normal">
             We love watching great content. It’s a great way to engage with customers in the modern age. We pride ourselves in creating short clips for Instagram, longer clips for YouTube and everything in-between.
           </p>
         </div>
-        <div class="card">
+        <div v-infocus="'showElement'" class="card hidden" style="--delay: .5s">
           <h3>Copy-writing</h3>
-
           <div class="svg" v-html="require('../assets/svg/writing.svg?include')" />
           <p class="text--normal">
             Some people learn visually, some by reading. It’s best to have a mixture of both. Not to mention that good quality blogs are by far one of the best ways to improve search presence.
           </p>
         </div>
-        <div class="card">
+        <div v-infocus="'showElement'" class="card hidden" style="--delay: .75s">
           <h3>Graphic Design</h3>
 
           <div class="svg" v-html="require('../assets/svg/design.svg?include')" />

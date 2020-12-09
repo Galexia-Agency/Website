@@ -19,7 +19,8 @@
   .header--inner h1 {
     font-size: 2.5rem;
     line-height: 1.225;
-    color: white
+    color: white;
+    letter-spacing: 1px
   }
   .header--inner h2 {
     font-size: 2rem;

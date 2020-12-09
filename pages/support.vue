@@ -18,7 +18,7 @@
     />
     <section class="white">
       <div class="grid left maxWidth">
-        <div>
+        <div v-infocus="'showElement'" class="hidden hidden-left">
           <h3>Hosting issues</h3>
           <p class="text--normal">
             Sometimes your website can go down because your host can't handle a spike in web traffic. This causes the server to freeze and shut down. Think of sites on Black Friday, they often have queues to get on the site to prevent this very issue. Our Jamstack approach to websites minimizes this issue as only static files are served to customers. This means a lot less processing for the server to do, letting it serve a lot more people.
@@ -30,12 +30,11 @@
             Traditional servers also come with some security issues. A Distributed Denial-of-Service (<abbr>DDOS</abbr>) Attack is where one or many computers send repeated requests to your website in order to overload the system or to repeatedly guess a password until they gain access. There are many other types of attacks too. By installing <a href="https://www.cloudflare.com/">Cloudflare</a> we mitigate a lot of these issues. As an added bonus Cloudflare also has built-in caching support.
           </p>
         </div>
-
-        <div class="svg" v-html="require('../assets/svg/server.svg?include')" />
+        <div v-infocus="'showElement'" class="hidden hidden-right svg" v-html="require('../assets/svg/server.svg?include')" />
       </div>
       <div class="grid right maxWidth">
-        <div class="svg" v-html="require('../assets/svg/wordpress.svg?include')" />
-        <div>
+        <div v-infocus="'showElement'" class="hidden hidden-left svg" v-html="require('../assets/svg/wordpress.svg?include')" />
+        <div v-infocus="'showElement'" class="hidden hidden-right">
           <h3>WordPress issues</h3>
           <p class="text--normal">
             If you take one thing away from this page let it be have a regular backup schedule, and test to make sure you can restore from those backups. WordPress has such a large ecosystem that it's impossible for plugin and theme developers to thoroughly test their product with every combination of other plugins and themes out there. This means that when you update a plugin or theme there will always be the possibility that something goes wrong. This is why it is vital to have a backup that you can quickly restore from which prevents your site from being down for long periods of time.
@@ -51,20 +50,19 @@
         </div>
       </div>
       <div class="grid left maxWidth">
-        <div>
+        <div v-infocus="'showElement'" class="hidden hidden-left">
           <h3>Facebook support community</h3>
           <p class="text--normal">
             If you've worked with us before  then you'll already have access to our great Facebook community. It's a place where all the small businesses we've worked with can interact, share their great sites, and get support for common website issues including WordPress themes and plugins, as well as styling issues. If your query isn't urgent we recommend posting a topic here first before coming to us. Best of all, it's free!
           </p>
         </div>
-
-        <div class="svg" v-html="require('../assets/svg/community.svg?include')" />
+        <div v-infocus="'showElement'" class="hidden hidden-right svg" v-html="require('../assets/svg/community.svg?include')" />
       </div>
     </section>
     <section class="white">
       <h2>Common issues</h2>
       <div id="commonIssues" class="grid column maxWidth four">
-        <div class="card">
+        <div v-infocus="'showElement'" class="card white hidden">
           <div class="card--inner">
             <h3>Error 404</h3>
             <p class="text--normal">
@@ -72,7 +70,7 @@
             </p>
           </div>
         </div>
-        <div class="card">
+        <div v-infocus="'showElement'" class="card white hidden" style="--delay: .25s">
           <div class="card--inner">
             <h3>Error 500</h3>
             <p class="text--normal">
@@ -80,7 +78,7 @@
             </p>
           </div>
         </div>
-        <div class="card">
+        <div v-infocus="'showElement'" class="card white hidden" style="--delay: .5s">
           <div class="card--inner">
             <h3>Javascript errors</h3>
             <p class="text--normal">
@@ -88,7 +86,7 @@
             </p>
           </div>
         </div>
-        <div class="card">
+        <div v-infocus="'showElement'" class="card white hidden" style="--delay: .75s">
           <div class="card--inner">
             <h3>WordPress issues</h3>
             <p class="text--normal">
@@ -96,7 +94,7 @@
             </p>
           </div>
         </div>
-        <div class="card">
+        <div v-infocus="'showElement'" class="card white hidden">
           <div class="card--inner">
             <h3>Database connection</h3>
             <p class="text--normal">
@@ -104,7 +102,7 @@
             </p>
           </div>
         </div>
-        <div class="card">
+        <div v-infocus="'showElement'" class="card white hidden" style="--delay: .25s">
           <div class="card--inner">
             <h3>SSL Error</h3>
             <p class="text--normal">
@@ -112,7 +110,7 @@
             </p>
           </div>
         </div>
-        <div class="card">
+        <div v-infocus="'showElement'" class="card white hidden" style="--delay: .5s">
           <div class="card--inner">
             <h3>Slow website</h3>
             <p class="text--normal">
@@ -120,7 +118,7 @@
             </p>
           </div>
         </div>
-        <div class="card">
+        <div v-infocus="'showElement'" class="card white hidden" style="--delay: .75s">
           <div class="card--inner">
             <h3>Spam</h3>
             <p class="text--normal">

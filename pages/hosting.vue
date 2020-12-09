@@ -180,7 +180,7 @@
         </div>
       </div>
       <div class="grid column maxWidth three">
-        <div class="card white">
+        <div v-infocus="'showElement'" class="card white hidden">
           <div class="card--inner">
             <h4 class="title">
               Jamstack Hosting
@@ -267,7 +267,7 @@
             </p>
           </div>
         </div>
-        <div class="card white">
+        <div v-infocus="'showElement'" class="card white hidden" style="--delay: .25s">
           <div class="card--inner">
             <h4 class="title">
               Starter WordPress Hosting
@@ -370,7 +370,7 @@
             </ul>
           </div>
         </div>
-        <div class="card white">
+        <div v-infocus="'showElement'" class="card white hidden" style="--delay: .5s">
           <div class="card--inner">
             <h4 class="title">
               Advanced WordPress Hosting
@@ -482,7 +482,7 @@
         WordPress is a complex program and needs constant management to function properly. Let us take care of the hassle by backing up, securing, and optimising your WordPress install.
       </p>
       <div class="grid column maxWidth three">
-        <div class="card white">
+        <div v-infocus="'showElement'" class="card white hidden">
           <div class="card--inner">
             <h4 class="title">
               Maintenance
@@ -569,7 +569,7 @@
             </ul>
           </div>
         </div>
-        <div class="card white">
+        <div v-infocus="'showElement'" class="card white hidden" style="--delay: .25s">
           <div class="card--inner">
             <h4 class="title">
               Backups
@@ -592,7 +592,7 @@
             </ul>
           </div>
         </div>
-        <div class="card white">
+        <div v-infocus="'showElement'" class="card white hidden" style="--delay: .5s">
           <div class="card--inner">
             <h4 class="title">
               Hosting Transfer
@@ -620,7 +620,7 @@
         We continually monitor the market to find the best deals so that we can pass on these savings to you. This will be updated in your yearly domain invoice.
       </p>
       <div class="grid column maxWidth three">
-        <div class="card white">
+        <div v-infocus="'showElement'" class="card white hidden">
           <div class="card--inner">
             <h4 class="title">
               .com
@@ -632,7 +632,7 @@
             </div>
           </div>
         </div>
-        <div class="card white">
+        <div v-infocus="'showElement'" class="card white hidden" style="--delay: .25s">
           <div class="card--inner">
             <h4 class="title">
               .co.uk
@@ -644,7 +644,7 @@
             </div>
           </div>
         </div>
-        <div class="card white">
+        <div v-infocus="'showElement'" class="card white hidden" style="--delay: .5s">
           <div class="card--inner">
             <h4 class="title">
               All other domains
@@ -664,7 +664,7 @@
         We are able to offer up to 10 forwarding addresses for free with the purchase of any hosting plan.
       </p>
       <div class="grid column maxWidth three">
-        <div class="card white">
+        <div v-infocus="'showElement'" class="card white hidden">
           <div class="card--inner">
             <h4 class="title">
               1 G-Suite User
@@ -710,7 +710,7 @@
             </ul>
           </div>
         </div>
-        <div class="card white">
+        <div v-infocus="'showElement'" class="card white hidden" style="--delay: .5s">
           <div class="card--inner">
             <h4 class="title">
               1 G-Suite Advanced User

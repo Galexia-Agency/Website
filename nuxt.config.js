@@ -87,6 +87,7 @@ export default {
    ** Plugins to load before mounting the App
    */
   plugins: [
+    { src: '~/plugins/animation.js' },
     { src: '~/plugins/fontAwesome.js' },
     { src: '~/plugins/tooltip.js' }
   ],
@@ -197,12 +198,14 @@ export default {
       ]
     },
     manifest: {
+      name: 'Galexia Creative Agency Ltd',
       shortName: 'Galexia',
       background_color: '#ffffff',
       display: 'standalone',
       lang: 'en-GB'
     },
     meta: {
+      name: 'Galexia Creative Agency Ltd',
       mobileAppIOS: true,
       theme_color: '#1a237e',
       lang: 'en-GB',
