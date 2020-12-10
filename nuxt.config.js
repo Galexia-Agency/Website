@@ -43,6 +43,10 @@ export default {
     ],
     script: [
       {
+        src: 'https://static.cloudflareinsights.com/beacon.min.js',
+        'data-cf-beacon': "{'token': '501a553c8a1142a58002b831b07abeb9'}"
+      },
+      {
         innerHTML: `{ 
           "@context": "http://schema.org",
           "@type": "Organization",

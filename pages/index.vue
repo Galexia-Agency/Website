@@ -12,7 +12,7 @@
     -ms-scroll-snap-type: x mandatory;
     scroll-snap-type: x mandatory;
     -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none  /* Firefox */
+    scrollbar-width: none;  /* Firefox */
   }
   #portfolio::-webkit-scrollbar {
     display: none
