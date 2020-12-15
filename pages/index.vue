@@ -114,11 +114,10 @@
         We let our work speak for itself
       </h2>
       <div id="portfolio" class="grid column three maxWidth">
-        <div v-for="(post, index) in posts" :key="index" class="card">
+        <article v-for="(post, index) in posts" :key="index" class="card">
           <div class="card--inner">
             <img :src="post.featuredImage.node.mediaItemUrl" width="100%" height="auto" :alt="post.title">
             <a v-if="post.ACFLink" :href="post.ACFLink.link" target="_blank" rel="noopener">
-
               <h3 v-html="post.title" />
             </a>
             <div class="tags">
@@ -126,7 +125,6 @@
                 {{ tag.name }}
               </span>
             </div>
-
             <div v-html="post.content" />
             <div>
               <a v-if="post.ACFLink" :href="post.ACFLink.link" target="_blank" rel="noopener" class="website_link">
@@ -134,7 +132,7 @@
               </a>
             </div>
           </div>
-        </div>
+        </article>
       </div>
       <div class="icons">
         <div v-for="i in Math.ceil(posts.length - 2)" :key="i.id" class="icon" :class="{ current: i == 1}" @click="portfolioScroll($event, i)" />

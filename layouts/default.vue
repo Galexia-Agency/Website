@@ -196,7 +196,7 @@
   /* Global helpers */
   .maxWidth {
     padding: 2rem;
-    max-width: 1376px;
+    max-width: min(1376px, calc(100vw - 4rem));
     margin: auto
   }
   .white {
