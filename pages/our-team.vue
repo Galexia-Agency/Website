@@ -30,7 +30,7 @@
             <h4>
               {{ member.title }}
             </h4>
-            <img :src="require('../assets/img/octocats/' + member.name + '.png?resize&size=300')" width="300px">
+            <img :src="require('../assets/img/octocats/' + member.name + '.png?resize&size=300')" width="300px" loading="lazy">
 
             <div class="desc" v-html="member.desc" />
           </div>
