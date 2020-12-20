@@ -107,7 +107,6 @@
       <client-only>
         <div v-if="url && title">
           <a :href="url" target="_blank" rel="noopener noreferrer" class="logo">
-
             <img v-if="logo" :src="logo" :alt="title" width="auto" height="75">
           </a>
           <h2>Welcome to your own space.</h2>
