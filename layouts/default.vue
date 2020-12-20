@@ -863,14 +863,17 @@ export default {
     return {
       count: 1,
       posts: [],
-      motion: 'auto'
+      motion: 'auto',
+      background_size: null
     }
   },
   watch: {
     $route () {
       document.documentElement.classList.remove('nav_open')
+      const self = this
       setTimeout(function () {
         document.documentElement.classList.add('nav_close')
+        self.background()
       }, 1000)
     }
   },
@@ -878,24 +881,26 @@ export default {
     if (await this.WebpIsSupported()) {} else {
       document.querySelector('body').classList.add('no-webp')
     }
-    this.background()
     this.posts = this.$store.state.testimonials
-    const self = this
-    window.addEventListener('resize', function () {
-      self.background()
-    })
   },
   async mounted () {
     document.documentElement.classList.add('nav_close')
     this.motion = await window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'
     this.background()
+    const self = this
+    window.addEventListener('resize', function () {
+      self.background()
+    })
   },
   methods: {
     background () {
       const body = document.body
       const html = document.documentElement
       const height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight)
-      document.body.style.backgroundSize = height > ((window.innerWidth * 1.6875) * 1.25) ? (1 * height) + 'px' : '125vw'
+      if (this.background_size < height) {
+        document.body.style.backgroundSize = height > ((window.innerWidth * 1.6875) * 1.25) ? height + 'px' : '125vw'
+        this.background_size = height
+      }
     },
     async WebpIsSupported () {
       // If the browser doesn't have the method createImageBitmap, you can't display webp format
