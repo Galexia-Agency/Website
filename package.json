@@ -18,7 +18,7 @@
     "@netlify/plugin-sitemap": "^0.5.1",
     "@nuxtjs/apollo": "^4.0.1-rc.5",
     "@nuxtjs/pwa": "^3.3.2",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "graphql": "^14.7.0",
     "imagemin-mozjpeg": "^9.0.0",
     "imagemin-pngquant": "^9.0.1",
