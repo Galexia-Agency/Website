@@ -189,7 +189,7 @@ export default {
     nativeShare () {
       navigator.share({
         title: this.post.title + ' | Blog',
-        text: this.post.excerpt,
+        text: this.post.excerpt.replace('<p>', '').replace('</p>', '').replace('[&hellip;]', '').replace('\n', ''),
         url: 'https://galexia.agency' + this.$router.currentRoute.path
       })
     }
