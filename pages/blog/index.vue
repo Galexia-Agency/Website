@@ -60,6 +60,7 @@
           :src="post.featuredImage.node.mediaItemUrl"
           :alt="post.title"
           loading="lazy"
+          decoding="async"
           width="300px"
           height="auto"
         >
