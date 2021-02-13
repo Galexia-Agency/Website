@@ -52,7 +52,7 @@
 <template>
   <section class="white">
     <div class="maxWidth">
-      <article v-for="(post, index) in posts" :key="index" v-infocus="'showElement'" class="hidden post">
+      <article v-for="(post, index) in $parent.$parent.blogs" :key="index" v-infocus="'showElement'" class="hidden post">
         <div style="display: none">
           {{ post = JSON.parse(JSON.stringify(post).replace(new RegExp('\\[', 'g'),"").replace(new RegExp('\\]', 'g'),"")) }}
         </div>
@@ -81,20 +81,9 @@
 </template>
 
 <script>
-import blogQuery from '~/apollo/queries/categories/blog.gql'
-
 export default {
-  async asyncData ({ app }) {
-    const response = await app.apolloProvider.defaultClient.query({
-      query: blogQuery
-    })
-    return {
-      posts: response.data.posts.nodes
-    }
-  },
   data () {
     return {
-      posts: [],
       monthArr: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
     }
   },

@@ -1,7 +1,9 @@
 import testimonialsQuery from '~/apollo/queries/categories/testimonial.gql'
+import blogQuery from '~/apollo/queries/categories/blog.gql'
 
 export const state = () => ({
-  testimonials: []
+  testimonials: [],
+  blog: []
 })
 
 export const actions = {
@@ -9,6 +11,10 @@ export const actions = {
     const response = await this.app.apolloProvider.defaultClient.query({
       query: testimonialsQuery
     })
-    state.testimonials = response.data.posts.nodes
+    const blogResponse = await this.app.apolloProvider.defaultClient.query({
+      query: blogQuery
+    })
+    state.testimonials = await response.data.posts.nodes
+    state.blog = await blogResponse.data.posts.nodes
   }
 }

@@ -870,6 +870,7 @@ export default {
     return {
       count: 1,
       posts: [],
+      blogs: [],
       motion: 'auto',
       background_size: null
     }
@@ -889,6 +890,7 @@ export default {
       document.querySelector('body').classList.add('no-webp')
     }
     this.posts = this.$store.state.testimonials
+    this.blogs = this.$store.state.blog
   },
   async mounted () {
     document.documentElement.classList.add('nav_close')
