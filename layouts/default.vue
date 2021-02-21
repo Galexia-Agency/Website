@@ -1,5 +1,6 @@
 
 <style>
+
   /* Resets */
   html {
     --delay: 0;
@@ -863,7 +864,7 @@
 </template>
 
 <script>
-import Hamburger from '../components/hamburger'
+import Hamburger from 'vue-hamburger/hamburger.vue'
 
 export default {
   components: {
