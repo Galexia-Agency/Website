@@ -604,8 +604,6 @@
     .nav--icon {
       display: block;
       fill: white;
-      height: 40px;
-      width: 40px;
       justify-self: end;
       align-self: center
     }
@@ -754,7 +752,7 @@
           </nuxt-link>
         </div>
         <div class="nav--icon">
-          <div @click="nav" v-html="require('../assets/svg/menu.svg?include')" />
+          <Hamburger type="arrow" color="white" />
         </div>
         <div class="nav--container">
           <nuxt-link to="/" class="nav--link">
@@ -865,7 +863,12 @@
 </template>
 
 <script>
+import Hamburger from '../components/hamburger'
+
 export default {
+  components: {
+    Hamburger
+  },
   data () {
     return {
       count: 1,
@@ -893,7 +896,6 @@ export default {
     this.blogs = this.$store.state.blog
   },
   async mounted () {
-    document.documentElement.classList.add('nav_close')
     this.motion = await window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'
     this.background()
     const self = this
@@ -952,19 +954,6 @@ export default {
         setTimeout(function () {
           self.count = Math.round((container.scrollLeft / width) + 1)
         }, 300)
-      }
-    },
-    nav () {
-      if (document.documentElement.classList.contains('nav_open')) {
-        document.documentElement.classList.remove('nav_open')
-        setTimeout(function () {
-          document.documentElement.classList.add('nav_close')
-        }, 1000)
-      } else {
-        document.documentElement.classList.remove('nav_close')
-        setTimeout(function () {
-          document.documentElement.classList.add('nav_open')
-        }, 1)
       }
     }
   }
