@@ -65,8 +65,11 @@
     }
   }
   @media (max-width: 500px) {
-    .card:nth-of-type(3), .card:nth-of-type(4) {
+    .card {
       display: none
+    }
+    .card:nth-of-type(1), .card:nth-of-type(2) {
+      display: grid
     }
   }
 </style>
