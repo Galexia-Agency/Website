@@ -185,7 +185,7 @@ export default {
     }
   },
   generate: {
-    fallback: 'index.html'
+    fallback: true
   },
   pwa: {
     workbox: {
