@@ -309,6 +309,9 @@
     display: grid;
     grid-gap: .5rem
   }
+  .footer--bottom img {
+    margin-top: 1em
+  }
   .footer--bottom_navLink, .footer--bottom_contact a {
     font-family: Assistant, sans-serif;
     font-size: 1.25rem;
@@ -649,7 +652,7 @@
       width: 90%;
       text-align: center
     }
-    .footer--bottom a {
+    .footer--bottom a, .footer--bottom img {
       display: inline;
       margin: auto;
       font-size: 1rem
@@ -805,6 +808,7 @@
               <nuxt-link class="footer--bottom_navLink" to="/legal/">
                 Legal
               </nuxt-link>
+              <img src="../assets/img/White_Badge_PolicyBee.png?size=75" width="75" height="75" alt="Insured through PolicyBee">
             </div>
           </div>
           <div>
@@ -819,7 +823,6 @@
             <div class="testimonials">
               <div v-for="(testimonial, index) in posts" :key="index" class="testimonial">
                 <div v-html="testimonial.content" />
-
                 <div class="company" v-html="'- ' + testimonial.title" />
               </div>
             </div>
