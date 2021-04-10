@@ -765,6 +765,9 @@
           <nuxt-link to="/web/" class="nav--link">
             Web
           </nuxt-link>
+          <nuxt-link to="/marketing/" class="nav--link">
+            Marketing
+          </nuxt-link>
           <nuxt-link to="/blog/" class="nav--link">
             Blog
           </nuxt-link>
