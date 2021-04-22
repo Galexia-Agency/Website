@@ -817,7 +817,7 @@
           <div>
             <div class="footer--bottom_contact">
               <h4>Telephone</h4>
-              <a href="tel:+07521 491222">07521 491222</a>
+              <a href="https://calendly.com/galexia/phone-call">07521 491222</a>
               <h4>Email</h4>
               <a href="mailto:info@galexia.agency">info@galexia.agency</a>
             </div>
