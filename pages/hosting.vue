@@ -254,15 +254,6 @@
                   </template>
                 </v-popover>
               </li>
-              <li class="overflow">
-                Google Search Console and SEO monitoring
-                <v-popover placement="top">
-                  <font-awesome-icon icon="question" />
-                  <template slot="popover">
-                    <span>Google Search Console improves your control over how Google indexes your site. It also alerts you to any issues that may be affecting your website in search results</span>
-                  </template>
-                </v-popover>
-              </li>
             </ul>
             <p class="terms">
               <strong>* Free with any WordPress hosting plan otherwise £5/month</strong>
@@ -556,15 +547,6 @@
                   <font-awesome-icon icon="question" />
                   <template slot="popover">
                     <span>Keeping everything up-to-date ensures security issues are fixed and your site is running as fast as possible</span>
-                  </template>
-                </v-popover>
-              </li>
-              <li class="overflow">
-                Google Search Console and SEO monitoring
-                <v-popover placement="top">
-                  <font-awesome-icon icon="question" />
-                  <template slot="popover">
-                    <span>Google Search Console improves your control over how Google indexes your site. It also alerts you to any issues that may be affecting your website in search results</span>
                   </template>
                 </v-popover>
               </li>
