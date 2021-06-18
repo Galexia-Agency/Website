@@ -820,7 +820,7 @@
           <div>
             <div class="footer--bottom_contact">
               <h4>Telephone</h4>
-              <a href="https://calendly.com/galexia/phone-call">07521 491222</a>
+              <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/galexia/phone-call'});return false;">07521 491222</a>
               <h4>Email</h4>
               <a href="mailto:info@galexia.agency">info@galexia.agency</a>
             </div>
