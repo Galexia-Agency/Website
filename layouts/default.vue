@@ -220,7 +220,8 @@
   }
   .logo svg {
     fill: white;
-    width: 250px
+    width: 250px;
+    user-select: none
   }
   .logo svg text {
     font-size: 32px;
