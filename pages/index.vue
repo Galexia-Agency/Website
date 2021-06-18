@@ -117,7 +117,7 @@
         We let our work speak for itself
       </h2>
       <div id="portfolio" class="grid column three maxWidth">
-        <article v-for="(post, index) in posts" :key="index" class="card">
+        <article v-for="(post, index) in portfolios" :key="index" class="card">
           <div class="card--inner">
             <img :src="post.featuredImage.node.mediaItemUrl" width="100%" height="auto" :alt="post.title">
             <a v-if="post.ACFLink" :href="post.ACFLink.link" target="_blank" rel="noopener">
@@ -138,39 +138,24 @@
         </article>
       </div>
       <div class="icons">
-        <div v-for="i in Math.ceil(posts.length - 2)" :key="i.id" class="icon" :class="{ current: i == 1}" @click="portfolioScroll($event, i)" />
+        <div v-for="i in Math.ceil(portfolios.length - 2)" :key="i.id" class="icon" :class="{ current: i == 1}" @click="portfolioScroll($event, i)" />
       </div>
     </section>
   </div>
 </template>
 
 <script>
+import { mapState } from 'vuex'
 import Header from '../components/header'
-
-import portfolioQuery from '~/apollo/queries/categories/portfolio.gql'
-import portfolioPostQuery from '~/apollo/queries/posts/portfolio.gql'
 
 export default {
   components: {
     Header
   },
-  async asyncData ({ app }) {
-    const dataOne = await app.apolloProvider.defaultClient.query({
-      query: portfolioQuery
-    })
-    const arr = []
-    for (const i in dataOne.data.posts.nodes) {
-      const response = await app.apolloProvider.defaultClient.query({
-        query: portfolioPostQuery,
-        variables: {
-          id: dataOne.data.posts.nodes[i].id
-        }
-      })
-      arr.push(response.data.post)
-    }
-    return {
-      posts: arr
-    }
+  computed: {
+    ...mapState([
+      'portfolios'
+    ])
   },
   mounted () {
     if ('ontouchstart' in document.documentElement) {} else {

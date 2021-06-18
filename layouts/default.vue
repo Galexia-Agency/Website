@@ -828,7 +828,7 @@
           </div>
           <div class="testimonials--container">
             <div class="testimonials">
-              <div v-for="(testimonial, index) in posts" :key="index" class="testimonial">
+              <div v-for="(testimonial, index) in testimonials" :key="index" class="testimonial">
                 <div v-html="testimonial.content" />
                 <div class="company" v-html="'- ' + testimonial.title" />
               </div>
@@ -837,8 +837,8 @@
               <button aria-label="previous" :disabled="count === 1" @click="left">
                 <font-awesome-icon :icon="['fas', 'chevron-left']" />
               </button>
-              <p><span>{{ count }}</span> / <span>{{ posts.length }}</span></p>
-              <button aria-label="next" :disabled="count === posts.length" @click="right">
+              <p><span>{{ count }}</span> / <span>{{ testimonials.length }}</span></p>
+              <button aria-label="next" :disabled="count === testimonials.length" @click="right">
                 <font-awesome-icon :icon="['fas', 'chevron-right']" />
               </button>
             </div>
@@ -874,6 +874,7 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 import Hamburger from 'vue-hamburger/hamburger.vue'
 
 export default {
@@ -883,11 +884,15 @@ export default {
   data () {
     return {
       count: 1,
-      posts: [],
-      blogs: [],
       motion: 'auto',
       background_size: null
     }
+  },
+  computed: {
+    ...mapState([
+      'testimonials',
+      'blog'
+    ])
   },
   watch: {
     $route () {
@@ -903,8 +908,6 @@ export default {
     if (await this.WebpIsSupported()) {} else {
       document.querySelector('body').classList.add('no-webp')
     }
-    this.posts = this.$store.state.testimonials
-    this.blogs = this.$store.state.blog
   },
   async mounted () {
     this.motion = await window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'
@@ -954,7 +957,7 @@ export default {
       }
     },
     right () {
-      if (this.count !== this.posts.length) {
+      if (this.count !== this.testimonials.length) {
         const container = document.querySelector('.testimonials')
         const width = document.querySelector('.testimonial').offsetWidth
         container.scrollBy({

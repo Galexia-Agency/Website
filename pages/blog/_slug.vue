@@ -108,27 +108,27 @@
 </style>
 
 <template>
-  <div v-if="post.title" class="post">
-    <div class="post--header" :style="'background-image:url(' + post.featuredImage.node.mediaItemUrl + ')'">
+  <div v-if="blog.title" class="post">
+    <div class="post--header" :style="'background-image:url(' + blog.featuredImage.node.mediaItemUrl + ')'">
       <div class="background_opacity" />
 
-      <h1 class="maxWidth" v-html="post.title" />
+      <h1 class="maxWidth" v-html="blog.title" />
     </div>
     <section class="white">
       <div class="maxWidth">
         <div class="post--meta">
-          <p>Author: <strong>{{ post.author.node.name }}</strong></p>
+          <p>Author: <strong>{{ blog.author.node.name }}</strong></p>
           <p>
             Published on:
             <strong>
               <time>
-                {{ new Date(post.date).getDate() + " " + monthArr[new Date(post.date).getMonth()] + " '" + new Date(post.date).getFullYear().toString().substring(2) }}
+                {{ new Date(blog.date).getDate() + " " + monthArr[new Date(blog.date).getMonth()] + " '" + new Date(blog.date).getFullYear().toString().substring(2) }}
               </time>
             </strong>
           </p>
         </div>
 
-        <div class="post--content" v-html="post.content" />
+        <div class="post--content" v-html="blog.content" />
         <div v-if="!share" class="post--footer">
           <h4>Share:</h4>
           <ShareNetwork
@@ -136,9 +136,9 @@
             :key="social"
             :network="social"
             :url="'https://galexia.agency' + $router.currentRoute.path"
-            :title="post.title + ' | Galexia Creative Agency Ltd | Web Design and Development'"
-            :description="post.excerpt"
-            :media="post.featuredImage.mediaItemUrl"
+            :title="blog.title + ' | Galexia Creative Agency Ltd | Web Design and Development'"
+            :description="blog.excerpt"
+            :media="blog.featuredImage.mediaItemUrl"
             class="button"
           >
             <font-awesome-icon :icon="['fab', social.toLowerCase()]" /> {{ social }}
@@ -155,24 +155,10 @@
 </template>
 
 <script>
-import postQuery from '~/apollo/queries/posts/blog.gql'
-
 export default {
-  async asyncData ({ app, route }) {
-    const response = await app.apolloProvider.defaultClient.query({
-      query: postQuery,
-      variables: {
-        id: route.params.id
-      }
-    })
-    return {
-      post: response.data.post
-    }
-  },
   data () {
     return {
       socials: ['Facebook', 'LinkedIn', 'Twitter', 'WhatsApp'],
-      post: {},
       monthArr: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
     }
   },
@@ -183,31 +169,34 @@ export default {
       } catch {
         return false
       }
+    },
+    blog () {
+      return this.$store.state.blogs.find(blog => blog.slug === this.$route.params.slug)
     }
   },
   methods: {
     nativeShare () {
       navigator.share({
-        title: this.post.title + ' | Blog',
-        text: this.post.excerpt.replace('<p>', '').replace('</p>', '').replace('[&hellip;]', '').replace('\n', ''),
+        title: this.blog.title + ' | Blog',
+        text: this.blog.excerpt.replace('<p>', '').replace('</p>', '').replace('[&hellip;]', '').replace('\n', ''),
         url: 'https://galexia.agency' + this.$router.currentRoute.path
       })
     }
   },
   head () {
     return {
-      title: this.post.title.replace('&#8217;', '\'') + ' | Blog',
+      title: this.blog.title.replace('&#8217;', '\'') + ' | Blog',
       meta: [
-        { hid: 'description', name: 'description', content: this.post.seo.metaDesc || this.post.excerpt },
-        { hid: 'og:title', property: 'og:title', content: this.post.title.replace('&#8217;', '\'') + ' | Blog' },
-        { hid: 'og:description', property: 'og:description', content: this.post.seo.metaDesc || this.post.excerpt },
-        { hid: 'og:image', property: 'og:image', content: this.post.featuredImage.mediaItemUrl },
-        { hid: 'twitter:title', name: 'twitter:title', content: this.post.title.replace('&#8217;', '\'') + ' | Blog' },
-        { hid: 'twitter:description', name: 'twitter:description', content: this.post.seo.metaDesc || this.post.excerpt },
-        { hid: 'twitter:img', name: 'twitter:img', content: this.post.featuredImage.mediaItemUrl }
+        { hid: 'description', name: 'description', content: this.blog.seo.metaDesc || this.blog.excerpt },
+        { hid: 'og:title', property: 'og:title', content: this.blog.title.replace('&#8217;', '\'') + ' | Blog' },
+        { hid: 'og:description', property: 'og:description', content: this.blog.seo.metaDesc || this.blog.excerpt },
+        { hid: 'og:image', property: 'og:image', content: this.blog.featuredImage.mediaItemUrl },
+        { hid: 'twitter:title', name: 'twitter:title', content: this.blog.title.replace('&#8217;', '\'') + ' | Blog' },
+        { hid: 'twitter:description', name: 'twitter:description', content: this.blog.seo.metaDesc || this.blog.excerpt },
+        { hid: 'twitter:img', name: 'twitter:img', content: this.blog.featuredImage.mediaItemUrl }
       ],
       link: [
-        { hid: 'canonical', rel: 'canonical', href: 'https://galexia.agency/blog/' + this.post.slug + '/' }
+        { hid: 'canonical', rel: 'canonical', href: 'https://galexia.agency/blog/' + this.blog.slug + '/' }
       ]
     }
   }

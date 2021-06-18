@@ -52,7 +52,7 @@
 <template>
   <section class="white">
     <div class="maxWidth">
-      <article v-for="(post, index) in $parent.$parent.blogs" :key="index" v-infocus="'showElement'" class="hidden post">
+      <article v-for="(post, index) in blog" :key="index" v-infocus="'showElement'" class="hidden post">
         <div style="display: none">
           {{ post = JSON.parse(JSON.stringify(post).replace(new RegExp('\\[', 'g'),"").replace(new RegExp('\\]', 'g'),"")) }}
         </div>
@@ -81,11 +81,17 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
   data () {
     return {
       monthArr: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
     }
+  },
+  computed: {
+    ...mapState([
+      'blog'
+    ])
   },
   head () {
     return {

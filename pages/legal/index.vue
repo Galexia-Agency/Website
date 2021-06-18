@@ -11,12 +11,12 @@
     <div class="maxWidth">
       <h1>Legal</h1>
       <ul>
-        <li v-for="(post, index) in posts" :key="index" class="post">
+        <li v-for="(legalPost, index) in legal" :key="index" class="post">
           <div style="display: none">
-            {{ post = JSON.parse(JSON.stringify(post).replace(new RegExp('\\[', 'g'),"").replace(new RegExp('\\]', 'g'),"")) }}
+            {{ legalPost = JSON.parse(JSON.stringify(legalPost).replace(new RegExp('\\[', 'g'),"").replace(new RegExp('\\]', 'g'),"")) }}
           </div>
 
-          <nuxt-link :to="'/legal/' + post.slug + '/'" v-html="post.title" />
+          <nuxt-link :to="'/legal/' + legalPost.slug + '/'" v-html="legalPost.title" />
         </li>
       </ul>
     </div>
@@ -24,16 +24,13 @@
 </template>
 
 <script>
-import query from '~/apollo/queries/categories/legal.gql'
+import { mapState } from 'vuex'
 
 export default {
-  async asyncData ({ app }) {
-    const response = await app.apolloProvider.defaultClient.query({
-      query
-    })
-    return {
-      posts: response.data.posts.nodes
-    }
+  computed: {
+    ...mapState([
+      'legal'
+    ])
   },
   head () {
     return {
