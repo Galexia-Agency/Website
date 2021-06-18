@@ -62,12 +62,12 @@ export default {
         },
         {
           name: 'chelsea',
-          title: 'Head of Media',
+          title: 'Media Creation',
           desc: '<p>Chelsea joined Galexia as a photographer when the company was founded.<br><br>Chelsea specializes in event photography and has worked with a number of clients at a range of functions.<br><br>In her spare time, she likes to read, collect Funko pops, and look at pictures of dogs.</p>'
         },
         {
           name: 'hannah',
-          title: 'Head of Marketing',
+          title: 'Marketer',
           desc: '<p>Hannah graduated with a bachelor\'s degree in marketing from the Solent University, in 2019.<br><br>There\'s no doubt that marketing is a fickle and fast paced industry. It\'s easy to get stuck in ways of the past, but Hannah can help bring your marketing efforts up to present-day standards, maximising your potential for future success.<br><br>In her free time, she enjoys playing games, both online and offline and also building and painting miniatures to add to her ever-growing collection.</p>'
         },
         {

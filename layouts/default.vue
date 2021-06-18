@@ -811,6 +811,9 @@
               <nuxt-link class="footer--bottom_navLink" to="/legal/">
                 Legal
               </nuxt-link>
+              <nuxt-link class="footer--bottom_navLink" to="/our-team/">
+                Our Team
+              </nuxt-link>
               <img src="../assets/img/White_Badge_PolicyBee.png?size=75" width="75" height="75" alt="Insured through PolicyBee">
             </div>
           </div>
