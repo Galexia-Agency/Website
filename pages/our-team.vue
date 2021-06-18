@@ -88,8 +88,7 @@ export default {
         { hid: 'og:image', property: 'og:image', content: 'https://galexia.agency/icon.png' },
         { hid: 'twitter:title', name: 'twitter:title', content: 'Our Team' },
         { hid: 'twitter:description', name: 'twitter:description', content: '' },
-        { hid: 'twitter:img', name: 'twitter:img', content: 'https://galexia.agency/icon.png' },
-        { hid: 'robots', name: 'robots', content: 'noindex' }
+        { hid: 'twitter:img', name: 'twitter:img', content: 'https://galexia.agency/icon.png' }
       ],
       link: [
         { hid: 'canonical', rel: 'canonical', href: 'https://galexia.agency/our-team/' }
