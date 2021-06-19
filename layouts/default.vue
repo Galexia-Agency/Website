@@ -24,9 +24,17 @@
   body.no-webp {
     background-image: url('../assets/img/SpaceBackgroundBlurred.jpg?resize')
   }
+  main header {
+    background-size: cover;
+    background-image: linear-gradient(rgba(53, 47, 114, .33), rgba(53, 47, 114, .33)), url('../assets/img/SpaceBackgroundBlurred.jpg?webp');
+    background-position: 0 -135px
+  }
+  .no-webp main header {
+    background-image: linear-gradient(rgba(53, 47, 114, .33), rgba(53, 47, 114, .33)), url('../assets/img/SpaceBackgroundBlurred.jpg?resize')
+  }
 
   @media (min-width: 1700px) {
-    body {
+    body, main header {
       background-size: 125vw
     }
   }
@@ -179,7 +187,8 @@
       'footer'
   }
   main {
-    grid-area: main
+    grid-area: main;
+    background-color: white
   }
   main :any-link, main h2, main h3, main h4, main h5, main h6 {
     color: #1A237E;

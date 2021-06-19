@@ -1,8 +1,8 @@
 .page-enter-active, .page-leave-active {
-  transition: opacity .33s
+  transition: opacity .33s ease-out
 }
 .page-enter, .page-leave-to {
-  opacity: .33
+  opacity: .2
 }
 @media (prefers-reduced-motion: reduce) {
   .page-enter-active, .page-leave-active {
