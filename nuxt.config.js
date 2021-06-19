@@ -1,5 +1,8 @@
 export default {
   target: 'static',
+  router: {
+    trailingSlash: true
+  },
   /*
    ** Headers of the page
    */
