@@ -391,8 +391,7 @@
       0 0 5.3px rgba(0, 0, 0, .028),
       0 0 10px rgba(0, 0, 0, .035),
       0 0 17.9px rgba(0, 0, 0, .042),
-      0 0 33.4px rgba(0, 0, 0, .05),
-      0 0 80px rgba(0, 0, 0, .07);
+      0 0 33.4px rgba(0, 0, 0, .05);
     border-radius: .5rem
   }
   .card.white .card--inner h3 {
