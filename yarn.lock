@@ -14688,8 +14688,8 @@ vue-eslint-parser@^7.1.1, vue-eslint-parser@^7.6.0:
     lodash "^4.17.15"
 
 "vue-hamburger@github:joebailey26/vue-hamburger":
-  version "1.0.1"
-  resolved "https://codeload.github.com/joebailey26/vue-hamburger/tar.gz/bcf3f1d9e76e0b4ae233a24c87ba5eb7fa1e54f0"
+  version "1.0.4"
+  resolved "https://codeload.github.com/joebailey26/vue-hamburger/tar.gz/df925a6a5f5bec40bfbc2193cf40e4aaa4d86d7d"
 
 vue-hot-reload-api@^2.3.0:
   version "2.3.4"
