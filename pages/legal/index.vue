@@ -53,7 +53,8 @@ export default {
               "position": 2,
               "name": "Legal",
               "item": "https://galexia.agency/legal/"
-            }]`,
+            }]
+          }`,
           type: 'application/ld+json'
         }
       ]

@@ -188,7 +188,8 @@ export default {
                 "position": 2,
                 "name": "Blog",
                 "item": "https://galexia.agency/blog/"
-              }]`,
+              }]
+            }`,
             type: 'application/ld+json'
           },
           {
@@ -200,7 +201,8 @@ export default {
                 "position": 3,
                 "name": "${this.blog.title}",
                 "item": "https://galexia.agency/blog/${this.blog.slug}/"
-              }]`,
+              }]
+            }`,
             type: 'application/ld+json'
           }
         ]

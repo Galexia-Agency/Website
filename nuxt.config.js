@@ -83,7 +83,8 @@ export default {
             "position": 1,
             "name": "Home",
             "item": "https://galexia.agency"
-          }]`,
+          }]
+        }`,
         type: 'application/ld+json'
       },
       {

@@ -141,7 +141,8 @@ export default {
               "position": 2,
               "name": "Marketing",
               "item": "https://galexia.agency/marketing/"
-            }]`,
+            }]
+          }`,
           type: 'application/ld+json'
         }
       ]

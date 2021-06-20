@@ -114,7 +114,8 @@ export default {
               "position": 2,
               "name": "Blog",
               "item": "https://galexia.agency/blog/"
-            }]`,
+            }]
+          }`,
           type: 'application/ld+json'
         }
       ]

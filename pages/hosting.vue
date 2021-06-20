@@ -778,7 +778,8 @@ export default {
               "position": 2,
               "name": "Hosting",
               "item": "https://galexia.agency/hosting/"
-            }]`,
+            }]
+          }`,
           type: 'application/ld+json'
         }
       ]

@@ -100,7 +100,8 @@ export default {
               "position": 2,
               "name": "Web",
               "item": "https://galexia.agency/web/"
-            }]`,
+            }]
+          }`,
           type: 'application/ld+json'
         }
       ]

@@ -61,7 +61,8 @@ export default {
               "position": 2,
               "name": "Careers",
               "item": "https://galexia.agency/careers/"
-            }]`,
+            }]
+          }`,
           type: 'application/ld+json'
         }
       ]

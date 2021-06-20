@@ -165,7 +165,8 @@ export default {
               "position": 2,
               "name": "Website Support",
               "item": "https://galexia.agency/support/"
-            }]`,
+            }]
+          }`,
           type: 'application/ld+json'
         }
       ]

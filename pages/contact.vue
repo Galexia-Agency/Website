@@ -224,7 +224,8 @@ export default {
               "position": 2,
               "name": "Contact",
               "item": "https://galexia.agency/contact/"
-            }]`,
+            }]
+          }`,
           type: 'application/ld+json'
         }
       ]

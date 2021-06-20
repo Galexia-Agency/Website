@@ -105,7 +105,8 @@ export default {
               "position": 2,
               "name": "Our Team",
               "item": "https://galexia.agency/our-team/"
-            }]`,
+            }]
+          }`,
           type: 'application/ld+json'
         }
       ]
