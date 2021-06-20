@@ -19,6 +19,7 @@
     <Header
       title="Our Team"
       desc="Meet our team of highly creative individuals who will put your business first. They each have things that make them unique, in their own life, and in the work that they do. Get to know them a bit more down below."
+      :link="{location: '/contact/', text: 'Chat to us'}"
     />
     <section class="white">
       <div class="maxWidth grid column three">
@@ -92,6 +93,21 @@ export default {
       ],
       link: [
         { hid: 'canonical', rel: 'canonical', href: 'https://galexia.agency/our-team/' }
+      ],
+      __dangerouslyDisableSanitizers: ['script'],
+      script: [
+        {
+          innerHTML: `{
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Our Team",
+            "item": "https://galexia.agency/our-team/"
+            }`,
+          type: 'application/ld+json'
+        }
       ]
     }
   }

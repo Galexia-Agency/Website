@@ -14,6 +14,9 @@ module.exports = {
   // add your custom rules here
   rules: {
     "vue/comment-directive": 0,
-    "vue/no-v-html": 0
+    "vue/no-v-html": 0,
+    "vue/component-tags-order": ["error", {
+      "order": [ "style", "template", "script" ]
+    }]
   }
 }

@@ -794,7 +794,7 @@
     </main>
     <footer>
       <CookieControl>
-        <template v-slot:bar>
+        <template #bar>
           <p>
             We use cookies and other tracking technologies to improve your browsing experience on our site, analyze site traffic, and understand where our audience is coming from. To find out more, please read our <nuxt-link to="/legal/cookie-policy/">
               Cookie Policy
@@ -817,11 +817,11 @@
               <nuxt-link class="footer--bottom_navLink" to="/hosting/">
                 Hosting
               </nuxt-link>
-              <nuxt-link class="footer--bottom_navLink" to="/legal/">
-                Legal
-              </nuxt-link>
               <nuxt-link class="footer--bottom_navLink" to="/our-team/">
                 Our Team
+              </nuxt-link>
+              <nuxt-link class="footer--bottom_navLink" to="/legal/">
+                Legal
               </nuxt-link>
               <img src="../assets/img/White_Badge_PolicyBee.png?size=75" width="75" height="75" alt="Insured through PolicyBee">
             </div>
@@ -913,6 +913,7 @@ export default {
     }
   },
   async beforeMount () {
+    // eslint-disable-next-line
     if (await this.WebpIsSupported()) {} else {
       document.querySelector('body').classList.add('no-webp')
     }
@@ -932,6 +933,9 @@ export default {
       const height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight)
       if (this.background_size < height) {
         document.body.style.backgroundSize = height > ((window.innerWidth * 1.6875) * 1.25) ? height + 'px' : '125vw'
+        if (document.querySelector('main header')) {
+          document.querySelector('main header').style.backgroundSize = height > ((window.innerWidth * 1.6875) * 1.25) ? height + 'px' : '125vw'
+        }
         this.background_size = height
       }
     },

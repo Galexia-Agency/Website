@@ -88,11 +88,6 @@ export default {
       monthArr: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
     }
   },
-  computed: {
-    ...mapState([
-      'blog'
-    ])
-  },
   head () {
     return {
       title: 'Blog',
@@ -107,8 +102,28 @@ export default {
       ],
       link: [
         { hid: 'canonical', rel: 'canonical', href: 'https://galexia.agency/blog/' }
+      ],
+      __dangerouslyDisableSanitizers: ['script'],
+      script: [
+        {
+          innerHTML: `{
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://galexia.agency/blog/"
+            }`,
+          type: 'application/ld+json'
+        }
       ]
     }
+  },
+  computed: {
+    ...mapState([
+      'blog'
+    ])
   }
 }
 </script>

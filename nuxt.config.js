@@ -75,6 +75,18 @@ export default {
         type: 'application/ld+json'
       },
       {
+        innerHTML: `{
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://galexia.agency"
+          }`,
+        type: 'application/ld+json'
+      },
+      {
         src: 'https://assets.calendly.com/assets/external/widget.js', type: 'text/javascript', async: true
       }
     ]
@@ -138,9 +150,7 @@ export default {
   ],
   apollo: {
     clientConfigs: {
-      default: {
-        httpEndpoint: 'https://blog.galexia.agency/graphql'
-      }
+      default: '/apollo/apollo-config.js'
     }
   },
   cookies: {
@@ -196,6 +206,25 @@ export default {
   },
   pwa: {
     workbox: {
+      preCaching: [
+        '/',
+        '/web/',
+        '/marketing/',
+        '/blog/',
+        '/careers/',
+        '/contact/',
+        '/support/',
+        '/hosting/',
+        '/legal/',
+        '/legal/terms-of-service/',
+        '/legal/data-processing-agreement/',
+        '/legal/gdpr-statement/',
+        '/legal/cookie-policy/',
+        '/legal/privacy-policy/',
+        '/legal/service-level-agreement/',
+        '/legal/acceptable-use-policy/',
+        '/our-team/'
+      ],
       offlineAnalytics: true,
       offlinePage: '/404.html',
       runtimeCaching: [

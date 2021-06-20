@@ -25,11 +25,6 @@ export default {
       monthArr: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
     }
   },
-  computed: {
-    legal () {
-      return this.$store.state.legals.find(legal => legal.slug === this.$route.params.slug)
-    }
-  },
   head () {
     if (this.legal) {
       return {
@@ -45,8 +40,40 @@ export default {
         ],
         link: [
           { hid: 'canonical', rel: 'canonical', href: 'https://galexia.agency/legal/' + this.legal.slug + '/' }
+        ],
+        __dangerouslyDisableSanitizers: ['script'],
+        script: [
+          {
+            innerHTML: `{
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              "itemListElement": [{
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Legal",
+              "item": "https://galexia.agency/legal/"
+              }`,
+            type: 'application/ld+json'
+          },
+          {
+            innerHTML: `{
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              "itemListElement": [{
+              "@type": "ListItem",
+              "position": 3,
+              "name": "${this.legal.title}",
+              "item": "https://galexia.agency/legal/${this.legal.slug}/"
+              }`,
+            type: 'application/ld+json'
+          }
         ]
       }
+    }
+  },
+  computed: {
+    legal () {
+      return this.$store.state.legals.find(legal => legal.slug === this.$route.params.slug)
     }
   }
 }

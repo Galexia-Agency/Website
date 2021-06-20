@@ -766,6 +766,21 @@ export default {
       ],
       link: [
         { hid: 'canonical', rel: 'canonical', href: 'https://galexia.agency/hosting/' }
+      ],
+      __dangerouslyDisableSanitizers: ['script'],
+      script: [
+        {
+          innerHTML: `{
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Hosting",
+            "item": "https://galexia.agency/hosting/"
+            }`,
+          type: 'application/ld+json'
+        }
       ]
     }
   }

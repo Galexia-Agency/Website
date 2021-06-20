@@ -198,6 +198,38 @@ export default {
       }
     }
   },
+  head () {
+    return {
+      title: 'Contact',
+      meta: [
+        { hid: 'description', name: 'description', content: 'We\'d love to help you on your next big project. We understand what it means to dream big, and then achieve that dream.' },
+        { hid: 'og:title', property: 'og:title', content: 'Contact' },
+        { hid: 'og:description', property: 'og:description', content: 'We\'d love to help you on your next big project. We understand what it means to dream big, and then achieve that dream.' },
+        { hid: 'og:image', property: 'og:image', content: 'https://galexia.agency/icon.png' },
+        { hid: 'twitter:title', name: 'twitter:title', content: 'Contact' },
+        { hid: 'twitter:description', name: 'twitter:description', content: 'We\'d love to help you on your next big project. We understand what it means to dream big, and then achieve that dream.' },
+        { hid: 'twitter:img', name: 'twitter:img', content: 'https://galexia.agency/icon.png' }
+      ],
+      link: [
+        { hid: 'canonical', rel: 'canonical', href: 'https://galexia.agency/contact/' }
+      ],
+      __dangerouslyDisableSanitizers: ['script'],
+      script: [
+        {
+          innerHTML: `{
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Contact",
+            "item": "https://galexia.agency/contact/"
+            }`,
+          type: 'application/ld+json'
+        }
+      ]
+    }
+  },
   mounted () {
     // eslint-disable-next-line
     if (process.client) {
@@ -268,23 +300,6 @@ export default {
       if (document.querySelector('#submit')) {
         document.querySelector('#submit').disabled = !cansubmit
       }
-    }
-  },
-  head () {
-    return {
-      title: 'Contact',
-      meta: [
-        { hid: 'description', name: 'description', content: 'We\'d love to help you on your next big project. We understand what it means to dream big, and then achieve that dream.' },
-        { hid: 'og:title', property: 'og:title', content: 'Contact' },
-        { hid: 'og:description', property: 'og:description', content: 'We\'d love to help you on your next big project. We understand what it means to dream big, and then achieve that dream.' },
-        { hid: 'og:image', property: 'og:image', content: 'https://galexia.agency/icon.png' },
-        { hid: 'twitter:title', name: 'twitter:title', content: 'Contact' },
-        { hid: 'twitter:description', name: 'twitter:description', content: 'We\'d love to help you on your next big project. We understand what it means to dream big, and then achieve that dream.' },
-        { hid: 'twitter:img', name: 'twitter:img', content: 'https://galexia.agency/icon.png' }
-      ],
-      link: [
-        { hid: 'canonical', rel: 'canonical', href: 'https://galexia.agency/contact/' }
-      ]
     }
   }
 }

@@ -28,9 +28,10 @@
     "jimp": "^0.16.1",
     "netlify-plugin-cache-nuxt": "^0.0.1",
     "netlify-plugin-submit-sitemap": "^0.2.3",
-    "nuxt": "^2.14.10",
+    "nuxt": "^2.15.7",
     "nuxt-cookie-control": "^1.9.6",
     "responsive-loader": "^1.2.0",
+    "sass-loader": "10.1.1",
     "v-tooltip": "^2.0.3",
     "vue-hamburger": "github:joebailey26/vue-hamburger",
     "vue-social-sharing": "^3.0.4",
@@ -38,12 +39,12 @@
     "webp-loader": "^0.6.0"
   },
   "devDependencies": {
-    "@nuxtjs/eslint-config": "^2.0.0",
+    "@nuxtjs/eslint-config": "^6.0.1",
     "@nuxtjs/eslint-module": "^3.0.2",
     "@nuxtjs/stylelint-module": "^3.1.0",
     "babel-eslint": "^10.0.1",
-    "eslint": "^6.1.0",
-    "eslint-plugin-nuxt": ">=0.4.2",
+    "eslint": "^7.29.0",
+    "eslint-plugin-nuxt": "^2.0.0",
     "stylelint": "^13.8.0",
     "stylelint-config-standard": "^20.0.0"
   }

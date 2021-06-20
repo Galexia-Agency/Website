@@ -40,6 +40,7 @@
     <Header
       title="Marketing solutions to help your business go from zero to <i>hero</i>"
       desc="However you wish to pursue your business marketing is vital in finding and retaining customers. We mould a marketing strategy around your business. Our team of professionals will recommend the solution that gives you the most return on investment. We try and understand your target audience and adapt the marketing strategy, putting your clients first. If you’re a clothing brand targeting teens then social media marketing will be best for you. Similarly, if you’re a home-improvements business, PPC advertising might be more suitable."
+      :link="{location: '/contact/', text: 'Find out more'}"
     />
     <section class="white">
       <div class="grid left maxWidth">
@@ -114,17 +115,6 @@ export default {
   components: {
     Header
   },
-  mounted () {
-    if ('ontouchstart' in document.documentElement) {} else {
-      this.$Ztextify('.header--inner h1 i', {
-        depth: '10px',
-        layers: 2,
-        direction: 'forwards',
-        event: 'pointer',
-        eventRotation: '35deg'
-      })
-    }
-  },
   head () {
     return {
       title: 'Marketing',
@@ -139,7 +129,34 @@ export default {
       ],
       link: [
         { hid: 'canonical', rel: 'canonical', href: 'https://galexia.agency/marketing/' }
+      ],
+      __dangerouslyDisableSanitizers: ['script'],
+      script: [
+        {
+          innerHTML: `{
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Marketing",
+            "item": "https://galexia.agency/marketing/"
+            }`,
+          type: 'application/ld+json'
+        }
       ]
+    }
+  },
+  mounted () {
+    // eslint-disable-next-line
+    if ('ontouchstart' in document.documentElement) {} else {
+      this.$Ztextify('.header--inner h1 i', {
+        depth: '10px',
+        layers: 2,
+        direction: 'forwards',
+        event: 'pointer',
+        eventRotation: '35deg'
+      })
     }
   }
 }

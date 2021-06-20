@@ -15,6 +15,7 @@
     <Header
       title="Emergency Website Support"
       desc="Is your website down? Are you running into random errors? Are you struggling dealing with your hosting company? We can help. We provide affordable support to help you get your website back on track. We put your business first. We know that a website is often the first port of call for customers and if your website's down or not performing properly this can leave many customers unhappy. We'll drop everything and help you resolve any issues as quickly as possible."
+      :link="{location: '/contact/', text: 'Contact us now'}"
     />
     <section class="white">
       <div class="grid left maxWidth">
@@ -152,6 +153,21 @@ export default {
       ],
       link: [
         { hid: 'canonical', rel: 'canonical', href: 'https://galexia.agency/support/' }
+      ],
+      __dangerouslyDisableSanitizers: ['script'],
+      script: [
+        {
+          innerHTML: `{
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Website Support",
+            "item": "https://galexia.agency/support/"
+            }`,
+          type: 'application/ld+json'
+        }
       ]
     }
   }

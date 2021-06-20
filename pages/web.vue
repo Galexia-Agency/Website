@@ -3,6 +3,7 @@
     <Header
       title="Contemporary Web Design and Development"
       desc="We're in the business of building fast, secure, scalable sites. How do we do that you ask? We use the Jamstack. It stands for Javascript, APIs and Markup. You can find out more about it at <a href='https://jamstack.org'>Jamstack.org</a> but that’s why you pay us; to take care of learning all about the latest and greatest standards in the world of the web so that you can focus on what you do best."
+      :link="{location: '/hosting/', text: 'Check out our custom hosting'}"
     />
     <section class="white">
       <div class="grid left maxWidth">
@@ -87,6 +88,21 @@ export default {
       ],
       link: [
         { hid: 'canonical', rel: 'canonical', href: 'https://galexia.agency/web/' }
+      ],
+      __dangerouslyDisableSanitizers: ['script'],
+      script: [
+        {
+          innerHTML: `{
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Web",
+            "item": "https://galexia.agency/web/"
+            }`,
+          type: 'application/ld+json'
+        }
       ]
     }
   }

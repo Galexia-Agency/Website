@@ -27,11 +27,6 @@
 import { mapState } from 'vuex'
 
 export default {
-  computed: {
-    ...mapState([
-      'legal'
-    ])
-  },
   head () {
     return {
       title: 'Legal',
@@ -46,8 +41,28 @@ export default {
       ],
       link: [
         { hid: 'canonical', rel: 'canonical', href: 'https://galexia.agency/legal/' }
+      ],
+      __dangerouslyDisableSanitizers: ['script'],
+      script: [
+        {
+          innerHTML: `{
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Legal",
+            "item": "https://galexia.agency/legal/"
+            }`,
+          type: 'application/ld+json'
+        }
       ]
     }
+  },
+  computed: {
+    ...mapState([
+      'legal'
+    ])
   }
 }
 </script>

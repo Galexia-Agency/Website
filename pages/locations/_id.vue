@@ -45,9 +45,10 @@
 <template>
   <div>
     <Header
-      :title="'Hey, businesses of <span class=\'location\'>' + this.$route.params.id + '</span>!'"
+      :title="'Hey, businesses of <span class=\'location\'>' + $route.params.id + '</span>!'"
       subtitle="Let us focus on your content so you can focus on your <i>business</i>"
-      :desc="'We are a creative agency based in Royston but with ties to <span class=\'location\'>' + this.$route.params.id + '</span>, specialising in website design and development. We’re a fairly new company built from the ground up to help you grow. We use the latest and greatest practices and technologies so that we can pass on these benefits to you. What’s more, you don’t have to worry about anything, we take care of the whole process so you can carry on running your business.'"
+      :desc="'We are a creative agency based in Royston but with ties to <span class=\'location\'>' + $route.params.id + '</span>, specialising in website design and development. We’re a fairly new company built from the ground up to help you grow. We use the latest and greatest practices and technologies so that we can pass on these benefits to you. What’s more, you don’t have to worry about anything, we take care of the whole process so you can carry on running your business.'"
+      :link="{location: '/contact/', text: 'Get in touch'}"
     />
     <section class="white">
       <h2 class="maxWidth">
@@ -81,7 +82,6 @@
         <div v-infocus="'showElement'" class="hidden hidden-right svg" v-html="require('../../assets/svg/launch.svg?include')" />
       </div>
     </section>
-    <!--
     <section class="white" style="padding-top: 0">
       <h2 class="maxWidth">
         Services to help you succeed
@@ -89,22 +89,21 @@
       <div class="grid column three maxWidth">
         <div class="card">
           <h3>Web Design & Development</h3>
-          <div v-html="require('../../assets/svg/web-design-dev.svg?include')" class="svg" />
+          <div class="svg" v-html="require('../../assets/svg/web-design-dev.svg?include')" />
           <p>Having a strong web presence is vital in modern times. A website is often the first port of call for your customers. Having an outdated or broken website can leave your customers feeling frustrated and taking their business elsewhere. We pride ourselves in using the latest technologies, giving your customers a pleasant time on your site, turning them into repeat vistors.</p>
         </div>
         <div class="card">
           <h3>Marketing</h3>
-          <div v-html="require('../../assets/svg/marketing.svg?include')" class="svg" />
+          <div class="svg" v-html="require('../../assets/svg/marketing.svg?include')" />
           <p><span class="location">{{ $route.params.id }}</span> is a competitive area. You need a bullet-proof marketing plan to succeed and grow. We can help with planning and implenetation of any marketing strategy including social media, newsletters, and Search Engine Optimisation. Investing in a good marketing strategy can lead to a long-term revenue increase month-on-month.</p>
         </div>
         <div class="card">
           <h3>Content Creation</h3>
-          <div v-html="require('../../assets/svg/content-creation.svg?include')" class="svg" />
+          <div class="svg" v-html="require('../../assets/svg/content-creation.svg?include')" />
           <p>Often, you may need content for your business. It may come in the form of a professional blog post, or video. Content creation goes hand in hand with our marketing and web services, so it makes sense for us to provide this as well. We have a team of professionals local to <span class="location">{{ $route.params.id }}</span> that can help with any content creation demands.</p>
         </div>
       </div>
     </section>
-    -->
   </div>
 </template>
 
@@ -114,11 +113,6 @@ import Header from '../../components/header'
 export default {
   components: {
     Header
-  },
-  methods: {
-    capitalize (string) {
-      return string.charAt(0).toUpperCase() + string.slice(1)
-    }
   },
   head () {
     return {
@@ -134,7 +128,27 @@ export default {
       ],
       link: [
         { hid: 'canonical', rel: 'canonical', href: 'https://galexia.agency/locations/' + this.$route.params.id + '/' }
+      ],
+      __dangerouslyDisableSanitizers: ['script'],
+      script: [
+        {
+          innerHTML: `{
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+            "@type": "ListItem",
+            "position": 2,
+            "name": "${this.capitalize(this.$route.params.id)}",
+            "item": "https://galexia.agency/${this.$route.params.id}/"
+            }`,
+          type: 'application/ld+json'
+        }
       ]
+    }
+  },
+  methods: {
+    capitalize (string) {
+      return string.charAt(0).toUpperCase() + string.slice(1)
     }
   }
 }

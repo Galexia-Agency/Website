@@ -161,6 +161,52 @@ export default {
       monthArr: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
     }
   },
+  head () {
+    if (this.blog) {
+      return {
+        title: this.blog.title.replace('&#8217;', '\'') + ' | Blog',
+        meta: [
+          { hid: 'description', name: 'description', content: this.blog.seo.metaDesc || this.blog.excerpt },
+          { hid: 'og:title', property: 'og:title', content: this.blog.title.replace('&#8217;', '\'') + ' | Blog' },
+          { hid: 'og:description', property: 'og:description', content: this.blog.seo.metaDesc || this.blog.excerpt },
+          { hid: 'og:image', property: 'og:image', content: this.blog.featuredImage.mediaItemUrl },
+          { hid: 'twitter:title', name: 'twitter:title', content: this.blog.title.replace('&#8217;', '\'') + ' | Blog' },
+          { hid: 'twitter:description', name: 'twitter:description', content: this.blog.seo.metaDesc || this.blog.excerpt },
+          { hid: 'twitter:img', name: 'twitter:img', content: this.blog.featuredImage.mediaItemUrl }
+        ],
+        link: [
+          { hid: 'canonical', rel: 'canonical', href: 'https://galexia.agency/blog/' + this.blog.slug + '/' }
+        ],
+        __dangerouslyDisableSanitizers: ['script'],
+        script: [
+          {
+            innerHTML: `{
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              "itemListElement": [{
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://galexia.agency/blog/"
+              }`,
+            type: 'application/ld+json'
+          },
+          {
+            innerHTML: `{
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              "itemListElement": [{
+              "@type": "ListItem",
+              "position": 3,
+              "name": "${this.blog.title}",
+              "item": "https://galexia.agency/blog/${this.blog.slug}/"
+              }`,
+            type: 'application/ld+json'
+          }
+        ]
+      }
+    }
+  },
   computed: {
     share () {
       try {
@@ -180,25 +226,6 @@ export default {
         text: this.blog.excerpt.replace('<p>', '').replace('</p>', '').replace('[&hellip;]', '').replace('\n', ''),
         url: 'https://galexia.agency' + this.$router.currentRoute.path
       })
-    }
-  },
-  head () {
-    if (this.blog) {
-      return {
-        title: this.blog.title.replace('&#8217;', '\'') + ' | Blog',
-        meta: [
-          { hid: 'description', name: 'description', content: this.blog.seo.metaDesc || this.blog.excerpt },
-          { hid: 'og:title', property: 'og:title', content: this.blog.title.replace('&#8217;', '\'') + ' | Blog' },
-          { hid: 'og:description', property: 'og:description', content: this.blog.seo.metaDesc || this.blog.excerpt },
-          { hid: 'og:image', property: 'og:image', content: this.blog.featuredImage.mediaItemUrl },
-          { hid: 'twitter:title', name: 'twitter:title', content: this.blog.title.replace('&#8217;', '\'') + ' | Blog' },
-          { hid: 'twitter:description', name: 'twitter:description', content: this.blog.seo.metaDesc || this.blog.excerpt },
-          { hid: 'twitter:img', name: 'twitter:img', content: this.blog.featuredImage.mediaItemUrl }
-        ],
-        link: [
-          { hid: 'canonical', rel: 'canonical', href: 'https://galexia.agency/blog/' + this.blog.slug + '/' }
-        ]
-      }
     }
   }
 }

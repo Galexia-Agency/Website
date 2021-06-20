@@ -40,6 +40,7 @@
       './dist/client/index.html',
       './dist/404.html',
       './dist/locations/index.html',
+      './dist/indev/index.html',
       './dist/lead-questionnaire/index.html'
     ]
 

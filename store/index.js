@@ -22,7 +22,7 @@ export const actions = {
     const testimonialResponse = await this.app.apolloProvider.defaultClient.query({
       query: testimonialsQuery
     })
-    state.testimonials = await testimonialResponse.data.posts.nodes
+    state.testimonials = testimonialResponse.data.posts.nodes
 
     /* Blogs */
     const blogResponse = await this.app.apolloProvider.defaultClient.query({
@@ -30,15 +30,15 @@ export const actions = {
     })
     const blogArr = []
     for (const a in blogResponse.data.posts.nodes) {
-      const response = await this.app.apolloProvider.defaultClient.query({
+      const blogResponse2 = await this.app.apolloProvider.defaultClient.query({
         query: blogPostQuery,
         variables: {
           slug: blogResponse.data.posts.nodes[a].slug
         }
       })
-      blogArr.push(response.data.post)
+      blogArr.push(blogResponse2.data.post)
     }
-    state.blog = await blogResponse.data.posts.nodes
+    state.blog = blogResponse.data.posts.nodes
     state.blogs = blogArr
 
     /* Portfolio */
@@ -55,7 +55,7 @@ export const actions = {
       })
       portfolioArr.push(response.data.post)
     }
-    state.portfolio = await portfolioResponse.data.posts.nodes
+    state.portfolio = portfolioResponse.data.posts.nodes
     state.portfolios = portfolioArr
 
     /* Legal */
@@ -73,7 +73,7 @@ export const actions = {
       legalArr.push(response.data.post)
     }
 
-    state.legal = await legalResponse.data.posts.nodes
+    state.legal = legalResponse.data.posts.nodes
     state.legals = legalArr
   }
 }

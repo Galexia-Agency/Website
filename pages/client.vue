@@ -184,6 +184,14 @@
 
 <script>
 export default {
+  head () {
+    return {
+      title: 'Client',
+      meta: [
+        { hid: 'robots', name: 'robots', content: 'noindex' }
+      ]
+    }
+  },
   computed: {
     title () {
       return this.$route.query.title
@@ -193,14 +201,6 @@ export default {
     },
     logo () {
       return this.$route.query.logo
-    }
-  },
-  head () {
-    return {
-      title: 'Client',
-      meta: [
-        { hid: 'robots', name: 'robots', content: 'noindex' }
-      ]
     }
   }
 }

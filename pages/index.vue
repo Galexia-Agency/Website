@@ -79,6 +79,7 @@
     <Header
       title="Let us focus on your content so you can focus on your <i>business</i>"
       desc="We are a creative agency specialising in website design and development. We’re a fairly new company built from the ground up to help you grow. We use the latest and greatest practices and technologies so that we can pass on these benefits to you. What’s more, you don’t have to worry about anything, we take care of the whole process so you can carry on running your business."
+      :link="{location: '/contact/', text: 'Get in touch'}"
     />
     <section class="white">
       <h2 class="maxWidth">
@@ -152,12 +153,30 @@ export default {
   components: {
     Header
   },
+  head () {
+    return {
+      title: 'Home',
+      meta: [
+        { hid: 'description', name: 'description', content: 'We are a creative agency specialising in website design and development. We’re a fairly new company built from the ground up to help you grow.' },
+        { hid: 'og:title', property: 'og:title', content: 'Home' },
+        { hid: 'og:description', property: 'og:description', content: 'We are a creative agency specialising in website design and development. We’re a fairly new company built from the ground up to help you grow.' },
+        { hid: 'og:image', property: 'og:image', content: 'https://galexia.agency/icon.png' },
+        { hid: 'twitter:title', name: 'twitter:title', content: 'Home' },
+        { hid: 'twitter:description', name: 'twitter:description', content: 'We are a creative agency specialising in website design and development. We’re a fairly new company built from the ground up to help you grow.' },
+        { hid: 'twitter:img', name: 'twitter:img', content: 'https://galexia.agency/icon.png' }
+      ],
+      link: [
+        { hid: 'canonical', rel: 'canonical', href: 'https://galexia.agency/' }
+      ]
+    }
+  },
   computed: {
     ...mapState([
       'portfolios'
     ])
   },
   mounted () {
+    // eslint-disable-next-line
     if ('ontouchstart' in document.documentElement) {} else {
       this.$Ztextify('.header--inner h1 i', {
         depth: '10px',
@@ -179,23 +198,6 @@ export default {
         left: width * (i - 1),
         behavior: this.$parent.$parent.motion
       })
-    }
-  },
-  head () {
-    return {
-      title: 'Home',
-      meta: [
-        { hid: 'description', name: 'description', content: 'We are a creative agency specialising in website design and development. We’re a fairly new company built from the ground up to help you grow.' },
-        { hid: 'og:title', property: 'og:title', content: 'Home' },
-        { hid: 'og:description', property: 'og:description', content: 'We are a creative agency specialising in website design and development. We’re a fairly new company built from the ground up to help you grow.' },
-        { hid: 'og:image', property: 'og:image', content: 'https://galexia.agency/icon.png' },
-        { hid: 'twitter:title', name: 'twitter:title', content: 'Home' },
-        { hid: 'twitter:description', name: 'twitter:description', content: 'We are a creative agency specialising in website design and development. We’re a fairly new company built from the ground up to help you grow.' },
-        { hid: 'twitter:img', name: 'twitter:img', content: 'https://galexia.agency/icon.png' }
-      ],
-      link: [
-        { hid: 'canonical', rel: 'canonical', href: 'https://galexia.agency/' }
-      ]
     }
   }
 }

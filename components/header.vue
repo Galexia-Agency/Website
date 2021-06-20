@@ -39,6 +39,9 @@
     font-weight: normal;
     text-decoration: underline
   }
+  .header--inner .button:any-link {
+    text-decoration: none
+  }
   @media (max-width: 900px) {
     .header--inner p {
       opacity: .95
@@ -65,12 +68,12 @@
 <template>
   <header>
     <div class="header--inner maxWidth">
-      <!-- eslint-disable-next-line -->
       <h1 v-html="title" />
-      <!-- eslint-disable-next-line -->
       <h2 v-if="subtitle" v-html="subtitle" />
-      <!-- eslint-disable-next-line -->
       <p v-html="desc" />
+      <div v-if="link.text">
+        <nuxt-link class="button" :to="link.location" v-html="link.text" />
+      </div>
     </div>
   </header>
 </template>
@@ -90,6 +93,15 @@ export default {
     desc: {
       type: String,
       default: ''
+    },
+    link: {
+      type: Object,
+      default () {
+        return {
+          text: '',
+          location: ''
+        }
+      }
     }
   }
 }
