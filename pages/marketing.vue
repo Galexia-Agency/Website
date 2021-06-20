@@ -137,11 +137,11 @@ export default {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "itemListElement": [{
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Marketing",
-            "item": "https://galexia.agency/marketing/"
-            }`,
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Marketing",
+              "item": "https://galexia.agency/marketing/"
+            }]`,
           type: 'application/ld+json'
         }
       ]

@@ -49,11 +49,11 @@ export default {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "itemListElement": [{
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Legal",
-            "item": "https://galexia.agency/legal/"
-            }`,
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Legal",
+              "item": "https://galexia.agency/legal/"
+            }]`,
           type: 'application/ld+json'
         }
       ]

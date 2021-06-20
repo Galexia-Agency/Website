@@ -57,11 +57,11 @@ export default {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "itemListElement": [{
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Careers",
-            "item": "https://galexia.agency/careers/"
-            }`,
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Careers",
+              "item": "https://galexia.agency/careers/"
+            }]`,
           type: 'application/ld+json'
         }
       ]

@@ -774,11 +774,11 @@ export default {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "itemListElement": [{
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Hosting",
-            "item": "https://galexia.agency/hosting/"
-            }`,
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Hosting",
+              "item": "https://galexia.agency/hosting/"
+            }]`,
           type: 'application/ld+json'
         }
       ]

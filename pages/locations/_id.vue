@@ -136,11 +136,11 @@ export default {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "itemListElement": [{
-            "@type": "ListItem",
-            "position": 2,
-            "name": "${this.capitalize(this.$route.params.id)}",
-            "item": "https://galexia.agency/${this.$route.params.id}/"
-            }`,
+              "@type": "ListItem",
+              "position": 2,
+              "name": "${this.capitalize(this.$route.params.id)}",
+              "item": "https://galexia.agency/${this.$route.params.id}/"
+            }]`,
           type: 'application/ld+json'
         }
       ]

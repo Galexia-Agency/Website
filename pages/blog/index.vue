@@ -110,11 +110,11 @@ export default {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "itemListElement": [{
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Blog",
-            "item": "https://galexia.agency/blog/"
-            }`,
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://galexia.agency/blog/"
+            }]`,
           type: 'application/ld+json'
         }
       ]

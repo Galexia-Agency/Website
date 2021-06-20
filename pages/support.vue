@@ -161,11 +161,11 @@ export default {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "itemListElement": [{
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Website Support",
-            "item": "https://galexia.agency/support/"
-            }`,
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Website Support",
+              "item": "https://galexia.agency/support/"
+            }]`,
           type: 'application/ld+json'
         }
       ]
