@@ -112,7 +112,14 @@
       <div id="portfolio" class="grid column three maxWidth">
         <article v-for="(post, index) in portfolios" :key="index" class="card">
           <div class="card--inner">
-            <img :src="post.featuredImage.node.mediaItemUrl" width="100%" height="auto" :alt="post.title">
+            <img
+              :src="post.featuredImage.node.mediaItemUrl"
+              width="100%"
+              height="auto"
+              :alt="post.title"
+              style="aspect-ratio: 500 / 413"
+              loading="lazy"
+            >
             <a v-if="post.ACFLink" :href="post.ACFLink.link" target="_blank" rel="noopener">
               <h3 v-html="post.title" />
             </a>
