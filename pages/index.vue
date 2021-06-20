@@ -2,6 +2,7 @@
   #portfolio {
     grid-auto-flow: column;
     width: 100%;
+    max-width: calc(100vw - 2rem);
     padding-left: 0;
     padding-right: 0;
     grid-auto-columns: 33%;
@@ -58,6 +59,9 @@
   @media (max-width: 900px) {
     #portfolio {
       grid-auto-columns: 100%
+    }
+    .icons {
+      padding-bottom: 30px
     }
   }
 </style>
