@@ -57,19 +57,7 @@
 
   @media (max-width: 900px) {
     #portfolio {
-      grid-auto-columns: 100%;
-      grid-auto-flow: row
-    }
-    #portfolio div:nth-of-type(n+4), .icons {
-      display: none
-    }
-  }
-  @media (max-width: 500px) {
-    .card {
-      display: none
-    }
-    .card:nth-of-type(1), .card:nth-of-type(2) {
-      display: grid
+      grid-auto-columns: 100%
     }
   }
 </style>
@@ -139,7 +127,7 @@
         </article>
       </div>
       <div class="icons">
-        <div v-for="i in Math.ceil(portfolios.length - 2)" :key="i.id" class="icon" :class="{ current: i == 1}" @click="portfolioScroll($event, i)" />
+        <div v-for="i in icons" :key="i.id" class="icon" :class="{ current: i == 1}" @click="portfolioScroll($event, i)" />
       </div>
     </section>
   </div>
@@ -152,6 +140,11 @@ import Header from '../components/header'
 export default {
   components: {
     Header
+  },
+  data () {
+    return {
+      icons: 0
+    }
   },
   head () {
     return {
@@ -186,6 +179,11 @@ export default {
         eventRotation: '35deg'
       })
     }
+    this.portfolioLength()
+    const self = this
+    window.addEventListener('resize', () => {
+      self.portfolioLength()
+    })
   },
   methods: {
     portfolioScroll (event, i) {
@@ -198,6 +196,15 @@ export default {
         left: width * (i - 1),
         behavior: this.$parent.$parent.motion
       })
+    },
+    portfolioLength () {
+      if (window) {
+        if (window.innerWidth > 900) {
+          this.icons = Math.ceil(this.portfolios.length - 2)
+        } else {
+          this.icons = Math.ceil(this.portfolios.length)
+        }
+      }
     }
   }
 }
