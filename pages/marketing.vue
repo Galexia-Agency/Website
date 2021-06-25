@@ -4,7 +4,7 @@
     color: inherit
   }
   .card:hover h3 {
-    color: #1A237E
+    color: var(--primaryColor)
   }
   .card {
     display: grid;
@@ -43,12 +43,27 @@
       :link="{location: '/contact/', text: 'Find out more'}"
     />
     <section class="white">
+      <div class="grid right maxWidth">
+        <div v-infocus="'showElement'" class="hidden hidden-left svg" v-html="require('../assets/svg/search.svg?include')" />
+        <div v-infocus="'showElement'" class="hidden hidden-right">
+          <h3>SEO</h3>
+          <p class="text--normal">
+            Your website is your online store-front. Unfortunately, you can't attract customers by having a pretty shop window that they see whilst walking down the street. You have to rank highly in Search Engine Results Pages (SERPs). Only then will people find your website and learn more about you. We can help with getting you higher up in the SERPs, thus increasing traffic to your site, and potential revenue.
+          </p>
+          <nuxt-link class="button" to="/seo/">
+            Ready to rank higher?
+          </nuxt-link>
+        </div>
+      </div>
       <div class="grid left maxWidth">
         <div v-infocus="'showElement'" class="hidden hidden-left">
           <h3>Advertising</h3>
           <p class="text--normal">
             Advertising can offer great return on investment. We are versed in many advertising platforms such as Google Ads and Facebook. Pay-per-click advertising can be a great way to jump-start a business, but we recommend investing in longer term solutions such as building a great social presence and optimising your site for search engines. As with our other services with consistently monitor the performance of the campaign in order to make it as cost-effective as possible for you.
           </p>
+          <nuxt-link class="button" to="/contact/">
+            Get started advertising
+          </nuxt-link>
         </div>
         <div v-infocus="'showElement'" class="hidden hidden-right svg" v-html="require('../assets/svg/advertising.svg?include')" />
       </div>
@@ -59,6 +74,9 @@
           <p class="text--normal">
             Utilizing social media marketing correctly can be a great tool for increasing the reach of your business thus attracting more leads. These leads can turn into customers and generate more profit for you, helping you reinvest in marketing strategies in turn getting more clients and expanding your business. We deliver engaging content to your users and monitor you social media performance, constantly tailoring our approach in order to achieve the best retention.
           </p>
+          <nuxt-link class="button" to="/contact/">
+            Spread the word
+          </nuxt-link>
         </div>
       </div>
       <div class="grid left maxWidth">
@@ -67,6 +85,9 @@
           <p class="text--normal">
             Creating an email list can be a great way to engage with potential customers. What do you do with all those emails? Why not have us deliver a tailored newsletter campaign to your email list encouraging them to engage with your brand and keeping them up-to-date on your current activities. If a customer trusts a brand, they’re more likely to use it in the future. We take great care in adhering to all local laws regarding emails including GDPR.
           </p>
+          <nuxt-link class="button" to="/contact/">
+            Create a campaign
+          </nuxt-link>
         </div>
         <div v-infocus="'showElement'" class="hidden hidden-right svg" v-html="require('../assets/svg/email.svg?include')" />
       </div>

@@ -1,55 +1,8 @@
 <style scoped>
-  /* Toggle */
-  .switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px
-  }
-  .switch input {
-    opacity: 0;
-    width: 0;
-    height: 0
-  }
-  .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #CCCCCC;
-    transition: .4s
-  }
-  .slider:before {
-    position: absolute;
-    content: '';
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    transition: .4s
-  }
-  input:checked + .slider {
-    background-color: #1A237E
-  }
-  input:focus + .slider {
-    box-shadow: 0 0 1px #1A237E
-  }
-  input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px)
-  }
-  .slider.round {
-    border-radius: 34px
-  }
-  .slider.round:before {
-    border-radius: 50%
-  }
-
   /* Page */
+  h1 {
+    text-align: center
+  }
   .grid.maxWidth {
     padding-bottom: 0
   }
@@ -75,34 +28,8 @@
   li {
     line-height: 1.5
   }
-  li b {
-    color: #1A237E
-  }
-  .title {
-    font-size: 1.25rem
-  }
-  .desc {
-    font-size: 1.2rem;
-    line-height: 1.33;
-    opacity: .9;
-    max-width: 780px;
-    text-align: center;
-    margin: auto;
-    margin-bottom: 2rem
-  }
-  .terms {
-    font-size: .9rem;
-    padding-left: 22px
-  }
-  #top {
-    position: relative
-  }
-  .toggle {
-    position: absolute;
-    right: 2rem;
-    top: 2rem;
-    display: grid;
-    place-items: end
+  li b, li strong {
+    color: var(--primaryColor)
   }
   .fade-enter-active, .fade-leave-active {
     transition: opacity .2s
@@ -116,20 +43,6 @@
     max-width: 100%;
     height: auto
   }
-  .v-popover {
-    display: inline;
-    font-size: .75rem;
-    vertical-align: middle;
-    color: #1A237E;
-    cursor: pointer
-  }
-  .v-popover svg {
-    height: 1rem;
-    width: 1rem;
-    border: 1.5px solid #1A237E;
-    border-radius: 50%;
-    padding: .05rem
-  }
   .overflow {
     max-width: 90%
   }
@@ -141,24 +54,6 @@
     .grid.column.two .card:first-of-type, .grid.column.two .card:last-of-type {
       justify-self: center
     }
-    .hosting--background {
-      background-size: 75%
-    }
-    #top {
-      display: grid
-    }
-    .toggle {
-      position: relative;
-      grid-row: 1;
-      place-items: center;
-      place-self: center;
-      right: 0;
-      top: 0
-    }
-    .desc {
-      opacity: .95;
-      margin-bottom: 2em
-    }
   }
 </style>
 
@@ -166,7 +61,7 @@
   <div class="hosting white">
     <section class="maxWidth">
       <div id="top">
-        <h2>Ultra-fast Hosting</h2>
+        <h1>Ultra-fast Hosting</h1>
         <img src="../assets/img/lighthouse.jpg" width="520" height="294" alt="Lighthouse Test">
         <p class="desc">
           Your website needs a home and we're happy to house it regardless of who built it. Below is an outline of our pricing for different plans. We're able to offer free Jamstack hosting thanks to <a href="https://netlify.com">Netlify</a>. If you want results like these then be sure to choose us for all your hosting and website needs.
@@ -686,7 +581,7 @@
                 Calendar Shared calendars
               </li>
               <li>
-                Drive <b>30 GB</b> cloud storage
+                Drive <strong>30 GB</strong> cloud storage
               </li>
               <li>
                 Docs, Sheets, Slides, Forms, Sites, Keep
@@ -732,7 +627,7 @@
                 Calendar Shared calendars
               </li>
               <li>
-                Drive <b>1 TB</b> cloud storage
+                Drive <strong>1 TB</strong> cloud storage
               </li>
               <li>
                 Docs, Sheets, Slides, Forms, Sites, Keep

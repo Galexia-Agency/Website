@@ -47,12 +47,12 @@
   .icon {
     width: 15px;
     height: 15px;
-    border: 3px solid #1A237E;
+    border: 3px solid var(--primaryColor);
     border-radius: 7.5px;
     cursor: pointer
   }
   .icon.current {
-    background-color: #1A237E
+    background-color: var(--primaryColor)
   }
 
   @media (max-width: 900px) {

@@ -26,6 +26,7 @@
   <div id="careers">
     <section class="white">
       <div class="maxWidth">
+        <h1>Careers</h1>
         <div class="svg" v-html="require('../assets/svg/careers.svg?include')" />
         <p>We're not currently hiring, however, if you think you'd be a great fit for our team drop us a line at <a href="mailto:careers@galexia.agency">careers@galexia.agency</a>.</p>
       </div>

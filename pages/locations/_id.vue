@@ -16,7 +16,7 @@
     color: inherit
   }
   .card:hover h3 {
-    color: #1A237E
+    color: var(--primaryColor)
   }
   .card .svg {
     margin: auto;

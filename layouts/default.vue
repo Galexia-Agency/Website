@@ -4,6 +4,7 @@
   /* Resets */
   html {
     --delay: 0;
+    --primaryColor: #1A237E;
 
     background: white
   }
@@ -48,7 +49,7 @@
   }
   * {
     box-sizing: border-box;
-    outline-color: #1A237E
+    outline-color: var(--primaryColor)
   }
   :any-link {
     text-decoration: none;
@@ -65,7 +66,7 @@
   h1 {
     font-size: 3.5rem;
     line-height: 1;
-    color: #1A237E
+    color: var(--primaryColor)
   }
   h2 {
     font-size: 3rem;
@@ -110,7 +111,7 @@
     padding: .75rem 1.25rem;
     font-size: 1.25rem;
     line-height: 1.25rem;
-    background-color: #1A237E;
+    background-color: var(--primaryColor);
     border-radius: .25rem;
     display: inline-block;
     transition: opacity .5s;
@@ -191,7 +192,7 @@
     background-color: white
   }
   main :any-link, main h2, main h3, main h4, main h5, main h6 {
-    color: #1A237E;
+    color: var(--primaryColor);
     font-weight: bold
   }
   main h2 {
@@ -317,6 +318,7 @@
   }
   .footer--bottom_sitemap {
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     grid-gap: .5rem
   }
   .footer--bottom img {
@@ -401,7 +403,7 @@
     display: inline-block;
     padding: .25rem;
     margin: 0 .25rem;
-    border: 2px solid #1A237E;
+    border: 2px solid var(--primaryColor);
     border-radius: .25rem
   }
   .card .tags span:first-of-type {
@@ -433,7 +435,7 @@
     font-family: Open Sans, sans-serif
   }
   .cookieControl :any-link {
-    color: #1A237E;
+    color: var(--primaryColor);
     font-weight: bold
   }
   .cookieControl :any-link:hover {
@@ -525,6 +527,121 @@
     .testimonial .company {
       text-align: center
     }
+  }
+
+  /* Toggle */
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px
+  }
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0
+  }
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #CCCCCC;
+    transition: .4s
+  }
+  .slider:before {
+    position: absolute;
+    content: '';
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s
+  }
+  input:checked + .slider {
+    background-color: var(--primaryColor)
+  }
+  input:focus + .slider {
+    box-shadow: 0 0 1px var(--primaryColor)
+  }
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px)
+  }
+  .slider.round {
+    border-radius: 34px
+  }
+  .slider.round:before {
+    border-radius: 50%
+  }
+
+  /* Hosting / SEO */
+  .title {
+    font-size: 1.25rem
+  }
+  .desc {
+    font-size: 1.2rem;
+    line-height: 1.33;
+    opacity: .9;
+    max-width: 780px;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 2rem
+  }
+  .terms {
+    font-size: .9rem;
+    padding-left: 22px;
+    color: var(--primaryColor)
+  }
+  #top {
+    position: relative
+  }
+  .toggle {
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    display: grid;
+    place-items: end
+  }
+  @media (max-width: 900px) {
+    .hosting--background {
+      background-size: 75%
+    }
+    #top {
+      display: grid
+    }
+    .toggle {
+      position: relative;
+      grid-row: 1;
+      place-items: center;
+      place-self: center;
+      right: 0;
+      top: 0
+    }
+    .desc {
+      opacity: .95;
+      margin-bottom: 2em
+    }
+  }
+
+  /* Popover */
+  .v-popover {
+    display: inline;
+    font-size: .75rem;
+    vertical-align: middle;
+    color: var(--primaryColor);
+    cursor: pointer
+  }
+  .v-popover svg.svg-inline--fa.fa-w-12 {
+    height: 1rem;
+    width: 1rem;
+    border: 1.5px solid var(--primaryColor);
+    border-radius: 50%;
+    padding: .05rem
   }
 
   /* Hosting SVG */
@@ -780,9 +897,6 @@
           <nuxt-link to="/blog/" class="nav--link">
             Blog
           </nuxt-link>
-          <nuxt-link to="/careers/" class="nav--link">
-            Careers
-          </nuxt-link>
           <nuxt-link to="/contact/" class="nav--link">
             Contact
           </nuxt-link>
@@ -817,8 +931,14 @@
               <nuxt-link class="footer--bottom_navLink" to="/hosting/">
                 Hosting
               </nuxt-link>
+              <nuxt-link class="footer--bottom_navLink" to="/seo/">
+                SEO
+              </nuxt-link>
               <nuxt-link class="footer--bottom_navLink" to="/our-team/">
                 Our Team
+              </nuxt-link>
+              <nuxt-link class="footer--bottom_navLink" to="/careers/">
+                Careers
               </nuxt-link>
               <nuxt-link class="footer--bottom_navLink" to="/legal/">
                 Legal

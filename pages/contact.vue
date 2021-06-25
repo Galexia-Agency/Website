@@ -20,6 +20,9 @@
   }
 </style>
 <style scoped>
+  h1 {
+    text-align: center
+  }
   .grid {
     grid-gap: 2rem
   }
@@ -71,7 +74,7 @@
   <div id="contact">
     <section class="white">
       <div class="maxWidth">
-        <h2>Get in Touch</h2>
+        <h1>Get in Touch</h1>
         <p>
           We’d love to help you on your next big project. We understand what it means to dream big, and then achieve that dream.
         </p>

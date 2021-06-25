@@ -39,7 +39,7 @@
     margin: 0;
     padding: 1rem;
     height: 6.5ex;
-    color: #1A237E
+    color: var(--primaryColor)
   }
   .card p {
     margin: 0;
