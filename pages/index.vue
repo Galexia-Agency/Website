@@ -63,6 +63,11 @@
       padding-bottom: 30px
     }
   }
+  @media (max-width: 500px) {
+    #portfolio {
+      max-width: 100vw
+    }
+  }
 </style>
 
 <template>
