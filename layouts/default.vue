@@ -18,7 +18,7 @@
     font-size: 16px;
     font-weight: 400;
     scroll-behavior: var(--motion);
-    background-size: cover;
+    background-size: var(--backgroundSize);
     background-repeat: no-repeat;
     background-image: url('../assets/img/SpaceBackgroundBlurred.jpg?webp')
   }
@@ -26,7 +26,7 @@
     background-image: url('../assets/img/SpaceBackgroundBlurred.jpg?resize')
   }
   main header {
-    background-size: cover;
+    background-size: var(--backgroundSize);
     background-image: linear-gradient(rgba(53, 47, 114, .33), rgba(53, 47, 114, .33)), url('../assets/img/SpaceBackgroundBlurred.jpg?webp');
     background-position: 0 -135px
   }
@@ -1037,28 +1037,9 @@ export default {
     if (await this.WebpIsSupported()) {} else {
       document.querySelector('body').classList.add('no-webp')
     }
-  },
-  async mounted () {
     this.motion = await window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'
-    this.background()
-    const self = this
-    window.addEventListener('resize', function () {
-      self.background()
-    })
   },
   methods: {
-    background () {
-      const body = document.body
-      const html = document.documentElement
-      const height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight)
-      if (this.background_size < height) {
-        document.body.style.backgroundSize = height > ((window.innerWidth * 1.6875) * 1.25) ? height + 'px' : '125vw'
-        if (document.querySelector('main header')) {
-          document.querySelector('main header').style.backgroundSize = height > ((window.innerWidth * 1.6875) * 1.25) ? height + 'px' : '125vw'
-        }
-        this.background_size = height
-      }
-    },
     async WebpIsSupported () {
       // If the browser doesn't have the method createImageBitmap, you can't display webp format
       if (!self.createImageBitmap) {

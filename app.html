@@ -7,4 +7,16 @@
     {{ APP }}
     <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "501a553c8a1142a58002b831b07abeb9"}'></script><!-- End Cloudflare Web Analytics -->
   </body>
+  <script>
+    function background () {
+      const body = document.body
+      const html = document.documentElement
+      const height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight)
+      body.style.setProperty('--backgroundSize', height > ((window.innerWidth * 1.6875) * 1.25) ? height + 'px' : '125vw')
+    }
+    background()
+    window.addEventListener('resize', function () {
+      background()
+    })
+  </script>
 </html>
