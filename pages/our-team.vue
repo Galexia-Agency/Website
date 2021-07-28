@@ -67,6 +67,11 @@ export default {
           desc: '<p>Chelsea joined Galexia as a photographer when the company was founded.<br><br>Chelsea specializes in event photography and has worked with a number of clients at a range of functions.<br><br>In her spare time, she likes to read, collect Funko pops, and look at pictures of dogs.</p>'
         },
         {
+          name: 'megan',
+          title: 'Designer',
+          desc: '<p>Megan has been designing business materials for the last 6 years, joining our team at the start of 2021.<br><br>From business cards to brochures and favicons to websites, Megan can create fantastic designs for just about anything.<br><br>In her spare time, Megan will be walking her dog, creating her own artwork or drinking cups of tea in bed.</p>'
+        },
+        {
           name: 'hannah',
           title: 'Marketer',
           desc: '<p>Hannah graduated with a bachelor\'s degree in marketing from the Solent University, in 2019.<br><br>There\'s no doubt that marketing is a fickle and fast paced industry. It\'s easy to get stuck in ways of the past, but Hannah can help bring your marketing efforts up to present-day standards, maximising your potential for future success.<br><br>In her free time, she enjoys playing games, both online and offline and also building and painting miniatures to add to her ever-growing collection.</p>'
