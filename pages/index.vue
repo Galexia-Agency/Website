@@ -206,7 +206,7 @@ export default {
         e.classList.remove('current')
       })
       event.target.classList.add('current')
-      const width = document.querySelector('#portfolio a').offsetWidth
+      const width = document.querySelector('#portfolio').offsetWidth + 10
       document.querySelector('#portfolio').scrollTo({
         left: width * (i - 1),
         behavior: this.$parent.$parent.motion
