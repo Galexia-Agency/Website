@@ -62,11 +62,49 @@
     .icons {
       padding-bottom: 30px
     }
+    .grid svg, .card img {
+      max-width: 100%
+    }
   }
   @media (max-width: 500px) {
     #portfolio {
       max-width: 100vw
     }
+  }
+  .portfolioImgContainer {
+    min-height: 350px;
+    width: 100%;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative
+  }
+  #portfolio .card:nth-of-type(even) .portfolioImgContainer {
+    background-image: url('../assets/img/iMac.png?webp')
+  }
+  #portfolio .card:nth-of-type(odd) .portfolioImgContainer {
+    background-image: url('../assets/img/MacBookAir.png?webp')
+  }
+  .portfolioImgContainer img {
+    position: absolute
+  }
+  #portfolio .card:nth-of-type(even) .portfolioImgContainer img {
+    top: 22.5px;
+    left: 20px;
+    right: 20px;
+    width: calc(100% - 40px);
+    height: 62%;
+    object-fit: cover;
+    object-position: top
+  }
+  #portfolio .card:nth-of-type(odd) .portfolioImgContainer img {
+    top: 19%;
+    left: 11%;
+    right: 11%;
+    width: calc(100% - 22%);
+    height: 58.5%;
+    object-fit: cover;
+    object-position: top
   }
 </style>
 
@@ -115,16 +153,17 @@
       </h2>
       <div id="portfolio" class="grid column three maxWidth">
         <article v-for="(post, index) in portfolios" :key="index" class="card">
-          <div class="card--inner">
-            <img
-              :src="post.featuredImage.node.mediaItemUrl"
-              width="100%"
-              height="auto"
-              :alt="post.title"
-              style="aspect-ratio: 500 / 413"
-              loading="lazy"
-            >
-            <a v-if="post.ACFLink" :href="post.ACFLink.link" target="_blank" rel="noopener">
+          <div v-if="post.ACFLink" class="card--inner">
+            <div class="portfolioImgContainer">
+              <img
+                :src="`https://screenshot.galexia.agency/${encodeURIComponent(post.ACFLink.link)}/large/_123`"
+                width="100%"
+                height="auto"
+                :alt="post.title"
+                loading="lazy"
+              >
+            </div>
+            <a :href="post.ACFLink.link" target="_blank" rel="noopener">
               <h3 v-html="post.title" />
             </a>
             <div class="tags">
@@ -134,7 +173,7 @@
             </div>
             <div v-html="post.content" />
             <div>
-              <a v-if="post.ACFLink" :href="post.ACFLink.link" target="_blank" rel="noopener" class="website_link">
+              <a :href="post.ACFLink.link" target="_blank" rel="noopener" class="website_link">
                 View the website
               </a>
             </div>
