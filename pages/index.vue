@@ -206,11 +206,19 @@ export default {
         e.classList.remove('current')
       })
       event.target.classList.add('current')
-      const width = document.querySelector('#portfolio').offsetWidth + 10
-      document.querySelector('#portfolio').scrollTo({
-        left: width * (i - 1),
-        behavior: this.$parent.$parent.motion
-      })
+      if (window.innerWidth > 900) {
+        const width = document.querySelector('#portfolio article').offsetWidth
+        document.querySelector('#portfolio').scrollTo({
+          left: width * (i - 1),
+          behavior: this.$parent.$parent.motion
+        })
+      } else {
+        const width = document.querySelector('#portfolio').offsetWidth + 10
+        document.querySelector('#portfolio').scrollTo({
+          left: width * (i - 1),
+          behavior: this.$parent.$parent.motion
+        })
+      }
     },
     portfolioLength () {
       if (window) {
