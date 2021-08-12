@@ -113,7 +113,7 @@
       <h2 class="maxWidth">
         We let our work speak for itself
       </h2>
-      <div id="portfolio" class="grid column three maxWidth">
+      <div id="portfolio" class="grid column three maxWidth" @scroll="updateIcons">
         <article v-for="(post, index) in portfolios" :key="index" class="card">
           <div class="card--inner">
             <img
@@ -228,6 +228,20 @@ export default {
           this.icons = Math.ceil(this.portfolios.length)
         }
       }
+    },
+    updateIcons () {
+      const icons = document.querySelectorAll('.icon')
+      const scroll = document.querySelector('#portfolio').scrollLeft
+      let width
+      icons.forEach((e) => {
+        e.classList.remove('current')
+      })
+      if (window.innerWidth > 900) {
+        width = document.querySelector('#portfolio article').offsetWidth
+      } else {
+        width = document.querySelector('#portfolio').offsetWidth + 10
+      }
+      icons[Math.round(scroll / width)].classList.add('current')
     }
   }
 }
