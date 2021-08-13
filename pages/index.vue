@@ -142,7 +142,7 @@
         </article>
       </div>
       <div class="icons">
-        <div v-for="i in icons" :key="i.id" class="icon" :class="{ current: i == 1}" @click="portfolioScroll($event, i)" />
+        <div v-for="i in icons" :key="i.id" class="icon" :class="{ current: i == 1}" @click="portfolioScroll(i)" />
       </div>
     </section>
   </div>
@@ -201,11 +201,7 @@ export default {
     })
   },
   methods: {
-    portfolioScroll (event, i) {
-      document.querySelectorAll('.icon').forEach((e) => {
-        e.classList.remove('current')
-      })
-      event.target.classList.add('current')
+    portfolioScroll (i) {
       if (window.innerWidth > 900) {
         const width = document.querySelector('#portfolio article').offsetWidth
         document.querySelector('#portfolio').scrollTo({
