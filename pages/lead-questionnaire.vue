@@ -4,6 +4,17 @@
 
 <script>
 export default {
+  head () {
+    return {
+      title: 'Lead Questionnaire',
+      meta: [
+        { hid: 'robots', name: 'robots', content: 'noindex' }
+      ],
+      link: [
+        { hid: 'canonical', rel: 'canonical', href: 'https://galexia.agency/lead-questionnaire/' }
+      ]
+    }
+  },
   created () {
     this.cookie(false)
   },
@@ -34,17 +45,6 @@ export default {
         style.type = 'text/css'
         style.appendChild(document.createTextNode(css))
       }
-    }
-  },
-  head () {
-    return {
-      title: 'Lead Questionnaire',
-      meta: [
-        { hid: 'robots', name: 'robots', content: 'noindex' }
-      ],
-      link: [
-        { hid: 'canonical', rel: 'canonical', href: 'https://galexia.agency/lead-questionnaire/' }
-      ]
     }
   }
 }
