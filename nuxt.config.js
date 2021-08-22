@@ -121,14 +121,13 @@ export default {
     '@nuxtjs/eslint-module',
     // Doc: https://github.com/nuxt-community/stylelint-module
     '@nuxtjs/stylelint-module',
-    '~/build-modules/screenshot.js'
   ],
   /*
    ** Nuxt.js modules
    */
   modules: [
+    '~/modules/only-once.js',
     'vue-social-sharing/nuxt',
-    '@nuxtjs/apollo',
     ['nuxt-cookie-control', {
       colors: {
         barTextColor: '#212121',
@@ -151,11 +150,6 @@ export default {
     '@aceforth/nuxt-optimized-images',
     '@nuxtjs/pwa'
   ],
-  apollo: {
-    clientConfigs: {
-      default: '/apollo/apollo-config.js'
-    }
-  },
   cookies: {
     necessary: [
       {

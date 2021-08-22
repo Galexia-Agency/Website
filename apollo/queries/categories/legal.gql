@@ -1,8 +1,0 @@
-query Blog {
-  posts(where: {categoryName: "Legal", status: PUBLISH}) {
-    nodes {
-      title
-      slug
-    }
-  }
-}

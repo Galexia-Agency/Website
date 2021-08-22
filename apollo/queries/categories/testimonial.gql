@@ -1,8 +1,0 @@
-query Testimonial {
-  posts(where: {categoryName: "Testimonials"}) {
-    nodes {
-      title
-      content
-    }
-  }
-}

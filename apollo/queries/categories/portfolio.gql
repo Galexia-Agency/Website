@@ -1,7 +1,0 @@
-query Blog {
-  posts(where: {categoryName: "Portfolio"}) {
-    nodes {
-      id
-    }
-  }
-}
