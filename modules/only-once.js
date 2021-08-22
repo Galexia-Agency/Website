@@ -199,7 +199,7 @@ export default async function () {
     args: chromium.args,
     defaultViewport: {
       width: 1920,
-      height: 1080,
+      height: 1240,
       deviceScaleFactor: parseFloat(1)
     },
     headless: chromium.headless
