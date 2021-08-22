@@ -54,6 +54,6 @@ export default async function () {
     ssrContext.$screenshotHandler = screenshotHandler
   })
   this.nuxt.hook('generate:after', async () => {
-    await browser.close
+    await browser.close()
   })
 }
