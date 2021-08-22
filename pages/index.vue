@@ -192,7 +192,7 @@
       <h2 class="maxWidth">
         We let our work speak for itself
       </h2>
-      <div id="portfolio" class="grid column three maxWidth">
+      <div id="portfolio" class="grid column three maxWidth" @scroll="updateIcons">
         <article v-for="(post, index) in $parent.$parent.portfolios" :key="index" class="card">
           <div v-if="post.ACFLink" class="card--inner">
             <div class="portfolioImgContainer">
@@ -222,7 +222,7 @@
         </article>
       </div>
       <div class="icons">
-        <div v-for="i in icons" :key="i.id" class="icon" :class="{ current: i == 1}" @click="portfolioScroll($event, i)" />
+        <div v-for="i in icons" :key="i.id" class="icon" :class="{ current: i == 1}" @click="portfolioScroll(i)" />
       </div>
     </section>
   </div>
@@ -275,11 +275,7 @@ export default {
     })
   },
   methods: {
-    portfolioScroll (event, i) {
-      document.querySelectorAll('.icon').forEach((e) => {
-        e.classList.remove('current')
-      })
-      event.target.classList.add('current')
+    portfolioScroll (i) {
       if (window.innerWidth > 900) {
         const width = document.querySelector('#portfolio article').offsetWidth
         document.querySelector('#portfolio').scrollTo({
@@ -302,6 +298,20 @@ export default {
           this.icons = Math.ceil(this.$parent.$parent.portfolios.length)
         }
       }
+    },
+    updateIcons () {
+      const icons = document.querySelectorAll('.icon')
+      const scroll = document.querySelector('#portfolio').scrollLeft
+      let width
+      icons.forEach((e) => {
+        e.classList.remove('current')
+      })
+      if (window.innerWidth > 900) {
+        width = document.querySelector('#portfolio article').offsetWidth
+      } else {
+        width = document.querySelector('#portfolio').offsetWidth + 10
+      }
+      icons[Math.round(scroll / width)].classList.add('current')
     }
   }
 }

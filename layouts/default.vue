@@ -402,12 +402,10 @@
   .card .tags span {
     display: inline-block;
     padding: .25rem;
-    margin: 0 .25rem;
+    margin-right: .5rem;
+    margin-top: .5rem;
     border: 2px solid var(--primaryColor);
     border-radius: .25rem
-  }
-  .card .tags span:first-of-type {
-    margin-left: 0
   }
   .card--inner {
     padding: 2rem 1rem;
