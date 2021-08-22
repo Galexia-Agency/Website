@@ -1,5 +1,5 @@
 [build]
-  command = "npm run generate --no-optional"
+  command = "AWS_LAMBDA_FUNCTION_NAME=trickpuppeteer npm run generate --no-optional"
   publish = "dist"
   environment = { NODE_VERSION = "14.15.3" }
 
