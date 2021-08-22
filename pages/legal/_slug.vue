@@ -75,7 +75,7 @@ export default {
   },
   computed: {
     legal () {
-      return this.$store.state.legals.find(legal => legal.slug === this.$route.params.slug)
+      return this.$parent.$parent.legals.find(legal => legal.slug === this.$route.params.slug)
     }
   }
 }

@@ -230,7 +230,7 @@ export default {
       }
     },
     blog () {
-      return this.$store.state.blogs.find(blog => blog.slug === this.$route.params.slug)
+      return this.$parent.$parent.blogs.find(blog => blog.slug === this.$route.params.slug)
     }
   },
   methods: {
