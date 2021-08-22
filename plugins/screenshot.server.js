@@ -20,7 +20,7 @@ async function screenshot (url, format, viewportSize, dpr = 1, withJs = true) {
       height: viewportSize[1],
       deviceScaleFactor: parseFloat(dpr)
     },
-    headless: true
+    headless: chromium.headless
   })
 
   const page = await browser.newPage()
