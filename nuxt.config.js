@@ -111,8 +111,7 @@ export default {
     { src: '~/plugins/animation.js' },
     { src: '~/plugins/fontAwesome.js' },
     { src: '~/plugins/tooltip.js' },
-    { src: '~/plugins/ztext.client.js' },
-    { src: '~/plugins/screenshot.server.js' }
+    { src: '~/plugins/ztext.client.js' }
   ],
   /*
    ** Nuxt.js dev-modules
@@ -121,7 +120,8 @@ export default {
     // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module',
     // Doc: https://github.com/nuxt-community/stylelint-module
-    '@nuxtjs/stylelint-module'
+    '@nuxtjs/stylelint-module',
+    '~/build-modules/screenshot.js'
   ],
   /*
    ** Nuxt.js modules

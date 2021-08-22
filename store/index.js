@@ -17,7 +17,7 @@ export const state = () => ({
 })
 
 export const actions = {
-  async nuxtServerInit ({ state }, { req }) {
+  async nuxtServerInit ({ state }, context) {
     /* Testimonials */
     const testimonialResponse = await this.app.apolloProvider.defaultClient.query({
       query: testimonialsQuery
@@ -76,9 +76,8 @@ export const actions = {
     state.portfolio = portfolioResponse.data.posts.nodes
 
     for (const post of portfolioArr) {
-      post.imgThumb = await this.$screenshotHandler(encodeURIComponent(post.ACFLink.link))
+      post.imgThumb = await context.ssrContext.$screenshotHandler(encodeURIComponent(post.ACFLink.link))
     }
-    await this.$browser.close()
     state.portfolios = portfolioArr
   }
 }

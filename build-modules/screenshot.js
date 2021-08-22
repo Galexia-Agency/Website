@@ -11,7 +11,7 @@ function isFullUrl (url) {
   }
 }
 
-export default async (context, inject) => {
+export default async function () {
   const browser = await chromium.puppeteer.launch({
     executablePath: await chromium.executablePath,
     args: chromium.args,
@@ -49,13 +49,11 @@ export default async (context, inject) => {
     }
   }
 
-  // Inject $screenshotHandler(msg) in Vue, context and store.
-  inject('screenshotHandler', screenshotHandler)
-  // For Nuxt <= 2.12, also add 👇
-  context.$screenshotHandler = screenshotHandler
-
-  // Inject $screenshotHandler(msg) in Vue, context and store.
-  inject('browser', browser)
-  // For Nuxt <= 2.12, also add 👇
-  context.$browser = browser
+  this.nuxt.hook('vue-renderer:ssr:prepareContext', (ssrContext) => {
+    ssrContext.$browser = browser
+    ssrContext.$screenshotHandler = screenshotHandler
+  })
+  this.nuxt.hook('generate:after', async () => {
+    await browser.close
+  })
 }
