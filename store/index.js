@@ -41,27 +41,6 @@ export const actions = {
     state.blog = blogResponse.data.posts.nodes
     state.blogs = blogArr
 
-    /* Portfolio */
-    const portfolioResponse = await this.app.apolloProvider.defaultClient.query({
-      query: portfolioQuery
-    })
-    const portfolioArr = []
-    for (const b in portfolioResponse.data.posts.nodes) {
-      const response = await this.app.apolloProvider.defaultClient.query({
-        query: portfolioPostQuery,
-        variables: {
-          id: portfolioResponse.data.posts.nodes[b].id
-        }
-      })
-      portfolioArr.push(response.data.post)
-    }
-    state.portfolio = portfolioResponse.data.posts.nodes
-
-    for (const post of portfolioArr) {
-      post.imgThumb = await this.$screenshotHandler(encodeURIComponent(post.ACFLink.link), 'desktop', '9:16')
-    }
-    state.portfolios = portfolioArr
-
     /* Legal */
     const legalResponse = await this.app.apolloProvider.defaultClient.query({
       query: legalQuery
@@ -79,5 +58,27 @@ export const actions = {
 
     state.legal = legalResponse.data.posts.nodes
     state.legals = legalArr
+
+    /* Portfolio */
+    const portfolioResponse = await this.app.apolloProvider.defaultClient.query({
+      query: portfolioQuery
+    })
+    const portfolioArr = []
+    for (const b in portfolioResponse.data.posts.nodes) {
+      const response = await this.app.apolloProvider.defaultClient.query({
+        query: portfolioPostQuery,
+        variables: {
+          id: portfolioResponse.data.posts.nodes[b].id
+        }
+      })
+      portfolioArr.push(response.data.post)
+    }
+    state.portfolio = portfolioResponse.data.posts.nodes
+
+    for (const post of portfolioArr) {
+      post.imgThumb = await this.$screenshotHandler(encodeURIComponent(post.ACFLink.link))
+    }
+    await this.$browser.close()
+    state.portfolios = portfolioArr
   }
 }
