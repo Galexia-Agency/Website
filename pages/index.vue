@@ -193,7 +193,7 @@
         We let our work speak for itself
       </h2>
       <div id="portfolio" class="grid column three maxWidth" @scroll="updateIcons">
-        <article v-for="(post, index) in portfolios" :key="index" class="card">
+        <article v-for="(post, index) in $parent.$parent.portfolios" :key="index" class="card">
           <div v-if="post.ACFLink" class="card--inner">
             <div class="portfolioImgContainer">
               <img
@@ -229,7 +229,6 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
 import Header from '../components/header'
 
 export default {
@@ -257,11 +256,6 @@ export default {
         { hid: 'canonical', rel: 'canonical', href: 'https://galexia.agency/' }
       ]
     }
-  },
-  computed: {
-    ...mapState([
-      'portfolios'
-    ])
   },
   mounted () {
     // eslint-disable-next-line
@@ -299,9 +293,9 @@ export default {
     portfolioLength () {
       if (window) {
         if (window.innerWidth > 900) {
-          this.icons = Math.ceil(this.portfolios.length - 2)
+          this.icons = Math.ceil(this.$parent.$parent.portfolios.length - 2)
         } else {
-          this.icons = Math.ceil(this.portfolios.length)
+          this.icons = Math.ceil(this.$parent.$parent.portfolios.length)
         }
       }
     },

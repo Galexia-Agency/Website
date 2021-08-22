@@ -11,7 +11,7 @@
     <div class="maxWidth">
       <h1>Legal</h1>
       <ul>
-        <li v-for="(legalPost, index) in legal" :key="index" class="post">
+        <li v-for="(legalPost, index) in $parent.$parent.legal" :key="index" class="post">
           <div style="display: none">
             {{ legalPost = JSON.parse(JSON.stringify(legalPost).replace(new RegExp('\\[', 'g'),"").replace(new RegExp('\\]', 'g'),"")) }}
           </div>
@@ -24,8 +24,6 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
-
 export default {
   head () {
     return {
@@ -59,11 +57,6 @@ export default {
         }
       ]
     }
-  },
-  computed: {
-    ...mapState([
-      'legal'
-    ])
   }
 }
 </script>

@@ -1,4 +1,4 @@
-const puppeteer = require('puppeteer')
+const chromium = require('chrome-aws-lambda')
 
 function isFullUrl (url) {
   try {
@@ -12,7 +12,9 @@ function isFullUrl (url) {
 }
 
 async function screenshot (url, format, viewportSize, dpr = 1, withJs = true) {
-  const browser = await puppeteer.launch({
+  const browser = await chromium.puppeteer.launch({
+    executablePath: await chromium.executablePath,
+    args: chromium.args,
     defaultViewport: {
       width: viewportSize[0],
       height: viewportSize[1],

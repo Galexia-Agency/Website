@@ -1017,16 +1017,20 @@ export default {
   computed: {
     ...mapState([
       'testimonials',
-      'blog'
+      'blog',
+      'blogs',
+      'portfolios',
+      'legal',
+      'legals'
     ])
   },
   watch: {
     $route () {
       document.documentElement.classList.remove('nav_open')
-      const self = this
       setTimeout(function () {
         document.documentElement.classList.add('nav_close')
-        self.background()
+        // eslint-disable-next-line no-undef
+        background()
       }, 1000)
     }
   },
