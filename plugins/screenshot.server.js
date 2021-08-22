@@ -1,4 +1,5 @@
 const chromium = require('chrome-aws-lambda')
+require('puppeteer-core')
 
 function isFullUrl (url) {
   try {
