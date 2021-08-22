@@ -72,10 +72,10 @@
     }
   }
   .portfolioImgContainer {
-    min-height: 350px;
+    min-height: clamp(220px, 25vw, 350px);
     width: 100%;
     background-size: contain;
-    background-position: center center;
+    background-position: top center;
     background-repeat: no-repeat;
     position: relative
   }
@@ -89,22 +89,63 @@
     position: absolute
   }
   #portfolio .card:nth-of-type(even) .portfolioImgContainer img {
-    top: 22.5px;
-    left: 20px;
-    right: 20px;
-    width: calc(100% - 40px);
-    height: 62%;
+    top: 3.25%;
+    left: 4.5%;
+    width: 91%;
     object-fit: cover;
-    object-position: top
+    object-position: top;
+    aspect-ratio: 345/200
   }
   #portfolio .card:nth-of-type(odd) .portfolioImgContainer img {
-    top: 19%;
-    left: 11%;
-    right: 11%;
-    width: calc(100% - 22%);
-    height: 58.5%;
+    top: 2.75%;
+    left: 11.25%;
+    width: calc(100% - 22.5%);
     object-fit: cover;
-    object-position: top
+    object-position: top;
+    aspect-ratio: 310/200
+  }
+  @media (max-width: 900px) {
+    #portfolio .card:nth-of-type(even) .portfolioImgContainer img {
+      max-width: 247.5px;
+      left: calc((100vw - 342px) / 2);
+      top: 5.5%;
+      aspect-ratio: 350/200
+    }
+    #portfolio .card:nth-of-type(odd) .portfolioImgContainer img {
+      max-width: 290px;
+      left: calc((100vw - 390px) / 2);
+      top: 6%;
+      aspect-ratio: 320/200
+    }
+  }
+  @media (max-width: 500px) {
+    #portfolio .card:nth-of-type(even) .portfolioImgContainer img {
+      left: calc((100vw - 278px) / 2)
+    }
+    #portfolio .card:nth-of-type(odd) .portfolioImgContainer img {
+      left: calc((100vw - 322px) / 2)
+    }
+  }
+  @media (max-width: 402px) {
+    #portfolio .card:nth-of-type(odd) .portfolioImgContainer img {
+      left: 11%
+    }
+  }
+  @supports not (aspect-ratio: 1/1) {
+    #portfolio .card:nth-of-type(even) .portfolioImgContainer img {
+      height: clamp(59%, 15.2vw, 64%)
+    }
+    #portfolio .card:nth-of-type(odd) .portfolioImgContainer img {
+      height: clamp(55%, 14.5vw, 60%)
+    }
+    @media (max-width: 900px) {
+      #portfolio .card:nth-of-type(even) .portfolioImgContainer img {
+        height: 63%
+      }
+      #portfolio .card:nth-of-type(odd) .portfolioImgContainer img {
+        height: clamp(61%, 43vw, 82%)
+      }
+    }
   }
 </style>
 
@@ -156,7 +197,7 @@
           <div v-if="post.ACFLink" class="card--inner">
             <div class="portfolioImgContainer">
               <img
-                :src="`https://screenshot.galexia.agency/${encodeURIComponent(post.ACFLink.link)}/large/_123`"
+                :src="'data:image/jpeg;charset=utf-8;base64,' + post.imgThumb"
                 width="100%"
                 height="auto"
                 :alt="post.title"

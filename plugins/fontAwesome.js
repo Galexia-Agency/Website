@@ -6,4 +6,4 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 library.add(faFacebook, faInstagram, faTwitter, faLinkedin, faGithub, faWhatsapp, faShareAlt, faChevronLeft, faChevronRight, faQuestion)
 
-Vue.component('font-awesome-icon', FontAwesomeIcon)
+Vue.component('FontAwesomeIcon', FontAwesomeIcon)

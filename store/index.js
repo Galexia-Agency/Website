@@ -56,6 +56,10 @@ export const actions = {
       portfolioArr.push(response.data.post)
     }
     state.portfolio = portfolioResponse.data.posts.nodes
+
+    for (const post of portfolioArr) {
+      post.imgThumb = await this.$screenshotHandler(encodeURIComponent(post.ACFLink.link), 'desktop', '9:16')
+    }
     state.portfolios = portfolioArr
 
     /* Legal */
