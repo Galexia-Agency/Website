@@ -62,10 +62,89 @@
     .icons {
       padding-bottom: 30px
     }
+    .grid svg, .card img {
+      max-width: 100%
+    }
   }
   @media (max-width: 500px) {
     #portfolio {
       max-width: 100vw
+    }
+  }
+  .portfolioImgContainer {
+    min-height: clamp(220px, 25vw, 350px);
+    width: 100%;
+    background-size: contain;
+    background-position: top center;
+    background-repeat: no-repeat;
+    position: relative
+  }
+  #portfolio .card:nth-of-type(even) .portfolioImgContainer {
+    background-image: url('../assets/img/iMac.png?webp')
+  }
+  #portfolio .card:nth-of-type(odd) .portfolioImgContainer {
+    background-image: url('../assets/img/MacBookAir.png?webp')
+  }
+  .portfolioImgContainer img {
+    position: absolute
+  }
+  #portfolio .card:nth-of-type(even) .portfolioImgContainer img {
+    top: 3.25%;
+    left: 4.5%;
+    width: 91%;
+    object-fit: cover;
+    object-position: top;
+    aspect-ratio: 345/200
+  }
+  #portfolio .card:nth-of-type(odd) .portfolioImgContainer img {
+    top: 2.75%;
+    left: 11.25%;
+    width: calc(100% - 22.5%);
+    object-fit: cover;
+    object-position: top;
+    aspect-ratio: 310/200
+  }
+  @media (max-width: 900px) {
+    #portfolio .card:nth-of-type(even) .portfolioImgContainer img {
+      max-width: 247.5px;
+      left: calc((100vw - 342px) / 2);
+      top: 5.5%;
+      aspect-ratio: 350/200
+    }
+    #portfolio .card:nth-of-type(odd) .portfolioImgContainer img {
+      max-width: 290px;
+      left: calc((100vw - 390px) / 2);
+      top: 6%;
+      aspect-ratio: 320/200
+    }
+  }
+  @media (max-width: 500px) {
+    #portfolio .card:nth-of-type(even) .portfolioImgContainer img {
+      left: calc((100vw - 278px) / 2)
+    }
+    #portfolio .card:nth-of-type(odd) .portfolioImgContainer img {
+      left: calc((100vw - 322px) / 2)
+    }
+  }
+  @media (max-width: 402px) {
+    #portfolio .card:nth-of-type(odd) .portfolioImgContainer img {
+      left: 11%
+    }
+  }
+  @supports not (aspect-ratio: 1/1) {
+    #portfolio .card:nth-of-type(even) .portfolioImgContainer img {
+      height: clamp(59%, 15.2vw, 64%)
+    }
+    #portfolio .card:nth-of-type(odd) .portfolioImgContainer img {
+      height: clamp(55%, 14.5vw, 60%)
+    }
+    @media (max-width: 900px) {
+      #portfolio .card:nth-of-type(even) .portfolioImgContainer img {
+        height: 63%
+      }
+      #portfolio .card:nth-of-type(odd) .portfolioImgContainer img {
+        height: clamp(61%, 43vw, 82%)
+      }
     }
   }
 </style>
@@ -115,16 +194,17 @@
       </h2>
       <div id="portfolio" class="grid column three maxWidth" @scroll="updateIcons">
         <article v-for="(post, index) in portfolios" :key="index" class="card">
-          <div class="card--inner">
-            <img
-              :src="post.featuredImage.node.mediaItemUrl"
-              width="100%"
-              height="auto"
-              :alt="post.title"
-              style="aspect-ratio: 500 / 413"
-              loading="lazy"
-            >
-            <a v-if="post.ACFLink" :href="post.ACFLink.link" target="_blank" rel="noopener">
+          <div v-if="post.ACFLink" class="card--inner">
+            <div class="portfolioImgContainer">
+              <img
+                :src="'data:image/jpeg;charset=utf-8;base64,' + post.imgThumb"
+                width="100%"
+                height="auto"
+                :alt="post.title"
+                loading="lazy"
+              >
+            </div>
+            <a :href="post.ACFLink.link" target="_blank" rel="noopener">
               <h3 v-html="post.title" />
             </a>
             <div class="tags">
@@ -134,7 +214,7 @@
             </div>
             <div v-html="post.content" />
             <div>
-              <a v-if="post.ACFLink" :href="post.ACFLink.link" target="_blank" rel="noopener" class="website_link">
+              <a :href="post.ACFLink.link" target="_blank" rel="noopener" class="website_link">
                 View the website
               </a>
             </div>
