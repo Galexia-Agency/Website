@@ -76,38 +76,7 @@
           </label>
         </div>
       </div>
-      <div class="grid column three">
-        <div v-infocus="'showElement'" class="card white hidden">
-          <div class="card--inner">
-            <h4 class="title">
-              Basic SEO
-            </h4>
-            <div class="price">
-              <transition name="fade" appear mode="out-in">
-                <h3 v-if="yearly" key="one">
-                  £500/year <span>(SAVE £100)</span>
-                </h3>
-                <h3 v-else key="two">
-                  £50/month
-                </h3>
-              </transition>
-            </div>
-            <ul>
-              <li>
-                <strong>5</strong> Targetted Keywords
-              </li>
-              <li>
-                Up to <strong>5</strong> new pages/posts/products title and description optimisation
-              </li>
-              <li>
-                <strong>Basic</strong> SEO Monthly Report covering Average CTR and Position, and Total Impressions and Clicks
-              </li>
-              <li>
-                Monitoring of up to <strong>10</strong> Keywords
-              </li>
-            </ul>
-          </div>
-        </div>
+      <div class="grid column two">
         <div v-infocus="'showElement'" class="card white hidden" style="--delay: .25s">
           <div class="card--inner">
             <h4 class="title">
@@ -124,6 +93,18 @@
               </transition>
             </div>
             <ul>
+              <li>
+                GDPR Compliant Google Analytics Set Up
+              </li>
+              <li>
+                Google Search Console Set Up
+              </li>
+              <li>
+                Google My Business Set Up
+              </li>
+              <li>
+                Search Engine Friendly Sitemap Creation
+              </li>
               <li>
                 <strong>10</strong> Targetted Keywords
               </li>
@@ -165,6 +146,18 @@
             </div>
             <ul>
               <li>
+                GDPR Compliant Google Analytics Set Up
+              </li>
+              <li>
+                Google Search Console Set Up
+              </li>
+              <li>
+                Google My Business Set Up
+              </li>
+              <li>
+                Search Engine Friendly Sitemap Creation
+              </li>
+              <li>
                 <strong>25</strong> Targetted Keywords
               </li>
               <li>
@@ -197,10 +190,134 @@
               <li>
                 Google My Business and Bing Places for Business monitoring and optimisation
               </li>
+              <li>
+                1 High Quality ~750 word blog post
+              </li>
             </ul>
           </div>
         </div>
       </div>
+      <div class="grid column two">
+        <div v-infocus="'showElement'" class="card white hidden">
+          <div class="card--inner">
+            <h4 class="title">
+              Flexible Package
+            </h4>
+            <div class="price">
+              <h3>
+                Price tailored to you
+              </h3>
+            </div>
+            <p>
+              A flexible SEO package for small businesses needs, built to fit your budget
+            </p>
+            <p>
+              Flexible monthly action plans give you the ability to scale your website presence at your own pace, while still accomplishing your SEO goals. 
+            </p>
+            <p>
+              To help you get a better idea of how monthly SEO services work, one month the focus might be on Image SEO optimization, whereas the next month the focus might be on improving backlinks.
+            </p>
+          </div>
+        </div>
+        <div v-infocus="'showElement'" class="card white hidden">
+          <div class="card--inner">
+            <h4 class="title">
+              High Quality ~750 word Blog Post
+            </h4>
+            <div class="price">
+              <transition name="fade" appear mode="out-in">
+                <h3 v-if="yearly" key="one">
+                  £500/year <span>(SAVE £100)</span>
+                </h3>
+                <h3 v-else key="two">
+                  £50/month
+                </h3>
+              </transition>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2>
+        Free SEO Audit
+      </h2>
+      <p class="desc">
+        If you're struggling to know where to start on your SEO journey, why not sign up for our free SEO Health Check. Just fill in your email address and website, and we'll get back to you with a personalised action plan for you and your Business.
+      </p>
+      <client-only>
+        <form method="post" name="contact_form" netlify @submit.prevent="onSubmit">
+          <label>
+            First Name:
+            <input
+              id="fname"
+              v-model="form.fname"
+              name="fname"
+              type="text"
+              placeholder="Joe"
+              required
+              autocomplete="given-name"
+              @keyup="checkform"
+            >
+          </label>
+          <label>
+            Last Name:
+            <input
+              id="lname"
+              v-model="form.lname"
+              name="lname"
+              type="text"
+              placeholder="Bloggs"
+              required
+              autocomplete="family-name"
+              @keyup="checkform"
+            >
+          </label>
+          <label>
+            Email:
+            <input
+              id="mail"
+              v-model="form.email"
+              name="email"
+              type="email"
+              placeholder="joe@bloggs.com"
+              required
+              autocomplete="email"
+              @keyup="checkform"
+            >
+          </label>
+          <label>
+            Website:
+            <input
+              id="website"
+              v-model="form.website"
+              name="website"
+              type="url"
+              placeholder="https://galexia.agency"
+              required
+              autocomplete="url"
+              inputmode="text"
+              @keyup="checkform"
+            >
+          </label>
+          <div id="submitcontainer">
+            <input
+              id="submit"
+              type="submit"
+              name="submit"
+              class="button colorTwo"
+              value="submit"
+              disabled
+            >
+          </div>
+          <p v-show="!submitted">
+          &nbsp;
+          </p>
+          <transition name="fade">
+            <p v-show="submitted" class="message">
+              {{ submitted }}
+            </p>
+          </transition>
+        </form>
+      </client-only>
     </section>
   </div>
 </template>
@@ -209,7 +326,14 @@
 export default {
   data () {
     return {
-      yearly: false
+      yearly: false,
+      submitted: false,
+      form: {
+        fname: '',
+        lname: '',
+        email: '',
+        website: '',
+      }
     }
   },
   head () {
@@ -243,6 +367,78 @@ export default {
           type: 'application/ld+json'
         }
       ]
+    }
+  },
+  mounted () {
+    // eslint-disable-next-line
+    if (process.client) {
+      if (localStorage.getItem('form')) {
+        this.form = JSON.parse(localStorage.getItem('form'))
+      } else {
+        this.form = {
+          fname: '',
+          lname: '',
+          email: '',
+          telephone: '',
+          subject: '',
+          message: ''
+        }
+      }
+    }
+  },
+  methods: {
+    encode (data) {
+      return Object.keys(data)
+        .map(
+          key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
+        )
+        .join('&')
+    },
+    onSubmit () {
+      document.querySelector('.rocket').classList.add('animate')
+      const self = this
+      try {
+        axios.post(
+          '/',
+          self.encode({
+            'form-name': 'contact_form',
+            ...self.form
+          }),
+          { header: { 'Content-Type': 'application/x-www-form-urlencoded' } }
+        )
+        localStorage.setItem('form', '')
+        this.form = {
+          fname: '',
+          lname: '',
+          email: '',
+          telephone: '',
+          subject: '',
+          message: ''
+        }
+        this.submitted = 'Message sent successfully! We\'ll be in touch within 2-3 working days'
+      } catch (e) {
+        this.submitted = e.toString() + ' Please try again.'
+      }
+    },
+    checkform () {
+      localStorage.setItem('form', JSON.stringify(this.form))
+      const f = document.forms.contact_form.elements
+      let cansubmit = true
+
+      for (let i = 0; i < f.length - 2; i++) {
+        if (f[i].value.length === 0) {
+          cansubmit = false
+        }
+      }
+      if (document.querySelector('#message')) {
+        if (document.querySelector('#message').value === '') {
+          cansubmit = false
+        }
+      }
+
+      if (document.querySelector('#submit')) {
+        document.querySelector('#submit').disabled = !cansubmit
+      }
     }
   }
 }
