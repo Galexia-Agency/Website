@@ -128,7 +128,7 @@
                 <ul>
                   <li>
                     Schema markup
-                  <li>
+                  </li>
                   <li>
                     Meta tags
                   </li>
@@ -169,10 +169,10 @@
             <div class="price">
               <transition name="fade" appear mode="out-in">
                 <h3 v-if="yearly" key="three">
-                  £2200/year <span>(SAVE £200)</span>
+                  £2750/year <span>(SAVE £250)</span>
                 </h3>
                 <h3 v-else key="four">
-                  £200/month
+                  £250/month
                 </h3>
               </transition>
             </div>
@@ -217,7 +217,7 @@
                   </li>
                   <li>
                     Schema markup
-                  <li>
+                  </li>
                   <li>
                     Meta tags
                   </li>
@@ -240,7 +240,7 @@
                     Mobile/Responsive site optimisation
                   </li>
                   <li>
-                    Continuing to fix <strong>basic</strong> crawlabilty issues as identified in Google Search Console
+                    Continuing to fix <strong>all</strong> crawlabilty issues as identified in Google Search Console
                   </li>
                   <li>
                     Technical fault finding and resolution in relation to SEO
