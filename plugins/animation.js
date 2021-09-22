@@ -12,7 +12,7 @@ Vue.directive('infocus', {
         rect.width > 0 &&
         rect.height > 0 &&
         rect.top >= 0 &&
-        rect.bottom <= ((window.innerHeight + 500) || (document.documentElement.clientHeight + 500))
+        rect.bottom <= ((window.innerHeight + 800) || (document.documentElement.clientHeight + 800))
       )
       if (inView) {
         el.classList.add(binding.value)

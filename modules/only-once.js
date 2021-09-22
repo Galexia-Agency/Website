@@ -16,6 +16,8 @@ const state = {
   legals: []
 }
 
+const delay = ms => new Promise(res => setTimeout(res, ms))
+
 function isFullUrl (url) {
   try {
     // eslint-disable-next-line no-new
@@ -221,6 +223,17 @@ export default async function () {
         encoding: 'base64',
         quality: 80
       }
+      await delay(5000)
+      if (await page.$('#onesignal-slidedown-cancel-button')) {
+        (await page.$('#onesignal-slidedown-cancel-button')).click()
+      }
+      if (await page.$('.sgpb-popup-close-button-3')) {
+        (await page.$('.sgpb-popup-close-button-3')).click()
+      }
+      if (await page.$('.cc-accept-all')) {
+        (await page.$('.cc-accept-all')).click()
+      }
+      await delay(1000)
       const output = await page.screenshot(options)
       await page.close()
       return output

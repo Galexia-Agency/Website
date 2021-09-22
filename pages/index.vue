@@ -195,7 +195,15 @@
       <div id="portfolio" class="grid column three maxWidth" @scroll="updateIcons">
         <article v-for="(post, index) in $parent.$parent.portfolios" :key="index" class="card">
           <div v-if="post.ACFLink" class="card--inner">
-            <div class="portfolioImgContainer">
+            <img
+              v-if="post.featuredImage.node.mediaItemUrl"
+              :src="post.featuredImage.node.mediaItemUrl"
+              width="100%"
+              height="auto"
+              :alt="post.title"
+              loading="lazy"
+            >
+            <div v-else class="portfolioImgContainer">
               <img
                 :src="'data:image/jpeg;charset=utf-8;base64,' + post.imgThumb"
                 width="100%"
