@@ -208,7 +208,7 @@
                 </v-popover>
               </li>
               <li>
-                98% Uptime <nuxt-link to="/legal/service-level-agreement">
+                99% Uptime <nuxt-link to="/legal/service-level-agreement">
                   SLA
                 </nuxt-link> with performance monitoring
                 <v-popover placement="top">
@@ -311,7 +311,7 @@
                 </v-popover>
               </li>
               <li>
-                98% Uptime <nuxt-link to="/legal/service-level-agreement">
+                99% Uptime <nuxt-link to="/legal/service-level-agreement">
                   SLA
                 </nuxt-link> with performance monitoring
                 <v-popover placement="top">
