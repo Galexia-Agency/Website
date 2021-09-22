@@ -100,31 +100,63 @@
                 Google Search Console Set Up
               </li>
               <li>
-                Google My Business Set Up
-              </li>
-              <li>
-                Search Engine Friendly Sitemap Creation
+                Up to <strong>10</strong> new pages/posts/products title and description optimisation
               </li>
               <li>
                 <strong>10</strong> Targetted Keywords
               </li>
               <li>
-                Up to <strong>10</strong> new pages/posts/products title and description optimisation
+                Monitoring up to <strong>25</strong> Keywords
               </li>
               <li>
-                <strong>In-Depth</strong> SEO Monthly Report covering site performance, and site health
+                Clear milestone roadmap for your SEO goals
               </li>
               <li>
-                Technical SEO including Schema markup, OG tags, link structure, and redirects
+                Advice on new content structure and purpose in relation to goals
               </li>
               <li>
-                Monitoring of up to <strong>25</strong> Keywords
+                Google My Business and Bing Places for Business monitoring and optimisation
               </li>
               <li>
-                Mobile/Responsive site optimisation
+                1 High Quality ~750 word blog post
               </li>
               <li>
-                Continuing to fix <strong>basic</strong> crawlabilty issues such as pages marked as noindex
+                <strong>In-Depth</strong> Monthly SEO Report covering site performance, site health, and competitor analysis
+              </li>
+              <li>
+                Technical SEO
+                <ul>
+                  <li>
+                    Schema markup
+                  </li>
+                  <li>
+                    Meta tags
+                  </li>
+                  <li>
+                    Search Engine Friendly Sitemap Creation
+                  </li>
+                  <li>
+                    Robots.txt Creation
+                  </li>
+                  <li>
+                    Link structure
+                  </li>
+                  <li>
+                    URL Format
+                  </li>
+                  <li>
+                    Website redirects
+                  </li>
+                  <li>
+                    Mobile/Responsive site optimisation
+                  </li>
+                  <li>
+                    Continuing to fix <strong>basic</strong> crawlabilty issues as identified in Google Search Console
+                  </li>
+                  <li>
+                    Technical fault finding and resolution in relation to SEO
+                  </li>
+                </ul>
               </li>
             </ul>
           </div>
@@ -137,10 +169,10 @@
             <div class="price">
               <transition name="fade" appear mode="out-in">
                 <h3 v-if="yearly" key="three">
-                  £2200/year <span>(SAVE £200)</span>
+                  £2750/year <span>(SAVE £250)</span>
                 </h3>
                 <h3 v-else key="four">
-                  £200/month
+                  £250/month
                 </h3>
               </transition>
             </div>
@@ -152,46 +184,68 @@
                 Google Search Console Set Up
               </li>
               <li>
-                Google My Business Set Up
-              </li>
-              <li>
-                Search Engine Friendly Sitemap Creation
+                Up to <strong>25</strong> new pages/posts/products title, description, <strong>and image</strong> optimisation
               </li>
               <li>
                 <strong>25</strong> Targetted Keywords
               </li>
               <li>
-                Up to <strong>25</strong> new pages/posts/products title and description optimisation
-              </li>
-              <li>
-                Advice on new content structure and purpose in relation to goals
-              </li>
-              <li>
-                <strong>In-Depth</strong> SEO Monthly Report covering site performance, site health, and competitor analysis
-              </li>
-              <li>
-                Technical SEO including Schema markup, OG tags, link structure, and redirects
-              </li>
-              <li>
                 Monitoring up to <strong>100</strong> Keywords
               </li>
               <li>
-                Mobile/Responsive site optimisation
+                Clear milestone roadmap for your SEO goals
               </li>
               <li>
-                Continuing to fix <strong>all</strong> crawlabilty issues as identified in Google Search Console
-              </li>
-              <li>
-                Technical fault finding and resolution in relation to SEO
-              </li>
-              <li>
-                Conversion Rate Optimisation
+                Advice on new content structure and purpose in relation to goals
               </li>
               <li>
                 Google My Business and Bing Places for Business monitoring and optimisation
               </li>
               <li>
                 1 High Quality ~750 word blog post
+              </li>
+              <li>
+                <strong>In-Depth</strong> Monthly SEO Report covering site performance, site health, and competitor analysis
+              </li>
+              <li>
+                Technical SEO
+                <ul>
+                  <li>
+                    <a href="https://galexia.agency/hosting/">
+                      <strong>Free</strong> WordPress Maintenance Plan
+                    </a>
+                  </li>
+                  <li>
+                    Schema markup
+                  </li>
+                  <li>
+                    Meta tags
+                  </li>
+                  <li>
+                    Search Engine Friendly Sitemap Creation
+                  </li>
+                  <li>
+                    Robots.txt Creation
+                  </li>
+                  <li>
+                    Link structure
+                  </li>
+                  <li>
+                    URL Format
+                  </li>
+                  <li>
+                    Website redirects
+                  </li>
+                  <li>
+                    Mobile/Responsive site optimisation
+                  </li>
+                  <li>
+                    Continuing to fix <strong>all</strong> crawlabilty issues as identified in Google Search Console
+                  </li>
+                  <li>
+                    Technical fault finding and resolution in relation to SEO
+                  </li>
+                </ul>
               </li>
             </ul>
           </div>
@@ -225,15 +279,19 @@
               High Quality ~750 word Blog Post
             </h4>
             <div class="price">
-              <transition name="fade" appear mode="out-in">
-                <h3 v-if="yearly" key="one">
-                  £500/year <span>(SAVE £100)</span>
-                </h3>
-                <h3 v-else key="two">
-                  £50/month
-                </h3>
-              </transition>
+              <h3>
+                £50
+              </h3>
             </div>
+            <p>
+              We'll spend the time getting aquinted with your business, and conduct thorough competitor and keyword research giving you a blog post that helps position your website at the top of the SERPs.
+            </p>
+            <p>
+              We're happy to work with you whether you have a tight brief or don't know where to begin. We can bring ideas to the table, or stay within strict keyword, and demographic limits.
+            </p>
+            <p>
+              Need a longer, or shorter, post? Just let us know and we can tailor our prices to you.
+            </p>
           </div>
         </div>
       </div>
