@@ -94,7 +94,7 @@
     </section>
     <section class="white">
       <h2>Content Creation</h2>
-      <div class="grid column maxWidth four">
+      <div class="grid column maxWidth three">
         <div v-infocus="'showElement'" class="card hidden">
           <h3>Photography</h3>
           <div class="svg" v-html="require('../assets/svg/photography.svg?include')" />
@@ -102,13 +102,13 @@
             Photos can make or break a brand. Having good photos are vital to all kinds of content marketing, including social media, and websites. We have a team of photographers versed in everything from events to products.
           </p>
         </div>
-        <div v-infocus="'showElement'" class="card hidden" style="--delay: .25s">
+        <!--<div v-infocus="'showElement'" class="card hidden" style="--delay: .25s">
           <h3>Videography</h3>
           <div class="svg" v-html="require('../assets/svg/videography.svg?include')" />
           <p class="text--normal">
             We love watching great content. It’s a great way to engage with customers in the modern age. We pride ourselves in creating short clips for Instagram, longer clips for YouTube and everything in-between.
           </p>
-        </div>
+        </div>-->
         <div v-infocus="'showElement'" class="card hidden" style="--delay: .5s">
           <h3>Copy-writing</h3>
           <div class="svg" v-html="require('../assets/svg/writing.svg?include')" />
