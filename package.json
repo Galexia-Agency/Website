@@ -40,7 +40,7 @@
     "responsive-loader": "^1.2.0",
     "v-tooltip": "^2.0.3",
     "vue-apollo": "^3.0.7",
-    "vue-hamburger": "github:joebailey26/vue-hamburger",
+    "vue-hamburger": "https://github.com/joebailey26/vue-hamburger",
     "vue-social-sharing": "^3.0.4",
     "vue-template-compiler": "^2.6.12",
     "webp-loader": "^0.6.0"

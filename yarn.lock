@@ -11910,9 +11910,9 @@ vue-eslint-parser@^7.1.1, vue-eslint-parser@^7.6.0:
     esquery "^1.4.0"
     lodash "^4.17.15"
 
-"vue-hamburger@github:joebailey26/vue-hamburger":
+"vue-hamburger@https://github.com/joebailey26/vue-hamburger":
   version "1.0.8"
-  resolved "git+ssh://git@github.com/joebailey26/vue-hamburger.git#777f4fc5d1ef14e892949c78024d1df800de4b96"
+  resolved "https://github.com/joebailey26/vue-hamburger#777f4fc5d1ef14e892949c78024d1df800de4b96"
 
 vue-hot-reload-api@^2.3.0:
   version "2.3.4"
