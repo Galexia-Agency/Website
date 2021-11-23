@@ -245,7 +245,9 @@ export default async function () {
   }
 
   for (const post of portfolioArr) {
-    post.imgThumb = await screenshotHandler(encodeURIComponent(post.ACFLink.link))
+    if (!post.featuredImage.node.mediaItemUrl) {
+      post.imgThumb = await screenshotHandler(encodeURIComponent(post.ACFLink.link))
+    }
   }
 
   await browser.close()

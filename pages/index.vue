@@ -125,6 +125,9 @@
     #portfolio .card:nth-of-type(odd) .portfolioImgContainer img {
       left: calc((100vw - 322px) / 2)
     }
+    .icons {
+      grid-gap: 0
+    }
   }
   @media (max-width: 402px) {
     #portfolio .card:nth-of-type(odd) .portfolioImgContainer img {
@@ -201,7 +204,6 @@
               width="100%"
               height="auto"
               :alt="post.title"
-              loading="lazy"
             >
             <div v-else class="portfolioImgContainer">
               <img
@@ -209,7 +211,6 @@
                 width="100%"
                 height="auto"
                 :alt="post.title"
-                loading="lazy"
               >
             </div>
             <a :href="post.ACFLink.link" target="_blank" rel="noopener">

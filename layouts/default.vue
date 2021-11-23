@@ -1,5 +1,5 @@
 
-<style>
+<style lang="scss">
 
   /* Resets */
   html {
@@ -54,6 +54,7 @@
   :any-link {
     text-decoration: none;
     color: inherit;
+    word-break: break-word;
     transition: opacity .25s
   }
   :any-link:focus {
@@ -87,6 +88,12 @@
   h6 {
     font-size: 1.25rem;
     line-height: 1.225
+  }
+  code {
+    background-color: rgba(26, 35, 126, .15);
+    padding: 0 .2em;
+    user-select: all;
+    word-break: break-all
   }
   .text--normal {
     opacity: .9;
@@ -207,7 +214,8 @@
   /* Global helpers */
   .maxWidth {
     padding: 2rem;
-    max-width: min(1376px, calc(100vw - 4rem));
+    /* stylelint-disable-next-line */
+    max-width: Min(1376px, calc(100vw - 4rem));
     margin: auto
   }
   .white {
@@ -626,6 +634,70 @@
     }
   }
 
+  /* Comparison Table */
+  table.comparison {
+    border-collapse: collapse;
+    td {
+      padding: .5rem;
+      &:nth-of-type(2), &:nth-of-type(3) {
+        text-align: center
+      }
+    }
+    h3 {
+      margin-bottom: 1.5rem
+    }
+    tbody {
+      td {
+        svg.svg-inline--fa {
+          width: 1.5rem;
+          height: 1.5rem;
+          color: var(--primaryColor)
+        }
+        svg.fa-times-circle {
+          color: #999999
+        }
+      }
+      tr {
+        &:nth-of-type(odd):not(.no-background) {
+          background-color: #1A237E25
+        }
+      }
+    }
+  }
+  @media (max-width: 740px) {
+    .scroll-wrapper {
+      position: relative;
+      overflow: hidden;
+      .shadow {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        z-index: 100;
+        width: 10px;
+        height: 100%;
+        background: red;
+        &.shadow-left {
+          left: 0;
+          background: linear-gradient(450deg, rgba(0, 0, 0, .15), transparent);
+          opacity: 0
+        }
+        &.shadow-right {
+          right: 0;
+          background: linear-gradient(270deg, rgba(0, 0, 0, .15), transparent)
+        }
+      }
+    }
+    .mobile-table {
+      position: relative;
+      max-width: calc(100vw - 2rem);
+      overflow-x: scroll;
+      height: 100%;
+      table.comparison {
+        width: 650px
+      }
+    }
+  }
+
   /* Popover */
   .v-popover {
     display: inline;
@@ -668,6 +740,52 @@
   .st19 { fill: #B23F33 }
   .st20 { fill: #ECB02A }
   .st21 { fill: #C79732 }
+
+  /* Forms */
+  form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+    width: 100%;
+    label {
+      text-align: left;
+      display: grid;
+      grid-gap: .5rem
+    }
+  }
+  #subject, #message {
+    grid-column: span 2
+  }
+  #submitcontainer {
+    grid-column: span 2;
+    text-align: left
+  }
+  p.message {
+    text-align: left;
+    grid-column: 1 / 3
+  }
+  .fade-enter-active, .fade-leave-active {
+    transition: opacity 1s
+  }
+  .fade-enter, .fade-leave-to {
+    opacity: 0
+  }
+  @media (max-width: 500px) {
+    form {
+      grid-template-columns: 1fr
+    }
+    #submitcontainer, #message, #subject {
+      grid-column: 1
+    }
+  }
+  form.narrow {
+    grid-template-columns: 1fr;
+    max-width: 800px;
+    margin: auto;
+    #submitcontainer, p.message {
+      grid-column: 1
+    }
+  }
 
   /* Animation */
   .hidden {
@@ -853,6 +971,9 @@
     section {
       padding: 0
     }
+    h1 {
+      font-size: 2.25rem
+    }
     h2 {
       font-size: 2rem;
       line-height: 1.125
@@ -880,7 +1001,7 @@
           </nuxt-link>
         </div>
         <div class="nav--icon">
-          <Hamburger type="arrow" color="white" />
+          <Hamburger type="arrow" color="white" :expanded="expanded" />
         </div>
         <div class="nav--container">
           <nuxt-link to="/" class="nav--link">
@@ -1011,7 +1132,8 @@ export default {
     return {
       count: 1,
       motion: 'auto',
-      background_size: null
+      background_size: null,
+      expanded: null
     }
   },
   computed: {
@@ -1040,6 +1162,50 @@ export default {
       document.querySelector('body').classList.add('no-webp')
     }
     this.motion = await window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'
+  },
+  mounted () {
+    const self = this
+    document.addEventListener('touchstart', handleTouchStart, false)
+    document.addEventListener('touchmove', handleTouchMove, false)
+
+    let xDown = null
+    let yDown = null
+
+    function getTouches (evt) {
+      return evt.touches
+    }
+
+    function handleTouchStart (evt) {
+      const firstTouch = getTouches(evt)[0]
+      xDown = firstTouch.clientX
+      yDown = firstTouch.clientY
+    }
+
+    function handleTouchMove (evt) {
+      if (!xDown || !yDown) {
+        return
+      }
+
+      const xUp = evt.touches[0].clientX
+      const yUp = evt.touches[0].clientY
+
+      const xDiff = xDown - xUp
+      const yDiff = yDown - yUp
+
+      if (Math.abs(xDiff) > Math.abs(yDiff)) {
+        if (xDiff < 0) {
+          document.documentElement.classList.remove('nav_open')
+          self.expanded = null
+          setTimeout(function () {
+            document.documentElement.classList.add('nav_close')
+            self.expanded = false
+          }, 500)
+        }
+      }
+      /* reset values */
+      xDown = null
+      yDown = null
+    };
   },
   methods: {
     async WebpIsSupported () {

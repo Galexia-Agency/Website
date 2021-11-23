@@ -1,4 +1,4 @@
-<style scoped>
+<style scoped lang="scss">
   /* Page */
   h1 {
     text-align: center
@@ -64,150 +64,112 @@
         <h1>Ultra-fast Hosting</h1>
         <img src="../assets/img/lighthouse.jpg" width="520" height="294" alt="Lighthouse Test">
         <p class="desc">
-          Your website needs a home and we're happy to house it regardless of who built it. Below is an outline of our pricing for different plans. We're able to offer free Jamstack hosting thanks to <a href="https://netlify.com">Netlify</a>. If you want results like these then be sure to choose us for all your hosting and website needs.
+          Your website needs a home and we're happy to house it regardless of who built it. Below is an outline of our pricing for different plans. If you want results like these then be sure to choose us for all your hosting and website needs.
         </p>
-        <div class="toggle">
-          <h4 id="monthly">
-            Monthly/Yearly
-          </h4>
-          <label class="switch">
-            <input v-model="yearly" type="checkbox" aria-labelledby="monthly">
-            <span class="slider round" />
-          </label>
-        </div>
       </div>
-      <div class="grid column three">
-        <div v-infocus="'showElement'" class="card white hidden">
-          <div class="card--inner">
-            <h4 class="title">
-              Jamstack Hosting
-            </h4>
-            <h3>
-              FREE*
-            </h3>
-            <ul>
-              <li>
-                <strong>Near limitless storage</strong>
+      <div class="mobile-table">
+        <table class="comparison">
+          <colgroup>
+            <col width="33.33%">
+            <col width="33.33%">
+            <col width="33.33%">
+          </colgroup>
+          <thead>
+            <tr>
+              <td>
+                <h3>
+                  WordPress Hosting
+                </h3>
+              </td>
+              <td>
+                <h4 class="title">
+                  Starter
+                </h4>
+                <h3>
+                  £100/year
+                </h3>
+              </td>
+              <td>
+                <h4 class="title">
+                  Advanced
+                </h4>
+                <h3>
+                  £150/year
+                </h3>
+              </td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                Storage Capacity
                 <v-popover placement="top">
                   <font-awesome-icon icon="question" />
                   <template slot="popover">
                     <span>Includes all of the code used to run your site as well as content such as photos and videos</span>
                   </template>
                 </v-popover>
-              </li>
-              <li>
-                <strong>Near limitless network transfer</strong>
+              </td>
+              <td>
+                5GB
+              </td>
+              <td>
+                Near limitless
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Network transfer
                 <v-popover placement="top">
                   <font-awesome-icon icon="question" />
                   <template slot="popover">
                     <span>How much data is transferred to your users when they visit your site</span>
                   </template>
                 </v-popover>
-              </li>
-              <li>
-                <strong>No monthly visitor cap</strong>
+              </td>
+              <td>
+                5GB
+              </td>
+              <td>
+                Near limitless
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Monthly visitors
                 <v-popover placement="top">
                   <font-awesome-icon icon="question" />
                   <template slot="popover">
                     <span>How many users visit your site in a month</span>
                   </template>
                 </v-popover>
-              </li>
-              <li>
-                HTTP/2
-                <v-popover placement="top">
-                  <font-awesome-icon icon="question" />
-                  <template slot="popover">
-                    <span>Numerous benefits over HTTP/1.1 including the ability to download multiple files at the same time</span>
-                  </template>
-                </v-popover>
-              </li>
-              <li>
-                Brotli Compression
-                <v-popover placement="top">
-                  <font-awesome-icon icon="question" />
-                  <template slot="popover">
-                    <span>Latest compression algorithm reducing the size of the website, improving load time</span>
-                  </template>
-                </v-popover>
-              </li>
-              <li>
-                Site caching and optimization
-                <v-popover placement="top">
-                  <font-awesome-icon icon="question" />
-                  <template slot="popover">
-                    <span>Improves load time which means happier users and better SEO</span>
-                  </template>
-                </v-popover>
-              </li>
-              <li>
-                Content Delivery Network (<abbr>CDN</abbr>)
-                <v-popover placement="top">
-                  <font-awesome-icon icon="question" />
-                  <template slot="popover">
-                    <span>Caches your website around the globe to improve load time</span>
-                  </template>
-                </v-popover>
-              </li>
-            </ul>
-            <p class="terms">
-              <strong>* Free with any WordPress hosting plan otherwise £5/month</strong>
-            </p>
-          </div>
-        </div>
-        <div v-infocus="'showElement'" class="card white hidden" style="--delay: .25s">
-          <div class="card--inner">
-            <h4 class="title">
-              Starter WordPress Hosting
-            </h4>
-            <div class="price">
-              <transition name="fade" appear mode="out-in">
-                <h3 v-if="yearly" key="one">
-                  £100/year <span>(SAVE £20)</span>
-                </h3>
-                <h3 v-else key="two">
-                  £10/month
-                </h3>
-              </transition>
-            </div>
-            <ul>
-              <li>
-                <strong>5GB SSD storage</strong>
-                <v-popover placement="top">
-                  <font-awesome-icon icon="question" />
-                  <template slot="popover">
-                    <span>Includes all of the code used to run your site as well as content such as photos and videos</span>
-                  </template>
-                </v-popover>
-              </li>
-              <li>
-                <strong>5GB network transfer</strong>
-                <v-popover placement="top">
-                  <font-awesome-icon icon="question" />
-                  <template slot="popover">
-                    <span>How much data is transferred to your users when they visit your site</span>
-                  </template>
-                </v-popover>
-              </li>
-              <li>
-                <strong>5k monthly visitor cap</strong>
-                <v-popover placement="top">
-                  <font-awesome-icon icon="question" />
-                  <template slot="popover">
-                    <span>How many users visit your site in a month</span>
-                  </template>
-                </v-popover>
-              </li>
-              <li>
-                1 WordPress install
+              </td>
+              <td>
+                5,000 Users
+              </td>
+              <td>
+                Near limitless
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Suitable for 1 site only
                 <v-popover placement="top">
                   <font-awesome-icon icon="question" />
                   <template slot="popover">
                     <span>You will need to purchase seperate hosting plans for each site you own</span>
                   </template>
                 </v-popover>
-              </li>
-              <li>
+              </td>
+              <td>
+                <font-awesome-icon :icon="['far', 'check-circle']" />
+              </td>
+              <td>
+                <font-awesome-icon :icon="['far', 'check-circle']" />
+              </td>
+            </tr>
+            <tr>
+              <td>
                 99% Uptime <nuxt-link to="/legal/service-level-agreement">
                   SLA
                 </nuxt-link> with performance monitoring
@@ -217,8 +179,16 @@
                     <span>Your website will be available for viewers almost all of the time. There may be very minor outages</span>
                   </template>
                 </v-popover>
-              </li>
-              <li>
+              </td>
+              <td>
+                <font-awesome-icon :icon="['far', 'check-circle']" />
+              </td>
+              <td>
+                <font-awesome-icon :icon="['far', 'check-circle']" />
+              </td>
+            </tr>
+            <tr>
+              <td>
                 PHP 7.4
                 <v-popover placement="top">
                   <font-awesome-icon icon="question" />
@@ -226,8 +196,16 @@
                     <span>Latest version of PHP, the language WordPress uses</span>
                   </template>
                 </v-popover>
-              </li>
-              <li>
+              </td>
+              <td>
+                <font-awesome-icon :icon="['far', 'check-circle']" />
+              </td>
+              <td>
+                <font-awesome-icon :icon="['far', 'check-circle']" />
+              </td>
+            </tr>
+            <tr>
+              <td>
                 HTTP/3
                 <v-popover placement="top">
                   <font-awesome-icon icon="question" />
@@ -235,8 +213,16 @@
                     <span>Cutting edge version of HTTP which uses QUIC as it's engine</span>
                   </template>
                 </v-popover>
-              </li>
-              <li>
+              </td>
+              <td>
+                <font-awesome-icon :icon="['far', 'check-circle']" />
+              </td>
+              <td>
+                <font-awesome-icon :icon="['far', 'check-circle']" />
+              </td>
+            </tr>
+            <tr>
+              <td>
                 Brotli Compression
                 <v-popover placement="top">
                   <font-awesome-icon icon="question" />
@@ -244,8 +230,16 @@
                     <span>Latest compression algorithm reducing the size of the website, improving load time</span>
                   </template>
                 </v-popover>
-              </li>
-              <li>
+              </td>
+              <td>
+                <font-awesome-icon :icon="['far', 'check-circle']" />
+              </td>
+              <td>
+                <font-awesome-icon :icon="['far', 'check-circle']" />
+              </td>
+            </tr>
+            <tr>
+              <td>
                 Content Delivery Network (<abbr>CDN</abbr>) powered by CloudFlare
                 <v-popover placement="top">
                   <font-awesome-icon icon="question" />
@@ -253,115 +247,38 @@
                     <span>Caches your website around the globe to improve load time</span>
                   </template>
                 </v-popover>
-              </li>
-              <li><strong>WordPress Maintenance (See below)</strong></li>
-            </ul>
-          </div>
-        </div>
-        <div v-infocus="'showElement'" class="card white hidden" style="--delay: .5s">
-          <div class="card--inner">
-            <h4 class="title">
-              Advanced WordPress Hosting
-            </h4>
-            <div class="price">
-              <transition name="fade" appear mode="out-in">
-                <h3 v-if="yearly" key="three">
-                  £150/year <span>(SAVE £60)</span>
-                </h3>
-                <h3 v-else key="four">
-                  £15/month
-                </h3>
-              </transition>
-            </div>
-            <ul>
-              <li>
-                <strong>Near limitless SSD storage</strong>
-                <v-popover placement="top">
-                  <font-awesome-icon icon="question" />
-                  <template slot="popover">
-                    <span>Includes all of the code used to run your site as well as content such as photos and videos</span>
-                  </template>
-                </v-popover>
-              </li>
-              <li>
-                <strong>Near limitless network transfer</strong>
-                <v-popover placement="top">
-                  <font-awesome-icon icon="question" />
-                  <template slot="popover">
-                    <span>How much data is transferred to your users when they visit your site</span>
-                  </template>
-                </v-popover>
-              </li>
-              <li>
-                <strong>No monthly visitor cap</strong>
-                <v-popover placement="top">
-                  <font-awesome-icon icon="question" />
-                  <template slot="popover">
-                    <span>How many users visit your site in a month</span>
-                  </template>
-                </v-popover>
-              </li>
-              <li>
-                1 WordPress install
-                <v-popover placement="top">
-                  <font-awesome-icon icon="question" />
-                  <template slot="popover">
-                    <span>You will need to purchase seperate hosting plans for each site you own</span>
-                  </template>
-                </v-popover>
-              </li>
-              <li>
-                99% Uptime <nuxt-link to="/legal/service-level-agreement">
-                  SLA
-                </nuxt-link> with performance monitoring
-                <v-popover placement="top">
-                  <font-awesome-icon icon="question" />
-                  <template slot="popover">
-                    <span>Your website will be available for viewers almost all of the time. There may be very minor outages</span>
-                  </template>
-                </v-popover>
-              </li>
-              <li>
-                PHP 7.4
-                <v-popover placement="top">
-                  <font-awesome-icon icon="question" />
-                  <template slot="popover">
-                    <span>Latest version of PHP, the language WordPress uses</span>
-                  </template>
-                </v-popover>
-              </li>
-              <li>
-                HTTP/3
-                <v-popover placement="top">
-                  <font-awesome-icon icon="question" />
-                  <template slot="popover">
-                    <span>Cutting edge version of HTTP which uses QUIC as it's engine</span>
-                  </template>
-                </v-popover>
-              </li>
-              <li>
-                Brotli Compression
-                <v-popover placement="top">
-                  <font-awesome-icon icon="question" />
-                  <template slot="popover">
-                    <span>Latest compression algorithm reducing the size of the website, improving load time</span>
-                  </template>
-                </v-popover>
-              </li>
-              <li>
-                Content Delivery Network (<abbr>CDN</abbr>) powered by CloudFlare
-                <v-popover placement="top">
-                  <font-awesome-icon icon="question" />
-                  <template slot="popover">
-                    <span>Caches your website around the globe to improve load time</span>
-                  </template>
-                </v-popover>
-              </li>
-              <li><strong>WordPress Maintenance (See below)</strong></li>
-              <li><strong>WordPress Backups (See below)</strong></li>
-            </ul>
-          </div>
-        </div>
+              </td>
+              <td>
+                <font-awesome-icon :icon="['far', 'check-circle']" />
+              </td>
+              <td>
+                <font-awesome-icon :icon="['far', 'check-circle']" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                WordPress Maintenance
+              </td>
+              <td>
+                <font-awesome-icon :icon="['far', 'check-circle']" />
+              </td>
+              <td>
+                <font-awesome-icon :icon="['far', 'check-circle']" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                WordPress Backups
+              </td>
+              <td>
+                <font-awesome-icon :icon="['far', 'times-circle']" />
+              </td>
+              <td>
+                <font-awesome-icon :icon="['far', 'check-circle']" />
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </section>
     <section class="maxWidth">
@@ -376,14 +293,9 @@
               Maintenance
             </h4>
             <div class="price">
-              <transition name="fade" appear mode="out-in">
-                <h3 v-if="yearly" key="five">
-                  £50/year <span>(SAVE £10)</span>
-                </h3>
-                <h3 v-else key="six">
-                  £5/month
-                </h3>
-              </transition>
+              <h3>
+                £50/year
+              </h3>
             </div>
             <ul>
               <li>
@@ -454,14 +366,9 @@
               Backups
             </h4>
             <div class="price">
-              <transition name="fade" appear mode="out-in">
-                <h3 v-if="yearly" key="seven">
-                  £50/year <span>(SAVE £10)</span>
-                </h3>
-                <h3 v-else>
-                  £5/month
-                </h3>
-              </transition>
+              <h3>
+                £50/year
+              </h3>
             </div>
             <ul>
               <li>Weekly automatic backups</li>
@@ -549,14 +456,9 @@
               1 G-Suite User
             </h4>
             <div class="price">
-              <transition name="fade" appear mode="out-in">
-                <h3 v-if="yearly" key="eight">
-                  £80/year <span>(SAVE £10)</span>
-                </h3>
-                <h3 v-else>
-                  £7.50/month
-                </h3>
-              </transition>
+              <h3>
+                £80/year
+              </h3>
             </div>
             <ul>
               <li class="overflow">
@@ -595,14 +497,9 @@
               1 G-Suite Advanced User
             </h4>
             <div class="price">
-              <transition name="fade" appear mode="out-in">
-                <h3 v-if="yearly" key="eight">
-                  £150/year <span>(SAVE £30)</span>
-                </h3>
-                <h3 v-else>
-                  £15/month
-                </h3>
-              </transition>
+              <h3>
+                £150/year
+              </h3>
             </div>
             <ul>
               <li class="overflow">
@@ -642,11 +539,6 @@
 
 <script>
 export default {
-  data () {
-    return {
-      yearly: true
-    }
-  },
   head () {
     return {
       title: 'Hosting',
@@ -665,16 +557,7 @@ export default {
       __dangerouslyDisableSanitizers: ['script'],
       script: [
         {
-          innerHTML: `{
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [{
-              "@type": "ListItem",
-              "position": 2,
-              "name": "Hosting",
-              "item": "https://galexia.agency/hosting/"
-            }]
-          }`,
+          innerHTML: '{"@context": "https://schema.org","@type": "BreadcrumbList","itemListElement": [{"@type": "ListItem","position": 2,"name": "Hosting","item": "https://galexia.agency/hosting/"}]}',
           type: 'application/ld+json'
         }
       ]

@@ -32,42 +32,6 @@
     margin-bottom: 2rem;
     z-index: 1
   }
-  form {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 1rem;
-    width: 100%
-  }
-  label {
-    text-align: left;
-    display: grid;
-    grid-gap: .5rem
-  }
-  #subject, #message {
-    grid-column: span 2
-  }
-  #submitcontainer {
-    grid-column: span 2;
-    text-align: left
-  }
-  p.message {
-    text-align: left;
-    grid-column: 1 / 3
-  }
-  .fade-enter-active, .fade-leave-active {
-    transition: opacity 1s
-  }
-  .fade-enter, .fade-leave-to {
-    opacity: 0
-  }
-  @media (max-width: 500px) {
-    form {
-      grid-template-columns: 1fr
-    }
-    #submitcontainer, #message, #subject {
-      grid-column: 1
-    }
-  }
 </style>
 
 <template>
@@ -176,7 +140,6 @@
               </transition>
             </form>
           </client-only>
-
           <div class="SVGContainer" v-html="require('../assets/svg/contact.svg?include')" />
         </div>
       </div>
