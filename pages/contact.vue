@@ -148,7 +148,7 @@
           <input name="email" type="email">
           <input name="telephone" type="tel">
           <input name="subject" type="text">
-          <textarea name="message">
+          <textarea name="message" />
         </form>
       </div>
     </section>
