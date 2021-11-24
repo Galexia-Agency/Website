@@ -45,6 +45,11 @@
         <div class="grid left">
           <client-only>
             <form method="post" name="contact_form" netlify @submit.prevent="onSubmit">
+              <input
+                type="hidden"
+                name="form-name"
+                value="contact_form"
+              >
               <label>
                 First Name:
                 <input

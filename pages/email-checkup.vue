@@ -82,6 +82,11 @@
             netlify
             @submit.prevent="onSubmit"
           >
+            <input
+              type="hidden"
+              name="form-name"
+              value="email_checkup_form"
+            >
             <label>
               First Name:
               <input

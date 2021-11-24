@@ -538,13 +538,18 @@
       </p>
       <client-only>
         <form
-          id="seo_checkup_form"
+          id="seo_form"
           class="narrow"
           method="post"
           name="seo_form"
           netlify
           @submit.prevent="onSubmit"
         >
+          <input
+            type="hidden"
+            name="form-name"
+            value="seo_form"
+          >
           <label>
             First Name:
             <input
