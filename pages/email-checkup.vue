@@ -73,85 +73,93 @@
         <h2>
           Free Business Email Checkup
         </h2>
-        <form
-          id="email_checkup_form"
-          class="narrow"
-          method="post"
-          name="email_checkup_form"
-          netlify
-          @submit.prevent="onSubmit"
-        >
-          <label>
-            First Name:
-            <input
-              id="fname"
-              v-model="form.fname"
-              name="fname"
-              type="text"
-              placeholder="Joe"
-              required
-              autocomplete="given-name"
-              @keyup="checkform"
-            >
-          </label>
-          <label>
-            Last Name:
-            <input
-              id="lname"
-              v-model="form.lname"
-              name="lname"
-              type="text"
-              placeholder="Bloggs"
-              required
-              autocomplete="family-name"
-              @keyup="checkform"
-            >
-          </label>
-          <label>
-            Email:
-            <input
-              id="mail"
-              v-model="form.email"
-              name="email"
-              type="email"
-              placeholder="joe@bloggs.com"
-              required
-              autocomplete="email"
-              @keyup="checkform"
-            >
-          </label>
-          <label>
-            Website:
-            <input
-              id="website"
-              v-model="form.website"
-              name="website"
-              type="url"
-              placeholder="https://galexia.agency"
-              required
-              autocomplete="url"
-              inputmode="text"
-              @keyup="checkform"
-            >
-          </label>
-          <div id="submitcontainer">
-            <input
-              id="submit"
-              type="submit"
-              name="submit"
-              class="button colorTwo"
-              value="submit"
-              disabled
-            >
-          </div>
-          <p v-show="!submitted">
-          &nbsp;
-          </p>
-          <transition name="fade">
-            <p v-show="submitted" class="message">
-              {{ submitted }}
+        <client-only>
+          <form
+            id="email_checkup_form"
+            class="narrow"
+            method="post"
+            name="email_checkup_form"
+            netlify
+            @submit.prevent="onSubmit"
+          >
+            <label>
+              First Name:
+              <input
+                id="fname"
+                v-model="form.fname"
+                name="fname"
+                type="text"
+                placeholder="Joe"
+                required
+                autocomplete="given-name"
+                @keyup="checkform"
+              >
+            </label>
+            <label>
+              Last Name:
+              <input
+                id="lname"
+                v-model="form.lname"
+                name="lname"
+                type="text"
+                placeholder="Bloggs"
+                required
+                autocomplete="family-name"
+                @keyup="checkform"
+              >
+            </label>
+            <label>
+              Email:
+              <input
+                id="mail"
+                v-model="form.email"
+                name="email"
+                type="email"
+                placeholder="joe@bloggs.com"
+                required
+                autocomplete="email"
+                @keyup="checkform"
+              >
+            </label>
+            <label>
+              Website:
+              <input
+                id="website"
+                v-model="form.website"
+                name="website"
+                type="url"
+                placeholder="https://galexia.agency"
+                required
+                autocomplete="url"
+                inputmode="text"
+                @keyup="checkform"
+              >
+            </label>
+            <div id="submitcontainer">
+              <input
+                id="submit"
+                type="submit"
+                name="submit"
+                class="button colorTwo"
+                value="submit"
+                disabled
+              >
+            </div>
+            <p v-show="!submitted">
+            &nbsp;
             </p>
-          </transition>
+            <transition name="fade">
+              <p v-show="submitted" class="message">
+                {{ submitted }}
+              </p>
+            </transition>
+          </form>
+        </client-only>
+        <form method="post" name="email_checkup_form" netlify hidden>
+          <input name="fname" type="text">
+          <input name="lname" type="text">
+          <input name="email" type="email">
+          <input name="website" type="url">
         </form>
       </section>
     </div>
