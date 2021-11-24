@@ -8,7 +8,7 @@
   <div id="email_checkup">
     <Header
       title="Free Business Email Checkup"
-      desc="If you aren't sure on what the following key terms mean, or if you don't know whether you have them implemented on your domain/website, let us offer you a free checkup. Just drop your name, email address, and website into the form below, and we'll let you know whether you comply with SPF, DKIM, DMARC, and BIMI within 48 hours."
+      desc="If you aren't sure on what the following key terms mean, or if you don't know whether you have them implemented on your domain/website, let us offer you a free checkup. Just drop your name, email address, and website into the form below, and we'll let you know whether you comply with SPF, DKIM, DMARC, and BIMI within 2-3 working days."
     />
     <div class="white">
       <section class="maxWidth">
@@ -73,88 +73,86 @@
         <h2>
           Free Business Email Checkup
         </h2>
-        <client-only>
-          <form
-            id="email_checkup_form"
-            class="narrow"
-            method="post"
-            name="email_checkup_form"
-            netlify
-            @submit.prevent="onSubmit"
-          >
-            <label>
-              First Name:
-              <input
-                id="fname"
-                v-model="form.fname"
-                name="fname"
-                type="text"
-                placeholder="Joe"
-                required
-                autocomplete="given-name"
-                @keyup="checkform"
-              >
-            </label>
-            <label>
-              Last Name:
-              <input
-                id="lname"
-                v-model="form.lname"
-                name="lname"
-                type="text"
-                placeholder="Bloggs"
-                required
-                autocomplete="family-name"
-                @keyup="checkform"
-              >
-            </label>
-            <label>
-              Email:
-              <input
-                id="mail"
-                v-model="form.email"
-                name="email"
-                type="email"
-                placeholder="joe@bloggs.com"
-                required
-                autocomplete="email"
-                @keyup="checkform"
-              >
-            </label>
-            <label>
-              Website:
-              <input
-                id="website"
-                v-model="form.website"
-                name="website"
-                type="url"
-                placeholder="https://galexia.agency"
-                required
-                autocomplete="url"
-                inputmode="text"
-                @keyup="checkform"
-              >
-            </label>
-            <div id="submitcontainer">
-              <input
-                id="submit"
-                type="submit"
-                name="submit"
-                class="button colorTwo"
-                value="submit"
-                disabled
-              >
-            </div>
-            <p v-show="!submitted">
-            &nbsp;
+        <form
+          id="email_checkup_form"
+          class="narrow"
+          method="post"
+          name="email_checkup_form"
+          netlify
+          @submit.prevent="onSubmit"
+        >
+          <label>
+            First Name:
+            <input
+              id="fname"
+              v-model="form.fname"
+              name="fname"
+              type="text"
+              placeholder="Joe"
+              required
+              autocomplete="given-name"
+              @keyup="checkform"
+            >
+          </label>
+          <label>
+            Last Name:
+            <input
+              id="lname"
+              v-model="form.lname"
+              name="lname"
+              type="text"
+              placeholder="Bloggs"
+              required
+              autocomplete="family-name"
+              @keyup="checkform"
+            >
+          </label>
+          <label>
+            Email:
+            <input
+              id="mail"
+              v-model="form.email"
+              name="email"
+              type="email"
+              placeholder="joe@bloggs.com"
+              required
+              autocomplete="email"
+              @keyup="checkform"
+            >
+          </label>
+          <label>
+            Website:
+            <input
+              id="website"
+              v-model="form.website"
+              name="website"
+              type="url"
+              placeholder="https://galexia.agency"
+              required
+              autocomplete="url"
+              inputmode="text"
+              @keyup="checkform"
+            >
+          </label>
+          <div id="submitcontainer">
+            <input
+              id="submit"
+              type="submit"
+              name="submit"
+              class="button colorTwo"
+              value="submit"
+              disabled
+            >
+          </div>
+          <p v-show="!submitted">
+          &nbsp;
+          </p>
+          <transition name="fade">
+            <p v-show="submitted" class="message">
+              {{ submitted }}
             </p>
-            <transition name="fade">
-              <p v-show="submitted" class="message">
-                {{ submitted }}
-              </p>
-            </transition>
-          </form>
-        </client-only>
+          </transition>
+        </form>
       </section>
     </div>
   </div>
