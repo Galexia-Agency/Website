@@ -1,6 +1,5 @@
 export default {
   target: 'static',
-  ssr: true,
   router: {
     trailingSlash: true
   },

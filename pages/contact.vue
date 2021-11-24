@@ -211,11 +211,11 @@ export default {
         )
         .join('&')
     },
-    onSubmit () {
+    async onSubmit () {
       document.querySelector('.rocket').classList.add('animate')
       const self = this
       try {
-        axios.post(
+        await axios.post(
           '/',
           self.encode({
             'form-name': 'contact_form',
