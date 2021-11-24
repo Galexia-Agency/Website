@@ -43,103 +43,101 @@
           We’d love to help you on your next big project. We understand what it means to dream big, and then achieve that dream.
         </p>
         <div class="grid left">
-          <client-only>
-            <form method="post" name="contact_form" netlify @submit.prevent="onSubmit">
-              <label>
-                First Name:
-                <input
-                  id="fname"
-                  v-model="form.fname"
-                  name="fname"
-                  type="text"
-                  placeholder="Joe"
-                  required
-                  autocomplete="given-name"
-                  @keyup="checkform"
-                >
-              </label>
-              <label>
-                Last Name:
-                <input
-                  id="lname"
-                  v-model="form.lname"
-                  name="lname"
-                  type="text"
-                  placeholder="Bloggs"
-                  required
-                  autocomplete="family-name"
-                  @keyup="checkform"
-                >
-              </label>
-              <label>
-                Email:
-                <input
-                  id="mail"
-                  v-model="form.email"
-                  name="email"
-                  type="email"
-                  placeholder="joe@bloggs.com"
-                  required
-                  autocomplete="email"
-                  @keyup="checkform"
-                >
-              </label>
-              <label>
-                Telephone:
-                <input
-                  id="telephone"
-                  v-model="form.telephone"
-                  name="telephone"
-                  type="tel"
-                  placeholder="+447569836548"
-                  required
-                  autocomplete="tel"
-                  inputmode="tel"
-                  @keyup="checkform"
-                >
-              </label>
-              <label id="subject">
-                Subject:
-                <input
-                  v-model="form.subject"
-                  name="subject"
-                  type="text"
-                  placeholder="I need a site..."
-                  required
-                  @keyup="checkform"
-                >
-              </label>
-              <label id="message">
-                Message:
-                <textarea
-                  v-model="form.message"
-                  name="message"
-                  placeholder="I have a really outdated website and after reading about your past clients I'd like to request a quote"
-                  required
-                  rows="3"
-                  @keyup="checkform"
-                />
-              </label>
-              <div id="submitcontainer">
-                <input
-                  id="submit"
-                  type="submit"
-                  name="submit"
-                  class="button colorTwo"
-                  value="submit"
-                  disabled
-                >
-              </div>
-              <p v-show="!submitted">
-              &nbsp;
+          <form method="post" name="contact_form" netlify @submit.prevent="onSubmit">
+            <label>
+              First Name:
+              <input
+                id="fname"
+                v-model="form.fname"
+                name="fname"
+                type="text"
+                placeholder="Joe"
+                required
+                autocomplete="given-name"
+                @keyup="checkform"
+              >
+            </label>
+            <label>
+              Last Name:
+              <input
+                id="lname"
+                v-model="form.lname"
+                name="lname"
+                type="text"
+                placeholder="Bloggs"
+                required
+                autocomplete="family-name"
+                @keyup="checkform"
+              >
+            </label>
+            <label>
+              Email:
+              <input
+                id="mail"
+                v-model="form.email"
+                name="email"
+                type="email"
+                placeholder="joe@bloggs.com"
+                required
+                autocomplete="email"
+                @keyup="checkform"
+              >
+            </label>
+            <label>
+              Telephone:
+              <input
+                id="telephone"
+                v-model="form.telephone"
+                name="telephone"
+                type="tel"
+                placeholder="+447569836548"
+                required
+                autocomplete="tel"
+                inputmode="tel"
+                @keyup="checkform"
+              >
+            </label>
+            <label id="subject">
+              Subject:
+              <input
+                v-model="form.subject"
+                name="subject"
+                type="text"
+                placeholder="I need a site..."
+                required
+                @keyup="checkform"
+              >
+            </label>
+            <label id="message">
+              Message:
+              <textarea
+                v-model="form.message"
+                name="message"
+                placeholder="I have a really outdated website and after reading about your past clients I'd like to request a quote"
+                required
+                rows="3"
+                @keyup="checkform"
+              />
+            </label>
+            <div id="submitcontainer">
+              <input
+                id="submit"
+                type="submit"
+                name="submit"
+                class="button colorTwo"
+                value="submit"
+                disabled
+              >
+            </div>
+            <p v-show="!submitted">
+            &nbsp;
+            </p>
+            <transition name="fade">
+              <p v-show="submitted" class="message">
+                {{ submitted }}
               </p>
-              <transition name="fade">
-                <p v-show="submitted" class="message">
-                  {{ submitted }}
-                </p>
-              </transition>
-            </form>
-          </client-only>
+            </transition>
+          </form>
           <div class="SVGContainer" v-html="require('../assets/svg/contact.svg?include')" />
         </div>
       </div>
@@ -182,16 +180,7 @@ export default {
       __dangerouslyDisableSanitizers: ['script'],
       script: [
         {
-          innerHTML: `{
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [{
-              "@type": "ListItem",
-              "position": 2,
-              "name": "Contact",
-              "item": "https://galexia.agency/contact/"
-            }]
-          }`,
+          innerHTML: '{"@context": "https://schema.org","@type": "BreadcrumbList","itemListElement": [{"@type": "ListItem","position": 2,"name": "Contact","item": "https://galexia.agency/contact/"}]}',
           type: 'application/ld+json'
         }
       ]
@@ -218,7 +207,7 @@ export default {
     encode (data) {
       return Object.keys(data)
         .map(
-          key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
+          key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
         )
         .join('&')
     },
