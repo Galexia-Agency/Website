@@ -142,7 +142,7 @@
           </client-only>
           <div class="SVGContainer" v-html="require('../assets/svg/contact.svg?include')" />
         </div>
-        <form method="post" name="contact_form" netlify hidden>
+        <form method="post" name="contact_form" netlify style="display: none">
           <input name="fname" type="text">
           <input name="lname" type="text">
           <input name="email" type="email">

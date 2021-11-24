@@ -155,7 +155,7 @@
             </transition>
           </form>
         </client-only>
-        <form method="post" name="email_checkup_form" netlify hidden>
+        <form method="post" name="email_checkup_form" netlify style="display: none">
           <input name="fname" type="text">
           <input name="lname" type="text">
           <input name="email" type="email">
