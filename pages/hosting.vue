@@ -67,218 +67,222 @@
           Your website needs a home and we're happy to house it regardless of who built it. Below is an outline of our pricing for different plans. If you want results like these then be sure to choose us for all your hosting and website needs.
         </p>
       </div>
-      <div class="mobile-table">
-        <table class="comparison">
-          <colgroup>
-            <col width="33.33%">
-            <col width="33.33%">
-            <col width="33.33%">
-          </colgroup>
-          <thead>
-            <tr>
-              <td>
-                <h3>
-                  WordPress Hosting
-                </h3>
-              </td>
-              <td>
-                <h4 class="title">
-                  Starter
-                </h4>
-                <h3>
-                  £100/year
-                </h3>
-              </td>
-              <td>
-                <h4 class="title">
-                  Advanced
-                </h4>
-                <h3>
-                  £150/year
-                </h3>
-              </td>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                Storage Capacity
-                <v-popover placement="top">
-                  <font-awesome-icon icon="question" />
-                  <template slot="popover">
-                    <span>Includes all of the code used to run your site as well as content such as photos and videos</span>
-                  </template>
-                </v-popover>
-              </td>
-              <td>
-                5GB
-              </td>
-              <td>
-                Near limitless
-              </td>
-            </tr>
-            <tr>
-              <td>
-                Network transfer
-                <v-popover placement="top">
-                  <font-awesome-icon icon="question" />
-                  <template slot="popover">
-                    <span>How much data is transferred to your users when they visit your site</span>
-                  </template>
-                </v-popover>
-              </td>
-              <td>
-                5GB
-              </td>
-              <td>
-                Near limitless
-              </td>
-            </tr>
-            <tr>
-              <td>
-                Monthly visitors
-                <v-popover placement="top">
-                  <font-awesome-icon icon="question" />
-                  <template slot="popover">
-                    <span>How many users visit your site in a month</span>
-                  </template>
-                </v-popover>
-              </td>
-              <td>
-                5,000 Users
-              </td>
-              <td>
-                Near limitless
-              </td>
-            </tr>
-            <tr>
-              <td>
-                Suitable for 1 site only
-                <v-popover placement="top">
-                  <font-awesome-icon icon="question" />
-                  <template slot="popover">
-                    <span>You will need to purchase seperate hosting plans for each site you own</span>
-                  </template>
-                </v-popover>
-              </td>
-              <td>
-                <font-awesome-icon :icon="['far', 'check-circle']" />
-              </td>
-              <td>
-                <font-awesome-icon :icon="['far', 'check-circle']" />
-              </td>
-            </tr>
-            <tr>
-              <td>
-                99% Uptime <nuxt-link to="/legal/service-level-agreement">
-                  SLA
-                </nuxt-link> with performance monitoring
-                <v-popover placement="top">
-                  <font-awesome-icon icon="question" />
-                  <template slot="popover">
-                    <span>Your website will be available for viewers almost all of the time. There may be very minor outages</span>
-                  </template>
-                </v-popover>
-              </td>
-              <td>
-                <font-awesome-icon :icon="['far', 'check-circle']" />
-              </td>
-              <td>
-                <font-awesome-icon :icon="['far', 'check-circle']" />
-              </td>
-            </tr>
-            <tr>
-              <td>
-                PHP 7.4
-                <v-popover placement="top">
-                  <font-awesome-icon icon="question" />
-                  <template slot="popover">
-                    <span>Latest version of PHP, the language WordPress uses</span>
-                  </template>
-                </v-popover>
-              </td>
-              <td>
-                <font-awesome-icon :icon="['far', 'check-circle']" />
-              </td>
-              <td>
-                <font-awesome-icon :icon="['far', 'check-circle']" />
-              </td>
-            </tr>
-            <tr>
-              <td>
-                HTTP/3
-                <v-popover placement="top">
-                  <font-awesome-icon icon="question" />
-                  <template slot="popover">
-                    <span>Cutting edge version of HTTP which uses QUIC as it's engine</span>
-                  </template>
-                </v-popover>
-              </td>
-              <td>
-                <font-awesome-icon :icon="['far', 'check-circle']" />
-              </td>
-              <td>
-                <font-awesome-icon :icon="['far', 'check-circle']" />
-              </td>
-            </tr>
-            <tr>
-              <td>
-                Brotli Compression
-                <v-popover placement="top">
-                  <font-awesome-icon icon="question" />
-                  <template slot="popover">
-                    <span>Latest compression algorithm reducing the size of the website, improving load time</span>
-                  </template>
-                </v-popover>
-              </td>
-              <td>
-                <font-awesome-icon :icon="['far', 'check-circle']" />
-              </td>
-              <td>
-                <font-awesome-icon :icon="['far', 'check-circle']" />
-              </td>
-            </tr>
-            <tr>
-              <td>
-                Content Delivery Network (<abbr>CDN</abbr>) powered by CloudFlare
-                <v-popover placement="top">
-                  <font-awesome-icon icon="question" />
-                  <template slot="popover">
-                    <span>Caches your website around the globe to improve load time</span>
-                  </template>
-                </v-popover>
-              </td>
-              <td>
-                <font-awesome-icon :icon="['far', 'check-circle']" />
-              </td>
-              <td>
-                <font-awesome-icon :icon="['far', 'check-circle']" />
-              </td>
-            </tr>
-            <tr>
-              <td>
-                WordPress Maintenance
-              </td>
-              <td>
-                <font-awesome-icon :icon="['far', 'check-circle']" />
-              </td>
-              <td>
-                <font-awesome-icon :icon="['far', 'check-circle']" />
-              </td>
-            </tr>
-            <tr>
-              <td>
-                WordPress Backups
-              </td>
-              <td>
-                <font-awesome-icon :icon="['far', 'times-circle']" />
-              </td>
-              <td>
-                <font-awesome-icon :icon="['far', 'check-circle']" />
-              </td>
-            </tr>
-          </tbody>
-        </table>
+      <div class="scroll-wrapper">
+        <div class="shadow shadow-left" />
+        <div class="shadow shadow-right" />
+        <div class="mobile-table">
+          <table class="comparison">
+            <colgroup>
+              <col width="33.33%">
+              <col width="33.33%">
+              <col width="33.33%">
+            </colgroup>
+            <thead>
+              <tr>
+                <td>
+                  <h3>
+                    WordPress Hosting
+                  </h3>
+                </td>
+                <td>
+                  <h4 class="title">
+                    Starter
+                  </h4>
+                  <h3>
+                    £100/year
+                  </h3>
+                </td>
+                <td>
+                  <h4 class="title">
+                    Advanced
+                  </h4>
+                  <h3>
+                    £150/year
+                  </h3>
+                </td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  Storage Capacity
+                  <v-popover placement="top">
+                    <font-awesome-icon icon="question" />
+                    <template slot="popover">
+                      <span>Includes all of the code used to run your site as well as content such as photos and videos</span>
+                    </template>
+                  </v-popover>
+                </td>
+                <td>
+                  5GB
+                </td>
+                <td>
+                  Near limitless
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Network transfer
+                  <v-popover placement="top">
+                    <font-awesome-icon icon="question" />
+                    <template slot="popover">
+                      <span>How much data is transferred to your users when they visit your site</span>
+                    </template>
+                  </v-popover>
+                </td>
+                <td>
+                  5GB
+                </td>
+                <td>
+                  Near limitless
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Monthly visitors
+                  <v-popover placement="top">
+                    <font-awesome-icon icon="question" />
+                    <template slot="popover">
+                      <span>How many users visit your site in a month</span>
+                    </template>
+                  </v-popover>
+                </td>
+                <td>
+                  5,000 Users
+                </td>
+                <td>
+                  Near limitless
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Suitable for 1 site only
+                  <v-popover placement="top">
+                    <font-awesome-icon icon="question" />
+                    <template slot="popover">
+                      <span>You will need to purchase seperate hosting plans for each site you own</span>
+                    </template>
+                  </v-popover>
+                </td>
+                <td>
+                  <font-awesome-icon :icon="['far', 'check-circle']" />
+                </td>
+                <td>
+                  <font-awesome-icon :icon="['far', 'check-circle']" />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  99% Uptime <nuxt-link to="/legal/service-level-agreement">
+                    SLA
+                  </nuxt-link> with performance monitoring
+                  <v-popover placement="top">
+                    <font-awesome-icon icon="question" />
+                    <template slot="popover">
+                      <span>Your website will be available for viewers almost all of the time. There may be very minor outages</span>
+                    </template>
+                  </v-popover>
+                </td>
+                <td>
+                  <font-awesome-icon :icon="['far', 'check-circle']" />
+                </td>
+                <td>
+                  <font-awesome-icon :icon="['far', 'check-circle']" />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  PHP 7.4
+                  <v-popover placement="top">
+                    <font-awesome-icon icon="question" />
+                    <template slot="popover">
+                      <span>Latest version of PHP, the language WordPress uses</span>
+                    </template>
+                  </v-popover>
+                </td>
+                <td>
+                  <font-awesome-icon :icon="['far', 'check-circle']" />
+                </td>
+                <td>
+                  <font-awesome-icon :icon="['far', 'check-circle']" />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  HTTP/3
+                  <v-popover placement="top">
+                    <font-awesome-icon icon="question" />
+                    <template slot="popover">
+                      <span>Cutting edge version of HTTP which uses QUIC as it's engine</span>
+                    </template>
+                  </v-popover>
+                </td>
+                <td>
+                  <font-awesome-icon :icon="['far', 'check-circle']" />
+                </td>
+                <td>
+                  <font-awesome-icon :icon="['far', 'check-circle']" />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Brotli Compression
+                  <v-popover placement="top">
+                    <font-awesome-icon icon="question" />
+                    <template slot="popover">
+                      <span>Latest compression algorithm reducing the size of the website, improving load time</span>
+                    </template>
+                  </v-popover>
+                </td>
+                <td>
+                  <font-awesome-icon :icon="['far', 'check-circle']" />
+                </td>
+                <td>
+                  <font-awesome-icon :icon="['far', 'check-circle']" />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Content Delivery Network (<abbr>CDN</abbr>) powered by CloudFlare
+                  <v-popover placement="top">
+                    <font-awesome-icon icon="question" />
+                    <template slot="popover">
+                      <span>Caches your website around the globe to improve load time</span>
+                    </template>
+                  </v-popover>
+                </td>
+                <td>
+                  <font-awesome-icon :icon="['far', 'check-circle']" />
+                </td>
+                <td>
+                  <font-awesome-icon :icon="['far', 'check-circle']" />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  WordPress Maintenance
+                </td>
+                <td>
+                  <font-awesome-icon :icon="['far', 'check-circle']" />
+                </td>
+                <td>
+                  <font-awesome-icon :icon="['far', 'check-circle']" />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  WordPress Backups
+                </td>
+                <td>
+                  <font-awesome-icon :icon="['far', 'times-circle']" />
+                </td>
+                <td>
+                  <font-awesome-icon :icon="['far', 'check-circle']" />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </section>
     <section class="maxWidth">
@@ -561,6 +565,22 @@ export default {
           type: 'application/ld+json'
         }
       ]
+    }
+  },
+  mounted () {
+    const wrapper = document.querySelectorAll('.scroll-wrapper')
+    if (wrapper) {
+      wrapper.forEach(e => {
+        const content = e.querySelector('.mobile-table')
+        const shadowTop = e.querySelector('.shadow-left')
+        const shadowBottom = e.querySelector('.shadow-right')
+        const contentScrollWidth = content.scrollWidth - e.offsetWidth
+        content.addEventListener('scroll', function () {
+          const currentScroll = this.scrollLeft / (contentScrollWidth)
+          shadowTop.style.opacity = currentScroll
+          shadowBottom.style.opacity = 1 - currentScroll
+        })
+      })
     }
   }
 }

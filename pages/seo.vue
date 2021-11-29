@@ -687,17 +687,20 @@ export default {
         }
       }
     }
-    const content = document.querySelector('.mobile-table')
-    const wrapper = document.querySelector('.scroll-wrapper')
-    const shadowTop = document.querySelector('.shadow-left')
-    const shadowBottom = document.querySelector('.shadow-right')
-    const contentScrollWidth = content.scrollWidth - wrapper.offsetWidth
-
-    content.addEventListener('scroll', function () {
-      const currentScroll = this.scrollLeft / (contentScrollWidth)
-      shadowTop.style.opacity = currentScroll
-      shadowBottom.style.opacity = 1 - currentScroll
-    })
+    const wrapper = document.querySelectorAll('.scroll-wrapper')
+    if (wrapper) {
+      wrapper.forEach(e => {
+        const content = e.querySelector('.mobile-table')
+        const shadowTop = e.querySelector('.shadow-left')
+        const shadowBottom = e.querySelector('.shadow-right')
+        const contentScrollWidth = content.scrollWidth - e.offsetWidth
+        content.addEventListener('scroll', function () {
+          const currentScroll = this.scrollLeft / (contentScrollWidth)
+          shadowTop.style.opacity = currentScroll
+          shadowBottom.style.opacity = 1 - currentScroll
+        })
+      })
+    }
   },
   methods: {
     encode (data) {
