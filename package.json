@@ -35,7 +35,7 @@
     "netlify-plugin-submit-sitemap": "^0.2.3",
     "node-fetch": "^2.6.7",
     "nuxt": "^2.15.7",
-    "nuxt-cookie-control": "^1.9.6",
+    "nuxt-cookie-control": "^1.9.91",
     "puppeteer-core": "^13.1.2",
     "responsive-loader": "^1.2.0",
     "v-tooltip": "^2.0.3",
