@@ -46,7 +46,7 @@
   .post--content {
     line-height: 1.5
   }
-  .post--footer {
+  .post--footer:not(.nativeShare) {
     display: grid;
     grid-gap: .5rem;
     justify-content: start;
@@ -54,7 +54,6 @@
   }
   .post--footer a {
     text-align: center;
-    width: 140px;
     color: white;
     font-size: 1rem;
     margin: 0
@@ -115,7 +114,7 @@
     </div>
     <section class="white">
       <div class="maxWidth">
-        <div class="post--meta">
+        <!--<div class="post--meta">
           <p>Author: <strong>{{ blog.author.node.name }}</strong></p>
           <p>
             Published on:
@@ -125,7 +124,7 @@
               </time>
             </strong>
           </p>
-        </div>
+        </div>-->
 
         <div class="post--content" v-html="blog.content" />
         <div v-if="!share" class="post--footer">
@@ -180,16 +179,7 @@ export default {
         __dangerouslyDisableSanitizers: ['script'],
         script: [
           {
-            innerHTML: `{
-              "@context": "https://schema.org",
-              "@type": "BreadcrumbList",
-              "itemListElement": [{
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Blog",
-                "item": "https://galexia.agency/blog/"
-              }]
-            }`,
+            innerHTML: '{"@context": "https://schema.org","@type": "BreadcrumbList","itemListElement": [{"@type": "ListItem","position": 2,"name": "Blog","item": "https://galexia.agency/blog/"}]}',
             type: 'application/ld+json'
           },
           {

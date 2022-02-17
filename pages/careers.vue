@@ -40,6 +40,7 @@ export default {
     return {
       title: 'Careers',
       meta: [
+        { hid: 'robots', name: 'robots', content: 'noindex' },
         { hid: 'description', name: 'description', content: 'We\'re not currently hiring, however, if you think you\'d be a great fit for our team drop us a line at careers@galexia.agency.' },
         { hid: 'og:title', property: 'og:title', content: 'Careers' },
         { hid: 'og:description', property: 'og:description', content: 'We\'re not currently hiring, however, if you think you\'d be a great fit for our team drop us a line at careers@galexia.agency.' },

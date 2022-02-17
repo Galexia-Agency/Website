@@ -4,7 +4,6 @@
     display: grid;
     grid-template-columns: minmax(150px, 400px) 1fr;
     grid-gap: 2rem;
-    place-items: center;
     padding: 2rem 0
   }
   .post:first-of-type {
@@ -21,8 +20,11 @@
   }
   h3 {
     margin: 0;
+
+    /*
     display: grid;
     grid-template-columns: 1fr 6ch
+    */
   }
   time {
     justify-self: end;
@@ -70,11 +72,11 @@
         <div class="post--content">
           <h3>
             <nuxt-link :to="'/blog/' + post.slug + '/'" v-html="post.title" />
-            <time>
+            <!--<time>
               {{ new Date(post.date).getDate() + " " + monthArr[new Date(post.date).getMonth()] + " '" + new Date(post.date).getFullYear().toString().substring(2) }}
-            </time>
+            </time>-->
           </h3>
-          <p>Author: <strong>{{ post.author.node.name }}</strong></p>
+          <!--<p>Author: <strong>{{ post.author.node.name }}</strong></p>-->
 
           <div class="text--normal" v-html="post.excerpt" />
         </div>

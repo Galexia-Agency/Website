@@ -1010,9 +1010,9 @@
           <nuxt-link to="/web/" class="nav--link">
             Web
           </nuxt-link>
-          <nuxt-link to="/marketing/" class="nav--link">
+          <!--<nuxt-link to="/marketing/" class="nav--link">
             Marketing
-          </nuxt-link>
+          </nuxt-link>-->
           <nuxt-link to="/blog/" class="nav--link">
             Blog
           </nuxt-link>
@@ -1050,14 +1050,8 @@
               <nuxt-link class="footer--bottom_navLink" to="/hosting/">
                 Hosting
               </nuxt-link>
-              <nuxt-link class="footer--bottom_navLink" to="/seo/">
-                SEO
-              </nuxt-link>
               <nuxt-link class="footer--bottom_navLink" to="/our-team/">
                 Our Team
-              </nuxt-link>
-              <nuxt-link class="footer--bottom_navLink" to="/careers/">
-                Careers
               </nuxt-link>
               <nuxt-link class="footer--bottom_navLink" to="/legal/">
                 Legal

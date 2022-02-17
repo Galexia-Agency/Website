@@ -653,6 +653,7 @@ export default {
     return {
       title: 'SEO',
       meta: [
+        { hid: 'robots', name: 'robots', content: 'noindex' },
         { hid: 'description', name: 'description', content: 'Your website is your online store-front. We can help with getting your website higher up in the SERPs, thus increasing traffic to your site, and potential revenue.' },
         { hid: 'og:title', property: 'og:title', content: 'SEO' },
         { hid: 'og:description', property: 'og:description', content: 'Your website is your online store-front. We can help with getting your website higher up in the SERPs, thus increasing traffic to your site, and potential revenue.' },
@@ -689,7 +690,7 @@ export default {
     }
     const wrapper = document.querySelectorAll('.scroll-wrapper')
     if (wrapper) {
-      wrapper.forEach(e => {
+      wrapper.forEach((e) => {
         const content = e.querySelector('.mobile-table')
         const shadowTop = e.querySelector('.shadow-left')
         const shadowBottom = e.querySelector('.shadow-right')

@@ -140,6 +140,7 @@ export default {
     return {
       title: 'Marketing',
       meta: [
+        { hid: 'robots', name: 'robots', content: 'noindex' },
         { hid: 'description', name: 'description', content: 'However you wish to pursue your business marketing is vital in finding and retaining customers.' },
         { hid: 'og:title', property: 'og:title', content: 'Marketing' },
         { hid: 'og:description', property: 'og:description', content: 'However you wish to pursue your business marketing is vital in finding and retaining customers.' },
