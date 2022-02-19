@@ -40,7 +40,7 @@
       <div class="maxWidth">
         <h1>Get in Touch</h1>
         <p>
-          We’d love to help you on your next big project. We understand what it means to dream big, and then achieve that dream.
+          We’d love to help you on your next big website project. We understand what it means to dream big, and then achieve that dream.
         </p>
         <div class="grid left">
           <client-only>

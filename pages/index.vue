@@ -155,7 +155,7 @@
 <template>
   <div>
     <Header
-      title="Let us focus on your content so you can focus on your <i>business</i>"
+      title="Let us focus on your website so you can focus on your <i>business</i>"
       desc="We are a creative agency specialising in website design and development. We’re a fairly new company built from the ground up to help you grow. We use the latest and greatest practices and technologies so that we can pass on these benefits to you. What’s more, you don’t have to worry about anything, we take care of the whole process so you can carry on running your business."
       :link="{location: '/contact/', text: 'Get in touch'}"
     />
@@ -167,7 +167,7 @@
         <div v-infocus="'showElement'" class="hidden hidden-left">
           <h3>We start with a conversation</h3>
           <p class="text--normal">
-            We find the best way to start a project is to have an informal, no-obligations chat about your requirements. Some of our clients come to us with a large project plan spanning many months, with a detailed idea about what they want. Some other clients only know the idea, and not the implementation. We’re happy with both.
+            We find the best way to start a website project is to have an informal, no-obligations chat about your requirements. Some of our clients come to us with a large website project plan spanning many months, with a detailed idea about what they want. Some other clients only know the idea, and not the implementation. We’re happy with both.
           </p>
         </div>
         <div v-infocus="'showElement'" class="hidden hidden-right svg" v-html="require('../assets/svg/discussion.svg?include')" />
@@ -175,9 +175,9 @@
       <div class="grid right maxWidth">
         <div v-infocus="'showElement'" class="hidden hidden-left svg" v-html="require('../assets/svg/project.svg?include')" />
         <div v-infocus="'showElement'" class="hidden hidden-right">
-          <h3>You run your business. We run the project</h3>
+          <h3>You run your business. We run the website project</h3>
           <p class="text--normal">
-            We understand life often feels like it’s moving in the fast lane, that’s why we’re versed in project management. We keep your project on track, working to strict deadlines, so you don’t have to worry.
+            We understand life often feels like it’s moving in the fast lane, that’s why we’re versed in project management. We keep your website project on track, working to strict deadlines, so you don’t have to worry.
           </p>
         </div>
       </div>
@@ -185,7 +185,7 @@
         <div v-infocus="'showElement'" class="hidden hidden-left">
           <h3>Launch day. More business for you, another happy customer for us</h3>
           <p class="text--normal">
-            We love to keep in touch with our clients, even after the initial project has finished. We’re happy to offer continued maintenance plans on our websites. We even have a community where past clients can discuss and share their websites.
+            We love to keep in touch with our clients, even after the initial website project has finished. We’re happy to offer continued maintenance plans on our websites. We even have a community where past clients can discuss and share their websites.
           </p>
         </div>
         <div v-infocus="'showElement'" class="hidden hidden-right svg" v-html="require('../assets/svg/launch.svg?include')" />

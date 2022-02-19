@@ -69,7 +69,7 @@
         </div>
         <div v-infocus="'showElement'" class="hidden hidden-right svg" v-html="require('../assets/svg/hosting.svg?include')" />
       </div>
-      <div class="grid right maxWidth">
+      <!--<div class="grid right maxWidth">
         <div v-infocus="'showElement'" class="hidden hidden-left svg" v-html="require('../assets/svg/search.svg?include')" />
         <div v-infocus="'showElement'" class="hidden hidden-right">
           <h3>SEO</h3>
@@ -80,7 +80,7 @@
             Find out more
           </nuxt-link>
         </div>
-      </div>
+      </div>-->
     </section>
   </div>
 </template>
@@ -110,16 +110,7 @@ export default {
       __dangerouslyDisableSanitizers: ['script'],
       script: [
         {
-          innerHTML: `{
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [{
-              "@type": "ListItem",
-              "position": 2,
-              "name": "Web",
-              "item": "https://galexia.agency/web/"
-            }]
-          }`,
+          innerHTML: '{"@context": "https://schema.org","@type": "BreadcrumbList","itemListElement": [{"@type": "ListItem","position": 2,"name": "Web","item": "https://galexia.agency/web/"}]}',
           type: 'application/ld+json'
         }
       ]

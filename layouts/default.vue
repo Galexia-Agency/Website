@@ -310,7 +310,7 @@
   }
   .footer--bottom {
     display: grid;
-    grid-template-columns: .75fr .75fr 1fr;
+    grid-template-columns: .5fr 1fr;
     grid-gap: 1rem
   }
   .footer--bottom h4 {
@@ -326,8 +326,7 @@
   }
   .footer--bottom_sitemap {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    grid-gap: .5rem
+    gap: .25rem
   }
   .footer--bottom img {
     margin-top: 1em
@@ -819,33 +818,9 @@
     }
   }
 
-  @media (max-width: 900px) {
-    .text--normal {
-      opacity: .95
-    }
-    .socialLinks a {
-      color: white
-    }
-    .cookieControl__ControlButton {
-      bottom: 10px
-    }
-    .logo svg {
-      width: 150px
-    }
+  @media (max-width: 1070px) {
     #__nuxt {
       width: 100vw
-    }
-    .grid.column.three, .grid.left, .grid.right, .grid.column.two {
-      grid-template-columns: 1fr;
-      grid-auto-flow: row;
-      place-items: center
-    }
-    .grid.left div.svg {
-      grid-row: 1
-    }
-    .grid svg, .card img {
-      justify-self: center;
-      max-width: 300px
     }
     .nav--icon {
       display: block;
@@ -863,7 +838,7 @@
       bottom: 0;
       width: 200px;
       background: linear-gradient(0deg, rgba(83, 75, 174, .75), rgba(0, 0, 81, .5));
-      padding: 2.5rem;
+      padding: 1rem;
       transition: left 1s
     }
     .nav_open .nav--container {
@@ -879,6 +854,33 @@
       margin-left: -200px;
       overflow: hidden
     }
+  }
+
+  @media (max-width: 900px) {
+    .text--normal {
+      opacity: .95
+    }
+    .socialLinks a {
+      color: white
+    }
+    .cookieControl__ControlButton {
+      bottom: 10px
+    }
+    .logo svg {
+      width: 150px
+    }
+    .grid.column.three, .grid.left, .grid.right, .grid.column.two {
+      grid-template-columns: 1fr;
+      grid-auto-flow: row;
+      place-items: center
+    }
+    .grid.left div.svg {
+      grid-row: 1
+    }
+    .grid svg, .card img {
+      justify-self: center;
+      max-width: 300px
+    }
     section {
       padding: 1rem
     }
@@ -889,9 +891,7 @@
       grid-auto-flow: row;
       grid-template-columns: 1fr;
       grid-gap: 1rem;
-      padding: 2rem;
-      max-width: 600px;
-      width: 90%;
+      padding: 2rem 1rem;
       text-align: center
     }
     .footer--bottom a, .footer--bottom img {
@@ -903,16 +903,11 @@
       margin: 0 auto 1rem;
       grid-column: 1
     }
-    .footer--bottom_sitemap, .footer--bottom_contact {
-      grid-template-columns: 1fr 1fr;
-      max-width: 360px;
-      width: 100%;
-      margin: auto
-    }
     .footer--bottom_contact {
-      grid-auto-flow: column;
-      grid-row-gap: 1rem;
-      grid-template-rows: 1fr 1fr
+      gap: 1rem
+    }
+    .footer--bottom_contact h4 {
+      grid-row: 1
     }
     .footer--bottom_contact h4, .footer--bottom_contact h4:not(:first-of-type), .footer--bottom_contact a {
       margin: 0 auto
@@ -945,6 +940,11 @@
     .socialLinks {
       justify-self: center;
       padding-bottom: 1rem
+    }
+  }
+  @media (max-width: 510px) {
+    .footer--bottom_contact h4 {
+      grid-row: auto
     }
   }
   @media (max-width: 500px) {
@@ -1008,13 +1008,19 @@
             Home
           </nuxt-link>
           <nuxt-link to="/web/" class="nav--link">
-            Web
+            Design &amp; Development
+          </nuxt-link>
+          <nuxt-link to="/hosting/" class="nav--link">
+            Hosting
           </nuxt-link>
           <!--<nuxt-link to="/marketing/" class="nav--link">
             Marketing
           </nuxt-link>-->
           <nuxt-link to="/blog/" class="nav--link">
             Blog
+          </nuxt-link>
+          <nuxt-link to="/support/" class="nav--link">
+            Support
           </nuxt-link>
           <nuxt-link to="/contact/" class="nav--link">
             Contact
@@ -1042,30 +1048,21 @@
               <div v-html="require('../assets/svg/logo_v2.svg?include')" />
             </nuxt-link>
           </div>
-          <div>
+          <div class="footer--bottom_contact">
+            <h4>Telephone</h4>
+            <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/galexia/phone-call'});return false;">07521 491222</a>
+            <h4>Email</h4>
+            <a href="mailto:info@galexia.agency">info@galexia.agency</a>
+            <h4>Quick Links</h4>
             <div class="footer--bottom_sitemap">
-              <nuxt-link class="footer--bottom_navLink" to="/support/">
-                Website Support
-              </nuxt-link>
-              <nuxt-link class="footer--bottom_navLink" to="/hosting/">
-                Hosting
-              </nuxt-link>
               <nuxt-link class="footer--bottom_navLink" to="/our-team/">
                 Our Team
               </nuxt-link>
               <nuxt-link class="footer--bottom_navLink" to="/legal/">
                 Legal
               </nuxt-link>
-              <img src="../assets/img/White_Badge_PolicyBee.png?size=75" width="75" height="75" alt="Insured through PolicyBee">
             </div>
-          </div>
-          <div>
-            <div class="footer--bottom_contact">
-              <h4>Telephone</h4>
-              <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/galexia/phone-call'});return false;">07521 491222</a>
-              <h4>Email</h4>
-              <a href="mailto:info@galexia.agency">info@galexia.agency</a>
-            </div>
+            <!--<img src="../assets/img/White_Badge_PolicyBee.png?size=75" width="75" height="75" alt="Insured through PolicyBee">-->
           </div>
           <div class="testimonials--container">
             <div class="testimonials">
