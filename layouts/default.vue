@@ -595,7 +595,10 @@
     max-width: 780px;
     text-align: center;
     margin: auto;
-    margin-bottom: 2rem
+    margin-bottom: 1rem;
+    &:last-of-type {
+      margin-bottom: 2rem
+    }
   }
   .terms {
     font-size: .9rem;

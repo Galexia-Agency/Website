@@ -285,10 +285,15 @@
         </div>
       </div>
     </section>
-    <section class="maxWidth">
+    <section id="wordpress-help" class="maxWidth">
       <h2>WordPress Help</h2>
       <p class="desc">
         WordPress is a complex program and needs constant management to function properly. Let us take care of the hassle by backing up, securing, and optimising your WordPress install.
+      </p>
+      <p class="desc">
+        <nuxt-link class="button" to="/contact/">
+          Get help
+        </nuxt-link>
       </p>
       <div class="grid column three">
         <div v-infocus="'showElement'" class="card white hidden">
@@ -401,13 +406,18 @@
         </div>
       </div>
     </section>
-    <section class="maxWidth">
+    <section id="domains" class="maxWidth">
       <h2>Domains</h2>
-      <p class="desc" style="margin-bottom: 1rem">
+      <p class="desc">
         <strong>1 Free Wildcard SSL Certificate included</strong>
       </p>
       <p class="desc">
         We continually monitor the market to find the best deals so that we can pass on these savings to you. This will be updated in your yearly domain invoice.
+      </p>
+      <p class="desc">
+        <nuxt-link class="button" to="/contact/">
+          Register your domain
+        </nuxt-link>
       </p>
       <div class="grid column three">
         <div v-infocus="'showElement'" class="card white hidden">
@@ -448,10 +458,15 @@
         </div>
       </div>
     </section>
-    <section class="maxWidth">
+    <section id="emails" class="maxWidth">
       <h2>Emails</h2>
       <p class="desc">
         We are able to offer up to 10 forwarding addresses for free with the purchase of any hosting plan.
+      </p>
+      <p class="desc">
+        <nuxt-link class="button" to="/contact/">
+          Set up your email
+        </nuxt-link>
       </p>
       <div class="grid column three">
         <div v-infocus="'showElement'" class="card white hidden">
@@ -570,7 +585,7 @@ export default {
   mounted () {
     const wrapper = document.querySelectorAll('.scroll-wrapper')
     if (wrapper) {
-      wrapper.forEach(e => {
+      wrapper.forEach((e) => {
         const content = e.querySelector('.mobile-table')
         const shadowTop = e.querySelector('.shadow-left')
         const shadowBottom = e.querySelector('.shadow-right')
