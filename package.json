@@ -32,7 +32,7 @@
     "imagemin-svgo": "^8.0.0",
     "jimp": "^0.16.1",
     "netlify-plugin-cache-nuxt": "^0.0.1",
-    "netlify-plugin-submit-sitemap": "^0.2.3",
+    "netlify-plugin-submit-sitemap": "^0.3.0",
     "node-fetch": "^2.6.7",
     "nuxt": "^2.15.7",
     "nuxt-cookie-control": "^1.9.6",
@@ -52,9 +52,9 @@
     "eslint": "^7.29.0",
     "eslint-plugin-nuxt": "^2.0.0",
     "puppeteer": "^10.1.0",
-    "stylelint": "^13.8.0",
     "responsive-loader": "^2.3.0",
     "sharp": "^0.30.3",
+    "stylelint": "^13.8.0",
     "stylelint-config-standard": "^20.0.0"
   }
 }
