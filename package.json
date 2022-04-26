@@ -37,7 +37,6 @@
     "nuxt": "^2.15.7",
     "nuxt-cookie-control": "^1.9.6",
     "puppeteer-core": "^13.1.2",
-    "responsive-loader": "^1.2.0",
     "v-tooltip": "^2.0.3",
     "vue-apollo": "^3.0.7",
     "vue-hamburger": "https://github.com/joebailey26/vue-hamburger",
