@@ -492,11 +492,11 @@
             </h4>
             <div class="price">
               <h3>
-                £50/each
+                £75/each
               </h3>
             </div>
             <p>
-              We'll spend the time getting aquinted with your business, and conduct thorough competitor and keyword research giving you a blog post that helps position your website at the top of the SERPs.
+              We'll spend the time getting acquainted with your business, and conduct thorough competitor and keyword research giving you a blog post that helps position your website at the top of the SERPs.
             </p>
             <p>
               We're happy to work with you whether you have a tight brief or don't know where to begin. We can bring ideas to the table, or stay within strict keyword, and demographic limits.
