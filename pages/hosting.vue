@@ -380,7 +380,7 @@
               </h3>
             </div>
             <ul>
-              <li>Weekly automatic backups</li>
+              <li>Daily automatic backups</li>
               <li>Stored on external server for optimum security</li>
               <li>Encrypted for security</li>
               <li>Free restore service</li>
