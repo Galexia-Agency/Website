@@ -214,7 +214,15 @@ export default {
   computed: {
     share () {
       try {
-        return process.client ? navigator.share() : false
+        if (process.client) {
+          return navigator.canShare({
+            title: this.blog.title + ' | Blog',
+            text: this.blog.excerpt.replace('<p>', '').replace('</p>', '').replace('[&hellip;]', '').replace('\n', ''),
+            url: 'https://galexia.agency' + this.$router.currentRoute.path
+          })
+        } else {
+          return false
+        }
       } catch {
         return false
       }
