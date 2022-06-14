@@ -84,33 +84,31 @@
                   </option>
                 </select>
               </label>
-              <template v-if="form.doYouCurrentlyHaveASite === 'Yes'">
-                <label>
-                  Please enter your site's address
-                  <input
-                    id="siteAddress"
-                    v-model="form.siteAddress"
-                    name="siteAddress"
-                    type="url"
-                    @keyup="checkform('leadForm', form)"
-                  >
-                </label>
+              <label v-show="form.doYouCurrentlyHaveASite === 'Yes'">
+                Please enter your site's address
+                <input
+                  id="siteAddress"
+                  v-model="form.siteAddress"
+                  name="siteAddress"
+                  type="url"
+                  @keyup="checkform('leadForm', form)"
+                >
+              </label>
+              <p v-show="form.doYouCurrentlyHaveASite === 'Yes'">
+                You will need access to a domain and web hosting services in order to have a new site published. Galexia provides <a href="https://galexia.agency/hosting/" target="_blank">domain registration services and web hosting services</a>. If you already have these services please have a look if we can offer you a better deal. In addition, all websites should be regularly maintained, backed up, and have a valid SSL certificate.
+              </p>
+              <label v-show="form.doYouCurrentlyHaveASite === 'Yes'">
+                Please detail any domain, hosting, or maintenance needs
                 <p>
-                  You will need access to a domain and web hosting services in order to have a new site published. Galexia provides domain registration services and web hosting services. https://galexia.agency/hosting/. If you already have these services please have a look if we can offer you a better deal. In addition, all websites should be regularly maintained, backed up, and have a valid SSL certificate.
+                  Please also enter any information about your current domain or hosting that you think we may need to know.
                 </p>
-                <label>
-                  Please detail any domain, hosting, or maintenance needs
-                  <p>
-                    Please also enter any information about your current domain or hosting that you think we may need to know.
-                  </p>
-                  <textarea
-                    id="anyDomainHostingOrMaintenanceNeeds"
-                    v-model="form.anyDomainHostingOrMaintenanceNeeds"
-                    name="anyDomainHostingOrMaintenanceNeeds"
-                    @keyup="checkform('leadForm', form)"
-                  />
-                </label>
-              </template>
+                <textarea
+                  id="anyDomainHostingOrMaintenanceNeeds"
+                  v-model="form.anyDomainHostingOrMaintenanceNeeds"
+                  name="anyDomainHostingOrMaintenanceNeeds"
+                  @keyup="checkform('leadForm', form)"
+                />
+              </label>
               <label>
                 Do you have a project brief?
                 <p>
@@ -262,7 +260,7 @@
                   <option>No</option>
                 </select>
               </label>
-              <label v-if="form.doYouRequireSeoServices === 'Yes'">
+              <label v-show="form.doYouRequireSeoServices === 'Yes'">
                 Please detail what you would like to achieve with your SEO
                 <p>
                   For example; I would like to be ranked above my competitor for the search term "Bee Keepers Staffordshire"
@@ -288,7 +286,7 @@
                   <option>No</option>
                 </select>
               </label>
-              <label v-if="form.doYouHaveADeadline === 'Yes'">
+              <label v-show="form.doYouHaveADeadline === 'Yes'">
                 When is your deadline?
                 <input
                   id="whenIsYourDeadline"
@@ -309,7 +307,7 @@
                 >
               </label>
               <label>
-                Please familiarize yourself with our terms, policies, and agreements found here: https://galexia.agency/legal/
+                Please familiarize yourself with our <a href="https://galexia.agency/legal/" target="_blank">terms, policies, and agreements</a>
                 <p>All our clients are required to agree with these in order to move forward with a project.</p>
                 <select
                   id="termsAndConditions"

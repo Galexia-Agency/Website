@@ -130,7 +130,7 @@
                 <textarea
                   id="yourInALiftAndSomeoneAsksWhatYouDo"
                   v-model="form.yourInALiftAndSomeoneAsksWhatYouDo"
-                  name="lift"
+                  name="yourInALiftAndSomeoneAsksWhatYouDo"
                   required
                   @keyup="checkform('brandIdentityForm', form)"
                 />
