@@ -3,7 +3,7 @@
     content-visibility: auto;
     display: grid;
     grid-template-columns: minmax(150px, 400px) 1fr;
-    grid-gap: 2rem;
+    gap: 2rem;
     padding: 2rem 0
   }
   .post:first-of-type {

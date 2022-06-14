@@ -23,7 +23,7 @@
     text-align: center
   }
   .card--inner {
-    grid-gap: 2rem
+    gap: 2rem
   }
   li {
     line-height: 1.5

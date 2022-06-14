@@ -24,7 +24,7 @@
     text-align: center
   }
   .grid {
-    grid-gap: 2rem
+    gap: 2rem
   }
   p {
     text-align: center;
@@ -60,7 +60,7 @@
                   placeholder="Joe"
                   required
                   autocomplete="given-name"
-                  @keyup="checkform"
+                  @keyup="checkform('contact_form', form)"
                 >
               </label>
               <label>
@@ -73,7 +73,7 @@
                   placeholder="Bloggs"
                   required
                   autocomplete="family-name"
-                  @keyup="checkform"
+                  @keyup="checkform('contact_form', form)"
                 >
               </label>
               <label>
@@ -86,7 +86,7 @@
                   placeholder="joe@bloggs.com"
                   required
                   autocomplete="email"
-                  @keyup="checkform"
+                  @keyup="checkform('contact_form', form)"
                 >
               </label>
               <label>
@@ -100,7 +100,7 @@
                   required
                   autocomplete="tel"
                   inputmode="tel"
-                  @keyup="checkform"
+                  @keyup="checkform('contact_form', form)"
                 >
               </label>
               <label id="subject">
@@ -111,7 +111,7 @@
                   type="text"
                   placeholder="I need a site..."
                   required
-                  @keyup="checkform"
+                  @keyup="checkform('contact_form', form)"
                 >
               </label>
               <label id="message">
@@ -122,7 +122,7 @@
                   placeholder="I have a really outdated website and after reading about your past clients I'd like to request a quote"
                   required
                   rows="3"
-                  @keyup="checkform"
+                  @keyup="checkform('contact_form', form)"
                 />
               </label>
               <div id="submitcontainer">
@@ -139,9 +139,7 @@
               &nbsp;
               </p>
               <transition name="fade">
-                <p v-show="submitted" class="message">
-                  {{ submitted }}
-                </p>
+                <p v-show="submitted" class="message" v-text="submitted" />
               </transition>
             </form>
           </client-only>
@@ -161,20 +159,11 @@
 </template>
 
 <script>
-import axios from 'axios'
-
 export default {
   data () {
     return {
       submitted: false,
-      form: {
-        fname: '',
-        lname: '',
-        email: '',
-        telephone: '',
-        subject: '',
-        message: ''
-      }
+      form: {}
     }
   },
   head () {
@@ -204,72 +193,23 @@ export default {
   mounted () {
     // eslint-disable-next-line
     if (process.client) {
-      if (localStorage.getItem('form')) {
-        this.form = JSON.parse(localStorage.getItem('form'))
+      if (localStorage.getItem('contact_form')) {
+        this.form = JSON.parse(localStorage.getItem('contact_form'))
       } else {
-        this.form = {
-          fname: '',
-          lname: '',
-          email: '',
-          telephone: '',
-          subject: '',
-          message: ''
-        }
+        this.form = {}
       }
     }
   },
   methods: {
-    encode (data) {
-      return Object.keys(data)
-        .map(
-          key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
-        )
-        .join('&')
-    },
     async onSubmit () {
       document.querySelector('.rocket').classList.add('animate')
-      const self = this
       try {
-        await axios.post(
-          '/?t=' + Math.floor(Date.now() / 1000),
-          self.encode({
-            'form-name': 'contact_form',
-            ...self.form
-          }),
-          { header: { 'Content-Type': 'application/x-www-form-urlencoded' } }
-        )
-        localStorage.setItem('form', '')
-        this.form = {
-          fname: '',
-          lname: '',
-          email: '',
-          telephone: '',
-          subject: '',
-          message: ''
-        }
+        await this.submit(this.form, 'contact_form')
+        localStorage.setItem('contact_form', '')
+        this.form = {}
         this.submitted = 'Message sent successfully! We\'ll be in touch within 2-3 working days'
       } catch (e) {
         this.submitted = e.toString() + ' Please try again.'
-      }
-    },
-    checkform () {
-      localStorage.setItem('form', JSON.stringify(this.form))
-      const f = document.forms.contact_form.elements
-      let cansubmit = true
-
-      for (let i = 0; i < f.length - 2; i++) {
-        if (f[i].value.length === 0) {
-          cansubmit = false
-        }
-      }
-      if (document.querySelector('#message')) {
-        if (document.querySelector('#message').value === '') {
-          cansubmit = false
-        }
-      }
-
-      if (document.querySelector('#submit')) {
-        document.querySelector('#submit').disabled = !cansubmit
       }
     }
   }

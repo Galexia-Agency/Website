@@ -34,7 +34,7 @@
   @media (max-width: 768px) {
     .card {
       grid-template-rows: auto auto auto;
-      grid-gap: 2rem
+      gap: 2rem
     }
     .card .svg {
       max-width: 300px

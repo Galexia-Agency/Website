@@ -110,10 +110,11 @@ export default {
    ** Plugins to load before mounting the App
    */
   plugins: [
-    { src: '~/plugins/animation.js' },
-    { src: '~/plugins/fontAwesome.js' },
-    { src: '~/plugins/tooltip.js' },
-    { src: '~/plugins/ztext.client.js' }
+    '~/plugins/animation.js',
+    '~/plugins/fontAwesome.js',
+    '~/plugins/tooltip.js',
+    '~/plugins/ztext.client.js',
+    '~plugins/mixins/forms'
   ],
   /*
    ** Nuxt.js dev-modules

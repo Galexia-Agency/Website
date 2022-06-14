@@ -33,7 +33,7 @@
   .icons {
     display: grid;
     grid-auto-flow: column;
-    grid-gap: 5px;
+    gap: 5px;
     width: auto;
     margin: -60px auto auto;
     justify-items: center;
@@ -126,7 +126,7 @@
       left: calc((100vw - 322px) / 2)
     }
     .icons {
-      grid-gap: 0
+      gap: 0
     }
   }
   @media (max-width: 402px) {

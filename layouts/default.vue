@@ -122,13 +122,8 @@
     border-radius: .25rem;
     display: inline-block;
     transition: opacity .5s;
-    box-shadow:
-      0 1.8px .7px rgba(0, 0, 0, .011),
-      0 4.3px 1.6px rgba(0, 0, 0, .013),
-      0 8.1px 3px rgba(0, 0, 0, .014),
-      0 14.5px 5.4px rgba(0, 0, 0, .014),
-      0 27.2px 10px rgba(0, 0, 0, .015),
-      0 65px 24px rgba(0, 0, 0, .02)
+    // stylelint-disable-next-line
+    box-shadow: 0 5px 5px RGB(26 35 126 / 8%)
   }
   .button.colorTwo {
     background-color: #534BAE
@@ -153,16 +148,11 @@
     font-size: .85rem;
     opacity: .85
   }
-  input, textarea {
+  input, textarea, select {
     border-radius: .25rem;
     border: none;
-    box-shadow:
-      0 1.8px .7px rgba(0, 0, 0, .02),
-      0 4.3px 1.6px rgba(0, 0, 0, .02),
-      0 8.1px 3px rgba(0, 0, 0, .02),
-      0 14.5px 5.4px rgba(0, 0, 0, .02),
-      0 27.2px 10px rgba(0, 0, 0, .02),
-      0 65px 24px rgba(0, 0, 0, .05);
+    // stylelint-disable-next-line
+    box-shadow: 0 5px 5px RGB(26 35 126 / 8%);
     background: -moz-linear-gradient(180deg, rgba(83, 75, 174, .15) 0%, rgba(26, 35, 126, .15) 100%);
     background: -webkit-linear-gradient(180deg, rgba(83, 75, 174, .15) 0%, rgba(26, 35, 126, .15) 100%);
     background: linear-gradient(180deg, rgba(83, 75, 174, .15) 0%, rgba(26, 35, 126, .15) 100%);
@@ -170,7 +160,7 @@
     line-height: 1.75rem;
     font-family: Open Sans, sans-serif
   }
-  input:not([type='submit']), textarea {
+  input:not([type='submit']), textarea, select {
     padding: .33rem;
     width: 100%
   }
@@ -250,7 +240,7 @@
   .nav--container {
     justify-self: end;
     display: grid;
-    grid-gap: 1rem;
+    gap: 1rem;
     grid-auto-flow: column;
     align-content: center
   }
@@ -290,7 +280,7 @@
   .footer--copyrightInner {
     display: grid;
     grid-template-columns: 1fr min-content;
-    grid-gap: 2rem;
+    gap: 2rem;
     padding: 0 2rem
   }
   .socialLinks {
@@ -298,7 +288,7 @@
     font-size: 24px;
     display: grid;
     grid-auto-flow: column;
-    grid-gap: 1rem;
+    gap: 1rem;
     align-content: center
   }
   .socialLinks a {
@@ -311,7 +301,7 @@
   .footer--bottom {
     display: grid;
     grid-template-columns: .5fr 1fr;
-    grid-gap: 1rem
+    gap: 1rem
   }
   .footer--bottom h4 {
     margin: 0;
@@ -357,7 +347,7 @@
   }
   .grid {
     display: grid;
-    grid-gap: 6rem
+    gap: 6rem
   }
   .grid.left {
     grid-template-columns: 1fr .75fr
@@ -367,7 +357,7 @@
   }
   .grid.column {
     grid-auto-flow: column;
-    grid-gap: 2rem;
+    gap: 2rem;
     padding-bottom: 4rem
   }
   .grid.column.two {
@@ -395,12 +385,8 @@
 
   /* Cards */
   .card.white {
-    box-shadow:
-      0 0 2.2px rgba(0, 0, 0, .02),
-      0 0 5.3px rgba(0, 0, 0, .028),
-      0 0 10px rgba(0, 0, 0, .035),
-      0 0 17.9px rgba(0, 0, 0, .042),
-      0 0 33.4px rgba(0, 0, 0, .05);
+    // stylelint-disable-next-line
+    box-shadow: 0 5px 5px RGB(26 35 126 / 8%);
     border-radius: .5rem
   }
   .card.white .card--inner h3 {
@@ -417,7 +403,7 @@
   .card--inner {
     padding: 2rem 1rem;
     display: grid;
-    grid-gap: 1rem
+    gap: 1rem
   }
   .card--inner p {
     font-family: Open Sans, sans-serif;
@@ -747,12 +733,12 @@
   form {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 1rem;
+    gap: 1rem;
     width: 100%;
     label {
       text-align: left;
       display: grid;
-      grid-gap: .5rem
+      gap: .5rem
     }
   }
   #subject, #message {
@@ -888,12 +874,12 @@
       padding: 1rem
     }
     .grid {
-      grid-gap: 4rem
+      gap: 4rem
     }
     .footer--bottom {
       grid-auto-flow: row;
       grid-template-columns: 1fr;
-      grid-gap: 1rem;
+      gap: 1rem;
       padding: 2rem 1rem;
       text-align: center
     }
@@ -934,7 +920,7 @@
       padding: 0 1rem;
       grid-template-columns: 1fr;
       place-items: center;
-      grid-gap: 1rem
+      gap: 1rem
     }
     .footer--copyrightInner p {
       width: 100%;
@@ -959,7 +945,7 @@
       margin: auto
     }
     .grid {
-      grid-gap: 2rem
+      gap: 2rem
     }
     .maxWidth {
       padding: 1rem;

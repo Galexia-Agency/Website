@@ -48,7 +48,7 @@
   }
   .post--footer:not(.nativeShare) {
     display: grid;
-    grid-gap: .5rem;
+    gap: .5rem;
     justify-content: start;
     grid-template-columns: repeat(auto-fit, 140px)
   }

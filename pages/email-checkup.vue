@@ -10,66 +10,66 @@
       title="Free Business Email Checkup"
       desc="If you aren't sure on what the following key terms mean, or if you don't know whether you have them implemented on your domain/website, let us offer you a free checkup. Just drop your name, email address, and website into the form below, and we'll let you know whether you comply with SPF, DKIM, DMARC, and BIMI within 2-3 working days."
     />
-    <div class="white">
-      <section class="maxWidth">
-        <div class="grid right">
-          <div v-infocus="'showElement'" class="hidden hidden-left svg" v-html="require('../assets/svg/spf.svg?include')" />
-          <div v-infocus="'showElement'" class="hidden hidden-right">
-            <h3>
-              SPF
-            </h3>
-            <code>
-              v=spf1 include:_spf.google.com ~all
-            </code>
-            <p class="text--normal">
-              The Sender Policy Framework (SPF) is a way to make sure an email message was sent from an authorized sender in order to prevent spam. In order for the record to be valid and not mark your legitimate sent emails as spam, you'll need to add all email services that you use to send mail.
-            </p>
-          </div>
+    <section class="white">
+      <div class="grid right maxWidth">
+        <div v-infocus="'showElement'" class="hidden hidden-left svg" v-html="require('../assets/svg/spf.svg?include')" />
+        <div v-infocus="'showElement'" class="hidden hidden-right">
+          <h3>
+            SPF
+          </h3>
+          <code>
+            v=spf1 include:_spf.google.com ~all
+          </code>
+          <p class="text--normal">
+            The Sender Policy Framework (SPF) is a way to make sure an email message was sent from an authorized sender in order to prevent spam. In order for the record to be valid and not mark your legitimate sent emails as spam, you'll need to add all email services that you use to send mail.
+          </p>
         </div>
-        <div class="grid left">
-          <div v-infocus="'showElement'" class="hidden hidden-left">
-            <h3>
-              DKIM
-            </h3>
-            <code>
-              v=DKIM1; k=rsa; p=MIIBIjANBgkqhki...
-            </code>
-            <p class="text--normal">
-              DomainKeys Identified Mail (DKIM) is a DNS standard to help prevent spoofing on outgoing messages sent from your domain. Email spoofing is when email content is changed to make the message appear from someone or somewhere other than the actual source.
-            </p>
-          </div>
-          <div v-infocus="'showElement'" class="hidden hidden-right svg" v-html="require('../assets/svg/dkim.svg?include')" />
+      </div>
+      <div class="grid left maxWidth">
+        <div v-infocus="'showElement'" class="hidden hidden-left">
+          <h3>
+            DKIM
+          </h3>
+          <code>
+            v=DKIM1; k=rsa; p=MIIBIjANBgkqhki...
+          </code>
+          <p class="text--normal">
+            DomainKeys Identified Mail (DKIM) is a DNS standard to help prevent spoofing on outgoing messages sent from your domain. Email spoofing is when email content is changed to make the message appear from someone or somewhere other than the actual source.
+          </p>
         </div>
-        <div class="grid right">
-          <div v-infocus="'showElement'" class="hidden hidden-left svg" v-html="require('../assets/svg/dmarc.svg?include')" />
-          <div v-infocus="'showElement'" class="hidden hidden-right">
-            <h3>
-              DMARC
-            </h3>
-            <code>
-              v=DMARC1; p=reject; rua=mailto:dmarc-reports@example.com
-            </code>
-            <p class="text--normal">
-              Domain-based Message Authentication, Reporting, and Conformance (DMARC) helps businesses prevent hackers and other attackers from spoofing their organization and domain. DMARC also lets you request reports from email servers that get messages from your organization or domain. These reports have information to help you identify possible authentication issues and malicious activity for messages sent from your domain. DMARC is essentially an enforcer of DKIM and SPF with a reporting functionality.
-            </p>
-          </div>
+        <div v-infocus="'showElement'" class="hidden hidden-right svg" v-html="require('../assets/svg/dkim.svg?include')" />
+      </div>
+      <div class="grid right maxWidth">
+        <div v-infocus="'showElement'" class="hidden hidden-left svg" v-html="require('../assets/svg/dmarc.svg?include')" />
+        <div v-infocus="'showElement'" class="hidden hidden-right">
+          <h3>
+            DMARC
+          </h3>
+          <code>
+            v=DMARC1; p=reject; rua=mailto:dmarc-reports@example.com
+          </code>
+          <p class="text--normal">
+            Domain-based Message Authentication, Reporting, and Conformance (DMARC) helps businesses prevent hackers and other attackers from spoofing their organization and domain. DMARC also lets you request reports from email servers that get messages from your organization or domain. These reports have information to help you identify possible authentication issues and malicious activity for messages sent from your domain. DMARC is essentially an enforcer of DKIM and SPF with a reporting functionality.
+          </p>
         </div>
-        <div class="grid left">
-          <div v-infocus="'showElement'" class="hidden hidden-left">
-            <h3>
-              BIMI
-            </h3>
-            <code>
-              v=BIMI1; l=https://example.com/logo.svg; a=self;
-            </code>
-            <p class="text--normal">
-              Brand Indicators for Message Identification (BIMI) is a new standard that can help an email recipient to know that it is you. Without BIMI, your email recipients have no assurance that the emails they get are from you. As a result, sometimes they leave such emails unopened, as they fear fraudsters may be trying to con them. BIMI is a new standard that enables you to include your company's logo alongside the emails you send. That way, your brand stands out among other emails, and your customers are sure that the emails are legitimate.
-            </p>
-          </div>
-          <div v-infocus="'showElement'" class="hidden hidden-right svg" v-html="require('../assets/svg/bimi.svg?include')" />
+      </div>
+      <div class="grid left maxWidth">
+        <div v-infocus="'showElement'" class="hidden hidden-left">
+          <h3>
+            BIMI
+          </h3>
+          <code>
+            v=BIMI1; l=https://example.com/logo.svg; a=self;
+          </code>
+          <p class="text--normal">
+            Brand Indicators for Message Identification (BIMI) is a new standard that can help an email recipient to know that it is you. Without BIMI, your email recipients have no assurance that the emails they get are from you. As a result, sometimes they leave such emails unopened, as they fear fraudsters may be trying to con them. BIMI is a new standard that enables you to include your company's logo alongside the emails you send. That way, your brand stands out among other emails, and your customers are sure that the emails are legitimate.
+          </p>
         </div>
-      </section>
-      <section class="maxWidth">
+        <div v-infocus="'showElement'" class="hidden hidden-right svg" v-html="require('../assets/svg/bimi.svg?include')" />
+      </div>
+    </section>
+    <section class="white">
+      <div class="maxWidth">
         <h2>
           Free Business Email Checkup
         </h2>
@@ -97,7 +97,7 @@
                 placeholder="Joe"
                 required
                 autocomplete="given-name"
-                @keyup="checkform"
+                @keyup="checkform('email_form', form)"
               >
             </label>
             <label>
@@ -110,7 +110,7 @@
                 placeholder="Bloggs"
                 required
                 autocomplete="family-name"
-                @keyup="checkform"
+                @keyup="checkform('email_form', form)"
               >
             </label>
             <label>
@@ -123,7 +123,7 @@
                 placeholder="joe@bloggs.com"
                 required
                 autocomplete="email"
-                @keyup="checkform"
+                @keyup="checkform('email_form', form)"
               >
             </label>
             <label>
@@ -137,7 +137,7 @@
                 required
                 autocomplete="url"
                 inputmode="text"
-                @keyup="checkform"
+                @keyup="checkform('email_form', form)"
               >
             </label>
             <div id="submitcontainer">
@@ -154,9 +154,7 @@
             &nbsp;
             </p>
             <transition name="fade">
-              <p v-show="submitted" class="message">
-                {{ submitted }}
-              </p>
+              <p v-show="submitted" class="message" v-text="submitted" />
             </transition>
           </form>
         </client-only>
@@ -166,13 +164,12 @@
           <input name="email" type="email">
           <input name="website" type="url">
         </form>
-      </section>
-    </div>
+      </div>
+    </section>
   </div>
 </template>
 
 <script>
-import axios from 'axios'
 import Header from '../components/header'
 
 export default {
@@ -218,62 +215,22 @@ export default {
   mounted () {
     // eslint-disable-next-line
     if (process.client) {
-      if (localStorage.getItem('email-form')) {
-        this.form = JSON.parse(localStorage.getItem('email-form'))
+      if (localStorage.getItem('email_checkup_form')) {
+        this.form = JSON.parse(localStorage.getItem('email_checkup_form'))
       } else {
-        this.form = {
-          fname: '',
-          lname: '',
-          email: '',
-          website: ''
-        }
+        this.form = {}
       }
     }
   },
   methods: {
-    encode (data) {
-      return Object.keys(data)
-        .map(
-          key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
-        )
-        .join('&')
-    },
-    onSubmit () {
-      const self = this
+    async onSubmit () {
       try {
-        axios.post(
-          '/?t=' + Math.floor(Date.now() / 1000),
-          self.encode({
-            'form-name': 'email_checkup_form',
-            ...self.form
-          }),
-          { header: { 'Content-Type': 'application/x-www-form-urlencoded' } }
-        )
-        localStorage.setItem('email-form', '')
-        this.form = {
-          fname: '',
-          lname: '',
-          email: '',
-          website: ''
-        }
+        await this.submit(this.form, 'email_checkup_form')
+        localStorage.setItem('email_checkup_form', '')
+        this.form = {}
         this.submitted = 'Message sent successfully! We\'ll be in touch within 2-3 working days'
       } catch (e) {
         this.submitted = e.toString() + ' Please try again.'
-      }
-    },
-    checkform () {
-      localStorage.setItem('email-form', JSON.stringify(this.form))
-      const f = document.forms.email_checkup_form.elements
-      let cansubmit = true
-
-      for (let i = 0; i < f.length - 2; i++) {
-        if (f[i].value.length === 0) {
-          cansubmit = false
-        }
-      }
-
-      if (document.querySelector('#submit')) {
-        document.querySelector('#submit').disabled = !cansubmit
       }
     }
   }

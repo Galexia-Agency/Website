@@ -1,7 +1,7 @@
 <style>
   .indev {
     text-align: center;
-    grid-gap: 0;
+    gap: 0;
     min-height: 600px;
     align-content: center
   }

@@ -11,7 +11,7 @@
     margin: auto;
     text-align: center;
     display: grid;
-    grid-gap: 2rem
+    gap: 2rem
   }
   .header--inner * {
     margin: 0

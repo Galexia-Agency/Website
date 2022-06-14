@@ -23,7 +23,7 @@
     text-align: center
   }
   .card--inner {
-    grid-gap: 2rem
+    gap: 2rem
   }
   li {
     line-height: 1.5
@@ -560,7 +560,7 @@
               placeholder="Joe"
               required
               autocomplete="given-name"
-              @keyup="checkform"
+              @keyup="checkform('seo_form', form)"
             >
           </label>
           <label>
@@ -573,7 +573,7 @@
               placeholder="Bloggs"
               required
               autocomplete="family-name"
-              @keyup="checkform"
+              @keyup="checkform('seo_form', form)"
             >
           </label>
           <label>
@@ -586,7 +586,7 @@
               placeholder="joe@bloggs.com"
               required
               autocomplete="email"
-              @keyup="checkform"
+              @keyup="checkform('seo_form', form)"
             >
           </label>
           <label>
@@ -600,7 +600,7 @@
               required
               autocomplete="url"
               inputmode="text"
-              @keyup="checkform"
+              @keyup="checkform('seo_form', form)"
             >
           </label>
           <div id="submitcontainer">
@@ -617,9 +617,7 @@
           &nbsp;
           </p>
           <transition name="fade">
-            <p v-show="submitted" class="message">
-              {{ submitted }}
-            </p>
+            <p v-show="submitted" class="message" v-text="submitted" />
           </transition>
         </form>
       </client-only>
@@ -634,19 +632,12 @@
 </template>
 
 <script>
-import axios from 'axios'
-
 export default {
   data () {
     return {
       yearly: false,
       submitted: false,
-      form: {
-        fname: '',
-        lname: '',
-        email: '',
-        website: ''
-      }
+      form: {}
     }
   },
   head () {
@@ -677,15 +668,10 @@ export default {
   mounted () {
     // eslint-disable-next-line
     if (process.client) {
-      if (localStorage.getItem('seo-form')) {
-        this.form = JSON.parse(localStorage.getItem('seo-form'))
+      if (localStorage.getItem('seo_form')) {
+        this.form = JSON.parse(localStorage.getItem('seo_form'))
       } else {
-        this.form = {
-          fname: '',
-          lname: '',
-          email: '',
-          website: ''
-        }
+        this.form = {}
       }
     }
     const wrapper = document.querySelectorAll('.scroll-wrapper')
@@ -704,49 +690,14 @@ export default {
     }
   },
   methods: {
-    encode (data) {
-      return Object.keys(data)
-        .map(
-          key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
-        )
-        .join('&')
-    },
-    onSubmit () {
-      const self = this
+    async onSubmit () {
       try {
-        axios.post(
-          '/?t=' + Math.floor(Date.now() / 1000),
-          self.encode({
-            'form-name': 'seo_form',
-            ...self.form
-          }),
-          { header: { 'Content-Type': 'application/x-www-form-urlencoded' } }
-        )
-        localStorage.setItem('seo-form', '')
-        this.form = {
-          fname: '',
-          lname: '',
-          email: '',
-          website: ''
-        }
+        await this.submit(this.form, 'seo_form')
+        localStorage.setItem('seo_form', '')
+        this.form = {}
         this.submitted = 'Message sent successfully! We\'ll be in touch within 2-3 working days'
       } catch (e) {
         this.submitted = e.toString() + ' Please try again.'
-      }
-    },
-    checkform () {
-      localStorage.setItem('seo-form', JSON.stringify(this.form))
-      const f = document.forms.seo_form.elements
-      let cansubmit = true
-
-      for (let i = 0; i < f.length - 2; i++) {
-        if (f[i].value.length === 0) {
-          cansubmit = false
-        }
-      }
-
-      if (document.querySelector('#submit')) {
-        document.querySelector('#submit').disabled = !cansubmit
       }
     }
   }

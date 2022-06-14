@@ -58,7 +58,7 @@
     grid-column: span 2
   }
   form {
-    grid-gap: 2rem;
+    gap: 2rem;
     place-items: start;
     max-width: 600px;
     width: 100%;
