@@ -82,6 +82,14 @@
         </div>
       </div>-->
     </section>
+    <section class="white text-center">
+      <div class="maxWidth">
+        <h2 style="line-height: 1.5">
+          WordPress powers 43% of all websites including these top brands:
+        </h2>
+        <img src="../assets/img/companies.png?format=webp&resize&size=1376" width="1376" loading="lazy" style="filter: grayscale(1); opacity: .5">
+      </div>
+    </section>
   </div>
 </template>
 

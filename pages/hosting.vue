@@ -62,7 +62,7 @@
     <section class="maxWidth">
       <div id="top">
         <h1>Ultra-fast Hosting</h1>
-        <img src="../assets/img/lighthouse.jpg" width="520" height="294" alt="Lighthouse Test">
+        <img src="../assets/img/lighthouse.jpg?format=webp&resize&size=520" width="520" height="294" alt="Lighthouse Test">
         <p class="desc">
           Your website needs a home and we're happy to house it regardless of who built it. Below is an outline of our pricing for different plans. If you want results like these then be sure to choose us for all your hosting and website needs.
         </p>

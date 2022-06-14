@@ -62,7 +62,7 @@
     <section class="maxWidth">
       <div id="top">
         <h1>Search Engine Optimisation</h1>
-        <img src="../assets/img/searchconsole.png" width="520" height="294" alt="Google Search Console Screenshot">
+        <img src="../assets/img/searchconsole.png?format=webp&resize&size=520" width="520" height="294" alt="Google Search Console Screenshot">
         <p class="desc">
           Your website is your online store-front. Unfortunately, you can't attract customers by having a pretty shop window that they see whilst walking down the street. You have to rank highly in Search Engine Results Pages (SERPs). Only then will people find your website and learn more about you. We can help with getting you higher up in the SERPs, thus increasing traffic to your site, and potential revenue.
         </p>
