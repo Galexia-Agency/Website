@@ -40,172 +40,160 @@
               <br>
               How do you want to come across to customers and potential customers?
             </p>
-            <client-only>
-              <form method="post" name="brand_identity_form" netlify @submit.prevent="onSubmit">
+            <form method="post" name="brandIdentityForm" netlify @submit.prevent="onSubmit">
+              <input
+                type="hidden"
+                name="form-name"
+                value="brandIdentityForm"
+              >
+              <label>
+                Your Company Name:
                 <input
-                  type="hidden"
-                  name="form-name"
-                  value="brand_identity_form"
+                  id="yourCompanyName"
+                  v-model="form.yourCompanyName"
+                  name="yourCompanyName"
+                  type="text"
+                  required
+                  @keyup="checkform('brandIdentityForm', form)"
                 >
-                <label>
-                  Your Company Name:
-                  <input
-                    id="companyName"
-                    v-model="form.companyName"
-                    name="companyName"
-                    type="text"
-                    required
-                    @keyup="checkform('brand_identity_form', form)"
-                  >
-                </label>
-                <label>
-                  Who is your ideal customer?
-                  <p>
-                    If you target a very specific group of people, let us know just how specific. This will help hone the Brand Identity to those people. For example, you might be a Clothing Store that creates alternative clothing & jewellery for women in their teens - 30s that like to dress in a gothic/alternative style. You can imagine the brand style for this company would be very different to Primark's!
-                  </p>
-                  <textarea
-                    id="idealCustomer"
-                    v-model="form.idealCustomer"
-                    name="idealCustomer"
-                    required
-                    @keyup="checkform('brand_identity_form', form)"
-                  />
-                </label>
-                <label>
-                  What is your why?
-                  <p>
-                    A lot of companies focus on what they do and how they do it. People don't identify with products, they identify with dreams, purposes and feelings. <a href="https://www.ted.com/talks/simon_sinek_how_great_leaders_inspire_action" target="_blank">Watch this video</a> for a fantastic explanation on why you need to tell the world your 'WHY?'
-                  </p>
-                  <textarea
-                    id="why"
-                    v-model="form.why"
-                    name="why"
-                    required
-                    @keyup="checkform('brand_identity_form', form)"
-                  />
-                </label>
-                <label>
-                  This follows on from your Why, but how do you solve problems for your customer?
-                  <select
-                    id="problems"
-                    v-model="form.problems"
-                    name="problems"
-                    required
-                    @keyup="checkform('brand_identity_form', form)"
-                    @change="checkform('brand_identity_form', form)"
-                  >
-                    <option>
-                      Affordable: you offer the same services for less money than competitors already on the market
-                    </option>
-                    <option>
-                      Sustainability: you help your customer be more environmentally friendly by offering completely sustainable services, products, packaging etc.
-                    </option>
-                    <option>
-                      Unique: your products are completely unique and like no other on the market
-                    </option>
-                    <option>
-                      Convenience: your services/products are quick and easy to access
-                    </option>
-                    <option>
-                      Quality: what you offer can't be matched by anyone else
-                    </option>
-                    <option>
-                      Other
-                    </option>
-                  </select>
-                </label>
-                <label v-show="form.problems === 'Other'">
-                  Other
-                  <textarea
-                    id="otherProblems"
-                    v-model="form.otherProblems"
-                    name="otherProblems"
-                    @keyup="checkform('brand_identity_form', form)"
-                  />
-                </label>
-                <label>
-                  You're in a lift and someone asks what you do. How do you answer?
-                  <p>
-                    For example: LastPass might say: "We've produced software that allows users across the globe to securely store their passwords behind one master password and access them on all of their devices through an app or website."
-                  </p>
-                  <textarea
-                    id="lift"
-                    v-model="form.lift"
-                    name="lift"
-                    required
-                    @keyup="checkform('brand_identity_form', form)"
-                  />
-                </label>
-                <label>
-                  Of the below 5 categories, what best suits your brand personality?
-                  <p>
-                    These are your human characteristics.
-                  </p>
-                  <select
-                    id="personality"
-                    v-model="form.personality"
-                    name="personality"
-                    required
-                    @keyup="checkform('brand_identity_form', form)"
-                    @change="checkform('brand_identity_form', form)"
-                  >
-                    <option>
-                      Sophisticated
-                    </option>
-                    <option>
-                      Sincere
-                    </option>
-                    <option>
-                      Competent
-                    </option>
-                    <option>
-                      Excited
-                    </option>
-                    <option>
-                      Rugged
-                    </option>
-                  </select>
-                </label>
-                <label>
-                  Based on the category you chose, what words would you associate with your brand. E.g 'honest', 'down to earth', 'caring'. These can be anything you like!
-                  <textarea
-                    id="words"
-                    v-model="form.words"
-                    name="words"
-                    required
-                    @keyup="checkform('brand_identity_form', form)"
-                  />
-                </label>
-                <div id="submitcontainer">
-                  <input
-                    id="submit"
-                    type="submit"
-                    name="submit"
-                    class="button colorTwo"
-                    value="submit"
-                    disabled
-                  >
-                </div>
-                <p v-show="!submitted">
-                &nbsp;
+              </label>
+              <label>
+                Who is your ideal customer?
+                <p>
+                  If you target a very specific group of people, let us know just how specific. This will help hone the Brand Identity to those people. For example, you might be a Clothing Store that creates alternative clothing & jewellery for women in their teens - 30s that like to dress in a gothic/alternative style. You can imagine the brand style for this company would be very different to Primark's!
                 </p>
-                <transition name="fade">
-                  <p v-show="submitted" class="message" v-text="submitted" />
-                </transition>
-              </form>
-            </client-only>
+                <textarea
+                  id="whoIsYourIdealCustomer"
+                  v-model="form.whoIsYourIdealCustomer"
+                  name="whoIsYourIdealCustomer"
+                  required
+                  @keyup="checkform('brandIdentityForm', form)"
+                />
+              </label>
+              <label>
+                What is your why?
+                <p>
+                  A lot of companies focus on what they do and how they do it. People don't identify with products, they identify with dreams, purposes and feelings. <a href="https://www.ted.com/talks/simon_sinek_how_great_leaders_inspire_action" target="_blank">Watch this video</a> for a fantastic explanation on why you need to tell the world your 'WHY?'
+                </p>
+                <textarea
+                  id="whatIsYourWhy"
+                  v-model="form.whatIsYourWhy"
+                  name="whatIsYourWhy"
+                  required
+                  @keyup="checkform('brandIdentityForm', form)"
+                />
+              </label>
+              <label>
+                This follows on from your Why, but how do you solve problems for your customer?
+                <select
+                  id="howDoYouSolveProblemsForYourCustomers"
+                  v-model="form.howDoYouSolveProblemsForYourCustomers"
+                  name="howDoYouSolveProblemsForYourCustomers"
+                  required
+                  @keyup="checkform('brandIdentityForm', form)"
+                  @change="checkform('brandIdentityForm', form)"
+                >
+                  <option>
+                    Affordable: you offer the same services for less money than competitors already on the market
+                  </option>
+                  <option>
+                    Sustainability: you help your customer be more environmentally friendly by offering completely sustainable services, products, packaging etc.
+                  </option>
+                  <option>
+                    Unique: your products are completely unique and like no other on the market
+                  </option>
+                  <option>
+                    Convenience: your services/products are quick and easy to access
+                  </option>
+                  <option>
+                    Quality: what you offer can't be matched by anyone else
+                  </option>
+                  <option>
+                    Other
+                  </option>
+                </select>
+              </label>
+              <label v-show="form.howDoYouSolveProblemsForYourCustomers === 'Other'">
+                Other
+                <textarea
+                  id="otherProblems"
+                  v-model="form.otherProblems"
+                  name="otherProblems"
+                  @keyup="checkform('brandIdentityForm', form)"
+                />
+              </label>
+              <label>
+                You're in a lift and someone asks what you do. How do you answer?
+                <p>
+                  For example: LastPass might say: "We've produced software that allows users across the globe to securely store their passwords behind one master password and access them on all of their devices through an app or website."
+                </p>
+                <textarea
+                  id="yourInALiftAndSomeoneAsksWhatYouDo"
+                  v-model="form.yourInALiftAndSomeoneAsksWhatYouDo"
+                  name="lift"
+                  required
+                  @keyup="checkform('brandIdentityForm', form)"
+                />
+              </label>
+              <label>
+                Of the below 5 categories, what best suits your brand personality?
+                <p>
+                  These are your human characteristics.
+                </p>
+                <select
+                  id="whatBestSuitsYourBrandPersonality"
+                  v-model="form.whatBestSuitsYourBrandPersonality"
+                  name="whatBestSuitsYourBrandPersonality"
+                  required
+                  @keyup="checkform('brandIdentityForm', form)"
+                  @change="checkform('brandIdentityForm', form)"
+                >
+                  <option>
+                    Sophisticated
+                  </option>
+                  <option>
+                    Sincere
+                  </option>
+                  <option>
+                    Competent
+                  </option>
+                  <option>
+                    Excited
+                  </option>
+                  <option>
+                    Rugged
+                  </option>
+                </select>
+              </label>
+              <label>
+                Based on the category you chose, what words would you associate with your brand. E.g 'honest', 'down to earth', 'caring'. These can be anything you like!
+                <textarea
+                  id="whatWordsWouldYouAssociateWithYourBrand"
+                  v-model="form.whatWordsWouldYouAssociateWithYourBrand"
+                  name="whatWordsWouldYouAssociateWithYourBrand"
+                  required
+                  @keyup="checkform('brandIdentityForm', form)"
+                />
+              </label>
+              <div id="submitcontainer">
+                <input
+                  id="submit"
+                  type="submit"
+                  name="submit"
+                  class="button colorTwo"
+                  value="submit"
+                  disabled
+                >
+              </div>
+              <p v-show="!submitted">
+              &nbsp;
+              </p>
+              <transition name="fade">
+                <p v-show="submitted" class="message" v-text="submitted" />
+              </transition>
+            </form>
           </div>
         </div>
-        <form method="post" name="brand_identity_form" netlify style="display: none">
-          <input name="companyName" type="text">
-          <textarea name="idealCustomer" />
-          <textarea name="why" />
-          <select name="problems" />
-          <textarea name="otherProblems" />
-          <textarea name="lift" />
-          <select name="personality" />
-          <textarea name="words" />
-        </form>
       </div>
     </section>
   </div>
@@ -247,8 +235,8 @@ export default {
   mounted () {
     // eslint-disable-next-line
     if (process.client) {
-      if (localStorage.getItem('brand_identity_form')) {
-        this.form = JSON.parse(localStorage.getItem('brand_identity_form'))
+      if (localStorage.getItem('brandIdentityForm')) {
+        this.form = JSON.parse(localStorage.getItem('brandIdentityForm'))
       } else {
         this.form = {}
       }
@@ -257,8 +245,8 @@ export default {
   methods: {
     async onSubmit () {
       try {
-        await this.submit(this.form, 'brand_identity_form')
-        localStorage.setItem('brand_identity_form', '')
+        await this.submit(this.form, 'brandIdentityForm')
+        localStorage.setItem('brandIdentityForm', '')
         this.form = {}
         this.submitted = 'Message sent successfully!'
       } catch (e) {

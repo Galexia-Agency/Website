@@ -73,96 +73,88 @@
         <h2>
           Free Business Email Checkup
         </h2>
-        <client-only>
-          <form
-            id="email_checkup_form"
-            class="narrow"
-            method="post"
-            name="email_checkup_form"
-            netlify
-            @submit.prevent="onSubmit"
+        <form
+          id="emailCheckupForm"
+          class="narrow"
+          method="post"
+          name="emailCheckupForm"
+          netlify
+          @submit.prevent="onSubmit"
+        >
+          <input
+            type="hidden"
+            name="form-name"
+            value="email_checkup_form"
           >
+          <label>
+            First Name:
             <input
-              type="hidden"
-              name="form-name"
-              value="email_checkup_form"
+              id="firstName"
+              v-model="form.firstName"
+              name="firstName"
+              type="text"
+              placeholder="Joe"
+              required
+              autocomplete="given-name"
+              @keyup="checkform('emailCheckupForm', form)"
             >
-            <label>
-              First Name:
-              <input
-                id="fname"
-                v-model="form.fname"
-                name="fname"
-                type="text"
-                placeholder="Joe"
-                required
-                autocomplete="given-name"
-                @keyup="checkform('email_form', form)"
-              >
-            </label>
-            <label>
-              Last Name:
-              <input
-                id="lname"
-                v-model="form.lname"
-                name="lname"
-                type="text"
-                placeholder="Bloggs"
-                required
-                autocomplete="family-name"
-                @keyup="checkform('email_form', form)"
-              >
-            </label>
-            <label>
-              Email:
-              <input
-                id="mail"
-                v-model="form.email"
-                name="email"
-                type="email"
-                placeholder="joe@bloggs.com"
-                required
-                autocomplete="email"
-                @keyup="checkform('email_form', form)"
-              >
-            </label>
-            <label>
-              Website:
-              <input
-                id="website"
-                v-model="form.website"
-                name="website"
-                type="url"
-                placeholder="https://galexia.agency"
-                required
-                autocomplete="url"
-                inputmode="text"
-                @keyup="checkform('email_form', form)"
-              >
-            </label>
-            <div id="submitcontainer">
-              <input
-                id="submit"
-                type="submit"
-                name="submit"
-                class="button colorTwo"
-                value="submit"
-                disabled
-              >
-            </div>
-            <p v-show="!submitted">
-            &nbsp;
-            </p>
-            <transition name="fade">
-              <p v-show="submitted" class="message" v-text="submitted" />
-            </transition>
-          </form>
-        </client-only>
-        <form method="post" name="email_checkup_form" netlify style="display: none">
-          <input name="fname" type="text">
-          <input name="lname" type="text">
-          <input name="email" type="email">
-          <input name="website" type="url">
+          </label>
+          <label>
+            Last Name:
+            <input
+              id="lastName"
+              v-model="form.lastName"
+              name="lastName"
+              type="text"
+              placeholder="Bloggs"
+              required
+              autocomplete="family-name"
+              @keyup="checkform('emailCheckupForm', form)"
+            >
+          </label>
+          <label>
+            Email:
+            <input
+              id="email"
+              v-model="form.email"
+              name="email"
+              type="email"
+              placeholder="joe@bloggs.com"
+              required
+              autocomplete="email"
+              @keyup="checkform('emailCheckupForm', form)"
+            >
+          </label>
+          <label>
+            Website:
+            <input
+              id="website"
+              v-model="form.website"
+              name="website"
+              type="url"
+              placeholder="https://galexia.agency"
+              required
+              autocomplete="url"
+              inputmode="text"
+              @keyup="checkform('emailCheckupForm', form)"
+            >
+          </label>
+          <div id="submitcontainer">
+            <input
+              id="submit"
+              type="submit"
+              name="submit"
+              class="button colorTwo"
+              value="submit"
+              disabled
+            >
+          </div>
+          <p v-show="!submitted">
+          &nbsp;
+          </p>
+          <transition name="fade">
+            <p v-show="submitted" class="message" v-text="submitted" />
+          </transition>
         </form>
       </div>
     </section>
@@ -215,8 +207,8 @@ export default {
   mounted () {
     // eslint-disable-next-line
     if (process.client) {
-      if (localStorage.getItem('email_checkup_form')) {
-        this.form = JSON.parse(localStorage.getItem('email_checkup_form'))
+      if (localStorage.getItem('emailCheckupForm')) {
+        this.form = JSON.parse(localStorage.getItem('emailCheckupForm'))
       } else {
         this.form = {}
       }
@@ -225,8 +217,8 @@ export default {
   methods: {
     async onSubmit () {
       try {
-        await this.submit(this.form, 'email_checkup_form')
-        localStorage.setItem('email_checkup_form', '')
+        await this.submit(this.form, 'emailCheckupForm')
+        localStorage.setItem('emailCheckupForm', '')
         this.form = {}
         this.submitted = 'Message sent successfully! We\'ll be in touch within 2-3 working days'
       } catch (e) {

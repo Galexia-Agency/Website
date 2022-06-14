@@ -536,96 +536,88 @@
       <p class="desc">
         If you're struggling to know where to start on your SEO journey, why not sign up for our free SEO Health Check. Just fill in your name, email address, and website, and we'll get back to you with a personalised action plan for you and your business.
       </p>
-      <client-only>
-        <form
-          id="seo_form"
-          class="narrow"
-          method="post"
-          name="seo_form"
-          netlify
-          @submit.prevent="onSubmit"
+      <form
+        id="seoForm"
+        class="narrow"
+        method="post"
+        name="seoForm"
+        netlify
+        @submit.prevent="onSubmit"
+      >
+        <input
+          type="hidden"
+          name="form-name"
+          value="seoForm"
         >
+        <label>
+          First Name:
           <input
-            type="hidden"
-            name="form-name"
-            value="seo_form"
+            id="firstName"
+            v-model="form.firstName"
+            name="firstName"
+            type="text"
+            placeholder="Joe"
+            required
+            autocomplete="given-name"
+            @keyup="checkform('seoForm', form)"
           >
-          <label>
-            First Name:
-            <input
-              id="fname"
-              v-model="form.fname"
-              name="fname"
-              type="text"
-              placeholder="Joe"
-              required
-              autocomplete="given-name"
-              @keyup="checkform('seo_form', form)"
-            >
-          </label>
-          <label>
-            Last Name:
-            <input
-              id="lname"
-              v-model="form.lname"
-              name="lname"
-              type="text"
-              placeholder="Bloggs"
-              required
-              autocomplete="family-name"
-              @keyup="checkform('seo_form', form)"
-            >
-          </label>
-          <label>
-            Email:
-            <input
-              id="mail"
-              v-model="form.email"
-              name="email"
-              type="email"
-              placeholder="joe@bloggs.com"
-              required
-              autocomplete="email"
-              @keyup="checkform('seo_form', form)"
-            >
-          </label>
-          <label>
-            Website:
-            <input
-              id="website"
-              v-model="form.website"
-              name="website"
-              type="url"
-              placeholder="https://galexia.agency"
-              required
-              autocomplete="url"
-              inputmode="text"
-              @keyup="checkform('seo_form', form)"
-            >
-          </label>
-          <div id="submitcontainer">
-            <input
-              id="submit"
-              type="submit"
-              name="submit"
-              class="button colorTwo"
-              value="submit"
-              disabled
-            >
-          </div>
-          <p v-show="!submitted">
-          &nbsp;
-          </p>
-          <transition name="fade">
-            <p v-show="submitted" class="message" v-text="submitted" />
-          </transition>
-        </form>
-      </client-only>
-      <form method="post" name="seo_form" netlify style="display: none">
-        <input name="fname" type="text">
-        <input name="lname" type="text">
-        <input name="email" type="email">
-        <input name="website" type="url">
+        </label>
+        <label>
+          Last Name:
+          <input
+            id="lastName"
+            v-model="form.lastName"
+            name="lastName"
+            type="text"
+            placeholder="Bloggs"
+            required
+            autocomplete="family-name"
+            @keyup="checkform('seoForm', form)"
+          >
+        </label>
+        <label>
+          Email:
+          <input
+            id="email"
+            v-model="form.email"
+            name="email"
+            type="email"
+            placeholder="joe@bloggs.com"
+            required
+            autocomplete="email"
+            @keyup="checkform('seoForm', form)"
+          >
+        </label>
+        <label>
+          Website:
+          <input
+            id="website"
+            v-model="form.website"
+            name="website"
+            type="url"
+            placeholder="https://galexia.agency"
+            required
+            autocomplete="url"
+            inputmode="text"
+            @keyup="checkform('seoForm', form)"
+          >
+        </label>
+        <div id="submitcontainer">
+          <input
+            id="submit"
+            type="submit"
+            name="submit"
+            class="button colorTwo"
+            value="submit"
+            disabled
+          >
+        </div>
+        <p v-show="!submitted">
+        &nbsp;
+        </p>
+        <transition name="fade">
+          <p v-show="submitted" class="message" v-text="submitted" />
+        </transition>
       </form>
     </section>
   </div>
@@ -668,8 +660,8 @@ export default {
   mounted () {
     // eslint-disable-next-line
     if (process.client) {
-      if (localStorage.getItem('seo_form')) {
-        this.form = JSON.parse(localStorage.getItem('seo_form'))
+      if (localStorage.getItem('seoForm')) {
+        this.form = JSON.parse(localStorage.getItem('seoForm'))
       } else {
         this.form = {}
       }
@@ -692,8 +684,8 @@ export default {
   methods: {
     async onSubmit () {
       try {
-        await this.submit(this.form, 'seo_form')
-        localStorage.setItem('seo_form', '')
+        await this.submit(this.form, 'seoForm')
+        localStorage.setItem('seoForm', '')
         this.form = {}
         this.submitted = 'Message sent successfully! We\'ll be in touch within 2-3 working days'
       } catch (e) {

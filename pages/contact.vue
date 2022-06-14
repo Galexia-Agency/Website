@@ -43,116 +43,106 @@
           We’d love to help you on your next big website project. We understand what it means to dream big, and then achieve that dream.
         </p>
         <div class="grid left">
-          <client-only>
-            <form method="post" name="contact_form" netlify @submit.prevent="onSubmit">
+          <form method="post" name="contactForm" netlify @submit.prevent="onSubmit">
+            <input
+              type="hidden"
+              name="form-name"
+              value="contactForm"
+            >
+            <label>
+              First Name:
               <input
-                type="hidden"
-                name="form-name"
-                value="contact_form"
+                id="firstName"
+                v-model="form.firstName"
+                name="firstName"
+                type="text"
+                placeholder="Joe"
+                required
+                autocomplete="given-name"
+                @keyup="checkform('contactForm', form)"
               >
-              <label>
-                First Name:
-                <input
-                  id="fname"
-                  v-model="form.fname"
-                  name="fname"
-                  type="text"
-                  placeholder="Joe"
-                  required
-                  autocomplete="given-name"
-                  @keyup="checkform('contact_form', form)"
-                >
-              </label>
-              <label>
-                Last Name:
-                <input
-                  id="lname"
-                  v-model="form.lname"
-                  name="lname"
-                  type="text"
-                  placeholder="Bloggs"
-                  required
-                  autocomplete="family-name"
-                  @keyup="checkform('contact_form', form)"
-                >
-              </label>
-              <label>
-                Email:
-                <input
-                  id="mail"
-                  v-model="form.email"
-                  name="email"
-                  type="email"
-                  placeholder="joe@bloggs.com"
-                  required
-                  autocomplete="email"
-                  @keyup="checkform('contact_form', form)"
-                >
-              </label>
-              <label>
-                Telephone:
-                <input
-                  id="telephone"
-                  v-model="form.telephone"
-                  name="telephone"
-                  type="tel"
-                  placeholder="+447569836548"
-                  required
-                  autocomplete="tel"
-                  inputmode="tel"
-                  @keyup="checkform('contact_form', form)"
-                >
-              </label>
-              <label id="subject">
-                Subject:
-                <input
-                  v-model="form.subject"
-                  name="subject"
-                  type="text"
-                  placeholder="I need a site..."
-                  required
-                  @keyup="checkform('contact_form', form)"
-                >
-              </label>
-              <label id="message">
-                Message:
-                <textarea
-                  v-model="form.message"
-                  name="message"
-                  placeholder="I have a really outdated website and after reading about your past clients I'd like to request a quote"
-                  required
-                  rows="3"
-                  @keyup="checkform('contact_form', form)"
-                />
-              </label>
-              <div id="submitcontainer">
-                <input
-                  id="submit"
-                  type="submit"
-                  name="submit"
-                  class="button colorTwo"
-                  value="submit"
-                  disabled
-                >
-              </div>
-              <p v-show="!submitted">
-              &nbsp;
-              </p>
-              <transition name="fade">
-                <p v-show="submitted" class="message" v-text="submitted" />
-              </transition>
-            </form>
-          </client-only>
+            </label>
+            <label>
+              Last Name:
+              <input
+                id="lastName"
+                v-model="form.lastName"
+                name="lastName"
+                type="text"
+                placeholder="Bloggs"
+                required
+                autocomplete="family-name"
+                @keyup="checkform('contactForm', form)"
+              >
+            </label>
+            <label>
+              Email:
+              <input
+                id="mail"
+                v-model="form.email"
+                name="email"
+                type="email"
+                placeholder="joe@bloggs.com"
+                required
+                autocomplete="email"
+                @keyup="checkform('contactForm', form)"
+              >
+            </label>
+            <label>
+              Telephone:
+              <input
+                id="telephone"
+                v-model="form.telephone"
+                name="telephone"
+                type="tel"
+                placeholder="+447569836548"
+                required
+                autocomplete="tel"
+                inputmode="tel"
+                @keyup="checkform('contactForm', form)"
+              >
+            </label>
+            <label id="subject">
+              Subject:
+              <input
+                v-model="form.subject"
+                name="subject"
+                type="text"
+                placeholder="I need a site..."
+                required
+                @keyup="checkform('contactForm', form)"
+              >
+            </label>
+            <label id="message">
+              Message:
+              <textarea
+                v-model="form.message"
+                name="message"
+                placeholder="I have a really outdated website and after reading about your past clients I'd like to request a quote"
+                required
+                rows="3"
+                @keyup="checkform('contactForm', form)"
+              />
+            </label>
+            <div id="submitcontainer">
+              <input
+                id="submit"
+                type="submit"
+                name="submit"
+                class="button colorTwo"
+                value="submit"
+                disabled
+              >
+            </div>
+            <p v-show="!submitted">
+            &nbsp;
+            </p>
+            <transition name="fade">
+              <p v-show="submitted" class="message" v-text="submitted" />
+            </transition>
+          </form>
           <div class="SVGContainer" v-html="require('../assets/svg/contact.svg?include')" />
         </div>
-        <form method="post" name="contact_form" netlify style="display: none">
-          <input name="fname" type="text">
-          <input name="lname" type="text">
-          <input name="email" type="email">
-          <input name="telephone" type="tel">
-          <input name="subject" type="text">
-          <textarea name="message" />
-        </form>
       </div>
     </section>
   </div>
@@ -193,8 +183,8 @@ export default {
   mounted () {
     // eslint-disable-next-line
     if (process.client) {
-      if (localStorage.getItem('contact_form')) {
-        this.form = JSON.parse(localStorage.getItem('contact_form'))
+      if (localStorage.getItem('contactForm')) {
+        this.form = JSON.parse(localStorage.getItem('contactForm'))
       } else {
         this.form = {}
       }
@@ -204,8 +194,8 @@ export default {
     async onSubmit () {
       document.querySelector('.rocket').classList.add('animate')
       try {
-        await this.submit(this.form, 'contact_form')
-        localStorage.setItem('contact_form', '')
+        await this.submit(this.form, 'contactForm')
+        localStorage.setItem('contactForm', '')
         this.form = {}
         this.submitted = 'Message sent successfully! We\'ll be in touch within 2-3 working days'
       } catch (e) {
