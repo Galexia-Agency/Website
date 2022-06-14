@@ -205,7 +205,6 @@ export default {
   },
   pwa: {
     workbox: {
-      enabled: false,
       preCaching: [
         '/',
         '/web/',

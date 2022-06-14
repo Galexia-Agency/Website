@@ -715,7 +715,7 @@ export default {
       const self = this
       try {
         axios.post(
-          '/',
+          '/?t=' + Math.floor(Date.now() / 1000),
           self.encode({
             'form-name': 'seo_form',
             ...self.form
