@@ -46,7 +46,8 @@ export default {
     __dangerouslyDisableSanitizers: ['script', 'noscript'],
     noscript: [
       { innerHTML: '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400&family=Montserrat:ital,wght@0,600;0,700;1,600;1,700&family=Open+Sans:ital,wght@0,400;0,600;1,400;1,600&display=block" />' },
-      { innerHTML: '<link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css" />' }
+      { innerHTML: '<link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css" />' },
+      { innerHTML: '<p><img src="https://analytics.galexia.agency/matomo.php?idsite=1&amp;rec=1" style="border:0;" alt="" /></p>' }
     ],
     script: [
       {
@@ -92,6 +93,23 @@ export default {
       },
       {
         src: 'https://assets.calendly.com/assets/external/widget.js', type: 'text/javascript', async: true
+      },
+      {
+        innerHTML: `
+          var _paq = window._paq = window._paq || [];
+          /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+          _paq.push(["setDoNotTrack", true]);
+          _paq.push(["disableCookies"]);
+          _paq.push(['trackPageView']);
+          _paq.push(['enableLinkTracking']);
+          (function() {
+            var u="https://analytics.galexia.agency/";
+            _paq.push(['setTrackerUrl', u+'matomo.php']);
+            _paq.push(['setSiteId', '1']);
+            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+            g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+          })();`,
+        type: 'text/javascript'
       }
     ]
   },
@@ -131,56 +149,9 @@ export default {
   modules: [
     '~/modules/only-once.js',
     'vue-social-sharing/nuxt',
-    ['nuxt-cookie-control', {
-      colors: {
-        barTextColor: '#212121',
-        barBackground: '#FFF',
-        barButtonColor: '#FFF',
-        barButtonHoverBackground: '#1C2AB1',
-        barButtonBackground: '#1a237e',
-        modalOverlay: '#212121',
-        modalButtonBackground: '#1a237e',
-        modalButtonHoverBackground: '#1C2AB1',
-        checkboxActiveBackground: '#1a237e',
-        checkboxInactiveBackground: '#1a237e50',
-        checkboxDisabledBackground: '#1a237e99',
-        checkboxActiveCircleBackground: '#FFFFFF',
-        controlButtonIconColor: '#1a237e',
-        controlButtonIconHoverColor: '#fff',
-        controlButtonHoverBackground: '#1a237e'
-      }
-    }],
     '@aceforth/nuxt-optimized-images',
     '@nuxtjs/pwa'
   ],
-  cookies: {
-    necessary: [
-      {
-        name: 'Default Cookies',
-        description: 'Used for cookie control (cannot be disabled).',
-        cookies: ['cookie_control_consent', 'cookie_control_enabled_cookies']
-      }
-    ],
-    optional: [
-      {
-        name: 'Google Analytics',
-        description: 'Google Analytics is a web analytics service offered by Google that tracks and reports website traffic.',
-        src: 'https://www.googletagmanager.com/gtag/js?id=UA-140457046-4',
-        async: true,
-        cookies: ['_ga', '_gat', '_gid'],
-        accepted: () => {
-          window.dataLayer = window.dataLayer || []
-          function gtag () {
-            window.dataLayer.push(arguments)
-          }
-          gtag('set', 'anonymizeIp', true)
-          gtag('js', new Date())
-          gtag('config', 'UA-140457046-4', { anonymize_ip: true })
-        },
-        declined: () => {}
-      }
-    ]
-  },
   optimizedImages: {
     optimizeImages: true,
     optimizeImagesInDev: true,

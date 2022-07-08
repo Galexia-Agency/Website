@@ -415,24 +415,6 @@
     margin: 0
   }
 
-  /* Cookies */
-  .cookieControl__ModalContent {
-    overflow: auto
-  }
-  .cookieControl {
-    padding: 0
-  }
-  .cookieControl__Bar {
-    font-family: Open Sans, sans-serif
-  }
-  .cookieControl :any-link {
-    color: var(--primaryColor);
-    font-weight: bold
-  }
-  .cookieControl :any-link:hover {
-    text-decoration: underline
-  }
-
   /* Legal */
   .legal h1 {
     font-size: 2rem
@@ -449,7 +431,7 @@
     font-weight: normal
   }
   @media print {
-    .cookieControl, nav, .footer--bottom, .socialLinks {
+    nav, .footer--bottom, .socialLinks {
       display: none
     }
     .footer--copyrightInner {
@@ -852,9 +834,6 @@
     .socialLinks a {
       color: white
     }
-    .cookieControl__ControlButton {
-      bottom: 10px
-    }
     .logo svg {
       width: 150px
     }
@@ -913,9 +892,6 @@
     }
   }
   @media (max-width: 600px) {
-    .cookieControl__ControlButton {
-      bottom: 35px
-    }
     .footer--copyrightInner {
       padding: 0 1rem;
       grid-template-columns: 1fr;
@@ -1021,15 +997,6 @@
       <nuxt keep-alive />
     </main>
     <footer>
-      <CookieControl>
-        <template #bar>
-          <p>
-            We use cookies and other tracking technologies to improve your browsing experience on our site, analyze site traffic, and understand where our audience is coming from. To find out more, please read our <nuxt-link to="/legal/cookie-policy/">
-              Cookie Policy
-            </nuxt-link>.
-          </p>
-        </template>
-      </CookieControl>
       <div class="footer--bottom_container">
         <div class="footer--bottom maxWidth">
           <div class="logo--container">
