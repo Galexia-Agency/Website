@@ -2,7 +2,7 @@
   <div id="web">
     <Header
       title="Contemporary Web Design and Development"
-      desc="We're in the business of building fast, secure, scalable sites. How do we do that you ask? We use the Jamstack. It stands for Javascript, APIs and Markup. You can find out more about it at <a href='https://jamstack.org'>Jamstack.org</a> but that’s why you pay us; to take care of learning all about the latest and greatest standards in the world of the web so that you can focus on what you do best."
+      desc="We're in the business of building fast, secure, scalable sites. We specialize in WordPress as it aligns with our ethos as a company. You can find out more about it at <a href='https://wordpress.org'>WordPress.org</a> but that’s why you pay us; to take care of learning all about the latest and greatest standards in the world of the web so that you can focus on what you do best."
       :link="{location: '/hosting/', text: 'Check out our custom hosting'}"
     />
     <section class="white">
@@ -10,7 +10,7 @@
         <div v-infocus="'showElement'" class="hidden hidden-left">
           <h3>Why us?</h3>
           <p class="text--normal">
-            Simply put, many agencies can’t afford to learn and implement the latest and greatest technologies. They’re too busy supporting legacy systems and technologies to fully utilize the Jamstack and other developments within the web industry.
+            Simply put, many agencies can’t afford to learn and implement the latest and greatest technologies. They’re too busy supporting legacy systems and technologies to fully utilize modern developments within WordPress and the web industry.
           </p>
           <p class="text--normal">
             We’re a relatively new company, built from the ground up on the promise of delivering fast, secure, and scalable sites. We can build you a shiny new website or help update your current one.
@@ -26,7 +26,7 @@
         <div v-infocus="'showElement'" class="hidden hidden-right">
           <h3>WordPress</h3>
           <p class="text--normal">
-            We think WordPress is great. In fact, we use it for many of our internal projects. There are over 50,000 plugins for all sorts of requirements. It’s open-source and maintained by a great community. It’s easy for your staff or content producers to edit the site with the intuitive backend. …But it’s not Jamstack. It’s slow; each page has to be rendered by a server, set up by some tech guru, because of this, a site with 100,000 monthly visits can cost around £300 a year to host. It’s insecure; ever seen those articles about the latest WordPress plugin security vulnerabilities? We give you the best of both worlds. The WordPress backend you know and love, with the Jamstack front-end that’s fast, secure, and scalable.
+            We think WordPress is great. In fact, we use it for many of our internal projects. There are over 50,000 plugins for all sorts of requirements. It’s open-source and maintained by a great community. It’s easy for your staff or content producers to edit the site with the intuitive backend. There are some caveats to WordPress such as each page has to be rendered by a server, however, we utilize full page caching to drastically speed up TTFB. You may see some about the latest WordPress plugin security vulnerabilities, we have a server as secure as the Phantom Zone, custom tweaks to WordPress to lock your site down, and we run daily security scans on your website for peace of mind.
           </p>
           <nuxt-link class="button" to="/contact/">
             Start building
@@ -50,7 +50,7 @@
         <div v-infocus="'showElement'" class="hidden hidden-right">
           <h3>Love our ethos but have an older site?</h3>
           <p class="text--normal">
-            We’ve often had clients come to us who use a different platform than advertised on our site. That’s okay, we can update your site to use the Jamstack, or continue to use your current site, and create another layer on top, which is fast, secure, and scalable.
+            We’ve often had clients come to us who use a different platform than advertised on our site. That’s okay, we can update your site to use our fast, secure, and scalable WordPress stack.
           </p>
           <nuxt-link class="button" to="/contact/">
             Upgrade your site
@@ -104,12 +104,12 @@ export default {
     return {
       title: 'Web',
       meta: [
-        { hid: 'description', name: 'description', content: 'We\'re in the business of building fast, secure, scalable sites. How do we do that you ask? We use the Jamstack. It stands for Javascript, APIs and Markup.' },
+        { hid: 'description', name: 'description', content: 'We\'re in the business of building fast, secure, scalable sites. We specialize in WordPress as it aligns with our ethos as a company. You can find out more about it at WordPress.org but that’s why you pay us; to take care of learning all about the latest and greatest standards in the world of the web so that you can focus on what you do best.' },
         { hid: 'og:title', property: 'og:title', content: 'Web' },
-        { hid: 'og:description', property: 'og:description', content: 'We\'re in the business of building fast, secure, scalable sites. How do we do that you ask? We use the Jamstack. It stands for Javascript, APIs and Markup.' },
+        { hid: 'og:description', property: 'og:description', content: 'We\'re in the business of building fast, secure, scalable sites. We specialize in WordPress as it aligns with our ethos as a company. You can find out more about it at WordPress.org but that’s why you pay us; to take care of learning all about the latest and greatest standards in the world of the web so that you can focus on what you do best.' },
         { hid: 'og:image', property: 'og:image', content: 'https://galexia.agency/icon.png' },
         { hid: 'twitter:title', name: 'twitter:title', content: 'Web' },
-        { hid: 'twitter:description', name: 'twitter:description', content: 'We\'re in the business of building fast, secure, scalable sites. How do we do that you ask? We use the Jamstack. It stands for Javascript, APIs and Markup.' },
+        { hid: 'twitter:description', name: 'twitter:description', content: 'We\'re in the business of building fast, secure, scalable sites. We specialize in WordPress as it aligns with our ethos as a company. You can find out more about it at WordPress.org but that’s why you pay us; to take care of learning all about the latest and greatest standards in the world of the web so that you can focus on what you do best.' },
         { hid: 'twitter:img', name: 'twitter:img', content: 'https://galexia.agency/icon.png' }
       ],
       link: [

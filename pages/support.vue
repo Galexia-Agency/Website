@@ -22,13 +22,10 @@
         <div v-infocus="'showElement'" class="hidden hidden-left">
           <h3>Hosting issues</h3>
           <p class="text--normal">
-            Sometimes your website can go down because your host can't handle a spike in web traffic. This causes the server to freeze and shut down. Think of sites on Black Friday, they often have queues to get on the site to prevent this very issue. Our Jamstack approach to websites minimizes this issue as only static files are served to customers. This means a lot less processing for the server to do, letting it serve a lot more people.
+            Sometimes your website can go down because your host can't handle a spike in web traffic. This causes the server to freeze and shut down. Think of sites on Black Friday, they often have queues to get on the site to prevent this very issue. We use full page caching to minimize this issue as only static files are served to customers. Dynamic e-commerce pages like a users cart are not cached to ensure the correct functionality of yoru site. This means a lot less processing for the server to do, letting it serve a lot more people.
           </p>
           <p class="text--normal">
-            What happens if you don't have the budget for a shiny new Jamstack site though? Well, there are various things we can do to help minimize the load on your server. Caching is key as it means the server only has to respond to the request once, then this request is stored and can be served numerous times without putting stress on your server.
-          </p>
-          <p class="text--normal">
-            Traditional servers also come with some security issues. A Distributed Denial-of-Service (<abbr>DDOS</abbr>) Attack is where one or many computers send repeated requests to your website in order to overload the system or to repeatedly guess a password until they gain access. There are many other types of attacks too. By installing <a href="https://www.cloudflare.com/">Cloudflare</a> we mitigate a lot of these issues. As an added bonus Cloudflare also has built-in caching support.
+            Traditional servers also come with some security issues. A Distributed Denial-of-Service (<abbr>DDOS</abbr>) Attack is where one or many computers send repeated requests to your website in order to overload the system or to repeatedly guess a password until they gain access. There are many other types of attacks too. By using <a href="https://www.cloudflare.com/">Cloudflare</a> we mitigate a lot of these issues. As an added bonus Cloudflare also has built-in caching support.
           </p>
         </div>
         <div v-infocus="'showElement'" class="hidden hidden-right svg" v-html="require('../assets/svg/server.svg?include')" />

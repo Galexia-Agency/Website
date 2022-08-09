@@ -36,7 +36,7 @@
           <div>
             <h1>We're happy you're considering Galexia Creative Agency Ltd to build your new online presence</h1>
             <p>
-              We specialise in two types of websites, WordPress and Jamstack. By filling in this form you'll help us gain a better understanding of what your requirements are and the type of site to offer you.
+              We specialise in WordPress websites. By filling in this form you'll help us gain a better understanding of what your requirements are.
             </p>
             <form method="post" name="leadForm" netlify @submit.prevent="onSubmit">
               <input
