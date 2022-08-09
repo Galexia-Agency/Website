@@ -1100,7 +1100,6 @@ export default {
         document.documentElement.classList.add('nav_close')
         // eslint-disable-next-line no-undef
         background()
-        console.log('background')
       }, 1000)
     }
   },
