@@ -94,7 +94,7 @@
     </section>
     <section class="white">
       <h2>Content Creation</h2>
-      <div class="grid column maxWidth three">
+      <div class="grid column maxWidth four">
         <div v-infocus="'showElement'" class="card hidden">
           <h3>Photography</h3>
           <div class="svg" v-html="require('../assets/svg/photography.svg?include')" />
@@ -140,7 +140,6 @@ export default {
     return {
       title: 'Marketing',
       meta: [
-        { hid: 'robots', name: 'robots', content: 'noindex' },
         { hid: 'description', name: 'description', content: 'However you wish to pursue your business marketing is vital in finding and retaining customers.' },
         { hid: 'og:title', property: 'og:title', content: 'Marketing' },
         { hid: 'og:description', property: 'og:description', content: 'However you wish to pursue your business marketing is vital in finding and retaining customers.' },

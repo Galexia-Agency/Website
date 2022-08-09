@@ -1,7 +1,7 @@
 <template>
   <div id="web">
     <Header
-      title="Contemporary Web Design and Development"
+      title="Web Design and Development"
       desc="We're in the business of building fast, secure, scalable sites. We specialize in WordPress as it aligns with our ethos as a company. You can find out more about it at <a href='https://wordpress.org'>WordPress.org</a> but that’s why you pay us; to take care of learning all about the latest and greatest standards in the world of the web so that you can focus on what you do best."
       :link="{location: '/hosting/', text: 'Check out our custom hosting'}"
     />
@@ -69,18 +69,18 @@
         </div>
         <div v-infocus="'showElement'" class="hidden hidden-right svg" v-html="require('../assets/svg/hosting.svg?include')" />
       </div>
-      <!--<div class="grid right maxWidth">
+      <div class="grid right maxWidth">
         <div v-infocus="'showElement'" class="hidden hidden-left svg" v-html="require('../assets/svg/search.svg?include')" />
         <div v-infocus="'showElement'" class="hidden hidden-right">
           <h3>SEO</h3>
           <p class="text--normal">
-            Remember that Jamstack thing we talked about? That’s great for SEO too. Search engine algorithms have slowly been moving away from keywords and backlinks. Search engines are now focussed on website speed and high-quality content, things the Jamstack is great for. If you choose us to build your website you can rest assured we take care of SEO. In turn, generating more traffic to your website, and more leads.
+            Our modern WordPress stack isgreat for SEO too. Search engine algorithms have slowly been moving away from keywords and backlinks. Search engines are now focussed on website speed and high-quality content, things WordPress is great for. If you choose us to build your website you can rest assured we take care of SEO. In turn, generating more traffic to your website, and more leads.
           </p>
           <nuxt-link class="button" to="/seo/">
             Find out more
           </nuxt-link>
         </div>
-      </div>-->
+      </div>
     </section>
     <section class="white text-center">
       <div class="maxWidth">
@@ -102,7 +102,7 @@ export default {
   },
   head () {
     return {
-      title: 'Web',
+      title: 'Web Design and Development',
       meta: [
         { hid: 'description', name: 'description', content: 'We\'re in the business of building fast, secure, scalable sites. We specialize in WordPress as it aligns with our ethos as a company. You can find out more about it at WordPress.org but that’s why you pay us; to take care of learning all about the latest and greatest standards in the world of the web so that you can focus on what you do best.' },
         { hid: 'og:title', property: 'og:title', content: 'Web' },

@@ -978,9 +978,9 @@
           <nuxt-link to="/hosting/" class="nav--link">
             Hosting
           </nuxt-link>
-          <!--<nuxt-link to="/marketing/" class="nav--link">
+          <nuxt-link to="/marketing/" class="nav--link">
             Marketing
-          </nuxt-link>-->
+          </nuxt-link>
           <nuxt-link to="/blog/" class="nav--link">
             Blog
           </nuxt-link>
@@ -1100,6 +1100,7 @@ export default {
         document.documentElement.classList.add('nav_close')
         // eslint-disable-next-line no-undef
         background()
+        console.log('background')
       }, 1000)
     }
   },

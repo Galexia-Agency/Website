@@ -47,7 +47,7 @@
           </p>
         </div>
       </div>
-      <div class="grid left maxWidth">
+      <!-- <div class="grid left maxWidth">
         <div v-infocus="'showElement'" class="hidden hidden-left">
           <h3>Facebook support community</h3>
           <p class="text--normal">
@@ -55,7 +55,7 @@
           </p>
         </div>
         <div v-infocus="'showElement'" class="hidden hidden-right svg" v-html="require('../assets/svg/community.svg?include')" />
-      </div>
+      </div> -->
     </section>
     <section class="white">
       <h2>Common issues</h2>
