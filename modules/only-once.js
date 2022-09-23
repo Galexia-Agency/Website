@@ -41,160 +41,176 @@ export default async function () {
   })
 
   /* Testimonials */
-  const testimonialResponse = await apolloClient.query({
-    query: gql`
-      query Testimonial {
-        posts(where: {categoryName: "Testimonials"}) {
-          nodes {
-            title
-            content
+  try {
+    const testimonialResponse = await apolloClient.query({
+      query: gql`
+        query Testimonial {
+          posts(where: {categoryName: "Testimonials"}) {
+            nodes {
+              title
+              content
+            }
           }
         }
-      }
-    `
-  })
-  state.testimonials = testimonialResponse.data.posts.nodes
+      `
+    })
+    state.testimonials = testimonialResponse.data.posts.nodes
+  } catch (e) {
+    throw e
+  }
 
   /* Blogs */
-  const blogResponse = await apolloClient.query({
-    query: gql`
-      query Blog {
-        posts(where: {categoryName: "Blog", status: PUBLISH}) {
-          nodes {
-            title
-            author {
-              node {
-                name
-              }
-            }
-            excerpt
-            featuredImage {
-              node{
-                mediaItemUrl
-              }
-            }
-            slug
-            date
-          }
-        }
-      }
-      `
-  })
-  const blogArr = []
-  for (const a in blogResponse.data.posts.nodes) {
-    const blogResponse2 = await apolloClient.query({
+  try {
+    const blogResponse = await apolloClient.query({
       query: gql`
-        query Article($slug: ID!) {
-          post(id: $slug, idType: SLUG) {
-            title
-            content
-            date
-            excerpt
-            slug
-            author {
-              node {
-                name
+        query Blog {
+          posts(where: {categoryName: "Blog", status: PUBLISH}) {
+            nodes {
+              title
+              author {
+                node {
+                  name
+                }
               }
-            }
-            featuredImage {
-              node {
-                mediaItemUrl
+              excerpt
+              featuredImage {
+                node{
+                  mediaItemUrl
+                }
               }
-            }
-            seo {
-              metaDesc
+              slug
+              date
             }
           }
         }
-      `,
-      variables: {
-        slug: blogResponse.data.posts.nodes[a].slug
-      }
+        `
     })
-    blogArr.push(blogResponse2.data.post)
+    const blogArr = []
+    for (const a in blogResponse.data.posts.nodes) {
+      const blogResponse2 = await apolloClient.query({
+        query: gql`
+          query Article($slug: ID!) {
+            post(id: $slug, idType: SLUG) {
+              title
+              content
+              date
+              excerpt
+              slug
+              author {
+                node {
+                  name
+                }
+              }
+              featuredImage {
+                node {
+                  mediaItemUrl
+                }
+              }
+              seo {
+                metaDesc
+              }
+            }
+          }
+        `,
+        variables: {
+          slug: blogResponse.data.posts.nodes[a].slug
+        }
+      })
+      blogArr.push(blogResponse2.data.post)
+    }
+    state.blog = blogResponse.data.posts.nodes
+    state.blogs = blogArr
+  } catch (e) {
+    throw e
   }
-  state.blog = blogResponse.data.posts.nodes
-  state.blogs = blogArr
 
   /* Legal */
-  const legalResponse = await apolloClient.query({
-    query: gql`
-      query Legal {
-        posts(where: {categoryName: "Legal", status: PUBLISH}) {
-          nodes {
-            title
-            slug
-          }
-        }
-      }
-    `
-  })
-  const legalArr = []
-  for (const c in legalResponse.data.posts.nodes) {
-    const response = await apolloClient.query({
+  try {
+    const legalResponse = await apolloClient.query({
       query: gql`
-        query Article($slug: ID!) {
-          post(id: $slug, idType: SLUG) {
-            title
-            content
-            slug
-            modified
+        query Legal {
+          posts(where: {categoryName: "Legal", status: PUBLISH}) {
+            nodes {
+              title
+              slug
+            }
           }
         }
-      `,
-      variables: {
-        slug: legalResponse.data.posts.nodes[c].slug
-      }
+      `
     })
-    legalArr.push(response.data.post)
-  }
+    const legalArr = []
+    for (const c in legalResponse.data.posts.nodes) {
+      const response = await apolloClient.query({
+        query: gql`
+          query Article($slug: ID!) {
+            post(id: $slug, idType: SLUG) {
+              title
+              content
+              slug
+              modified
+            }
+          }
+        `,
+        variables: {
+          slug: legalResponse.data.posts.nodes[c].slug
+        }
+      })
+      legalArr.push(response.data.post)
+    }
 
-  state.legal = legalResponse.data.posts.nodes
-  state.legals = legalArr
+    state.legal = legalResponse.data.posts.nodes
+    state.legals = legalArr
+  } catch (e) {
+    throw e
+  }
 
   /* Portfolio */
-  const portfolioResponse = await apolloClient.query({
-    query: gql`
-      query Portfolio {
-        posts(where: {categoryName: "Portfolio"}) {
-          nodes {
-            id
-          }
-        }
-      }
-    `
-  })
-  const portfolioArr = []
-  for (const b in portfolioResponse.data.posts.nodes) {
-    const response = await apolloClient.query({
+  try {
+    const portfolioResponse = await apolloClient.query({
       query: gql`
-        query Portfolio($id: ID!)  {
-          post(id: $id, idType: ID) {
-            title
-            content
-            featuredImage {
-              node {
-                mediaItemUrl
-              }
-            }
-            tags {
-              nodes {
-                name
-              }
-            }
-            ACFLink {
-              link
+        query Portfolio {
+          posts(where: {categoryName: "Portfolio"}) {
+            nodes {
+              id
             }
           }
         }
-      `,
-      variables: {
-        id: portfolioResponse.data.posts.nodes[b].id
-      }
+      `
     })
-    portfolioArr.push(response.data.post)
+    const portfolioArr = []
+    for (const b in portfolioResponse.data.posts.nodes) {
+      const response = await apolloClient.query({
+        query: gql`
+          query Portfolio($id: ID!)  {
+            post(id: $id, idType: ID) {
+              title
+              content
+              featuredImage {
+                node {
+                  mediaItemUrl
+                }
+              }
+              tags {
+                nodes {
+                  name
+                }
+              }
+              ACFLink {
+                link
+              }
+            }
+          }
+        `,
+        variables: {
+          id: portfolioResponse.data.posts.nodes[b].id
+        }
+      })
+      portfolioArr.push(response.data.post)
+    }
+    state.portfolio = portfolioResponse.data.posts.nodes
+  } catch (e) {
+    throw e
   }
-  state.portfolio = portfolioResponse.data.posts.nodes
 
   const browser = await chromium.puppeteer.launch({
     executablePath: await chromium.executablePath,
