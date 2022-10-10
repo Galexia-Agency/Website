@@ -165,6 +165,7 @@ export default async function () {
   }
 
   /* Portfolio */
+  const portfolioArr = []
   try {
     const portfolioResponse = await apolloClient.query({
       query: gql`
@@ -177,7 +178,6 @@ export default async function () {
         }
       `
     })
-    const portfolioArr = []
     for (const b in portfolioResponse.data.posts.nodes) {
       const response = await apolloClient.query({
         query: gql`
