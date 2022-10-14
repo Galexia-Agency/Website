@@ -1044,6 +1044,7 @@
               © {{ new Date().getFullYear() }} Galexia Creative Agency Ltd. A company registered in England and Wales. Company No. 12853224.
             </p>
             <div class="socialLinks">
+              <a href="https://digitalagencynetwork.com/agencies/cambridge" target="_blank"><img style="width:160px; height:auto;" src="https://digitalagencynetwork.com/wp-content/themes/danglobal/assets/images/badges/dark.svg" alt="Cambridge digital agency network member badge dark" /></a>
               <a href="https://fb.me/GalexiaAgency" target="_blank" rel="noopener noreferrer" title="Facebook">
                 <font-awesome-icon :icon="['fab', 'facebook']" />
               </a>
