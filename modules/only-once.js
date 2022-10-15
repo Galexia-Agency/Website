@@ -1,3 +1,4 @@
+/* eslint-disable no-useless-catch */
 import { ApolloClient } from 'apollo-client'
 import { InMemoryCache } from 'apollo-cache-inmemory'
 import { createHttpLink } from 'apollo-link-http'
@@ -16,7 +17,7 @@ const state = {
   legals: []
 }
 
-const delay = ms => new Promise(res => setTimeout(res, ms))
+const delay = ms => new Promise((resolve, reject) => setTimeout(resolve, ms))
 
 function isFullUrl (url) {
   try {
