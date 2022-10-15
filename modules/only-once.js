@@ -46,7 +46,7 @@ export default async function () {
     const testimonialResponse = await apolloClient.query({
       query: gql`
         query Testimonial {
-          posts(where: {categoryName: "Testimonials"}) {
+          posts(where: {categoryName: "Testimonials"}, first: 100) {
             nodes {
               title
               content
@@ -65,7 +65,7 @@ export default async function () {
     const blogResponse = await apolloClient.query({
       query: gql`
         query Blog {
-          posts(where: {categoryName: "Blog", status: PUBLISH}) {
+          posts(where: {categoryName: "Blog", status: PUBLISH}, first: 100) {
             nodes {
               title
               author {
@@ -130,7 +130,7 @@ export default async function () {
     const legalResponse = await apolloClient.query({
       query: gql`
         query Legal {
-          posts(where: {categoryName: "Legal", status: PUBLISH}) {
+          posts(where: {categoryName: "Legal", status: PUBLISH}, first: 100) {
             nodes {
               title
               slug
@@ -171,7 +171,7 @@ export default async function () {
     const portfolioResponse = await apolloClient.query({
       query: gql`
         query Portfolio {
-          posts(where: {categoryName: "Portfolio"}) {
+          posts(where: {categoryName: "Portfolio"}, first: 100) {
             nodes {
               id
             }
