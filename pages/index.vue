@@ -200,7 +200,7 @@
           <div v-if="post.ACFLink" class="card--inner">
             <img
               v-if="post.featuredImage.node.mediaItemUrl"
-              :src="post.featuredImage.node.mediaItemUrl"
+              :src="post.featuredImage.node.mediaItemUrl.replace('q_auto', 'q_auto,w_500,h_413')"
               width="100%"
               height="auto"
               :alt="post.title"
