@@ -217,7 +217,7 @@ export default {
         if (process.client) {
           return navigator.canShare({
             title: this.blog.title + ' | Blog',
-            text: this.blog.excerpt.replace('<p>', '').replace('</p>', '').replace('[&hellip;]', '').replace('\n', ''),
+            text: this.blog.excerpt.replaceAll('<p>', '').replaceAll('</p>', '').replaceAll('[&hellip;]', '').replaceAll('\n', ''),
             url: 'https://galexia.agency' + this.$router.currentRoute.path
           })
         } else {
@@ -235,7 +235,7 @@ export default {
     nativeShare () {
       navigator.share({
         title: this.blog.title + ' | Blog',
-        text: this.blog.excerpt.replace('<p>', '').replace('</p>', '').replace('[&hellip;]', '').replace('\n', ''),
+        text: this.blog.excerpt.replaceAll('<p>', '').replaceAll('</p>', '').replaceAll('[&hellip;]', '').replaceAll('\n', ''),
         url: 'https://galexia.agency' + this.$router.currentRoute.path
       })
     }
