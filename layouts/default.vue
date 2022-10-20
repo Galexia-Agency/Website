@@ -18,7 +18,7 @@
     font-size: 16px;
     font-weight: 400;
     scroll-behavior: var(--motion);
-    background-size: var(--backgroundSize);
+    background-size: var(--backgroundSize, 4500px);
     background-repeat: no-repeat;
     background-image: url('../assets/img/SpaceBackgroundBlurred.jpg?webp')
   }
@@ -26,18 +26,12 @@
     background-image: url('../assets/img/SpaceBackgroundBlurred.jpg?resize')
   }
   main header {
-    background-size: var(--backgroundSize);
+    background-size: var(--backgroundSize, 4500px);
     background-image: linear-gradient(rgba(53, 47, 114, .33), rgba(53, 47, 114, .33)), url('../assets/img/SpaceBackgroundBlurred.jpg?webp');
     background-position: 0 -135px
   }
   .no-webp main header {
     background-image: linear-gradient(rgba(53, 47, 114, .33), rgba(53, 47, 114, .33)), url('../assets/img/SpaceBackgroundBlurred.jpg?resize')
-  }
-
-  @media (min-width: 1700px) {
-    body, main header {
-      background-size: 125vw
-    }
   }
   ::selection {
     background: #1C2AB1;
@@ -339,6 +333,14 @@
   }
   .footer--bottom_contact h4:not(:first-of-type) {
     margin-top: 1rem
+  }
+  @media (max-width: 500px) {
+    .socialLinks {
+      grid-auto-flow: initial
+    }
+    .DAN {
+      grid-column: span 5
+    }
   }
 
   /* Pages */
@@ -890,8 +892,6 @@
       /* stylelint-disable-next-line */
       --delay: 0s!important
     }
-  }
-  @media (max-width: 600px) {
     .footer--copyrightInner {
       padding: 0 1rem;
       grid-template-columns: 1fr;
@@ -1044,7 +1044,7 @@
               © {{ new Date().getFullYear() }} Galexia Creative Agency Ltd. A company registered in England and Wales. Company No. 12853224.
             </p>
             <div class="socialLinks">
-              <a href="https://digitalagencynetwork.com/agencies/cambridge" target="_blank"><img style="width: 160px; height: auto" src="https://digitalagencynetwork.com/wp-content/themes/danglobal/assets/images/badges/dark.svg" alt="Cambridge digital agency network member badge dark"></a>
+              <a href="https://digitalagencynetwork.com/agencies/cambridge" target="_blank" class="DAN"><img style="width: 160px; height: auto" src="https://digitalagencynetwork.com/wp-content/themes/danglobal/assets/images/badges/dark.svg" alt="Cambridge digital agency network member badge dark"></a>
               <a href="https://fb.me/GalexiaAgency" target="_blank" rel="noopener noreferrer" title="Facebook">
                 <font-awesome-icon :icon="['fab', 'facebook']" />
               </a>
@@ -1080,7 +1080,6 @@ export default {
     return {
       count: 1,
       motion: 'auto',
-      background_size: null,
       expanded: null
     }
   },

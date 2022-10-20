@@ -13,7 +13,7 @@
     const body = document.body
     const html = document.documentElement
     const height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight)
-    body.style.setProperty('--backgroundSize', height > ((window.innerWidth * 1.6875) * 1.25) ? height + 'px' : '125vw')
+    body.style.setProperty('--backgroundSize', height > 4500 ? height + 'px' : '4500px')
   }
   background()
   window.addEventListener('resize', function () {

@@ -126,7 +126,11 @@
       left: calc((100vw - 322px) / 2)
     }
     .icons {
-      gap: 0
+      gap: 0;
+      display: flex;
+      justify-content: space-between;
+      padding-left: 5px;
+      padding-right: 5px
     }
   }
   @media (max-width: 402px) {
