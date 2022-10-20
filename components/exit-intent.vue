@@ -1,64 +1,127 @@
-<style lang="scss">
+<style lang="scss" scoped>
+  .modal-enter-active,
+  .modal-leave-active {
+    transition: all .4s
+  }
+  .modal-enter,
+  .modal-leave-to {
+    opacity: 0
+  }
+  .exit-modal {
+    z-index: 99;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, .75);
+    backdrop-filter: blur(5px);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center
+  }
+  .exit-modal__inner {
+    position: relative;
+    max-width: min(90%, 700px);
+    max-height: 90vh;
+    overflow: auto;
+    background-color: white;
+    border-radius: 1rem;
+    // stylelint-disable-next-line
+    box-shadow: 0 5px 5px RGB(26 35 126 / 8%);
+    padding: 2.5rem 2rem;
+    color: #212121
+  }
+  .exit-modal__close {
+    position: absolute;
+    top: 2.5rem;
+    right: 2rem;
+    &:before,
+    &:after {
+      content: '';
+      border-bottom: 1px solid rgba(0, 0, 0, .5);
+      width: 1.5rem;
+      height: 1px;
+      display: block
+    }
+    &:before {
+      transform: rotate(135deg)
+    }
+    &:after {
+      transform: rotate(45deg);
+      margin-top: -.1663rem
+    }
+  }
+  .exit-modal__content {
+    display: grid;
+    gap: 2rem;
+    h3 {
+      color: var(--primaryColor);
+      margin: 0
+    }
+    p {
+      margin: 0;
+      font-size: 1.15rem
+    }
+  }
+  form {
+    grid-template-columns: 1fr;
+    .button {
+      width: fit-content
+    }
+  }
 </style>
 
 <template>
   <transition name="modal">
     <div
       v-if="exitIntent"
-      id="exit-modal"
-      style="z-index: 71"
-      class="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full"
+      class="exit-modal"
       @click="exit"
     >
-      <div
-        class="relative top-20 mx-auto p-8 rounded-md bg-paper dark:bg-slate"
-      >
-        <a
-          class="absolute top-8 right-8 cursor-pointer hover:opacity-60 transition-all rounded-none"
-          href="#"
-          @click.prevent="exitIntent = false"
-        />
-        <div class="text-center">
+      <div class="exit-modal__inner">
+        <a class="exit-modal__close" href="#" @click.prevent="exitIntent = false" />
+        <div class="exit-modal__content">
           <h3>
             Let's stay connected!
           </h3>
-          <p class="my-8">
+          <p>
             Sign up to our mailing list to learn more about WordPress and how we can help your business succeed.
           </p>
           <form @submit.prevent="mc(name, email, website)">
-            <input
-              v-model="name"
-              class="sm:w-1/2 mr-4"
-              placeholder="Name"
-              type="name"
-              required
-            >
-            <input
-              v-model="email"
-              class="sm:w-1/2 mr-4"
-              placeholder="Email"
-              type="email"
-              required
-            >
-            <input
-              v-model="website"
-              class="sm:w-1/2 mr-4"
-              placeholder="Website"
-              type="url"
-              required
-            >
+            <label>
+              Name:
+              <input
+                v-model="name"
+                type="name"
+                required
+              >
+            </label>
+            <label>
+              Email:
+              <input
+                v-model="email"
+                type="email"
+                required
+              >
+            </label>
+            <label>
+              Website:
+              <input
+                v-model="website"
+                type="url"
+                required
+              >
+            </label>
             <button
+              class="button"
               type="submit"
-              class="z-10 mt-2 sm:mt-0"
-              :disabled="!email || !ValidateEmail(email)"
+              :disabled="!name || !email || !ValidateEmail(email) || !website"
             >
-              Sign me up
+              Sign up
             </button>
           </form>
+          <span :class="messageClasses" v-html="message" />
         </div>
-        <span class="mt-4 mb-8" :class="messageClasses">
-          {{ message }}
-        </span>
       </div>
     </div>
   </transition>
@@ -73,7 +136,7 @@ export default {
       name: '',
       email: '',
       website: '',
-      message: 'By clicking sign up you consent to us adding you to our mailing list. We promise not to spam you!',
+      message: 'By clicking sign up you consent to us adding you to our mailing list.<br>We promise not to spam you!',
       messageClasses: '',
       exitIntent: false
     }
@@ -120,8 +183,8 @@ export default {
               e.preventDefault()
             }
           })
-
-          lastFocusableElement.focus()
+          // Focus on the first input
+          popup.querySelectorAll(focusableElements)[1].focus()
         }, 200)
 
         // Don't set the cookie if in development mode
@@ -163,7 +226,7 @@ export default {
   methods: {
     // Close the modal
     exit (e) {
-      if (e.target.id === 'exit-modal') {
+      if (e.target.classList.contains('exit-modal')) {
         this.exitIntent = false
       }
     },
