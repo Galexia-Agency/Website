@@ -1,6 +1,4 @@
-
 <style lang="scss">
-
   /* Resets */
   html {
     --delay: 0;
@@ -1065,16 +1063,19 @@
         </div>
       </div>
     </footer>
+    <exit-intent />
   </div>
 </template>
 
 <script>
 import { mapState } from 'vuex'
 import Hamburger from 'vue-hamburger/hamburger.vue'
+import ExitIntent from '../components/exit-intent.vue'
 
 export default {
   components: {
-    Hamburger
+    Hamburger,
+    ExitIntent
   },
   data () {
     return {

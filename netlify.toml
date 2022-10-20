@@ -1,52 +1,53 @@
 [build]
-command = "AWS_LAMBDA_FUNCTION_NAME=trickpuppeteer npm run generate --no-optional"
-publish = "dist"
+  command = "AWS_LAMBDA_FUNCTION_NAME=trickpuppeteer npm run generate --no-optional"
+  publish = "dist"
+  functions = "functions"
 
 [[redirects]]
-from = "https://galexia.netlify.app/*"
-to = "https://galexia.agency/:splat"
-status = 301
-force = true
+  from = "https://galexia.netlify.app/*"
+  to = "https://galexia.agency/:splat"
+  status = 301
+  force = true
 
 [[redirects]]
-from = "/index.html"
-to = "/"
-status = 301
-force = true
+  from = "/index.html"
+  to = "/"
+  status = 301
+  force = true
 
 [[headers]]
-for = "/*"
-[headers.values]
-X-Frame-Options = "SAMEORIGIN"
-X-XSS-Protection = "1; mode=block"
-X-Content-Type-Options = "nosniff"
-Referrer-Policy = "strict-origin-when-cross-origin"
-Content-Security-Policy = "upgrade-insecure-requests"
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Content-Security-Policy = "upgrade-insecure-requests"
 
 [[headers]]
-for = "/_nuxt/*"
-[headers.values]
-Cache-Control = "max-age=365000000, immutable"
+  for = "/_nuxt/*"
+  [headers.values]
+    Cache-Control = "max-age=365000000, immutable"
 
 [[plugins]]
-package = "@netlify/plugin-sitemap"
-[plugins.inputs]
-buildDir = "./dist"
-prettyURLs = true
-trailingSlash = true
-exclude = [
-  './dist/client/index.html',
-  './dist/404.html',
-  './dist/locations/index.html',
-  './dist/indev/index.html',
-  './dist/lead-questionnaire/index.html',
-  './dist/seo/index.html',
-  './dist/marketing/index.html',
-  './dist/careers/index.html',
-]
+  package = "@netlify/plugin-sitemap"
+  [plugins.inputs]
+    buildDir = "./dist"
+    prettyURLs = true
+    trailingSlash = true
+    exclude = [
+      './dist/client/index.html',
+      './dist/404.html',
+      './dist/locations/index.html',
+      './dist/indev/index.html',
+      './dist/lead-questionnaire/index.html',
+      './dist/seo/index.html',
+      './dist/marketing/index.html',
+      './dist/careers/index.html',
+    ]
 
 [[plugins]]
-package = "netlify-plugin-cache-nuxt"
+  package = "netlify-plugin-cache-nuxt"
 
 [[plugins]]
-package = "netlify-plugin-submit-sitemap"
+  package = "netlify-plugin-submit-sitemap"
