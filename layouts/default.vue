@@ -212,6 +212,16 @@
     display: grid;
     grid-auto-flow: column
   }
+  @media (max-width: 900px) {
+    nav {
+      grid-auto-flow: row;
+      justify-content: center
+    }
+    .js-active nav {
+      grid-auto-flow: column;
+      justify-content: initial
+    }
+  }
   .logo--container {
     display: grid;
     align-content: center;
@@ -760,22 +770,24 @@
   }
 
   /* Animation */
-  .js-active .hidden {
-    opacity: 0
-  }
-  @media (min-width: 900px) and (prefers-reduced-motion: no-preference) {
-    .hidden-right {
-      transform: translate(50px, 0)
+  .js-active {
+    .hidden {
+      opacity: 0
     }
-    .hidden-left {
-      transform: translate(-50px, 0)
+    @media (min-width: 900px) and (prefers-reduced-motion: no-preference) {
+      .hidden-right {
+        transform: translate(50px, 0)
+      }
+      .hidden-left {
+        transform: translate(-50px, 0)
+      }
     }
-  }
-  .showElement {
-    opacity: 1;
-    transform: translate(0, 0);
-    transition: all .75s ease-out;
-    transition-delay: var(--delay)
+    .showElement {
+      opacity: 1;
+      transform: translate(0, 0);
+      transition: all .75s ease-out;
+      transition-delay: var(--delay)
+    }
   }
 
   @media (max-width: 1435px) {
@@ -795,17 +807,19 @@
     #__nuxt {
       width: 100vw
     }
-    .nav--icon {
+    .js-active .nav--icon {
       display: block;
       fill: white;
       justify-self: end;
       align-self: center
     }
     .nav--container {
+      grid-auto-flow: row
+    }
+    .js-active .nav--container {
       height: 100vh;
       min-height: -webkit-fill-available;
       position: absolute;
-      grid-auto-flow: row;
       left: 100vw;
       top: 0;
       bottom: 0;
