@@ -760,7 +760,7 @@
   }
 
   /* Animation */
-  .hidden {
+  .js-active .hidden {
     opacity: 0
   }
   @media (min-width: 900px) and (prefers-reduced-motion: no-preference) {
@@ -1111,6 +1111,7 @@ export default {
     this.motion = await window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'
   },
   mounted () {
+    document.querySelector('html').classList.add('js-active')
     const self = this
     document.addEventListener('touchstart', handleTouchStart, false)
     document.addEventListener('touchmove', handleTouchMove, false)
