@@ -31,7 +31,7 @@
     "imagemin-pngquant": "^9.0.1",
     "imagemin-svgo": "^8.0.0",
     "jimp": "^0.16.1",
-    "netlify-plugin-cache-nuxt": "^0.0.1",
+    "netlify-plugin-cache": "^1.0.3",
     "netlify-plugin-submit-sitemap": "^0.4.0",
     "node-fetch": "^3.2.10",
     "nuxt": "^2.15.7",
