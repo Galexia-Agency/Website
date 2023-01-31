@@ -46,9 +46,4 @@ exclude = [
 ]
 
 [[plugins]]
-package = "netlify-plugin-cache"
-[plugins.inputs]
-paths = [".nuxt"]
-
-[[plugins]]
 package = "netlify-plugin-submit-sitemap"
