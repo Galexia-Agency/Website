@@ -83,13 +83,15 @@
         <div v-infocus="'showElement'" class="hidden hidden-left">
           <h3>Emails / Newsletters</h3>
           <p class="text--normal">
-            Creating an email list can be a great way to engage with potential customers. What do you do with all those emails? Why not have us deliver a tailored newsletter campaign to your email list encouraging them to engage with your brand and keeping them up-to-date on your current activities. If a customer trusts a brand, they’re more likely to use it in the future. We take great care in adhering to all local laws regarding emails including GDPR.
+            Creating an email list can be a great way to engage with potential customers. What do you do with all those emails? Why not have us deliver a tailored newsletter campaign to your email list encouraging them to engage with your brand and keeping them up-to-date on your current activities. If a customer trusts a brand, they’re more likely to use it in the future. We take great care in adhering to all local laws regarding emails including GDPR. Did you also know we're Mailchimp certified, making us better equipped to help you.
           </p>
           <nuxt-link class="button" to="/contact/">
             Create a campaign
           </nuxt-link>
         </div>
-        <div v-infocus="'showElement'" class="hidden hidden-right svg" v-html="require('../assets/svg/email.svg?include')" />
+        <div v-infocus="'showElement'" class="hidden hidden-right svg">
+          <img src="../assets/img/mailchimp_certified.jpg?size=1000" width="auto" height="325" alt="Mailchimp Certified">
+        </div>
       </div>
     </section>
     <section class="white">

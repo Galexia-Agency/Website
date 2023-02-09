@@ -293,7 +293,8 @@
     display: grid;
     grid-auto-flow: column;
     gap: 1rem;
-    align-content: center
+    align-content: center;
+    align-items: center
   }
   .socialLinks a {
     color: #FFFFFF99;
@@ -1032,7 +1033,6 @@
                 Legal
               </nuxt-link>
             </div>
-            <!--<img src="../assets/img/White_Badge_PolicyBee.png?size=75" width="75" height="75" alt="Insured through PolicyBee">-->
           </div>
           <div class="testimonials--container">
             <div class="testimonials">
@@ -1058,7 +1058,12 @@
               © {{ new Date().getFullYear() }} Galexia Creative Agency Ltd. A company registered in England and Wales. Company No. 12853224.
             </p>
             <div class="socialLinks">
-              <a href="https://digitalagencynetwork.com/agencies/cambridge" target="_blank" class="DAN"><img style="width: 160px; height: auto" src="https://digitalagencynetwork.com/wp-content/themes/danglobal/assets/images/badges/dark.svg" alt="Cambridge digital agency network member badge dark"></a>
+              <a href="https://www.policybee.co.uk/" target="_blank">
+                <img src="../assets/img/White_Badge_PolicyBee.png?size=75" width="75" height="75" alt="Insured through PolicyBee">
+              </a>
+              <a href="https://digitalagencynetwork.com/agencies/cambridge" target="_blank" class="DAN">
+                <img style="width: 160px; height: auto" src="https://digitalagencynetwork.com/wp-content/themes/danglobal/assets/images/badges/dark.svg" alt="Cambridge digital agency network member badge dark">
+              </a>
               <a href="https://fb.me/GalexiaAgency" target="_blank" rel="noopener noreferrer" title="Facebook">
                 <font-awesome-icon :icon="['fab', 'facebook']" />
               </a>
