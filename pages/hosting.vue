@@ -71,7 +71,7 @@ img {
           width="520"
           height="294"
           alt="Lighthouse Test"
-        />
+        >
         <p class="desc">
           Your website needs a home and we're happy to house it regardless of
           who built it. Below is an outline of our pricing for different plans.
@@ -84,62 +84,45 @@ img {
         <div class="shadow shadow-right" />
         <div class="mobile-table">
           <table class="comparison">
-            <colgroup>
-              <col width="33.33%" />
-              <col width="33.33%" />
-              <col width="33.33%" />
-            </colgroup>
             <thead>
               <tr>
                 <td>
-                  <h3>WordPress Hosting</h3>
-                </td>
-                <td>
-                  <h4 class="title">Starter</h4>
-                  <h3>£100/year</h3>
-                </td>
-                <td>
-                  <h4 class="title">Advanced</h4>
-                  <h3>£150/year</h3>
+                  <h3>WordPress Hosting for just £200/year</h3>
                 </td>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>
-                  Storage Capacity
+                  Near limitless storage Capacity
                   <v-popover placement="top">
                     <font-awesome-icon icon="question" />
                     <template slot="popover">
-                      <span
-                        >Includes all of the code used to run your site as well
-                        as content such as photos and videos</span
-                      >
+                      <span>
+                        Includes all of the code used to run your site as well
+                        as content such as photos and videos
+                      </span>
                     </template>
                   </v-popover>
                 </td>
-                <td>5GB</td>
-                <td>Near limitless</td>
               </tr>
               <tr>
                 <td>
-                  Network transfer
+                  Near limitless network transfer
                   <v-popover placement="top">
                     <font-awesome-icon icon="question" />
                     <template slot="popover">
-                      <span
-                        >How much data is transferred to your users when they
-                        visit your site</span
-                      >
+                      <span>
+                        How much data is transferred to your users when they
+                        visit your site
+                      </span>
                     </template>
                   </v-popover>
                 </td>
-                <td>5GB</td>
-                <td>Near limitless</td>
               </tr>
               <tr>
                 <td>
-                  Monthly visitors
+                  Near limitless monthly visitors
                   <v-popover placement="top">
                     <font-awesome-icon icon="question" />
                     <template slot="popover">
@@ -147,8 +130,6 @@ img {
                     </template>
                   </v-popover>
                 </td>
-                <td>5,000 Users</td>
-                <td>Near limitless</td>
               </tr>
               <tr>
                 <td>
@@ -156,18 +137,12 @@ img {
                   <v-popover placement="top">
                     <font-awesome-icon icon="question" />
                     <template slot="popover">
-                      <span
-                        >You will need to purchase seperate hosting plans for
-                        each site you own</span
-                      >
+                      <span>
+                        You will need to purchase seperate hosting plans for
+                        each site you own
+                      </span>
                     </template>
                   </v-popover>
-                </td>
-                <td>
-                  <font-awesome-icon :icon="['far', 'check-circle']" />
-                </td>
-                <td>
-                  <font-awesome-icon :icon="['far', 'check-circle']" />
                 </td>
               </tr>
               <tr>
@@ -180,18 +155,12 @@ img {
                   <v-popover placement="top">
                     <font-awesome-icon icon="question" />
                     <template slot="popover">
-                      <span
-                        >Your website will be available for viewers almost all
-                        of the time. There may be very minor outages</span
-                      >
+                      <span>
+                        Your website will be available for viewers almost all
+                        of the time. There may be very minor outages
+                      </span>
                     </template>
                   </v-popover>
-                </td>
-                <td>
-                  <font-awesome-icon :icon="['far', 'check-circle']" />
-                </td>
-                <td>
-                  <font-awesome-icon :icon="['far', 'check-circle']" />
                 </td>
               </tr>
               <tr>
@@ -200,18 +169,12 @@ img {
                   <v-popover placement="top">
                     <font-awesome-icon icon="question" />
                     <template slot="popover">
-                      <span
-                        >Latest version of PHP, the language WordPress
-                        uses</span
-                      >
+                      <span>
+                        Latest version of PHP, the language WordPress
+                        uses
+                      </span>
                     </template>
                   </v-popover>
-                </td>
-                <td>
-                  <font-awesome-icon :icon="['far', 'check-circle']" />
-                </td>
-                <td>
-                  <font-awesome-icon :icon="['far', 'check-circle']" />
                 </td>
               </tr>
               <tr>
@@ -220,18 +183,12 @@ img {
                   <v-popover placement="top">
                     <font-awesome-icon icon="question" />
                     <template slot="popover">
-                      <span
-                        >Cutting edge version of HTTP which uses QUIC as it's
-                        engine</span
-                      >
+                      <span>
+                        Cutting edge version of HTTP which uses QUIC as it's
+                        engine
+                      </span>
                     </template>
                   </v-popover>
-                </td>
-                <td>
-                  <font-awesome-icon :icon="['far', 'check-circle']" />
-                </td>
-                <td>
-                  <font-awesome-icon :icon="['far', 'check-circle']" />
                 </td>
               </tr>
               <tr>
@@ -240,18 +197,12 @@ img {
                   <v-popover placement="top">
                     <font-awesome-icon icon="question" />
                     <template slot="popover">
-                      <span
-                        >Latest compression algorithm reducing the size of the
-                        website, improving load time</span
-                      >
+                      <span>
+                        Latest compression algorithm reducing the size of the
+                        website, improving load time
+                      </span>
                     </template>
                   </v-popover>
-                </td>
-                <td>
-                  <font-awesome-icon :icon="['far', 'check-circle']" />
-                </td>
-                <td>
-                  <font-awesome-icon :icon="['far', 'check-circle']" />
                 </td>
               </tr>
               <tr>
@@ -261,37 +212,19 @@ img {
                   <v-popover placement="top">
                     <font-awesome-icon icon="question" />
                     <template slot="popover">
-                      <span
-                        >Caches your website around the globe to improve load
-                        time</span
-                      >
+                      <span>
+                        Caches your website around the globe to improve load
+                        time
+                      </span>
                     </template>
                   </v-popover>
-                </td>
-                <td>
-                  <font-awesome-icon :icon="['far', 'check-circle']" />
-                </td>
-                <td>
-                  <font-awesome-icon :icon="['far', 'check-circle']" />
                 </td>
               </tr>
               <tr>
                 <td>WordPress Maintenance</td>
-                <td>
-                  <font-awesome-icon :icon="['far', 'check-circle']" />
-                </td>
-                <td>
-                  <font-awesome-icon :icon="['far', 'check-circle']" />
-                </td>
               </tr>
               <tr>
                 <td>WordPress Backups</td>
-                <td>
-                  <font-awesome-icon :icon="['far', 'times-circle']" />
-                </td>
-                <td>
-                  <font-awesome-icon :icon="['far', 'check-circle']" />
-                </td>
               </tr>
             </tbody>
           </table>
@@ -306,12 +239,16 @@ img {
         optimising your WordPress install.
       </p>
       <p class="desc">
-        <nuxt-link class="button" to="/contact/"> Get help </nuxt-link>
+        <nuxt-link class="button" to="/contact/">
+          Get help
+        </nuxt-link>
       </p>
       <div class="grid column three">
         <div v-infocus="'showElement'" class="card white hidden">
           <div class="card--inner">
-            <h4 class="title">Maintenance</h4>
+            <h4 class="title">
+              Maintenance
+            </h4>
             <div class="price">
               <h3>£50/year</h3>
             </div>
@@ -325,11 +262,9 @@ img {
                     <v-popover placement="top">
                       <font-awesome-icon icon="question" />
                       <template slot="popover">
-                        <span
-                          >Type of attack designed to overwhelm a server and
+                        <span>Type of attack designed to overwhelm a server and
                           cause it to shut down, making your website
-                          unavailable</span
-                        >
+                          unavailable</span>
                       </template>
                     </v-popover>
                   </li>
@@ -338,10 +273,8 @@ img {
                     <v-popover placement="top">
                       <font-awesome-icon icon="question" />
                       <template slot="popover">
-                        <span
-                          >A type of attack designed to gain your login
-                          credentials by guessing all variations</span
-                        >
+                        <span>A type of attack designed to gain your login
+                          credentials by guessing all variations</span>
                       </template>
                     </v-popover>
                   </li>
@@ -350,11 +283,9 @@ img {
                     <v-popover placement="top">
                       <font-awesome-icon icon="question" />
                       <template slot="popover">
-                        <span
-                          >WordPress can be vulnerable to Malware. We put
+                        <span>WordPress can be vulnerable to Malware. We put
                           preventative measures in place but also have scans to
-                          tell us if a site has been infected</span
-                        >
+                          tell us if a site has been infected</span>
                       </template>
                     </v-popover>
                   </li>
@@ -363,10 +294,8 @@ img {
                     <v-popover placement="top">
                       <font-awesome-icon icon="question" />
                       <template slot="popover">
-                        <span
-                          >A firewall stops malicious users from accessing a
-                          site</span
-                        >
+                        <span>A firewall stops malicious users from accessing a
+                          site</span>
                       </template>
                     </v-popover>
                   </li>
@@ -377,10 +306,8 @@ img {
                 <v-popover placement="top">
                   <font-awesome-icon icon="question" />
                   <template slot="popover">
-                    <span
-                      >Improves load time which means happier users and better
-                      SEO</span
-                    >
+                    <span>Improves load time which means happier users and better
+                      SEO</span>
                   </template>
                 </v-popover>
               </li>
@@ -389,10 +316,8 @@ img {
                 <v-popover placement="top">
                   <font-awesome-icon icon="question" />
                   <template slot="popover">
-                    <span
-                      >Keeping everything up-to-date ensures security issues are
-                      fixed and your site is running as fast as possible</span
-                    >
+                    <span>Keeping everything up-to-date ensures security issues are
+                      fixed and your site is running as fast as possible</span>
                   </template>
                 </v-popover>
               </li>
@@ -405,7 +330,9 @@ img {
           style="--delay: 0.25s"
         >
           <div class="card--inner">
-            <h4 class="title">Backups</h4>
+            <h4 class="title">
+              Backups
+            </h4>
             <div class="price">
               <h3>£50/year</h3>
             </div>
@@ -423,7 +350,9 @@ img {
           style="--delay: 0.5s"
         >
           <div class="card--inner">
-            <h4 class="title">Hosting Transfer</h4>
+            <h4 class="title">
+              Hosting Transfer
+            </h4>
             <div class="price">
               <h3>£150</h3>
             </div>
@@ -454,7 +383,9 @@ img {
       <div class="grid column three">
         <div v-infocus="'showElement'" class="card white hidden">
           <div class="card--inner">
-            <h4 class="title">.com</h4>
+            <h4 class="title">
+              .com
+            </h4>
             <div class="price">
               <h3>£10/year</h3>
             </div>
@@ -466,7 +397,9 @@ img {
           style="--delay: 0.25s"
         >
           <div class="card--inner">
-            <h4 class="title">.co.uk</h4>
+            <h4 class="title">
+              .co.uk
+            </h4>
             <div class="price">
               <h3>£7.50/year</h3>
             </div>
@@ -478,7 +411,9 @@ img {
           style="--delay: 0.5s"
         >
           <div class="card--inner">
-            <h4 class="title">All other domains</h4>
+            <h4 class="title">
+              All other domains
+            </h4>
             <div class="price">
               <h3>£POA</h3>
             </div>
@@ -493,12 +428,16 @@ img {
         purchase of any hosting plan.
       </p>
       <p class="desc">
-        <nuxt-link class="button" to="/contact/"> Set up your email </nuxt-link>
+        <nuxt-link class="button" to="/contact/">
+          Set up your email
+        </nuxt-link>
       </p>
       <div class="grid column three">
         <div v-infocus="'showElement'" class="card white hidden">
           <div class="card--inner">
-            <h4 class="title">1 G-Suite User</h4>
+            <h4 class="title">
+              1 G-Suite User
+            </h4>
             <div class="price">
               <h3>£80/year</h3>
             </div>
@@ -508,12 +447,10 @@ img {
                 <v-popover placement="top">
                   <font-awesome-icon icon="question" />
                   <template slot="popover">
-                    <span
-                      >A user is defined as one personalised email address
+                    <span>A user is defined as one personalised email address
                       (you@yourcompany). Group email aliases such as
                       sales@yourcompany and support@yourcompany are included in
-                      pricing and don't count as additional users.</span
-                    >
+                      pricing and don't count as additional users.</span>
                   </template>
                 </v-popover>
               </li>
@@ -532,7 +469,9 @@ img {
           style="--delay: 0.5s"
         >
           <div class="card--inner">
-            <h4 class="title">1 G-Suite Advanced User</h4>
+            <h4 class="title">
+              1 G-Suite Advanced User
+            </h4>
             <div class="price">
               <h3>£150/year</h3>
             </div>
@@ -542,12 +481,10 @@ img {
                 <v-popover placement="top">
                   <font-awesome-icon icon="question" />
                   <template slot="popover">
-                    <span
-                      >A user is defined as one personalised email address
+                    <span>A user is defined as one personalised email address
                       (you@yourcompany). Group email aliases such as
                       sales@yourcompany and support@yourcompany are included in
-                      pricing and don't count as additional users.</span
-                    >
+                      pricing and don't count as additional users.</span>
                   </template>
                 </v-popover>
               </li>
@@ -567,7 +504,7 @@ img {
 
 <script>
 export default {
-  head() {
+  head () {
     return {
       title: 'Hosting',
       meta: [
@@ -575,51 +512,51 @@ export default {
           hid: 'description',
           name: 'description',
           content:
-            "Your website needs a home and we're happy to house it whether we built it or not.",
+            "Your website needs a home and we're happy to house it whether we built it or not."
         },
         { hid: 'og:title', property: 'og:title', content: 'Hosting' },
         {
           hid: 'og:description',
           property: 'og:description',
           content:
-            "Your website needs a home and we're happy to house it whether we built it or not.",
+            "Your website needs a home and we're happy to house it whether we built it or not."
         },
         {
           hid: 'og:image',
           property: 'og:image',
-          content: 'https://galexia.agency/icon.png',
+          content: 'https://galexia.agency/icon.png'
         },
         { hid: 'twitter:title', name: 'twitter:title', content: 'Hosting' },
         {
           hid: 'twitter:description',
           name: 'twitter:description',
           content:
-            "Your website needs a home and we're happy to house it whether we built it or not.",
+            "Your website needs a home and we're happy to house it whether we built it or not."
         },
         {
           hid: 'twitter:img',
           name: 'twitter:img',
-          content: 'https://galexia.agency/icon.png',
-        },
+          content: 'https://galexia.agency/icon.png'
+        }
       ],
       link: [
         {
           hid: 'canonical',
           rel: 'canonical',
-          href: 'https://galexia.agency/hosting/',
-        },
+          href: 'https://galexia.agency/hosting/'
+        }
       ],
       __dangerouslyDisableSanitizers: ['script'],
       script: [
         {
           innerHTML:
             '{"@context": "https://schema.org","@type": "BreadcrumbList","itemListElement": [{"@type": "ListItem","position": 2,"name": "Hosting","item": "https://galexia.agency/hosting/"}]}',
-          type: 'application/ld+json',
-        },
-      ],
+          type: 'application/ld+json'
+        }
+      ]
     }
   },
-  mounted() {
+  mounted () {
     const wrapper = document.querySelectorAll('.scroll-wrapper')
     if (wrapper) {
       wrapper.forEach((e) => {
@@ -634,6 +571,6 @@ export default {
         })
       })
     }
-  },
+  }
 }
 </script>
