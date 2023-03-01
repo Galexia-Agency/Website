@@ -1,62 +1,68 @@
 <style scoped lang="scss">
 /* Page */
 h1 {
-  text-align: center;
+  text-align: center
 }
 .grid.maxWidth {
-  padding-bottom: 0;
+  padding-bottom: 0
 }
 section:last-of-type {
-  padding-bottom: 4rem;
+  padding-bottom: 4rem
 }
 .grid.column.two .card:first-of-type {
-  justify-self: end;
+  justify-self: end
 }
 .grid.column.two .card:last-of-type {
-  justify-self: start;
+  justify-self: start
 }
 .card {
   max-width: 450px;
-  width: 100%;
+  width: 100%
 }
 .card h4 {
-  text-align: center;
+  text-align: center
 }
 .card--inner {
-  gap: 2rem;
+  gap: 2rem
 }
 li {
-  line-height: 1.5;
+  line-height: 1.5
 }
 li b,
 li strong {
-  color: var(--primaryColor);
+  color: var(--primaryColor)
 }
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 0.2s;
+  transition: opacity .2s
 }
 .fade-enter,
 .fade-leave-to {
-  opacity: 0;
+  opacity: 0
 }
 img {
   margin: 0 auto 1rem;
   display: block;
   max-width: 100%;
-  height: auto;
+  height: auto
 }
 .overflow {
-  max-width: 90%;
+  max-width: 90%
+}
+.hosting-grid {
+  align-items: center
 }
 
 @media (max-width: 900px) {
+  .hosting-grid {
+    grid-auto-flow: row
+  }
   .card {
-    max-width: 600px;
+    max-width: 600px
   }
   .grid.column.two .card:first-of-type,
   .grid.column.two .card:last-of-type {
-    justify-self: center;
+    justify-self: center
   }
 }
 </style>
@@ -65,32 +71,25 @@ img {
   <div class="hosting white">
     <section class="maxWidth">
       <div id="top">
-        <h1>Ultra-fast Hosting</h1>
-        <img
-          src="../assets/img/lighthouse.jpg?format=webp&resize&size=520"
-          width="520"
-          height="294"
-          alt="Lighthouse Test"
-        >
+        <h1>WordPress Hosting for just £200/year</h1>
         <p class="desc">
-          Your website needs a home and we're happy to house it regardless of
-          who built it. Below is an outline of our pricing for different plans.
-          If you want results like these then be sure to choose us for all your
-          hosting and website needs.
+          Your website needs a home and we're happy to house it regardless of who built it. Below is an outline of our offering.
         </p>
-      </div>
-      <div class="scroll-wrapper">
-        <div class="shadow shadow-left" />
-        <div class="shadow shadow-right" />
-        <div class="mobile-table">
+        <div class="grid column two hosting-grid">
+          <figure>
+            <img
+              src="../assets/img/lighthouse.jpg?format=webp&resize&size=520"
+              width="520"
+              height="294"
+              alt="Lighthouse Test"
+            >
+            <figcaption>
+              <p style="text-align: center">
+                If you want Google Page Speed results like these then be sure to choose us for all your hosting and website needs.
+              </p>
+            </figcaption>
+          </figure>
           <table class="comparison">
-            <thead>
-              <tr>
-                <td>
-                  <h3>WordPress Hosting for just £200/year</h3>
-                </td>
-              </tr>
-            </thead>
             <tbody>
               <tr>
                 <td>
@@ -207,14 +206,12 @@ img {
               </tr>
               <tr>
                 <td>
-                  Content Delivery Network (<abbr>CDN</abbr>) powered by
-                  CloudFlare
+                  Content Delivery Network (<abbr>CDN</abbr>) powered by Cloudflare
                   <v-popover placement="top">
                     <font-awesome-icon icon="question" />
                     <template slot="popover">
                       <span>
-                        Caches your website around the globe to improve load
-                        time
+                        Caches your website around the globe to improve load time
                       </span>
                     </template>
                   </v-popover>
@@ -327,7 +324,7 @@ img {
         <div
           v-infocus="'showElement'"
           class="card white hidden"
-          style="--delay: 0.25s"
+          style="--delay: .25s"
         >
           <div class="card--inner">
             <h4 class="title">
@@ -347,7 +344,7 @@ img {
         <div
           v-infocus="'showElement'"
           class="card white hidden"
-          style="--delay: 0.5s"
+          style="--delay: .5s"
         >
           <div class="card--inner">
             <h4 class="title">
@@ -394,7 +391,7 @@ img {
         <div
           v-infocus="'showElement'"
           class="card white hidden"
-          style="--delay: 0.25s"
+          style="--delay: .25s"
         >
           <div class="card--inner">
             <h4 class="title">
@@ -408,7 +405,7 @@ img {
         <div
           v-infocus="'showElement'"
           class="card white hidden"
-          style="--delay: 0.5s"
+          style="--delay: .5s"
         >
           <div class="card--inner">
             <h4 class="title">
@@ -466,7 +463,7 @@ img {
         <div
           v-infocus="'showElement'"
           class="card white hidden"
-          style="--delay: 0.5s"
+          style="--delay: .5s"
         >
           <div class="card--inner">
             <h4 class="title">
