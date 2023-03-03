@@ -247,7 +247,7 @@ img {
               Maintenance
             </h4>
             <div class="price">
-              <h3>£50/year</h3>
+              <h3>£100/year</h3>
             </div>
             <ul>
               <li>
