@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "start": "nuxt",
-    "generate": "nuxt generate --modern",
+    "generate": "nuxt generate --modern --quiet --fail-on-error",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore . --fix"
   },
   "dependencies": {
