@@ -14,13 +14,13 @@ export default {
       { name: 'msapplication-TileImage', content: 'https://galexia.agency/mstile-144x144.png?v=dLXLEPEjpj' },
 
       // Twitter Card data
-      { hid: 'twitter:title', name: 'twitter:title', template: chunk => `${chunk} | Galexia Creative Agency Ltd | Web Design and Development` },
+      { hid: 'twitter:title', name: 'twitter:title', template: (chunk) => `${chunk} | Galexia Creative Agency Ltd | Web Design and Development` },
       { hid: 'twitter:description', name: 'twitter:description' },
       { hid: 'twitter:image', name: 'twitter:image' },
 
       // Open Graph data
       { hid: 'og:description', property: 'og:description' },
-      { hid: 'og:title', property: 'og:title', template: chunk => `${chunk} | Galexia Creative Agency Ltd | Web Design and Development` },
+      { hid: 'og:title', property: 'og:title', template: (chunk) => `${chunk} | Galexia Creative Agency Ltd | Web Design and Development` },
       { hid: 'og:image', property: 'og:image' },
       { property: 'fb:app_id', content: '249903496015229' }
     ],

@@ -12,19 +12,18 @@
   h2 {
     margin: 0;
     padding: 0;
+    color: #1A237EAA;
     font-size: 1.75rem;
-    font-size: clamp(1.5rem, 1vw + 1.5rem, 2rem);
-    color: #1A237EAA
+    font-size: clamp(1.5rem, 1vw + 1.5rem, 2rem)
   }
   h3 {
-    font-size: 1.33rem;
-    font-size: clamp(1.25rem, 1vw + 1rem, 1.5rem);
     margin: 0 0 2.75rem;
-    color: #1A237EAA
+    color: #1A237EAA;
+    font-size: clamp(1.25rem, 1vw + 1rem, 1.5rem)
   }
   .client {
-    text-align: center;
-    min-height: 600px
+    min-height: 600px;
+    text-align: center
   }
   .client--inner {
     padding: 2rem
@@ -34,35 +33,34 @@
     min-height: 300px
   }
   .card h2 {
-    font-size: 1.66rem;
-    font-size: clamp(1.25rem, 1vw + 1.25rem, 2rem);
+    height: 6.5ex;
     margin: 0;
     padding: 1rem;
-    height: 6.5ex;
-    color: var(--primaryColor)
+    color: var(--primaryColor);
+    font-size: clamp(1.25rem, 1vw + 1.25rem, 2rem)
   }
   .card p {
-    margin: 0;
-    height: 10ex
+    height: 10ex;
+    margin: 0
   }
   .card .button {
     align-self: end
   }
   .card--container {
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 1fr 1fr;
+    grid-auto-flow: dense;
     grid-row-gap: 4rem;
-    grid-auto-flow: dense
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(6, 1fr)
   }
   .card {
     grid-column: span 2
   }
   form {
     gap: 2rem;
-    place-items: start;
-    max-width: 600px;
     width: 100%;
-    margin: auto
+    max-width: 600px;
+    margin: auto;
+    place-items: start
   }
   form label {
     display: grid;
@@ -70,9 +68,9 @@
     place-items: start
   }
   form p {
-    font-size: .9rem;
     margin: .5rem 0;
-    font-weight: bold
+    font-weight: bold;
+    font-size: .9rem
   }
   form label input {
     width: 100%
@@ -80,22 +78,22 @@
 
   @media (max-width: 1200px) {
     .card--container {
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: auto
+      grid-template-rows: auto;
+      grid-template-columns: 1fr 1fr
     }
   }
   @media (max-width: 800px) {
     .card {
+      width: 100%;
       max-width: 600px;
-      margin: auto;
-      width: 100%
+      margin: auto
     }
     .card p, .card h2 {
       height: auto
     }
     .card--container {
-      grid-template-columns: 1fr;
       grid-row-gap: 2rem;
+      grid-template-columns: 1fr;
       padding-bottom: 0
     }
   }
@@ -120,14 +118,22 @@
                 <a :href="url" target="_blank" rel="noopener noreferrer" class="button">My site</a>
               </div>
             </div>
-            <div v-infocus="'showElement'" class="card white hidden" style="--delay: .25s">
+            <div
+              v-infocus="'showElement'"
+              class="card white hidden"
+              style="--delay: .25s"
+            >
               <div class="card--inner">
                 <h2>Book a call</h2>
                 <p>Book a time to have a chat about your website.</p>
                 <a href="https://calendly.com/galexia/phone-call" target="_blank" rel="noopener noreferrer" class="button">Book Now</a>
               </div>
             </div>
-            <div v-infocus="'showElement'" class="card white hidden" style="--delay: .5s">
+            <div
+              v-infocus="'showElement'"
+              class="card white hidden"
+              style="--delay: .5s"
+            >
               <div class="card--inner">
                 <h2>Transfer us some files</h2>
                 <p>Need to send us something? We have that covered.</p>
@@ -141,14 +147,22 @@
                 <a href="http://eepurl.com/hbgVZL" target="_blank" rel="noopener noreferrer" class="button">Signup</a>
               </div>
             </div>
-            <div v-infocus="'showElement'" class="card white hidden" style="--delay: .25s">
+            <div
+              v-infocus="'showElement'"
+              class="card white hidden"
+              style="--delay: .25s"
+            >
               <div class="card--inner">
                 <h2>Leave a review</h2>
                 <p>We'd love it if you could leave an honest review.</p>
                 <a href="https://www.facebook.com/GalexiaAgency/reviews" target="_blank" rel="noopener noreferrer" class="button">Review</a>
               </div>
             </div>
-            <div v-infocus="'showElement'" class="card white hidden" style="--delay: .5s">
+            <div
+              v-infocus="'showElement'"
+              class="card white hidden"
+              style="--delay: .5s"
+            >
               <div class="card--inner">
                 <h2>Join our Facebook Group</h2>
                 <p>Join our group and connect with other clients. Discuss best-practises and bounce ideas off eachother to build a happy community.</p>

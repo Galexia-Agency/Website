@@ -7,32 +7,32 @@
   }
   h1 {
     z-index: 2;
-    color: white;
-    justify-self: left;
-    align-self: end;
     grid-row: 1;
     grid-column: 1;
+    align-self: end;
+    justify-self: left;
     width: 100%;
     margin-bottom: 1rem;
+    color: white;
     font-size: 4rem;
     font-size: clamp(3rem, 10vw, 5rem)
   }
   .post--header {
-    height: 400px;
     position: relative;
-    overflow: hidden;
     display: grid;
-    place-items: center;
-    background-size: cover;
+    height: 400px;
+    overflow: hidden;
     background-repeat: no-repeat;
-    background-position: center
+    background-position: center;
+    background-size: cover;
+    place-items: center
   }
   .background_opacity {
-    z-index: 1;
     position: absolute;
+    z-index: 1;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, .4)
+    background: rgb(0 0 0 / 40%)
   }
   .post--meta {
     display: grid;
@@ -40,34 +40,34 @@
   }
   .post--meta p:last-of-type {
     justify-self: end;
-    text-align: right;
-    width: 100%
+    width: 100%;
+    text-align: right
   }
   .post--content {
     line-height: 1.5
   }
   .post--footer:not(.nativeShare) {
     display: grid;
+    grid-template-columns: repeat(auto-fit, 140px);
     gap: .5rem;
-    justify-content: start;
-    grid-template-columns: repeat(auto-fit, 140px)
+    justify-content: start
   }
   .post--footer a {
-    text-align: center;
+    margin: 0;
     color: white;
     font-size: 1rem;
-    margin: 0
+    text-align: center
   }
   .post--footer h4 {
     grid-column: 1/-1;
-    margin-bottom: 0;
-    width: fit-content
+    width: fit-content;
+    margin-bottom: 0
   }
   .post--footer.nativeShare h4 {
-    place-self: center;
-    text-align: center;
+    width: 100%;
     margin: 1.33em 0 1em;
-    width: 100%
+    text-align: center;
+    place-self: center
   }
 
   @media (max-width: 690px) {
@@ -90,13 +90,13 @@
 </style>
 <style>
   figure {
-    margin: 0;
-    max-width: 100%
+    max-width: 100%;
+    margin: 0
   }
   figure img {
+    display: block;
     width: 75%;
     height: auto;
-    display: block;
     margin: auto
   }
   @media (max-width: 500px) {
@@ -223,12 +223,12 @@ export default {
         } else {
           return false
         }
-      } catch {
+      } catch (e) {
         return false
       }
     },
     blog () {
-      return this.$parent.$parent.blogs.find(blog => blog.slug === this.$route.params.slug)
+      return this.$parent.$parent.blogs.find((blog) => blog.slug === this.$route.params.slug)
     }
   },
   methods: {

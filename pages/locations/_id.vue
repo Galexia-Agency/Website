@@ -12,23 +12,23 @@
     grid-template-rows: 11ex 250px 1fr
   }
   .card:hover {
-    background-color: inherit;
-    color: inherit
+    color: inherit;
+    background-color: inherit
   }
   .card:hover h3 {
     color: var(--primaryColor)
   }
   .card .svg {
-    margin: auto;
+    width: 75%;
     height: auto;
-    width: 75%
+    margin: auto
   }
   .card p {
     margin: 0
   }
   .card h3 {
-    text-align: center;
-    margin: 0
+    margin: 0;
+    text-align: center
   }
 
   @media (max-width: 768px) {

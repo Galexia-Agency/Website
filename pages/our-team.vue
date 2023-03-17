@@ -1,15 +1,15 @@
 <style scoped>
   h3, h4 {
-    text-transform: capitalize;
-    text-align: center
+    text-align: center;
+    text-transform: capitalize
   }
   h4 {
     color: #1A237EAA
   }
   img {
+    display: block;
     width: 100%;
     max-width: 300px;
-    display: block;
     margin: auto
   }
 </style>

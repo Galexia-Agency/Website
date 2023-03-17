@@ -16,8 +16,8 @@
     justify-self: start
   }
   .card {
-    max-width: 450px;
-    width: 100%
+    width: 100%;
+    max-width: 450px
   }
   .card h4 {
     text-align: center
@@ -38,10 +38,10 @@
     opacity: 0
   }
   img {
-    margin: 0 auto 1rem;
     display: block;
     max-width: 100%;
-    height: auto
+    height: auto;
+    margin: 0 auto 1rem
   }
   .overflow {
     max-width: 90%

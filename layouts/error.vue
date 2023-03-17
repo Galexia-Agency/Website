@@ -1,12 +1,12 @@
-<style scoped>
+<style scoped lang="scss">
   .error {
-    text-align: center;
+    align-content: center;
     min-height: 600px;
-    align-content: center
+    text-align: center
   }
   .error .svg {
-    max-width: 350px;
     width: 85%;
+    max-width: 350px;
     margin: auto
   }
   .error h1 {

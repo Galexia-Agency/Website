@@ -17,7 +17,7 @@ const state = {
   legals: []
 }
 
-const delay = ms => new Promise((resolve, reject) => setTimeout(resolve, ms))
+const delay = (ms) => new Promise((resolve, reject) => setTimeout(resolve, ms))
 
 function isFullUrl (url) {
   try {

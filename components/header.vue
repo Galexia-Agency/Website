@@ -6,28 +6,28 @@
 <style scoped>
   /* Header */
   .header--inner {
-    padding: 6rem 2rem 7.5rem 2rem;
+    display: grid;
+    gap: 2rem;
     max-width: 780px;
     margin: auto;
-    text-align: center;
-    display: grid;
-    gap: 2rem
+    padding: 6rem 2rem 7.5rem;
+    text-align: center
   }
   .header--inner * {
     margin: 0
   }
   .header--inner h1 {
+    color: white;
     font-size: 2.5rem;
     line-height: 1.225;
-    color: white;
     letter-spacing: 1px
   }
   .header--inner h2 {
+    padding: 0;
+    color: white;
     font-size: 2rem;
     line-height: 1.225;
-    opacity: .9;
-    padding: 0;
-    color: white
+    opacity: .9
   }
   .header--inner p {
     font-size: 18px;
@@ -49,7 +49,7 @@
   }
   @media (max-width: 500px) {
     .header--inner {
-      padding: 2rem 1rem 4rem 1rem
+      padding: 2rem 1rem 4rem
     }
     .header--inner h1 {
       font-size: 1.75rem;

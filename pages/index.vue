@@ -1,15 +1,14 @@
 <style scoped>
   #portfolio {
-    grid-auto-flow: column;
-    width: 100%;
-    padding-left: 0;
-    padding-right: 0;
     grid-auto-columns: 33%;
-    grid-template-columns: initial;
+    grid-auto-flow: column;
     grid-column-gap: 10px;
+    grid-template-columns: initial;
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
     overflow-x: scroll;
     -webkit-overflow-scrolling: touch;
-    -ms-scroll-snap-type: x mandatory;
     scroll-snap-type: x mandatory;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
@@ -31,18 +30,18 @@
     font-size: 1.25rem
   }
   .icons {
+    position: sticky;
     display: grid;
+    grid-auto-rows: 30px;
+    grid-auto-columns: 30px;
     grid-auto-flow: column;
+    grid-column: 1;
     gap: 5px;
-    width: auto;
-    margin: -60px auto auto;
-    justify-items: center;
     align-items: center;
     justify-content: center;
-    position: sticky;
-    grid-column: 1;
-    grid-auto-columns: 30px;
-    grid-auto-rows: 30px
+    justify-items: center;
+    width: auto;
+    margin: -60px auto auto
   }
   .icon {
     width: 15px;
@@ -72,12 +71,12 @@
     }
   }
   .portfolioImgContainer {
-    min-height: clamp(220px, 25vw, 350px);
+    position: relative;
     width: 100%;
-    background-size: contain;
-    background-position: top center;
+    min-height: clamp(220px, 25vw, 350px);
     background-repeat: no-repeat;
-    position: relative
+    background-position: top center;
+    background-size: contain
   }
   #portfolio .card:nth-of-type(even) .portfolioImgContainer {
     background-image: url('../assets/img/iMac.png?webp')
@@ -106,15 +105,15 @@
   }
   @media (max-width: 900px) {
     #portfolio .card:nth-of-type(even) .portfolioImgContainer img {
-      max-width: 247.5px;
-      left: calc((100vw - 342px) / 2);
       top: 5.5%;
+      left: calc((100vw - 342px) / 2);
+      max-width: 247.5px;
       aspect-ratio: 350/200
     }
     #portfolio .card:nth-of-type(odd) .portfolioImgContainer img {
-      max-width: 290px;
-      left: calc((100vw - 390px) / 2);
       top: 6%;
+      left: calc((100vw - 390px) / 2);
+      max-width: 290px;
       aspect-ratio: 320/200
     }
   }
@@ -126,11 +125,11 @@
       left: calc((100vw - 322px) / 2)
     }
     .icons {
-      gap: 0;
       display: flex;
+      gap: 0;
       justify-content: space-between;
-      padding-left: 5px;
-      padding-right: 5px
+      padding-right: 5px;
+      padding-left: 5px
     }
   }
   @media (max-width: 402px) {
@@ -138,7 +137,7 @@
       left: 11%
     }
   }
-  @supports not (aspect-ratio: 1/1) {
+  @supports not (aspect-ratio: 1 / 1) {
     #portfolio .card:nth-of-type(even) .portfolioImgContainer img {
       height: clamp(59%, 15.2vw, 64%)
     }

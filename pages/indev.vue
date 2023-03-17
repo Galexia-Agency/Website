@@ -1,13 +1,13 @@
 <style>
   .indev {
-    text-align: center;
     gap: 0;
+    align-content: center;
     min-height: 600px;
-    align-content: center
+    text-align: center
   }
   .indev .svg {
-    max-width: 350px;
     width: 85%;
+    max-width: 350px;
     margin: auto
   }
   .indev h1, .indev h2 {

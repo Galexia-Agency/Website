@@ -1,7 +1,7 @@
 <style scoped>
   li {
-    font-size: 1.5rem;
     color: var(--primaryColor);
+    font-size: 1.5rem;
     line-height: 2
   }
 </style>

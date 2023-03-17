@@ -13,6 +13,7 @@
   ],
   "defaultSeverity": "warning",
   "rules": {
+    "custom-property-empty-line-before": null,
     "selector-id-pattern": null,
     "declaration-property-value-no-unknown": true,
     "custom-property-pattern": null,

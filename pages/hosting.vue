@@ -16,8 +16,8 @@ section:last-of-type {
   justify-self: start
 }
 .card {
-  max-width: 450px;
-  width: 100%
+  width: 100%;
+  max-width: 450px
 }
 .card h4 {
   text-align: center
@@ -41,10 +41,10 @@ li strong {
   opacity: 0
 }
 img {
-  margin: 0 auto 1rem;
   display: block;
   max-width: 100%;
-  height: auto
+  height: auto;
+  margin: 0 auto 1rem
 }
 .overflow {
   max-width: 90%
@@ -509,14 +509,14 @@ export default {
           hid: 'description',
           name: 'description',
           content:
-            "Your website needs a home and we're happy to house it whether we built it or not."
+            'Your website needs a home and we\'re happy to house it whether we built it or not.'
         },
         { hid: 'og:title', property: 'og:title', content: 'Hosting' },
         {
           hid: 'og:description',
           property: 'og:description',
           content:
-            "Your website needs a home and we're happy to house it whether we built it or not."
+            'Your website needs a home and we\'re happy to house it whether we built it or not.'
         },
         {
           hid: 'og:image',
@@ -528,7 +528,7 @@ export default {
           hid: 'twitter:description',
           name: 'twitter:description',
           content:
-            "Your website needs a home and we're happy to house it whether we built it or not."
+            'Your website needs a home and we\'re happy to house it whether we built it or not.'
         },
         {
           hid: 'twitter:img',

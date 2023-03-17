@@ -13,8 +13,8 @@
     padding-bottom: 0
   }
   img {
-    min-width: 100%;
     width: 100%;
+    min-width: 100%;
     height: 300px;
     object-fit: cover
   }
@@ -28,14 +28,14 @@
   }
   time {
     justify-self: end;
-    font-size: 1.25rem;
-    font-weight: normal;
     width: 100%;
+    font-weight: normal;
+    font-size: 1.25rem;
     text-align: right
   }
   .post--content {
-    min-width: 500px;
-    width: 100%
+    width: 100%;
+    min-width: 500px
   }
 
   @media (max-width: 800px) {
