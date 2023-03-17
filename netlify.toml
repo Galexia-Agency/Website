@@ -1,5 +1,5 @@
 [build]
-command = "AWS_LAMBDA_FUNCTION_NAME=trickpuppeteer npm run generate"
+command = "AWS_LAMBDA_FUNCTION_NAME=trickpuppeteer yarn generate --no-optional"
 publish = "dist"
 
 [[redirects]]
