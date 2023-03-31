@@ -1,3 +1,11 @@
+<style lang="scss" scoped>
+.brands-using-wordpress {
+  width: 100%;
+  opacity: .5;
+  filter: grayscale(1);
+}
+</style>
+
 <template>
   <div id="web">
     <Header
@@ -87,7 +95,7 @@
         <h2 style="line-height: 1.5">
           WordPress powers 43% of all websites including these top brands:
         </h2>
-        <img src="../assets/img/companies.png?format=webp&resize&size=1376" width="1376" loading="lazy" style=" opacity: .5;filter: grayscale(1)">
+        <img src="../assets/img/companies.png?format=webp&resize&size=1376" width="1376" loading="lazy" class="brands-using-wordpress">
       </div>
     </section>
   </div>
