@@ -893,36 +893,36 @@ form.narrow {
   .nav--container {
     grid-auto-flow: row
   }
-  .js-active .nav--container {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 100vw;
-    width: 200px;
-    height: 100vh;
+  .js-active {
+    transition: margin 1s;
+    &.nav_open {
+      margin-left: -200px;
+      overflow: hidden
+    }
+    .nav--container {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 100vw;
+      width: 200px;
+      height: 100vh;
 
-    /* stylelint-disable-next-line declaration-property-value-no-unknown */
-    min-height: stretch;
-    padding: 1rem;
-    background: linear-gradient(
-      0deg,
-      rgb(83 75 174 / 75%),
-      rgb(0 0 81 / 50%)
-    );
-    transition: left 1s
-  }
-  .nav_open .nav--container {
-    left: calc(100vw - 200px)
-  }
-  .nav_close .nav--container {
-    display: none
-  }
-  html {
-    transition: margin 1s
-  }
-  html.nav_open {
-    margin-left: -200px;
-    overflow: hidden
+      /* stylelint-disable-next-line declaration-property-value-no-unknown */
+      min-height: stretch;
+      padding: 1rem;
+      background: linear-gradient(
+        0deg,
+        rgb(83 75 174 / 75%),
+        rgb(0 0 81 / 50%)
+      );
+      transition: left 1s;
+    }
+    &.nav_open .nav--container {
+      left: calc(100vw - 200px)
+    }
+    &.nav_close .nav--container {
+      display: none
+    }
   }
 }
 
@@ -1280,7 +1280,6 @@ export default {
       : 'smooth'
   },
   mounted () {
-    document.querySelector('html').classList.add('js-active')
     const self = this
     document.addEventListener('touchstart', handleTouchStart, false)
     document.addEventListener('touchmove', handleTouchMove, false)

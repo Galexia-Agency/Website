@@ -2,7 +2,7 @@
 .brands-using-wordpress {
   width: 100%;
   opacity: .5;
-  filter: grayscale(1);
+  filter: grayscale(1)
 }
 </style>
 
