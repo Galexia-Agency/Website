@@ -4,6 +4,7 @@
 html {
   --delay: 0;
   --primaryColor: #1A237E;
+  --100vw: calc(100vw - var(--scrollbar-width, 0px));
   background: white
 }
 body {
@@ -63,32 +64,46 @@ h4,
 h5,
 h6 {
   font-weight: 700;
-  font-family: Montserrat, serif
+  font-family: Montserrat, serif;
+  line-height: 1.225;
+  + p {
+    margin-top: 0
+  }
 }
 h1 {
+  margin-bottom: 1.5rem;
   color: var(--primaryColor);
-  font-size: 3.5rem;
-  line-height: 1
+  font-size: 2.5rem;
+  letter-spacing: 1px
 }
 h2 {
-  font-size: 3rem;
-  line-height: 1
+  margin-bottom: 1.5rem;
+  font-size: 2.25rem
 }
 h3 {
-  font-size: 2rem;
-  line-height: 1.125
+  margin-bottom: 1rem;
+  font-size: 2rem
 }
 h4 {
-  font-size: 1.75rem;
-  line-height: 1.125
+  margin-bottom: 1rem;
+  font-size: 1.75rem
 }
 h5 {
-  font-size: 1.5rem;
-  line-height: 1.125
+  margin-bottom: 1rem;
+  font-size: 1.5rem
 }
 h6 {
-  font-size: 1.25rem;
-  line-height: 1.225
+  margin-bottom: 1rem;
+  font-size: 1.25rem
+}
+p {
+  &:last-child {
+    margin-bottom: 0
+  }
+  + p,
+  &:first-child {
+    margin-top: 0
+  }
 }
 code {
   padding: 0 .2em;
@@ -102,6 +117,9 @@ code {
 }
 button {
   font-family: Open Sans, sans-serif
+}
+.button:any-link {
+  text-decoration: none
 }
 main .button:any-link {
   color: white;
@@ -244,6 +262,27 @@ nav {
     grid-auto-flow: column;
     justify-content: initial
   }
+  h1 {
+    font-size: 2.25rem
+  }
+  h2 {
+    font-size: 2rem
+  }
+  h3 {
+    font-size: 1.75rem
+  }
+  h4 {
+    font-size: 1.5rem
+  }
+  h5 {
+    font-size: 1.25rem
+  }
+  h6 {
+    font-size: 1.15rem
+  }
+  .button {
+    font-size: 1.1rem
+  }
 }
 .logo--container {
   display: grid;
@@ -313,7 +352,10 @@ footer h4 {
   display: grid;
   grid-template-columns: 1fr min-content;
   gap: 2rem;
-  padding: 0 2rem
+  padding: 0 2rem;
+  p {
+    align-self: end
+  }
 }
 .socialLinks {
   display: grid;
@@ -499,7 +541,6 @@ svg {
   grid-column-gap: 10px;
   justify-self: right;
   width: 100%;
-  max-width: 80vw;
   overflow-x: scroll;
   -webkit-overflow-scrolling: touch;
   scroll-snap-type: x mandatory;
@@ -703,7 +744,7 @@ table.comparison {
   }
   .mobile-table {
     position: relative;
-    max-width: calc(100vw - 2rem);
+    max-width: calc(var(--100vw) - 2rem);
     height: 100%;
     overflow-x: scroll;
     table.comparison {
@@ -885,7 +926,7 @@ form.narrow {
 
 @media (max-width: 1070px) {
   #__nuxt {
-    width: 100vw
+    width: var(--100vw)
   }
   .js-active .nav--icon {
     display: block;
@@ -921,7 +962,7 @@ form.narrow {
       transition: left 1s
     }
     &.nav_open .nav--container {
-      left: calc(100vw - 200px)
+      left: calc(var(--100vw) - 200px)
     }
     &.nav_close .nav--container {
       display: none
@@ -1043,22 +1084,8 @@ form.narrow {
   section {
     padding: 0
   }
-  h1 {
-    font-size: 2.25rem
-  }
-  h2 {
-    font-size: 2rem;
-    line-height: 1.125
-  }
-  h3 {
-    font-size: 1.5rem;
-    line-height: 1.225
-  }
   .footer--bottom {
     width: 100%
-  }
-  .testimonials {
-    max-width: 90vw
   }
 }
 </style>

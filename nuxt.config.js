@@ -51,6 +51,10 @@ export default {
     ],
     script: [
       {
+        src: '/js/scrollbar-width.js',
+        body: true
+      },
+      {
         innerHTML: `{ 
           "@context": "http://schema.org",
           "@type": "Organization",

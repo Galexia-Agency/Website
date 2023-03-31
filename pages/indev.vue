@@ -12,11 +12,11 @@
   }
   .indev h1, .indev h2 {
     font-size: 2.25rem;
-    font-size: clamp(1.75rem, 1vw + 1rem, 3rem)
+    font-size: clamp(1.75rem, calc(var(--100vw) / 100) + 1rem, 3rem)
   }
   .indev h3 {
     font-size: 1.75rem;
-    font-size: clamp(1.25rem, 1vw + 1rem, 2.5rem)
+    font-size: clamp(1.25rem, calc(var(--100vw) / 100) + 1rem, 2.5rem)
   }
   .indev h1, .indev h2, .indev h3 {
     margin: 1.5rem 0;

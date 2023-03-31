@@ -5,21 +5,21 @@
   }
   h1 {
     margin: 1.75rem 0;
-    margin: clamp(1.5rem, 1vw + 1.5rem, 2rem) 0;
+    margin: clamp(1.5rem, calc(var(--100vw) / 100) + 1.5rem, 2rem) 0;
     font-size: 2.25rem;
-    font-size: clamp(1.75rem, 1vw + 1.75rem, 2.5rem)
+    font-size: clamp(1.75rem, calc(var(--100vw) / 100) + 1.75rem, 2.5rem)
   }
   h2 {
     margin: 0;
     padding: 0;
     color: #1A237EAA;
     font-size: 1.75rem;
-    font-size: clamp(1.5rem, 1vw + 1.5rem, 2rem)
+    font-size: clamp(1.5rem, calc(var(--100vw) / 100) + 1.5rem, 2rem)
   }
   h3 {
     margin: 0 0 2.75rem;
     color: #1A237EAA;
-    font-size: clamp(1.25rem, 1vw + 1rem, 1.5rem)
+    font-size: clamp(1.25rem, calc(var(--100vw) / 100) + 1rem, 1.5rem)
   }
   .client {
     min-height: 600px;
@@ -37,7 +37,7 @@
     margin: 0;
     padding: 1rem;
     color: var(--primaryColor);
-    font-size: clamp(1.25rem, 1vw + 1.25rem, 2rem)
+    font-size: clamp(1.25rem, calc(var(--100vw) / 100) + 1.25rem, 2rem)
   }
   .card p {
     height: 10ex;

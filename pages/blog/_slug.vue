@@ -15,7 +15,7 @@
     margin-bottom: 1rem;
     color: white;
     font-size: 4rem;
-    font-size: clamp(3rem, 10vw, 5rem)
+    font-size: clamp(3rem, calc((100vw / 100) * 10), 5rem)
   }
   .post--header {
     position: relative;

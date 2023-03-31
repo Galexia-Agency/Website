@@ -12,7 +12,7 @@
   .error h1 {
     margin-top: 5rem;
     font-size: 2.25rem;
-    font-size: clamp(1.75rem, 1vw + 1rem, 3rem)
+    font-size: clamp(1.75rem, calc(var(--100vw) / 100) + 1rem, 3rem)
   }
 </style>
 
