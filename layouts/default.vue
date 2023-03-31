@@ -322,14 +322,17 @@ footer h4 {
   align-content: center;
   align-items: center;
   justify-self: end;
-  font-size: 24px
-}
-.socialLinks a {
-  color: #FFFFFF99;
-  transition: color .5s
-}
-.socialLinks a:hover {
-  color: white
+  font-size: 24px;
+  a {
+    color: #FFFFFF99;
+    transition: color .5s;
+    &:hover {
+      color: white
+    }
+    svg {
+      width: 1.5rem
+    }
+  }
 }
 .footer--bottom {
   display: grid;
