@@ -517,7 +517,7 @@
               </h3>
             </div>
             <p>
-              Let's face it, doing 'socialmedia' is time consuming and can be a little daunting if it's not your thing.
+              Let's face it, doing 'social media' is time consuming and can be a little daunting if it's not your thing.
             </p>
             <p>
               That's where we come in! We create the content, curate your profiles to fit with your branding and post everything too. You will get final say on anything posted too!
