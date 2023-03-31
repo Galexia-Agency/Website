@@ -15,7 +15,7 @@ body {
   font-size: 16px;
   font-family: Open Sans, sans-serif;
   background-color: white;
-  scroll-behavior: var(--motion);
+  scroll-behavior: var(--motion, 'auto');
   background-image: url('../assets/img/SpaceBackgroundBlurred.jpg?webp');
   background-repeat: no-repeat;
   background-size: var(--backgroundSize, 4500px)
@@ -915,7 +915,7 @@ form.narrow {
         rgb(83 75 174 / 75%),
         rgb(0 0 81 / 50%)
       );
-      transition: left 1s;
+      transition: left 1s
     }
     &.nav_open .nav--container {
       left: calc(100vw - 200px)
@@ -1061,7 +1061,7 @@ form.narrow {
 </style>
 
 <template>
-  <div :style="'--motion: ' + motion">
+  <div>
     <header>
       <nav class="maxWidth">
         <div class="logo--container">
@@ -1269,15 +1269,14 @@ export default {
     }
   },
   async beforeMount () {
-    // eslint-disable-next-line
-    if (await this.WebpIsSupported()) {
-    } else {
+    if (!(await this.WebpIsSupported())) {
       document.querySelector('body').classList.add('no-webp')
     }
     this.motion = (await window.matchMedia('(prefers-reduced-motion: reduce)')
       .matches)
       ? 'auto'
       : 'smooth'
+    document.querySelector('body').style.setProperty('--motion', this.motion)
   },
   mounted () {
     const self = this
