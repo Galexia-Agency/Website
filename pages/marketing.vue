@@ -90,7 +90,7 @@
           </nuxt-link>
         </div>
         <div v-infocus="'showElement'" class="hidden hidden-right svg">
-          <img src="../assets/img/mailchimp_certified.jpg?size=1000" width="auto" height="325" alt="Mailchimp Certified">
+          <img src="../assets/img/mailchimp_certified.jpg?size=1000" width="100%" height="auto" alt="Mailchimp Certified">
         </div>
       </div>
     </section>
