@@ -21,7 +21,7 @@ body {
   background-size: var(--backgroundSize, 4500px)
 }
 body.no-webp {
-  background-image: url('../assets/img/SpaceBackgroundBlurred.jpg?resize')
+  background-image: url('../assets/img/SpaceBackgroundBlurred.jpg')
 }
 main header {
   background-image: linear-gradient(
@@ -220,8 +220,9 @@ main :any-link:hover {
 
 /* Global helpers */
 .maxWidth {
-  max-width: min(1376px, calc(100vw - 4rem));
-  margin: auto;
+  max-width: 1376px;
+  margin-right: auto;
+  margin-left: auto;
   padding: 2rem
 }
 .white {
@@ -249,13 +250,13 @@ nav {
   align-content: center;
   justify-content: left
 }
-.logo {
-  font-size: 3rem
-}
 .logo svg {
   width: 250px;
   user-select: none;
-  fill: white
+  fill: white;
+  @media (max-width: 1300px) {
+    width: 175px
+  }
 }
 .logo svg text {
   font-weight: 300;
