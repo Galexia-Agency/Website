@@ -16,7 +16,6 @@ export default {
       // Twitter Card data
       { hid: 'twitter:title', name: 'twitter:title', template: (chunk) => `${chunk} | Galexia Creative Agency Ltd | Web Design and Development` },
       { hid: 'twitter:description', name: 'twitter:description' },
-      { hid: 'twitter:image', name: 'twitter:image' },
 
       // Open Graph data
       { hid: 'og:description', property: 'og:description' },
@@ -34,7 +33,7 @@ export default {
       { rel: 'icon', type: 'image/png', sizes: '32x32', href: 'https://galexia.agency/favicon-32x32.png?v=dLXLEPEjpj' },
       { rel: 'icon', type: 'image/png', sizes: '16x16', href: 'https://galexia.agency/favicon-16x16.png?v=dLXLEPEjpj' },
       { rel: 'mask-icon', href: 'https://galexia.agency/safari-pinned-tab.svg?v=dLXLEPEjpj', color: '#534bae' },
-      { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: true },
+      { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' },
       { rel: 'preload', as: 'style', href: 'https://fonts.googleapis.com/css2?family=Assistant:wght@300;400&family=Montserrat:ital,wght@0,600;0,700;1,600;1,700&family=Open+Sans:ital,wght@0,400;0,600;1,400;1,600&display=block' },
       { rel: 'stylesheet', media: 'print', onload: 'this.media="all"', href: 'https://fonts.googleapis.com/css2?family=Assistant:wght@300;400&family=Montserrat:ital,wght@0,600;0,700;1,600;1,700&family=Open+Sans:ital,wght@0,400;0,600;1,400;1,600&display=block' },
       { rel: 'preload', as: 'style', href: 'https://assets.calendly.com/assets/external/widget.css' },
@@ -44,7 +43,7 @@ export default {
     noscript: [
       { innerHTML: '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400&family=Montserrat:ital,wght@0,600;0,700;1,600;1,700&family=Open+Sans:ital,wght@0,400;0,600;1,400;1,600&display=block" />' },
       { innerHTML: '<link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css" />' },
-      { innerHTML: '<p><img src="https://analytics.galexia.agency/matomo.php?idsite=1&amp;rec=1" style="border:0;" alt="" /></p>' }
+      { innerHTML: '<img src="https://analytics.galexia.agency/matomo.php?idsite=1&amp;rec=1" style="border:0;" alt="" />' }
     ],
     script: [
       {

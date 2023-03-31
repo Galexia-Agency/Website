@@ -2,7 +2,7 @@
 <style lang="scss">
 /* Resets */
 html {
-  --delay: 0;
+  --delay: 0s;
   --primaryColor: #1A237E;
   --100vw: calc(100vw - var(--scrollbar-width, 0px));
   background: white
@@ -16,7 +16,7 @@ body {
   font-size: 16px;
   font-family: Open Sans, sans-serif;
   background-color: white;
-  scroll-behavior: var(--motion, 'auto');
+  scroll-behavior: var(--motion, auto);
   background-image: url('../assets/img/SpaceBackgroundBlurred.jpg?webp');
   background-repeat: no-repeat;
   background-size: var(--backgroundSize, 4500px)
@@ -1102,7 +1102,7 @@ form.narrow {
         <div class="nav--icon">
           <Hamburger type="arrow" color="white" :expanded="expanded" />
         </div>
-        <div class="nav--container">
+        <div id="navigation" class="nav--container">
           <nuxt-link to="/" class="nav--link">
             Home
           </nuxt-link>
@@ -1302,11 +1302,12 @@ export default {
     if (!(await this.WebpIsSupported())) {
       document.querySelector('body').classList.add('no-webp')
     }
-    this.motion = (await window.matchMedia('(prefers-reduced-motion: reduce)')
-      .matches)
-      ? 'auto'
-      : 'smooth'
-    document.querySelector('body').style.setProperty('--motion', this.motion)
+    if (!(await window.matchMedia('(prefers-reduced-motion: reduce)'))) {
+      this.motion = 'auto'
+    } else {
+      this.motion = 'smooth'
+      document.querySelector('body').style.setProperty('--motion', 'smooth')
+    }
   },
   mounted () {
     const self = this
