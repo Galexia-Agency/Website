@@ -168,7 +168,12 @@ export default {
       plugins: [
         { reusePaths: true },
         { removeOffCanvasPaths: true },
-        { removeScriptElement: true }
+        { removeScriptElement: true },
+        {
+          cleanupIDs: {
+            minify: false
+          }
+        }
       ]
     }
   },
