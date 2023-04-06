@@ -753,20 +753,12 @@ table.comparison {
   }
 }
 
-/* Popover */
-.v-popover {
-  display: inline;
-  color: var(--primaryColor);
-  font-size: .75rem;
-  vertical-align: middle;
-  cursor: pointer
-}
-.v-popover svg.svg-inline--fa.fa-w-12 {
-  width: 1rem;
-  height: 1rem;
-  padding: .05rem;
-  border: 1.5px solid var(--primaryColor);
-  border-radius: 50%
+/* Info */
+.info-item {
+  display: block;
+  margin-left: 1em;
+  color: #333333;
+  font-size: .8em
 }
 
 /* Hosting SVG */

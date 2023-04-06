@@ -46,9 +46,6 @@ img {
   height: auto;
   margin: 0 auto 1rem
 }
-.overflow {
-  max-width: 90%
-}
 .hosting-grid {
   align-items: center
 }
@@ -94,54 +91,25 @@ img {
               <tr>
                 <td>
                   Near limitless storage Capacity
-                  <v-popover placement="top">
-                    <font-awesome-icon icon="question" />
-                    <template slot="popover">
-                      <span>
-                        Includes all of the code used to run your site as well
-                        as content such as photos and videos
-                      </span>
-                    </template>
-                  </v-popover>
                 </td>
               </tr>
               <tr>
                 <td>
                   Near limitless network transfer
-                  <v-popover placement="top">
-                    <font-awesome-icon icon="question" />
-                    <template slot="popover">
-                      <span>
-                        How much data is transferred to your users when they
-                        visit your site
-                      </span>
-                    </template>
-                  </v-popover>
                 </td>
               </tr>
               <tr>
                 <td>
                   Near limitless monthly visitors
-                  <v-popover placement="top">
-                    <font-awesome-icon icon="question" />
-                    <template slot="popover">
-                      <span>How many users visit your site in a month</span>
-                    </template>
-                  </v-popover>
                 </td>
               </tr>
               <tr>
                 <td>
                   Suitable for 1 site only
-                  <v-popover placement="top">
-                    <font-awesome-icon icon="question" />
-                    <template slot="popover">
-                      <span>
-                        You will need to purchase seperate hosting plans for
-                        each site you own
-                      </span>
-                    </template>
-                  </v-popover>
+                  <span class="info-item">
+                    You will need to purchase seperate hosting plans for
+                    each site you own
+                  </span>
                 </td>
               </tr>
               <tr>
@@ -151,70 +119,43 @@ img {
                     SLA
                   </nuxt-link>
                   with performance monitoring
-                  <v-popover placement="top">
-                    <font-awesome-icon icon="question" />
-                    <template slot="popover">
-                      <span>
-                        Your website will be available for viewers almost all
-                        of the time. There may be very minor outages
-                      </span>
-                    </template>
-                  </v-popover>
+                  <span class="info-item">
+                    Your website will be available for viewers almost all
+                    of the time. There may be very minor outages
+                  </span>
                 </td>
               </tr>
               <tr>
                 <td>
                   PHP 8.0
-                  <v-popover placement="top">
-                    <font-awesome-icon icon="question" />
-                    <template slot="popover">
-                      <span>
-                        Latest version of PHP, the language WordPress
-                        uses
-                      </span>
-                    </template>
-                  </v-popover>
+                  <span class="info-item">
+                    The version of PHP that runs your WordPress site
+                  </span>
                 </td>
               </tr>
               <tr>
                 <td>
                   HTTP/3
-                  <v-popover placement="top">
-                    <font-awesome-icon icon="question" />
-                    <template slot="popover">
-                      <span>
-                        Cutting edge version of HTTP which uses QUIC as it's
-                        engine
-                      </span>
-                    </template>
-                  </v-popover>
+                  <span class="info-item">
+                    Cutting edge version of HTTP to improve load time
+                  </span>
                 </td>
               </tr>
               <tr>
                 <td>
                   Brotli Compression
-                  <v-popover placement="top">
-                    <font-awesome-icon icon="question" />
-                    <template slot="popover">
-                      <span>
-                        Latest compression algorithm reducing the size of the
-                        website, improving load time
-                      </span>
-                    </template>
-                  </v-popover>
+                  <span class="info-item">
+                    Latest compression algorithm reducing the size of the
+                    website, improving load time
+                  </span>
                 </td>
               </tr>
               <tr>
                 <td>
                   Content Delivery Network (<abbr>CDN</abbr>) powered by Cloudflare
-                  <v-popover placement="top">
-                    <font-awesome-icon icon="question" />
-                    <template slot="popover">
-                      <span>
-                        Caches your website around the globe to improve load time
-                      </span>
-                    </template>
-                  </v-popover>
+                  <span class="info-item">
+                    Caches your website around the globe to improve load time
+                  </span>
                 </td>
               </tr>
               <tr>
@@ -256,67 +197,37 @@ img {
                   <li>
                     Distributed Denial of Service (<abbr>DDoS</abbr>) attack
                     Protection
-                    <v-popover placement="top">
-                      <font-awesome-icon icon="question" />
-                      <template slot="popover">
-                        <span>Type of attack designed to overwhelm a server and
-                          cause it to shut down, making your website
-                          unavailable</span>
-                      </template>
-                    </v-popover>
+                    <span class="info-item">A type of attack designed to overwhelm a server and
+                      cause it to shut down, making your website
+                      unavailable</span>
                   </li>
                   <li>
                     Brute Force Protection
-                    <v-popover placement="top">
-                      <font-awesome-icon icon="question" />
-                      <template slot="popover">
-                        <span>A type of attack designed to gain your login
-                          credentials by guessing all variations</span>
-                      </template>
-                    </v-popover>
+                    <span class="info-item">A type of attack designed to gain your login
+                      credentials by guessing all variations</span>
                   </li>
                   <li>
                     Automatic Malware Scans
-                    <v-popover placement="top">
-                      <font-awesome-icon icon="question" />
-                      <template slot="popover">
-                        <span>WordPress can be vulnerable to Malware. We put
-                          preventative measures in place but also have scans to
-                          tell us if a site has been infected</span>
-                      </template>
-                    </v-popover>
+                    <span class="info-item">WordPress can be vulnerable to Malware. We put
+                      preventative measures in place but also have scans to
+                      tell us if a site has been infected</span>
                   </li>
                   <li>
                     Web Application Firewall
-                    <v-popover placement="top">
-                      <font-awesome-icon icon="question" />
-                      <template slot="popover">
-                        <span>A firewall stops malicious users from accessing a
-                          site</span>
-                      </template>
-                    </v-popover>
+                    <span class="info-item">A firewall stops malicious users from accessing a
+                      site</span>
                   </li>
                 </ul>
               </li>
               <li>
                 Site caching and optimization
-                <v-popover placement="top">
-                  <font-awesome-icon icon="question" />
-                  <template slot="popover">
-                    <span>Improves load time which means happier users and better
-                      SEO</span>
-                  </template>
-                </v-popover>
+                <span class="info-item">Improves load time which means happier users and better
+                  SEO</span>
               </li>
-              <li class="overflow">
+              <li>
                 WordPress Core, Plugin, and Theme updates
-                <v-popover placement="top">
-                  <font-awesome-icon icon="question" />
-                  <template slot="popover">
-                    <span>Keeping everything up-to-date ensures security issues are
-                      fixed and your site is running as fast as possible</span>
-                  </template>
-                </v-popover>
+                <span class="info-item">Keeping everything up-to-date ensures security issues are
+                  fixed and your site is running as fast as possible</span>
               </li>
             </ul>
           </div>
@@ -425,6 +336,13 @@ img {
         purchase of any hosting plan.
       </p>
       <p class="desc">
+        What is a user?
+        <span class="info-item">A user is defined as one personalised email address
+          (you@yourcompany). Group email aliases such as
+          sales@yourcompany and support@yourcompany are included in
+          pricing and don't count as additional users.</span>
+      </p>
+      <p class="desc">
         <nuxt-link class="button" to="/contact/">
           Set up your email
         </nuxt-link>
@@ -439,18 +357,6 @@ img {
               <h3>£80/year</h3>
             </div>
             <ul>
-              <li class="overflow">
-                What is a user?
-                <v-popover placement="top">
-                  <font-awesome-icon icon="question" />
-                  <template slot="popover">
-                    <span>A user is defined as one personalised email address
-                      (you@yourcompany). Group email aliases such as
-                      sales@yourcompany and support@yourcompany are included in
-                      pricing and don't count as additional users.</span>
-                  </template>
-                </v-popover>
-              </li>
               <li>Gmail Business Email</li>
               <li>Meet Video and voice conferencing</li>
               <li>Chat Team messaging</li>
@@ -473,18 +379,6 @@ img {
               <h3>£150/year</h3>
             </div>
             <ul>
-              <li class="overflow">
-                What is a user?
-                <v-popover placement="top">
-                  <font-awesome-icon icon="question" />
-                  <template slot="popover">
-                    <span>A user is defined as one personalised email address
-                      (you@yourcompany). Group email aliases such as
-                      sales@yourcompany and support@yourcompany are included in
-                      pricing and don't count as additional users.</span>
-                  </template>
-                </v-popover>
-              </li>
               <li>Gmail Business Email</li>
               <li>Meet Video and voice conferencing</li>
               <li>Chat Team messaging</li>

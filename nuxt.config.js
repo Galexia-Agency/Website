@@ -121,7 +121,6 @@ export default {
    ** Global CSS
    */
   css: [
-    '~/assets/css/tooltips.css',
     '~/assets/css/transition.css'
   ],
   /*
@@ -130,7 +129,6 @@ export default {
   plugins: [
     '~/plugins/animation.js',
     '~/plugins/fontAwesome.js',
-    '~/plugins/tooltip.js',
     '~/plugins/ztext.client.js',
     '~plugins/mixins/forms'
   ],

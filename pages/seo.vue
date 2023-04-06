@@ -106,12 +106,7 @@
               <tr>
                 <td>
                   GDPR Compliant Analytics Set Up
-                  <v-popover placement="top">
-                    <font-awesome-icon icon="question" />
-                    <template slot="popover">
-                      <span>Analytics are an important tool in improving website performance. By nature, they track users, we'll help set the tool up in a legal and ethical way.</span>
-                    </template>
-                  </v-popover>
+                  <span class="info-item">Analytics are an important tool in improving website performance. By nature, they track users, we'll help set the tool up in a legal and ethical way.</span>
                 </td>
                 <td>
                   <font-awesome-icon :icon="['far', 'check-circle']" />
@@ -123,12 +118,8 @@
               <tr>
                 <td>
                   Google Search Console Set Up
-                  <v-popover placement="top">
-                    <font-awesome-icon icon="question" />
-                    <template slot="popover">
-                      <span>Another important tool to monitor performance of your website in Google's SERPs.</span>
-                    </template>
-                  </v-popover>
+
+                  <span class="info-item">Another important tool to monitor performance of your website in Google's SERPs.</span>
                 </td>
                 <td>
                   <font-awesome-icon :icon="['far', 'check-circle']" />
@@ -140,12 +131,8 @@
               <tr>
                 <td>
                   Bing Webmaster Tools Set Up
-                  <v-popover placement="top">
-                    <font-awesome-icon icon="question" />
-                    <template slot="popover">
-                      <span>Another important tool to monitor performance of your website in Bing's SERPs.</span>
-                    </template>
-                  </v-popover>
+
+                  <span class="info-item">Another important tool to monitor performance of your website in Bing's SERPs.</span>
                 </td>
                 <td>
                   <font-awesome-icon :icon="['far', 'check-circle']" />
@@ -157,12 +144,8 @@
               <tr>
                 <td>
                   Pages/Posts/Products title &amp; description optimisation
-                  <v-popover placement="top">
-                    <font-awesome-icon icon="question" />
-                    <template slot="popover">
-                      <span>We'll analyse the text on your page and change the format to suit your targetted keywords.</span>
-                    </template>
-                  </v-popover>
+
+                  <span class="info-item">We'll analyse the text on your page and change the format to suit your targetted keywords.</span>
                 </td>
                 <td>
                   Up to 10
@@ -174,12 +157,8 @@
               <tr>
                 <td>
                   Targetted Keywords
-                  <v-popover placement="top">
-                    <font-awesome-icon icon="question" />
-                    <template slot="popover">
-                      <span>These are the keywords that you are targetting your website to rank for in the SERPs.</span>
-                    </template>
-                  </v-popover>
+
+                  <span class="info-item">These are the keywords that you are targetting your website to rank for in the SERPs.</span>
                 </td>
                 <td>
                   Up to 10
@@ -191,12 +170,8 @@
               <tr>
                 <td>
                   Keyword Monitoring
-                  <v-popover placement="top">
-                    <font-awesome-icon icon="question" />
-                    <template slot="popover">
-                      <span>This is the number of keywords we'll monitor so that you can make an informed decision on your targetted keywords.</span>
-                    </template>
-                  </v-popover>
+
+                  <span class="info-item">This is the number of keywords we'll monitor so that you can make an informed decision on your targetted keywords.</span>
                 </td>
                 <td>
                   Up to 25
@@ -208,12 +183,8 @@
               <tr>
                 <td>
                   Advice on new content structure and purpose in relation to goals
-                  <v-popover placement="top">
-                    <font-awesome-icon icon="question" />
-                    <template slot="popover">
-                      <span>We'll advise on a content strategy to get you higher up in the SERPs. Content is key in the modern era of SEO and planning when you publish new content can have a positive effect on your ranking position.</span>
-                    </template>
-                  </v-popover>
+
+                  <span class="info-item">We'll advise on a content strategy to get you higher up in the SERPs. Content is key in the modern era of SEO and planning when you publish new content can have a positive effect on your ranking position.</span>
                 </td>
                 <td>
                   <font-awesome-icon :icon="['far', 'check-circle']" />
@@ -225,12 +196,8 @@
               <tr>
                 <td>
                   Google My Business and Bing Places for Business monitoring and optimisation
-                  <v-popover placement="top">
-                    <font-awesome-icon icon="question" />
-                    <template slot="popover">
-                      <span>Both of these tools allow your company to be listed on maps, and have a card on the SERPs.</span>
-                    </template>
-                  </v-popover>
+
+                  <span class="info-item">Both of these tools allow your company to be listed on maps, and have a card on the SERPs.</span>
                 </td>
                 <td>
                   <font-awesome-icon :icon="['far', 'check-circle']" />
@@ -253,12 +220,8 @@
               <tr>
                 <td>
                   In-Depth Monthly SEO Report covering site performance, site health, and competitor analysis
-                  <v-popover placement="top">
-                    <font-awesome-icon icon="question" />
-                    <template slot="popover">
-                      <span>You need a tangible way to manage your Return On Investment which is why we'll send you a report at the end of each month detailing the work carried out and the performance of your SEO strategy.</span>
-                    </template>
-                  </v-popover>
+
+                  <span class="info-item">You need a tangible way to manage your Return On Investment which is why we'll send you a report at the end of each month detailing the work carried out and the performance of your SEO strategy.</span>
                 </td>
                 <td>
                   <font-awesome-icon :icon="['far', 'check-circle']" />
@@ -290,12 +253,8 @@
               <tr>
                 <td>
                   Schema.org markup
-                  <v-popover placement="top">
-                    <font-awesome-icon icon="question" />
-                    <template slot="popover">
-                      <span>Schemar.org markup is a recognised notation format to help computers read and understand your content. It can help to create Rich Snippets in Google.</span>
-                    </template>
-                  </v-popover>
+
+                  <span class="info-item">Schemar.org markup is a recognised notation format to help computers read and understand your content. It can help to create Rich Snippets in Google.</span>
                 </td>
                 <td>
                   <font-awesome-icon :icon="['far', 'check-circle']" />
@@ -307,12 +266,8 @@
               <tr>
                 <td>
                   Meta Tags
-                  <v-popover placement="top">
-                    <font-awesome-icon icon="question" />
-                    <template slot="popover">
-                      <span>Meta Tags are a recognised way of allowing computers to understand your content and display it in a better way. One such way is having custom images on links to your website posted on Facebook.</span>
-                    </template>
-                  </v-popover>
+
+                  <span class="info-item">Meta Tags are a recognised way of allowing computers to understand your content and display it in a better way. One such way is having custom images on links to your website posted on Facebook.</span>
                 </td>
                 <td>
                   <font-awesome-icon :icon="['far', 'check-circle']" />
@@ -324,12 +279,8 @@
               <tr>
                 <td>
                   Search Engine Friendly Sitemap Creation
-                  <v-popover placement="top">
-                    <font-awesome-icon icon="question" />
-                    <template slot="popover">
-                      <span>A Sitemap is a list of all of your websites pages/posts/products that Search Engines can scan to index your website quicker.</span>
-                    </template>
-                  </v-popover>
+
+                  <span class="info-item">A Sitemap is a list of all of your websites pages/posts/products that Search Engines can scan to index your website quicker.</span>
                 </td>
                 <td>
                   <font-awesome-icon :icon="['far', 'check-circle']" />
@@ -341,12 +292,8 @@
               <tr>
                 <td>
                   Robots.txt Creation
-                  <v-popover placement="top">
-                    <font-awesome-icon icon="question" />
-                    <template slot="popover">
-                      <span>A robots.txt file tells Search Engine's what pages should and shouldn't be indexed. Disallowing certain pages such as those behind login screens can help Search Engines to focus on more important content on your site.</span>
-                    </template>
-                  </v-popover>
+
+                  <span class="info-item">A robots.txt file tells Search Engine's what pages should and shouldn't be indexed. Disallowing certain pages such as those behind login screens can help Search Engines to focus on more important content on your site.</span>
                 </td>
                 <td>
                   <font-awesome-icon :icon="['far', 'check-circle']" />
@@ -358,12 +305,8 @@
               <tr>
                 <td>
                   Link structure
-                  <v-popover placement="top">
-                    <font-awesome-icon icon="question" />
-                    <template slot="popover">
-                      <span>The format of your links greatly influences how Search Engines index your site. As a crawler goes through your site it will follow or not follow links to other pages.</span>
-                    </template>
-                  </v-popover>
+
+                  <span class="info-item">The format of your links greatly influences how Search Engines index your site. As a crawler goes through your site it will follow or not follow links to other pages.</span>
                 </td>
                 <td>
                   <font-awesome-icon :icon="['far', 'check-circle']" />
@@ -375,12 +318,8 @@
               <tr>
                 <td>
                   URL Format
-                  <v-popover placement="top">
-                    <font-awesome-icon icon="question" />
-                    <template slot="popover">
-                      <span>Search Engines prefer dashes to spaces, HTTPS to HTTP and a www. subdomain may cause duplicate content.</span>
-                    </template>
-                  </v-popover>
+
+                  <span class="info-item">Search Engines prefer dashes to spaces, HTTPS to HTTP and a www. subdomain may cause duplicate content.</span>
                 </td>
                 <td>
                   <font-awesome-icon :icon="['far', 'check-circle']" />
@@ -392,12 +331,8 @@
               <tr>
                 <td>
                   Website Redirects
-                  <v-popover placement="top">
-                    <font-awesome-icon icon="question" />
-                    <template slot="popover">
-                      <span>As you update content on your site, pages may be deleted or changed, but you still want any links to those pages going to the right place.</span>
-                    </template>
-                  </v-popover>
+
+                  <span class="info-item">As you update content on your site, pages may be deleted or changed, but you still want any links to those pages going to the right place.</span>
                 </td>
                 <td>
                   <font-awesome-icon :icon="['far', 'check-circle']" />
@@ -409,12 +344,8 @@
               <tr>
                 <td>
                   Mobile/Responsive Site Optimisation
-                  <v-popover placement="top">
-                    <font-awesome-icon icon="question" />
-                    <template slot="popover">
-                      <span>Over 50% of web traffic is mobile, so it's important to have a mobile responsive site. As part of the SEO package we will make minor updates for you, however, it may be neccessary to have a completely revamped site.</span>
-                    </template>
-                  </v-popover>
+
+                  <span class="info-item">Over 50% of web traffic is mobile, so it's important to have a mobile responsive site. As part of the SEO package we will make minor updates for you, however, it may be neccessary to have a completely revamped site.</span>
                 </td>
                 <td>
                   <font-awesome-icon :icon="['far', 'check-circle']" />
@@ -426,12 +357,8 @@
               <tr>
                 <td>
                   Fix crawlabilty issues as identified in Google Search Console
-                  <v-popover placement="top">
-                    <font-awesome-icon icon="question" />
-                    <template slot="popover">
-                      <span>Google Search Console occasionally picks up various errors on your website, most of which can be fixed quickly and easily.</span>
-                    </template>
-                  </v-popover>
+
+                  <span class="info-item">Google Search Console occasionally picks up various errors on your website, most of which can be fixed quickly and easily.</span>
                 </td>
                 <td>
                   basic
@@ -443,12 +370,8 @@
               <tr>
                 <td>
                   Technical fault finding &amp; resolution in relation to SEO
-                  <v-popover placement="top">
-                    <font-awesome-icon icon="question" />
-                    <template slot="popover">
-                      <span>We will fix various website issues if they are directly impacting your website's position in the SERPs.</span>
-                    </template>
-                  </v-popover>
+
+                  <span class="info-item">We will fix various website issues if they are directly impacting your website's position in the SERPs.</span>
                 </td>
                 <td>
                   basic
