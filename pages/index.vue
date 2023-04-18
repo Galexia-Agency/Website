@@ -1,15 +1,15 @@
 <style scoped>
   #portfolio {
-    grid-auto-flow: column;
-    width: 100%;
-    padding-left: 0;
-    padding-right: 0;
     grid-auto-columns: 33%;
+    grid-auto-flow: column;
     grid-template-columns: initial;
-    grid-column-gap: 10px;
+    width: 100%;
+    max-width: calc(var(--100vw) - 4.25rem);
+    padding-right: 0;
+    padding-left: 0;
     overflow-x: scroll;
+    column-gap: 10px;
     -webkit-overflow-scrolling: touch;
-    -ms-scroll-snap-type: x mandatory;
     scroll-snap-type: x mandatory;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
@@ -31,18 +31,18 @@
     font-size: 1.25rem
   }
   .icons {
+    position: sticky;
     display: grid;
+    grid-auto-rows: 30px;
+    grid-auto-columns: 30px;
     grid-auto-flow: column;
+    grid-column: 1;
     gap: 5px;
-    width: auto;
-    margin: -60px auto auto;
-    justify-items: center;
     align-items: center;
     justify-content: center;
-    position: sticky;
-    grid-column: 1;
-    grid-auto-columns: 30px;
-    grid-auto-rows: 30px
+    justify-items: center;
+    width: auto;
+    margin: -60px auto auto
   }
   .icon {
     width: 15px;
@@ -57,7 +57,8 @@
 
   @media (max-width: 900px) {
     #portfolio {
-      grid-auto-columns: 100%
+      grid-auto-columns: 100%;
+      max-width: calc(var(--100vw) - 6rem)
     }
     .icons {
       padding-bottom: 30px
@@ -68,16 +69,16 @@
   }
   @media (max-width: 500px) {
     #portfolio {
-      max-width: 100vw
+      max-width: calc(var(--100vw) - 2rem)
     }
   }
   .portfolioImgContainer {
-    min-height: clamp(220px, 25vw, 350px);
+    position: relative;
     width: 100%;
-    background-size: contain;
-    background-position: top center;
+    min-height: clamp(220px, calc((var(--100vw) / 100) * 25), 350px);
     background-repeat: no-repeat;
-    position: relative
+    background-position: top center;
+    background-size: contain
   }
   #portfolio .card:nth-of-type(even) .portfolioImgContainer {
     background-image: url('../assets/img/iMac.png?webp')
@@ -106,31 +107,31 @@
   }
   @media (max-width: 900px) {
     #portfolio .card:nth-of-type(even) .portfolioImgContainer img {
-      max-width: 247.5px;
-      left: calc((100vw - 342px) / 2);
       top: 5.5%;
+      left: calc((var(--100vw) - 342px) / 2);
+      max-width: 247.5px;
       aspect-ratio: 350/200
     }
     #portfolio .card:nth-of-type(odd) .portfolioImgContainer img {
-      max-width: 290px;
-      left: calc((100vw - 390px) / 2);
       top: 6%;
+      left: calc((var(--100vw) - 390px) / 2);
+      max-width: 290px;
       aspect-ratio: 320/200
     }
   }
   @media (max-width: 500px) {
     #portfolio .card:nth-of-type(even) .portfolioImgContainer img {
-      left: calc((100vw - 278px) / 2)
+      left: calc((var(--100vw) - 278px) / 2)
     }
     #portfolio .card:nth-of-type(odd) .portfolioImgContainer img {
-      left: calc((100vw - 322px) / 2)
+      left: calc((var(--100vw) - 322px) / 2)
     }
     .icons {
-      gap: 0;
       display: flex;
+      gap: 0;
       justify-content: space-between;
-      padding-left: 5px;
-      padding-right: 5px
+      padding-right: 5px;
+      padding-left: 5px
     }
   }
   @media (max-width: 402px) {
@@ -138,19 +139,19 @@
       left: 11%
     }
   }
-  @supports not (aspect-ratio: 1/1) {
+  @supports not (aspect-ratio: 1 / 1) {
     #portfolio .card:nth-of-type(even) .portfolioImgContainer img {
-      height: clamp(59%, 15.2vw, 64%)
+      height: clamp(59%, calc((100vw / 100) * 15.2), 64%)
     }
     #portfolio .card:nth-of-type(odd) .portfolioImgContainer img {
-      height: clamp(55%, 14.5vw, 60%)
+      height: clamp(55%, calc((100vw / 100) * 14.5), 60%)
     }
     @media (max-width: 900px) {
       #portfolio .card:nth-of-type(even) .portfolioImgContainer img {
         height: 63%
       }
       #portfolio .card:nth-of-type(odd) .portfolioImgContainer img {
-        height: clamp(61%, 43vw, 82%)
+        height: clamp(61%, calc((100vw / 100) * 43), 82%)
       }
     }
   }
@@ -196,46 +197,48 @@
       </div>
     </section>
     <section class="white">
-      <h2 class="maxWidth">
-        We let our work speak for itself
-      </h2>
-      <div id="portfolio" class="grid column three maxWidth" @scroll="updateIcons">
-        <article v-for="(post, index) in $parent.$parent.portfolios" :key="index" class="card">
-          <div v-if="post.ACFLink" class="card--inner">
-            <img
-              v-if="post.featuredImage.node.mediaItemUrl"
-              :src="post.featuredImage.node.mediaItemUrl.replace('q_auto', 'q_auto,w_500,h_413')"
-              width="100%"
-              height="auto"
-              :alt="post.title"
-            >
-            <div v-else class="portfolioImgContainer">
+      <div class="maxWidth">
+        <h2>
+          We let our work speak for itself
+        </h2>
+        <div id="portfolio" class="grid column three" @scroll="updateIcons">
+          <article v-for="(post, index) in $parent.$parent.portfolios" :key="index" class="card">
+            <div v-if="post.ACFLink" class="card--inner">
               <img
-                :src="'data:image/jpeg;charset=utf-8;base64,' + post.imgThumb"
+                v-if="post.featuredImage.node.mediaItemUrl"
+                :src="post.featuredImage.node.mediaItemUrl.replace('q_auto', 'q_auto,w_500,h_413')"
                 width="100%"
                 height="auto"
                 :alt="post.title"
               >
-            </div>
-            <a :href="post.ACFLink.link" target="_blank" rel="noopener">
-              <h3 v-html="post.title" />
-            </a>
-            <div class="tags">
-              <span v-for="(tag, i) in post.tags.nodes" :key="i">
-                {{ tag.name }}
-              </span>
-            </div>
-            <div v-html="post.content" />
-            <div>
-              <a :href="post.ACFLink.link" target="_blank" rel="noopener" class="website_link">
-                View the website
+              <div v-else class="portfolioImgContainer">
+                <img
+                  :src="'data:image/jpeg;charset=utf-8;base64,' + post.imgThumb"
+                  width="100%"
+                  height="auto"
+                  :alt="post.title"
+                >
+              </div>
+              <a :href="post.ACFLink.link" target="_blank" rel="noopener">
+                <h3 v-html="post.title" />
               </a>
+              <div class="tags">
+                <span v-for="(tag, i) in post.tags.nodes" :key="i">
+                  {{ tag.name }}
+                </span>
+              </div>
+              <div v-html="post.content" />
+              <div>
+                <a :href="post.ACFLink.link" target="_blank" rel="noopener" class="website_link">
+                  View the website
+                </a>
+              </div>
             </div>
-          </div>
-        </article>
-      </div>
-      <div class="icons">
-        <div v-for="i in icons" :key="i.id" class="icon" :class="{ current: i == 1}" @click="portfolioScroll(i)" />
+          </article>
+        </div>
+        <div class="icons">
+          <div v-for="i in icons" :key="i.id" class="icon" :class="{ current: i == 1}" @click="portfolioScroll(i)" />
+        </div>
       </div>
     </section>
   </div>

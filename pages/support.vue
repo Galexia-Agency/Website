@@ -68,7 +68,11 @@
             </p>
           </div>
         </div>
-        <div v-infocus="'showElement'" class="card white hidden" style="--delay: .25s">
+        <div
+          v-infocus="'showElement'"
+          class="card white hidden"
+          style="--delay: .25s"
+        >
           <div class="card--inner">
             <h3>Error 500</h3>
             <p class="text--normal">
@@ -76,7 +80,11 @@
             </p>
           </div>
         </div>
-        <div v-infocus="'showElement'" class="card white hidden" style="--delay: .5s">
+        <div
+          v-infocus="'showElement'"
+          class="card white hidden"
+          style="--delay: .5s"
+        >
           <div class="card--inner">
             <h3>Javascript errors</h3>
             <p class="text--normal">
@@ -84,7 +92,11 @@
             </p>
           </div>
         </div>
-        <div v-infocus="'showElement'" class="card white hidden" style="--delay: .75s">
+        <div
+          v-infocus="'showElement'"
+          class="card white hidden"
+          style="--delay: .75s"
+        >
           <div class="card--inner">
             <h3>WordPress issues</h3>
             <p class="text--normal">
@@ -100,7 +112,11 @@
             </p>
           </div>
         </div>
-        <div v-infocus="'showElement'" class="card white hidden" style="--delay: .25s">
+        <div
+          v-infocus="'showElement'"
+          class="card white hidden"
+          style="--delay: .25s"
+        >
           <div class="card--inner">
             <h3>SSL Error</h3>
             <p class="text--normal">
@@ -108,7 +124,11 @@
             </p>
           </div>
         </div>
-        <div v-infocus="'showElement'" class="card white hidden" style="--delay: .5s">
+        <div
+          v-infocus="'showElement'"
+          class="card white hidden"
+          style="--delay: .5s"
+        >
           <div class="card--inner">
             <h3>Slow website</h3>
             <p class="text--normal">
@@ -116,7 +136,11 @@
             </p>
           </div>
         </div>
-        <div v-infocus="'showElement'" class="card white hidden" style="--delay: .75s">
+        <div
+          v-infocus="'showElement'"
+          class="card white hidden"
+          style="--delay: .75s"
+        >
           <div class="card--inner">
             <h3>Spam</h3>
             <p class="text--normal">

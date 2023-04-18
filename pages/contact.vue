@@ -1,7 +1,6 @@
 <style>
   .rocket.animate {
     position: relative;
-    -webkit-animation: move 6000ms 1 normal ease-in-out;
     animation: move 6000ms 1 normal ease-in-out
   }
   @keyframes move {
@@ -14,7 +13,6 @@
   }
   @media (prefers-reduced-motion: reduce) {
     .rocket.animate {
-      -webkit-animation: none;
       animation: none
     }
   }
@@ -27,10 +25,10 @@
     gap: 2rem
   }
   p {
-    text-align: center;
-    font-size: 1.25rem;
+    z-index: 1;
     margin-bottom: 2rem;
-    z-index: 1
+    font-size: 1.25rem;
+    text-align: center
   }
 </style>
 

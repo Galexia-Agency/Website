@@ -17,7 +17,7 @@ const state = {
   legals: []
 }
 
-const delay = ms => new Promise((resolve, reject) => setTimeout(resolve, ms))
+const delay = (ms) => new Promise((resolve, reject) => setTimeout(resolve, ms))
 
 function isFullUrl (url) {
   try {
@@ -213,18 +213,20 @@ export default async function () {
     throw e
   }
 
-  const browser = await chromium.puppeteer.launch({
-    executablePath: await chromium.executablePath,
-    args: chromium.args,
-    defaultViewport: {
-      width: 1920,
-      height: 1240,
-      deviceScaleFactor: parseFloat(1)
-    },
-    headless: chromium.headless
-  })
+  let browser
 
   async function screenshotHandler (url) {
+    browser = await chromium.puppeteer.launch({
+      executablePath: await chromium.executablePath,
+      args: chromium.args,
+      defaultViewport: {
+        width: 1920,
+        height: 1240,
+        deviceScaleFactor: parseFloat(1)
+      },
+      headless: chromium.headless
+    })
+
     url = decodeURIComponent(url)
     try {
       if (!isFullUrl(url)) {
@@ -267,7 +269,9 @@ export default async function () {
     }
   }
 
-  await browser.close()
+  if (browser) {
+    await browser.close()
+  }
 
   state.portfolios = portfolioArr
 

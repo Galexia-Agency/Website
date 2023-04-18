@@ -1,7 +1,7 @@
 <style scoped>
   .card:hover {
-    background-color: inherit;
-    color: inherit
+    color: inherit;
+    background-color: inherit
   }
   .card:hover h3 {
     color: var(--primaryColor)
@@ -11,9 +11,9 @@
     grid-template-rows: max-content 250px 1fr
   }
   .card .svg {
-    margin: auto;
+    width: 75%;
     height: auto;
-    width: 75%
+    margin: auto
   }
   .card h3 {
     margin-bottom: 1.5rem;
@@ -83,13 +83,15 @@
         <div v-infocus="'showElement'" class="hidden hidden-left">
           <h3>Emails / Newsletters</h3>
           <p class="text--normal">
-            Creating an email list can be a great way to engage with potential customers. What do you do with all those emails? Why not have us deliver a tailored newsletter campaign to your email list encouraging them to engage with your brand and keeping them up-to-date on your current activities. If a customer trusts a brand, they’re more likely to use it in the future. We take great care in adhering to all local laws regarding emails including GDPR.
+            Creating an email list can be a great way to engage with potential customers. What do you do with all those emails? Why not have us deliver a tailored newsletter campaign to your email list encouraging them to engage with your brand and keeping them up-to-date on your current activities. If a customer trusts a brand, they’re more likely to use it in the future. We take great care in adhering to all local laws regarding emails including GDPR. Did you also know we're Mailchimp certified, making us better equipped to help you.
           </p>
           <nuxt-link class="button" to="/contact/">
             Create a campaign
           </nuxt-link>
         </div>
-        <div v-infocus="'showElement'" class="hidden hidden-right svg" v-html="require('../assets/svg/email.svg?include')" />
+        <div v-infocus="'showElement'" class="hidden hidden-right svg">
+          <img src="../assets/img/mailchimp_certified.jpg?size=1000" width="100%" height="auto" alt="Mailchimp Certified">
+        </div>
       </div>
     </section>
     <section class="white">
@@ -102,21 +104,33 @@
             Photos can make or break a brand. Having good photos are vital to all kinds of content marketing, including social media, and websites. We have a team of photographers versed in everything from events to products.
           </p>
         </div>
-        <div v-infocus="'showElement'" class="card hidden" style="--delay: .25s">
+        <div
+          v-infocus="'showElement'"
+          class="card hidden"
+          style="--delay: .25s"
+        >
           <h3>Videography</h3>
           <div class="svg" v-html="require('../assets/svg/videography.svg?include')" />
           <p class="text--normal">
             We love watching great content. It’s a great way to engage with customers in the modern age. We pride ourselves in creating short clips for Instagram, longer clips for YouTube and everything in-between.
           </p>
         </div>
-        <div v-infocus="'showElement'" class="card hidden" style="--delay: .5s">
+        <div
+          v-infocus="'showElement'"
+          class="card hidden"
+          style="--delay: .5s"
+        >
           <h3>Copy-writing</h3>
           <div class="svg" v-html="require('../assets/svg/writing.svg?include')" />
           <p class="text--normal">
             Some people learn visually, some by reading. It’s best to have a mixture of both. Not to mention that good quality blogs are by far one of the best ways to improve search presence.
           </p>
         </div>
-        <div v-infocus="'showElement'" class="card hidden" style="--delay: .75s">
+        <div
+          v-infocus="'showElement'"
+          class="card hidden"
+          style="--delay: .75s"
+        >
           <h3>Graphic Design</h3>
 
           <div class="svg" v-html="require('../assets/svg/design.svg?include')" />

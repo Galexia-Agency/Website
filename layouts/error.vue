@@ -1,18 +1,18 @@
-<style scoped>
+<style scoped lang="scss">
   .error {
-    text-align: center;
+    align-content: center;
     min-height: 600px;
-    align-content: center
+    text-align: center
   }
   .error .svg {
-    max-width: 350px;
     width: 85%;
+    max-width: 350px;
     margin: auto
   }
   .error h1 {
     margin-top: 5rem;
     font-size: 2.25rem;
-    font-size: clamp(1.75rem, 1vw + 1rem, 3rem)
+    font-size: clamp(1.75rem, calc(var(--100vw) / 100) + 1rem, 3rem)
   }
 </style>
 

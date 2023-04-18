@@ -16,8 +16,8 @@
     font-size: 1rem;
     opacity: 1;
     p {
-      font-size: .85rem;
       margin: 0;
+      font-size: .85rem;
       opacity: .85
     }
   }

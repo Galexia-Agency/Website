@@ -1,7 +1,10 @@
 <!DOCTYPE html>
-<html {{ HTML_ATTRS }}>
+<html {{ HTML_ATTRS }} class="nav_close">
 
 <head {{ HEAD_ATTRS }}>
+  <script>
+    document.querySelector('html').classList.add('js-active')
+  </script>
   {{ HEAD }}
 </head>
 
