@@ -34,7 +34,7 @@
     "imagemin-svgo": "^8.0.0",
     "jimp": "^0.22.7",
     "node-fetch": "^3.2.10",
-    "nuxt": "^2.15.7",
+    "nuxt": "^2.16.0",
     "puppeteer-core": "10.1.0",
     "responsive-loader": "^2.3.0",
     "sass": "^1.60.0",
