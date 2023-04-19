@@ -199,14 +199,8 @@ export default {
         '/legal/acceptable-use-policy/',
         '/our-team/'
       ],
-      offlineAnalytics: true,
       offlinePage: '/404.html',
-      runtimeCaching: [
-        {
-          urlPattern: 'https://blog.galexia.agency/',
-          handler: 'cacheFirst'
-        }
-      ]
+      cacheAssets: false
     },
     manifest: {
       name: 'Galexia Creative Agency Ltd',
