@@ -179,40 +179,12 @@ export default {
     fallback: true
   },
   pwa: {
-    workbox: {
-      preCaching: [
-        '/',
-        '/web/',
-        '/marketing/',
-        '/blog/',
-        '/careers/',
-        '/contact/',
-        '/support/',
-        '/hosting/',
-        '/legal/',
-        '/legal/terms-of-service/',
-        '/legal/data-processing-agreement/',
-        '/legal/gdpr-statement/',
-        '/legal/cookie-policy/',
-        '/legal/privacy-policy/',
-        '/legal/service-level-agreement/',
-        '/legal/acceptable-use-policy/',
-        '/our-team/'
-      ],
-      offlineAnalytics: true,
-      offlinePage: '/404.html',
-      runtimeCaching: [
-        {
-          urlPattern: 'https://blog.galexia.agency/',
-          handler: 'cacheFirst'
-        }
-      ]
-    },
+    workbox: false,
     manifest: {
       name: 'Galexia Creative Agency Ltd',
       shortName: 'Galexia',
       background_color: '#ffffff',
-      display: 'standalone',
+      display: 'browser',
       lang: 'en-GB'
     },
     meta: {
