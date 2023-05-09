@@ -81,10 +81,18 @@
     background-size: contain
   }
   #portfolio .card:nth-of-type(even) .portfolioImgContainer {
-    background-image: url('../assets/img/iMac.png?webp')
+    background-image: url('../assets/img/iMac.png?format=webp&resize');
+    background-image: image-set(
+      url('../assets/img/iMac.png?format=avif&resize') type('image/avif'),
+      url('../assets/img/iMac.png?format=webp&resize') type('image/webp')
+    )
   }
   #portfolio .card:nth-of-type(odd) .portfolioImgContainer {
-    background-image: url('../assets/img/MacBookAir.png?webp')
+    background-image: url('../assets/img/MacBookAir.png?format=webp&resize');
+    background-image: image-set(
+      url('../assets/img/MacBookAir.png?format=avif&resize') type('image/avif'),
+      url('../assets/img/MacBookAir.png?format=webp&resize') type('image/webp')
+    )
   }
   .portfolioImgContainer img {
     position: absolute
@@ -161,7 +169,7 @@
   <div>
     <Header
       title="Let us focus on your website so you can focus on your <i>business</i>"
-      desc="We are a creative agency specialising in website design and development. We’re a fairly new company built from the ground up to help you grow. We use the latest and greatest practices and technologies so that we can pass on these benefits to you. What’s more, you don’t have to worry about anything, we take care of the whole process so you can carry on running your business."
+      desc="We are a creative agency built from the ground up to help start-ups grow. Aiming to accelerate your business, we provide a multitude of creative services from bespoke WordPress websites to Social Media Management. We know first-hand running a start-up can be a stressful experience so we aim to take some of that stress away by providing a best-in-class project management for the services we offer and that your business vitaly needs."
       :link="{location: '/contact/', text: 'Get in touch'}"
     />
     <section class="white">
@@ -172,7 +180,7 @@
         <div v-infocus="'showElement'" class="hidden hidden-left">
           <h3>We start with a conversation</h3>
           <p class="text--normal">
-            We find the best way to start a website project is to have an informal, no-obligations chat about your requirements. Some of our clients come to us with a large website project plan spanning many months, with a detailed idea about what they want. Some other clients only know the idea, and not the implementation. We’re happy with both.
+            We find the best way to engage a start-up is to have an informal, no-obligations chat about your business. Some of businesses come to us with a detailed idea about what they want with a very strict budget, whilst others are super passionate about their idea, but haven't started researching how to digitally market it.
           </p>
         </div>
         <div v-infocus="'showElement'" class="hidden hidden-right svg" v-html="require('../assets/svg/discussion.svg?include')" />

@@ -17,28 +17,29 @@ body {
   font-family: Open Sans, sans-serif;
   background-color: white;
   scroll-behavior: var(--motion, auto);
-  background-image: url('../assets/img/SpaceBackgroundBlurred.jpg?webp');
+  background-image: url('../assets/img/SpaceBackgroundBlurred.jpg?format=webp&resize');
+  background-image: image-set(
+    url('../assets/img/SpaceBackgroundBlurred.jpg?format=avif&resize') type('image/avif'),
+    url('../assets/img/SpaceBackgroundBlurred.jpg?format=webp&resize') type('image/webp')
+  );
   background-repeat: no-repeat;
   background-size: var(--backgroundSize, 4500px)
-}
-body.no-webp {
-  background-image: url('../assets/img/SpaceBackgroundBlurred.jpg')
 }
 main header {
   background-image: linear-gradient(
     rgb(53 47 114 / 33%),
     rgb(53 47 114 / 33%)
-  ),
-    url('../assets/img/SpaceBackgroundBlurred.jpg?webp');
-  background-position: 0 -135px;
-  background-size: var(--backgroundSize, 4500px)
-}
-.no-webp main header {
+  ), url('../assets/img/SpaceBackgroundBlurred.jpg?format=webp&resize');
   background-image: linear-gradient(
     rgb(53 47 114 / 33%),
     rgb(53 47 114 / 33%)
   ),
-    url('../assets/img/SpaceBackgroundBlurred.jpg?resize')
+    image-set(
+    url('../assets/img/SpaceBackgroundBlurred.jpg?format=avif&resize') type('image/avif'),
+    url('../assets/img/SpaceBackgroundBlurred.jpg?format=webp&resize') type('image/webp')
+  );
+  background-position: 0 -135px;
+  background-size: var(--backgroundSize, 4500px)
 }
 ::selection {
   color: white;
@@ -1291,9 +1292,6 @@ export default {
     }
   },
   async beforeMount () {
-    if (!(await this.WebpIsSupported())) {
-      document.querySelector('body').classList.add('no-webp')
-    }
     if (!(await window.matchMedia('(prefers-reduced-motion: reduce)'))) {
       this.motion = 'auto'
     } else {
@@ -1346,25 +1344,6 @@ export default {
     }
   },
   methods: {
-    async WebpIsSupported () {
-      // If the browser doesn't have the method createImageBitmap, you can't display webp format
-      if (!self.createImageBitmap) {
-        return false
-      }
-
-      // Base64 representation of a white point image
-      const webpData =
-        'data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoCAAEAAQAcJaQAA3AA/v3AgAA='
-
-      // Retrieve the Image in Blob Format
-      const blob = await fetch(webpData).then((r) => r.blob())
-
-      // If the createImageBitmap method succeeds, return true, otherwise false
-      return createImageBitmap(blob).then(
-        () => true,
-        () => false
-      )
-    },
     left () {
       if (this.count !== 1) {
         const container = document.querySelector('.testimonials')
