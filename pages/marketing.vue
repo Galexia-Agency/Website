@@ -90,7 +90,14 @@
           </nuxt-link>
         </div>
         <div v-infocus="'showElement'" class="hidden hidden-right svg">
-          <img src="../assets/img/mailchimp_certified.jpg?size=1000" width="100%" height="auto" alt="Mailchimp Certified">
+          <GalexiaImage
+            :avif="require('~/assets/img/mailchimp_certified.jpg?format=avif&resize&size=1000')"
+            :webp="require('~/assets/img/mailchimp_certified.jpg?format=webp&resize&size=1000')"
+            :src="require('~/assets/img/mailchimp_certified.jpg?resize&size=1000')"
+            width="100%"
+            height="auto"
+            alt="Mailchimp Certified"
+          />
         </div>
       </div>
     </section>

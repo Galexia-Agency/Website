@@ -74,12 +74,16 @@ img {
         </p>
         <div class="grid column two hosting-grid">
           <figure>
-            <img
-              src="../assets/img/lighthouse.jpg?format=webp&resize&size=520"
+            <GalexiaImage
+              :avif="require('~/assets/img/lighthouse.jpg?format=avif&resize&size=520')"
+              :webp="require('~/assets/img/lighthouse.jpg?format=webp&resize&size=520')"
+              :src="require('~/assets/img/lighthouse.jpg?resize&size=520')"
               width="520"
               height="294"
               alt="Lighthouse Test"
-            >
+              loading="eager"
+              fetchpriority="high"
+            />
             <figcaption>
               <p style="text-align: center">
                 If you want Google Page Speed results like these then be sure to choose us for all your hosting and website needs.

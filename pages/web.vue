@@ -1,5 +1,5 @@
-<style lang="scss" scoped>
-.brands-using-wordpress {
+<style lang="scss">
+.brands-using-wordpress img {
   width: 100%;
   opacity: .5;
   filter: grayscale(1)
@@ -95,7 +95,15 @@
         <h2 style="line-height: 1.5">
           WordPress powers 43% of all websites including these top brands:
         </h2>
-        <img src="../assets/img/companies.png?format=webp&resize&size=1376" width="1376" loading="lazy" class="brands-using-wordpress" alt="The New York Times, Reuters, BBC America, Microsoft">
+        <GalexiaImage
+          :avif="require('~/assets/img/companies.png?format=avif&resize&size=1376')"
+          :webp="require('~/assets/img/companies.png?format=webp&resize&size=1376')"
+          :src="require('~/assets/img/companies.png?resize&size=1376')"
+          width="1376"
+          loading="lazy"
+          class="brands-using-wordpress"
+          alt="The New York Times, Reuters, BBC America, Microsoft"
+        />
       </div>
     </section>
   </div>

@@ -58,6 +58,9 @@ main header {
 :any-link:focus {
   opacity: .5
 }
+picture {
+  display: block
+}
 h1,
 h2,
 h3,
@@ -1190,12 +1193,14 @@ form.narrow {
             </p>
             <div class="socialLinks">
               <a href="https://www.policybee.co.uk/" target="_blank">
-                <img
-                  src="../assets/img/White_Badge_PolicyBee.png?size=75"
+                <GalexiaImage
+                  :avif="require('~/assets/img/White_Badge_PolicyBee.png?format=avif&resize&size=75')"
+                  :webp="require('~/assets/img/White_Badge_PolicyBee.png?format=webp&resize&size=75')"
+                  :src="require('~/assets/img/White_Badge_PolicyBee.png?resize&size=75')"
                   width="75"
                   height="75"
                   alt="Insured through PolicyBee"
-                >
+                />
               </a>
               <a
                 href="https://digitalagencynetwork.com/agencies/cambridge"

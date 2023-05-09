@@ -130,7 +130,8 @@ export default {
     '~/plugins/animation.js',
     '~/plugins/fontAwesome.js',
     '~/plugins/ztext.client.js',
-    '~plugins/mixins/forms'
+    '~plugins/mixins/forms',
+    '~plugins/galexia/components/image.js'
   ],
   /*
    ** Nuxt.js dev-modules
