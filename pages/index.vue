@@ -168,7 +168,7 @@
 <template>
   <div>
     <Header
-      title="Let us focus on your website so you can focus on your <i>business</i>"
+      title="Let us focus on your online presence so you can focus on your <i>business</i>"
       desc="We are a creative agency built from the ground up to help start-ups grow. Aiming to accelerate your business, we provide a multitude of creative services from bespoke WordPress websites to Social Media Management. We know first-hand running a start-up can be a stressful experience so we aim to take some of that stress away by providing a best-in-class project management for the services we offer and that your business vitaly needs."
       :link="{location: '/contact/', text: 'Get in touch'}"
     />

@@ -46,7 +46,7 @@
   <div>
     <Header
       :title="'Hey, businesses of <span class=\'location\'>' + $route.params.id + '</span>!'"
-      subtitle="Let us focus on your content so you can focus on your <i>business</i>"
+      subtitle="Let us focus on your online presence so you can focus on your <i>business</i>"
       :desc="'We are a creative agency based in Royston but with ties to <span class=\'location\'>' + $route.params.id + '</span>, specialising in website design and development. We’re a fairly new company built from the ground up to help you grow. We use the latest and greatest practices and technologies so that we can pass on these benefits to you. What’s more, you don’t have to worry about anything, we take care of the whole process so you can carry on running your business.'"
       :link="{location: '/contact/', text: 'Get in touch'}"
     />
