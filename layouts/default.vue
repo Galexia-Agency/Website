@@ -8,7 +8,6 @@ html {
   background: white
 }
 body {
-  min-height: 100vh;
   margin: 0;
   padding: 0;
   color: white;
@@ -16,30 +15,7 @@ body {
   font-size: 16px;
   font-family: Open Sans, sans-serif;
   background-color: white;
-  scroll-behavior: var(--motion, auto);
-  background-image: url('../assets/img/SpaceBackgroundBlurred.jpg?format=webp&resize');
-  background-image: image-set(
-    url('../assets/img/SpaceBackgroundBlurred.jpg?format=avif&resize') type('image/avif'),
-    url('../assets/img/SpaceBackgroundBlurred.jpg?format=webp&resize') type('image/webp')
-  );
-  background-repeat: no-repeat;
-  background-size: var(--backgroundSize, 4500px)
-}
-main header {
-  background-image: linear-gradient(
-    rgb(53 47 114 / 33%),
-    rgb(53 47 114 / 33%)
-  ), url('../assets/img/SpaceBackgroundBlurred.jpg?format=webp&resize');
-  background-image: linear-gradient(
-    rgb(53 47 114 / 33%),
-    rgb(53 47 114 / 33%)
-  ),
-    image-set(
-    url('../assets/img/SpaceBackgroundBlurred.jpg?format=avif&resize') type('image/avif'),
-    url('../assets/img/SpaceBackgroundBlurred.jpg?format=webp&resize') type('image/webp')
-  );
-  background-position: 0 -135px;
-  background-size: var(--backgroundSize, 4500px)
+  scroll-behavior: var(--motion, auto)
 }
 ::selection {
   color: white;
@@ -217,6 +193,20 @@ textarea {
     'footer';
   grid-template-rows: max-content 1fr max-content;
   min-height: 100vh
+}
+main header {
+  background-color: rgb(53 47 114 / 33%);
+  background-position: 0 -135px
+}
+#__layout > div,
+main header {
+  background-image: url('../assets/img/SpaceBackgroundBlurred.jpg?format=webp&resize');
+  background-image: image-set(
+    var(--imageToPreload) type('image/avif'),
+    url('../assets/img/SpaceBackgroundBlurred.jpg?format=webp&resize') type('image/webp')
+  );
+  background-repeat: no-repeat;
+  background-size: var(--backgroundSize, 4500px)
 }
 main {
   grid-area: main;
@@ -1087,7 +1077,7 @@ form.narrow {
 </style>
 
 <template>
-  <div>
+  <div :style="`--imageToPreload: url(${imageToPreload})`">
     <header>
       <nav class="maxWidth">
         <div class="logo--container">
@@ -1271,9 +1261,17 @@ export default {
   },
   data () {
     return {
+      imageToPreload: require('~/assets/img/SpaceBackgroundBlurred.jpg?format=avif&resize'),
       count: 1,
       motion: 'auto',
       expanded: null
+    }
+  },
+  head () {
+    return {
+      link: [
+        { rel: 'preload', as: 'image', href: this.imageToPreload }
+      ]
     }
   },
   computed: {
