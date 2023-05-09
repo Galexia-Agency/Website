@@ -9,7 +9,7 @@
   .header--inner {
     display: grid;
     gap: 2rem;
-    max-width: 780px;
+    max-width: 880px;
     margin: auto;
     padding: 6rem 2rem 7.5rem;
     text-align: center
