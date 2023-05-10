@@ -13,7 +13,7 @@ body {
   color: white;
   font-weight: 400;
   font-size: 16px;
-  font-family: Open Sans, sans-serif;
+  font-family: Open Sans, Open Sans fallback, sans-serif;
   background-color: white;
   scroll-behavior: var(--motion, auto)
 }
@@ -44,7 +44,7 @@ h4,
 h5,
 h6 {
   font-weight: 700;
-  font-family: Montserrat, serif;
+  font-family: Montserrat, Montserrat fallback, sans-serif;
   line-height: 1.225;
   + p {
     margin-top: 0
@@ -96,7 +96,7 @@ code {
   opacity: .9
 }
 button {
-  font-family: Open Sans, sans-serif
+  font-family: Open Sans, Open Sans fallback, sans-serif
 }
 .button:any-link {
   text-decoration: none
@@ -114,7 +114,7 @@ main .button :any-link:hover {
   padding: .75rem 1.25rem;
   color: white;
   font-size: 1.25rem;
-  font-family: Open Sans, sans-serif;
+  font-family: Open Sans, Open Sans fallback, sans-serif;
   line-height: 1.25rem;
   text-transform: capitalize;
   background-color: var(--primaryColor);
@@ -157,7 +157,7 @@ input,
 textarea,
 select {
   font-size: 1rem;
-  font-family: Open Sans, sans-serif;
+  font-family: Open Sans, Open Sans fallback, sans-serif;
   line-height: 1.75rem;
   background: linear-gradient(
     180deg,
@@ -294,7 +294,7 @@ nav {
 .logo svg text {
   font-weight: 300;
   font-size: 32px;
-  font-family: Assistant-Light, Assistant, sans-serif;
+  font-family: Assistant-Light, Assistant, Assistant Fallback, sans-serif;
   letter-spacing: 1.6px
 }
 .nav--container {
@@ -307,7 +307,7 @@ nav {
 .nav--link {
   padding: .5rem;
   font-size: 1.25rem;
-  font-family: Assistant, sans-serif;
+  font-family: Assistant, Assistant Fallback, sans-serif;
   letter-spacing: .05rem;
   border-bottom: .15rem solid transparent;
   transition: color .5s, border .5s
@@ -397,7 +397,7 @@ footer h4 {
 .footer--bottom_contact a {
   width: fit-content;
   font-size: 1.25rem;
-  font-family: Assistant, sans-serif;
+  font-family: Assistant, Assistant Fallback, sans-serif;
   border-bottom: .15rem solid transparent;
   transition: border .5s, opacity .25s
 }
@@ -492,7 +492,7 @@ svg {
   color: #212121;
   font-weight: 400;
   font-size: 16px;
-  font-family: Open Sans, sans-serif
+  font-family: Open Sans, Open Sans fallback, sans-serif
 }
 .card--inner * {
   margin: 0

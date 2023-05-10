@@ -33,15 +33,11 @@ export default {
       { rel: 'icon', type: 'image/png', sizes: '32x32', href: 'https://galexia.agency/favicon-32x32.png?v=dLXLEPEjpj' },
       { rel: 'icon', type: 'image/png', sizes: '16x16', href: 'https://galexia.agency/favicon-16x16.png?v=dLXLEPEjpj' },
       { rel: 'mask-icon', href: 'https://galexia.agency/safari-pinned-tab.svg?v=dLXLEPEjpj', color: '#534bae' },
-      { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' },
-      { rel: 'preload', as: 'style', href: 'https://fonts.googleapis.com/css2?family=Assistant:wght@300;400&family=Montserrat:ital,wght@0,600;0,700;1,600;1,700&family=Open+Sans:ital,wght@0,400;0,600;1,400;1,600&display=block' },
-      { rel: 'stylesheet', media: 'print', onload: 'this.media="all"', href: 'https://fonts.googleapis.com/css2?family=Assistant:wght@300;400&family=Montserrat:ital,wght@0,600;0,700;1,600;1,700&family=Open+Sans:ital,wght@0,400;0,600;1,400;1,600&display=block' },
       { rel: 'preload', as: 'style', href: 'https://assets.calendly.com/assets/external/widget.css' },
       { rel: 'stylesheet', media: 'print', onload: 'this.media="all"', href: 'https://assets.calendly.com/assets/external/widget.css' }
     ],
     __dangerouslyDisableSanitizers: ['script', 'noscript'],
     noscript: [
-      { innerHTML: '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400&family=Montserrat:ital,wght@0,600;0,700;1,600;1,700&family=Open+Sans:ital,wght@0,400;0,600;1,400;1,600&display=block" />' },
       { innerHTML: '<link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css" />' },
       { innerHTML: '<img src="https://analytics.galexia.agency/matomo.php?idsite=1&amp;rec=1" style="border:0;" alt="" />' }
     ],
@@ -121,7 +117,18 @@ export default {
    ** Global CSS
    */
   css: [
-    '~/assets/css/transition.css'
+    '@fontsource/assistant/300.css',
+    '@fontsource/assistant/400.css',
+    '@fontsource/montserrat/600.css',
+    '@fontsource/montserrat/700.css',
+    '@fontsource/montserrat/600-italic.css',
+    '@fontsource/montserrat/700-italic.css',
+    '@fontsource/open-sans/400.css',
+    '@fontsource/open-sans/600.css',
+    '@fontsource/open-sans/400-italic.css',
+    '@fontsource/open-sans/600-italic.css',
+    '~/assets/css/transition.css',
+    '~/assets/scss/style.scss'
   ],
   /*
    ** Plugins to load before mounting the App

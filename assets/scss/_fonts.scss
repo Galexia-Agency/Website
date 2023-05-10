@@ -1,0 +1,18 @@
+@font-face {
+  font-family: Assistant fallback;
+  size-adjust: 93.5%;
+  src: local('Arial')
+}
+@font-face {
+  font-weight: 700;
+  font-family: Montserrat fallback;
+  size-adjust: 105%;
+  ascent-override: 92%;
+  src: local('Arial Bold'), local('Arial')
+}
+@font-face {
+  font-family: Open Sans fallback;
+  size-adjust: 104.5%;
+  ascent-override: 103.75%;
+  src: local('Arial')
+}
