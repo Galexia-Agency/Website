@@ -360,10 +360,10 @@ footer h4 {
   justify-self: end;
   font-size: 24px;
   a {
-    color: #FFFFFF99;
+    color: white;
     transition: color .5s;
     &:hover {
-      color: white
+      color: #FFFFFF99
     }
     svg {
       width: 1.5rem
@@ -417,10 +417,16 @@ footer h4 {
 }
 @media (max-width: 500px) {
   .socialLinks {
-    grid-auto-flow: initial
-  }
-  .DAN {
-    grid-column: span 5
+    grid-auto-flow: row;
+    grid-template-columns: auto auto auto auto auto;
+    a:first-child,
+    a:nth-child(2) {
+      grid-column: 1 / -1;
+      img {
+        display: block;
+        margin: auto
+      }
+    }
   }
 }
 
