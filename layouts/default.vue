@@ -186,7 +186,7 @@ textarea {
 #__nuxt {
   background: rgb(53 47 114 / 33%)
 }
-#__layout > div {
+.site-background {
   display: grid;
   grid-template-areas: 'header'
     'main'
@@ -198,7 +198,7 @@ main header {
   background-color: rgb(53 47 114 / 33%);
   background-position: 0 -135px
 }
-#__layout > div,
+.site-background,
 main header {
   background-image: url('../assets/img/SpaceBackgroundBlurred.jpg?format=webp&resize');
   background-image: image-set(
@@ -917,7 +917,7 @@ form.narrow {
 }
 
 @media (max-width: 1070px) {
-  #__nuxt {
+  .site-width {
     width: var(--100vw)
   }
   .js-active .nav--icon {
@@ -1083,177 +1083,179 @@ form.narrow {
 </style>
 
 <template>
-  <div :style="`--imageToPreload: url(${imageToPreload})`">
-    <header>
-      <nav class="maxWidth">
-        <div class="logo--container">
-          <nuxt-link class="logo" to="/">
-            <div v-html="require('../assets/svg/logo_v2.svg?include')" />
-          </nuxt-link>
-        </div>
-        <div class="nav--icon">
-          <Hamburger type="arrow" color="white" :expanded="expanded" />
-        </div>
-        <div id="navigation" class="nav--container">
-          <nuxt-link to="/" class="nav--link">
-            Home
-          </nuxt-link>
-          <nuxt-link to="/web/" class="nav--link">
-            Design &amp; Development
-          </nuxt-link>
-          <nuxt-link to="/hosting/" class="nav--link">
-            Hosting
-          </nuxt-link>
-          <nuxt-link to="/marketing/" class="nav--link">
-            Marketing
-          </nuxt-link>
-          <nuxt-link to="/blog/" class="nav--link">
-            Blog
-          </nuxt-link>
-          <nuxt-link to="/support/" class="nav--link">
-            Support
-          </nuxt-link>
-          <nuxt-link to="/contact/" class="nav--link">
-            Contact
-          </nuxt-link>
-        </div>
-      </nav>
-    </header>
-    <main>
-      <nuxt keep-alive />
-    </main>
-    <footer>
-      <div class="footer--bottom_container">
-        <div class="footer--bottom maxWidth">
+  <div class="site-background" :style="`--imageToPreload: url(${imageToPreload})`">
+    <div class="site-width">
+      <header>
+        <nav class="maxWidth">
           <div class="logo--container">
             <nuxt-link class="logo" to="/">
               <div v-html="require('../assets/svg/logo_v2.svg?include')" />
             </nuxt-link>
           </div>
-          <div class="footer--bottom_contact">
-            <h4>Telephone</h4>
-            <a
-              href=""
-              onclick="Calendly.initPopupWidget({url: 'https://calendly.com/galexia/phone-call'});return false;"
-            >07521 491222</a>
-            <h4>Email</h4>
-            <a href="mailto:info@galexia.agency">info@galexia.agency</a>
-            <h4>Quick Links</h4>
-            <div class="footer--bottom_sitemap">
-              <nuxt-link class="footer--bottom_navLink" to="/our-team/">
-                Our Team
-              </nuxt-link>
-              <nuxt-link class="footer--bottom_navLink" to="/legal/">
-                Legal
+          <div class="nav--icon">
+            <Hamburger type="arrow" color="white" :expanded="expanded" />
+          </div>
+          <div id="navigation" class="nav--container">
+            <nuxt-link to="/" class="nav--link">
+              Home
+            </nuxt-link>
+            <nuxt-link to="/web/" class="nav--link">
+              Design &amp; Development
+            </nuxt-link>
+            <nuxt-link to="/hosting/" class="nav--link">
+              Hosting
+            </nuxt-link>
+            <nuxt-link to="/marketing/" class="nav--link">
+              Marketing
+            </nuxt-link>
+            <nuxt-link to="/blog/" class="nav--link">
+              Blog
+            </nuxt-link>
+            <nuxt-link to="/support/" class="nav--link">
+              Support
+            </nuxt-link>
+            <nuxt-link to="/contact/" class="nav--link">
+              Contact
+            </nuxt-link>
+          </div>
+        </nav>
+      </header>
+      <main>
+        <nuxt keep-alive />
+      </main>
+      <footer>
+        <div class="footer--bottom_container">
+          <div class="footer--bottom maxWidth">
+            <div class="logo--container">
+              <nuxt-link class="logo" to="/">
+                <div v-html="require('../assets/svg/logo_v2.svg?include')" />
               </nuxt-link>
             </div>
-          </div>
-          <div class="testimonials--container">
-            <div class="testimonials">
-              <div
-                v-for="(testimonial, index) in testimonials"
-                :key="index"
-                class="testimonial"
-              >
-                <div v-html="testimonial.content" />
-                <div class="company" v-html="'- ' + testimonial.title" />
+            <div class="footer--bottom_contact">
+              <h4>Telephone</h4>
+              <a
+                href=""
+                onclick="Calendly.initPopupWidget({url: 'https://calendly.com/galexia/phone-call'});return false;"
+              >07521 491222</a>
+              <h4>Email</h4>
+              <a href="mailto:info@galexia.agency">info@galexia.agency</a>
+              <h4>Quick Links</h4>
+              <div class="footer--bottom_sitemap">
+                <nuxt-link class="footer--bottom_navLink" to="/our-team/">
+                  Our Team
+                </nuxt-link>
+                <nuxt-link class="footer--bottom_navLink" to="/legal/">
+                  Legal
+                </nuxt-link>
               </div>
             </div>
-            <div class="testimonials--controls">
-              <button
-                aria-label="previous"
-                :disabled="count === 1"
-                @click="left"
-              >
-                <font-awesome-icon :icon="['fas', 'chevron-left']" />
-              </button>
-              <p>
-                <span>{{ count }}</span> /
-                <span>{{ testimonials.length }}</span>
-              </p>
-              <button
-                aria-label="next"
-                :disabled="count === testimonials.length"
-                @click="right"
-              >
-                <font-awesome-icon :icon="['fas', 'chevron-right']" />
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="footer--copyright">
-          <div class="footer--copyrightInner maxWidth">
-            <p>
-              © {{ new Date().getFullYear() }} Galexia Creative Agency Ltd. A
-              company registered in England and Wales. Company No. 12853224.
-            </p>
-            <div class="socialLinks">
-              <a href="https://www.policybee.co.uk/" target="_blank">
-                <GalexiaImage
-                  :avif="require('~/assets/img/White_Badge_PolicyBee.png?format=avif&resize&size=75')"
-                  :webp="require('~/assets/img/White_Badge_PolicyBee.png?format=webp&resize&size=75')"
-                  :src="require('~/assets/img/White_Badge_PolicyBee.png?resize&size=75')"
-                  width="75"
-                  height="75"
-                  alt="Insured through PolicyBee"
-                />
-              </a>
-              <a
-                href="https://digitalagencynetwork.com/agencies/cambridge"
-                target="_blank"
-                class="DAN"
-              >
-                <img
-                  style="width: 160px; height: auto"
-                  src="https://digitalagencynetwork.com/wp-content/themes/danglobal/assets/images/badges/dark.svg"
-                  alt="Cambridge digital agency network member badge dark"
+            <div class="testimonials--container">
+              <div class="testimonials">
+                <div
+                  v-for="(testimonial, index) in testimonials"
+                  :key="index"
+                  class="testimonial"
                 >
-              </a>
-              <a
-                href="https://fb.me/GalexiaAgency"
-                target="_blank"
-                rel="noopener noreferrer"
-                title="Facebook"
-              >
-                <font-awesome-icon :icon="['fab', 'facebook']" />
-              </a>
-              <a
-                href="https://www.instagram.com/galexia_agency"
-                target="_blank"
-                rel="noopener noreferrer"
-                title="Instagram"
-              >
-                <font-awesome-icon :icon="['fab', 'instagram']" />
-              </a>
-              <a
-                href="https://www.twitter.com/galexia_agency"
-                target="_blank"
-                rel="noopener noreferrer"
-                title="Twitter"
-              >
-                <font-awesome-icon :icon="['fab', 'twitter']" />
-              </a>
-              <a
-                href="https://www.linkedin.com/company/galexia-agency"
-                target="_blank"
-                rel="noopener noreferrer"
-                title="LinkedIn"
-              >
-                <font-awesome-icon :icon="['fab', 'linkedin']" />
-              </a>
-              <a
-                href="https://github.com/orgs/Galexia-Agency/"
-                target="_blank"
-                rel="noopener noreferrer"
-                title="GitHub"
-              >
-                <font-awesome-icon :icon="['fab', 'github']" />
-              </a>
+                  <div v-html="testimonial.content" />
+                  <div class="company" v-html="'- ' + testimonial.title" />
+                </div>
+              </div>
+              <div class="testimonials--controls">
+                <button
+                  aria-label="previous"
+                  :disabled="count === 1"
+                  @click="left"
+                >
+                  <font-awesome-icon :icon="['fas', 'chevron-left']" />
+                </button>
+                <p>
+                  <span>{{ count }}</span> /
+                  <span>{{ testimonials.length }}</span>
+                </p>
+                <button
+                  aria-label="next"
+                  :disabled="count === testimonials.length"
+                  @click="right"
+                >
+                  <font-awesome-icon :icon="['fas', 'chevron-right']" />
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="footer--copyright">
+            <div class="footer--copyrightInner maxWidth">
+              <p>
+                © {{ new Date().getFullYear() }} Galexia Creative Agency Ltd. A
+                company registered in England and Wales. Company No. 12853224.
+              </p>
+              <div class="socialLinks">
+                <a href="https://www.policybee.co.uk/" target="_blank">
+                  <GalexiaImage
+                    :avif="require('~/assets/img/White_Badge_PolicyBee.png?format=avif&resize&size=75')"
+                    :webp="require('~/assets/img/White_Badge_PolicyBee.png?format=webp&resize&size=75')"
+                    :src="require('~/assets/img/White_Badge_PolicyBee.png?resize&size=75')"
+                    width="75"
+                    height="75"
+                    alt="Insured through PolicyBee"
+                  />
+                </a>
+                <a
+                  href="https://digitalagencynetwork.com/agencies/cambridge"
+                  target="_blank"
+                  class="DAN"
+                >
+                  <img
+                    style="width: 160px; height: auto"
+                    src="https://digitalagencynetwork.com/wp-content/themes/danglobal/assets/images/badges/dark.svg"
+                    alt="Cambridge digital agency network member badge dark"
+                  >
+                </a>
+                <a
+                  href="https://fb.me/GalexiaAgency"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Facebook"
+                >
+                  <font-awesome-icon :icon="['fab', 'facebook']" />
+                </a>
+                <a
+                  href="https://www.instagram.com/galexia_agency"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Instagram"
+                >
+                  <font-awesome-icon :icon="['fab', 'instagram']" />
+                </a>
+                <a
+                  href="https://www.twitter.com/galexia_agency"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Twitter"
+                >
+                  <font-awesome-icon :icon="['fab', 'twitter']" />
+                </a>
+                <a
+                  href="https://www.linkedin.com/company/galexia-agency"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="LinkedIn"
+                >
+                  <font-awesome-icon :icon="['fab', 'linkedin']" />
+                </a>
+                <a
+                  href="https://github.com/orgs/Galexia-Agency/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="GitHub"
+                >
+                  <font-awesome-icon :icon="['fab', 'github']" />
+                </a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </footer>
+      </footer>
+    </div>
   </div>
 </template>
 
