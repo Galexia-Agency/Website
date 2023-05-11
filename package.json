@@ -38,7 +38,7 @@
     "node-fetch": "^3.2.10",
     "nuxt": "^2.16.0",
     "nuxt-component-image": "https://github.com/Galexia-Agency/nuxt-component-image",
-    "puppeteer-core": "10.1.0",
+    "puppeteer-core": "10.4.0",
     "responsive-loader": "^2.3.0",
     "sass": "^1.60.0",
     "sass-loader": "^10.1.1",
