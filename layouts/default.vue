@@ -219,7 +219,7 @@ main h4,
 main h5,
 main h6 {
   color: var(--primaryColor);
-  font-weight: bold
+  font-weight: 700
 }
 main h2 {
   margin: 0 auto;

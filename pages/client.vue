@@ -69,7 +69,7 @@
   }
   form p {
     margin: .5rem 0;
-    font-weight: bold;
+    font-weight: 600;
     font-size: .9rem
   }
   form label input {

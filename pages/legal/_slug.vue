@@ -1,6 +1,6 @@
 <style scoped>
   time {
-    font-weight: bold
+    font-weight: 600
   }
 </style>
 
