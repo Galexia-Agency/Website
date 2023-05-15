@@ -54,7 +54,8 @@
       <h2 v-if="subtitle" v-html="subtitle" />
       <p v-html="desc" />
       <div v-if="link.text">
-        <nuxt-link class="button" :to="link.location" v-html="link.text" />
+        <a v-if="link.location.startsWith('#')" :href="link.location" class="button" v-html="link.text" />
+        <nuxt-link v-else class="button" :to="link.location" v-html="link.text" />
       </div>
     </div>
   </header>

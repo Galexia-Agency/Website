@@ -122,6 +122,43 @@
                 @keyup="checkform('contactForm', form)"
               />
             </label>
+            <label>
+              How did you hear about us?
+              <select
+                id="how-did-you-hear-about-us"
+                v-model="form.howDidYouHearAboutUs"
+                name="howDidYouHearAboutUs"
+                required
+                @keyup="checkform('contactForm', form)"
+              >
+                <option value="" disabled selected>Please choose from the dropdown</option>
+                <option value="Galexia came up during a search">Galexia came up during a search</option>
+                <option value="I saw Galexia on Facebook">I saw Galexia on Facebook</option>
+                <option value="I saw Galexia on another social platform">I saw Galexia on another social platform</option>
+                <option value="Someone recommended Galexia to me">Someone recommended Galexia to me</option>
+                <option value="Other">Other</option>
+              </select>
+            </label>
+            <label v-if="form.howDidYouHearAboutUs === 'Someone recommended Galexia to me'">
+              If you'd like to, let us know who recommended Galexia to you:
+              <input
+                id="whoRecommended"
+                v-model="form.whoRecommended"
+                name="whoRecommended"
+                type="text"
+                @keyup="checkform('contactForm', form)"
+              >
+            </label>
+            <label v-if="form.howDidYouHearAboutUs === 'Other'">
+              If you can, let us know how you heard about us:
+              <input
+                id="howDidYouHearAboutUsDetails"
+                v-model="form.howDidYouHearAboutUsDetails"
+                name="howDidYouHearAboutUsDetails"
+                type="text"
+                @keyup="checkform('contactForm', form)"
+              >
+            </label>
             <div id="submitcontainer">
               <input
                 id="submit"

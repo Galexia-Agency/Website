@@ -9,6 +9,7 @@
     <Header
       title="Free Business Email Checkup"
       desc="If you aren't sure on what the following key terms mean, or if you don't know whether you have them implemented on your domain/website, let us offer you a free checkup. Just drop your name, email address, and website into the form below, and we'll let you know whether you comply with SPF, DKIM, DMARC, and BIMI within 2-3 working days."
+      :link="{location: '#checkup', text: 'Get my free checkup'}"
     />
     <section class="white">
       <div class="grid right maxWidth">
@@ -68,7 +69,7 @@
         <div v-infocus="'showElement'" class="hidden hidden-right svg" v-html="require('../assets/svg/bimi.svg?include')" />
       </div>
     </section>
-    <section class="white">
+    <section id="checkup" class="white">
       <div class="maxWidth">
         <h2>
           Free Business Email Checkup
@@ -139,6 +140,43 @@
               @keyup="checkform('emailCheckupForm', form)"
             >
           </label>
+          <label>
+            How did you hear about us?
+            <select
+              id="how-did-you-hear-about-us"
+              v-model="form.howDidYouHearAboutUs"
+              name="howDidYouHearAboutUs"
+              required
+              @keyup="checkform('emailCheckupForm', form)"
+            >
+              <option value="" disabled selected>Please choose from the dropdown</option>
+              <option value="Galexia came up during a search">Galexia came up during a search</option>
+              <option value="I saw Galexia on Facebook">I saw Galexia on Facebook</option>
+              <option value="I saw Galexia on another social platform">I saw Galexia on another social platform</option>
+              <option value="Someone recommended Galexia to me">Someone recommended Galexia to me</option>
+              <option value="Other">Other</option>
+            </select>
+          </label>
+          <label v-if="form.howDidYouHearAboutUs === 'Someone recommended Galexia to me'">
+            If you'd like to, let us know who recommended Galexia to you:
+            <input
+              id="whoRecommended"
+              v-model="form.whoRecommended"
+              name="whoRecommended"
+              type="text"
+              @keyup="checkform('emailCheckupForm', form)"
+            >
+          </label>
+          <label v-if="form.howDidYouHearAboutUs === 'Other'">
+            If you can, let us know how you heard about us:
+            <input
+              id="howDidYouHearAboutUsDetails"
+              v-model="form.howDidYouHearAboutUsDetails"
+              name="howDidYouHearAboutUsDetails"
+              type="text"
+              @keyup="checkform('emailCheckupForm', form)"
+            >
+          </label>
           <div id="submitcontainer">
             <input
               id="submit"
@@ -171,12 +209,7 @@ export default {
   data () {
     return {
       submitted: false,
-      form: {
-        fname: '',
-        lname: '',
-        email: '',
-        website: ''
-      }
+      form: {}
     }
   },
   head () {
