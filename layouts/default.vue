@@ -1047,11 +1047,12 @@ form.narrow {
     grid-template-columns: 1fr;
     gap: 1rem;
     padding: 0 1rem;
-    place-items: center
-  }
-  .footer--copyrightInner p {
-    width: 100%;
-    text-align: center
+    place-items: center;
+    p {
+      grid-row: 2;
+      width: 100%;
+      text-align: center
+    }
   }
   .socialLinks {
     justify-self: center;
