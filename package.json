@@ -42,7 +42,7 @@
     "responsive-loader": "^2.3.0",
     "sass": "^1.62.1",
     "sass-loader": "^10.1.1",
-    "sharp": "^0.32.0",
+    "sharp": "^0.32.1",
     "vue-apollo": "^3.0.7",
     "vue-hamburger": "https://github.com/joebailey26/vue-hamburger",
     "vue-social-sharing": "^3.0.4"
