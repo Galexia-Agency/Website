@@ -35,7 +35,7 @@
     "imagemin-mozjpeg": "^9.0.0",
     "imagemin-pngquant": "^9.0.1",
     "imagemin-svgo": "^8.0.0",
-    "node-fetch": "^3.2.10",
+    "node-fetch": "^3.3.2",
     "nuxt": "^2.16.0",
     "nuxt-component-image": "https://github.com/Galexia-Agency/nuxt-component-image",
     "puppeteer-core": "10.1.0",
