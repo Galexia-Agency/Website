@@ -20,7 +20,7 @@
   .post--header {
     position: relative;
     display: grid;
-    height: 400px;
+    min-height: 400px;
     overflow: hidden;
     background-repeat: no-repeat;
     background-position: center;
@@ -77,7 +77,7 @@
   }
   @media (max-width: 500px) {
     .post--header {
-      height: 300px
+      min-height: 300px
     }
     .post--meta {
       grid-auto-flow: row
