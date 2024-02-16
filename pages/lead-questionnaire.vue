@@ -1,9 +1,9 @@
 <style scoped lang="scss">
-  form {
+  .form {
     grid-template-columns: 1fr;
     gap: 2rem
   }
-  #submitcontainer {
+  .form__full-width-input {
     grid-column: 1
   }
   h1 {
@@ -31,14 +31,14 @@
 <template>
   <div id="brand-identity">
     <section class="white">
-      <div class="maxWidth">
-        <div class="grid left">
+      <div class="layout--max-width">
+        <div class="grid grid--left">
           <div>
             <h1>We're happy you're considering Galexia Creative Agency Ltd to build your new online presence</h1>
             <p>
               We specialise in WordPress websites. By filling in this form you'll help us gain a better understanding of what your requirements are.
             </p>
-            <form method="post" name="leadForm" netlify @submit.prevent="onSubmit">
+            <form method="post" name="leadForm" class="form" netlify @submit.prevent="onSubmit">
               <input
                 type="hidden"
                 name="form-name"
@@ -321,21 +321,20 @@
                   <option>I don't accept</option>
                 </select>
               </label>
-              <div id="submitcontainer">
+              <div class="form__full-width-input">
                 <input
-                  id="submit"
                   type="submit"
                   name="submit"
-                  class="button colorTwo"
+                  class="button button--secondary submit"
                   value="submit"
                   disabled
                 >
               </div>
-              <p v-show="!submitted">
+              <p v-if="!submitted">
               &nbsp;
               </p>
-              <transition name="fade">
-                <p v-show="submitted" class="message" v-text="submitted" />
+              <transition name="contact__message">
+                <p v-if="submitted" class="form__full-width-input contact__message" v-text="submitted" />
               </transition>
             </form>
           </div>
@@ -369,6 +368,7 @@ export default {
     if (process.client) {
       if (localStorage.getItem('leadForm')) {
         this.form = JSON.parse(localStorage.getItem('leadForm'))
+        this.checkform('leadForm', this.form)
       } else {
         this.form = {}
       }

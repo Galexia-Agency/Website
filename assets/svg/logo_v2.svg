@@ -1,5 +1,13 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 127.1 36.1" xml:space="preserve">
+	 viewBox="0 0 127.1 36.1">
+	 <style>
+	 text {
+    font-weight: 300;
+    font-size: 32px;
+    font-family: Assistant-Light, Assistant, Assistant Fallback, sans-serif;
+    letter-spacing: 1.6px
+  }
+	</style>
 <title>Galexia</title>
 <g>
   <text transform="translate(0 28)">

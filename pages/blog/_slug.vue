@@ -2,7 +2,7 @@
   .white {
     padding-top: 0
   }
-  .white .maxWidth {
+  .white .layout--max-width {
     max-width: 780px
   }
   h1 {
@@ -15,7 +15,7 @@
     margin-bottom: 1rem;
     color: white;
     font-size: 4rem;
-    font-size: clamp(3rem, calc((100vw / 100) * 10), 5rem)
+    font-size: clamp(3rem, calc((var(--100vw) / 100) * 10), 5rem)
   }
   .post--header {
     position: relative;
@@ -46,35 +46,7 @@
   .post--content {
     line-height: 1.5
   }
-  .post--footer:not(.nativeShare) {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 140px);
-    gap: .5rem;
-    justify-content: start
-  }
-  .post--footer a {
-    margin: 0;
-    color: white;
-    font-size: 1rem;
-    text-align: center
-  }
-  .post--footer h4 {
-    grid-column: 1/-1;
-    width: fit-content;
-    margin-bottom: 0
-  }
-  .post--footer.nativeShare h4 {
-    width: 100%;
-    margin: 1.33em 0 1em;
-    text-align: center;
-    place-self: center
-  }
 
-  @media (max-width: 690px) {
-    .post--footer {
-      justify-content: center
-    }
-  }
   @media (max-width: 500px) {
     .post--header {
       height: 300px
@@ -110,56 +82,27 @@
   <div v-if="blog" class="post">
     <div class="post--header" :style="'background-image:url(' + blog.featuredImage.node.mediaItemUrl + ')'">
       <div class="background_opacity" />
-      <h1 class="maxWidth" v-html="blog.title" />
+      <h1 class="layout--max-width" v-html="blog.title" />
     </div>
     <section class="white">
-      <div class="maxWidth">
-        <!--<div class="post--meta">
-          <p>Author: <strong>{{ blog.author.node.name }}</strong></p>
-          <p>
-            Published on:
-            <strong>
-              <time>
-                {{ new Date(blog.date).getDate() + " " + monthArr[new Date(blog.date).getMonth()] + " '" + new Date(blog.date).getFullYear().toString().substring(2) }}
-              </time>
-            </strong>
-          </p>
-        </div>-->
-
+      <div class="layout--max-width">
         <div class="post--content" v-html="blog.content" />
-        <div v-if="!share" class="post--footer">
-          <h4>Share:</h4>
-          <ShareNetwork
-            v-for="social in socials"
-            :key="social"
-            :network="social"
-            :url="'https://galexia.agency' + $router.currentRoute.path"
-            :title="blog.title + ' | Galexia Creative Agency Ltd | Web Design and Development'"
+        <ClientOnly>
+          <GalexiaShare
+            :title="blog.title"
             :description="blog.excerpt"
             :media="blog.featuredImage.mediaItemUrl"
-            class="button"
-          >
-            <font-awesome-icon :icon="['fab', social.toLowerCase()]" /> {{ social }}
-          </ShareNetwork>
-        </div>
-        <div v-else class="post--footer nativeShare">
-          <h4 class="button">
-            <font-awesome-icon :icon="['fas', 'share-alt']" /> <a href="javascript:void(0)" @click="nativeShare">Share this blog post</a>
-          </h4>
-        </div>
+          />
+        </ClientOnly>
       </div>
     </section>
   </div>
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
-  data () {
-    return {
-      socials: ['Facebook', 'LinkedIn', 'Twitter', 'WhatsApp'],
-      monthArr: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-    }
-  },
   head () {
     if (this.blog) {
       return {
@@ -212,32 +155,11 @@ export default {
     }
   },
   computed: {
-    share () {
-      try {
-        if (process.client) {
-          return navigator.canShare({
-            title: this.blog.title + ' | Blog',
-            text: this.blog.excerpt.replaceAll('<p>', '').replaceAll('</p>', '').replaceAll('[&hellip;]', '').replaceAll('\n', ''),
-            url: 'https://galexia.agency' + this.$router.currentRoute.path
-          })
-        } else {
-          return false
-        }
-      } catch (e) {
-        return false
-      }
-    },
+    ...mapState([
+      'blogs'
+    ]),
     blog () {
-      return this.$parent.$parent.blogs.find((blog) => blog.slug === this.$route.params.slug)
-    }
-  },
-  methods: {
-    nativeShare () {
-      navigator.share({
-        title: this.blog.title + ' | Blog',
-        text: this.blog.excerpt.replaceAll('<p>', '').replaceAll('</p>', '').replaceAll('[&hellip;]', '').replaceAll('\n', ''),
-        url: 'https://galexia.agency' + this.$router.currentRoute.path
-      })
+      return this.blogs.find((blog) => blog.slug === this.$route.params.slug)
     }
   }
 }

@@ -1,0 +1,50 @@
+/* stylelint-disable declaration-property-value-no-unknown */
+.section-padding {
+  &.section-padding--top-30 {
+    padding-top: rem-calc(30)
+  }
+  &.section-padding--bottom-30 {
+    padding-bottom: rem-calc(30)
+  }
+  &.section-padding--30 {
+    padding-top: rem-calc(30);
+    padding-bottom: rem-calc(30)
+  }
+  &.section-padding--top-60 {
+    padding-top: rem-calc(60)
+  }
+  &.section-padding--bottom-60 {
+    padding-bottom: rem-calc(60)
+  }
+  &.section-padding--60 {
+    padding-top: rem-calc(60);
+    padding-bottom: rem-calc(60)
+  }
+  &.section-padding--top-100 {
+    padding-top: rem-calc(100)
+  }
+  &.section-padding--bottom-100 {
+    padding-bottom: rem-calc(100)
+  }
+  &.section-padding--100 {
+    padding-top: rem-calc(100);
+    padding-bottom: rem-calc(100)
+  }
+  @media (max-width: 1000px) {
+    &.section-padding--top-100 {
+      padding-top: rem-calc(60)
+    }
+    &.section-padding--bottom-100 {
+      padding-bottom: rem-calc(60)
+    }
+    &.section-padding--100 {
+      padding-top: rem-calc(60);
+      padding-bottom: rem-calc(60)
+    }
+  }
+  @media (max-width: 768px) {
+    + .section-padding {
+      padding-top: 0
+    }
+  }
+}

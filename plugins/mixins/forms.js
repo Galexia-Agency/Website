@@ -5,17 +5,17 @@ Vue.mixin({
   methods: {
     checkform (formName, data) {
       localStorage.setItem(formName, JSON.stringify(data))
-      const f = document.forms[formName].elements
-      let cansubmit = true
-
-      for (let i = 0; i < f.length - 2; i++) {
-        if (f[i].required && (f[i].value.length === 0 || f[i].value === '')) {
-          cansubmit = false
+      const cansubmit = Array.from(document.forms[formName].elements).every((formElement) => {
+        // If the form element is not required, we can return true as we're skipping the check
+        if (!formElement.required) {
+          return true
         }
-      }
+        // We return whether the value is filled or not
+        return (formElement.value.length !== 0 || formElement.value !== '')
+      })
 
-      if (document.querySelector('#submit')) {
-        document.querySelector('#submit').disabled = !cansubmit
+      if (document.querySelector('.submit')) {
+        document.querySelector('.submit').disabled = !cansubmit
       }
     },
     encode (data) {

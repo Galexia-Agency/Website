@@ -18,15 +18,15 @@
 
 <template>
   <div class="section white grid">
-    <div class="error maxWidth grid">
+    <div class="error layout--max-width grid">
       <div v-if="error.statusCode === 404">
-        <div class="svg" v-html="require('../assets/svg/not-found.svg?include')" />
+        <div class="svg" v-html="require('~/assets/svg/not-found.svg?include')" />
         <h1>
           404 - Page not found
         </h1>
       </div>
       <div v-else>
-        <div class="svg" v-html="require('../assets/svg/error.svg?include')" />
+        <div class="svg" v-html="require('~/assets/svg/error.svg?include')" />
         <h1>
           {{ error.statusCode }} - An error occurred
         </h1>

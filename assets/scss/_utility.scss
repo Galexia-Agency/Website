@@ -1,0 +1,22 @@
+.text--normal {
+  line-height: 1.6;
+  opacity: .9
+}
+.white {
+  color: var(--darkGrey);
+  background: white
+}
+.align--vertical-center {
+  display: flex;
+  align-items: center
+}
+.align--horizontal-center {
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center
+}
+@media (max-width: 900px) {
+  .text--normal {
+    opacity: .95
+  }
+}

@@ -1,45 +1,54 @@
 <style scoped>
-  h3, h4 {
-    text-align: center;
-    text-transform: capitalize
-  }
-  h4 {
-    color: #1A237EAA
-  }
-  img {
-    display: block;
-    width: 100%;
-    max-width: 300px;
-    margin: auto
-  }
+.team-card {
+  text-align: center
+}
+.team-card__name,
+.team-card__title {
+  text-align: center;
+  text-transform: capitalize
+}
+.team-card__title {
+  color: var(--secondaryColor)
+}
+.team-card__image {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  margin: auto
+}
+.team-card__description {
+  color: var(--darkGrey);
+  font-size: 1.2rem;
+  line-height: 1.33
+}
 </style>
 
 <template>
   <div>
-    <Header
+    <LayoutHeader
       title="Our Team"
-      desc="Meet our team of highly creative individuals who will put your business first. They each have things that make them unique, in their own life, and in the work that they do. Get to know them a bit more down below."
+      desc="Meet our team of highly creative individuals who will put your business first. They each have things that make them unique, in their own life, and in the work that they do."
       :link="{location: '/contact/', text: 'Chat to us'}"
     />
-    <section class="white">
-      <div class="maxWidth grid column three">
-        <div v-for="(member, index) in team" :key="index" class="card">
-          <div class="card--inner">
-            <h3>
+    <section class="section-padding section-padding--100 white">
+      <div class="layout--max-width grid grid--column grid--three">
+        <div v-for="(member, index) in team" :key="index" class="card team-card">
+          <div class="card__inner">
+            <h3 class="team-card__name">
               {{ member.name }}
             </h3>
-            <h4>
+            <h4 class="team-card__title">
               {{ member.title }}
             </h4>
             <GalexiaImage
-              :avif="require('../assets/img/octocats/' + member.name + '.png?format=avif&resize&size=300')"
-              :webp="require('../assets/img/octocats/' + member.name + '.png?format=webp&resize&size=300')"
-              :src="require('../assets/img/octocats/' + member.name + '.png?resize&size=300')"
+              :avif="require('~/assets/img/octocats/' + member.name + '.png?format=avif&resize&size=300')"
+              :webp="require('~/assets/img/octocats/' + member.name + '.png?format=webp&resize&size=300')"
               width="300px"
               loading="lazy"
               decoding="async"
+              class="team-card__image"
             />
-            <div class="desc" v-html="member.desc" />
+            <div class="team-card__description" v-html="member.desc" />
           </div>
         </div>
       </div>
@@ -48,19 +57,14 @@
 </template>
 
 <script>
-import Header from '../components/header'
-
 export default {
-  components: {
-    Header
-  },
   data () {
     return {
       team: [
         {
           name: 'joe',
           title: 'Managing Director',
-          desc: '<p>Joe started Galexia in the middle of his University Degree in 2020, the year of the virus.<br><br>Joe wanted to help small businesses in his local area update their online presence to help them get more customers.<br><br>In his free time, Joe enjoys simulator games, travelling, and photography.</p>'
+          desc: '<p>Joe started Galexia during the middle of his Digital Design and Development Degree in 2020.<br><br>Joe wanted to help small businesses in his local area update their online presence to help them get more customers.<br><br>In his free time, Joe enjoys simulator games, travelling, and photography.</p>'
         },
         {
           name: 'don',
@@ -80,7 +84,7 @@ export default {
         {
           name: 'hannah',
           title: 'Marketer',
-          desc: '<p>Hannah graduated with a bachelor\'s degree in marketing from the Solent University, in 2019.<br><br>There\'s no doubt that marketing is a fickle and fast paced industry. It\'s easy to get stuck in ways of the past, but Hannah can help bring your marketing efforts up to present-day standards, maximising your potential for future success.<br><br>In her free time, she enjoys playing games, both online and offline and also building and painting miniatures to add to her ever-growing collection.</p>'
+          desc: '<p>Hannah graduated with a bachelor\'s degree in marketing from Solent University, in 2019.<br><br>There\'s no doubt that marketing is a fickle and fast paced industry. It\'s easy to get stuck in ways of the past, but Hannah can help bring your marketing efforts up to present-day standards, maximising your potential for future success.<br><br>In her free time, she enjoys playing games, both online and offline and also building and painting miniatures to add to her ever-growing collection.</p>'
         },
         {
           name: 'jamie',

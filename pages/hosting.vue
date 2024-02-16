@@ -3,7 +3,7 @@
 h1 {
   text-align: center
 }
-.grid.maxWidth {
+.grid.layout--max-width {
   padding-bottom: 0
 }
 section:last-of-type {
@@ -22,7 +22,7 @@ section:last-of-type {
 .card h4 {
   text-align: center
 }
-.card--inner {
+.card__inner {
   gap: 2rem
 }
 li {
@@ -66,18 +66,17 @@ img {
 
 <template>
   <div class="hosting white">
-    <section class="maxWidth">
+    <section class="layout--max-width">
       <div id="top">
         <h1>WordPress Hosting for just £200/year</h1>
         <p class="desc">
           Your website needs a home and we're happy to house it regardless of who built it. Below is an outline of our offering.
         </p>
-        <div class="grid column two hosting-grid">
+        <div class="grid grid--column grid--two hosting-grid">
           <figure>
             <GalexiaImage
               :avif="require('~/assets/img/lighthouse.jpg?format=avif&resize&size=520')"
               :webp="require('~/assets/img/lighthouse.jpg?format=webp&resize&size=520')"
-              :src="require('~/assets/img/lighthouse.jpg?resize&size=520')"
               width="520"
               height="294"
               alt="Lighthouse Test"
@@ -131,7 +130,7 @@ img {
               </tr>
               <tr>
                 <td>
-                  PHP 8.0
+                  PHP 8.1
                   <span class="info-item">
                     The version of PHP that runs your WordPress site
                   </span>
@@ -173,7 +172,7 @@ img {
         </div>
       </div>
     </section>
-    <section id="wordpress-help" class="maxWidth">
+    <section id="wordpress-help" class="layout--max-width">
       <h2>WordPress Help</h2>
       <p class="desc">
         WordPress is a complex program and needs constant management to function
@@ -185,9 +184,9 @@ img {
           Get help
         </nuxt-link>
       </p>
-      <div class="grid column three">
+      <div class="grid grid--column grid--three">
         <div v-infocus="'showElement'" class="card white hidden">
-          <div class="card--inner">
+          <div class="card__inner">
             <h4 class="title">
               Maintenance
             </h4>
@@ -241,7 +240,7 @@ img {
           class="card white hidden"
           style="--delay: .25s"
         >
-          <div class="card--inner">
+          <div class="card__inner">
             <h4 class="title">
               Backups
             </h4>
@@ -261,7 +260,7 @@ img {
           class="card white hidden"
           style="--delay: .5s"
         >
-          <div class="card--inner">
+          <div class="card__inner">
             <h4 class="title">
               Hosting Transfer
             </h4>
@@ -277,7 +276,7 @@ img {
         </div>
       </div>
     </section>
-    <section id="domains" class="maxWidth">
+    <section id="domains" class="layout--max-width">
       <h2>Domains</h2>
       <p class="desc">
         <strong>1 Free Wildcard SSL Certificate included</strong>
@@ -292,9 +291,9 @@ img {
           Register your domain
         </nuxt-link>
       </p>
-      <div class="grid column three">
+      <div class="grid grid--column grid--three">
         <div v-infocus="'showElement'" class="card white hidden">
-          <div class="card--inner">
+          <div class="card__inner">
             <h4 class="title">
               .com
             </h4>
@@ -308,7 +307,7 @@ img {
           class="card white hidden"
           style="--delay: .25s"
         >
-          <div class="card--inner">
+          <div class="card__inner">
             <h4 class="title">
               .co.uk
             </h4>
@@ -322,7 +321,7 @@ img {
           class="card white hidden"
           style="--delay: .5s"
         >
-          <div class="card--inner">
+          <div class="card__inner">
             <h4 class="title">
               All other domains
             </h4>
@@ -333,7 +332,7 @@ img {
         </div>
       </div>
     </section>
-    <section id="emails" class="maxWidth">
+    <section id="emails" class="layout--max-width">
       <h2>Emails</h2>
       <p class="desc">
         We are able to offer up to 10 forwarding addresses for free with the
@@ -351,9 +350,9 @@ img {
           Set up your email
         </nuxt-link>
       </p>
-      <div class="grid column three">
+      <div class="grid grid--column grid--three">
         <div v-infocus="'showElement'" class="card white hidden">
-          <div class="card--inner">
+          <div class="card__inner">
             <h4 class="title">
               1 G-Suite User
             </h4>
@@ -375,7 +374,7 @@ img {
           class="card white hidden"
           style="--delay: .5s"
         >
-          <div class="card--inner">
+          <div class="card__inner">
             <h4 class="title">
               1 G-Suite Advanced User
             </h4>

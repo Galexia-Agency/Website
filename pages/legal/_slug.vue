@@ -1,23 +1,33 @@
-<style scoped>
-  time {
-    font-weight: 600
+<style lang="scss">
+.legal__last-updated {
+  margin-bottom: 1.25rem
+}
+.legal {
+  h2 {
+    font-size: 1.5rem
   }
+  h3 {
+    color: var(--secondaryColor);
+    font-weight: normal;
+    font-size: 1.33rem
+  }
+}
 </style>
 
 <template>
-  <section class="white legal">
-    <div v-if="legal" class="maxWidth">
+  <section class="white legal section-padding section-padding--100">
+    <div v-if="legal" class="layout--max-width">
       <h1 v-html="legal.title" />
-      <p>
+      <p class="legal__last-updated">
         Last updated: <time>{{ new Date(legal.modified).getDate() + " " + monthArr[new Date(legal.modified).getMonth()] + " " + new Date(legal.modified).getFullYear().toString() }}</time>.
       </p>
-
       <div v-html="legal.content" />
     </div>
   </section>
 </template>
 
 <script>
+import { mapState } from 'vuex'
 
 export default {
   data () {
@@ -74,8 +84,11 @@ export default {
     }
   },
   computed: {
+    ...mapState([
+      'legals'
+    ]),
     legal () {
-      return this.$parent.$parent.legals.find((legal) => legal.slug === this.$route.params.slug)
+      return this.legals.find((legal) => legal.slug === this.$route.params.slug)
     }
   }
 }

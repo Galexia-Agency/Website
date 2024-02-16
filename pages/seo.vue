@@ -3,7 +3,7 @@
   h1 {
     text-align: center
   }
-  .grid.maxWidth {
+  .grid.layout--max-width {
     padding-bottom: 0
   }
   section:last-of-type {
@@ -22,7 +22,7 @@
   .card h4 {
     text-align: center
   }
-  .card--inner {
+  .card__inner {
     gap: 2rem
   }
   li {
@@ -66,13 +66,12 @@
 
 <template>
   <div class="hosting white">
-    <section class="maxWidth">
+    <section class="layout--max-width">
       <div id="top">
         <h1>Search Engine Optimisation</h1>
         <GalexiaImage
           :avif="require('~/assets/img/searchconsole.png?format=avif&resize&size=520')"
           :webp="require('~/assets/img/searchconsole.png?format=webp&resize&size=520')"
-          :src="require('~/assets/img/searchconsole.png?resize&size=520')"
           width="520"
           alt="Google Search Console Screenshot"
           loading="eager"
@@ -125,10 +124,10 @@
                   <span class="info-item">Analytics are an important tool in improving website performance. By nature, they track users, we'll help set the tool up in a legal and ethical way.</span>
                 </td>
                 <td>
-                  <font-awesome-icon :icon="['far', 'check-circle']" />
+                  <FontAwesomeIcon :icon="['far', 'check-circle']" />
                 </td>
                 <td>
-                  <font-awesome-icon :icon="['far', 'check-circle']" />
+                  <FontAwesomeIcon :icon="['far', 'check-circle']" />
                 </td>
               </tr>
               <tr>
@@ -138,10 +137,10 @@
                   <span class="info-item">Another important tool to monitor performance of your website in Google's SERPs.</span>
                 </td>
                 <td>
-                  <font-awesome-icon :icon="['far', 'check-circle']" />
+                  <FontAwesomeIcon :icon="['far', 'check-circle']" />
                 </td>
                 <td>
-                  <font-awesome-icon :icon="['far', 'check-circle']" />
+                  <FontAwesomeIcon :icon="['far', 'check-circle']" />
                 </td>
               </tr>
               <tr>
@@ -151,10 +150,10 @@
                   <span class="info-item">Another important tool to monitor performance of your website in Bing's SERPs.</span>
                 </td>
                 <td>
-                  <font-awesome-icon :icon="['far', 'check-circle']" />
+                  <FontAwesomeIcon :icon="['far', 'check-circle']" />
                 </td>
                 <td>
-                  <font-awesome-icon :icon="['far', 'check-circle']" />
+                  <FontAwesomeIcon :icon="['far', 'check-circle']" />
                 </td>
               </tr>
               <tr>
@@ -203,10 +202,10 @@
                   <span class="info-item">We'll advise on a content strategy to get you higher up in the SERPs. Content is key in the modern era of SEO and planning when you publish new content can have a positive effect on your ranking position.</span>
                 </td>
                 <td>
-                  <font-awesome-icon :icon="['far', 'check-circle']" />
+                  <FontAwesomeIcon :icon="['far', 'check-circle']" />
                 </td>
                 <td>
-                  <font-awesome-icon :icon="['far', 'check-circle']" />
+                  <FontAwesomeIcon :icon="['far', 'check-circle']" />
                 </td>
               </tr>
               <tr>
@@ -216,10 +215,10 @@
                   <span class="info-item">Both of these tools allow your company to be listed on maps, and have a card on the SERPs.</span>
                 </td>
                 <td>
-                  <font-awesome-icon :icon="['far', 'check-circle']" />
+                  <FontAwesomeIcon :icon="['far', 'check-circle']" />
                 </td>
                 <td>
-                  <font-awesome-icon :icon="['far', 'check-circle']" />
+                  <FontAwesomeIcon :icon="['far', 'check-circle']" />
                 </td>
               </tr>
               <tr>
@@ -227,10 +226,10 @@
                   1 High Quality ~750 word blog post
                 </td>
                 <td>
-                  <font-awesome-icon :icon="['far', 'times-circle']" />
+                  <FontAwesomeIcon :icon="['far', 'times-circle']" />
                 </td>
                 <td>
-                  <font-awesome-icon :icon="['far', 'check-circle']" />
+                  <FontAwesomeIcon :icon="['far', 'check-circle']" />
                 </td>
               </tr>
               <tr>
@@ -240,10 +239,10 @@
                   <span class="info-item">You need a tangible way to manage your Return On Investment which is why we'll send you a report at the end of each month detailing the work carried out and the performance of your SEO strategy.</span>
                 </td>
                 <td>
-                  <font-awesome-icon :icon="['far', 'check-circle']" />
+                  <FontAwesomeIcon :icon="['far', 'check-circle']" />
                 </td>
                 <td>
-                  <font-awesome-icon :icon="['far', 'check-circle']" />
+                  <FontAwesomeIcon :icon="['far', 'check-circle']" />
                 </td>
               </tr>
               <tr class="no-background">
@@ -260,10 +259,10 @@
                   </a>
                 </td>
                 <td>
-                  <font-awesome-icon :icon="['far', 'times-circle']" />
+                  <FontAwesomeIcon :icon="['far', 'times-circle']" />
                 </td>
                 <td>
-                  <font-awesome-icon :icon="['far', 'check-circle']" />
+                  <FontAwesomeIcon :icon="['far', 'check-circle']" />
                 </td>
               </tr>
               <tr>
@@ -273,10 +272,10 @@
                   <span class="info-item">Schemar.org markup is a recognised notation format to help computers read and understand your content. It can help to create Rich Snippets in Google.</span>
                 </td>
                 <td>
-                  <font-awesome-icon :icon="['far', 'check-circle']" />
+                  <FontAwesomeIcon :icon="['far', 'check-circle']" />
                 </td>
                 <td>
-                  <font-awesome-icon :icon="['far', 'check-circle']" />
+                  <FontAwesomeIcon :icon="['far', 'check-circle']" />
                 </td>
               </tr>
               <tr>
@@ -286,10 +285,10 @@
                   <span class="info-item">Meta Tags are a recognised way of allowing computers to understand your content and display it in a better way. One such way is having custom images on links to your website posted on Facebook.</span>
                 </td>
                 <td>
-                  <font-awesome-icon :icon="['far', 'check-circle']" />
+                  <FontAwesomeIcon :icon="['far', 'check-circle']" />
                 </td>
                 <td>
-                  <font-awesome-icon :icon="['far', 'check-circle']" />
+                  <FontAwesomeIcon :icon="['far', 'check-circle']" />
                 </td>
               </tr>
               <tr>
@@ -299,10 +298,10 @@
                   <span class="info-item">A Sitemap is a list of all of your websites pages/posts/products that Search Engines can scan to index your website quicker.</span>
                 </td>
                 <td>
-                  <font-awesome-icon :icon="['far', 'check-circle']" />
+                  <FontAwesomeIcon :icon="['far', 'check-circle']" />
                 </td>
                 <td>
-                  <font-awesome-icon :icon="['far', 'check-circle']" />
+                  <FontAwesomeIcon :icon="['far', 'check-circle']" />
                 </td>
               </tr>
               <tr>
@@ -312,10 +311,10 @@
                   <span class="info-item">A robots.txt file tells Search Engine's what pages should and shouldn't be indexed. Disallowing certain pages such as those behind login screens can help Search Engines to focus on more important content on your site.</span>
                 </td>
                 <td>
-                  <font-awesome-icon :icon="['far', 'check-circle']" />
+                  <FontAwesomeIcon :icon="['far', 'check-circle']" />
                 </td>
                 <td>
-                  <font-awesome-icon :icon="['far', 'check-circle']" />
+                  <FontAwesomeIcon :icon="['far', 'check-circle']" />
                 </td>
               </tr>
               <tr>
@@ -325,10 +324,10 @@
                   <span class="info-item">The format of your links greatly influences how Search Engines index your site. As a crawler goes through your site it will follow or not follow links to other pages.</span>
                 </td>
                 <td>
-                  <font-awesome-icon :icon="['far', 'check-circle']" />
+                  <FontAwesomeIcon :icon="['far', 'check-circle']" />
                 </td>
                 <td>
-                  <font-awesome-icon :icon="['far', 'check-circle']" />
+                  <FontAwesomeIcon :icon="['far', 'check-circle']" />
                 </td>
               </tr>
               <tr>
@@ -338,10 +337,10 @@
                   <span class="info-item">Search Engines prefer dashes to spaces, HTTPS to HTTP and a www. subdomain may cause duplicate content.</span>
                 </td>
                 <td>
-                  <font-awesome-icon :icon="['far', 'check-circle']" />
+                  <FontAwesomeIcon :icon="['far', 'check-circle']" />
                 </td>
                 <td>
-                  <font-awesome-icon :icon="['far', 'check-circle']" />
+                  <FontAwesomeIcon :icon="['far', 'check-circle']" />
                 </td>
               </tr>
               <tr>
@@ -351,10 +350,10 @@
                   <span class="info-item">As you update content on your site, pages may be deleted or changed, but you still want any links to those pages going to the right place.</span>
                 </td>
                 <td>
-                  <font-awesome-icon :icon="['far', 'check-circle']" />
+                  <FontAwesomeIcon :icon="['far', 'check-circle']" />
                 </td>
                 <td>
-                  <font-awesome-icon :icon="['far', 'check-circle']" />
+                  <FontAwesomeIcon :icon="['far', 'check-circle']" />
                 </td>
               </tr>
               <tr>
@@ -364,10 +363,10 @@
                   <span class="info-item">Over 50% of web traffic is mobile, so it's important to have a mobile responsive site. As part of the SEO package we will make minor updates for you, however, it may be neccessary to have a completely revamped site.</span>
                 </td>
                 <td>
-                  <font-awesome-icon :icon="['far', 'check-circle']" />
+                  <FontAwesomeIcon :icon="['far', 'check-circle']" />
                 </td>
                 <td>
-                  <font-awesome-icon :icon="['far', 'check-circle']" />
+                  <FontAwesomeIcon :icon="['far', 'check-circle']" />
                 </td>
               </tr>
               <tr>
@@ -401,10 +400,10 @@
         </div>
       </div>
     </section>
-    <section class="maxWidth">
-      <div class="grid column three">
+    <section class="layout--max-width">
+      <div class="grid grid--column grid--three">
         <div v-infocus="'showElement'" class="card white hidden">
-          <div class="card--inner">
+          <div class="card__inner">
             <h4 class="title">
               Flexible SEO Package
             </h4>
@@ -425,7 +424,7 @@
           </div>
         </div>
         <div v-infocus="'showElement'" class="card white hidden">
-          <div class="card--inner">
+          <div class="card__inner">
             <h4 class="title">
               High Quality ~750 word Blog Post
             </h4>
@@ -446,7 +445,7 @@
           </div>
         </div>
         <div v-infocus="'showElement'" class="card white hidden">
-          <div class="card--inner">
+          <div class="card__inner">
             <h4 class="title">
               Social Media Management
             </h4>
@@ -468,7 +467,7 @@
         </div>
       </div>
     </section>
-    <section class="maxWidth">
+    <section class="layout--max-width">
       <h2>
         Free SEO Audit
       </h2>
@@ -477,7 +476,7 @@
       </p>
       <form
         id="seoForm"
-        class="narrow"
+        class="form form--narrow"
         method="post"
         name="seoForm"
         netlify
@@ -549,7 +548,7 @@
             v-model="form.howDidYouHearAboutUs"
             name="howDidYouHearAboutUs"
             required
-            @keyup="checkform('seoForm', form)"
+            @change="checkform('seoForm', form)"
           >
             <option value="" disabled selected>Please choose from the dropdown</option>
             <option value="Galexia came up during a search">Galexia came up during a search</option>
@@ -579,21 +578,20 @@
             @keyup="checkform('seoForm', form)"
           >
         </label>
-        <div id="submitcontainer">
+        <div class="form__full-width-input">
           <input
-            id="submit"
             type="submit"
             name="submit"
-            class="button colorTwo"
+            class="button button--secondary submit"
             value="submit"
             disabled
           >
         </div>
-        <p v-show="!submitted">
+        <p v-if="!submitted">
         &nbsp;
         </p>
-        <transition name="fade">
-          <p v-show="submitted" class="message" v-text="submitted" />
+        <transition name="contact__message">
+          <p v-if="submitted" class="form__full-width-input contact__message" v-text="submitted" />
         </transition>
       </form>
     </section>
@@ -638,6 +636,7 @@ export default {
     if (process.client) {
       if (localStorage.getItem('seoForm')) {
         this.form = JSON.parse(localStorage.getItem('seoForm'))
+        this.checkform('seoForm', this.form)
       } else {
         this.form = {}
       }

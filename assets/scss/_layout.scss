@@ -1,0 +1,17 @@
+.layout--narrow-width,
+.layout--max-width {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: var(--layoutGutter);
+  padding-left: var(--layoutGutter)
+}
+.layout--narrow-width {
+  max-width: var(--narrowSiteWidth)
+}
+.layout--max-width {
+  max-width: var(--siteWidth);
+  .layout--narrow-width {
+    padding: 0
+  }
+}

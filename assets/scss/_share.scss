@@ -1,0 +1,10 @@
+@import 'mixins';
+.share-title {
+  margin-top: 0;
+  margin-bottom: 1rem
+}
+.share-button:any-link {
+  @include button;
+  display: flex;
+  gap: 1rem
+}

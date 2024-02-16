@@ -1,6 +1,11 @@
 [build]
-command = "AWS_LAMBDA_FUNCTION_NAME=trickpuppeteer yarn generate --no-optional"
+command = "AWS_LAMBDA_FUNCTION_NAME=trickpuppeteer yarn generate"
 publish = "dist"
+
+[build.environment]
+NODE_VERSION = "18"
+YARN_FLAGS = "--ignore-optional"
+CI = "1"
 
 [[redirects]]
 from = "https://galexia.netlify.app/*"

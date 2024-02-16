@@ -8,13 +8,13 @@
 
 <template>
   <div id="web">
-    <Header
+    <LayoutHeader
       title="Web Design and Development"
       desc="We're in the business of building fast, secure, scalable sites. We specialize in WordPress as it aligns with our ethos as a company. You can find out more about it at <a href='https://wordpress.org'>WordPress.org</a> but that’s why you pay us; to take care of learning all about the latest and greatest standards in the world of the web so that you can focus on what you do best."
       :link="{location: '/hosting/', text: 'Check out our custom hosting'}"
     />
     <section class="white">
-      <div class="grid left maxWidth">
+      <div class="grid grid--left layout--max-width">
         <div v-infocus="'showElement'" class="hidden hidden-left">
           <h3>Why us?</h3>
           <p class="text--normal">
@@ -27,10 +27,10 @@
             Get in touch
           </nuxt-link>
         </div>
-        <div v-infocus="'showElement'" class="hidden hidden-right svg" v-html="require('../assets/svg/why_us.svg?include')" />
+        <div v-infocus="'showElement'" class="hidden hidden-right svg" v-html="require('~/assets/svg/why_us.svg?include')" />
       </div>
-      <div class="grid right maxWidth">
-        <div v-infocus="'showElement'" class="hidden hidden-left svg" v-html="require('../assets/svg/wordpress.svg?include')" />
+      <div class="grid grid--right layout--max-width">
+        <div v-infocus="'showElement'" class="hidden hidden-left svg" v-html="require('~/assets/svg/wordpress.svg?include')" />
         <div v-infocus="'showElement'" class="hidden hidden-right">
           <h3>WordPress</h3>
           <p class="text--normal">
@@ -41,7 +41,7 @@
           </nuxt-link>
         </div>
       </div>
-      <div class="grid left maxWidth">
+      <div class="grid grid--left layout--max-width">
         <div v-infocus="'showElement'" class="hidden hidden-left">
           <h3>Custom Solutions</h3>
           <p class="text--normal">
@@ -51,10 +51,10 @@
             Give us a call
           </nuxt-link>
         </div>
-        <div v-infocus="'showElement'" class="hidden hidden-right svg" v-html="require('../assets/svg/custom.svg?include')" />
+        <div v-infocus="'showElement'" class="hidden hidden-right svg" v-html="require('~/assets/svg/custom.svg?include')" />
       </div>
-      <div class="grid right maxWidth">
-        <div v-infocus="'showElement'" class="hidden hidden-left svg" v-html="require('../assets/svg/old.svg?include')" />
+      <div class="grid right layout--max-width">
+        <div v-infocus="'showElement'" class="hidden hidden-left svg" v-html="require('~/assets/svg/old.svg?include')" />
         <div v-infocus="'showElement'" class="hidden hidden-right">
           <h3>Love our ethos but have an older site?</h3>
           <p class="text--normal">
@@ -65,7 +65,7 @@
           </nuxt-link>
         </div>
       </div>
-      <div class="grid left maxWidth">
+      <div class="grid left layout--max-width">
         <div v-infocus="'showElement'" class="hidden hidden-left">
           <h3>Hosting and Domains</h3>
           <p class="text--normal">
@@ -75,10 +75,10 @@
             Register today
           </nuxt-link>
         </div>
-        <div v-infocus="'showElement'" class="hidden hidden-right svg" v-html="require('../assets/svg/hosting.svg?include')" />
+        <div v-infocus="'showElement'" class="hidden hidden-right svg" v-html="require('~/assets/svg/hosting.svg?include')" />
       </div>
-      <div class="grid right maxWidth">
-        <div v-infocus="'showElement'" class="hidden hidden-left svg" v-html="require('../assets/svg/search.svg?include')" />
+      <div class="grid right layout--max-width">
+        <div v-infocus="'showElement'" class="hidden hidden-left svg" v-html="require('~/assets/svg/search.svg?include')" />
         <div v-infocus="'showElement'" class="hidden hidden-right">
           <h3>SEO</h3>
           <p class="text--normal">
@@ -91,14 +91,13 @@
       </div>
     </section>
     <section class="white text-center">
-      <div class="maxWidth">
+      <div class="layout--max-width">
         <h2 style="line-height: 1.5">
           WordPress powers 43% of all websites including these top brands:
         </h2>
         <GalexiaImage
           :avif="require('~/assets/img/companies.png?format=avif&resize&size=1376')"
           :webp="require('~/assets/img/companies.png?format=webp&resize&size=1376')"
-          :src="require('~/assets/img/companies.png?resize&size=1376')"
           width="1376"
           loading="lazy"
           class="brands-using-wordpress"
@@ -110,12 +109,7 @@
 </template>
 
 <script>
-import Header from '../components/header'
-
 export default {
-  components: {
-    Header
-  },
   head () {
     return {
       title: 'Web Design and Development',

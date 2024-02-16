@@ -1,9 +1,9 @@
 <style scoped lang="scss">
-  form {
+  .form {
     grid-template-columns: 1fr;
     gap: 2rem
   }
-  #submitcontainer {
+  .form__full-width-input {
     grid-column: 1
   }
   h1 {
@@ -29,8 +29,8 @@
 <template>
   <div id="brand-identity">
     <section class="white">
-      <div class="maxWidth">
-        <div class="grid left">
+      <div class="layout--max-width">
+        <div class="grid grid--left">
           <div>
             <h1>Your Brand Identity</h1>
             <p>
@@ -40,7 +40,7 @@
               <br>
               How do you want to come across to customers and potential customers?
             </p>
-            <form method="post" name="brandIdentityForm" netlify @submit.prevent="onSubmit">
+            <form class="form" method="post" name="brandIdentityForm" netlify @submit.prevent="onSubmit">
               <input
                 type="hidden"
                 name="form-name"
@@ -175,21 +175,20 @@
                   @keyup="checkform('brandIdentityForm', form)"
                 />
               </label>
-              <div id="submitcontainer">
+              <div class="form__full-width-input">
                 <input
-                  id="submit"
                   type="submit"
                   name="submit"
-                  class="button colorTwo"
+                  class="button button--secondary submit"
                   value="submit"
                   disabled
                 >
               </div>
-              <p v-show="!submitted">
+              <p v-if="!submitted">
               &nbsp;
               </p>
-              <transition name="fade">
-                <p v-show="submitted" class="message" v-text="submitted" />
+              <transition name="contact__message">
+                <p v-if="submitted" class="form__full-width-input contact__message" v-text="submitted" />
               </transition>
             </form>
           </div>
@@ -237,6 +236,7 @@ export default {
     if (process.client) {
       if (localStorage.getItem('brandIdentityForm')) {
         this.form = JSON.parse(localStorage.getItem('brandIdentityForm'))
+        this.checkform('brandIdentityForm', this.form)
       } else {
         this.form = {}
       }

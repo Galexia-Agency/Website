@@ -56,8 +56,8 @@
 
 <template>
   <section class="white">
-    <div class="maxWidth">
-      <article v-for="(post, index) in $parent.$parent.blog" :key="index" v-infocus="'showElement'" class="hidden post">
+    <div class="layout--max-width">
+      <article v-for="(post, index) in blog" :key="index" v-infocus="'showElement'" class="hidden post">
         <div style="display: none">
           {{ post = JSON.parse(JSON.stringify(post).replace(new RegExp('\\[', 'g'),"").replace(new RegExp('\\]', 'g'),"")) }}
         </div>
@@ -86,6 +86,8 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
   data () {
     return {
@@ -115,6 +117,11 @@ export default {
         }
       ]
     }
+  },
+  computed: {
+    ...mapState([
+      'blog'
+    ])
   }
 }
 </script>

@@ -1,0 +1,86 @@
+
+label {
+  color: var(--darkGrey);
+  font-size: .9rem
+}
+input,
+textarea,
+select {
+  font-size: 1rem;
+  font-family: Open Sans, Open Sans fallback, sans-serif;
+  line-height: 1.75;
+  background: linear-gradient(
+    180deg,
+    rgb(83 75 174 / 15%) 0%,
+    rgb(26 35 126 / 15%) 100%
+  );
+  border: none;
+  border-radius: .25rem;
+
+  box-shadow: 0 5px 5px rgb(26 35 126 / 8%)
+}
+input:not([type='submit'], [type='checkbox']),
+textarea,
+select {
+  width: 100%;
+  padding: .33rem
+}
+select {
+  background: linear-gradient(
+    180deg,
+    rgb(83 75 174 / 15%) 0%,
+    rgb(26 35 126 / 15%) 100%
+  ),
+    url('data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0Ljk1IDEwIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2ZmZjt9LmNscy0ye2ZpbGw6IzQ0NDt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPmFycm93czwvdGl0bGU+PHJlY3QgY2xhc3M9ImNscy0xIiB3aWR0aD0iNC45NSIgaGVpZ2h0PSIxMCIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMiIgcG9pbnRzPSIxLjQxIDQuNjcgMi40OCAzLjE4IDMuNTQgNC42NyAxLjQxIDQuNjciLz48cG9seWdvbiBjbGFzcz0iY2xzLTIiIHBvaW50cz0iMy41NCA1LjMzIDIuNDggNi44MiAxLjQxIDUuMzMgMy41NCA1LjMzIi8+PC9zdmc+')
+    no-repeat
+    99% 50%;
+  appearance: none
+}
+textarea {
+  resize: vertical
+}
+::placeholder {
+  color: #777777
+}
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  width: 100%;
+  @media (max-width: 500px) {
+    grid-template-columns: 1fr
+  }
+  label {
+    display: grid;
+    gap: .5rem;
+    text-align: left
+  }
+  .form__full-width-input {
+    grid-column: span 2;
+    @media (max-width: 500px) {
+      grid-column: 1
+    }
+  }
+  .contact__message {
+    font-size: 1.15rem
+  }
+  &.form--narrow {
+    grid-template-columns: 1fr;
+    max-width: 800px;
+    margin: auto;
+    .form__full-width-input {
+      grid-column: 1
+    }
+  }
+  .button {
+    font-size: 1rem
+  }
+}
+.contact__message-enter-active,
+.contact__message-leave-active {
+  transition: opacity 1s
+}
+.contact__message-enter,
+.contact__message-leave-to {
+  opacity: 0
+}

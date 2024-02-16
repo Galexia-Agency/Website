@@ -3,23 +3,24 @@ export default {
   router: {
     trailingSlash: true
   },
+  components: true,
   /*
    ** Headers of the page
    */
   head: {
-    titleTemplate: '%s | Galexia Creative Agency Ltd | Web Design and Development',
+    titleTemplate: '%s | Galexia Creative Agency Ltd',
     meta: [
       { name: 'application-name', content: 'Galexia' },
       { name: 'msapplication-TileColor', content: '#7c72ef' },
       { name: 'msapplication-TileImage', content: 'https://galexia.agency/mstile-144x144.png?v=dLXLEPEjpj' },
 
       // Twitter Card data
-      { hid: 'twitter:title', name: 'twitter:title', template: (chunk) => `${chunk} | Galexia Creative Agency Ltd | Web Design and Development` },
+      { hid: 'twitter:title', name: 'twitter:title', template: (chunk) => `${chunk} | Galexia Creative Agency Ltd` },
       { hid: 'twitter:description', name: 'twitter:description' },
 
       // Open Graph data
       { hid: 'og:description', property: 'og:description' },
-      { hid: 'og:title', property: 'og:title', template: (chunk) => `${chunk} | Galexia Creative Agency Ltd | Web Design and Development` },
+      { hid: 'og:title', property: 'og:title', template: (chunk) => `${chunk} | Galexia Creative Agency Ltd` },
       { hid: 'og:image', property: 'og:image' },
       { property: 'fb:app_id', content: '249903496015229' }
     ],
@@ -138,7 +139,8 @@ export default {
     '~/plugins/fontAwesome.js',
     '~/plugins/ztext.client.js',
     '~plugins/mixins/forms',
-    '~plugins/galexia/components/image.js'
+    '~plugins/galexia/components/image.js',
+    '~plugins/galexia/components/share.js'
   ],
   /*
    ** Nuxt.js dev-modules
@@ -161,24 +163,29 @@ export default {
   optimizedImages: {
     optimizeImages: true,
     optimizeImagesInDev: true,
-    mozjpeg: {
-      quality: 70
-    },
-    pngquant: {
-      stripe: true
-    },
-    webp: {
-      quality: 70
-    },
     svgo: {
       plugins: [
-        { reusePaths: true },
-        { removeOffCanvasPaths: true },
-        { removeScriptElement: true },
         {
-          cleanupIDs: {
-            minify: false
+          name: 'preset-default',
+          params: {
+            overrides: {
+              cleanupIDs: {
+                minify: false
+              }
+            }
           }
+        },
+        {
+          name: 'reusePaths',
+          active: true
+        },
+        {
+          name: 'removeOffCanvasPaths',
+          active: true
+        },
+        {
+          name: 'removeScriptElement',
+          active: true
         }
       ]
     }
@@ -221,6 +228,17 @@ export default {
         trimCustomFragments: true,
         useShortDoctype: true
       }
+    }
+  },
+  babel: {
+    presets ({ isClient }, preset) {
+      if (isClient) {
+        // https://babeljs.io/docs/en/babel-preset-env
+        preset[1].targets = {
+          chrome: '58'
+        }
+      }
+      return [preset]
     }
   }
 }

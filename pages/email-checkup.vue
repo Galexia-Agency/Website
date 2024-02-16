@@ -6,27 +6,27 @@
 
 <template>
   <div id="email_checkup">
-    <Header
+    <LayoutHeader
       title="Free Business Email Checkup"
       desc="If you aren't sure on what the following key terms mean, or if you don't know whether you have them implemented on your domain/website, let us offer you a free checkup. Just drop your name, email address, and website into the form below, and we'll let you know whether you comply with SPF, DKIM, DMARC, and BIMI within 2-3 working days."
       :link="{location: '#checkup', text: 'Get my free checkup'}"
     />
     <section class="white">
-      <div class="grid right maxWidth">
-        <div v-infocus="'showElement'" class="hidden hidden-left svg" v-html="require('../assets/svg/spf.svg?include')" />
+      <div class="grid grid--right layout--max-width">
+        <div v-infocus="'showElement'" class="hidden hidden-left svg" v-html="require('~/assets/svg/spf.svg?include')" />
         <div v-infocus="'showElement'" class="hidden hidden-right">
           <h3>
             SPF
           </h3>
           <code>
-            v=spf1 include:_spf.google.com ~all
+            v=spf1 include:_spf.google.com ~/all
           </code>
           <p class="text--normal">
             The Sender Policy Framework (SPF) is a way to make sure an email message was sent from an authorized sender in order to prevent spam. In order for the record to be valid and not mark your legitimate sent emails as spam, you'll need to add all email services that you use to send mail.
           </p>
         </div>
       </div>
-      <div class="grid left maxWidth">
+      <div class="grid grid--left layout--max-width">
         <div v-infocus="'showElement'" class="hidden hidden-left">
           <h3>
             DKIM
@@ -38,10 +38,10 @@
             DomainKeys Identified Mail (DKIM) is a DNS standard to help prevent spoofing on outgoing messages sent from your domain. Email spoofing is when email content is changed to make the message appear from someone or somewhere other than the actual source.
           </p>
         </div>
-        <div v-infocus="'showElement'" class="hidden hidden-right svg" v-html="require('../assets/svg/dkim.svg?include')" />
+        <div v-infocus="'showElement'" class="hidden hidden-right svg" v-html="require('~/assets/svg/dkim.svg?include')" />
       </div>
-      <div class="grid right maxWidth">
-        <div v-infocus="'showElement'" class="hidden hidden-left svg" v-html="require('../assets/svg/dmarc.svg?include')" />
+      <div class="grid right layout--max-width">
+        <div v-infocus="'showElement'" class="hidden hidden-left svg" v-html="require('~/assets/svg/dmarc.svg?include')" />
         <div v-infocus="'showElement'" class="hidden hidden-right">
           <h3>
             DMARC
@@ -54,7 +54,7 @@
           </p>
         </div>
       </div>
-      <div class="grid left maxWidth">
+      <div class="grid left layout--max-width">
         <div v-infocus="'showElement'" class="hidden hidden-left">
           <h3>
             BIMI
@@ -66,17 +66,17 @@
             Brand Indicators for Message Identification (BIMI) is a new standard that can help an email recipient to know that it is you. Without BIMI, your email recipients have no assurance that the emails they get are from you. As a result, sometimes they leave such emails unopened, as they fear fraudsters may be trying to con them. BIMI is a new standard that enables you to include your company's logo alongside the emails you send. That way, your brand stands out among other emails, and your customers are sure that the emails are legitimate.
           </p>
         </div>
-        <div v-infocus="'showElement'" class="hidden hidden-right svg" v-html="require('../assets/svg/bimi.svg?include')" />
+        <div v-infocus="'showElement'" class="hidden hidden-right svg" v-html="require('~/assets/svg/bimi.svg?include')" />
       </div>
     </section>
     <section id="checkup" class="white">
-      <div class="maxWidth">
+      <div class="layout--max-width">
         <h2>
           Free Business Email Checkup
         </h2>
         <form
           id="emailCheckupForm"
-          class="narrow"
+          class="form form--narrow"
           method="post"
           name="emailCheckupForm"
           netlify
@@ -147,7 +147,7 @@
               v-model="form.howDidYouHearAboutUs"
               name="howDidYouHearAboutUs"
               required
-              @keyup="checkform('emailCheckupForm', form)"
+              @change="checkform('emailCheckupForm', form)"
             >
               <option value="" disabled selected>Please choose from the dropdown</option>
               <option value="Galexia came up during a search">Galexia came up during a search</option>
@@ -177,21 +177,20 @@
               @keyup="checkform('emailCheckupForm', form)"
             >
           </label>
-          <div id="submitcontainer">
+          <div class="form__full-width-input">
             <input
-              id="submit"
               type="submit"
               name="submit"
-              class="button colorTwo"
+              class="button button--secondary submit"
               value="submit"
               disabled
             >
           </div>
-          <p v-show="!submitted">
+          <p v-if="!submitted">
           &nbsp;
           </p>
-          <transition name="fade">
-            <p v-show="submitted" class="message" v-text="submitted" />
+          <transition name="contact__message">
+            <p v-if="submitted" class="form__full-width-input contact__message" v-text="submitted" />
           </transition>
         </form>
       </div>
@@ -200,12 +199,7 @@
 </template>
 
 <script>
-import Header from '../components/header'
-
 export default {
-  components: {
-    Header
-  },
   data () {
     return {
       submitted: false,
@@ -242,6 +236,7 @@ export default {
     if (process.client) {
       if (localStorage.getItem('emailCheckupForm')) {
         this.form = JSON.parse(localStorage.getItem('emailCheckupForm'))
+        this.checkform('emailCheckupForm', this.form)
       } else {
         this.form = {}
       }

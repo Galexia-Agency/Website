@@ -1,13 +1,13 @@
 <template>
   <div>
-    <nuxt-link to="/locations/cambridge" />
+    <nuxt-link to="/locations/cambridge/" />
 
-    <nuxt-link to="/locations/hertfordshire" />
-    <nuxt-link to="/locations/royston" />
-    <nuxt-link to="/locations/stevenage" />
+    <nuxt-link to="/locations/hertfordshire/" />
+    <nuxt-link to="/locations/royston/" />
+    <nuxt-link to="/locations/stevenage/" />
 
-    <nuxt-link to="/locations/southampton" />
-    <nuxt-link to="/locations/hampshire" />
+    <nuxt-link to="/locations/southampton/" />
+    <nuxt-link to="/locations/hampshire/" />
   </div>
 </template>
 

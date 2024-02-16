@@ -29,7 +29,7 @@
     }
   }
   @media (max-width: 580px) {
-    .grid.column.maxWidth.four {
+    .grid.column.layout--max-width.four {
       grid-template-columns: auto
     }
   }
@@ -37,14 +37,14 @@
 
 <template>
   <div id="web">
-    <Header
+    <LayoutHeader
       title="Marketing solutions to help your business go from zero to <i>hero</i>"
       desc="However you wish to pursue your business marketing is vital in finding and retaining customers. We mould a marketing strategy around your business. Our team of professionals will recommend the solution that gives you the most return on investment. We try and understand your target audience and adapt the marketing strategy, putting your clients first. If you’re a clothing brand targeting teens then social media marketing will be best for you. Similarly, if you’re a home-improvements business, PPC advertising might be more suitable."
       :link="{location: '/contact/', text: 'Find out more'}"
     />
     <section class="white">
-      <div class="grid right maxWidth">
-        <div v-infocus="'showElement'" class="hidden hidden-left svg" v-html="require('../assets/svg/search.svg?include')" />
+      <div class="grid grid--right layout--max-width">
+        <div v-infocus="'showElement'" class="hidden hidden-left svg" v-html="require('~/assets/svg/search.svg?include')" />
         <div v-infocus="'showElement'" class="hidden hidden-right">
           <h3>SEO</h3>
           <p class="text--normal">
@@ -55,7 +55,7 @@
           </nuxt-link>
         </div>
       </div>
-      <div class="grid left maxWidth">
+      <div class="grid grid--left layout--max-width">
         <div v-infocus="'showElement'" class="hidden hidden-left">
           <h3>Advertising</h3>
           <p class="text--normal">
@@ -65,10 +65,10 @@
             Get started advertising
           </nuxt-link>
         </div>
-        <div v-infocus="'showElement'" class="hidden hidden-right svg" v-html="require('../assets/svg/advertising.svg?include')" />
+        <div v-infocus="'showElement'" class="hidden hidden-right svg" v-html="require('~/assets/svg/advertising.svg?include')" />
       </div>
-      <div class="grid right maxWidth">
-        <div v-infocus="'showElement'" class="hidden hidden-left svg" v-html="require('../assets/svg/social.svg?include')" />
+      <div class="grid grid--right layout--max-width">
+        <div v-infocus="'showElement'" class="hidden hidden-left svg" v-html="require('~/assets/svg/social.svg?include')" />
         <div v-infocus="'showElement'" class="hidden hidden-right">
           <h3>Social Media</h3>
           <p class="text--normal">
@@ -79,7 +79,7 @@
           </nuxt-link>
         </div>
       </div>
-      <div class="grid left maxWidth">
+      <div class="grid grid--left layout--max-width">
         <div v-infocus="'showElement'" class="hidden hidden-left">
           <h3>Emails / Newsletters</h3>
           <p class="text--normal">
@@ -93,7 +93,6 @@
           <GalexiaImage
             :avif="require('~/assets/img/mailchimp_certified.jpg?format=avif&resize&size=1000')"
             :webp="require('~/assets/img/mailchimp_certified.jpg?format=webp&resize&size=1000')"
-            :src="require('~/assets/img/mailchimp_certified.jpg?resize&size=1000')"
             width="100%"
             height="auto"
             alt="Mailchimp Certified"
@@ -103,10 +102,10 @@
     </section>
     <section class="white">
       <h2>Content Creation</h2>
-      <div class="grid column maxWidth four">
+      <div class="grid grid--column layout--max-width grid--four">
         <div v-infocus="'showElement'" class="card hidden">
           <h3>Photography</h3>
-          <div class="svg" v-html="require('../assets/svg/photography.svg?include')" />
+          <div class="svg" v-html="require('~/assets/svg/photography.svg?include')" />
           <p class="text--normal">
             Photos can make or break a brand. Having good photos are vital to all kinds of content marketing, including social media, and websites. We have a team of photographers versed in everything from events to products.
           </p>
@@ -117,7 +116,7 @@
           style="--delay: .25s"
         >
           <h3>Videography</h3>
-          <div class="svg" v-html="require('../assets/svg/videography.svg?include')" />
+          <div class="svg" v-html="require('~/assets/svg/videography.svg?include')" />
           <p class="text--normal">
             We love watching great content. It’s a great way to engage with customers in the modern age. We pride ourselves in creating short clips for Instagram, longer clips for YouTube and everything in-between.
           </p>
@@ -128,7 +127,7 @@
           style="--delay: .5s"
         >
           <h3>Copy-writing</h3>
-          <div class="svg" v-html="require('../assets/svg/writing.svg?include')" />
+          <div class="svg" v-html="require('~/assets/svg/writing.svg?include')" />
           <p class="text--normal">
             Some people learn visually, some by reading. It’s best to have a mixture of both. Not to mention that good quality blogs are by far one of the best ways to improve search presence.
           </p>
@@ -140,7 +139,7 @@
         >
           <h3>Graphic Design</h3>
 
-          <div class="svg" v-html="require('../assets/svg/design.svg?include')" />
+          <div class="svg" v-html="require('~/assets/svg/design.svg?include')" />
           <p class="text--normal">
             Design is everywhere: social media, websites, business cards, pamphlets, adverts. Our expert team can help your business stand out with tailor made graphics.
           </p>
@@ -151,12 +150,7 @@
 </template>
 
 <script>
-import Header from '../components/header'
-
 export default {
-  components: {
-    Header
-  },
   head () {
     return {
       title: 'Marketing',

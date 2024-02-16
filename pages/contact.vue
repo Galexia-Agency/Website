@@ -18,30 +18,21 @@
   }
 </style>
 <style scoped>
-  h1 {
-    text-align: center
-  }
-  .grid {
-    gap: 2rem
-  }
-  p {
-    z-index: 1;
-    margin-bottom: 2rem;
-    font-size: 1.25rem;
-    text-align: center
-  }
+.contact__grid {
+  gap: 2rem
+}
 </style>
 
 <template>
-  <div id="contact">
-    <section class="white">
-      <div class="maxWidth">
-        <h1>Get in Touch</h1>
-        <p>
-          We’d love to help you on your next big website project. We understand what it means to dream big, and then achieve that dream.
-        </p>
-        <div class="grid left">
-          <form method="post" name="contactForm" netlify @submit.prevent="onSubmit">
+  <div>
+    <LayoutHeader
+      title="Get in Touch"
+      desc="We’d love to help you on your next big website project.<br>We understand what it means to dream big, and then achieve that dream."
+    />
+    <section class="white section-padding section-padding--100">
+      <div class="layout--max-width">
+        <div class="contact__grid grid grid--left">
+          <form method="post" name="contactForm" netlify class="form" @submit.prevent="onSubmit">
             <input
               type="hidden"
               name="form-name"
@@ -50,7 +41,6 @@
             <label>
               First Name:
               <input
-                id="firstName"
                 v-model="form.firstName"
                 name="firstName"
                 type="text"
@@ -63,7 +53,6 @@
             <label>
               Last Name:
               <input
-                id="lastName"
                 v-model="form.lastName"
                 name="lastName"
                 type="text"
@@ -76,7 +65,6 @@
             <label>
               Email:
               <input
-                id="mail"
                 v-model="form.email"
                 name="email"
                 type="email"
@@ -89,7 +77,6 @@
             <label>
               Telephone:
               <input
-                id="telephone"
                 v-model="form.telephone"
                 name="telephone"
                 type="tel"
@@ -100,7 +87,7 @@
                 @keyup="checkform('contactForm', form)"
               >
             </label>
-            <label id="subject">
+            <label class="form__full-width-input">
               Subject:
               <input
                 v-model="form.subject"
@@ -111,7 +98,7 @@
                 @keyup="checkform('contactForm', form)"
               >
             </label>
-            <label id="message">
+            <label class="form__full-width-input">
               Message:
               <textarea
                 v-model="form.message"
@@ -122,14 +109,13 @@
                 @keyup="checkform('contactForm', form)"
               />
             </label>
-            <label>
+            <label class="form__full-width-input">
               How did you hear about us?
               <select
-                id="how-did-you-hear-about-us"
                 v-model="form.howDidYouHearAboutUs"
                 name="howDidYouHearAboutUs"
                 required
-                @keyup="checkform('contactForm', form)"
+                @change="checkform('contactForm', form)"
               >
                 <option value="" disabled selected>Please choose from the dropdown</option>
                 <option value="Galexia came up during a search">Galexia came up during a search</option>
@@ -142,7 +128,6 @@
             <label v-if="form.howDidYouHearAboutUs === 'Someone recommended Galexia to me'">
               If you'd like to, let us know who recommended Galexia to you:
               <input
-                id="whoRecommended"
                 v-model="form.whoRecommended"
                 name="whoRecommended"
                 type="text"
@@ -152,31 +137,29 @@
             <label v-if="form.howDidYouHearAboutUs === 'Other'">
               If you can, let us know how you heard about us:
               <input
-                id="howDidYouHearAboutUsDetails"
                 v-model="form.howDidYouHearAboutUsDetails"
                 name="howDidYouHearAboutUsDetails"
                 type="text"
                 @keyup="checkform('contactForm', form)"
               >
             </label>
-            <div id="submitcontainer">
+            <div class="form__full-width-input">
               <input
-                id="submit"
                 type="submit"
                 name="submit"
-                class="button colorTwo"
-                value="submit"
+                class="button button--secondary submit"
+                value="Submit"
                 disabled
               >
             </div>
-            <p v-show="!submitted">
+            <p v-if="!submitted">
             &nbsp;
             </p>
-            <transition name="fade">
-              <p v-show="submitted" class="message" v-text="submitted" />
+            <transition name="contact__message">
+              <p v-if="submitted" class="form__full-width-input contact__message" v-text="submitted" />
             </transition>
           </form>
-          <div class="SVGContainer" v-html="require('../assets/svg/contact.svg?include')" />
+          <div v-html="require('~/assets/svg/contact.svg?include')" />
         </div>
       </div>
     </section>
@@ -193,13 +176,13 @@ export default {
   },
   head () {
     return {
-      title: 'Contact',
+      title: 'Get in Touch',
       meta: [
         { hid: 'description', name: 'description', content: 'We\'d love to help you on your next big project. We understand what it means to dream big, and then achieve that dream.' },
-        { hid: 'og:title', property: 'og:title', content: 'Contact' },
+        { hid: 'og:title', property: 'og:title', content: 'Get in Touch' },
         { hid: 'og:description', property: 'og:description', content: 'We\'d love to help you on your next big project. We understand what it means to dream big, and then achieve that dream.' },
         { hid: 'og:image', property: 'og:image', content: 'https://galexia.agency/icon.png' },
-        { hid: 'twitter:title', name: 'twitter:title', content: 'Contact' },
+        { hid: 'twitter:title', name: 'twitter:title', content: 'Get in Touch' },
         { hid: 'twitter:description', name: 'twitter:description', content: 'We\'d love to help you on your next big project. We understand what it means to dream big, and then achieve that dream.' },
         { hid: 'twitter:img', name: 'twitter:img', content: 'https://galexia.agency/icon.png' }
       ],
@@ -220,6 +203,9 @@ export default {
     if (process.client) {
       if (localStorage.getItem('contactForm')) {
         this.form = JSON.parse(localStorage.getItem('contactForm'))
+        this.$nextTick(() => {
+          this.checkform('contactForm', this.form)
+        })
       } else {
         this.form = {}
       }

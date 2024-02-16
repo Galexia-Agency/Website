@@ -1,1 +1,46 @@
-@use 'fonts'
+@import 'calc';
+@import 'variables';
+@import 'fonts';
+@import 'animation';
+@import 'typography';
+@import 'button';
+@import 'layout';
+@import 'utility';
+@import 'section-padding';
+@import 'grid';
+@import 'cards';
+@import 'forms';
+@import 'share';
+body {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  scroll-behavior: var(--motion, auto)
+}
+::selection {
+  color: white;
+  background: #1C2AB1
+}
+* {
+  box-sizing: border-box;
+  outline-color: var(--primaryColor)
+}
+picture {
+  display: block
+}
+code {
+  padding: 0 .2em;
+  word-break: break-all;
+  background-color: rgb(26 35 126 / 15%);
+  user-select: all
+}
+svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  overflow: visible
+}
+time {
+  font-weight: 600
+}

@@ -1,0 +1,13 @@
+:root {
+  --delay: 0s;
+  --primaryColor: #1A237E;
+  --secondaryColor: #534BAE;
+  --darkGrey: #212121;
+  --100vw: calc(100vw - var(--scrollbar-width, 0px));
+  --siteWidth: 1376px;
+  --layoutGutter: 2rem;
+  --narrowSiteWidth: 1000px;
+  @media (max-width: 500px) {
+    --layoutGutter: 1rem
+  }
+}

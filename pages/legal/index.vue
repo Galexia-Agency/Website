@@ -1,4 +1,4 @@
-<style scoped>
+<style scoped lang="scss">
   li {
     color: var(--primaryColor);
     font-size: 1.5rem;
@@ -7,15 +7,11 @@
 </style>
 
 <template>
-  <section class="white legal">
-    <div class="maxWidth">
+  <section class="white section-padding section-padding--100">
+    <div class="layout--max-width">
       <h1>Legal</h1>
       <ul>
-        <li v-for="(legalPost, index) in $parent.$parent.legal" :key="index" class="post">
-          <div style="display: none">
-            {{ legalPost = JSON.parse(JSON.stringify(legalPost).replace(new RegExp('\\[', 'g'),"").replace(new RegExp('\\]', 'g'),"")) }}
-          </div>
-
+        <li v-for="(legalPost, index) in legalFormatted" :key="index" class="post">
           <nuxt-link :to="'/legal/' + legalPost.slug + '/'" v-html="legalPost.title" />
         </li>
       </ul>
@@ -24,6 +20,8 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
   head () {
     return {
@@ -56,6 +54,16 @@ export default {
           type: 'application/ld+json'
         }
       ]
+    }
+  },
+  computed: {
+    ...mapState([
+      'legal'
+    ]),
+    legalFormatted () {
+      return this.legal.map((legalPost) => {
+        return JSON.parse(JSON.stringify(legalPost).replace(/\[/g, '').replace(/\]/g, ''))
+      })
     }
   }
 }

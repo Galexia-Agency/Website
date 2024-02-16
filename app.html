@@ -6,9 +6,18 @@
     document.querySelector('html').classList.add('js-active')
   </script>
   {{ HEAD }}
+  <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "38b68c01b4d8407cb8c20f56d6974b4e"}'></script><!-- End Cloudflare Web Analytics -->
 </head>
 
 <body {{ BODY_ATTRS }}>
+  <script>
+    if (!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)'))) {
+      window.motion = 'auto'
+    } else {
+      window.motion = 'smooth'
+    }
+    document.body.style.setProperty('--motion', window.motion)
+  </script>
   {{ APP }}
 </body>
 <script>

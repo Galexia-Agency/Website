@@ -32,48 +32,40 @@
     "chrome-aws-lambda": "^10.1.0",
     "graphql": "^15.5.1",
     "graphql-tag": "^2.12.5",
-    "imagemin-mozjpeg": "^9.0.0",
-    "imagemin-pngquant": "^9.0.1",
-    "imagemin-svgo": "^8.0.0",
+    "imagemin-svgo": "^9.0.0",
     "node-fetch": "^3.2.10",
-    "nuxt": "^2.16.0",
+    "nuxt": "^2.17.1",
     "nuxt-component-image": "https://github.com/Galexia-Agency/nuxt-component-image",
+    "nuxt-component-share": "https://github.com/Galexia-Agency/nuxt-component-share",
     "puppeteer-core": "10.1.0",
     "responsive-loader": "^2.3.0",
-    "sass": "^1.62.1",
+    "sass": "^1.62.4",
     "sass-loader": "^10.1.1",
     "sharp": "^0.32.1",
     "vue-apollo": "^3.0.7",
-    "vue-hamburger": "https://github.com/joebailey26/vue-hamburger",
-    "vue-social-sharing": "^3.0.4"
+    "vue-hamburger": "https://github.com/Galexia-Agency/nuxt-component-hamburger"
   },
   "devDependencies": {
     "@netlify/plugin-sitemap": "^0.8.1",
-    "@nuxtjs/eslint-config": "^6.0.1",
     "@nuxtjs/eslint-module": "^3.1.0",
     "@nuxtjs/stylelint-module": "^4.2.1",
-    "eslint": "^7.29.0",
-    "eslint-plugin-nuxt": "^4.0.0",
+    "eslint": "^8.49.0",
+    "eslint-config-galexia": "https://github.com/Galexia-Agency/eslint-config",
+    "file-loader": "^6.2.0",
     "netlify-plugin-checklinks": "^4.1.1",
     "netlify-plugin-submit-sitemap": "^0.4.0",
-    "postcss": "8.4.19",
-    "postcss-html": "1.0.0",
+    "postcss": "^8.4.19",
+    "postcss-html": "^1.5.0",
     "postcss-scss": "^4.0.6",
     "stylelint": "^15.3.0",
-    "stylelint-config-rational-order": "^0.1.2",
-    "stylelint-config-recommended-vue": "^1.4.0",
-    "stylelint-config-standard-scss": "^7.0.1",
-    "stylelint-processor-html": "^1.0.0"
+    "stylelint-config-galexia": "https://github.com/Galexia-Agency/stylelint-config"
   },
   "optionalDependencies": {
     "@babel/core": "^7.21.3",
     "consola": "^2.15.3",
     "puppeteer": "^10.1.1",
-    "stylelint-config-recommended": "^11.0.0",
-    "stylelint-config-standard": "^31.0.0",
-    "stylelint-order": "^6.0.3",
     "typescript": "^4.9.5",
-    "vue": "^2.7.14",
+    "vue": "^2.7.15",
     "webpack": "^4.46.0",
     "webpack-cli": "^4"
   },
@@ -81,8 +73,8 @@
     "last 5 versions and not ie <= 11 and > 0.2% and not dead and not op_mini all"
   ],
   "engines": {
-    "node": "^16.14.2",
+    "node": "^18.12.0",
     "yarn": "^1.10"
   },
-  "packageManager": "yarn@1.22.19"
+  "packageManager": "yarn@3.6.3"
 }

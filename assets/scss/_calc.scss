@@ -1,0 +1,9 @@
+@function rem-calc($size) {
+  $rem-size: calc($size / 16);
+  @return #{$rem-size}rem
+}
+
+@function em-calc($size) {
+  $em-size: calc($size / 16);
+  @return #{$em-size}em
+}
