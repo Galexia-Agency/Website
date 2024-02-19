@@ -514,6 +514,10 @@ svg {
 .card--inner * {
   margin: 0
 }
+.card--inner img {
+  aspect-ratio: 1;
+  object-fit: contain
+}
 
 /* Legal */
 .legal h1 {
