@@ -60,7 +60,8 @@
 .search-console-screenshot img {
   display: block;
   margin-right: auto;
-  margin-left: auto
+  margin-left: auto;
+  max-width: 100%
 }
 </style>
 
@@ -468,7 +469,7 @@
         </div>
       </div>
     </section>
-    <section class="maxWidth">
+    <!-- <section class="maxWidth">
       <h2>
         Free SEO Audit
       </h2>
@@ -596,7 +597,7 @@
           <p v-show="submitted" class="message" v-text="submitted" />
         </transition>
       </form>
-    </section>
+    </section> -->
   </div>
 </template>
 
