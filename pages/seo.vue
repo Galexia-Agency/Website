@@ -59,9 +59,9 @@
 <style>
 .search-console-screenshot img {
   display: block;
+  max-width: 100%;
   margin-right: auto;
-  margin-left: auto;
-  max-width: 100%
+  margin-left: auto
 }
 </style>
 
