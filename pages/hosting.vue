@@ -40,11 +40,8 @@ li strong {
 .fade-leave-to {
   opacity: 0
 }
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  margin: 0 auto 1rem
+figure {
+  margin: 0
 }
 .hosting-grid {
   align-items: center
@@ -61,6 +58,14 @@ img {
   .grid.column.two .card:last-of-type {
     justify-self: center
   }
+}
+</style>
+<style lang="scss">
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto 1rem
 }
 </style>
 
