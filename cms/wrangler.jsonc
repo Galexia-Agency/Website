@@ -17,13 +17,13 @@
   "d1_databases": [{
     "binding": "DB",
     "database_name": "galexia-cms",
-    "database_id": "GALEXIA_CMS_DB_ID",
+    "database_id": "d00a1746-09b7-43f0-ab25-f4acf73a23eb",
     "migrations_dir": "node_modules/@joebailey26/static-wordpress/migrations"
   }],
   "r2_buckets": [{ "binding": "FILES", "bucket_name": "galexia-cms-files" }],
   "vars": {
     "ACCESS_TEAM_DOMAIN": "galexia.cloudflareaccess.com",
-    "ACCESS_AUD": "GALEXIA_CMS_ACCESS_AUD",
+    "ACCESS_AUD": "17f7180e38b00d0f74c5a6cdb6dc12aaabbb85c0437992846bbf2481edd69550",
     "CF_ACCOUNT_ID": "8259f9bfa45a74a587d6a90822de442d",
     "CF_WORKER_TAG": "GALEXIA_SITE_WORKER_TAG",
     "SITE_BRANCH": "master"
@@ -32,7 +32,7 @@
     "d1_databases": [{
       "binding": "DB",
       "database_name": "galexia-cms-preview",
-      "database_id": "GALEXIA_CMS_PREVIEW_DB_ID",
+      "database_id": "51eb1961-97d6-4ba2-828d-f1bef9862944",
       "migrations_dir": "node_modules/@joebailey26/static-wordpress/migrations"
     }],
     "r2_buckets": [{ "binding": "FILES", "bucket_name": "galexia-cms-preview-files" }],

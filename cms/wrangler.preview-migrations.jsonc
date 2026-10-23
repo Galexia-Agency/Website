@@ -5,7 +5,7 @@
   "d1_databases": [{
     "binding": "DB",
     "database_name": "galexia-cms-preview",
-    "database_id": "GALEXIA_CMS_PREVIEW_DB_ID",
+    "database_id": "51eb1961-97d6-4ba2-828d-f1bef9862944",
     "migrations_dir": "node_modules/@joebailey26/static-wordpress/migrations"
   }]
 }
