@@ -1,0 +1,11 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "galexia-cms-preview-migrations",
+  "account_id": "8259f9bfa45a74a587d6a90822de442d",
+  "d1_databases": [{
+    "binding": "DB",
+    "database_name": "galexia-cms-preview",
+    "database_id": "GALEXIA_CMS_PREVIEW_DB_ID",
+    "migrations_dir": "node_modules/@joebailey26/static-wordpress/migrations"
+  }]
+}
