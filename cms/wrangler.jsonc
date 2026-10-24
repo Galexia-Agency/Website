@@ -38,7 +38,7 @@
     "r2_buckets": [{ "binding": "FILES", "bucket_name": "galexia-cms-preview-files" }],
     "vars": {
       "ACCESS_TEAM_DOMAIN": "galexia.cloudflareaccess.com",
-      "ACCESS_AUD": "GALEXIA_CMS_PREVIEW_ACCESS_AUD",
+      "ACCESS_AUD": "b18aec461e8a56a04a12a92a22024c4c4f43b52fc34072e48a82d481033c67d9",
       "CMS_TRIGGER_BUILDS": "false"
     }
   },
