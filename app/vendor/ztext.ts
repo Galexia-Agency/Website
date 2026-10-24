@@ -1,8 +1,9 @@
 /* eslint-disable */
-import { defineNuxtPlugin } from '#imports'
+// @ts-nocheck
+// zText (https://bennettfeely.com/ztext/), vendored as it was. app/plugins/ztext.client.ts gives it a typed wrapper.
 
 const zDefault = { depth: '1rem', direction: 'both', event: 'none', eventRotation: '30deg', eventDirection: 'default', fade: !1, layers: 10, perspective: '500px', z: !0 }
-function zDraw (e, t) {
+export function zDraw (e, t) {
   if ((t.zEngaged || zDefault.zEngaged) !== 'false') {
     const n = t.depth || zDefault.depth
     const r = n.match(/[a-z]+/)[0]
@@ -118,11 +119,3 @@ function zDraw (e, t) {
     }
   }
 }
-export default defineNuxtPlugin(() => {
-  const supported = ['-moz-transform-style', '-ms-transform-style', '-webkit-transform-style', 'transform-style'].some((property) => CSS.supports(property, 'preserve-3d'))
-  return {
-    provide: {
-      Ztextify: (e, t) => supported && document.querySelectorAll(e).forEach((e) => { zDraw(e, t) })
-    }
-  }
-})

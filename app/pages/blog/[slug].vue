@@ -121,18 +121,20 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { cdnImageUrl } from '@joebailey26/nuxt-static-wordpress/images'
 
 const route = useRoute()
-const post = await useCmsPost('blog', route.params.slug)
+const post = await useCmsPost('blog', String(route.params.slug))
 const { imageTransformations } = useRuntimeConfig().public
 const headerImage = computed(() => (post.value.featuredMediaUrl && imageTransformations ? cdnImageUrl(post.value.featuredMediaUrl, 1920) : post.value.featuredMediaUrl))
 const url = computed(() => `https://galexia.agency/blog/${post.value.slug}/`)
+// The CMS's Meta description field, when it is set
+const seoDescription = computed(() => (typeof post.value.acf.seo_description === 'string' ? post.value.acf.seo_description : ''))
 
 usePageMeta({
   title: () => `${post.value.title} | Blog`,
-  description: () => post.value.acf.seo_description || post.value.excerpt.plain,
+  description: () => seoDescription.value || post.value.excerpt.plain,
   path: `/blog/${route.params.slug}/`,
   image: () => post.value.featuredMedia || 'https://galexia.agency/icon.png',
   breadcrumb: () => [

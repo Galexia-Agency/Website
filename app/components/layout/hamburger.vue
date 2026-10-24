@@ -82,10 +82,15 @@
   </button>
 </template>
 
-<script setup>
-defineProps({
-  color: { type: String, default: 'white' },
-  expanded: { type: Boolean, default: false }
+<script setup lang="ts">
+withDefaults(defineProps<{
+  color?: string
+  expanded?: boolean
+}>(), {
+  color: 'white',
+  expanded: false
 })
-defineEmits(['toggle'])
+defineEmits<{
+  toggle: []
+}>()
 </script>

@@ -400,7 +400,7 @@ img {
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 usePageMeta({
   title: 'Hosting',
   description: 'Your website needs a home and we\'re happy to house it whether we built it or not.',
@@ -409,17 +409,20 @@ usePageMeta({
 })
 
 onMounted(() => {
-  const wrapper = document.querySelectorAll('.scroll-wrapper')
+  const wrapper = document.querySelectorAll<HTMLElement>('.scroll-wrapper')
   if (wrapper) {
     wrapper.forEach((e) => {
-      const content = e.querySelector('.mobile-table')
-      const shadowTop = e.querySelector('.shadow-left')
-      const shadowBottom = e.querySelector('.shadow-right')
+      const content = e.querySelector<HTMLElement>('.mobile-table')
+      const shadowTop = e.querySelector<HTMLElement>('.shadow-left')
+      const shadowBottom = e.querySelector<HTMLElement>('.shadow-right')
+      if (!content || !shadowTop || !shadowBottom) {
+        return
+      }
       const contentScrollWidth = content.scrollWidth - e.offsetWidth
       content.addEventListener('scroll', function () {
         const currentScroll = this.scrollLeft / contentScrollWidth
-        shadowTop.style.opacity = currentScroll
-        shadowBottom.style.opacity = 1 - currentScroll
+        shadowTop.style.opacity = String(currentScroll)
+        shadowBottom.style.opacity = String(1 - currentScroll)
       })
     })
   }

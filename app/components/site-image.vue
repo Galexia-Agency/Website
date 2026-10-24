@@ -14,22 +14,29 @@
   </picture>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { cdnImageUrl } from '@joebailey26/nuxt-static-wordpress/images'
 
 // An image from public/ (or the CMS), resized and converted to AVIF/WebP by Cloudflare Image Transformations
 // on production builds. Elsewhere /cdn-cgi/image does not exist, so the original is served.
-const props = defineProps({
-  src: { type: String, required: true },
+const props = withDefaults(defineProps<{
+  src: string
   // The largest width the image is shown at, in CSS pixels; 2x is requested for high-density screens.
-  width: { type: [Number, String], required: true },
-  height: { type: [Number, String], default: undefined },
-  alt: { type: String, default: '' },
-  sizes: { type: String, default: undefined },
-  loading: { type: String, default: 'lazy' },
-  fetchpriority: { type: String, default: 'auto' },
+  width: number | string
+  height?: number | string
+  alt?: string
+  sizes?: string
+  loading?: 'lazy' | 'eager'
+  fetchpriority?: 'high' | 'low' | 'auto'
   // Extra transformation options, e.g. 'fit=contain,height=413'
-  options: { type: String, default: '' }
+  options?: string
+}>(), {
+  height: undefined,
+  alt: '',
+  sizes: undefined,
+  loading: 'lazy',
+  fetchpriority: 'auto',
+  options: ''
 })
 
 const { imageTransformations } = useRuntimeConfig().public

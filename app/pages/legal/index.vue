@@ -21,7 +21,7 @@
   </section>
 </template>
 
-<script setup>
+<script setup lang="ts">
 const { data: pages } = await useCmsIndex('legal')
 const posts = computed(() => pages.value.flat())
 

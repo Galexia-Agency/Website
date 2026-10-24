@@ -169,7 +169,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 const { turnstileSiteKey } = useRuntimeConfig().public
 const { form, formEl, canSubmit, message, changed, setToken, submit } = useForm('contact', { storageKey: 'contactForm' })
 
@@ -182,7 +182,7 @@ usePageMeta({
 
 async function onSubmit () {
   // The rocket in the contact illustration launches while the message sends.
-  formEl.value.parentElement.querySelector('.rocket')?.classList.add('animate')
+  formEl.value?.parentElement?.querySelector('.rocket')?.classList.add('animate')
   await submit('Message sent successfully! We’ll be in touch within 2-3 working days')
 }
 </script>

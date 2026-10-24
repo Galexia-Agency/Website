@@ -77,7 +77,7 @@
   </section>
 </template>
 
-<script setup>
+<script setup lang="ts">
 const { data: pages } = await useCmsIndex('blog')
 const posts = computed(() => pages.value.flat())
 

@@ -588,7 +588,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 // The Free SEO Audit form is hidden (commented out above). To bring it back, uncomment it and add:
 // const { turnstileSiteKey } = useRuntimeConfig().public
 // const { form, formEl, canSubmit, message, changed, setToken, submit } = useForm('seo', { storageKey: 'seoForm' })
@@ -596,7 +596,7 @@
 //   await submit('Message sent successfully! We\'ll be in touch within 2-3 working days')
 // }
 
-const scrollWrapper = ref(null)
+const scrollWrapper = useTemplateRef<HTMLElement>('scrollWrapper')
 
 usePageMeta({
   title: 'SEO',
@@ -607,14 +607,17 @@ usePageMeta({
 
 onMounted(() => {
   const wrapper = scrollWrapper.value
-  const content = wrapper.querySelector('.mobile-table')
-  const shadowTop = wrapper.querySelector('.shadow-left')
-  const shadowBottom = wrapper.querySelector('.shadow-right')
+  const content = wrapper?.querySelector<HTMLElement>('.mobile-table')
+  const shadowTop = wrapper?.querySelector<HTMLElement>('.shadow-left')
+  const shadowBottom = wrapper?.querySelector<HTMLElement>('.shadow-right')
+  if (!wrapper || !content || !shadowTop || !shadowBottom) {
+    return
+  }
   const contentScrollWidth = content.scrollWidth - wrapper.offsetWidth
   content.addEventListener('scroll', function () {
     const currentScroll = this.scrollLeft / (contentScrollWidth)
-    shadowTop.style.opacity = currentScroll
-    shadowBottom.style.opacity = 1 - currentScroll
+    shadowTop.style.opacity = String(currentScroll)
+    shadowBottom.style.opacity = String(1 - currentScroll)
   })
 })
 </script>

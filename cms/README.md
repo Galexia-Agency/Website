@@ -3,7 +3,7 @@
 The browser WordPress CMS at `cms.galexia.agency` runs [`@joebailey26/static-wordpress`](https://github.com/joebailey26/static-wordpress/tree/master/packages/cms); its README covers the editor, synchronisation, imports, deployment and limits. This folder holds what belongs to this site:
 
 - `cms.config.json`: sections `blog`, `legal`, `portfolio` and `testimonials` (WordPress categories of the same slugs), and the fields `link` (portfolio website URL) and `seo_description`.
-- `worker.mjs`: the Worker entry, `createCms(config)`.
+- `worker.ts`: the Worker entry, `createCms(config)`.
 - `wrangler.jsonc`: production D1 `galexia-cms` and R2 `galexia-cms-files`; previews use `galexia-cms-preview` and `galexia-cms-preview-files`, with website builds disabled.
 - `access-policy.json`: the Access allowlist.
 

@@ -14,11 +14,11 @@ $env:CMS_BUILD_TOKEN = '<the CMS build token>'
 pnpm dev
 ```
 
-`pnpm generate` writes `.output/public`; `pnpm exec wrangler dev` serves it with the forms Worker (put `TURNSTILE_SECRET_KEY` in `.dev.vars`). Checks: `pnpm lint:scripts`, `pnpm lint:styles`, `pnpm typecheck`, `pnpm test:forms`.
+`pnpm generate` writes `.output/public`; `pnpm exec wrangler dev` serves it with the forms Worker (put `TURNSTILE_SECRET_KEY` in `.dev.vars`). Checks: `pnpm lint:scripts`, `pnpm lint:styles`, `pnpm typecheck` (`nuxt typecheck` for the app, then `worker/tsconfig.json` for the forms Worker, its tests and `cms/worker.ts`, which needs `cms/` installed), `pnpm test:forms`.
 
 ## Content
 
-`cms/cms.config.json` maps WordPress categories to sections: `blog` (`/blog/<slug>/`), `legal` (`/legal/<slug>/`), and `portfolio` and `testimonials`, which have no pages of their own (the home page carousel and the footer). Portfolio posts use the **Website URL** field and appear only when it is set; any post's **Meta description** field overrides its excerpt as the page description. Location pages (`/locations/<town>/`) are listed in `app/utils/locations.js`.
+`cms/cms.config.json` maps WordPress categories to sections: `blog` (`/blog/<slug>/`), `legal` (`/legal/<slug>/`), and `portfolio` and `testimonials`, which have no pages of their own (the home page carousel and the footer). Portfolio posts use the **Website URL** field and appear only when it is set; any post's **Meta description** field overrides its excerpt as the page description. Location pages (`/locations/<town>/`) are listed in `app/utils/locations.ts`.
 
 The content was imported from the old `blog.galexia.agency` WordPress backup with `static-wordpress import --archive <backup.zip> --rename-meta _yoast_wpseo_metadesc=seo_description --fetch-missing true`. See `cms/README.md`.
 
@@ -28,7 +28,7 @@ Raster images live in `public/img/` and render through `<SiteImage>`, which asks
 
 ## Forms
 
-`useForm(name)` (in `app/composables/useForm.js`) keeps a draft in localStorage, enables submit once the browser's validation passes and Turnstile has a token, and posts to `/api/forms/<name>`: `contact`, `lead-questionnaire`, `email-checkup`, `brand-identity` or `seo`. The Worker verifies the Turnstile token (action = form name, hostname = the request's) and emails every field to `FORMS_TO` through the `FORMS_EMAIL` Send Email binding, with the visitor's address as Reply-To.
+`useForm(name)` (in `app/composables/useForm.ts`) keeps a draft in localStorage, enables submit once the browser's validation passes and Turnstile has a token, and posts to `/api/forms/<name>`: `contact`, `lead-questionnaire`, `email-checkup`, `brand-identity` or `seo`. The Worker verifies the Turnstile token (action = form name, hostname = the request's) and emails every field to `FORMS_TO` through the `FORMS_EMAIL` Send Email binding, with the visitor's address as Reply-To.
 
 ## Deployment (Cloudflare Workers Builds)
 

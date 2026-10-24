@@ -34,6 +34,9 @@ jobs:
           node-version-file: .nvmrc
           cache: pnpm
       - run: pnpm install --frozen-lockfile
+      # worker/tsconfig.json also checks cms/worker.ts against the CMS package's types.
+      - if: matrix.check.script == 'typecheck'
+        run: pnpm --dir cms install --frozen-lockfile
       - run: pnpm run ${{ matrix.check.script }}
 
   cms-build:

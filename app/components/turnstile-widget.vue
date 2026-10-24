@@ -10,8 +10,11 @@
   </div>
 </template>
 
-<script>
-let loading
+<script lang="ts">
+import type { Turnstile } from '~/types/globals'
+
+// One script load is shared by every widget on the page.
+let loading: Promise<Turnstile> | null = null
 
 function loadTurnstile () {
   if (window.turnstile) {
@@ -34,6 +37,7 @@ function loadTurnstile () {
       script.onload = () => {
         if (!window.turnstile) {
           fail()
+
           return
         }
         clearTimeout(timeout)
@@ -43,73 +47,84 @@ function loadTurnstile () {
       document.head.appendChild(script)
     })
   }
+
   return loading
 }
+</script>
 
-export default {
-  props: {
-    siteKey: { type: String, default: '' },
-    // Checked by the forms worker, so a token from one form cannot submit another
-    action: { type: String, required: true }
-  },
-  emits: ['token'],
-  data () {
-    return { widgetId: null, error: '', disposed: false }
-  },
-  mounted () {
-    this.renderWidget()
-  },
-  beforeUnmount () {
-    this.disposed = true
-    if (this.widgetId !== null && window.turnstile) {
-      window.turnstile.remove(this.widgetId)
+<script setup lang="ts">
+const props = withDefaults(defineProps<{
+  siteKey?: string
+  // Checked by the forms worker, so a token from one form cannot submit another
+  action: string
+}>(), {
+  siteKey: ''
+})
+const emit = defineEmits<{
+  token: [token: string]
+}>()
+
+const widget = useTemplateRef<HTMLElement>('widget')
+const widgetId = ref<string | null>(null)
+const error = ref('')
+let disposed = false
+
+async function renderWidget () {
+  if (!props.siteKey) {
+    error.value = 'This form is temporarily unavailable. Please email info@galexia.agency.'
+
+    return
+  }
+  try {
+    const turnstile = await loadTurnstile()
+    if (disposed || !widget.value) {
+      return
     }
-  },
-  methods: {
-    async renderWidget () {
-      if (!this.siteKey) {
-        this.error = 'This form is temporarily unavailable. Please email info@galexia.agency.'
-        return
+    widgetId.value = turnstile.render(widget.value, {
+      sitekey: props.siteKey,
+      action: props.action,
+      size: 'flexible',
+      callback: (token) => {
+        error.value = ''
+        emit('token', token)
+      },
+      'expired-callback': () => reset(),
+      'timeout-callback': () => reset(),
+      'error-callback': () => {
+        emit('token', '')
+        error.value = 'Spam check could not complete. Please retry.'
       }
-      try {
-        const turnstile = await loadTurnstile()
-        if (this.disposed) {
-          return
-        }
-        this.widgetId = turnstile.render(this.$refs.widget, {
-          sitekey: this.siteKey,
-          action: this.action,
-          size: 'flexible',
-          callback: (token) => {
-            this.error = ''
-            this.$emit('token', token)
-          },
-          'expired-callback': () => this.reset(),
-          'timeout-callback': () => this.reset(),
-          'error-callback': () => {
-            this.$emit('token', '')
-            this.error = 'Spam check could not complete. Please retry.'
-          }
-        })
-      } catch {
-        if (!this.disposed) {
-          this.error = 'Spam check could not load. Please retry or email info@galexia.agency.'
-        }
-      }
-    },
-    reset () {
-      this.$emit('token', '')
-      this.error = ''
-      if (this.widgetId !== null && window.turnstile) {
-        window.turnstile.reset(this.widgetId)
-      }
-    },
-    retry () {
-      this.reset()
-      if (this.widgetId === null) {
-        this.renderWidget()
-      }
+    }) ?? null
+  } catch {
+    if (!disposed) {
+      error.value = 'Spam check could not load. Please retry or email info@galexia.agency.'
     }
   }
 }
+
+function reset () {
+  emit('token', '')
+  error.value = ''
+  if (widgetId.value !== null && window.turnstile) {
+    window.turnstile.reset(widgetId.value)
+  }
+}
+
+function retry () {
+  reset()
+  if (widgetId.value === null) {
+    renderWidget()
+  }
+}
+
+onMounted(() => {
+  renderWidget()
+})
+
+onBeforeUnmount(() => {
+  disposed = true
+  if (widgetId.value !== null && window.turnstile) {
+    window.turnstile.remove(widgetId.value)
+  }
+})
 </script>

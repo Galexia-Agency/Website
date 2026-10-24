@@ -17,11 +17,11 @@
   </section>
 </template>
 
-<script setup>
+<script setup lang="ts">
 const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
 
 const route = useRoute()
-const post = await useCmsPost('legal', route.params.slug, { notFound: 'Page not found' })
+const post = await useCmsPost('legal', String(route.params.slug), { notFound: 'Page not found' })
 const updated = computed(() => post.value.modified || post.value.date)
 
 usePageMeta({

@@ -10,7 +10,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { cdnImageUrl } from '@joebailey26/nuxt-static-wordpress/images'
 
 // The blurred space background, converted to AVIF/WebP by Cloudflare on production builds.

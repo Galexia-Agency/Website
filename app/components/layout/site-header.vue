@@ -18,7 +18,7 @@
   </header>
 </template>
 
-<script setup>
+<script setup lang="ts">
 const links = [
   { to: '/', text: 'Home' },
   { to: '/web/', text: 'Design & Development' },
@@ -35,18 +35,19 @@ watch(() => route.fullPath, close)
 
 // Swiping right closes the mobile nav.
 onMounted(() => {
-  let xDown = null
-  let yDown = null
+  let xDown: number | null = null
+  let yDown: number | null = null
   document.addEventListener('touchstart', (event) => {
-    xDown = event.touches[0].clientX
-    yDown = event.touches[0].clientY
+    xDown = event.touches[0]?.clientX ?? null
+    yDown = event.touches[0]?.clientY ?? null
   }, { passive: true })
   document.addEventListener('touchmove', (event) => {
-    if (xDown === null || yDown === null) {
+    const touch = event.touches[0]
+    if (xDown === null || yDown === null || !touch) {
       return
     }
-    const xDiff = xDown - event.touches[0].clientX
-    const yDiff = yDown - event.touches[0].clientY
+    const xDiff = xDown - touch.clientX
+    const yDiff = yDown - touch.clientY
     if (Math.abs(xDiff) > Math.abs(yDiff) && xDiff < 0) {
       close()
     }

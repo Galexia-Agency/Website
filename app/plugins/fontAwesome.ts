@@ -14,3 +14,10 @@ library.add(faFacebook, faInstagram, faTwitter, faLinkedin, faGithub, faWhatsapp
 export default defineNuxtPlugin((nuxtApp) => {
   nuxtApp.vueApp.component('FontAwesomeIcon', FontAwesomeIcon)
 })
+
+declare module 'vue' {
+  interface GlobalComponents {
+    // eslint-disable-next-line @typescript-eslint/naming-convention -- the component's registered name
+    FontAwesomeIcon: typeof FontAwesomeIcon
+  }
+}

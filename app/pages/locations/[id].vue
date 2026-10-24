@@ -107,8 +107,8 @@
   </div>
 </template>
 
-<script setup>
-import { locations } from '~/utils/locations.js'
+<script setup lang="ts">
+import { locations } from '~/utils/locations'
 
 const route = useRoute()
 // The name is shown as HTML in the header, so only the known locations have a page.

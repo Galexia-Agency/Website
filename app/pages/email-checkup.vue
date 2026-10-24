@@ -188,7 +188,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 const { turnstileSiteKey } = useRuntimeConfig().public
 const { form, formEl, canSubmit, message, changed, setToken, submit } = useForm('email-checkup', { storageKey: 'emailCheckupForm' })
 

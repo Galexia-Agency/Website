@@ -63,14 +63,16 @@
   </header>
 </template>
 
-<script setup>
-defineProps({
-  title: { type: String, default: '' },
-  subtitle: { type: String, default: null },
-  desc: { type: String, default: '' },
-  link: {
-    type: Object,
-    default: () => ({ text: '', location: '' })
-  }
+<script setup lang="ts">
+withDefaults(defineProps<{
+  title?: string
+  subtitle?: string | null
+  desc?: string
+  link?: { text: string, location: string }
+}>(), {
+  title: '',
+  subtitle: null,
+  desc: '',
+  link: () => ({ text: '', location: '' })
 })
 </script>

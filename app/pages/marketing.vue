@@ -153,7 +153,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 usePageMeta({
   title: 'Marketing',
   description: 'However you wish to pursue your business marketing is vital in finding and retaining customers.',

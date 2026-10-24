@@ -162,26 +162,31 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
+import type { CmsPostSummaryWithContent } from '@joebailey26/nuxt-static-wordpress'
+
 usePageMeta({
   title: 'Home',
   description: 'We are a creative agency specialising in website design and development. We’re a fairly new company built from the ground up to help you grow.',
   path: '/'
 })
 
+// A portfolio post with its Website URL field set
+type PortfolioPost = CmsPostSummaryWithContent & { acf: { link: string } }
+
 // Portfolio posts without a website link are not shown, as before.
 const { data: pages } = await useCmsIndex('portfolio', { content: true })
-const portfolio = computed(() => pages.value.flat().filter((post) => post.acf.link))
+const portfolio = computed(() => pages.value.flat().filter((post): post is PortfolioPost => typeof post.acf.link === 'string' && post.acf.link !== ''))
 
-const portfolioEl = useTemplateRef('portfolio')
+const portfolioEl = useTemplateRef<HTMLElement>('portfolio')
 const icons = ref(0)
 const current = ref(1)
-const behavior = () => (window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth')
+const behavior = (): ScrollBehavior => (window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth')
 // Wide screens show three cards and scroll by one card; narrow screens scroll by the whole carousel.
-const step = () => (window.innerWidth > 900 ? portfolioEl.value.querySelector('article').offsetWidth : portfolioEl.value.offsetWidth + 10)
+const step = (carousel: HTMLElement) => (window.innerWidth > 900 ? carousel.querySelector('article')?.offsetWidth ?? 0 : carousel.offsetWidth + 10)
 
-function portfolioScroll (i) {
-  portfolioEl.value.scrollTo({ left: step() * (i - 1), behavior: behavior() })
+function portfolioScroll (i: number) {
+  portfolioEl.value?.scrollTo({ left: step(portfolioEl.value) * (i - 1), behavior: behavior() })
 }
 
 function portfolioLength () {
@@ -189,7 +194,9 @@ function portfolioLength () {
 }
 
 function updateIcons () {
-  current.value = Math.round(portfolioEl.value.scrollLeft / step()) + 1
+  if (portfolioEl.value) {
+    current.value = Math.round(portfolioEl.value.scrollLeft / step(portfolioEl.value)) + 1
+  }
 }
 
 onMounted(() => {

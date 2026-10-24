@@ -5,8 +5,8 @@
   </div>
 </template>
 
-<script setup>
-import { locations } from '~/utils/locations.js'
+<script setup lang="ts">
+import { locations } from '~/utils/locations'
 
 useHead({
   meta: [{ name: 'robots', content: 'noindex' }]

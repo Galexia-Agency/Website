@@ -20,16 +20,24 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
+import type { IconName } from '@fortawesome/fontawesome-svg-core'
+
 // Replaces vue-social-sharing's ShareNetwork buttons, with the same networks and markup.
-const props = defineProps({
-  title: { type: String, required: true },
-  description: { type: String, required: true },
-  path: { type: String, required: true }
-})
+const props = defineProps<{
+  title: string
+  description: string
+  path: string
+}>()
+
+interface Network {
+  name: string
+  icon: IconName
+  href: string
+}
 
 const url = `https://galexia.agency${props.path}`
-const shareObject = computed(() => ({ title: props.title, text: props.description, url }))
+const shareObject = computed<ShareData>(() => ({ title: props.title, text: props.description, url }))
 // Decided after hydration, so the server and client render the same buttons first.
 const nativeShareEnabled = ref(false)
 onMounted(() => {
@@ -40,7 +48,7 @@ onMounted(() => {
   }
 })
 
-const networks = computed(() => {
+const networks = computed<Network[]>(() => {
   const u = encodeURIComponent(url)
   const t = encodeURIComponent(props.title)
   const d = encodeURIComponent(props.description)
@@ -53,7 +61,7 @@ const networks = computed(() => {
   ]
 })
 
-function openPopup (href) {
+function openPopup (href: string) {
   const width = 626
   const height = 436
   const left = window.screenX + (window.outerWidth - width) / 2

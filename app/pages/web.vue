@@ -107,7 +107,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 usePageMeta({
   title: 'Web Design and Development',
   description: 'We\'re in the business of building fast, secure, scalable sites. We specialize in WordPress as it aligns with our ethos as a company. You can find out more about it at WordPress.org but that’s why you pay us; to take care of learning all about the latest and greatest standards in the world of the web so that you can focus on what you do best.',

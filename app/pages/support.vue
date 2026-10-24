@@ -153,7 +153,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 usePageMeta({
   title: 'Website Support',
   description: 'Is your website down? Are you running into random errors? Are you struggling dealing with your hosting company? We can help. We provide affordable support to help you get your website back on track. We put your business first. We know that a website is often the first port of call for customers and if your website\'s down or not perfomring properly this can leave many customers unhappy. We\'ll drop everything and help you resolve any issues as quickly as possible.',

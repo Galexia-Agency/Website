@@ -196,11 +196,17 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 const route = useRoute()
-const title = computed(() => route.query.title)
-const url = computed(() => route.query.url)
-const logo = computed(() => route.query.logo)
+// A query value as text: repeated parameters are joined, as the attributes would show them.
+const query = (key: string) => computed(() => {
+  const value = route.query[key]
+
+  return Array.isArray(value) ? value.join(',') : value ?? ''
+})
+const title = query('title')
+const url = query('url')
+const logo = query('logo')
 
 useHead({
   title: 'Client',
