@@ -35,4 +35,4 @@ Raster images live in `public/img/` and render through `<SiteImage>`, which asks
 - **Site**: build command `pnpm build`, deploy command `pnpm exec wrangler deploy`, preview command `pnpm exec wrangler preview`. Variables: `NODE_VERSION=24.18.0`, `GITHUB_PACKAGES_TOKEN`, `CMS_API_URL`, `CMS_BUILD_TOKEN`, `TURNSTILE_SITE_KEY`. Worker secret: `TURNSTILE_SECRET_KEY`.
 - **CMS**: root `/cms`, see `cms/README.md`. Publishing in the CMS triggers a production site build.
 
-`public/_headers` and `public/_redirects` carry over the security headers and redirects from Netlify. `sitemap.xml` is generated from the prerendered pages, excluding the pages the Netlify sitemap excluded.
+Until DNS moves off Netlify, `netlify.toml` tells Netlify to skip every build, so galexia.agency keeps serving its last Netlify deploy; delete it with the Netlify site after the cutover. `public/_headers` and `public/_redirects` carry over the security headers and redirects from Netlify. `sitemap.xml` is generated from the prerendered pages, excluding the pages the Netlify sitemap excluded.
