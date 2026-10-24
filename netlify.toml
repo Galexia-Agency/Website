@@ -1,0 +1,5 @@
+# The site now builds and deploys on Cloudflare Workers (see README.md). Until DNS moves off Netlify,
+# skip every Netlify build so galexia.agency keeps serving its last Netlify deploy. Delete this file,
+# and the Netlify site, after the cutover.
+[build]
+ignore = "exit 0"
