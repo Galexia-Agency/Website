@@ -1,0 +1,25 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "galexia",
+  "account_id": "8259f9bfa45a74a587d6a90822de442d",
+  "main": "worker/index.ts",
+  "compatibility_date": "2026-10-22",
+  "workers_dev": true,
+  "preview_urls": true,
+  "assets": {
+    "directory": "./.output/public",
+    "binding": "ASSETS",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page",
+    "run_worker_first": ["/api/*"]
+  },
+  // Attached once DNS moves from Netlify; until then the site is served on workers.dev and Preview URLs.
+  // "routes": [{ "pattern": "galexia.agency", "custom_domain": true }],
+  "send_email": [{ "name": "FORMS_EMAIL", "destination_address": "info@galexia.agency" }],
+  "vars": { "FORMS_FROM": "website@galexia.agency", "FORMS_TO": "info@galexia.agency" },
+  // Preview deployments of other branches. Test submissions go to the same inbox as production.
+  "previews": {
+    "vars": { "FORMS_FROM": "website@galexia.agency", "FORMS_TO": "info@galexia.agency" },
+    "send_email": [{ "name": "FORMS_EMAIL", "destination_address": "info@galexia.agency" }]
+  }
+}

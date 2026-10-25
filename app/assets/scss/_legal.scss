@@ -1,0 +1,25 @@
+/* Legal */
+.legal h1 {
+  font-size: 2rem
+}
+.legal h2 {
+  margin: .83em auto;
+  padding: 0;
+  font-size: 1.5rem;
+  text-align: left
+}
+.legal h3 {
+  font-weight: normal;
+  font-size: 1.33rem;
+  opacity: .75
+}
+@media print {
+  nav,
+  .footer--bottom,
+  .socialLinks {
+    display: none
+  }
+  .footer--copyrightInner {
+    color: #212121
+  }
+}

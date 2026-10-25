@@ -1,0 +1,51 @@
+/* Hosting / SEO */
+.title {
+  font-size: 1.25rem
+}
+.desc {
+  max-width: 780px;
+  margin: auto;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  line-height: 1.33;
+  text-align: center;
+  opacity: .9;
+  &:last-of-type {
+    margin-bottom: 2rem
+  }
+}
+.terms {
+  padding-left: 22px;
+  color: var(--primaryColor);
+  font-size: .9rem
+}
+#top {
+  position: relative
+}
+.toggle {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  display: grid;
+  place-items: end
+}
+@media (max-width: 900px) {
+  .hosting--background {
+    background-size: 75%
+  }
+  #top {
+    display: grid
+  }
+  .toggle {
+    position: relative;
+    top: 0;
+    right: 0;
+    grid-row: 1;
+    place-items: center;
+    place-self: center
+  }
+  .desc {
+    margin-bottom: 2em;
+    opacity: .95
+  }
+}

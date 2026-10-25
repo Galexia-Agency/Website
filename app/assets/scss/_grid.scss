@@ -1,0 +1,41 @@
+/* Pages */
+section {
+  padding: 2rem 0
+}
+.grid {
+  display: grid;
+  gap: 6rem
+}
+.grid.left {
+  grid-template-columns: 1fr .75fr
+}
+.grid.right {
+  grid-template-columns: .75fr 1fr
+}
+.grid.column {
+  grid-auto-flow: column;
+  gap: 2rem;
+  padding-bottom: 4rem
+}
+.grid.column.two {
+  grid-auto-flow: unset;
+  grid-template-columns: 1fr 1fr
+}
+.grid.column.three {
+  grid-auto-flow: unset;
+  grid-template-columns: 1fr 1fr 1fr
+}
+.grid.column.four {
+  grid-auto-flow: unset;
+  grid-template-columns: 1fr 1fr 1fr 1fr
+}
+.grid h3 {
+  margin-top: 0
+}
+svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  overflow: visible
+}
