@@ -287,7 +287,7 @@
                   <option>I don't accept</option>
                 </select>
               </label>
-              <TurnstileWidget :site-key="turnstileSiteKey" action="lead-questionnaire" @token="setToken" />
+              <TurnstileWidget ref="turnstile" :site-key="turnstileSiteKey" action="lead-questionnaire" @token="setToken" />
               <div id="submitcontainer">
                 <input
                   id="submit"
@@ -313,7 +313,7 @@
 
 <script setup lang="ts">
 const { turnstileSiteKey } = useRuntimeConfig().public
-const { form, formEl, canSubmit, message, changed, setToken, submit } = useForm('lead-questionnaire', { storageKey: 'leadForm' })
+const { form, formEl, canSubmit, message, changed, setToken, submit } = useForm('lead-questionnaire', { storageKey: 'leadForm', turnstile: useTemplateRef('turnstile') })
 
 usePageMeta({
   title: 'Lead Questionnaire',

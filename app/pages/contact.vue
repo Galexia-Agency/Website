@@ -145,7 +145,7 @@
                 type="text"
               >
             </label>
-            <TurnstileWidget :site-key="turnstileSiteKey" action="contact" @token="setToken" />
+            <TurnstileWidget ref="turnstile" :site-key="turnstileSiteKey" action="contact" @token="setToken" />
             <div id="submitcontainer">
               <input
                 id="submit"
@@ -171,7 +171,7 @@
 
 <script setup lang="ts">
 const { turnstileSiteKey } = useRuntimeConfig().public
-const { form, formEl, canSubmit, message, changed, setToken, submit } = useForm('contact', { storageKey: 'contactForm' })
+const { form, formEl, canSubmit, message, changed, setToken, submit } = useForm('contact', { storageKey: 'contactForm', turnstile: useTemplateRef('turnstile') })
 
 usePageMeta({
   title: 'Contact',

@@ -166,7 +166,7 @@
               type="text"
             >
           </label>
-          <TurnstileWidget :site-key="turnstileSiteKey" action="email-checkup" @token="setToken" />
+          <TurnstileWidget ref="turnstile" :site-key="turnstileSiteKey" action="email-checkup" @token="setToken" />
           <div id="submitcontainer">
             <input
               id="submit"
@@ -190,7 +190,7 @@
 
 <script setup lang="ts">
 const { turnstileSiteKey } = useRuntimeConfig().public
-const { form, formEl, canSubmit, message, changed, setToken, submit } = useForm('email-checkup', { storageKey: 'emailCheckupForm' })
+const { form, formEl, canSubmit, message, changed, setToken, submit } = useForm('email-checkup', { storageKey: 'emailCheckupForm', turnstile: useTemplateRef('turnstile') })
 
 usePageMeta({
   title: 'Email Checkup',

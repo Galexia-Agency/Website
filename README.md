@@ -1,6 +1,6 @@
 # Galexia
 
-The galexia.agency website: Nuxt 4, prerendered to static files and served by Cloudflare Workers static assets. Blog, legal, portfolio and testimonial content comes from the browser WordPress CMS at `cms.galexia.agency` ([`@joebailey26/static-wordpress`](https://github.com/joebailey26/static-wordpress)), loaded at build time by [`@joebailey26/nuxt-static-wordpress`](https://github.com/joebailey26/static-wordpress/tree/master/packages/nuxt). The forms post to the Worker in `worker/`, which checks Cloudflare Turnstile and emails the submission.
+The galexia.agency website: Nuxt 4, prerendered to static files and served by Cloudflare Workers static assets. Blog, legal, portfolio and testimonial content comes from the browser WordPress CMS at `cms.galexia.agency` ([`@joebailey26/static-wordpress`](https://github.com/joebailey26/static-wordpress)), loaded at build time by [`@joebailey26/nuxt-static-wordpress`](https://github.com/joebailey26/static-wordpress/tree/master/packages/nuxt). The forms post to the Worker in `worker/`, which checks Cloudflare Turnstile and emails the submission using [`@joebailey26/turnstile-forms`](https://github.com/joebailey26/static-wordpress/tree/master/packages/forms).
 
 ## Setup
 
@@ -28,7 +28,7 @@ Raster images live in `public/img/` and render through `<SiteImage>`, which asks
 
 ## Forms
 
-`useForm(name)` (in `app/composables/useForm.ts`) keeps a draft in localStorage, enables submit once the browser's validation passes and Turnstile has a token, and posts to `/api/forms/<name>`: `contact`, `lead-questionnaire`, `email-checkup`, `brand-identity` or `seo`. The Worker verifies the Turnstile token (action = form name, hostname = the request's) and emails every field to `FORMS_TO` through the `FORMS_EMAIL` Send Email binding, with the visitor's address as Reply-To.
+`useForm(name)` (auto-imported from `@joebailey26/turnstile-forms/vue`) keeps a draft in localStorage, enables submit once the browser's validation passes and Turnstile has a token, posts to `/api/forms/<name>` and resets the page's `<TurnstileWidget>` after each attempt: `contact`, `lead-questionnaire`, `email-checkup`, `brand-identity` or `seo`. The forms are listed in `worker/index.ts`. The Worker verifies the Turnstile token (action = form name, hostname = the request's) and emails every field to `FORMS_TO` through the `FORMS_EMAIL` Send Email binding, with the visitor's address as Reply-To.
 
 ## Deployment (Cloudflare Workers Builds)
 

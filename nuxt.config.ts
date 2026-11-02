@@ -11,6 +11,10 @@ export default defineNuxtConfig({
       exclude: ['/client/', '/locations/', '/indev/', '/lead-questionnaire/', '/seo/', '/marketing/', '/careers/']
     }
   },
+  imports: {
+    // The forms' composable: useForm(name) posts to the forms worker in worker/.
+    presets: [{ from: '@joebailey26/turnstile-forms/vue', imports: ['useForm'] }]
+  },
   runtimeConfig: {
     public: {
       turnstileSiteKey: process.env.TURNSTILE_SITE_KEY || ''

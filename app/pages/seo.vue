@@ -567,7 +567,7 @@
             type="text"
           >
         </label>
-        <TurnstileWidget :site-key="turnstileSiteKey" action="seo" @token="setToken" />
+        <TurnstileWidget ref="turnstile" :site-key="turnstileSiteKey" action="seo" @token="setToken" />
         <div id="submitcontainer">
           <input
             id="submit"
@@ -591,7 +591,7 @@
 <script setup lang="ts">
 // The Free SEO Audit form is hidden (commented out above). To bring it back, uncomment it and add:
 // const { turnstileSiteKey } = useRuntimeConfig().public
-// const { form, formEl, canSubmit, message, changed, setToken, submit } = useForm('seo', { storageKey: 'seoForm' })
+// const { form, formEl, canSubmit, message, changed, setToken, submit } = useForm('seo', { storageKey: 'seoForm', turnstile: useTemplateRef('turnstile') })
 // async function onSubmit () {
 //   await submit('Message sent successfully! We\'ll be in touch within 2-3 working days')
 // }

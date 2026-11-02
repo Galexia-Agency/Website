@@ -160,7 +160,7 @@
                   required
                 />
               </label>
-              <TurnstileWidget :site-key="turnstileSiteKey" action="brand-identity" @token="setToken" />
+              <TurnstileWidget ref="turnstile" :site-key="turnstileSiteKey" action="brand-identity" @token="setToken" />
               <div id="submitcontainer">
                 <input
                   id="submit"
@@ -186,7 +186,7 @@
 
 <script setup lang="ts">
 const { turnstileSiteKey } = useRuntimeConfig().public
-const { form, formEl, canSubmit, message, changed, setToken, submit } = useForm('brand-identity', { storageKey: 'brandIdentityForm' })
+const { form, formEl, canSubmit, message, changed, setToken, submit } = useForm('brand-identity', { storageKey: 'brandIdentityForm', turnstile: useTemplateRef('turnstile') })
 
 usePageMeta({
   title: 'Brand Identity',
