@@ -573,8 +573,9 @@
             id="submit"
             type="submit"
             class="button colorTwo"
-            value="submit"
+            :value="sending ? 'sending…' : 'submit'"
             :disabled="!canSubmit"
+            :aria-busy="sending"
           >
         </div>
         <p v-show="!message">
@@ -591,7 +592,7 @@
 <script setup lang="ts">
 // The Free SEO Audit form is hidden (commented out above). To bring it back, uncomment it and add:
 // const { turnstileSiteKey } = useRuntimeConfig().public
-// const { form, formEl, canSubmit, message, changed, setToken, submit } = useForm('seo', { storageKey: 'seoForm', turnstile: useTemplateRef('turnstile') })
+// const { form, formEl, canSubmit, sending, message, changed, setToken, submit } = useForm('seo', { storageKey: 'seoForm', turnstile: useTemplateRef('turnstile') })
 // async function onSubmit () {
 //   await submit('Message sent successfully! We\'ll be in touch within 2-3 working days')
 // }

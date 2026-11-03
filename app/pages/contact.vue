@@ -151,8 +151,9 @@
                 id="submit"
                 type="submit"
                 class="button colorTwo"
-                value="submit"
+                :value="sending ? 'sending…' : 'submit'"
                 :disabled="!canSubmit"
+                :aria-busy="sending"
               >
             </div>
             <p v-show="!message">
@@ -171,7 +172,7 @@
 
 <script setup lang="ts">
 const { turnstileSiteKey } = useRuntimeConfig().public
-const { form, formEl, canSubmit, message, changed, setToken, submit } = useForm('contact', { storageKey: 'contactForm', turnstile: useTemplateRef('turnstile') })
+const { form, formEl, canSubmit, sending, message, changed, setToken, submit } = useForm('contact', { storageKey: 'contactForm', turnstile: useTemplateRef('turnstile') })
 
 usePageMeta({
   title: 'Contact',
