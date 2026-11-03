@@ -4,8 +4,6 @@
 /logs
 *.log
 npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
 
 # Runtime data
 pids
@@ -53,9 +51,6 @@ typings/
 # Output of 'npm pack'
 *.tgz
 
-# Yarn Integrity file
-.yarn-integrity
-
 # dotenv environment variables file
 .env
 
@@ -67,8 +62,10 @@ typings/
 
 # nuxt.js build output
 .nuxt
+.output
+.data
 
-# Nuxt generate
+# Nuxt generate (a link to .output/public)
 dist
 
 # vuepress build output
@@ -89,9 +86,23 @@ dist
 # Vim swap files
 *.swp
 
-# Local Netlify folder
-.netlify
+# Local Wrangler state
+.wrangler
+.dev.vars
+.dev.vars.*
 
-.yarn
+# Local Netlify state and build caches
+.netlify/
 
-.yarnrc
+# Package-manager caches
+.pnpm-store/
+.yarn/
+.pnp.*
+
+# Browser WordPress runtime, migration data and local CMS state
+cms/runtime/
+cms/runtime-source/
+cms/.cache/
+cms/.wrangler/
+cms/.dev.vars
+cms/migration/

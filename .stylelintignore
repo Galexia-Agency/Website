@@ -1,4 +1,5 @@
-# ignore all files except .scss and .vue files
-#*
-!*.scss
-!*.vue
+.nuxt/
+.output/
+node_modules/
+cms/
+public/

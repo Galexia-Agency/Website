@@ -1,0 +1,36 @@
+{
+  "name": "galexia-cms",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "static-wordpress dev",
+    "build": "static-wordpress build",
+    "build:ci": "static-wordpress build:ci",
+    "runtime": "static-wordpress runtime",
+    "runtime:upload": "static-wordpress runtime:upload",
+    "db:local": "static-wordpress db:local",
+    "db:remote": "static-wordpress db:remote",
+    "deploy": "static-wordpress build --production && static-wordpress deploy",
+    "deploy:production": "static-wordpress deploy",
+    "deploy:preview": "static-wordpress deploy --preview",
+    "import": "static-wordpress import"
+  },
+  "dependencies": {
+    "@joebailey26/static-wordpress": "^0.1.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20261024.1",
+    "wrangler": "4.151.3"
+  },
+  "engines": {
+    "node": "^24.18.0",
+    "pnpm": "^10.11.1"
+  },
+  "packageManager": "pnpm@10.11.1",
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "workerd"
+    ]
+  }
+}

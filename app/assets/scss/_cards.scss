@@ -1,0 +1,35 @@
+/* Cards */
+.card.white {
+  border-radius: .5rem;
+
+  box-shadow: 0 5px 5px rgb(26 35 126 / 8%)
+}
+.card.white .card--inner h3 {
+  text-align: center
+}
+.card .tags span {
+  display: inline-block;
+  margin-top: .5rem;
+  margin-right: .5rem;
+  padding: .25rem;
+  border: 2px solid var(--primaryColor);
+  border-radius: .25rem
+}
+.card--inner {
+  display: grid;
+  gap: 1rem;
+  padding: 2rem 1rem
+}
+.card--inner p {
+  color: #212121;
+  font-weight: 400;
+  font-size: 16px;
+  font-family: Open Sans, Open Sans fallback, sans-serif
+}
+.card--inner * {
+  margin: 0
+}
+.card--inner img {
+  aspect-ratio: 1;
+  object-fit: contain
+}

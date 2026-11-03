@@ -1,0 +1,12 @@
+{
+  "name": "Galexia CMS editors",
+  "decision": "allow",
+  "include": [
+    { "email": { "email": "joe@joebailey.xyz" } },
+    { "email": { "email": "billybidley26@gmail.com" } },
+    { "email": { "email": "joe@galexia.agency" } }
+  ],
+  "require": [],
+  "exclude": [],
+  "session_duration": "24h"
+}

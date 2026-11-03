@@ -1,0 +1,44 @@
+/* Layout */
+#__nuxt {
+  background: rgb(53 47 114 / 33%)
+}
+.site-background {
+  display: grid;
+  grid-template-areas: 'header'
+    'main'
+    'footer';
+  grid-template-rows: max-content 1fr max-content;
+  min-height: 100vh
+}
+main header {
+  background-color: rgb(53 47 114 / 33%);
+  background-position: 0 -135px
+}
+.site-background,
+main header {
+  // Set by the layout: a Cloudflare-transformed (AVIF/WebP) URL on production builds, the original elsewhere.
+  background-image: var(--siteBackground, url('/img/SpaceBackgroundBlurred.jpg'));
+  background-repeat: no-repeat;
+  background-size: var(--backgroundSize, 4500px)
+}
+main {
+  grid-area: main;
+  background-color: white
+}
+main :any-link,
+main h2,
+main h3,
+main h4,
+main h5,
+main h6 {
+  color: var(--primaryColor);
+  font-weight: 700
+}
+main h2 {
+  margin: 0 auto;
+  padding: 2rem 0;
+  text-align: center
+}
+main :any-link:hover {
+  text-decoration: underline
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Galexia Creative Agency Ltd",
+  "short_name": "Galexia",
+  "background_color": "#ffffff",
+  "theme_color": "#1a237e",
+  "display": "browser",
+  "lang": "en-GB",
+  "start_url": "/",
+  "icons": [{ "src": "/icon.png", "sizes": "512x512", "type": "image/png" }]
+}
