@@ -12,6 +12,8 @@
   .post:last-of-type {
     padding-bottom: 0
   }
+
+  /* The 400x300 box is covered, so landscape images are drawn wider than 400px; the SiteImage sizes allow for that */
   :deep(img) {
     width: 100%;
     min-width: 100%;
@@ -62,7 +64,8 @@
           v-if="post.featuredMediaUrl"
           :src="post.featuredMediaUrl"
           :alt="post.title"
-          width="300"
+          width="800"
+          sizes="(max-width: 800px) 100vw, 600px"
         />
         <div class="post--content">
           <h3>

@@ -15,7 +15,7 @@
 </template>
 
 <script setup lang="ts">
-import { cdnImageUrl } from '@joebailey26/nuxt-static-wordpress/images'
+import { cdnImageUrl, imageWidths } from '@joebailey26/nuxt-static-wordpress/images'
 
 // An image from public/ (or the CMS), resized and converted to AVIF/WebP by Cloudflare Image Transformations
 // on production builds. Elsewhere /cdn-cgi/image does not exist, so the original is served.
@@ -25,6 +25,8 @@ const props = withDefaults(defineProps<{
   width: number | string
   height?: number | string
   alt?: string
+  // The width the image is drawn at (as in <img sizes>); a width-based srcset is generated so the browser
+  // picks a size that's sharp at every breakpoint, up to 2x the width.
   sizes?: string
   loading?: 'lazy' | 'eager'
   fetchpriority?: 'high' | 'low' | 'auto'
@@ -43,5 +45,15 @@ const { imageTransformations } = useRuntimeConfig().public
 const transformable = computed(() => imageTransformations && !/\.(svg|gif|ico)$/i.test(props.src))
 const optionString = computed(() => ['format=auto,quality=80', props.options.includes('fit=') ? '' : 'fit=scale-down', props.options].filter(Boolean).join(','))
 const source = computed(() => (transformable.value ? cdnImageUrl(props.src, Number(props.width), '', optionString.value) : props.src))
-const srcset = computed(() => (transformable.value ? `${source.value} 1x, ${cdnImageUrl(props.src, Number(props.width) * 2, '', optionString.value)} 2x` : undefined))
+const srcset = computed(() => {
+  if (!transformable.value) {
+    return undefined
+  }
+  const width = Number(props.width)
+  if (!props.sizes) {
+    return `${source.value} 1x, ${cdnImageUrl(props.src, width * 2, '', optionString.value)} 2x`
+  }
+  const widths = [...new Set([...imageWidths.filter(w => w < width * 2), width, width * 2])].sort((a, b) => a - b)
+  return widths.map(w => `${cdnImageUrl(props.src, w, '', optionString.value)} ${w}w`).join(', ')
+})
 </script>
