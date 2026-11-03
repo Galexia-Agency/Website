@@ -37,15 +37,14 @@
 
   /* Ghost button, so it stands out against the dark background */
   .header--inner .button {
-    color: white;
-    background: transparent;
-    box-shadow: inset 0 0 0 1.5px white;
-    transition: background-color .3s, color .3s, box-shadow .3s
-  }
-  .header--inner .button:hover {
     color: var(--primaryColor);
     background: white;
-    box-shadow: inset 0 0 0 1.5px white, 0 10px 24px -6px rgb(0 0 0 / 45%)
+    box-shadow: 0 8px 20px -6px rgb(0 0 0 / 35%);
+    transition: transform .3s cubic-bezier(.2, .8, .2, 1), box-shadow .3s
+  }
+  .header--inner .button:hover {
+    box-shadow: 0 0 0 4px rgb(255 255 255 / 18%), 0 14px 30px -8px rgb(0 0 0 / 55%);
+    transform: translateY(-2px)
   }
   @media (max-width: 900px) {
     .header--inner p {
