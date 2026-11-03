@@ -61,10 +61,10 @@
 <script setup lang="ts">
 const year = new Date().getFullYear()
 const socials = [
-  { href: 'https://fb.me/GalexiaAgency', title: 'Facebook', icon: 'facebook' },
-  { href: 'https://www.instagram.com/galexia_agency', title: 'Instagram', icon: 'instagram' },
-  { href: 'https://www.twitter.com/galexia_agency', title: 'Twitter', icon: 'twitter' },
-  { href: 'https://www.linkedin.com/company/galexia-agency', title: 'LinkedIn', icon: 'linkedin' },
+  // { href: 'https://fb.me/GalexiaAgency', title: 'Facebook', icon: 'facebook' },
+  // { href: 'https://www.instagram.com/galexia_agency', title: 'Instagram', icon: 'instagram' },
+  // { href: 'https://www.twitter.com/galexia_agency', title: 'Twitter', icon: 'twitter' },
+  // { href: 'https://www.linkedin.com/company/galexia-agency', title: 'LinkedIn', icon: 'linkedin' },
   { href: 'https://github.com/orgs/Galexia-Agency/', title: 'GitHub', icon: 'github' }
 ]
 
