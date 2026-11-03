@@ -6,7 +6,7 @@
   h4 {
     color: #1A237EAA
   }
-  img {
+  :deep(img) {
     display: block;
     width: 100%;
     max-width: 300px;

@@ -46,35 +46,7 @@
   .post--content {
     line-height: 1.5
   }
-  .post--footer:not(.nativeShare) {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 140px);
-    gap: .5rem;
-    justify-content: start
-  }
-  .post--footer a {
-    margin: 0;
-    color: white;
-    font-size: 1rem;
-    text-align: center
-  }
-  .post--footer h4 {
-    grid-column: 1/-1;
-    width: fit-content;
-    margin-bottom: 0
-  }
-  .post--footer.nativeShare h4 {
-    width: 100%;
-    margin: 1.33em 0 1em;
-    text-align: center;
-    place-self: center
-  }
 
-  @media (max-width: 690px) {
-    .post--footer {
-      justify-content: center
-    }
-  }
   @media (max-width: 500px) {
     .post--header {
       min-height: 300px
