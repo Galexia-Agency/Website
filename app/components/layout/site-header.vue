@@ -24,6 +24,7 @@ const links = [
   { to: '/web/', text: 'Design & Development' },
   { to: '/hosting/', text: 'Hosting' },
   { to: '/marketing/', text: 'Marketing' },
+  { to: '/email-checkup/', text: 'Email Checkup' },
   { to: '/blog/', text: 'Blog' },
   { to: '/support/', text: 'Support' },
   { to: '/contact/', text: 'Contact' }
