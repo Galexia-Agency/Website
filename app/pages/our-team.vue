@@ -4,7 +4,8 @@
     text-transform: capitalize
   }
   h4 {
-    color: #1A237EAA
+    color: #1A237EAA;
+    font-size: 1.5rem
   }
   :deep(img) {
     display: block;
