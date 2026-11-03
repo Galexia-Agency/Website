@@ -4,7 +4,7 @@
       <div class="footer--bottom maxWidth">
         <div class="logo--container">
           <NuxtLink class="logo" to="/" aria-label="Galexia home">
-            <div v-html="inlineSvg('logo_v2')" />
+            <InlineSvg name="logo_v2" />
           </NuxtLink>
         </div>
         <div class="footer--bottom_contact">

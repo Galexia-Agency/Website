@@ -13,7 +13,7 @@
     />
     <section class="white">
       <div class="grid right maxWidth">
-        <div v-infocus="'showElement'" class="hidden hidden-left svg" v-html="inlineSvg('spf')" />
+        <InlineSvg v-infocus="'showElement'" class="hidden hidden-left svg" name="spf" />
         <div v-infocus="'showElement'" class="hidden hidden-right">
           <h3>
             SPF
@@ -38,10 +38,10 @@
             DomainKeys Identified Mail (DKIM) is a DNS standard to help prevent spoofing on outgoing messages sent from your domain. Email spoofing is when email content is changed to make the message appear from someone or somewhere other than the actual source.
           </p>
         </div>
-        <div v-infocus="'showElement'" class="hidden hidden-right svg" v-html="inlineSvg('dkim')" />
+        <InlineSvg v-infocus="'showElement'" class="hidden hidden-right svg" name="dkim" />
       </div>
       <div class="grid right maxWidth">
-        <div v-infocus="'showElement'" class="hidden hidden-left svg" v-html="inlineSvg('dmarc')" />
+        <InlineSvg v-infocus="'showElement'" class="hidden hidden-left svg" name="dmarc" />
         <div v-infocus="'showElement'" class="hidden hidden-right">
           <h3>
             DMARC
@@ -66,7 +66,7 @@
             Brand Indicators for Message Identification (BIMI) is a new standard that can help an email recipient to know that it is you. Without BIMI, your email recipients have no assurance that the emails they get are from you. As a result, sometimes they leave such emails unopened, as they fear fraudsters may be trying to con them. BIMI is a new standard that enables you to include your company's logo alongside the emails you send. That way, your brand stands out among other emails, and your customers are sure that the emails are legitimate.
           </p>
         </div>
-        <div v-infocus="'showElement'" class="hidden hidden-right svg" v-html="inlineSvg('bimi')" />
+        <InlineSvg v-infocus="'showElement'" class="hidden hidden-right svg" name="bimi" />
       </div>
     </section>
     <section id="checkup" class="white">

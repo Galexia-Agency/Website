@@ -27,10 +27,10 @@
             Get in touch
           </NuxtLink>
         </div>
-        <div v-infocus="'showElement'" class="hidden hidden-right svg" v-html="inlineSvg('why_us')" />
+        <InlineSvg v-infocus="'showElement'" class="hidden hidden-right svg" name="why_us" />
       </div>
       <div class="grid right maxWidth">
-        <div v-infocus="'showElement'" class="hidden hidden-left svg" v-html="inlineSvg('wordpress')" />
+        <InlineSvg v-infocus="'showElement'" class="hidden hidden-left svg" name="wordpress" />
         <div v-infocus="'showElement'" class="hidden hidden-right">
           <h3>WordPress</h3>
           <p class="text--normal">
@@ -51,10 +51,10 @@
             Give us a call
           </NuxtLink>
         </div>
-        <div v-infocus="'showElement'" class="hidden hidden-right svg" v-html="inlineSvg('custom')" />
+        <InlineSvg v-infocus="'showElement'" class="hidden hidden-right svg" name="custom" />
       </div>
       <div class="grid right maxWidth">
-        <div v-infocus="'showElement'" class="hidden hidden-left svg" v-html="inlineSvg('old')" />
+        <InlineSvg v-infocus="'showElement'" class="hidden hidden-left svg" name="old" />
         <div v-infocus="'showElement'" class="hidden hidden-right">
           <h3>Love our ethos but have an older site?</h3>
           <p class="text--normal">
@@ -75,10 +75,10 @@
             Register today
           </NuxtLink>
         </div>
-        <div v-infocus="'showElement'" class="hidden hidden-right svg" v-html="inlineSvg('hosting')" />
+        <InlineSvg v-infocus="'showElement'" class="hidden hidden-right svg" name="hosting" />
       </div>
       <div class="grid right maxWidth">
-        <div v-infocus="'showElement'" class="hidden hidden-left svg" v-html="inlineSvg('search')" />
+        <InlineSvg v-infocus="'showElement'" class="hidden hidden-left svg" name="search" />
         <div v-infocus="'showElement'" class="hidden hidden-right">
           <h3>SEO</h3>
           <p class="text--normal">

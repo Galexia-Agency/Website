@@ -163,7 +163,7 @@
               <p v-show="message" class="message" v-text="message" />
             </Transition>
           </form>
-          <div class="SVGContainer" v-html="inlineSvg('contact')" />
+          <InlineSvg class="SVGContainer" name="contact" />
         </div>
       </div>
     </section>

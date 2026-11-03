@@ -28,10 +28,10 @@
             Traditional servers also come with some security issues. A Distributed Denial-of-Service (<abbr>DDOS</abbr>) Attack is where one or many computers send repeated requests to your website in order to overload the system or to repeatedly guess a password until they gain access. There are many other types of attacks too. By using <a href="https://www.cloudflare.com/">Cloudflare</a> we mitigate a lot of these issues. As an added bonus Cloudflare also has built-in caching support.
           </p>
         </div>
-        <div v-infocus="'showElement'" class="hidden hidden-right svg" v-html="inlineSvg('server')" />
+        <InlineSvg v-infocus="'showElement'" class="hidden hidden-right svg" name="server" />
       </div>
       <div class="grid right maxWidth">
-        <div v-infocus="'showElement'" class="hidden hidden-left svg" v-html="inlineSvg('wordpress')" />
+        <InlineSvg v-infocus="'showElement'" class="hidden hidden-left svg" name="wordpress" />
         <div v-infocus="'showElement'" class="hidden hidden-right">
           <h3>WordPress issues</h3>
           <p class="text--normal">
@@ -54,7 +54,7 @@
             If you've worked with us before  then you'll already have access to our great Facebook community. It's a place where all the small businesses we've worked with can interact, share their great sites, and get support for common website issues including WordPress themes and plugins, as well as styling issues. If your query isn't urgent we recommend posting a topic here first before coming to us. Best of all, it's free!
           </p>
         </div>
-        <div v-infocus="'showElement'" class="hidden hidden-right svg" v-html="inlineSvg('community')" />
+        <InlineSvg v-infocus="'showElement'" class="hidden hidden-right svg" name="community" />
       </div> -->
     </section>
     <section class="white">

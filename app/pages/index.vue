@@ -109,10 +109,10 @@
             We find the best way to engage a start-up is to have an informal, no-obligations chat about your business. Some of businesses come to us with a detailed idea about what they want with a very strict budget, whilst others are super passionate about their idea, but haven't started researching how to digitally market it.
           </p>
         </div>
-        <div v-infocus="'showElement'" class="hidden hidden-right svg" v-html="inlineSvg('discussion')" />
+        <InlineSvg v-infocus="'showElement'" class="hidden hidden-right svg" name="discussion" />
       </div>
       <div class="grid right maxWidth">
-        <div v-infocus="'showElement'" class="hidden hidden-left svg" v-html="inlineSvg('project')" />
+        <InlineSvg v-infocus="'showElement'" class="hidden hidden-left svg" name="project" />
         <div v-infocus="'showElement'" class="hidden hidden-right">
           <h3>You run your business. We run the website project</h3>
           <p class="text--normal">
@@ -127,7 +127,7 @@
             We love to keep in touch with our clients, even after the initial website project has finished. We’re happy to offer continued maintenance plans on our websites. We even have a community where past clients can discuss and share their websites.
           </p>
         </div>
-        <div v-infocus="'showElement'" class="hidden hidden-right svg" v-html="inlineSvg('launch')" />
+        <InlineSvg v-infocus="'showElement'" class="hidden hidden-right svg" name="launch" />
       </div>
     </section>
     <section class="white">
