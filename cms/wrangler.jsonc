@@ -25,7 +25,7 @@
     "ACCESS_TEAM_DOMAIN": "galexia.cloudflareaccess.com",
     "ACCESS_AUD": "17f7180e38b00d0f74c5a6cdb6dc12aaabbb85c0437992846bbf2481edd69550",
     "CF_ACCOUNT_ID": "8259f9bfa45a74a587d6a90822de442d",
-    "CF_WORKER_TAG": "GALEXIA_SITE_WORKER_TAG",
+    "CF_WORKER_TAG": "9cd532f23ccc4d1b9c7174dfc2da0af8",
     "SITE_BRANCH": "master"
   },
   "previews": {
