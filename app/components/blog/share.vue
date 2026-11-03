@@ -11,6 +11,9 @@
     font-size: 1rem;
     text-align: center
   }
+  .post--footer a:after {
+    content: none
+  }
   .post--footer h4 {
     grid-column: 1/-1;
     width: fit-content;
