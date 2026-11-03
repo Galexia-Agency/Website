@@ -70,8 +70,8 @@ importers:
         specifier: ^10.13.0
         version: 10.13.0(jiti@2.7.0)
       eslint-config-galexia:
-        specifier: git+https://github.com/Galexia-Agency/eslint-config.git#e94753a7ed8a94ae746f5f6ccf605ce288565ff2
-        version: '@galexia-agency/eslint-config-galexia@https://codeload.github.com/Galexia-Agency/eslint-config/tar.gz/e94753a7ed8a94ae746f5f6ccf605ce288565ff2(@typescript-eslint/utils@8.72.0(eslint@10.13.0(jiti@2.7.0))(typescript@6.0.3))(@vue/compiler-sfc@3.5.44)(jiti@2.7.0)(typescript@6.0.3)'
+        specifier: npm:@galexia-agency/eslint-config-galexia@3.3.0
+        version: '@galexia-agency/eslint-config-galexia@3.3.0(@typescript-eslint/utils@8.72.0(eslint@10.13.0(jiti@2.7.0))(typescript@6.0.3))(@vue/compiler-sfc@3.5.44)(jiti@2.7.0)(typescript@6.0.3)'
       globals:
         specifier: ^17.0.0
         version: 17.13.0
@@ -641,9 +641,8 @@ packages:
       '@fortawesome/fontawesome-svg-core': ~1 || ~6 || ~7
       vue: '>= 3.0.0 < 4'
 
-  '@galexia-agency/eslint-config-galexia@https://codeload.github.com/Galexia-Agency/eslint-config/tar.gz/e94753a7ed8a94ae746f5f6ccf605ce288565ff2':
-    resolution: {tarball: https://codeload.github.com/Galexia-Agency/eslint-config/tar.gz/e94753a7ed8a94ae746f5f6ccf605ce288565ff2}
-    version: 3.3.0
+  '@galexia-agency/eslint-config-galexia@3.3.0':
+    resolution: {integrity: sha512-uCKtYJIU/6dOt//qUmakHqSUeHEE7nKvxoTgXnYlw9fwH3GAqy/rELZZJ17/ECVu20+sco5OFG7W1zQ78QQCwQ==, tarball: https://npm.pkg.github.com/download/@galexia-agency/eslint-config-galexia/3.3.0/c5e68f44daa3b43d24970343db7842791617bd1e}
 
   '@humanfs/core@0.19.2':
     resolution: {integrity: sha512-UhXNm+CFMWcbChXywFwkmhqjs3PRCmcSa/hfBgLIb7oQ5HNb1wS0icWsGtSAUNgefHeI+eBrA8I1fxmbHsGdvA==}
@@ -5461,7 +5460,7 @@ snapshots:
       '@fortawesome/fontawesome-svg-core': 6.7.2
       vue: 3.5.44(typescript@6.0.3)
 
-  '@galexia-agency/eslint-config-galexia@https://codeload.github.com/Galexia-Agency/eslint-config/tar.gz/e94753a7ed8a94ae746f5f6ccf605ce288565ff2(@typescript-eslint/utils@8.72.0(eslint@10.13.0(jiti@2.7.0))(typescript@6.0.3))(@vue/compiler-sfc@3.5.44)(jiti@2.7.0)(typescript@6.0.3)':
+  '@galexia-agency/eslint-config-galexia@3.3.0(@typescript-eslint/utils@8.72.0(eslint@10.13.0(jiti@2.7.0))(typescript@6.0.3))(@vue/compiler-sfc@3.5.44)(jiti@2.7.0)(typescript@6.0.3)':
     dependencies:
       '@nuxt/eslint-config': 1.17.0(@typescript-eslint/utils@8.72.0(eslint@10.13.0(jiti@2.7.0))(typescript@6.0.3))(@vue/compiler-sfc@3.5.44)(eslint@9.39.5(jiti@2.7.0))(typescript@6.0.3)
       '@typescript-eslint/parser': 8.72.0(eslint@9.39.5(jiti@2.7.0))(typescript@6.0.3)
