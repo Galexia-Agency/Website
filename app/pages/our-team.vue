@@ -22,7 +22,7 @@
       :link="{location: '/contact/', text: 'Chat to us'}"
     />
     <section class="white">
-      <div class="maxWidth grid column three">
+      <div class="maxWidth grid column four">
         <div v-for="(member, index) in team" :key="index" class="card">
           <div class="card--inner">
             <h3>
