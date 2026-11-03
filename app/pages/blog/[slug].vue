@@ -64,6 +64,10 @@
     max-width: 100%;
     margin: 0
   }
+  /* Wide tables scroll sideways rather than pushing the page wider on mobile */
+  .wp-block-table {
+    overflow-x: auto
+  }
   figure img {
     display: block;
     width: 75%;
