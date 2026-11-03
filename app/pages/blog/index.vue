@@ -37,6 +37,21 @@
     width: 100%;
     min-width: 500px
   }
+  .blog-pagination {
+    margin-top: 3rem
+  }
+  .blog-pagination :deep(.pagination__button) {
+    color: var(--primaryColor);
+    font-size: 1rem
+  }
+  .blog-pagination :deep(.pagination__button:hover) {
+    opacity: .75
+  }
+  .blog-pagination :deep(.pagination__button:disabled),
+  .blog-pagination :deep(.pagination__break-view) {
+    color: #777777;
+    opacity: 1
+  }
 
   @media (max-width: 800px) {
     .post {
@@ -57,7 +72,7 @@
 <template>
   <section class="white">
     <div class="maxWidth">
-      <article v-for="post in posts" :key="post.slug" v-infocus="'showElement'" class="hidden post">
+      <article v-for="post in paginatedPosts" :key="post.slug" v-infocus="'showElement'" class="hidden post">
         <SiteImage
           v-if="post.featuredMediaUrl"
           :src="post.featuredMediaUrl"
@@ -73,18 +88,48 @@
           <div class="text--normal" v-html="post.excerpt.raw" />
         </div>
       </article>
+      <GalexiaPagination
+        class="blog-pagination"
+        :page-count="pageCount"
+        :current-page="currentPage"
+        :go-to-page="goToPage"
+      />
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
+import GalexiaPagination from 'nuxt-component-pagination/index.vue'
+
+const route = useRoute()
+const router = useRouter()
 const { data: pages } = await useCmsIndex('blog')
-const posts = computed(() => pages.value.flat())
+
+const pageCount = computed(() => pages.value.length)
+const currentPage = computed(() => {
+  const p = route.params.page
+  const page = Array.isArray(p) ? p[0] : p
+
+  return page ? parseInt(page) : 1
+})
+const paginatedPosts = computed(() => pages.value[currentPage.value - 1])
+
+if (!(currentPage.value >= 1 && currentPage.value <= Math.max(pageCount.value, 1))) {
+  throw createError({ status: 404, message: 'Page not found', fatal: true })
+}
+
+function pagePath (page: number) {
+  return page > 1 ? `/blog/page/${page}/` : '/blog/'
+}
+
+function goToPage (page: number) {
+  router.push({ path: pagePath(page) })
+}
 
 usePageMeta({
   title: 'Blog',
   description: 'Read our latest blog posts and learn about current trends in web design and development.',
-  path: '/blog/',
+  path: pagePath(currentPage.value),
   breadcrumb: [{ name: 'Blog', item: 'https://galexia.agency/blog/' }]
 })
 </script>
