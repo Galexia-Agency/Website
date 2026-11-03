@@ -6,11 +6,7 @@
     max-width: 780px
   }
   h1 {
-    z-index: 2;
-    grid-row: 1;
-    grid-column: 1;
-    align-self: end;
-    justify-self: left;
+    place-self: end left;
     width: 100%;
     margin-bottom: 1rem;
     color: white;
@@ -18,21 +14,8 @@
     font-size: clamp(3rem, calc((100vw / 100) * 10), 5rem)
   }
   .post--header {
-    position: relative;
     display: grid;
-    min-height: 400px;
-    overflow: hidden;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    place-items: center
-  }
-  .background_opacity {
-    position: absolute;
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-    background: rgb(0 0 0 / 40%)
+    min-height: 300px
   }
   .post--meta {
     display: grid;
@@ -65,7 +48,7 @@
 
   @media (max-width: 500px) {
     .post--header {
-      min-height: 300px
+      min-height: 200px
     }
     .post--meta {
       grid-auto-flow: row
@@ -95,22 +78,28 @@
 </style>
 
 <template>
-  <div class="post">
-    <div class="post--header" :style="headerImage ? { backgroundImage: `url(${headerImage})` } : null">
-      <div class="background_opacity" />
-      <h1 class="maxWidth" v-html="post.title" />
-    </div>
-    <section class="white">
-      <div class="maxWidth">
-        <div class="post--content" v-html="post.content" />
-        <BlogShare :title="`${post.title} | Blog`" :description="post.excerpt.plain" :path="`/blog/${post.slug}/`" />
+  <NuxtLayout name="default" :hero-image="headerImage">
+    <template #hero>
+      <div class="post--header">
+        <h1 class="maxWidth" v-html="post.title" />
       </div>
-    </section>
-  </div>
+    </template>
+    <div class="post">
+      <section class="white">
+        <div class="maxWidth">
+          <div class="post--content" v-html="post.content" />
+          <BlogShare :title="`${post.title} | Blog`" :description="post.excerpt.plain" :path="`/blog/${post.slug}/`" />
+        </div>
+      </section>
+    </div>
+  </NuxtLayout>
 </template>
 
 <script setup lang="ts">
 import { cdnImageUrl } from '@joebailey26/nuxt-static-wordpress/images'
+
+// Rendered through the layout here so the post's image can sit behind the menu as well as the title
+definePageMeta({ layout: false })
 
 const route = useRoute()
 const post = await useCmsPost('blog', String(route.params.slug))
