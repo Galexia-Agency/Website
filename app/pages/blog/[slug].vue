@@ -47,12 +47,20 @@
     line-height: 1.5
   }
 
-  /* The CMS's H3s are rendered as H2s, but keep their H3 look */
+  /* Post headings start at H2 under the title, but look one level smaller */
   .post--content :deep(h2) {
     margin: 1em 0 1rem;
     padding: 0;
     font-size: 2rem;
     text-align: inherit
+  }
+  .post--content :deep(h3) {
+    margin-top: 1.33em;
+    font-size: 1.75rem
+  }
+  .post--content :deep(h4) {
+    margin-top: 1.67em;
+    font-size: 1.5rem
   }
 
   @media (max-width: 500px) {
@@ -94,7 +102,7 @@
     </div>
     <section class="white">
       <div class="maxWidth">
-        <div class="post--content" v-html="content" />
+        <div class="post--content" v-html="post.content" />
         <BlogShare :title="`${post.title} | Blog`" :description="post.excerpt.plain" :path="`/blog/${post.slug}/`" />
       </div>
     </section>
@@ -108,8 +116,6 @@ const route = useRoute()
 const post = await useCmsPost('blog', String(route.params.slug))
 const { imageTransformations } = useRuntimeConfig().public
 const headerImage = computed(() => (post.value.featuredMediaUrl && imageTransformations ? cdnImageUrl(post.value.featuredMediaUrl, 1920) : post.value.featuredMediaUrl))
-// Posts' section headings are written as H3s; render them as H2s so they sit directly under the title
-const content = computed(() => post.value.content.replace(/<(\/?)h3\b/gi, '<$1h2'))
 const url = computed(() => `https://galexia.agency/blog/${post.value.slug}/`)
 // The CMS's Meta description field, when it is set
 const seoDescription = computed(() => (typeof post.value.acf.seo_description === 'string' ? post.value.acf.seo_description : ''))
