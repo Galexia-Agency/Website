@@ -35,6 +35,11 @@
   .card--inner {
     grid-template-rows: auto auto auto 1fr auto
   }
+
+  /* SiteImage sets width="500", wider than a third of the carousel, so the image would overflow its card */
+  .card :deep(img) {
+    max-width: 100%
+  }
   .website_link {
     font-size: 1.25rem
   }
@@ -71,7 +76,7 @@
     .icons {
       padding-bottom: 30px
     }
-    .grid svg, .card :deep(img) {
+    .grid svg {
       max-width: 100%
     }
   }
