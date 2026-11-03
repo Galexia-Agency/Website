@@ -76,6 +76,57 @@
       width: 100%
     }
   }
+
+  /*
+  Chat bubbles from the Chatterbox block. The plugin put its stylesheet in the post itself, which
+  WordPress strips on import, so the rules the posts use live here instead.
+  */
+  .wp-block-chatterbox-chat ul {
+    margin: 0;
+    padding: 0 .75rem;
+    list-style: none
+  }
+  .slds-chat-listitem {
+    display: flex;
+    margin-top: .75rem
+  }
+  .slds-chat-listitem_outbound {
+    justify-content: flex-end
+  }
+  .slds-chat-listitem_inbound + .slds-chat-listitem_inbound,
+  .slds-chat-listitem_outbound + .slds-chat-listitem_outbound {
+    margin-top: .25rem
+  }
+  .slds-chat-message {
+    display: flex
+  }
+  .slds-chat-message__body {
+    display: flex;
+    flex-direction: column
+  }
+  .slds-chat-message__text {
+    display: inline-block;
+    max-width: 26.25rem;
+    min-height: 2rem;
+    padding: .5rem;
+    font-size: 16px;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
+    white-space: pre-line;
+    word-break: break-word;
+    overflow-wrap: break-word
+  }
+  .slds-chat-message__text_inbound {
+    margin-right: auto;
+    color: #080707;
+    background-color: #F2F2F3;
+    border-radius: .5rem .5rem .5rem 0
+  }
+  .slds-chat-message__text_outbound {
+    margin-left: auto;
+    color: white;
+    background-color: #005FB2;
+    border-radius: .5rem .5rem 0
+  }
 </style>
 
 <template>
