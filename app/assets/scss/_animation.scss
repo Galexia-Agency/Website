@@ -32,7 +32,7 @@
   }
 }
 
-@media (max-width: 1070px) {
+@media (max-width: 700px) {
   .site-width {
     width: var(--100vw)
   }
@@ -75,6 +75,32 @@
     &.nav_close .nav--container {
       display: none
     }
+  }
+
+  /* The slide-out menu always lists the sub items, indented under a plain label */
+  .nav--dropdown_toggle {
+    display: none
+  }
+  .nav--dropdown_label {
+    display: block
+  }
+  .nav--submenu.card.white {
+    position: static;
+    display: grid;
+    min-width: 0;
+    padding: 0 0 0 1rem;
+    color: inherit;
+    background: none;
+    border-radius: 0;
+    box-shadow: none;
+    transform: none
+  }
+  .nav--submenu .nav--link {
+    color: inherit;
+    white-space: normal
+  }
+  .nav--submenu .nav--link:hover {
+    color: #FFFFFFAA
   }
 }
 
