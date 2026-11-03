@@ -1,6 +1,6 @@
 # Galexia
 
-The galexia.agency website: Nuxt 4, prerendered to static files and served by Cloudflare Workers static assets. Blog, legal, portfolio and testimonial content comes from the browser WordPress CMS at `cms.galexia.agency` ([`@joebailey26/static-wordpress`](https://github.com/joebailey26/static-wordpress)), loaded at build time by [`@joebailey26/nuxt-static-wordpress`](https://github.com/joebailey26/static-wordpress/tree/master/packages/nuxt). The forms post to the Worker in `worker/`, which checks Cloudflare Turnstile and emails the submission using [`@joebailey26/turnstile-forms`](https://github.com/joebailey26/static-wordpress/tree/master/packages/forms).
+The galexia.agency website: Nuxt 4, prerendered to static files and served by Cloudflare Workers static assets. Blog, legal, portfolio and testimonial content comes from the browser WordPress CMS at `cms.galexia.agency` ([`@joebailey26/static-wordpress`](https://github.com/joebailey26/static-wordpress)), loaded at build time by [`@joebailey26/nuxt-static-wordpress`](https://github.com/joebailey26/static-wordpress/tree/master/packages/nuxt). The forms post to the Worker in `worker/`, which checks Cloudflare Turnstile and emails the submission using [`@joebailey26/turnstile-forms`](https://github.com/joebailey26/turnstile-forms).
 
 ## Setup
 
