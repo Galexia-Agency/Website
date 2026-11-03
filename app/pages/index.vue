@@ -63,7 +63,7 @@
     .icons {
       padding-bottom: 30px
     }
-    .grid svg, .card img {
+    .grid svg, .card :deep(img) {
       max-width: 100%
     }
   }

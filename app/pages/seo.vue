@@ -37,7 +37,7 @@
   .fade-enter-from, .fade-leave-to {
     opacity: 0
   }
-  img {
+  :deep(img) {
     display: block;
     max-width: 100%;
     height: auto;

@@ -12,7 +12,7 @@
   .post:last-of-type {
     padding-bottom: 0
   }
-  img {
+  :deep(img) {
     width: 100%;
     min-width: 100%;
     height: 300px;
@@ -42,7 +42,7 @@
     .post {
       grid-template-columns: 1fr
     }
-    img {
+    :deep(img) {
       height: 200px
     }
     .post--content {
