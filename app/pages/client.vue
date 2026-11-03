@@ -187,7 +187,7 @@
               <input name="logo" type="url" autocomplete="photo">
             </label>
             <div>
-              <input type="submit" class="button" value="Submit">
+              <button type="submit" class="button">Submit</button>
             </div>
           </form>
         </div>

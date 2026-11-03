@@ -162,14 +162,15 @@
               </label>
               <TurnstileWidget ref="turnstile" :site-key="turnstileSiteKey" action="brand-identity" @token="setToken" />
               <div id="submitcontainer">
-                <input
+                <button
                   id="submit"
                   type="submit"
-                  class="button colorTwo"
-                  :value="sending ? 'sending…' : 'submit'"
+                  class="button"
                   :disabled="!canSubmit"
                   :aria-busy="sending"
                 >
+                  {{ sending ? 'sending…' : 'submit' }}
+                </button>
               </div>
               <p v-show="!message">
               &nbsp;
