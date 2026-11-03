@@ -21,13 +21,13 @@
     <div class="section white grid">
       <div class="error maxWidth grid">
         <div v-if="statusCode === 404">
-          <div class="svg" v-html="inlineSvg('not-found')" />
+          <InlineSvg class="svg" name="not-found" />
           <h1>
             404 - Page not found
           </h1>
         </div>
         <div v-else>
-          <div class="svg" v-html="inlineSvg('error')" />
+          <InlineSvg class="svg" name="error" />
           <h1>
             {{ statusCode }} - An error occurred
           </h1>

@@ -50,7 +50,7 @@
     />
     <section class="white">
       <div class="grid right maxWidth">
-        <div v-infocus="'showElement'" class="hidden hidden-left svg" v-html="inlineSvg('search')" />
+        <InlineSvg v-infocus="'showElement'" class="hidden hidden-left svg" name="search" />
         <div v-infocus="'showElement'" class="hidden hidden-right">
           <h3>SEO</h3>
           <p class="text--normal">
@@ -71,10 +71,10 @@
             Get started advertising
           </NuxtLink>
         </div>
-        <div v-infocus="'showElement'" class="hidden hidden-right svg" v-html="inlineSvg('advertising')" />
+        <InlineSvg v-infocus="'showElement'" class="hidden hidden-right svg" name="advertising" />
       </div>
       <div class="grid right maxWidth">
-        <div v-infocus="'showElement'" class="hidden hidden-left svg" v-html="inlineSvg('social')" />
+        <InlineSvg v-infocus="'showElement'" class="hidden hidden-left svg" name="social" />
         <div v-infocus="'showElement'" class="hidden hidden-right">
           <h3>Social Media</h3>
           <p class="text--normal">
@@ -109,7 +109,7 @@
       <div class="grid column maxWidth four">
         <div v-infocus="'showElement'" class="card hidden">
           <h3>Photography</h3>
-          <div class="svg" v-html="inlineSvg('photography')" />
+          <InlineSvg class="svg" name="photography" />
           <p class="text--normal">
             Photos can make or break a brand. Having good photos are vital to all kinds of content marketing, including social media, and websites. We have a team of photographers versed in everything from events to products.
           </p>
@@ -120,7 +120,7 @@
           style="--delay: .25s"
         >
           <h3>Videography</h3>
-          <div class="svg" v-html="inlineSvg('videography')" />
+          <InlineSvg class="svg" name="videography" />
           <p class="text--normal">
             We love watching great content. It’s a great way to engage with customers in the modern age. We pride ourselves in creating short clips for Instagram, longer clips for YouTube and everything in-between.
           </p>
@@ -131,7 +131,7 @@
           style="--delay: .5s"
         >
           <h3>Copy-writing</h3>
-          <div class="svg" v-html="inlineSvg('writing')" />
+          <InlineSvg class="svg" name="writing" />
           <p class="text--normal">
             Some people learn visually, some by reading. It’s best to have a mixture of both. Not to mention that good quality blogs are by far one of the best ways to improve search presence.
           </p>
@@ -143,7 +143,7 @@
         >
           <h3>Graphic Design</h3>
 
-          <div class="svg" v-html="inlineSvg('design')" />
+          <InlineSvg class="svg" name="design" />
           <p class="text--normal">
             Design is everywhere: social media, websites, business cards, pamphlets, adverts. Our expert team can help your business stand out with tailor made graphics.
           </p>

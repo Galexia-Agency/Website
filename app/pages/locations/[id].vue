@@ -61,10 +61,10 @@
             We find the best way to start a project is to have an informal, no-obligations chat about your requirements. We're local to <span class="location">{{ location }}</span> so can arrange a face-to-face meeting, or we can conduct it online. Some of our clients come to us with a large project plan spanning many months, with a detailed idea about what they want. Some other clients only know the idea, and not the implementation. We’re happy with both.
           </p>
         </div>
-        <div v-infocus="'showElement'" class="hidden hidden-right svg" v-html="inlineSvg('discussion')" />
+        <InlineSvg v-infocus="'showElement'" class="hidden hidden-right svg" name="discussion" />
       </div>
       <div class="grid right maxWidth">
-        <div v-infocus="'showElement'" class="hidden hidden-left svg" v-html="inlineSvg('project')" />
+        <InlineSvg v-infocus="'showElement'" class="hidden hidden-left svg" name="project" />
         <div v-infocus="'showElement'" class="hidden hidden-right">
           <h3>You run your business. We run the project</h3>
           <p class="text--normal">
@@ -79,7 +79,7 @@
             We love to keep in touch with our clients, even after the initial project has finished. We’re happy to offer continued maintenance plans on our websites. We even have a community where past clients based in <span class="location">{{ location }}</span> can discuss and share their websites.
           </p>
         </div>
-        <div v-infocus="'showElement'" class="hidden hidden-right svg" v-html="inlineSvg('launch')" />
+        <InlineSvg v-infocus="'showElement'" class="hidden hidden-right svg" name="launch" />
       </div>
     </section>
     <section class="white" style="padding-top: 0">
@@ -89,17 +89,17 @@
       <div class="grid column three maxWidth">
         <div class="card">
           <h3>Web Design & Development</h3>
-          <div class="svg" v-html="inlineSvg('web-design-dev')" />
+          <InlineSvg class="svg" name="web-design-dev" />
           <p>Having a strong web presence is vital in modern times. A website is often the first port of call for your customers. Having an outdated or broken website can leave your customers feeling frustrated and taking their business elsewhere. We pride ourselves in using the latest technologies, giving your customers a pleasant time on your site, turning them into repeat vistors.</p>
         </div>
         <div class="card">
           <h3>Marketing</h3>
-          <div class="svg" v-html="inlineSvg('marketing')" />
+          <InlineSvg class="svg" name="marketing" />
           <p><span class="location">{{ location }}</span> is a competitive area. You need a bullet-proof marketing plan to succeed and grow. We can help with planning and implenetation of any marketing strategy including social media, newsletters, and Search Engine Optimisation. Investing in a good marketing strategy can lead to a long-term revenue increase month-on-month.</p>
         </div>
         <div class="card">
           <h3>Content Creation</h3>
-          <div class="svg" v-html="inlineSvg('content-creation')" />
+          <InlineSvg class="svg" name="content-creation" />
           <p>Often, you may need content for your business. It may come in the form of a professional blog post, or video. Content creation goes hand in hand with our marketing and web services, so it makes sense for us to provide this as well. We have a team of professionals local to <span class="location">{{ location }}</span> that can help with any content creation demands.</p>
         </div>
       </div>

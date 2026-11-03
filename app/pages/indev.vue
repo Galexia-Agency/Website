@@ -30,7 +30,7 @@
 <template>
   <div class="section white grid">
     <div class="indev maxWidth grid">
-      <div class="svg" v-html="inlineSvg('error')" />
+      <InlineSvg class="svg" name="error" />
       <h2>Great things are coming...</h2>
       <h3>This project is in development with</h3>
       <h1>Galexia Creative Agency Ltd</h1>
