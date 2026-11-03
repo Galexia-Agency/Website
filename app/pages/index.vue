@@ -21,6 +21,14 @@
     scroll-snap-align: center;
     scroll-snap-stop: always
   }
+  .drag-scroll--enabled {
+    cursor: grab
+  }
+  .drag-scroll--scrolling {
+    cursor: grabbing;
+    user-select: none;
+    scroll-snap-type: none
+  }
   .card {
     display: grid
   }
@@ -127,7 +135,15 @@
         <h2>
           We let our work speak for itself
         </h2>
-        <div id="portfolio" ref="portfolio" class="grid column three" @scroll="updateIcons">
+        <div
+          id="portfolio"
+          ref="portfolio"
+          class="grid column three"
+          :class="{ 'drag-scroll--enabled': dragEnabled, 'drag-scroll--scrolling': dragging }"
+          @scroll="updateIcons"
+          @mousedown="mouseDownHandler"
+          @click.capture="clickHandler"
+        >
           <article v-for="post in portfolio" :key="post.slug" class="card">
             <div v-if="post.acf.link" class="card--inner">
               <SiteImage
@@ -199,6 +215,61 @@ function updateIcons () {
   }
 }
 
+const dragEnabled = ref(false)
+const dragging = ref(false)
+// Whether the current drag moved far enough that releasing it shouldn't count as a click
+let dragged = false
+const position = { left: 0, x: 0 }
+
+function dragScrollWatcher () {
+  // Touch screens already swipe natively; only drag when the cards actually overflow
+  dragEnabled.value = !('ontouchstart' in window) && !!portfolioEl.value && portfolioEl.value.scrollWidth > portfolioEl.value.clientWidth
+  if (!dragEnabled.value) {
+    mouseUpHandler()
+  }
+}
+
+function mouseDownHandler (e: MouseEvent) {
+  if (!dragEnabled.value || !portfolioEl.value || e.button !== 0) {
+    return
+  }
+  // Stops the browser dragging images and links natively
+  e.preventDefault()
+  dragging.value = true
+  dragged = false
+  position.left = portfolioEl.value.scrollLeft
+  position.x = e.clientX
+  // Listen on the window so releasing outside the carousel still ends the drag
+  window.addEventListener('mousemove', mouseMoveHandler)
+  window.addEventListener('mouseup', mouseUpHandler)
+}
+
+function mouseMoveHandler (e: MouseEvent) {
+  if (!portfolioEl.value) {
+    return
+  }
+  const dx = e.clientX - position.x
+  if (Math.abs(dx) > 5) {
+    dragged = true
+  }
+  portfolioEl.value.scrollLeft = position.left - dx
+}
+
+function mouseUpHandler () {
+  window.removeEventListener('mousemove', mouseMoveHandler)
+  window.removeEventListener('mouseup', mouseUpHandler)
+  dragging.value = false
+}
+
+function clickHandler (e: MouseEvent) {
+  // Releasing a drag over a link shouldn't open it
+  if (dragged) {
+    e.preventDefault()
+    e.stopPropagation()
+    dragged = false
+  }
+}
+
 onMounted(() => {
   if (!('ontouchstart' in document.documentElement)) {
     useNuxtApp().$Ztextify('.header--inner h1 i', {
@@ -211,6 +282,12 @@ onMounted(() => {
   }
   portfolioLength()
   window.addEventListener('resize', portfolioLength)
+  dragScrollWatcher()
+  window.addEventListener('resize', dragScrollWatcher)
 })
-onBeforeUnmount(() => window.removeEventListener('resize', portfolioLength))
+onBeforeUnmount(() => {
+  window.removeEventListener('resize', portfolioLength)
+  window.removeEventListener('resize', dragScrollWatcher)
+  mouseUpHandler()
+})
 </script>
