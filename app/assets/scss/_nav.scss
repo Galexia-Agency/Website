@@ -72,8 +72,65 @@ nav {
   color: #FFFFFFAA
 }
 .nav--link:hover,
-.nav--link.router-link-exact-active {
+.nav--link.router-link-exact-active,
+.nav--link_active {
   border-bottom: .15rem solid #534BAE
+}
+.nav--dropdown {
+  position: relative;
+  display: grid;
+  align-content: center
+}
+.nav--dropdown_toggle {
+  color: inherit;
+  background: none;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  cursor: pointer
+}
+.nav--dropdown_toggle:after {
+  display: inline-block;
+  width: .4em;
+  height: .4em;
+  margin-left: .5em;
+  vertical-align: .2em;
+  border-right: 2px solid currentcolor;
+  border-bottom: 2px solid currentcolor;
+  transform: rotate(45deg);
+  transition: transform .3s;
+  content: ''
+}
+.nav--dropdown_open .nav--dropdown_toggle:after {
+  vertical-align: 0;
+  transform: rotate(-135deg)
+}
+.nav--submenu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  z-index: 10;
+  display: none;
+  grid-auto-flow: row;
+  gap: .25rem;
+  min-width: max-content;
+  padding: .5rem;
+  background: rgb(0 0 81 / 90%);
+  border-radius: .5rem;
+  box-shadow: 0 .5rem 1.5rem rgb(0 0 0 / 30%);
+  transform: translateX(-50%)
+}
+.nav--submenu .nav--link {
+  font-size: 1.1rem;
+  white-space: nowrap
+}
+.nav--dropdown_open .nav--submenu {
+  display: grid
+}
+@media (min-width: 701px) and (hover: hover) {
+  .nav--dropdown:hover .nav--submenu {
+    display: grid
+  }
 }
 .nav--icon {
   display: none
