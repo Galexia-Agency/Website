@@ -73,7 +73,7 @@ nav {
 }
 .nav--link:hover,
 .nav--link.router-link-exact-active,
-.nav--link_active {
+.nav--dropdown:has(.router-link-active) > .nav--dropdown_toggle {
   border-bottom: .15rem solid #534BAE
 }
 .nav--dropdown {

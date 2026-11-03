@@ -20,7 +20,6 @@
             <button
               type="button"
               class="nav--link nav--dropdown_toggle"
-              :class="{ 'nav--link_active': link.children.some((child) => route.path.startsWith(child.to)) }"
               :aria-expanded="openDropdown === link.text"
               :aria-controls="`nav-${link.text.toLowerCase()}`"
               @click="toggleDropdown(link.text)"
