@@ -47,6 +47,22 @@
     line-height: 1.5
   }
 
+  /* Post headings start at H2 under the title, but look one level smaller */
+  .post--content :deep(h2) {
+    margin: 1em 0 1rem;
+    padding: 0;
+    font-size: 2rem;
+    text-align: inherit
+  }
+  .post--content :deep(h3) {
+    margin-top: 1.33em;
+    font-size: 1.75rem
+  }
+  .post--content :deep(h4) {
+    margin-top: 1.67em;
+    font-size: 1.5rem
+  }
+
   @media (max-width: 500px) {
     .post--header {
       min-height: 300px
