@@ -29,6 +29,10 @@
   .post--content {
     line-height: 1.5
   }
+  .post--back {
+    display: inline-block;
+    margin: 1rem 0
+  }
 
   /* Post headings start at H2 under the title, but look one level smaller */
   .post--content :deep(h2) {
@@ -87,8 +91,14 @@
     <div class="post">
       <section class="white">
         <div class="maxWidth">
+          <NuxtLink to="/blog/" class="post--back">
+            <FontAwesomeIcon :icon="['fas', 'chevron-left']" /> Back to blog
+          </NuxtLink>
           <div class="post--content" v-html="post.content" />
           <BlogShare :title="`${post.title} | Blog`" :description="post.excerpt.plain" :path="`/blog/${post.slug}/`" />
+          <NuxtLink to="/blog/" class="post--back">
+            <FontAwesomeIcon :icon="['fas', 'chevron-left']" /> Back to blog
+          </NuxtLink>
         </div>
       </section>
     </div>
