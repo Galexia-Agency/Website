@@ -1,4 +1,5 @@
-﻿import { titleSuffix } from './app/utils/site'
+﻿import { fileURLToPath } from 'node:url'
+import { titleSuffix } from './app/utils/site'
 
 export default defineNuxtConfig({
   compatibilityDate: '2026-10-22',
@@ -6,6 +7,9 @@ export default defineNuxtConfig({
   // Loads the CMS feed at build time; also sets runtimeConfig.public.imageTransformations and writes sitemap.xml.
   cms: {
     siteUrl: 'https://galexia.agency',
+    sections: {
+      blog: { perPage: 6, paginate: true }
+    },
     sitemap: {
       // Pages that were left out of the Netlify sitemap
       exclude: ['/client/', '/locations/', '/indev/', '/lead-questionnaire/', '/seo/', '/marketing/', '/careers/']
@@ -130,12 +134,22 @@ export default defineNuxtConfig({
     // Bundled into the server build so it shares the plugin's icon library instead of loading a second copy.
     transpile: ['@fortawesome/vue-fontawesome']
   },
+  hooks: {
+    'pages:extend' (pages) {
+      // The paginated blog index reuses the index page, which reads the page number from the route.
+      pages.push({
+        name: 'blog-page',
+        path: '/blog/page/:page',
+        file: fileURLToPath(new URL('./app/pages/blog/index.vue', import.meta.url))
+      })
+    }
+  },
   nitro: {
     // Cloudflare's build environment makes Nitro pick a Workers preset. The site is fully static,
     // and the forms worker lives in worker/, so always emit plain static output.
     preset: 'static',
     prerender: {
-      // Blog and legal posts are added by @joebailey26/nuxt-static-wordpress; the hidden locations index links the location pages.
+      // Blog and legal posts, and the blog's paginated pages, are added by @joebailey26/nuxt-static-wordpress; the hidden locations index links the location pages.
       crawlLinks: true,
       routes: ['/', '/locations/'],
       failOnError: true,
