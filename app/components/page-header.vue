@@ -34,6 +34,18 @@
     font-weight: normal;
     text-decoration: underline
   }
+
+  /* Ghost button, so it stands out against the dark background */
+  .header--inner .button {
+    color: var(--primaryColor);
+    background: white;
+    box-shadow: 0 8px 20px -6px rgb(0 0 0 / 35%);
+    transition: transform .3s cubic-bezier(.2, .8, .2, 1), box-shadow .3s
+  }
+  .header--inner .button:hover {
+    box-shadow: 0 0 0 4px rgb(255 255 255 / 18%), 0 14px 30px -8px rgb(0 0 0 / 55%);
+    transform: translateY(-2px)
+  }
   @media (max-width: 900px) {
     .header--inner p {
       color: rgb(255 255 255 / 95%);
