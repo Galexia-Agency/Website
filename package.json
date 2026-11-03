@@ -33,7 +33,7 @@
     "@joebailey26/turnstile-forms": "^0.1.1",
     "nuxt": "^4.6.3",
     "nuxt-component-date": "git+https://github.com/Galexia-Agency/nuxt-component-date.git#0b7351eee27645e0a4a64172e46d40b3b87b6a61",
-    "sass": "^1.97.2",
+    "sass": "^1.107.1",
     "vue": "^3.5.44",
     "vue-router": "^5.4.0"
   },
