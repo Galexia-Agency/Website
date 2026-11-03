@@ -75,19 +75,32 @@
     &.nav_close .nav--container {
       display: none
     }
+  }
 
-    /* In the slide-out menu, dropdowns open inline as an indented list */
-    .nav--submenu {
-      position: static;
-      min-width: 0;
-      padding: 0 0 0 1rem;
-      background: none;
-      box-shadow: none;
-      transform: none
-    }
-    .nav--submenu .nav--link {
-      white-space: normal
-    }
+  /* The slide-out menu always lists the sub items, indented under a plain label */
+  .nav--dropdown_toggle {
+    display: none
+  }
+  .nav--dropdown_label {
+    display: block
+  }
+  .nav--submenu.card.white {
+    position: static;
+    display: grid;
+    min-width: 0;
+    padding: 0 0 0 1rem;
+    color: inherit;
+    background: none;
+    border-radius: 0;
+    box-shadow: none;
+    transform: none
+  }
+  .nav--submenu .nav--link {
+    color: inherit;
+    white-space: normal
+  }
+  .nav--submenu .nav--link:hover {
+    color: #FFFFFFAA
   }
 }
 

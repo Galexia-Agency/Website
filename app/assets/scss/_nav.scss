@@ -83,11 +83,11 @@ nav {
 }
 .nav--dropdown_toggle {
   color: inherit;
+  text-align: left;
   background: none;
   border-top: 0;
   border-right: 0;
   border-left: 0;
-  text-align: left;
   cursor: pointer
 }
 .nav--dropdown_toggle:after {
@@ -116,14 +116,18 @@ nav {
   gap: .25rem;
   min-width: max-content;
   padding: .5rem;
-  background: rgb(0 0 81 / 90%);
-  border-radius: .5rem;
-  box-shadow: 0 .5rem 1.5rem rgb(0 0 0 / 30%);
   transform: translateX(-50%)
 }
 .nav--submenu .nav--link {
+  color: var(--primaryColor);
   font-size: 1.1rem;
   white-space: nowrap
+}
+.nav--submenu .nav--link:hover {
+  color: #534BAE
+}
+.nav--dropdown_label {
+  display: none
 }
 .nav--dropdown_open .nav--submenu {
   display: grid

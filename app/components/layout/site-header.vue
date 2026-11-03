@@ -26,7 +26,9 @@
             >
               {{ link.text }}
             </button>
-            <div :id="`nav-${link.text.toLowerCase()}`" class="nav--submenu">
+            <!-- The slide-out menu always lists the sub items, so it shows a plain label instead of the toggle -->
+            <span class="nav--link nav--dropdown_label">{{ link.text }}</span>
+            <div :id="`nav-${link.text.toLowerCase()}`" class="nav--submenu card white">
               <NuxtLink v-for="child in link.children" :key="child.to" :to="child.to" class="nav--link">
                 {{ child.text }}
               </NuxtLink>
