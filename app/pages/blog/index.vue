@@ -19,7 +19,7 @@
     object-fit: cover
   }
   h3 {
-    margin: 0;
+    margin: 0 0 1rem;
 
     /*
     display: grid;
