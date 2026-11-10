@@ -58,8 +58,8 @@ importers:
         version: 5.4.0(@vue/compiler-sfc@3.5.44)(esbuild@0.28.2)(rolldown@1.2.16)(rollup@4.67.4)(vite@8.3.5(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(sass@1.107.1)(terser@5.51.2)(yaml@2.9.1))(vue@3.5.44(typescript@6.0.3))
     devDependencies:
       '@cloudflare/workers-types':
-        specifier: ^5.20261031.1
-        version: 5.20261031.1
+        specifier: ^5.20261107.1
+        version: 5.20261107.1
       '@eslint/js':
         specifier: ^10.0.1
         version: 10.0.1(eslint@10.14.0(jiti@2.7.0))
@@ -104,7 +104,7 @@ importers:
         version: 3.3.14(typescript@6.0.3)
       wrangler:
         specifier: 4.156.0
-        version: 4.156.0(@cloudflare/workers-types@5.20261031.1)(@types/node@24.19.2)
+        version: 4.156.0(@cloudflare/workers-types@5.20261107.1)(@types/node@24.19.2)
 
 packages:
 
@@ -319,8 +319,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@cloudflare/workers-types@5.20261031.1':
-    resolution: {integrity: sha512-2BR1pUhsivjMcqncHjbK1+v/HtOyiUAzMcf3jHt1ZOIiDOktnoeEoBuiEgyJOJ6iFgVLt4Zj7HzPrBjq5zLqQQ==}
+  '@cloudflare/workers-types@5.20261107.1':
+    resolution: {integrity: sha512-Q23LVprqgqdoxBYaH3YyTrtmeJZMzVarvcTZjZC6FnQIqrr+Vm/ASdWtezOQ+oq3FvhoGr1Xe7BAU3XZfkqUQw==}
 
   '@colordx/core@7.3.0':
     resolution: {integrity: sha512-LVzTTPhX7wpy7TkGjouA9zbbCBIw92RGm7ZQqSKFE0oYE3sMx2FGXz90eVpgw7k/+wrrY+qJ86nHXifZWMS5jA==}
@@ -839,18 +839,12 @@ packages:
     peerDependencies:
       '@torchlight-api/client': ^0.0.4
       nuxt: ^4.6.2
-    peerDependenciesMeta:
-      '@torchlight-api/client':
-        optional: true
 
   '@joebailey26/turnstile-forms@0.1.1':
     resolution: {integrity: sha512-Xr7qPdASYHLw4cQy1SFzrHvcpOasMifBvTfnR0Igt08X7kEiCmroJxOaibpboGtTaCHbMNlSlqfPHBBIDVdNbA==, tarball: https://npm.pkg.github.com/download/@joebailey26/turnstile-forms/0.1.1/c03a63c64c8855b2587721c3751f6030bc7dd11c}
     engines: {node: ^24.18.0, pnpm: ^10.11.1}
     peerDependencies:
       vue: ^3.5.0
-    peerDependenciesMeta:
-      vue:
-        optional: true
 
   '@jridgewell/gen-mapping@0.3.13':
     resolution: {integrity: sha512-2kkt/7niJ6MgEPxF0bYdQ6etZaA+fQvDcLKckhy1yIQOzaoKjBBjSj63/aLVjYE3qhRt5dvM+uUyfCg6UKCBbA==}
@@ -2773,8 +2767,8 @@ packages:
   fnv1a-64@0.1.2:
     resolution: {integrity: sha512-mJbcILTPybAR1jdOwt/lVv8N2cffeJFFP+gVbSAwLEx1ujXH27RpPd8Rokec/KX9c76UYIB6Co+H4lQzxPnJfA==}
 
-  follow-redirects@1.16.2:
-    resolution: {integrity: sha512-/kVP2U8z596Ia0gwFrwyIeo74ta5aVmSeU1FfAUMAmcEP5EP7zydmag3SLiN64NaRKef3lxsq7i/g7ltJQDGow==}
+  follow-redirects@1.16.3:
+    resolution: {integrity: sha512-toOSoqN6d51Wjf1aOFJYcoVv1aND9rj/CwjLU0Vz40oDuSpWDayCeKe4JpL5NL0WdFvoOOCI3BRo69HahjbR1A==}
     engines: {node: '>=4.0'}
     peerDependencies:
       debug: '*'
@@ -5248,7 +5242,7 @@ snapshots:
   '@cloudflare/workerd-windows-64@1.20261023.1':
     optional: true
 
-  '@cloudflare/workers-types@5.20261031.1': {}
+  '@cloudflare/workers-types@5.20261107.1': {}
 
   '@colordx/core@7.3.0': {}
 
@@ -5685,12 +5679,11 @@ snapshots:
   '@joebailey26/nuxt-static-wordpress@0.1.1(eca09f6cb0b5bf6289e32e61e909d508)':
     dependencies:
       '@nuxt/kit': 4.6.3(@nuxt/schema@4.6.3)(confbox@0.3.2)(dotenv@17.4.2)(giget@3.3.1)(jiti@2.7.0)(magic-string@1.4.5)(mlly@1.8.2)(rolldown@1.2.16)(unplugin@3.7.0(esbuild@0.28.2)(rolldown@1.2.16)(rollup@4.67.4)(vite@8.3.5(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(sass@1.107.1)(terser@5.51.2)(yaml@2.9.1)))
+      '@torchlight-api/client': 0.0.4
       cheerio: 1.2.0
       he: 1.2.0
       nuxt: 4.6.3(@babel/plugin-syntax-jsx@7.29.7(@babel/core@7.29.7))(@babel/plugin-syntax-typescript@7.29.7(@babel/core@7.29.7))(@oxc-project/types@0.156.0)(@parcel/watcher@2.6.0)(@types/node@24.19.2)(@vue/compiler-sfc@3.5.44)(acorn@8.19.0)(confbox@0.3.2)(db0@0.3.4)(dotenv@17.4.2)(esbuild@0.28.2)(eslint@10.14.0(jiti@2.7.0))(giget@3.3.1)(ioredis@5.11.1)(lightningcss@1.33.0)(mlly@1.8.2)(optionator@0.9.4)(rolldown@1.2.16)(rollup-plugin-visualizer@7.1.1(rolldown@1.2.16)(rollup@4.67.4))(rollup@4.67.4)(sass@1.107.1)(srvx@1.0.8)(stylelint@15.11.0(typescript@6.0.3))(terser@5.51.2)(typescript@6.0.3)(vite@8.3.5(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(sass@1.107.1)(terser@5.51.2)(yaml@2.9.1))(vue-tsc@3.3.14(typescript@6.0.3))(yaml@2.9.1)
       striptags: 3.2.0
-    optionalDependencies:
-      '@torchlight-api/client': 0.0.4
     transitivePeerDependencies:
       - '@nuxt/schema'
       - confbox
@@ -5704,7 +5697,7 @@ snapshots:
       - unplugin
 
   '@joebailey26/turnstile-forms@0.1.1(vue@3.5.44(typescript@6.0.3))':
-    optionalDependencies:
+    dependencies:
       vue: 3.5.44(typescript@6.0.3)
 
   '@jridgewell/gen-mapping@0.3.13':
@@ -6497,7 +6490,6 @@ snapshots:
       md5: 2.3.0
     transitivePeerDependencies:
       - debug
-    optional: true
 
   '@tybys/wasm-util@0.10.4':
     dependencies:
@@ -7045,10 +7037,9 @@ snapshots:
 
   axios@0.21.4:
     dependencies:
-      follow-redirects: 1.16.2
+      follow-redirects: 1.16.3
     transitivePeerDependencies:
       - debug
-    optional: true
 
   b4a@1.9.0: {}
 
@@ -7201,8 +7192,7 @@ snapshots:
 
   change-case@5.4.4: {}
 
-  charenc@0.0.2:
-    optional: true
+  charenc@0.0.2: {}
 
   cheerio-select@2.1.0:
     dependencies:
@@ -7339,8 +7329,7 @@ snapshots:
     optionalDependencies:
       srvx: 1.0.8
 
-  crypt@0.0.2:
-    optional: true
+  crypt@0.0.2: {}
 
   css-functions-list@3.3.3: {}
 
@@ -7902,8 +7891,7 @@ snapshots:
 
   fnv1a-64@0.1.2: {}
 
-  follow-redirects@1.16.2:
-    optional: true
+  follow-redirects@1.16.3: {}
 
   fraction.js@5.3.4: {}
 
@@ -7914,7 +7902,6 @@ snapshots:
       graceful-fs: 4.2.11
       jsonfile: 6.2.1
       universalify: 2.0.1
-    optional: true
 
   fs.realpath@1.0.0: {}
 
@@ -8187,8 +8174,7 @@ snapshots:
 
   is-arrayish@0.2.1: {}
 
-  is-buffer@1.1.6:
-    optional: true
+  is-buffer@1.1.6: {}
 
   is-builtin-module@5.0.0:
     dependencies:
@@ -8295,7 +8281,6 @@ snapshots:
       universalify: 2.0.1
     optionalDependencies:
       graceful-fs: 4.2.11
-    optional: true
 
   keyv@4.5.4:
     dependencies:
@@ -8415,11 +8400,9 @@ snapshots:
     dependencies:
       p-locate: 5.0.0
 
-  lodash.chunk@4.2.0:
-    optional: true
+  lodash.chunk@4.2.0: {}
 
-  lodash.get@4.4.2:
-    optional: true
+  lodash.get@4.4.2: {}
 
   lodash.merge@4.6.2: {}
 
@@ -8474,7 +8457,6 @@ snapshots:
       charenc: 0.0.2
       crypt: 0.0.2
       is-buffer: 1.1.6
-    optional: true
 
   mdn-data@2.0.30: {}
 
@@ -9913,8 +9895,7 @@ snapshots:
       - vite
       - webpack
 
-  universalify@2.0.1:
-    optional: true
+  universalify@2.0.1: {}
 
   unplugin-utils@0.3.2:
     dependencies:
@@ -10253,7 +10234,7 @@ snapshots:
       '@cloudflare/workerd-linux-arm64': 1.20261023.1
       '@cloudflare/workerd-windows-64': 1.20261023.1
 
-  wrangler@4.156.0(@cloudflare/workers-types@5.20261031.1)(@types/node@24.19.2):
+  wrangler@4.156.0(@cloudflare/workers-types@5.20261107.1)(@types/node@24.19.2):
     dependencies:
       '@cloudflare/kv-asset-handler': 0.5.0
       '@cloudflare/unenv-preset': 2.16.2(unenv@2.0.0-rc.24)(workerd@1.20261023.1)
@@ -10264,7 +10245,7 @@ snapshots:
       unenv: 2.0.0-rc.24
       workerd: 1.20261023.1
     optionalDependencies:
-      '@cloudflare/workers-types': 5.20261031.1
+      '@cloudflare/workers-types': 5.20261107.1
       fsevents: 2.3.3
     transitivePeerDependencies:
       - '@types/node'
